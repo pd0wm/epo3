@@ -3,9 +3,9 @@ use ieee.std_logic_1164.all;
 
 entity rng is
 	port(
-		clk        : in  std_logic;
-		rst        : in  std_logic;
+		clk    : in  std_logic;
+		rst    : in  std_logic;
 
-		output     : out std_logic_vector(2 downto 0)
+		output : out std_logic_vector(2 downto 0)
 	);
 end rng;
