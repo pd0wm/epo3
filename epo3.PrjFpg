@@ -39,7 +39,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=0
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -49,22 +49,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 
 [Document2]
-DocumentPath=next_piece_generator.vhd
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-
-[Document3]
 DocumentPath=rng.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -80,8 +64,24 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
+[Document3]
+DocumentPath=demultiplexer.vhd
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+
 [Document4]
-DocumentPath=piece_lut.vhd
+DocumentPath=next_piece_generator.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -97,7 +97,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 
 [Document5]
-DocumentPath=demultiplexer.vhd
+DocumentPath=piece_lut.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -312,7 +312,28 @@ DItemRevisionGUID=
 OutputDir=ProjectOutputs
 
 [Generic_VHDLSynthesis]
+Tool=Altium Synthesizer
+SettingsModified=False
+Entity=
+Architecture=
+PromptedNewSynthesizer=False
 SchematicNetlister=0
+AdvancedOptionsEnabled=False
+
+[Generic_VHDLSimulation]
+Tool=Aldec OEM Simulator
+NoIEEE=False
+VHDL93=True
+Verilog2001=True
+RunToTime=100000000
+SDFInstance=
+SDFFileName=
+SDFOptimization=1
+SettingsModified=False
+TimeStep=100000000
+TimeUnits=ns
+RunToUnits=ns
+TestbenchConfigurations=
 
 [OutputGroup1]
 Name=Netlist Outputs

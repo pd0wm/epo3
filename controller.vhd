@@ -6,7 +6,8 @@ entity controller is
 		rst               : in  std_logic;
 
 		-- piece lut
-		lut_x, lut_y      : out std_logic_vector(7 downto 0);
+		lut_x             : out std_logic_vector(3 downto 0);
+		lut_y             : out std_logic_vector(4 downto 0);
 		lut_rot           : out std_logic_vector(1 downto 0);
 		lut_piece_type    : out std_logic_vector(2 downto 0);
 		lut_ready         : in  std_logic;
@@ -43,10 +44,8 @@ entity controller is
 
 		--score
 		score_increase    : out std_logic;
-		score_value       : out std_logic_vector(31 downto 0);
+		score_value       : out std_logic_vector(2 downto 0);
 
-		--demultiplexer
-		demux_selector    : out std_logic_vector(2 downto 0);
 		--RAM
 		ram_write         : out std_logic
 	);
