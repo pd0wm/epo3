@@ -8,9 +8,9 @@ process (clk) is
 begin
 if (rising_edge(clk)) then
 if rst= '1' then
-Q <= '0';
+q <= '0';
 else
-Q  <= D;
+q  <= d;
 end if;
 end if;
 
