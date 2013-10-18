@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 -- VHDL top_level
--- 2013 10 18 11 51 3
+-- 2013 10 18 12 27 56
 -- Created By "DXP VHDL Generator"
 -- "Copyright (c) 2002-2004 Altium Limited"
 ------------------------------------------------------------
@@ -78,7 +78,27 @@ architecture structure of top_level is
         ram_write         : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-ram_write
         rst               : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-rst
         score_increase    : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_increase
-        score_value       : out STD_LOGIC_VECTOR(2 downto 0) -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
+        score_value       : out STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
+        timer_1_done      : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_done
+        timer_1_start     : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_start
+        timer_1_time      : out STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_time[7..0]
+        timer_2_done      : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_done
+        timer_2_start     : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_start
+        timer_2_time      : out STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_time[7..0]
+        timer_3_done      : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_done
+        timer_3_start     : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_start
+        timer_3_time      : out STD_LOGIC_VECTOR(7 downto 0) -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_time[7..0]
+      );
+   End Component;
+
+   Component debounce                                        -- ObjectKind=Sheet Symbol|PrimaryId=U_debounce
+      port
+      (
+        clk         : in  STD_LOGIC;                         -- ObjectKind=Sheet Entry|PrimaryId=debounce.vhd-clk
+        inputs      : in  STD_LOGIC_VECTOR(7 downto 0);      -- ObjectKind=Sheet Entry|PrimaryId=debounce.vhd-inputs[7..0]
+        output      : out STD_LOGIC_VECTOR(7 downto 0);      -- ObjectKind=Sheet Entry|PrimaryId=debounce.vhd-output[7..0]
+        random_seed : out STD_LOGIC;                         -- ObjectKind=Sheet Entry|PrimaryId=debounce.vhd-random_seed
+        rst         : in  STD_LOGIC                          -- ObjectKind=Sheet Entry|PrimaryId=debounce.vhd-rst
       );
    End Component;
 
@@ -190,6 +210,18 @@ architecture structure of top_level is
       );
    End Component;
 
+   Component timer                                           -- ObjectKind=Sheet Symbol|PrimaryId=Timer 1
+      port
+      (
+        clk     : in  STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-clk
+        done    : out STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-done
+        rst     : in  STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-rst
+        start   : in  STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-start
+        time    : in  STD_LOGIC_VECTOR(7 downto 0);          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-time[7..0]
+        vga_clk : in  STD_LOGIC                              -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-vga_clk
+      );
+   End Component;
+
    Component vga                                             -- ObjectKind=Sheet Symbol|PrimaryId=U_vga
       port
       (
@@ -201,7 +233,8 @@ architecture structure of top_level is
         ram_addr : out STD_LOGIC_VECTOR(7 downto 0);         -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-ram_addr[7..0]
         red      : out STD_LOGIC;                            -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-red
         rst      : in  STD_LOGIC;                            -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-rst
-        v_sync   : out STD_LOGIC                             -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-v_sync
+        v_sync   : out STD_LOGIC;                            -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-v_sync
+        vga_clk  : out STD_LOGIC                             -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-vga_clk
       );
    End Component;
 
@@ -209,6 +242,9 @@ architecture structure of top_level is
     Signal NamedIOSignal_data                       : STD_LOGIC;
     Signal NamedSignal_CLK                          : STD_LOGIC; -- ObjectKind=Net|PrimaryId=CLK
     Signal NamedSignal_RST                          : STD_LOGIC; -- ObjectKind=Net|PrimaryId=RST
+    Signal PinSignal_Timer_1_done                   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=done
+    Signal PinSignal_Timer_2_done                   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=done
+    Signal PinSignal_Timer_3_done                   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=done
     Signal PinSignal_U_check_mask_addr              : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=addr
     Signal PinSignal_U_check_mask_emtpy             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=emtpy
     Signal PinSignal_U_check_mask_ready             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=ready
@@ -227,13 +263,17 @@ architecture structure of top_level is
     Signal PinSignal_U_controller_lut_start         : STD_LOGIC; -- ObjectKind=Net|PrimaryId=lut_start
     Signal PinSignal_U_controller_lut_x             : STD_LOGIC_VECTOR(4 downto 0); -- ObjectKind=Net|PrimaryId=lut_x
     Signal PinSignal_U_controller_lut_y             : STD_LOGIC_VECTOR(4 downto 0); -- ObjectKind=Net|PrimaryId=lut_y
-    Signal PinSignal_U_controller_new_piece         : STD_LOGIC; -- ObjectKind=Net|PrimaryId=new_piece
     Signal PinSignal_U_controller_score_increase    : STD_LOGIC; -- ObjectKind=Net|PrimaryId=score_increase
     Signal PinSignal_U_controller_score_value       : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=score_value
+    Signal PinSignal_U_controller_timer_1_start     : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
+    Signal PinSignal_U_controller_timer_1_time      : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=time
+    Signal PinSignal_U_controller_timer_2_start     : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
+    Signal PinSignal_U_controller_timer_2_time      : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=time
+    Signal PinSignal_U_controller_timer_3_start     : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
+    Signal PinSignal_U_controller_timer_3_time      : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=time
     Signal PinSignal_U_draw_erase_piece_ready       : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_erase_ready
     Signal PinSignal_U_draw_next_piece_ready        : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_next_ready
     Signal PinSignal_U_draw_score_ready             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_score_ready
-    Signal PinSignal_U_next_piece_generator_output  : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=next_piece
     Signal PinSignal_U_piece_lut_error              : STD_LOGIC; -- ObjectKind=Net|PrimaryId=lut_error
     Signal PinSignal_U_piece_lut_mask               : STD_LOGIC_VECTOR(31 downto 0); -- ObjectKind=Net|PrimaryId=mask
     Signal PinSignal_U_piece_lut_ready              : STD_LOGIC; -- ObjectKind=Net|PrimaryId=lut_ready
@@ -242,6 +282,7 @@ architecture structure of top_level is
     Signal PinSignal_U_rom_data                     : STD_LOGIC_VECTOR(15 downto 0); -- ObjectKind=Net|PrimaryId=rom_data
     Signal PinSignal_U_score_output                 : STD_LOGIC_VECTOR(15 downto 0); -- ObjectKind=Net|PrimaryId=input
     Signal PinSignal_U_vga_ram_addr                 : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=vga_addr
+    Signal PinSignal_U_vga_vga_clk                  : STD_LOGIC; -- ObjectKind=Net|PrimaryId=vga_clk
 
 begin
     U_vga : vga                                              -- ObjectKind=Sheet Symbol|PrimaryId=U_vga
@@ -250,7 +291,8 @@ begin
         clk      => NamedSignal_CLK,                         -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-clk
         data_in  => PinSignal_U_ram_vga_out,                 -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-data_in[2..0]
         ram_addr => PinSignal_U_vga_ram_addr,                -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-ram_addr[7..0]
-        rst      => NamedSignal_RST                          -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-rst
+        rst      => NamedSignal_RST,                         -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-rst
+        vga_clk  => PinSignal_U_vga_vga_clk                  -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-vga_clk
       );
 
     U_score : score                                          -- ObjectKind=Sheet Symbol|PrimaryId=U_score
@@ -304,10 +346,8 @@ begin
     U_next_piece_generator : next_piece_generator            -- ObjectKind=Sheet Symbol|PrimaryId=U_next_piece_generator
       Port Map
       (
-        clk        => NamedSignal_CLK,                       -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-clk
-        new_number => PinSignal_U_controller_new_piece,      -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-new_number
-        output     => PinSignal_U_next_piece_generator_output, -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-output[2..0]
-        rst        => NamedSignal_RST                        -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-rst
+        clk => NamedSignal_CLK,                              -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-clk
+        rst => NamedSignal_RST                               -- ObjectKind=Sheet Entry|PrimaryId=next_piece_generator.vhd-rst
       );
 
     U_draw_score : draw_score                                -- ObjectKind=Sheet Symbol|PrimaryId=U_draw_score
@@ -352,6 +392,9 @@ begin
         write      => PinSignal_U_check_mask_write           -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-write
       );
 
+    U_debounce : debounce                                    -- ObjectKind=Sheet Symbol|PrimaryId=U_debounce
+;
+
     U_controller : controller                                -- ObjectKind=Sheet Symbol|PrimaryId=U_controller
       Port Map
       (
@@ -377,11 +420,18 @@ begin
         lut_start         => PinSignal_U_controller_lut_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-lut_start
         lut_x             => PinSignal_U_controller_lut_x(3 downto 0), -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-lut_x[3..0]
         lut_y             => PinSignal_U_controller_lut_y,   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-lut_y[4..0]
-        new_piece         => PinSignal_U_controller_new_piece, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-new_piece
-        next_piece        => PinSignal_U_next_piece_generator_output, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-next_piece[2..0]
         rst               => NamedSignal_RST,                -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-rst
         score_increase    => PinSignal_U_controller_score_increase, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_increase
-        score_value       => PinSignal_U_controller_score_value -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
+        score_value       => PinSignal_U_controller_score_value, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
+        timer_1_done      => PinSignal_Timer_1_done,         -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_done
+        timer_1_start     => PinSignal_U_controller_timer_1_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_start
+        timer_1_time      => PinSignal_U_controller_timer_1_time, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_time[7..0]
+        timer_2_done      => PinSignal_Timer_2_done,         -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_done
+        timer_2_start     => PinSignal_U_controller_timer_2_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_start
+        timer_2_time      => PinSignal_U_controller_timer_2_time, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_2_time[7..0]
+        timer_3_done      => PinSignal_Timer_3_done,         -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_done
+        timer_3_start     => PinSignal_U_controller_timer_3_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_start
+        timer_3_time      => PinSignal_U_controller_timer_3_time -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_3_time[7..0]
       );
 
     U_clear_shift : clear_shift                              -- ObjectKind=Sheet Symbol|PrimaryId=U_clear_shift
@@ -408,6 +458,39 @@ begin
         rst   => NamedSignal_RST,                            -- ObjectKind=Sheet Entry|PrimaryId=check_mask.vhd-rst
         start => PinSignal_U_controller_check_start,         -- ObjectKind=Sheet Entry|PrimaryId=check_mask.vhd-start
         write => PinSignal_U_check_mask_write                -- ObjectKind=Sheet Entry|PrimaryId=check_mask.vhd-write
+      );
+
+    Timer_3 : timer                                          -- ObjectKind=Sheet Symbol|PrimaryId=Timer 3
+      Port Map
+      (
+        clk     => NamedSignal_CLK,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-clk
+        done    => PinSignal_Timer_3_done,                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-done
+        rst     => NamedSignal_RST,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-rst
+        start   => PinSignal_U_controller_timer_3_start,     -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-start
+        time    => PinSignal_U_controller_timer_3_time,      -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-time[7..0]
+        vga_clk => PinSignal_U_vga_vga_clk                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-vga_clk
+      );
+
+    Timer_2 : timer                                          -- ObjectKind=Sheet Symbol|PrimaryId=Timer 2
+      Port Map
+      (
+        clk     => NamedSignal_CLK,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-clk
+        done    => PinSignal_Timer_2_done,                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-done
+        rst     => NamedSignal_RST,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-rst
+        start   => PinSignal_U_controller_timer_2_start,     -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-start
+        time    => PinSignal_U_controller_timer_2_time,      -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-time[7..0]
+        vga_clk => PinSignal_U_vga_vga_clk                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-vga_clk
+      );
+
+    Timer_1 : timer                                          -- ObjectKind=Sheet Symbol|PrimaryId=Timer 1
+      Port Map
+      (
+        clk     => NamedSignal_CLK,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-clk
+        done    => PinSignal_Timer_1_done,                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-done
+        rst     => NamedSignal_RST,                          -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-rst
+        start   => PinSignal_U_controller_timer_1_start,     -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-start
+        time    => PinSignal_U_controller_timer_1_time,      -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-time[7..0]
+        vga_clk => PinSignal_U_vga_vga_clk                   -- ObjectKind=Sheet Entry|PrimaryId=timer.vhd-vga_clk
       );
 
     -- Signal Assignments

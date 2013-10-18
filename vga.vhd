@@ -14,7 +14,7 @@ entity vga is
 		vga_clk  : out std_logic;
 
 		ram_addr : out std_logic_vector(7 downto 0);
-		data_in  : in  std_logic_vector(2 downto 0)
+		data_in  : in  std_logic
 	);
 end vga;
 
