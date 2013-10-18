@@ -49,38 +49,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 
 [Document2]
-DocumentPath=rng.vhd
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-
-[Document3]
-DocumentPath=demultiplexer.vhd
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-
-[Document4]
 DocumentPath=next_piece_generator.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -96,7 +64,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document5]
+[Document3]
 DocumentPath=piece_lut.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -112,7 +80,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document6]
+[Document4]
 DocumentPath=rom.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -128,7 +96,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document7]
+[Document5]
 DocumentPath=ram.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -144,7 +112,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document8]
+[Document6]
 DocumentPath=vga.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -160,7 +128,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document9]
+[Document7]
 DocumentPath=score.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -176,7 +144,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document10]
+[Document8]
 DocumentPath=draw_score.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -192,7 +160,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document11]
+[Document9]
 DocumentPath=check_mask.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +176,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document12]
+[Document10]
 DocumentPath=draw_next_piece.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -224,7 +192,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document13]
+[Document11]
 DocumentPath=draw_erase_piece.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -240,7 +208,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document14]
+[Document12]
 DocumentPath=clear_shift.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -256,7 +224,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document15]
+[Document13]
 DocumentPath=controller.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -272,7 +240,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document16]
+[Document14]
 DocumentPath=timer.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -288,7 +256,7 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
-[Document17]
+[Document15]
 DocumentPath=debounce.vhd
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -307,9 +275,6 @@ GenerateClassCluster=0
 [GeneratedDocument1]
 DocumentPath=ProjectOutputs\top_level.VHD
 DItemRevisionGUID=
-
-[Generic_EDE]
-OutputDir=ProjectOutputs
 
 [Generic_VHDLSynthesis]
 Tool=Altium Synthesizer
@@ -334,6 +299,43 @@ TimeStep=100000000
 TimeUnits=ns
 RunToUnits=ns
 TestbenchConfigurations=
+
+[Generic_SmartPDF]
+AutoOpenFile=-1
+AutoOpenOutJob=-1
+
+[Generic_SmartPDFSettings]
+ProjectMode=0
+ZoomPrecision=50
+AddNetsInformation=-1
+AddNetPins=-1
+AddNetNetLabels=-1
+AddNetPorts=-1
+ShowComponentParameters=-1
+ExportBOM=0
+TemplateFilename=
+TemplateStoreRelative=-1
+PCB_PrintColor=0
+SCH_PrintColor=0
+SCH_ShowNoErc=-1
+SCH_ShowParameter=-1
+SCH_ShowProbes=-1
+SCH_ShowBlankets=-1
+SCH_NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle
+SCH_ShowNote=-1
+SCH_ShowNoteCollapsed=-1
+SCH_ExpandLogicalToPhysical=0
+SCH_VariantName=[No Variations]
+SCH_ExpandComponentDesignators=-1
+SCH_ExpandNetlabels=0
+SCH_ExpandPorts=0
+SCH_ExpandSheetNumber=0
+SCH_ExpandDocumentNumber=0
+SCH_HasExpandLogicalToPhysicalSheets=-1
+SaveSettingsToOutJob=0
+
+[Generic_EDE]
+OutputDir=ProjectOutputs
 
 [OutputGroup1]
 Name=Netlist Outputs
