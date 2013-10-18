@@ -9,7 +9,7 @@ entity ram is
 		data         : inout std_logic;
 
 		vga_addr     : in    std_logic_vector(7 downto 0);
-		vga_out      : out   std_logic_vector(2 downto 0);
+		vga_out      : out   std_logic;
 
 		write_enable : in    std_logic
 	);
