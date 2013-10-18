@@ -46,6 +46,19 @@ entity controller is
 		score_increase    : out std_logic;
 		score_value       : out std_logic_vector(2 downto 0);
 
+		--timers
+		timer_1_time      : out std_logic_vector(7 downto 0);
+		timer_1_start     : out std_logic;
+		timer_1_done      : in  std_logic;
+		
+		timer_2_time      : out std_logic_vector(7 downto 0);
+		timer_2_start     : out std_logic;
+		timer_2_done      : in  std_logic;
+		
+		timer_3_time      : out std_logic_vector(7 downto 0);
+		timer_3_start     : out std_logic;
+		timer_3_done      : in  std_logic;
+
 		--RAM
 		ram_write         : out std_logic
 	);
