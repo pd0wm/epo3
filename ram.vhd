@@ -5,9 +5,8 @@ entity ram is
         clk                      : in  std_logic;
         rst                      : in  std_logic;
 
-        game_addr : in std_logic_vector(7 downto 0);
-        game_in : in std_logic_vector(2 downto 0);
-        game_out: out std_logic_vector(2 downto 0);
+        addr : in std_logic_vector(7 downto 0);
+        data : inout std_logic;
         
         vga_addr : in std_logic_vector(7 downto 0);
         vga_out : out std_logic_vector(2 downto 0);
