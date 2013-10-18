@@ -7,7 +7,8 @@ entity next_piece_generator is
 
         new_number : in  std_logic;
         output     : out std_logic_vector(2 downto 0);
-        input      : in  std_logic_vector(7 downto 0)
+        
+		button_seed : in std_logic;
     );
 end next_piece_generator;
 
