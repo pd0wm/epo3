@@ -12,8 +12,8 @@ entity check_mask is
 
 		start         : in  std_logic;
 
-		vga_data_read : in  std_logic_vector(2 downto 0);
-		vga_addr      : out std_logic_vector(7 downto 0)
+		addr : out std_logic_vector(7 downto 0);
+        data : inout std_logic
 	);
 end check_mask;
 
