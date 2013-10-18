@@ -9,6 +9,7 @@ entity draw_score is
 		ready : out   std_logic;
 		input : in    std_logic_vector(31 downto 0);
 
+		write : out   std_logic;
 		addr  : out   std_logic_vector(7 downto 0);
 		data  : inout std_logic
 	);

@@ -11,6 +11,7 @@ entity draw_next_piece is
 		piece_type : in    std_logic_vector(2 downto 0);
 		start      : in    std_logic;
 
+		write      : out   std_logic;
 		addr       : out   std_logic_vector(7 downto 0);
 		data       : inout std_logic
 	);
