@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 use work.typedef.all;
 
 entity ram_tb is
-	constant clk_period     : time := 20 ns;
-	constant initial_offset : time := 2 ns;
+	constant clk_period     : time := 162 ns;
+	constant initial_offset : time := 10 ns;
 end entity;
 
 architecture ram_tb_behav of ram_tb is
