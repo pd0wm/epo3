@@ -19,10 +19,10 @@ END component next_piece_generator;
 	signal output: std_logic_vector(2 downto 0);
 	begin
 	  clk <= '1' after 0 ns,
-	  '0' after 10 ns when clk /= '0' else '1' after 10 ns;
-	  rst <= '1' after 0 ns, '0' after 60 ns;
-	  new_number <= '0' after 0 ns, '1' after 500 ns, '0' after 1500 ns, '1' after 3000 ns, '0' after 5000 ns;
-	  button_seed <= '0' after 0 ns, '1' after 300 ns, '0' after 350 ns, '1' after 900 ns, '0' after 1600 ns, '1' after 3500 ns, '0' after 4800 ns;
+	  '0' after 1 us when clk /= '0' else '1' after 1 us;
+	  rst <= '1' after 0 ns, '0' after 40 us;
+	  new_number <= '0' after 0 ns, '1' after 5 us, '0' after 15 us, '1' after 30 us, '0' after 50 us;
+	  button_seed <= '0' after 0 ns,'1' after 30 us, '0' after 35 us, '1' after 90 us, '0' after 160 us, '1' after 350 us, '0' after 480 us;
 	  
 next_piece_generatortje: next_piece_generator port map(
   clk=>clk,
