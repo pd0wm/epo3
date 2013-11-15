@@ -20,8 +20,10 @@ architecture structural of next_piece_generator is
 	signal reset_or_new, button_xor_self, shift: std_logic;
 	signal s4: std_logic_vector (2 downto 0);
 begin
-  reset_or_new <= (rst or new_number);
-  button_xor_self <= (button_seed xor shift);
+
+  reset_or_new <= (rst or new_number); -- Reset the button ff when on system reset or reading of new number
+  button_xor_self <= (button_seed xor shift); -- Make the rng shift half of the time while the button is pressed
+											  -- when button stops being pressed either shift at normal speed or stop shifting depending on current state
   
   Button: ff port map(
     clk => clk,
@@ -29,13 +31,14 @@ begin
     d => button_xor_self,
     q => shift
   );
-  
+  --A mux for every ff in the shift register to control between shifting and keeping the current value
   M1: mux2_1 port map(
     sel =>shift,
     in1 =>s0,
     in2 =>s1,
     out1 =>s5
     );
+	--ff for every output, with feedback xor, goes through 7 out of 8 possible states in a determined order
 	L1: ff port map(
 		clk => clk,
 		rst => rst,
