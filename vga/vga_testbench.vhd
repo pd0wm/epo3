@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity vga_tb is
 	constant clk_period     : time := 20 ns;
@@ -19,25 +20,25 @@ architecture vga_tb_behav of vga_tb is
 			 ram_addr : out std_logic_vector(7 downto 0);
 			 data_in  : in  std_logic);
 	end component vga;
-	
-	signal clk, rst, data_in : std_logic;
+
+	signal clk, rst, data_in                         : std_logic;
 	signal red, green, blue, h_sync, v_sync, vga_clk : std_logic;
-	signal ram_addr : std_logic_vector(7 downto 0);
-	
+	signal ram_addr                                  : std_logic_vector(7 downto 0);
+
 begin
 	uut : vga port map(
-		clk      => clk,
-		rst      => rst,
-		red      => red,
-		green    => green,
-		blue     => blue,
-		h_sync   => h_sync,
-		v_sync   => v_sync,
-		vga_clk  => vga_clk,
-		ram_addr => ram_addr,
-		data_in  => data_in
-	);
-	
+			clk      => clk,
+			rst      => rst,
+			red      => red,
+			green    => green,
+			blue     => blue,
+			h_sync   => h_sync,
+			v_sync   => v_sync,
+			vga_clk  => vga_clk,
+			ram_addr => ram_addr,
+			data_in  => data_in
+		);
+
 	clock : process
 	begin
 		clk <= '1';
@@ -46,6 +47,21 @@ begin
 		wait for clk_period / 2;
 	end process;
 
-	data_in <= '1';
+	data : process(ram_addr)
+		variable addr : integer;
+	begin
+		addr := to_integer(unsigned(ram_addr));
+		data_in <= '0';
+
+		if (
+			(addr >= 0 and addr < 10) or
+			(addr >= 10 and addr < 15) or
+			(addr >= 20 and addr < 30) or
+			(addr >= 35 and addr < 40)
+		) then
+			data_in <= '1';
+		end if;
+	end process;
+	
 	rst <= '1', '0' after clk_period;
 end vga_tb_behav;
