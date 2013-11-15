@@ -3,45 +3,43 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.typedef.all;
 
--- Interface 1
--- Read/write line and address line
--- data				   addr
-
--- Interface 2
--- Read line and address line
--- vga_out       vga_addr
-
--- Write enabled: write_enable
--- Clock: clk
--- Reset: rst
-
 architecture ram_behav of ram is
 	-- Memory
 	signal ram, ram_new : mem;
 
 	-- Addresses
 	signal addr1, addr1_new : std_logic_vector(7 downto 0);
+	
 	signal addr2, addr2_new : std_logic_vector(7 downto 0);
+	signal addr3, addr3_new : std_logic_vector(7 downto 0);
+	signal addr4, addr4_new : std_logic_vector(7 downto 0);
 
 	-- Data read signals for tri-state buffers
-	signal dr1, dr2 : std_logic;
+	signal dr1, dr2, dr3, dr4 : std_logic;
 begin
-	-- Debugging
-	ramdata <= ram;
-
 	-- Combinatorial networks for address buffering
-	addr1b : process(addr)
+	main_addr_buf : process(addr)
 	begin
 		addr1_new <= addr;
 	end process;
 
-	addr2b : process(vga_addr)
+	ro1_addr_buf : process(ro1_addr)
 	begin
-		addr2_new <= vga_addr;
+		addr2_new <= ro1_addr;
+	end process;
+	
+	ro2_addr_buf : process(ro2_addr)
+	begin
+		addr3_new <= ro2_addr;
+	end process;
+	
+	ro3_addr_buf : process(ro3_addr)
+	begin
+		addr4_new <= ro3_addr;
 	end process;
 
 	-- Combinatorial networks for data outs
-	out1_comb : process(dr1, write_enable)
+	main_out : process(dr1, write_enable)
 	begin
 		-- Tri-state buffer for interface 1
 		if (write_enable = '0') then
@@ -51,20 +49,40 @@ begin
 		end if;
 	end process;
 
-	out2_comb : process(dr2)
+	ro1_out_comb : process(dr2)
 	begin
-		vga_out <= dr2;
+		ro1_out <= dr2;
+	end process;
+	
+	ro2_out_comb : process(dr3)
+	begin
+		ro2_out <= dr3;
+	end process;
+	
+	ro3_out_comb : process(dr4)
+	begin
+		ro3_out <= dr4;
 	end process;
 	
 	-- Combinatorial networks for reading data
-	read1_comb : process (addr1, ram)
+	main_read : process (addr1, ram)
 	begin
 		dr1 <= ram(to_integer(unsigned(addr1)));
 	end process;
 	
-	read2_comb : process (addr2, ram)
+	ro1_read : process (addr2, ram)
 	begin
 		dr2 <= ram(to_integer(unsigned(addr2)));
+	end process;
+	
+	ro2_read : process (addr3, ram)
+	begin
+		dr3 <= ram(to_integer(unsigned(addr3)));
+	end process;
+	
+	ro3_read : process (addr4, ram)
+	begin
+		dr4 <= ram(to_integer(unsigned(addr4)));
 	end process;
 	
 	-- State register
@@ -77,6 +95,8 @@ begin
 		elsif (clk'event and clk = '1') then
 			addr1 <= addr1_new;
 			addr2 <= addr2_new;
+			addr3 <= addr3_new;
+			addr4 <= addr4_new;
 
 			-- Use the new address because the buffered address will be set now
 			if (write_enable = '1') then

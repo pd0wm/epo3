@@ -9,7 +9,7 @@ Z0 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram
 !i10e 25
 !i10f 100
 Eram
-w1382097860
+w1384528167
 Z1 DPx4 work 7 typedef 0 22 m1EV@32aVFO0JbZ<jP08L0
 Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
@@ -18,41 +18,41 @@ Z4 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram
 F../ram.vhd
 l0
 L5
-V2Ed;<T95SQU?nW`n]@Z9g1
+V;HNDGcLVD9@K>KhbJYZRn0
 Z5 OP;C;10.2c;57
 32
-Z6 !s110 1384243136
 o-O0
-Z7 tExplicit 1
-!s100 N5PA<VO[UnX:kG>`k0>zY2
+Z6 tExplicit 1
+Z7 !s110 1384532595
+!s100 Hk0Lco9od20gG14=gzDPn2
 !i10b 1
-!s108 1384243136.108000
+!s108 1384532595.771000
 !s90 -reportprogress|300|../ram.vhd|
 !s107 ../ram.vhd|
 Aram_behav
-w1382099925
-DEx4 work 3 ram 0 22 2Ed;<T95SQU?nW`n]@Z9g1
+w1384528221
+DEx4 work 3 ram 0 22 ;HNDGcLVD9@K>KhbJYZRn0
 R1
 Z8 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 R2
 R3
 8ram_architecture.vhd
 Fram_architecture.vhd
-l28
-L18
-VHliKnn[_`>@B?2l>UFKJ51
-!s100 oF>COc=E5FGL2Le^=CSUS1
+l19
+L6
+V1f6hI8M6F?_aMX]8GEdm>3
 R5
 32
-R6
-!s90 -reportprogress|300|ram_architecture.vhd|
-o-O0
 R7
+o-O0
+R6
+!s100 ?Lho>ULBQQ7k7YfMzo0a:1
+!s90 -reportprogress|300|ram_architecture.vhd|
 !i10b 1
-!s108 1384243136.186000
+!s108 1384532595.912000
 !s107 ram_architecture.vhd|
 Eram_tb
-Z9 w1382099882
+Z9 w1384532539
 R1
 R2
 R3
@@ -62,69 +62,69 @@ Z11 Fram_testbench.vhd
 l0
 L5
 VPm7I;a;QPc]@`aY92H45K2
-!s100 M9UW@E?SAA:jzAzz_TM=c0
 R5
 32
-R6
-!i10b 1
-Z12 !s108 1384243136.273000
-Z13 !s90 -reportprogress|300|ram_testbench.vhd|
-Z14 !s107 ram_testbench.vhd|
+Z12 !s110 1384532596
+Z13 !s108 1384532596.005000
+Z14 !s90 -reportprogress|300|ram_testbench.vhd|
+Z15 !s107 ram_testbench.vhd|
 o-O0
-R7
+R6
+!s100 M9UW@E?SAA:jzAzz_TM=c0
+!i10b 1
 Aram_tb_behav
 R1
 R2
 R3
-Z15 DEx4 work 6 ram_tb 0 22 Pm7I;a;QPc]@`aY92H45K2
-l27
+DEx4 work 6 ram_tb 0 22 Pm7I;a;QPc]@`aY92H45K2
+l28
 L10
-Z16 VB_GEBAOX:4d2ENi`YL:Ro1
-Z17 !s100 IbfCbO5mPGH^U]Y0ZXa_V1
+VI8N5?<5^?FeeZ@C0AJhb23
+!s100 Jk2bU2:9ABNWCfhTXUXA03
 R5
 32
-R6
-!i10b 1
 R12
 R13
 R14
+R15
 o-O0
-R7
+R6
+!i10b 1
 Ptypedef
 R2
 R3
-Z18 w1382097762
+Z16 w1382097762
 R4
-Z19 8typdef.vhdl
-Z20 Ftypdef.vhdl
+Z17 8typedef.vhdl
+Z18 Ftypedef.vhdl
 l0
 L4
 Vm1EV@32aVFO0JbZ<jP08L0
+!s100 `hW0M]okmIRMDlH^<N[>m3
 R5
 32
-R6
-Z21 !s108 1384243135.954000
-Z22 !s90 -reportprogress|300|typdef.vhdl|
-Z23 !s107 typdef.vhdl|
-o-O0
-R7
-!s100 `hW0M]okmIRMDlH^<N[>m3
+R12
 !i10b 1
+Z19 !s108 1384532596.099000
+Z20 !s90 -reportprogress|300|typedef.vhdl|
+Z21 !s107 typedef.vhdl|
+o-O0
+R6
 Bbody
 R1
 R2
 R3
 l0
 L8
-V;fX4^VUKD31P5YLi2kkVn0
+Z22 V;fX4^VUKD31P5YLi2kkVn0
+Z23 !s100 8GD`6o]H>mGNz6N9W`4n;3
 R5
 32
-R6
-R21
-R22
-R23
-o-O0
-R7
-nbody
-!s100 8GD`6o]H>mGNz6N9W`4n;3
+R12
 !i10b 1
+R19
+R20
+R21
+o-O0
+R6
+nbody
