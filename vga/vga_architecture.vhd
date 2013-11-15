@@ -14,9 +14,10 @@ architecture vga_behav of vga is
 	signal timer_counter, timer_counter_next : std_logic_vector(7 downto 0);
 
 	-- Delay states
-	type timer_state_type is (ready,
+	type timer_state_type is (
 		eof_front_porch, eof_pulse_width, eof_back_porch,
-		eol_front_porch, eol_pulse_width, eol_back_porch
+		eol_front_porch, eol_pulse_width, eol_back_porch,
+		ready
 	);
 	signal timer_state, timer_state_next : timer_state_type;
 	
@@ -39,7 +40,7 @@ begin
 	-- Determine next position variables
 	comb_next_pos : process(x_pos, y_pos)
 	begin
-		if (unsigned(y_pos) = 199) then     -- y_pos maximum
+		if (unsigned(y_pos) = 119) then     -- y_pos maximum
 			if (unsigned(x_pos) = 159) then -- x_pos maximum
 				-- End of screen
 				x_pos_next <= (others => '0');
