@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 -- VHDL top_level
--- 2013 10 18 12 32 24
+-- 2013 11 19 10 12 43
 -- Created By "DXP VHDL Generator"
 -- "Copyright (c) 2002-2004 Altium Limited"
 ------------------------------------------------------------
@@ -38,13 +38,15 @@ architecture structure of top_level is
    Component clear_shift                                     -- ObjectKind=Sheet Symbol|PrimaryId=U_clear_shift
       port
       (
-        addr  : out   STD_LOGIC_VECTOR(7 downto 0);          -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-addr[7..0]
-        clk   : in    STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-clk
-        data  : inout STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-data
-        ready : out   STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-ready
-        rst   : in    STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-rst
-        start : in    STD_LOGIC;                             -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-start
-        write : out   STD_LOGIC                              -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-write
+        addr           : out   STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-addr[7..0]
+        clk            : in    STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-clk
+        data           : inout STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-data
+        ready          : out   STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-ready
+        rst            : in    STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-rst
+        score_increase : out   STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-score_increase
+        score_value    : out   STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-score_value[2..0]
+        start          : in    STD_LOGIC;                    -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-start
+        write          : out   STD_LOGIC                     -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-write
       );
    End Component;
 
@@ -60,10 +62,6 @@ architecture structure of top_level is
         draw_erase_draw   : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_draw
         draw_erase_ready  : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_ready
         draw_erase_start  : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_start
-        draw_erase_type   : out STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_type[2..0]
-        draw_next_ready   : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_ready
-        draw_next_start   : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_start
-        draw_next_type    : out STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_type[2..0]
         draw_score_draw   : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_score_draw
         draw_score_ready  : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_score_ready
         inputs            : in  STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-inputs[7..0]
@@ -76,10 +74,7 @@ architecture structure of top_level is
         lut_y             : out STD_LOGIC_VECTOR(4 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-lut_y[4..0]
         new_piece         : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-new_piece
         next_piece        : in  STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-next_piece[2..0]
-        ram_write         : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-ram_write
         rst               : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-rst
-        score_increase    : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_increase
-        score_value       : out STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
         timer_1_done      : in  STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_done
         timer_1_start     : out STD_LOGIC;                   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_start
         timer_1_time      : out STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_time[7..0]
@@ -111,26 +106,10 @@ architecture structure of top_level is
         data       : inout STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-data
         draw_erase : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-draw_erase
         mask       : in    STD_LOGIC_VECTOR(31 downto 0);    -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-mask[31..0]
-        piece_type : in    STD_LOGIC_VECTOR(2 downto 0);     -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-piece_type[2..0]
         ready      : out   STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-ready
         rst        : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-rst
         start      : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-start
         write      : out   STD_LOGIC                         -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-write
-      );
-   End Component;
-
-   Component draw_next_piece                                 -- ObjectKind=Sheet Symbol|PrimaryId=U_draw_next_piece
-      port
-      (
-        addr       : out   STD_LOGIC_VECTOR(7 downto 0);     -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-addr[7..0]
-        clk        : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-clk
-        data       : inout STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-data
-        mask       : in    STD_LOGIC_VECTOR(31 downto 0);    -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-mask[31..0]
-        piece_type : in    STD_LOGIC_VECTOR(2 downto 0);     -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-piece_type[2..0]
-        ready      : out   STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-ready
-        rst        : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-rst
-        start      : in    STD_LOGIC;                        -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-start
-        write      : out   STD_LOGIC                         -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-write
       );
    End Component;
 
@@ -183,9 +162,13 @@ architecture structure of top_level is
         addr         : in    STD_LOGIC_VECTOR(7 downto 0);   -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-addr[7..0]
         clk          : in    STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-clk
         data         : inout STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-data
+        ro1_addr     : in    STD_LOGIC_VECTOR(7 downto 0);   -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro1_addr[7..0]
+        ro1_out      : out   STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro1_out
+        ro2_addr     : in    STD_LOGIC_VECTOR(7 downto 0);   -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro2_addr[7..0]
+        ro2_out      : out   STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro2_out
+        ro3_addr     : in    STD_LOGIC_VECTOR(7 downto 0);   -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro3_addr[7..0]
+        ro3_out      : out   STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-ro3_out
         rst          : in    STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-rst
-        vga_addr     : in    STD_LOGIC_VECTOR(7 downto 0);   -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-vga_addr[7..0]
-        vga_out      : out   STD_LOGIC;                      -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-vga_out
         write_enable : in    STD_LOGIC                       -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-write_enable
       );
    End Component;
@@ -251,13 +234,11 @@ architecture structure of top_level is
     Signal PinSignal_U_check_mask_ready             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=ready
     Signal PinSignal_U_check_mask_write             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=write
     Signal PinSignal_U_clear_shift_ready            : STD_LOGIC; -- ObjectKind=Net|PrimaryId=ready
+    Signal PinSignal_U_clear_shift_score_increase   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=score_increase
     Signal PinSignal_U_controller_check_start       : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
     Signal PinSignal_U_controller_clear_shift_start : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
     Signal PinSignal_U_controller_draw_erase_draw   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_erase_draw
     Signal PinSignal_U_controller_draw_erase_start  : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_erase_start
-    Signal PinSignal_U_controller_draw_erase_type   : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=draw_erase_type
-    Signal PinSignal_U_controller_draw_next_start   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_next_start
-    Signal PinSignal_U_controller_draw_next_type    : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=draw_next_type
     Signal PinSignal_U_controller_draw_score_draw   : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_score_draw
     Signal PinSignal_U_controller_lut_piece_type    : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=lut_piece_type
     Signal PinSignal_U_controller_lut_rot           : STD_LOGIC_VECTOR(1 downto 0); -- ObjectKind=Net|PrimaryId=lut_rot
@@ -265,8 +246,6 @@ architecture structure of top_level is
     Signal PinSignal_U_controller_lut_x             : STD_LOGIC_VECTOR(4 downto 0); -- ObjectKind=Net|PrimaryId=lut_x
     Signal PinSignal_U_controller_lut_y             : STD_LOGIC_VECTOR(4 downto 0); -- ObjectKind=Net|PrimaryId=lut_y
     Signal PinSignal_U_controller_new_piece         : STD_LOGIC; -- ObjectKind=Net|PrimaryId=new_piece
-    Signal PinSignal_U_controller_score_increase    : STD_LOGIC; -- ObjectKind=Net|PrimaryId=score_increase
-    Signal PinSignal_U_controller_score_value       : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=score_value
     Signal PinSignal_U_controller_timer_1_start     : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
     Signal PinSignal_U_controller_timer_1_time      : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=time
     Signal PinSignal_U_controller_timer_2_start     : STD_LOGIC; -- ObjectKind=Net|PrimaryId=start
@@ -276,38 +255,32 @@ architecture structure of top_level is
     Signal PinSignal_U_debounce_output              : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=inputs
     Signal PinSignal_U_debounce_random_seed         : STD_LOGIC; -- ObjectKind=Net|PrimaryId=random_seed
     Signal PinSignal_U_draw_erase_piece_ready       : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_erase_ready
-    Signal PinSignal_U_draw_next_piece_ready        : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_next_ready
     Signal PinSignal_U_draw_score_ready             : STD_LOGIC; -- ObjectKind=Net|PrimaryId=draw_score_ready
     Signal PinSignal_U_next_piece_generator_output  : STD_LOGIC_VECTOR(2 downto 0); -- ObjectKind=Net|PrimaryId=next_piece
     Signal PinSignal_U_piece_lut_error              : STD_LOGIC; -- ObjectKind=Net|PrimaryId=lut_error
     Signal PinSignal_U_piece_lut_mask               : STD_LOGIC_VECTOR(31 downto 0); -- ObjectKind=Net|PrimaryId=mask
     Signal PinSignal_U_piece_lut_ready              : STD_LOGIC; -- ObjectKind=Net|PrimaryId=lut_ready
     Signal PinSignal_U_piece_lut_rom_addr           : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=rom_addr
-    Signal PinSignal_U_ram_vga_out                  : STD_LOGIC; -- ObjectKind=Net|PrimaryId=vga_out
     Signal PinSignal_U_rom_data                     : STD_LOGIC_VECTOR(15 downto 0); -- ObjectKind=Net|PrimaryId=rom_data
     Signal PinSignal_U_score_output                 : STD_LOGIC_VECTOR(15 downto 0); -- ObjectKind=Net|PrimaryId=input
-    Signal PinSignal_U_vga_ram_addr                 : STD_LOGIC_VECTOR(7 downto 0); -- ObjectKind=Net|PrimaryId=vga_addr
     Signal PinSignal_U_vga_vga_clk                  : STD_LOGIC; -- ObjectKind=Net|PrimaryId=vga_clk
 
 begin
     U_vga : vga                                              -- ObjectKind=Sheet Symbol|PrimaryId=U_vga
       Port Map
       (
-        clk      => NamedSignal_CLK,                         -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-clk
-        data_in  => PinSignal_U_ram_vga_out,                 -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-data_in
-        ram_addr => PinSignal_U_vga_ram_addr,                -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-ram_addr[7..0]
-        rst      => NamedSignal_RST,                         -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-rst
-        vga_clk  => PinSignal_U_vga_vga_clk                  -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-vga_clk
+        clk     => NamedSignal_CLK,                          -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-clk
+        rst     => NamedSignal_RST,                          -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-rst
+        vga_clk => PinSignal_U_vga_vga_clk                   -- ObjectKind=Sheet Entry|PrimaryId=vga.vhd-vga_clk
       );
 
     U_score : score                                          -- ObjectKind=Sheet Symbol|PrimaryId=U_score
       Port Map
       (
-        clk            => NamedSignal_CLK,                   -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-clk
-        increase       => PinSignal_U_controller_score_increase, -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-increase
-        increase_value => PinSignal_U_controller_score_value, -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-increase_value[2..0]
-        output         => PinSignal_U_score_output,          -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-output[15..0]
-        rst            => NamedSignal_RST                    -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-rst
+        clk      => NamedSignal_CLK,                         -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-clk
+        increase => PinSignal_U_clear_shift_score_increase,  -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-increase
+        output   => PinSignal_U_score_output,                -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-output[15..0]
+        rst      => NamedSignal_RST                          -- ObjectKind=Sheet Entry|PrimaryId=score.vhd-rst
       );
 
     U_rom : rom                                              -- ObjectKind=Sheet Symbol|PrimaryId=U_rom
@@ -326,8 +299,6 @@ begin
         clk          => NamedSignal_CLK,                     -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-clk
         data         => NamedIOSignal_data,                  -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-data
         rst          => NamedSignal_RST,                     -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-rst
-        vga_addr     => PinSignal_U_vga_ram_addr,            -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-vga_addr[7..0]
-        vga_out      => PinSignal_U_ram_vga_out,             -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-vga_out
         write_enable => PinSignal_U_check_mask_write         -- ObjectKind=Sheet Entry|PrimaryId=ram.vhd-write_enable
       );
 
@@ -371,20 +342,6 @@ begin
         write => PinSignal_U_check_mask_write                -- ObjectKind=Sheet Entry|PrimaryId=draw_score.vhd-write
       );
 
-    U_draw_next_piece : draw_next_piece                      -- ObjectKind=Sheet Symbol|PrimaryId=U_draw_next_piece
-      Port Map
-      (
-        addr       => PinSignal_U_check_mask_addr,           -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-addr[7..0]
-        clk        => NamedSignal_CLK,                       -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-clk
-        data       => NamedIOSignal_data,                    -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-data
-        mask       => PinSignal_U_piece_lut_mask,            -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-mask[31..0]
-        piece_type => PinSignal_U_controller_draw_next_type, -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-piece_type[2..0]
-        ready      => PinSignal_U_draw_next_piece_ready,     -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-ready
-        rst        => NamedSignal_RST,                       -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-rst
-        start      => PinSignal_U_controller_draw_next_start, -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-start
-        write      => PinSignal_U_check_mask_write           -- ObjectKind=Sheet Entry|PrimaryId=draw_next_piece.vhd-write
-      );
-
     U_draw_erase_piece : draw_erase_piece                    -- ObjectKind=Sheet Symbol|PrimaryId=U_draw_erase_piece
       Port Map
       (
@@ -393,7 +350,6 @@ begin
         data       => NamedIOSignal_data,                    -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-data
         draw_erase => PinSignal_U_controller_draw_erase_draw, -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-draw_erase
         mask       => PinSignal_U_piece_lut_mask,            -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-mask[31..0]
-        piece_type => PinSignal_U_controller_draw_erase_type, -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-piece_type[2..0]
         ready      => PinSignal_U_draw_erase_piece_ready,    -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-ready
         rst        => NamedSignal_RST,                       -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-rst
         start      => PinSignal_U_controller_draw_erase_start, -- ObjectKind=Sheet Entry|PrimaryId=draw_erase_piece.vhd-start
@@ -421,10 +377,6 @@ begin
         draw_erase_draw   => PinSignal_U_controller_draw_erase_draw, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_draw
         draw_erase_ready  => PinSignal_U_draw_erase_piece_ready, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_ready
         draw_erase_start  => PinSignal_U_controller_draw_erase_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_start
-        draw_erase_type   => PinSignal_U_controller_draw_erase_type, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_erase_type[2..0]
-        draw_next_ready   => PinSignal_U_draw_next_piece_ready, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_ready
-        draw_next_start   => PinSignal_U_controller_draw_next_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_start
-        draw_next_type    => PinSignal_U_controller_draw_next_type, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_next_type[2..0]
         draw_score_draw   => PinSignal_U_controller_draw_score_draw, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_score_draw
         draw_score_ready  => PinSignal_U_draw_score_ready,   -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-draw_score_ready
         inputs            => PinSignal_U_debounce_output,    -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-inputs[7..0]
@@ -438,8 +390,6 @@ begin
         new_piece         => PinSignal_U_controller_new_piece, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-new_piece
         next_piece        => PinSignal_U_next_piece_generator_output, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-next_piece[2..0]
         rst               => NamedSignal_RST,                -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-rst
-        score_increase    => PinSignal_U_controller_score_increase, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_increase
-        score_value       => PinSignal_U_controller_score_value, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-score_value[2..0]
         timer_1_done      => PinSignal_Timer_1_done,         -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_done
         timer_1_start     => PinSignal_U_controller_timer_1_start, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_start
         timer_1_time      => PinSignal_U_controller_timer_1_time, -- ObjectKind=Sheet Entry|PrimaryId=controller.vhd-timer_1_time[7..0]
@@ -454,13 +404,14 @@ begin
     U_clear_shift : clear_shift                              -- ObjectKind=Sheet Symbol|PrimaryId=U_clear_shift
       Port Map
       (
-        addr  => PinSignal_U_check_mask_addr,                -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-addr[7..0]
-        clk   => NamedSignal_CLK,                            -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-clk
-        data  => NamedIOSignal_data,                         -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-data
-        ready => PinSignal_U_clear_shift_ready,              -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-ready
-        rst   => NamedSignal_RST,                            -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-rst
-        start => PinSignal_U_controller_clear_shift_start,   -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-start
-        write => PinSignal_U_check_mask_write                -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-write
+        addr           => PinSignal_U_check_mask_addr,       -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-addr[7..0]
+        clk            => NamedSignal_CLK,                   -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-clk
+        data           => NamedIOSignal_data,                -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-data
+        ready          => PinSignal_U_clear_shift_ready,     -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-ready
+        rst            => NamedSignal_RST,                   -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-rst
+        score_increase => PinSignal_U_clear_shift_score_increase, -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-score_increase
+        start          => PinSignal_U_controller_clear_shift_start, -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-start
+        write          => PinSignal_U_check_mask_write       -- ObjectKind=Sheet Entry|PrimaryId=clear_shift.vhd-write
       );
 
     U_check_mask : check_mask                                -- ObjectKind=Sheet Symbol|PrimaryId=U_check_mask
