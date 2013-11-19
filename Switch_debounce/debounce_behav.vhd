@@ -29,7 +29,11 @@ if (rising_edge(clk)) then
 	 if rst_sig = '1' then
 	count <= (others => '0');
 	 else 
+	 if count < 21 then
 	 count <= count+1;
+	 else
+		count<=count;
+		end if;
 	 end if;
 	end if;
 	end process;
