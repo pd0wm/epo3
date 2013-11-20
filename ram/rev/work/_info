@@ -8,203 +8,374 @@ Z0 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev
 !i10d 8192
 !i10e 25
 !i10f 100
-Esramdp128
-w1384947320
-Z1 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
-Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
-Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Pmem
+Z1 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z2 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z3 w1384988085
 Z4 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev
-8sramdp128.vhd
-Fsramdp128.vhd
-l0
-L5
-VFheDWa7c1ijOoUW8iK9FQ1
-Z5 OP;C;10.2c;57
-32
-Z6 !s110 1384981752
-o-O0
-Z7 tExplicit 1
-!s100 k@]^cV`IEb6PNoJZSJ1^N3
-!i10b 1
-!s108 1384981752.322000
-!s90 -reportprogress|300|sramdp128.vhd|
-!s107 sramdp128.vhd|
-Asramdp128_behav
-w1384980778
-DEx4 work 9 sramdp128 0 22 FheDWa7c1ijOoUW8iK9FQ1
-R1
-R2
-R3
-8sramdp128_arch.vhd
-Fsramdp128_arch.vhd
-l24
-L5
-VP0A:WcRdkzO1Zfmi17WKJ3
-!s100 @NR_Hf0I>=AkbM<`SmASK1
-R5
-32
-R6
-!s90 -reportprogress|300|sramdp128_arch.vhd|
-o-O0
-R7
-!i10b 1
-!s108 1384981752.422000
-!s107 sramdp128_arch.vhd|
-Esramdp128_tb
-Z8 w1384981716
-R2
-R3
-R4
-Z9 8sramdp128_tb.vhd
-Z10 Fsramdp128_tb.vhd
+Z5 8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/mem.vhd
+Z6 FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/mem.vhd
 l0
 L4
-VJkj0G2>mkiT3Dcf?LNFB20
-!s100 BRPJf0R57PQ2=iEjHUo6Q0
-R5
+ViQafkSZ;L>P>bzaWI2]TT3
+Z7 OP;C;10.2c;57
 32
-R6
+Z8 !s110 1384989150
+Z9 !s108 1384989150.472000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/mem.vhd|
+Z11 !s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/mem.vhd|
+Z12 o-work work -O0
+Z13 tExplicit 1
+!s100 O<81nSS_DF]ccjmXK2H5I2
 !i10b 1
-Z11 !s108 1384981752.529000
-Z12 !s90 -reportprogress|300|sramdp128_tb.vhd|
-Z13 !s107 sramdp128_tb.vhd|
-o-O0
-R7
-Asramdp128_tb_behav
+Bbody
+Z14 DPx4 work 3 mem 0 22 iQafkSZ;L>P>bzaWI2]TT3
+R1
 R2
-R3
-Z14 DEx4 work 12 sramdp128_tb 0 22 Jkj0G2>mkiT3Dcf?LNFB20
-l24
-L9
-Z15 Vz`mEhb8DNIB_Smo310f7z1
-Z16 !s100 hzc[_LC`>U?16?DZ;XUm_0
-R5
+l0
+L8
+VCcnmcCTKeZ@KGfzGLLTjm1
+R7
 32
-R6
-!i10b 1
+R8
+R9
+R10
 R11
 R12
 R13
-o-O0
-R7
-Esramdp32
-w1384963670
+nbody
+!s100 R8Ej_zXaQbf<`=mH1e9>A1
+!i10b 1
+Esramdp128
+w1384947320
+Z15 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
 R1
 R2
-R3
 R4
-8sramdp32.vhd
-Fsramdp32.vhd
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128.vhd
 l0
 L5
-VXFS9J?EC`1c9;3Q[aQ6@O1
-R5
-32
-o-O0
+VI9:=<I]3[CmnPfZ<eN_5[1
 R7
-R6
-!s100 XN1hK^I=kelj@iK7l@HZZ3
+32
+R12
+R13
+Z16 !s110 1384989160
+!s100 k@]^cV`IEb6PNoJZSJ1^N3
 !i10b 1
-!s108 1384981751.975000
-!s90 -reportprogress|300|sramdp32.vhd|
-!s107 sramdp32.vhd|
-Asramdp32_behav
-w1384981607
-DEx4 work 8 sramdp32 0 22 XFS9J?EC`1c9;3Q[aQ6@O1
+!s108 1384989160.502000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128.vhd|
+Asramdp128_behav
+w1384987862
+DEx4 work 9 sramdp128 0 22 I9:=<I]3[CmnPfZ<eN_5[1
+R15
 R1
 R2
-R3
-8sramdp32_arch.vhd
-Fsramdp32_arch.vhd
-l8
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_arch.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_arch.vhd
+l24
 L5
-VZ0E4S:5C?lC5XDlC]bUN=0
-R5
-32
-R6
-o-O0
+VZ<zIgh;lI_E[ACC6X4b:C3
+!s100 R2SeJZdRE_MWlbS<Jb80E0
 R7
-!s100 IV3V4b53Aa2?3d16kBF3Z0
-!s90 -reportprogress|300|sramdp32_arch.vhd|
+32
+R16
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_arch.vhd|
+R12
+R13
 !i10b 1
-!s108 1384981752.221000
-!s107 sramdp32_arch.vhd|
-Esramdp32_2
-w1384962122
+!s108 1384989160.606000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_arch.vhd|
+Esramdp128_tb
+Z17 w1384987607
 R1
 R2
-R3
 R4
-8sramdp32_2.vhd
-Fsramdp32_2.vhd
-l0
-L5
-Vj^]4CojkERRW:[8RVF0JF3
-R5
-32
-Z17 !s110 1384980188
-o-O0
-R7
-!s100 Gz3BNejE=gCnA4j;iNaWo2
-!i10b 1
-!s108 1384980188.722000
-!s90 -reportprogress|300|sramdp32_2.vhd|
-!s107 sramdp32_2.vhd|
-Asramdp32_behav
-w1384962135
-DEx4 work 10 sramdp32_2 0 22 j^]4CojkERRW:[8RVF0JF3
-R1
-R2
-R3
-8sramdp32_arch_2.vhd
-Fsramdp32_arch_2.vhd
-l8
-L5
-VFj:cDE[no:YU22PHm1R3m1
-R5
-32
-R17
-o-O0
-R7
-!s100 `TBn]@Hk]2NM>oJNHS97C0
-!s90 -reportprogress|300|sramdp32_arch_2.vhd|
-!i10b 1
-!s108 1384980188.798000
-!s107 sramdp32_arch_2.vhd|
-Esramdp32_tb
-Z18 w1384980183
-R2
-R3
-R4
-Z19 8sramdp32_tb.vhd
-Z20 Fsramdp32_tb.vhd
+Z18 8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_tb.vhd
+Z19 FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_tb.vhd
 l0
 L4
-V_C1nE;@@`FFD<Y@UUNXR02
-R5
-32
-R6
-Z21 !s108 1384981752.104000
-Z22 !s90 -reportprogress|300|sramdp32_tb.vhd|
-Z23 !s107 sramdp32_tb.vhd|
-o-O0
+VdAMJ[85MZRbXQn@2Qei2^3
+!s100 Eo8f9ET504569Qe:2;FVN2
 R7
-!s100 dkk4i82ZY0:0?^3284Cdn2
-!i10b 1
-Asramdp32_tb_behav
-R2
-R3
-DEx4 work 11 sramdp32_tb 0 22 _C1nE;@@`FFD<Y@UUNXR02
-l26
-L9
-VK1PJbRILUl7CPNjNCXRXm3
-R5
 32
-R6
+Z20 !s110 1384989162
+!i10b 1
+Z21 !s108 1384989162.595000
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_tb.vhd|
+Z23 !s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp128_tb.vhd|
+R12
+R13
+Asramdp128_tb_behav
+R1
+R2
+DEx4 work 12 sramdp128_tb 0 22 dAMJ[85MZRbXQn@2Qei2^3
+l24
+L9
+V9k`8F^Ji9U8<ZkCD1Vo7k2
+Z24 !s100 VG3coNcWee<lQ4hL6E>i`0
+R7
+32
+R20
+!i10b 1
 R21
 R22
 R23
-o-O0
+R12
+R13
+Esramdp32
+w1384963670
+R15
+R1
+R2
+R4
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32.vhd
+l0
+L5
+V6HHKGfej7B?@<Vg7QY3km2
 R7
-!s100 :4n=O:bQ0B;]bSzBafbe61
+32
+R12
+R13
+Z25 !s110 1384989156
+!s100 XN1hK^I=kelj@iK7l@HZZ3
 !i10b 1
+!s108 1384989156.423000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32.vhd|
+Asramdp32_behav
+w1384986863
+DEx4 work 8 sramdp32 0 22 6HHKGfej7B?@<Vg7QY3km2
+R14
+R15
+R1
+R2
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch.vhd
+l36
+L6
+V3AG5ahZaUdcaGK498m>?o0
+R7
+32
+R25
+R12
+R13
+!s100 I0Y75MZ1ScXagbQ8RSN;z2
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch.vhd|
+!i10b 1
+!s108 1384989156.530000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch.vhd|
+Esramdp32_2
+w1384962122
+R15
+R1
+R2
+R4
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_2.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_2.vhd
+l0
+L5
+Vg3TW;Kzm_Gb5fRk9]g4W73
+R7
+32
+Z26 !s110 1384988211
+R12
+R13
+!s100 Gz3BNejE=gCnA4j;iNaWo2
+!i10b 1
+!s108 1384988211.358000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_2.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_2.vhd|
+Asramdp32_behav
+w1384962135
+DEx4 work 10 sramdp32_2 0 22 g3TW;Kzm_Gb5fRk9]g4W73
+R15
+R1
+R2
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch_2.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch_2.vhd
+l8
+L5
+VLiE<UhF]jMYLnJ:^iZCFd2
+R7
+32
+R26
+R12
+R13
+!s100 `TBn]@Hk]2NM>oJNHS97C0
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch_2.vhd|
+!i10b 1
+!s108 1384988211.558000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_arch_2.vhd|
+Esramdp32_comb
+w1384986635
+R14
+R15
+R1
+R2
+R4
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb.vhd
+l0
+L6
+VWei3`O?]4AB7W6HF[:<E@0
+R7
+32
+R12
+R13
+R8
+!s100 U:JD?FH9f3?E0XZSObNOk0
+!i10b 1
+!s108 1384989150.242000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb.vhd|
+Asramdp32_comb_arch
+w1384989117
+DEx4 work 13 sramdp32_comb 0 22 Wei3`O?]4AB7W6HF[:<E@0
+R14
+R15
+R1
+R2
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb_arch.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb_arch.vhd
+l7
+L6
+VS^ITS;L7W>J6j2NPhJN1B1
+R7
+32
+R8
+R12
+R13
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb_arch.vhd|
+!s100 ]OJdDQba0fUgIo_2?@;XB1
+!i10b 1
+!s108 1384989150.369000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/comb_arch.vhd|
+Esramdp32_regs
+w1384986582
+R14
+R15
+R1
+R2
+R4
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs.vhd
+l0
+L6
+Vb8:W6h?Lm97Po]<XVJU]l3
+R7
+32
+R8
+R12
+R13
+!s100 ejzV:io0]9RmNL3UW9Iom0
+!i10b 1
+!s108 1384989150.567000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs.vhd|
+Asramdp32_regs_arch
+w1384986586
+DEx4 work 13 sramdp32_regs 0 22 b8:W6h?Lm97Po]<XVJU]l3
+R14
+R15
+R1
+R2
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs_arch.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs_arch.vhd
+l7
+L6
+VZZT@D0mm>VjM_lfN=Pgcl2
+R7
+32
+R8
+R12
+R13
+!s100 [eGF2NoD:7XPez;0QEiHf1
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs_arch.vhd|
+!i10b 1
+!s108 1384989150.670000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/regs_arch.vhd|
+Esramdp32_tb
+Z27 w1384988683
+R1
+R2
+R4
+Z28 8sramdp32_tb.vhd
+Z29 Fsramdp32_tb.vhd
+l0
+L4
+V_C1nE;@@`FFD<Y@UUNXR02
+R7
+32
+Z30 !s110 1384988685
+Z31 !s108 1384988685.637000
+Z32 !s90 -reportprogress|300|sramdp32_tb.vhd|
+Z33 !s107 sramdp32_tb.vhd|
+o-O0
+R13
+!s100 dkk4i82ZY0:0?^3284Cdn2
+!i10b 1
+Asramdp32_tb_behav
+R1
+R2
+DEx4 work 11 sramdp32_tb 0 22 _C1nE;@@`FFD<Y@UUNXR02
+l26
+L9
+V9OIaZH[TGdZ9B`NQ[YX7:0
+R7
+32
+R30
+R31
+R32
+R33
+o-O0
+R13
+!s100 4P?]=8o?4^m<O^VT<oZ^h0
+!i10b 1
+Esramdp32_tri
+w1384986553
+R14
+R15
+R1
+R2
+R4
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri.vhd
+l0
+L6
+V[8Q=jC;===iYlo510JRSQ0
+R7
+32
+R8
+R12
+R13
+!s100 XoSkGN[E^zlOEE>bL1@f?3
+!i10b 1
+!s108 1384989150.771000
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri.vhd|
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri.vhd|
+Asramdp32_tri_arch
+w1384986594
+DEx4 work 12 sramdp32_tri 0 22 [8Q=jC;===iYlo510JRSQ0
+R14
+R15
+R1
+R2
+8C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri_arch.vhd
+FC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri_arch.vhd
+l7
+L6
+V99=0gD68EaeU=ghbflaOT3
+R7
+32
+R8
+R12
+R13
+!s100 0fC1lfV8JQBmdN7_MR=Kd0
+!s90 -reportprogress|300|-work|work|C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri_arch.vhd|
+!i10b 1
+!s108 1384989150.871000
+!s107 C:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/ram/rev/sramdp32_components/tri_arch.vhd|

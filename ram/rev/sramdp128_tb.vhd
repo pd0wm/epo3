@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity sramdp128_tb is
 	constant clk_period     : time := 20 ns;
-	constant initial_offset : time := 2 ns;
+	constant initial_offset : time := 5	 ns;
 end entity;
 
 architecture sramdp128_tb_behav of sramdp128_tb is
@@ -98,7 +98,7 @@ begin
 		ro_addr <= "1000000";
 		
 		rw_addr <= "1000000";
-		rw_data_in      <= '1';
+		rw_data_in      <= '0';
 		wait for clk_period*4;
 		
 		ro_addr <= "0100000";
@@ -116,7 +116,7 @@ begin
 		ro_addr <= "1000001";
 		
 		rw_addr <= "1000001";
-		rw_data_in      <= '0';
+		rw_data_in      <= '1';
 		wait for clk_period*4;
 		
 		ro_addr <= "0100001";

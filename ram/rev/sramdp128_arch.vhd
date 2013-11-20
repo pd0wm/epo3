@@ -71,19 +71,17 @@ begin
 			     ro_re       => ro_re4);
 
 	process(ro_addr, rw_we, rw_data_in)
-		variable ro_if, rw_if : integer range 0 to 3;
+		variable ro_mod, rw_mod : integer range 0 to 3;
 	begin
-		--if (rst = '1') then
-		--elsif (clk'event and clk = '1') then
-		ro_if := to_integer(unsigned(ro_addr(1 downto 0)));
-		rw_if := to_integer(unsigned(rw_addr(1 downto 0)));
+		ro_mod := to_integer(unsigned(ro_addr(1 downto 0)));
+		rw_mod := to_integer(unsigned(rw_addr(1 downto 0)));
 
 		-- RO interface
 		ro_re1 <= '0';
 		ro_re2 <= '0';
 		ro_re3 <= '0';
 		ro_re4 <= '0';
-		case ro_if is
+		case ro_mod is
 			when 0 => ro_re1 <= '1';
 			when 1 => ro_re2 <= '1';
 			when 2 => ro_re3 <= '1';
@@ -96,7 +94,7 @@ begin
 		rw_we3 <= '0';
 		rw_we4 <= '0';
 		if (rw_we = '1') then
-			case rw_if is
+			case rw_mod is
 				when 0 => rw_we1 <= '1';
 				when 1 => rw_we2 <= '1';
 				when 2 => rw_we3 <= '1';
@@ -108,12 +106,11 @@ begin
 		rw_re2 <= '0';
 		rw_re3 <= '0';
 		rw_re4 <= '0';
-		case ro_if is
+		case rw_mod is
 			when 0 => rw_re1 <= '1';
 			when 1 => rw_re2 <= '1';
 			when 2 => rw_re3 <= '1';
 			when 3 => rw_re4 <= '1';
 		end case;
-	--end if;
 	end process;
 end sramdp128_behav;

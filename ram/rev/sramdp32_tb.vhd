@@ -50,28 +50,57 @@ begin
 		rw_we  <= '0';
 		wait for clk_period - initial_offset;
 		rst <= '0';
-
-		-- First write some stuff
-		rw_we <= '1';
-		rw_re <= '0';
-	
-		ro_re <= '1';
-		ro_addr <= "00001";
 		
+		rw_data_in <= '0';
+		
+		
+		-- Read
+		rw_we   <= '0';
+		rw_re <= '1';
+		ro_re <= '1';
+
 		rw_addr <= "00000";
-		rw_data_in      <= '0';
+		ro_addr <= "00000";
 		wait for clk_period;
 
 		rw_addr <= "00001";
-		rw_data_in      <= '1';
+		ro_addr <= "00001";
 		wait for clk_period;
 
 		rw_addr <= "00010";
-		rw_data_in      <= '0';
+		ro_addr <= "00010";
 		wait for clk_period;
 
 		rw_addr <= "00011";
+		ro_addr <= "00011";
+		wait for clk_period;		
+
+		-- First write some stuff
+		rw_we <= '1';
+		rw_re <= '1';
+	
+		ro_re <= '1';
+		
+		ro_addr <= "00000";
+		rw_addr <= "00000";
 		rw_data_in      <= '1';
+		wait for clk_period;
+
+		ro_addr <= "00001";
+		rw_addr <= "00001";
+		rw_data_in      <= '0';
+		wait for clk_period;
+
+
+		ro_addr <= "00010";
+		rw_addr <= "00010";
+		rw_data_in      <= '1';
+		wait for clk_period;
+
+
+		ro_addr <= "00011";
+		rw_addr <= "00011";
+		rw_data_in      <= '0';
 		wait for clk_period;
 
 		-- Now read the written data

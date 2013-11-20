@@ -1,39 +1,67 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.mem.all;
 
 architecture sramdp32_behav of sramdp32 is
-	type mem is array (0 to 2 ** 5 - 1) of std_logic;
-	signal mem_block : mem;
-begin
-	process(clk, rst) is
-	begin
-		if (rst = '1') then
-			mem_block <= (others => '0');
-			mem_block(16) <= '1';
-			mem_block(8) <= '1';
-		elsif (clk'event and clk = '1') then
-			-- R/W interface read
-			if (rw_re = '1') then
-				rw_data_out <= mem_block(to_integer(unsigned(rw_addr)));
-			else
-				rw_data_out <= 'Z';
-			end if;
+	component sramdp32_comb
+		port(mem_in      : in  mem;
+			 mem_out     : out mem;
+			 rw_addr     : in  std_logic_vector(4 downto 0);
+			 rw_data_in  : in  std_logic;
+			 rw_data_out : out std_logic;
+			 rw_we       : in  std_logic;
+			 ro_addr     : in  std_logic_vector(4 downto 0);
+			 ro_data_out : out std_logic);
+	end component sramdp32_comb;
 
-			-- RO interface read
-			if (ro_re = '1') then
-				ro_data_out <= mem_block(to_integer(unsigned(ro_addr)));
-			else
-				ro_data_out <= 'Z';
-			end if;
-			
-			-- R/W interface write
-			if (rw_we = '1') then
-				mem_block(to_integer(unsigned(rw_addr))) <= rw_data_in;
-				
-				rw_data_out <= rw_data_in;
-				ro_data_out <= rw_data_in;
-			end if;
-		end if;
-	end process;
+	component sramdp32_regs
+		port(clk     : in  std_logic;
+			 rst     : in  std_logic;
+			 mem_in  : in  mem;
+			 mem_out : out mem);
+	end component sramdp32_regs;
+
+	component sramdp32_tri
+		port(clk      : in  std_logic;
+			 rst      : in  std_logic;
+			 enable   : in  std_logic;
+			 data_in  : in  std_logic;
+			 data_out : out std_logic);
+	end component sramdp32_tri;
+
+	signal mem_state, mem_new : mem;
+	signal ro_new   : std_logic;
+	signal rw_new   : std_logic;
+begin
+	comb_logic : sramdp32_comb
+		port map(mem_in      => mem_state,
+			     mem_out     => mem_new,
+			     rw_addr     => rw_addr,
+			     rw_data_in  => rw_data_in,
+			     rw_data_out => rw_new,
+			     rw_we       => rw_we,
+			     ro_addr     => ro_addr,
+			     ro_data_out => ro_new);
+
+	regs : sramdp32_regs
+		port map(clk     => clk,
+			     rst     => rst,
+			     mem_in  => mem_new,
+			     mem_out => mem_state);
+
+	ro : sramdp32_tri
+		port map(clk      => clk,
+			     rst      => rst,
+			     enable   => ro_re,
+			     data_in  => ro_new,
+			     data_out => ro_data_out);
+
+	r2 : sramdp32_tri
+		port map(clk      => clk,
+			     rst      => rst,
+			     enable   => rw_re,
+			     data_in  => rw_new,
+			     data_out => rw_data_out);
+
 end;
