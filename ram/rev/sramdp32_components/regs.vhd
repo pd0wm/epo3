@@ -1,77 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.mem.all;
 
 entity sramdp32_regs is
 	port(
 		clk : in std_logic;
 		rst : in std_logic;
 		
-		mem_in1 : in std_logic;
-		mem_in2 : in std_logic;
-		mem_in3 : in std_logic;
-		mem_in4 : in std_logic;
-		mem_in5 : in std_logic;
-		mem_in6 : in std_logic;
-		mem_in7 : in std_logic;
-		mem_in8 : in std_logic;
-		mem_in9 : in std_logic;
-		mem_in10 : in std_logic;
-		mem_in11 : in std_logic;
-		mem_in12 : in std_logic;
-		mem_in13 : in std_logic;
-		mem_in14 : in std_logic;
-		mem_in15 : in std_logic;
-		mem_in16 : in std_logic;
-		mem_in17 : in std_logic;
-		mem_in18 : in std_logic;
-		mem_in19 : in std_logic;
-		mem_in20 : in std_logic;
-		mem_in21 : in std_logic;
-		mem_in22 : in std_logic;
-		mem_in23 : in std_logic;
-		mem_in24 : in std_logic;
-		mem_in25 : in std_logic;
-		mem_in26 : in std_logic;
-		mem_in27 : in std_logic;
-		mem_in28 : in std_logic;
-		mem_in29 : in std_logic;
-		mem_in30 : in std_logic;
-		mem_in31 : in std_logic;
-		mem_in32 : in std_logic;
-			
-		mem_out1 : out std_logic;
-		mem_out2 : out std_logic;
-		mem_out3 : out std_logic;
-		mem_out4 : out std_logic;
-		mem_out5 : out std_logic;
-		mem_out6 : out std_logic;
-		mem_out7 : out std_logic;
-		mem_out8 : out std_logic;
-		mem_out9 : out std_logic;
-		mem_out10 : out std_logic;
-		mem_out11 : out std_logic;
-		mem_out12 : out std_logic;
-		mem_out13 : out std_logic;
-		mem_out14 : out std_logic;
-		mem_out15 : out std_logic;
-		mem_out16 : out std_logic;
-		mem_out17 : out std_logic;
-		mem_out18 : out std_logic;
-		mem_out19 : out std_logic;
-		mem_out20 : out std_logic;
-		mem_out21 : out std_logic;
-		mem_out22 : out std_logic;
-		mem_out23 : out std_logic;
-		mem_out24 : out std_logic;
-		mem_out25 : out std_logic;
-		mem_out26 : out std_logic;
-		mem_out27 : out std_logic;
-		mem_out28 : out std_logic;
-		mem_out29 : out std_logic;
-		mem_out30 : out std_logic;
-		mem_out31 : out std_logic;
-		mem_out32 : out std_logic
+		mem_out : out std_logic_vector(31 downto 0);
+		mem_in : in std_logic_vector(31 downto 0)
 	);
 end sramdp32_regs;
