@@ -289,10 +289,10 @@ begin
 			     mem_out32   => mem_new32,
 			     rw_addr     => rw_addr,
 			     rw_data_in  => rw_data_in,
-			     rw_data_out => rw_data_out,
+			     rw_data_out => rw_new,
 			     rw_we       => rw_we,
 			     ro_addr     => ro_addr,
-			     ro_data_out => ro_data_out);
+			     ro_data_out => ro_new);
 
 	regs : sramdp32_regs
 		port map(clk       => clk,
