@@ -37,7 +37,6 @@ begin
 		wait for clk_period - initial_offset;
 		rst <= '0';
 		
-		
 		-- Read
 		we <= '0';
 		di <= '0';
@@ -48,7 +47,6 @@ begin
 		di <= '1';
 		wait for clk_period;
 
-
 		-- Read again
 		we <= '0';
 		di <= '0';
@@ -57,7 +55,6 @@ begin
 		we <= '1';
 		di <= '0';
 		wait for clk_period;
-
 
 		-- Read again
 		we <= '0';
