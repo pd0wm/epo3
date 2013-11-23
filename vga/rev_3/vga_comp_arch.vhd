@@ -66,6 +66,22 @@ architecture vga_comp_arch of vga_comp is
 			 end_field_line_in  : in  std_logic;
 			 end_frame_in       : in  std_logic);
 	end component vga_trans_reset;
+	
+	component vga_read
+		port(clk         : in  std_logic;
+			 rst         : in  std_logic;
+			 in_field_in : in  std_logic;
+			 data_in     : in  std_logic;
+			 h_sync_in   : in  std_logic;
+			 v_sync_in   : in  std_logic;
+			 h_sync_out  : out std_logic;
+			 v_sync_out  : out std_logic;
+			 red_out     : out std_logic;
+			 green_out   : out std_logic;
+			 blue_out    : out std_logic);
+	end component vga_read;
+	
+	signal h_sync_buf, v_sync_buf : std_logic;
 begin
 
 counter: vga_counter
@@ -79,8 +95,8 @@ sync: vga_sync
 		     rst        => rst,
 		     pos_x_in   => pos_x,
 		     pos_y_in   => pos_y,
-		     h_sync_out => h_sync,
-		     v_sync_out => v_sync);
+		     h_sync_out => h_sync_buf,
+		     v_sync_out => v_sync_buf);
 		    
 field_check: vga_field_check
 	port map(clk                => clk,
@@ -114,6 +130,19 @@ trans_reset: vga_trans_reset
 		     rst                => rst,
 		     mem_addr_reset_out => mem_addr_reset,
 		     end_field_line_in  => end_field_line,
-		     end_frame_in       => end_frame);	     		   	  
+		     end_frame_in       => end_frame);	    
+		     
+read_and_output : vga_read
+	port map(clk         => clk,
+		     rst         => rst,
+		     in_field_in => in_field,
+		     data_in     => data,
+		     h_sync_in   => h_sync_buf,
+		     v_sync_in   => v_sync_buf,
+		     h_sync_out  => h_sync,
+		     v_sync_out  => v_sync,
+		     red_out     => red,
+		     green_out   => green,
+		     blue_out    => blue); 		   	  
 
 end;

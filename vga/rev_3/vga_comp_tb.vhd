@@ -12,22 +12,31 @@ architecture vga_comp_tb_arch of vga_comp_tb is
 		port(clk      : in  std_logic;
 			 rst      : in  std_logic;
 			 mem_addr : out std_logic_vector(mem_addr_len - 1 downto 0);
+			 data     : in  std_logic;
 			 h_sync   : out std_logic;
-			 v_sync   : out std_logic);
+			 v_sync   : out std_logic;
+			 red      : out std_logic;
+			 green    : out std_logic;
+			 blue     : out std_logic);
 	end component vga_comp;
 
 	signal clk, rst, data : std_logic;
 	signal h_sync, v_sync : std_logic;
 	signal ram_addr       : std_logic_vector(6 downto 0);
 
+	signal r, g, b : std_logic;
+
 begin
-	uut: vga_comp
+	uut : vga_comp
 		port map(clk      => clk,
 			     rst      => rst,
 			     mem_addr => ram_addr,
+			     data     => data,
 			     h_sync   => h_sync,
-			     v_sync   => v_sync);
-
+			     v_sync   => v_sync,
+			     red      => r,
+			     green    => g,
+			     blue     => b);
 	clock : process
 	begin
 		clk <= '1';
@@ -36,16 +45,20 @@ begin
 		wait for clk_period / 2;
 	end process;
 
-	data_lut : process(ram_addr)
+	data_lut : process(clk, rst)
 		variable addr : integer;
 	begin
-		addr := to_integer(unsigned(ram_addr));
-		data <= '0';
+		if (rst = '1') then
+			data <= '0';
+		elsif (clk'event and clk = '1') then
+			addr := to_integer(unsigned(ram_addr));
+			data <= '0';
 
-		if (
-			(addr >= 0 and addr < 10) or (addr >= 10 and addr < 15) or (addr >= 20 and addr < 30) or (addr >= 35 and addr < 40)
-		) then
-			data <= '1';
+			if (
+				addr = 5 or addr = 6 or addr = 9 or addr = 10
+			) then
+				data <= '1';
+			end if;
 		end if;
 	end process;
 
