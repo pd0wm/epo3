@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity sr_16b is
+entity sr_8b is
 	port(
 		clk, rst : in  std_logic;
 
@@ -12,6 +12,6 @@ entity sr_16b is
 		di       : in  std_logic;
 		do       : out std_logic;
 
-		addr     : in  std_logic_vector(3 downto 0)
+		addr     : in  std_logic_vector(2 downto 0)
 	);
 end entity;
