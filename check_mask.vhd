@@ -9,7 +9,7 @@ entity check_mask is
 		mask_select : out   std_logic_vector(1 downto 0);
 
 		ready       : out   std_logic;
-		emtpy       : out   std_logic;
+		empty       : out   std_logic;
 
 		start       : in    std_logic;
 
