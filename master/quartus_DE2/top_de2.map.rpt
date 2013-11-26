@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Tue Nov 26 19:49:42 2013
+Tue Nov 26 21:44:26 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -13,11 +13,12 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"
- 12. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 26 19:49:42 2013          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 26 21:44:26 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 85                                             ;
-;     Total combinational functions  ; 71                                             ;
+; Total logic elements               ; 90                                             ;
+;     Total combinational functions  ; 77                                             ;
 ;     Dedicated logic registers      ; 62                                             ;
 ; Total registers                    ; 62                                             ;
 ; Total pins                         ; 37                                             ;
@@ -204,17 +205,17 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 85                     ;
+; Estimated Total logic elements              ; 90                     ;
 ;                                             ;                        ;
-; Total combinational functions               ; 71                     ;
+; Total combinational functions               ; 77                     ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 22                     ;
-;     -- 3 input functions                    ; 13                     ;
-;     -- <=2 input functions                  ; 36                     ;
+;     -- 4 input functions                    ; 27                     ;
+;     -- 3 input functions                    ; 18                     ;
+;     -- <=2 input functions                  ; 32                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 47                     ;
-;     -- arithmetic mode                      ; 24                     ;
+;     -- normal mode                          ; 57                     ;
+;     -- arithmetic mode                      ; 20                     ;
 ;                                             ;                        ;
 ; Total registers                             ; 62                     ;
 ;     -- Dedicated logic registers            ; 62                     ;
@@ -223,8 +224,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 37                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
 ; Maximum fan-out                             ; 61                     ;
-; Total fan-out                               ; 444                    ;
-; Average fan-out                             ; 2.61                   ;
+; Total fan-out                               ; 467                    ;
+; Average fan-out                             ; 2.65                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -233,41 +234,50 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |top_de2                            ; 71 (1)            ; 62 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
-;    |depiece_simple:inst5|           ; 1 (1)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                  ;              ;
+; |top_de2                            ; 77 (1)            ; 62 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
+;    |depiece_simple:inst5|           ; 7 (7)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                  ;              ;
 ;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
-;    |ram_simple:inst2|               ; 3 (3)             ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|ram_simple:inst2                      ;              ;
-;    |vga:inst6|                      ; 63 (0)            ; 49 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6                             ;              ;
+;    |ram_simple:inst8|               ; 2 (2)             ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|ram_simple:inst8                      ;              ;
+;    |vga:inst6|                      ; 64 (0)            ; 47 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6                             ;              ;
 ;       |vga_counter:counter|         ; 22 (22)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_counter:counter         ;              ;
 ;       |vga_field_check:field_check| ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_field_check:field_check ;              ;
-;       |vga_read:read_and_output|    ; 1 (1)             ; 7 (7)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_read:read_and_output    ;              ;
+;       |vga_read:read_and_output|    ; 3 (3)             ; 7 (7)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_read:read_and_output    ;              ;
 ;       |vga_sync:sync|               ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_sync:sync               ;              ;
-;       |vga_trans:trans|             ; 13 (13)           ; 10 (10)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans:trans             ;              ;
-;       |vga_trans_reset:trans_reset| ; 11 (11)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans_reset:trans_reset ;              ;
+;       |vga_trans:trans|             ; 12 (12)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans:trans             ;              ;
+;       |vga_trans_reset:trans_reset| ; 11 (11)           ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans_reset:trans_reset ;              ;
 ;       |vga_triggers:triggers|       ; 7 (7)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_triggers:triggers       ;              ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                                                                                                                                        ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; Register name                                                                                                                                                                                                                                                                                                                                                                                    ; Reason for Removal                                     ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; depiece_simple:inst5|addr[1..7]                                                                                                                                                                                                                                                                                                                                                                  ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                                                                                                                                                                                                                                                                                                                       ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst6|vga_triggers:triggers|end_frame_state                                                                                                                                                                                                                                                                                                                                                  ; Stuck at GND due to stuck port data_in                 ;
-; depiece_simple:inst5|write                                                                                                                                                                                                                                                                                                                                                                       ; Merged with depiece_simple:inst5|addr[0]               ;
-; depiece_simple:inst5|data_out                                                                                                                                                                                                                                                                                                                                                                    ; Merged with depiece_simple:inst5|addr[0]               ;
-; ram_simple:inst2|ram[4,7..8,15..16,27,29,31..32,53,55,57,59,61,63..64,107,109,111,113,115,117,119,121,123,125,127..128,211,213,215,217,219,221,223,225,227,229,231,233,235,237,239,241,243,245,247,249,251,253,255]                                                                                                                                                                              ; Merged with ram_simple:inst2|ram[2]                    ;
-; ram_simple:inst2|ram[5,9,11,13..14,19,21,23,25,30,34..35,37,39,41,43,45,47,49,51,58,62,65..67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,110,114,118,122,126,129,131,133,135,137,139,141,143,145,147,149,151,153,155,157,159,161,163,165,167,169,171,173,175,177,179,181,183,185,187,189,191,193,195,197,199,201,203,205,207,209,218,222,226,230,234,238,242,246,250,254]       ; Merged with ram_simple:inst2|ram[3]                    ;
-; ram_simple:inst2|ram[10,12,17..18,20,22,24,26,28,33,36,38,40,42,44,46,48,50,52,54,56,60,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,112,116,120,124,130,132,134,136,138,140,142,144,146,148,150,152,154,156,158,160,162,164,166,168,170,172,174,176,178,180,182,184,186,188,190,192,194,196,198,200,202,204,206,208,210,212,214,216,220,224,228,232,236,240,244,248,252] ; Merged with ram_simple:inst2|ram[6]                    ;
-; ram_simple:inst2|ram[3,6]                                                                                                                                                                                                                                                                                                                                                                        ; Merged with ram_simple:inst2|ram[2]                    ;
-; vga:inst6|vga_read:read_and_output|green_out                                                                                                                                                                                                                                                                                                                                                     ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
-; ram_simple:inst2|ram[2]                                                                                                                                                                                                                                                                                                                                                                          ; Stuck at GND due to stuck port data_in                 ;
-; ram_simple:inst2|ram[0]                                                                                                                                                                                                                                                                                                                                                                          ; Stuck at GND due to stuck port clock_enable            ;
-; Total Number of Removed Registers = 269                                                                                                                                                                                                                                                                                                                                                          ;                                                        ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; depiece_simple:inst5|next_write_state[2]           ; depiece_simple:inst5|Mux6 ; yes                    ;
+; depiece_simple:inst5|next_write_state[0]           ; depiece_simple:inst5|Mux6 ; yes                    ;
+; depiece_simple:inst5|next_write_state[1]           ; depiece_simple:inst5|Mux6 ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                  ;
++------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; Register name                                                                                              ; Reason for Removal                                     ;
++------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                                 ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst6|vga_triggers:triggers|end_frame_state                                                            ; Stuck at GND due to stuck port data_in                 ;
+; ram_simple:inst8|ram[6,9..10,17..19,31,33,57,59,61,63,66,111,113,115,117,119,121,123,125,127]              ; Merged with ram_simple:inst8|ram[4]                    ;
+; ram_simple:inst8|ram[7..8,11..16,20..30,32,34..56,58,60,62,64..65,67..110,112,114,116,118,120,122,124,126] ; Merged with ram_simple:inst8|ram[5]                    ;
+; ram_simple:inst8|ram[5]                                                                                    ; Merged with ram_simple:inst8|ram[4]                    ;
+; vga:inst6|vga_read:read_and_output|green_out                                                               ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
+; ram_simple:inst8|ram[4]                                                                                    ; Stuck at GND due to stuck port data_in                 ;
+; ram_simple:inst8|ram[0,3]                                                                                  ; Stuck at GND due to stuck port clock_enable            ;
+; Total Number of Removed Registers = 131                                                                    ;                                                        ;
++------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -277,10 +287,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Total registers                              ; 62    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 50    ;
+; Number of registers using Synchronous Load   ; 7     ;
+; Number of registers using Asynchronous Clear ; 52    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -291,7 +301,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|mem_addr_state[2] ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|mem_addr_state[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|mem_addr_state[6] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|counter_state[1]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
@@ -311,7 +321,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Nov 26 19:49:36 2013
+    Info: Processing started: Tue Nov 26 21:44:22 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple.vhd
@@ -404,23 +414,36 @@ Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst6|vga_triggers:tr
 Info: Elaborating entity "vga_trans" for hierarchy "vga:inst6|vga_trans:trans"
 Info: Elaborating entity "vga_trans_reset" for hierarchy "vga:inst6|vga_trans_reset:trans_reset"
 Info: Elaborating entity "vga_read" for hierarchy "vga:inst6|vga_read:read_and_output"
-Info: Elaborating entity "ram_simple" for hierarchy "ram_simple:inst2"
-Warning (10036): Verilog HDL or VHDL warning at ram_simple-ram_simple_arch.vhd(9): object "ram_new" assigned a value but never read
+Info: Elaborating entity "ram_simple" for hierarchy "ram_simple:inst8"
+Warning (10492): VHDL Process Statement warning at ram_simple-ram_simple_arch.vhd(20): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ram_simple-ram_simple_arch.vhd(25): signal "ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ram_simple-ram_simple_arch.vhd(30): signal "rw_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at ram_simple-ram_simple_arch.vhd(35): signal "ro_addr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Elaborating entity "depiece_simple" for hierarchy "depiece_simple:inst5"
 Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(9): used implicit default value for signal "mask_select" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(12): used implicit default value for signal "ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10631): VHDL Process Statement warning at depiece_simple-depiece_simple_arch.vhd(11): inferring latch(es) for signal or variable "next_write_state", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "next_write_state[0]" at depiece_simple-depiece_simple_arch.vhd(11)
+Info (10041): Inferred latch for "next_write_state[1]" at depiece_simple-depiece_simple_arch.vhd(11)
+Info (10041): Inferred latch for "next_write_state[2]" at depiece_simple-depiece_simple_arch.vhd(11)
+Warning: Latch depiece_simple:inst5|next_write_state[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal depiece_simple:inst5|write_state[2]
+Warning: Latch depiece_simple:inst5|next_write_state[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal depiece_simple:inst5|write_state[0]
+Warning: Latch depiece_simple:inst5|next_write_state[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal depiece_simple:inst5|write_state[0]
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 122 device resources after synthesis - the final resource count might be different
+Info: Implemented 130 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 85 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 264 megabytes
-    Info: Processing ended: Tue Nov 26 19:49:42 2013
-    Info: Elapsed time: 00:00:06
+    Info: Implemented 93 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Tue Nov 26 21:44:26 2013
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 
 
