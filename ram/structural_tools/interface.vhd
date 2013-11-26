@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity sr_if is
 	port(
@@ -28,17 +29,17 @@ architecture sr_if_behav of sr_if is
 	end component demux40;
 
 	signal we_com, re_1, re_2 : std_logic_vector(39 downto 0);
-	signal we                 : std_logic_vector(3 downto 0);
+	signal we_i                 : std_logic_vector(3 downto 0);
 begin
 	generate_bit4 : for i in 0 to 39 generate
 		bit4_mod : bit4 port map(
 				clk     => clk,
 				rst     => rst,
 				we_com  => we_com(i),
-				we1     => we(0),
-				we2     => we(1),
-				we3     => we(2),
-				we4     => we(3),
+				we1     => we_i(0),
+				we2     => we_i(1),
+				we3     => we_i(2),
+				we4     => we_i(3),
 				re_1    => re_1(i),
 				re_2    => re_2(i),
 				di      => di,
@@ -54,17 +55,32 @@ begin
 	demux40_we_com : demux40
 		port map(di => we,
 			     do => we_com,
-			     s  => addr1(7 downto 2));
+			     s  => addr1);
 
 	demux40_re_1 : demux40
 		port map(di => '1',
 			     do => re_1,
-			     s  => addr1(7 downto 2));
+			     s  => addr1
+			    );
 
 	demux40_re_2 : demux40
 		port map(di => '1',
 			     do => re_2,
-			     s  => addr2(7 downto 2));
+			     s  => addr2);
+			     
+	demux4_we_i	: process (addr1(1 downto 0), we)
+		variable s : integer range 0 to 3;
+	begin
+		we_i <= (others => '0');
+		s := to_integer(unsigned(addr1(1 downto 0)));
+		
+		case s is
+			when 0 => we_i(0) <= we;
+			when 1 => we_i(1) <= we;
+			when 2 => we_i(2) <= we;
+			when 3 => we_i(3) <= we;
+		end case;
+	end process;
 
 end architecture		     
 		     
