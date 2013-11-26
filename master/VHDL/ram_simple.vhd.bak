@@ -7,8 +7,7 @@ entity ram_simple is
 		rst             : in    std_logic;
 
 		rw_addr         : in    std_logic_vector(7 downto 0);
-		rw_data_in      : in    std_logic;
-		rw_data_out     : out   std_logic;
+		rw_data         : inout std_logic;
 		rw_write_enable : in    std_logic;
 
 		ro_addr         : in    std_logic_vector(7 downto 0);
