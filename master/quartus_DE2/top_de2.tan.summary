@@ -2,22 +2,42 @@
 Timing Analyzer Summary
 --------------------------------------------------------------------------------------
 
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.236 ns
+From           : rst
+To             : ram_simple:inst2|addr2[6]
+From Clock     : --
+To Clock       : clock_50mhz
+Failed Paths   : 0
+
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.041 ns
-From           : vga:inst6|vga_read:read_and_output|red_out
-To             : vga_b[9]
+Actual Time    : 10.925 ns
+From           : vga:inst6|vga_read:read_and_output|h_sync_out
+To             : vga_hsync
 From Clock     : clock_50mhz
 To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.813 ns
+From           : rst
+To             : depiece_simple:inst5|addr[0]
+From Clock     : --
+To Clock       : clock_50mhz
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 388.20 MHz ( period = 2.576 ns )
-From           : vga:inst6|vga_counter:counter|pos_x[1]
-To             : vga:inst6|vga_counter:counter|pos_y[8]
+Actual Time    : 371.20 MHz ( period = 2.694 ns )
+From           : vga:inst6|vga_field_check:field_check|end_field_line_state
+To             : vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[4]
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
