@@ -11,11 +11,10 @@ entity clear_shift is
         write : out   std_logic;
         addr  : out   std_logic_vector(7 downto 0);
         data  : inout std_logic;
-
+        
 
         --score
-        score_increase    : out std_logic;
-        score_value       : out std_logic_vector(2 downto 0)
+        score_increase    : out std_logic
     );
 end clear_shift;
 
