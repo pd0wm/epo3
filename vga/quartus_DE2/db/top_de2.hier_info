@@ -2,7 +2,7 @@
 vga_sync <= pre_vga_dac:inst.vga_sync
 clock_50mhz => gen6mhz:inst1.clk50mhz
 reset => vga:inst3.rst
-data => vga:inst3.data
+reset => fake_ram:inst4.rst
 vga_clk <= pre_vga_dac:inst.vga_clk
 vga_blank <= pre_vga_dac:inst.vga_blank
 vga_hsync <= vga:inst3.h_sync
@@ -454,5 +454,18 @@ v_sync_out <= v_sync_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 red_out <= red_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 green_out <= green_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 blue_out <= blue_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|fake_ram:inst4
+clk => ro_data_out~reg0.CLK
+rst => ro_data_out.OUTPUTSELECT
+ro_addr[0] => ro_data_out.DATAA
+ro_addr[1] => ~NO_FANOUT~
+ro_addr[2] => ~NO_FANOUT~
+ro_addr[3] => ~NO_FANOUT~
+ro_addr[4] => ~NO_FANOUT~
+ro_addr[5] => ~NO_FANOUT~
+ro_addr[6] => ~NO_FANOUT~
+ro_data_out <= ro_data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

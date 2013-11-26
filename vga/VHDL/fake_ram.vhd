@@ -7,7 +7,7 @@ entity fake_ram is
 		clk         : in  std_logic;
 		rst         : in  std_logic;
 
-		ro_addr     : in  std_logic_vector(7 downto 0);
+		ro_addr     : in  std_logic_vector(6 downto 0);
 		ro_data_out : out std_logic
 	);
 

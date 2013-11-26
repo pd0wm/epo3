@@ -1,0 +1,86 @@
+>>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
+>>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+WARNING: Seadif file "/home/epo3-user/Desktop/epo3/vga/test/seadif/sealib.sdf" is not a magic cookie (skipped).
+
+------ reading placement 'Tmp_Cell_(vga(vga(test)))' ------
+------ building data structure  ------
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_y_in_8_0_0'
+         (circell 'vga_sync') on layout cell 'vga_sync'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_y_in_8_0_0'
+         (circell 'vga_field_check') on layout cell 'vga_field_check'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_y_in_8_0_1'
+         (circell 'vga_field_check') on layout cell 'vga_field_check'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_y_in_8_0_2'
+         (circell 'vga_field_check') on layout cell 'vga_field_check'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_y_in_8_0_3'
+         (circell 'vga_field_check') on layout cell 'vga_field_check'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_x_in_7_0_0'
+         (circell 'vga_sync') on layout cell 'vga_sync'.
+WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_x_in_7_0_1'
+         (circell 'vga_sync') on layout cell 'vga_sync'.
+------ making grid  ------
+------ routing started Tue Nov 26 17:33:10 2013
+ 48 nets have to be routed.
+Routing net 'mem_addr_6_0_6' (2/2): . OK!
+Routing net 'mem_addr_6_0_5' (2/2): . OK!
+Routing net 'mem_addr_6_0_4' (2/2): . OK!
+Routing net 'mem_addr_6_0_3' (2/2): . OK!
+Routing net 'mem_addr_6_0_2' (2/2): . OK!
+Routing net 'mem_addr_6_0_1' (2/2): . OK!
+Routing net 'mem_addr_6_0_0' (2/2): . OK!
+Routing net 'data' (2/2): . OK!
+Routing net 'h_sync' (2/2): . OK!
+Routing net 'v_sync' (2/2): . OK!
+Routing net 'red' (2/2): . OK!
+Routing net 'green' (2/2): . OK!
+Routing net 'blue' (2/2): . OK!
+Routing net 'clk' (8/8): ....... OK!
+Routing net 'end_frame' (2/2): . OK!
+Routing net 'new_frame' (2/2): . OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'new_line' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'mem_addr_reset_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_1_port' (2/2): . OK!
+Routing net 'pos_y_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_2_port' (2/2): . OK!
+Routing net 'mem_addr_reset_5_port' (2/2): . OK!
+Routing net 'mem_addr_reset_6_port' (2/2): . OK!
+Routing net 'mem_addr_reset_4_port' (2/2): . OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'mem_addr_reset_3_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'pos_x_0_port' (3/3): .. OK!
+--> 62.50 % elapsed:   6.4 sec. expect another   8.2 sec. <--
+Routing net 'pos_x_1_port' (3/3): .. OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_x_6_port' (4/4): ... OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'pos_x_2_port' (4/4): ... OK!
+Routing net 'pos_y_5_port' (4/4): ... OK!
+Routing net 'pos_x_4_port' (4/4): ... OK!
+Routing net 'pos_y_8_port' (4/4): ... OK!
+Routing net 'pos_x_5_port' (4/4): ... OK!
+--> 83.33 % elapsed:  13.9 sec. expect another   6.5 sec. <--
+Routing net 'pos_x_3_port' (4/4): ... OK!
+Routing net 'pos_x_7_port' (4/4): ... OK!
+Routing net 'pos_y_7_port' (4/4): ... OK!
+Routing net 'vdd' :  (Power special)
+Routing net 'vss' :  (Power special)
+Routing net 'pos_y_4_port' (4/4): ... OK!
+Routing net 'pos_y_6_port' (4/4): ... OK!
+Routing net 'rst' (8/8): ....... OK!
+READY
+----- Some interesting statistics ------
+Total number of nets:                 48 (100% completion)
+Total length of routed wires:         28228 grids = 248.406 mm
+No. of transistors (total / used):    92340/3351 = 3.63 %
+CPU-time consumption:                23.18 sec.
+Elapsed time during routing:         23.23 sec. (99.96 % of cpu)
+------ Verifying Connectivity ------
+WARNING: 1 short-circuit(s) were detected among the 48 nets.
+------ Writing 'Tmp_Cell_(vga(vga(test)))' ------
+------ Trout: task completed on Tue Nov 26 17:33:34 2013
+ 

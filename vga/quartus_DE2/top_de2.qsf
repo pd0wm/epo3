@@ -82,6 +82,20 @@ set_location_assignment PIN_D6 -to vga_blank
 set_location_assignment PIN_B8 -to vga_clk
 set_location_assignment PIN_B7 -to vga_sync
 
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name MISC_FILE "/home/epo3-user/Desktop/epo3/vga/quartus_DE2/top_de2.dpf"
+set_location_assignment PIN_N25 -to reset
+set_location_assignment PIN_N26 -to data
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_location_assignment PIN_D25 -to debug_hsync
+set_location_assignment PIN_J22 -to debug_vsync
+set_location_assignment PIN_E26 -to debug_data
+set_global_assignment -name VHDL_FILE "../VHDL/fake_ram-fake_ram_arch.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/fake_ram.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_vga_arch_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers_arch.vhd
@@ -112,16 +126,4 @@ set_global_assignment -name VHDL_FILE ../VHDL/params.vhd
 set_global_assignment -name BDF_FILE top_de2.bdf
 set_global_assignment -name VHDL_FILE pre_vga_dac.vhd
 set_global_assignment -name VHDL_FILE gen6mhz.vhd
-set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
-set_global_assignment -name MISC_FILE "/home/epo3-user/Desktop/epo3/vga/quartus_DE2/top_de2.dpf"
-set_location_assignment PIN_N25 -to reset
-set_location_assignment PIN_N26 -to data
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_location_assignment PIN_D25 -to debug_hsync
-set_location_assignment PIN_J22 -to debug_vsync
-set_location_assignment PIN_E26 -to debug_data
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

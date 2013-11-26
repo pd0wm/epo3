@@ -86,26 +86,6 @@ gen6mhz:inst1
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-22dbb1cffdff693c62c6813aeee370a6
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 vga
 # storage
 db|top_de2.(3).cnf
@@ -482,6 +462,65 @@ ON
 }
 # hierarchies {
 vga:inst3|vga_read:read_and_output
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+19867ddf19e635c2e8c3298b805bf1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+fake_ram
+# storage
+db|top_de2.(11).cnf
+db|top_de2.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|epo3|vga|VHDL|fake_ram.vhd
+8aafdf499ea4307b3a33e2175e5ce05e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|epo3|vga|VHDL|params.vhd
+1d60a21842db36544156be96ca4a4b7a
+|home|epo3-user|Desktop|epo3|vga|VHDL|fake_ram-fake_ram_arch.vhd
+ec55c5b5836d8af13fef18a56c0b73b
+}
+# hierarchies {
+fake_ram:inst4
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
