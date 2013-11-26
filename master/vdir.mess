@@ -32,6 +32,35 @@ ENTITY fake_ram
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
+ENTITY ram_simple
+    Source modified time: Tue Nov 26 19:05:03 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/ram_simple.vhd
+    Source file: VHDL/ram_simple.vhd
+    Start location: VHDL/ram_simple.vhd:4
+    Version string: 3^==flPQFjZOliZkm>@S=2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY ram_simple_arch
+    Source modified time: Tue Nov 26 19:05:32 2013
+    Depends on: E work ram_simple 3^==flPQFjZOliZkm>@S=2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/ram_simple-ram_simple_arch.vhd
+    Source file: VHDL/ram_simple-ram_simple_arch.vhd
+    Start location: VHDL/ram_simple-ram_simple_arch.vhd:4
+    Version string: @IIX^4;2TO:_Xja8<h37K0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
 ENTITY vga
     Source modified time: Tue Nov 26 10:28:29 2013
     Depends on: P work vga_params 8md^5>FA2H3E2]3GWD=SW1

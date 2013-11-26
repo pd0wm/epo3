@@ -1,0 +1,477 @@
+Classic Timing Analyzer report for top_de2
+Tue Nov 26 19:00:00 2013
+Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Classic Timing Analyzer Deprecation
+  3. Timing Analyzer Summary
+  4. Timing Analyzer Settings
+  5. Clock Settings Summary
+  6. Parallel Compilation
+  7. Clock Setup: 'clock_50mhz'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
+---------------------------------------
+; Classic Timing Analyzer Deprecation ;
+---------------------------------------
+Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                     ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------+----------------------------------------+-------------+-------------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                          ; To                                     ; From Clock  ; To Clock    ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------+----------------------------------------+-------------+-------------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; -0.980 ns                        ; rst                                           ; fake_ram:inst5|ro_data_out             ; --          ; clock_50mhz ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.337 ns                         ; vga:inst3|vga_read:read_and_output|h_sync_out ; vga_hsync                              ; clock_50mhz ; --          ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 1.210 ns                         ; rst                                           ; fake_ram:inst5|ro_data_out             ; --          ; clock_50mhz ; 0            ;
+; Clock Setup: 'clock_50mhz'   ; N/A   ; None          ; 315.06 MHz ( period = 3.174 ns ) ; vga:inst3|vga_counter:counter|pos_x[6]        ; vga:inst3|vga_counter:counter|pos_y[4] ; clock_50mhz ; clock_50mhz ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                               ;                                        ;             ;             ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------+----------------------------------------+-------------+-------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock_50mhz     ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-8 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock_50mhz'                                                                                                                                                                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                 ; To                                                   ; From Clock  ; To Clock    ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 315.06 MHz ( period = 3.174 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 325.84 MHz ( period = 3.069 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.860 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 327.98 MHz ( period = 3.049 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.840 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 341.88 MHz ( period = 2.925 ns )                    ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.716 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 344.95 MHz ( period = 2.899 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.690 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 353.23 MHz ( period = 2.831 ns )                    ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 355.62 MHz ( period = 2.812 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.603 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.538 ns                ;
+; N/A                                     ; 373.69 MHz ( period = 2.676 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.462 ns                ;
+; N/A                                     ; 378.50 MHz ( period = 2.642 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.433 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.413 ns                ;
+; N/A                                     ; 381.53 MHz ( period = 2.621 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.407 ns                ;
+; N/A                                     ; 388.95 MHz ( period = 2.571 ns )                    ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.357 ns                ;
+; N/A                                     ; 392.00 MHz ( period = 2.551 ns )                    ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.337 ns                ;
+; N/A                                     ; 401.93 MHz ( period = 2.488 ns )                    ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.274 ns                ;
+; N/A                                     ; 407.17 MHz ( period = 2.456 ns )                    ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.242 ns                ;
+; N/A                                     ; 419.29 MHz ( period = 2.385 ns )                    ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.176 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.163 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.161 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.156 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.137 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.137 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.135 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.117 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.069 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.067 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.051 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_field_check:field_check|in_field_state ; vga:inst3|vga_trans:trans|mem_addr_state[0]          ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.038 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_field_check:field_check|in_field_state ; vga:inst3|vga_trans:trans|counter_state[0]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.038 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_field_check:field_check|in_field_state ; vga:inst3|vga_trans:trans|counter_state[1]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.038 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.037 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.023 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.003 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 2.002 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.959 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.956 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.930 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.928 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.928 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_x[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.928 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.928 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.897 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.902 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.895 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.867 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.866 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_line_state       ; vga:inst3|vga_trans:trans|mem_addr_state[0]          ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.860 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_line_state       ; vga:inst3|vga_trans:trans|counter_state[0]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.860 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_line_state       ; vga:inst3|vga_trans:trans|counter_state[1]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.860 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.857 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.842 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.840 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_y[0]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.834 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.822 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.811 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.809 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[6]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.799 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[6]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.797 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_frame_state      ; vga:inst3|vga_trans:trans|mem_addr_state[0]          ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.795 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_frame_state      ; vga:inst3|vga_trans:trans|counter_state[0]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.795 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_triggers:triggers|new_frame_state      ; vga:inst3|vga_trans:trans|counter_state[1]           ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.795 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.792 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.786 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.758 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.743 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.739 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.714 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.713 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.706 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.710 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[7]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.695 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[7]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.693 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.698 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.677 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.673 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.671 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.668 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[6]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.642 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.635 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.627 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.625 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.620 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; gen6mhz:inst1|count[1]                               ; gen6mhz:inst1|count[2]                               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 0.809 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.606 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.599 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.574 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.572 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.564 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.556 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_sync:sync|h_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.552 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.549 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.528 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.525 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[5]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.510 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.509 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.509 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_sync:sync|h_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.508 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.495 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.493 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_x[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.487 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.485 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.476 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.454 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.438 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.424 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_x[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.416 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[3]               ; vga:inst3|vga_counter:counter|pos_x[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.416 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[0]               ; vga:inst3|vga_counter:counter|pos_y[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.414 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_triggers:triggers|new_frame_state      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.408 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.407 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_triggers:triggers|new_line_state       ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.406 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.405 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[6]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.391 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_x[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.391 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[7]               ; vga:inst3|vga_sync:sync|v_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.385 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[8]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.373 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.369 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.367 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_sync:sync|v_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.366 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_sync:sync|h_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.365 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; gen6mhz:inst1|count[0]                               ; gen6mhz:inst1|count[2]                               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 0.537 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.334 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.334 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[6]               ; vga:inst3|vga_counter:counter|pos_y[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.320 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[2]               ; vga:inst3|vga_counter:counter|pos_x[4]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.320 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[1]               ; vga:inst3|vga_counter:counter|pos_x[2]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.312 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[3]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.298 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[1]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.296 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_sync:sync|h_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.295 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.291 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_counter:counter|pos_y[6]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.265 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[2]               ; vga:inst3|vga_counter:counter|pos_y[3]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.263 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[4]               ; vga:inst3|vga_counter:counter|pos_y[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.263 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[7]               ; vga:inst3|vga_counter:counter|pos_y[8]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.254 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[5]               ; vga:inst3|vga_sync:sync|v_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.252 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[4]               ; vga:inst3|vga_counter:counter|pos_x[5]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.250 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[0]               ; vga:inst3|vga_counter:counter|pos_x[1]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.248 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_sync:sync|h_sync_state                 ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.243 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[7]               ; vga:inst3|vga_counter:counter|pos_x[7]               ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.242 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_field_check:field_check|in_field_state ; vga:inst3|vga_read:read_and_output|in_field_buf      ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.231 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_y[7]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.236 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; vga:inst3|vga_counter:counter|pos_x[6]               ; vga:inst3|vga_field_check:field_check|in_field_state ; clock_50mhz ; clock_50mhz ; None                        ; None                      ; 1.240 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                      ;                                                      ;             ;             ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------------------------------+------------------------------------------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; tsu                                                                                 ;
++-------+--------------+------------+------+----------------------------+-------------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                         ; To Clock    ;
++-------+--------------+------------+------+----------------------------+-------------+
+; N/A   ; None         ; -0.980 ns  ; rst  ; fake_ram:inst5|ro_data_out ; clock_50mhz ;
++-------+--------------+------------+------+----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                         ;
++-------+--------------+------------+-----------------------------------------------+-----------+-------------+
+; Slack ; Required tco ; Actual tco ; From                                          ; To        ; From Clock  ;
++-------+--------------+------------+-----------------------------------------------+-----------+-------------+
+; N/A   ; None         ; 9.337 ns   ; vga:inst3|vga_read:read_and_output|h_sync_out ; vga_hsync ; clock_50mhz ;
+; N/A   ; None         ; 9.302 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[0]  ; clock_50mhz ;
+; N/A   ; None         ; 9.288 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[3]  ; clock_50mhz ;
+; N/A   ; None         ; 9.288 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[4]  ; clock_50mhz ;
+; N/A   ; None         ; 9.282 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[1]  ; clock_50mhz ;
+; N/A   ; None         ; 9.282 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[2]  ; clock_50mhz ;
+; N/A   ; None         ; 9.061 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[5]  ; clock_50mhz ;
+; N/A   ; None         ; 9.059 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[0]  ; clock_50mhz ;
+; N/A   ; None         ; 9.059 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[1]  ; clock_50mhz ;
+; N/A   ; None         ; 9.051 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[7]  ; clock_50mhz ;
+; N/A   ; None         ; 9.041 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[6]  ; clock_50mhz ;
+; N/A   ; None         ; 9.029 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[8]  ; clock_50mhz ;
+; N/A   ; None         ; 9.029 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_r[9]  ; clock_50mhz ;
+; N/A   ; None         ; 8.813 ns   ; vga:inst3|vga_read:read_and_output|v_sync_out ; vga_vsync ; clock_50mhz ;
+; N/A   ; None         ; 8.811 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[4]  ; clock_50mhz ;
+; N/A   ; None         ; 8.811 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[5]  ; clock_50mhz ;
+; N/A   ; None         ; 8.806 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[8]  ; clock_50mhz ;
+; N/A   ; None         ; 8.806 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[9]  ; clock_50mhz ;
+; N/A   ; None         ; 8.804 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[2]  ; clock_50mhz ;
+; N/A   ; None         ; 8.804 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[3]  ; clock_50mhz ;
+; N/A   ; None         ; 8.796 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[7]  ; clock_50mhz ;
+; N/A   ; None         ; 8.776 ns   ; vga:inst3|vga_read:read_and_output|red_out    ; vga_g[6]  ; clock_50mhz ;
+; N/A   ; None         ; 8.640 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[4]  ; clock_50mhz ;
+; N/A   ; None         ; 8.630 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[5]  ; clock_50mhz ;
+; N/A   ; None         ; 8.594 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[0]  ; clock_50mhz ;
+; N/A   ; None         ; 8.594 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[1]  ; clock_50mhz ;
+; N/A   ; None         ; 8.580 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[2]  ; clock_50mhz ;
+; N/A   ; None         ; 8.570 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[3]  ; clock_50mhz ;
+; N/A   ; None         ; 8.338 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[6]  ; clock_50mhz ;
+; N/A   ; None         ; 8.338 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[7]  ; clock_50mhz ;
+; N/A   ; None         ; 8.328 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[8]  ; clock_50mhz ;
+; N/A   ; None         ; 8.328 ns   ; vga:inst3|vga_read:read_and_output|blue_out   ; vga_b[9]  ; clock_50mhz ;
+; N/A   ; None         ; 7.302 ns   ; gen6mhz:inst1|count[2]                        ; vga_clk   ; clock_50mhz ;
++-------+--------------+------------+-----------------------------------------------+-----------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; th                                                                                        ;
++---------------+-------------+-----------+------+----------------------------+-------------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                         ; To Clock    ;
++---------------+-------------+-----------+------+----------------------------+-------------+
+; N/A           ; None        ; 1.210 ns  ; rst  ; fake_ram:inst5|ro_data_out ; clock_50mhz ;
++---------------+-------------+-----------+------+----------------------------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Nov 26 18:59:57 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off de2 -c top_de2 --timing_analysis_only
+Warning: Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
+Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock_50mhz" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "gen6mhz:inst1|count[2]" as buffer
+Info: Clock "clock_50mhz" has Internal fmax of 315.06 MHz between source register "vga:inst3|vga_counter:counter|pos_x[6]" and destination register "vga:inst3|vga_counter:counter|pos_y[8]" (period= 3.174 ns)
+    Info: + Longest register to register delay is 2.965 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X31_Y30_N3; Fanout = 6; REG Node = 'vga:inst3|vga_counter:counter|pos_x[6]'
+        Info: 2: + IC(0.730 ns) + CELL(0.275 ns) = 1.005 ns; Loc. = LCCOMB_X32_Y30_N4; Fanout = 5; COMB Node = 'vga:inst3|vga_counter:counter|Equal0~0'
+        Info: 3: + IC(0.466 ns) + CELL(0.150 ns) = 1.621 ns; Loc. = LCCOMB_X31_Y30_N10; Fanout = 8; COMB Node = 'vga:inst3|vga_counter:counter|Equal0~1'
+        Info: 4: + IC(0.684 ns) + CELL(0.660 ns) = 2.965 ns; Loc. = LCFF_X31_Y31_N19; Fanout = 5; REG Node = 'vga:inst3|vga_counter:counter|pos_y[8]'
+        Info: Total cell delay = 1.085 ns ( 36.59 % )
+        Info: Total interconnect delay = 1.880 ns ( 63.41 % )
+    Info: - Smallest clock skew is 0.005 ns
+        Info: + Shortest clock path from clock "clock_50mhz" to destination register is 4.320 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock_50mhz'
+            Info: 2: + IC(0.331 ns) + CELL(0.787 ns) = 2.117 ns; Loc. = LCFF_X1_Y18_N21; Fanout = 3; REG Node = 'gen6mhz:inst1|count[2]'
+            Info: 3: + IC(0.633 ns) + CELL(0.000 ns) = 2.750 ns; Loc. = CLKCTRL_G3; Fanout = 33; COMB Node = 'gen6mhz:inst1|count[2]~clkctrl'
+            Info: 4: + IC(1.033 ns) + CELL(0.537 ns) = 4.320 ns; Loc. = LCFF_X31_Y31_N19; Fanout = 5; REG Node = 'vga:inst3|vga_counter:counter|pos_y[8]'
+            Info: Total cell delay = 2.323 ns ( 53.77 % )
+            Info: Total interconnect delay = 1.997 ns ( 46.23 % )
+        Info: - Longest clock path from clock "clock_50mhz" to source register is 4.315 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock_50mhz'
+            Info: 2: + IC(0.331 ns) + CELL(0.787 ns) = 2.117 ns; Loc. = LCFF_X1_Y18_N21; Fanout = 3; REG Node = 'gen6mhz:inst1|count[2]'
+            Info: 3: + IC(0.633 ns) + CELL(0.000 ns) = 2.750 ns; Loc. = CLKCTRL_G3; Fanout = 33; COMB Node = 'gen6mhz:inst1|count[2]~clkctrl'
+            Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 4.315 ns; Loc. = LCFF_X31_Y30_N3; Fanout = 6; REG Node = 'vga:inst3|vga_counter:counter|pos_x[6]'
+            Info: Total cell delay = 2.323 ns ( 53.84 % )
+            Info: Total interconnect delay = 1.992 ns ( 46.16 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "fake_ram:inst5|ro_data_out" (data pin = "rst", clock pin = "clock_50mhz") is -0.980 ns
+    Info: + Longest pin to register delay is 3.370 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 2; PIN Node = 'rst'
+        Info: 2: + IC(2.012 ns) + CELL(0.275 ns) = 3.286 ns; Loc. = LCCOMB_X30_Y30_N24; Fanout = 1; COMB Node = 'fake_ram:inst5|ro_data_out~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 3.370 ns; Loc. = LCFF_X30_Y30_N25; Fanout = 1; REG Node = 'fake_ram:inst5|ro_data_out'
+        Info: Total cell delay = 1.358 ns ( 40.30 % )
+        Info: Total interconnect delay = 2.012 ns ( 59.70 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clock_50mhz" to destination register is 4.314 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock_50mhz'
+        Info: 2: + IC(0.331 ns) + CELL(0.787 ns) = 2.117 ns; Loc. = LCFF_X1_Y18_N21; Fanout = 3; REG Node = 'gen6mhz:inst1|count[2]'
+        Info: 3: + IC(0.633 ns) + CELL(0.000 ns) = 2.750 ns; Loc. = CLKCTRL_G3; Fanout = 33; COMB Node = 'gen6mhz:inst1|count[2]~clkctrl'
+        Info: 4: + IC(1.027 ns) + CELL(0.537 ns) = 4.314 ns; Loc. = LCFF_X30_Y30_N25; Fanout = 1; REG Node = 'fake_ram:inst5|ro_data_out'
+        Info: Total cell delay = 2.323 ns ( 53.85 % )
+        Info: Total interconnect delay = 1.991 ns ( 46.15 % )
+Info: tco from clock "clock_50mhz" to destination pin "vga_hsync" through register "vga:inst3|vga_read:read_and_output|h_sync_out" is 9.337 ns
+    Info: + Longest clock path from clock "clock_50mhz" to source register is 4.315 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock_50mhz'
+        Info: 2: + IC(0.331 ns) + CELL(0.787 ns) = 2.117 ns; Loc. = LCFF_X1_Y18_N21; Fanout = 3; REG Node = 'gen6mhz:inst1|count[2]'
+        Info: 3: + IC(0.633 ns) + CELL(0.000 ns) = 2.750 ns; Loc. = CLKCTRL_G3; Fanout = 33; COMB Node = 'gen6mhz:inst1|count[2]~clkctrl'
+        Info: 4: + IC(1.028 ns) + CELL(0.537 ns) = 4.315 ns; Loc. = LCFF_X32_Y30_N25; Fanout = 1; REG Node = 'vga:inst3|vga_read:read_and_output|h_sync_out'
+        Info: Total cell delay = 2.323 ns ( 53.84 % )
+        Info: Total interconnect delay = 1.992 ns ( 46.16 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 4.772 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X32_Y30_N25; Fanout = 1; REG Node = 'vga:inst3|vga_read:read_and_output|h_sync_out'
+        Info: 2: + IC(1.964 ns) + CELL(2.808 ns) = 4.772 ns; Loc. = PIN_A7; Fanout = 0; PIN Node = 'vga_hsync'
+        Info: Total cell delay = 2.808 ns ( 58.84 % )
+        Info: Total interconnect delay = 1.964 ns ( 41.16 % )
+Info: th for register "fake_ram:inst5|ro_data_out" (data pin = "rst", clock pin = "clock_50mhz") is 1.210 ns
+    Info: + Longest clock path from clock "clock_50mhz" to destination register is 4.314 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'clock_50mhz'
+        Info: 2: + IC(0.331 ns) + CELL(0.787 ns) = 2.117 ns; Loc. = LCFF_X1_Y18_N21; Fanout = 3; REG Node = 'gen6mhz:inst1|count[2]'
+        Info: 3: + IC(0.633 ns) + CELL(0.000 ns) = 2.750 ns; Loc. = CLKCTRL_G3; Fanout = 33; COMB Node = 'gen6mhz:inst1|count[2]~clkctrl'
+        Info: 4: + IC(1.027 ns) + CELL(0.537 ns) = 4.314 ns; Loc. = LCFF_X30_Y30_N25; Fanout = 1; REG Node = 'fake_ram:inst5|ro_data_out'
+        Info: Total cell delay = 2.323 ns ( 53.85 % )
+        Info: Total interconnect delay = 1.991 ns ( 46.15 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 3.370 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N25; Fanout = 2; PIN Node = 'rst'
+        Info: 2: + IC(2.012 ns) + CELL(0.275 ns) = 3.286 ns; Loc. = LCCOMB_X30_Y30_N24; Fanout = 1; COMB Node = 'fake_ram:inst5|ro_data_out~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 3.370 ns; Loc. = LCFF_X30_Y30_N25; Fanout = 1; REG Node = 'fake_ram:inst5|ro_data_out'
+        Info: Total cell delay = 1.358 ns ( 40.30 % )
+        Info: Total interconnect delay = 2.012 ns ( 59.70 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 193 megabytes
+    Info: Processing ended: Tue Nov 26 19:00:00 2013
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

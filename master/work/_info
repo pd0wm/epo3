@@ -44,6 +44,45 @@ R7
 !s108 1385486026.285419
 !s90 -lower|-explicit|-work|work|VHDL/fake_ram-fake_ram_arch.vhd|-quiet|-nologo|
 !s107 VHDL/fake_ram-fake_ram_arch.vhd|
+Eram_simple
+w1385489103
+R2
+R3
+Z9 dmaster
+8VHDL/ram_simple.vhd
+FVHDL/ram_simple.vhd
+l0
+L4
+V3^==flPQFjZOliZkm>@S=2
+R5
+32
+R6
+R7
+!s100 Kg6fnAGb1>:6`e<Q9Tm`U2
+!i10b 1
+!s108 1385489103.650394
+!s90 -lower|-explicit|-work|work|VHDL/ram_simple.vhd|-quiet|-nologo|
+!s107 VHDL/ram_simple.vhd|
+Aram_simple_arch
+w1385489132
+DEx4 work 10 ram_simple 0 22 3^==flPQFjZOliZkm>@S=2
+R2
+R3
+dmaster
+8VHDL/ram_simple-ram_simple_arch.vhd
+FVHDL/ram_simple-ram_simple_arch.vhd
+l5
+L4
+V@IIX^4;2TO:_Xja8<h37K0
+!s100 16Sf4ilTzU2e:o]YkB2N<3
+R5
+32
+!i10b 1
+!s108 1385489132.437342
+!s90 -lower|-explicit|-work|work|VHDL/ram_simple-ram_simple_arch.vhd|-quiet|-nologo|
+!s107 VHDL/ram_simple-ram_simple_arch.vhd|
+R6
+R7
 Evga
 w1385458109
 R8
@@ -67,7 +106,7 @@ R7
 !s107 VHDL/vga.vhd|
 Avga_arch
 w1385463136
-Z9 DEx4 work 3 vga 0 22 LK8T0U5X@UlUIeJ^XQm>L1
+Z10 DEx4 work 3 vga 0 22 LK8T0U5X@UlUIeJ^XQm>L1
 R8
 R1
 R2
@@ -87,7 +126,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_arch.vhd|-quiet|-nologo|
 !s107 VHDL/vga_arch.vhd|
 Evga_counter
-Z10 w1385458071
+Z11 w1385458071
 R8
 R1
 R2
@@ -108,7 +147,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_counter.vhd|-quiet|-nologo|
 !s107 VHDL/vga_counter.vhd|
 Avga_counter_behav
-Z11 DEx4 work 11 vga_counter 0 22 G3HgN>WznB_7eB3]Ei8Q23
+Z12 DEx4 work 11 vga_counter 0 22 G3HgN>WznB_7eB3]Ei8Q23
 R8
 R1
 R2
@@ -135,9 +174,9 @@ R8
 R1
 R2
 R3
-R11
+R12
 w1385458498
-Z12 dmaster
+R9
 8VHDL/vga_counter_vga_counter_behav_cfg.vhd
 FVHDL/vga_counter_vga_counter_behav_cfg.vhd
 l0
@@ -153,7 +192,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_counter_vga_counter_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_counter_vga_counter_behav_cfg.vhd|
 Evga_field_check
-R10
+R11
 R8
 R1
 R2
@@ -204,7 +243,7 @@ R2
 R3
 R13
 w1385458492
-R12
+R9
 8VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 FVHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 l0
@@ -256,7 +295,7 @@ nbody
 !s100 V6HOaF7BoAS8m:UlKzSRz1
 !i10b 1
 Evga_read
-R10
+R11
 R8
 R1
 R2
@@ -306,7 +345,7 @@ R2
 R3
 R20
 w1385458487
-R12
+R9
 8VHDL/vga_read_vga_read_behav_cfg.vhd
 FVHDL/vga_read_vga_read_behav_cfg.vhd
 l0
@@ -322,7 +361,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_read_vga_read_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_read_vga_read_behav_cfg.vhd|
 Evga_sync
-R10
+R11
 R8
 R1
 R2
@@ -373,7 +412,7 @@ R2
 R3
 R21
 w1385458480
-R12
+R9
 8VHDL/vga_sync_vga_sync_arch_cfg.vhd
 FVHDL/vga_sync_vga_sync_arch_cfg.vhd
 l0
@@ -430,7 +469,7 @@ R7
 Cvga_tb_vga_tb_arch_cfg
 avga_tb_arch
 evga_tb
-R9
+R10
 DAx4 work 6 vga_tb 11 vga_tb_arch 22 F_LlR8^UBbfFE=k0`:Bke1
 R8
 R1
@@ -438,7 +477,7 @@ R2
 R3
 R28
 w1385458454
-R12
+R9
 8VHDL/vga_tb_vga_tb_arch_cfg.vhd
 FVHDL/vga_tb_vga_tb_arch_cfg.vhd
 l0
@@ -454,7 +493,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_tb_vga_tb_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_tb_vga_tb_arch_cfg.vhd|
 Evga_trans
-R10
+R11
 R8
 R1
 R2
@@ -495,7 +534,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_trans_arch.vhd|-quiet|-nologo|
 !s107 VHDL/vga_trans_arch.vhd|
 Evga_trans_reset
-R10
+R11
 R8
 R1
 R2
@@ -545,7 +584,7 @@ R2
 R3
 R30
 w1385458408
-R12
+R9
 8VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
 FVHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
 l0
@@ -570,7 +609,7 @@ R2
 R3
 R29
 w1385458415
-R12
+R9
 8VHDL/vga_trans_vga_trans_arch_cfg.vhd
 FVHDL/vga_trans_vga_trans_arch_cfg.vhd
 l0
@@ -586,7 +625,7 @@ R7
 !s90 -lower|-explicit|-work|work|VHDL/vga_trans_vga_trans_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_trans_vga_trans_arch_cfg.vhd|
 Evga_triggers
-R10
+R11
 R8
 R1
 R2
@@ -636,7 +675,7 @@ R2
 R3
 R31
 w1385458400
-R12
+R9
 8VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 FVHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 l0
@@ -660,7 +699,7 @@ R29
 R31
 R13
 R21
-R11
+R12
 DCx4 work 27 vga_read_vga_read_behav_cfg 0 22 bj3hkb;SfC=HcfFZcimJT0
 DCx4 work 40 vga_trans_reset_vga_trans_reset_arch_cfg 0 22 ZH_5eGfdL_4;bGb8n[fkz0
 DCx4 work 28 vga_trans_vga_trans_arch_cfg 0 22 Mo9DKoE2C=MfYQ7WRbm:B1
@@ -673,9 +712,9 @@ R8
 R1
 R2
 R3
-R9
+R10
 w1385458503
-R12
+R9
 8VHDL/vga_vga_arch_cfg.vhd
 FVHDL/vga_vga_arch_cfg.vhd
 l0
