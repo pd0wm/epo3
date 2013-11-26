@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 
-architecture structural of next_piece_generator is
+architecture structural of npgen is
 	component ff
 		port(clk : in  std_logic;
 			 rst : in  std_logic;
