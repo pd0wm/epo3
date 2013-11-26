@@ -7,6 +7,35 @@ OPTIMIZED DESIGN _opt
     Short name: @_opt
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: vga
+ENTITY fake_ram
+    Source modified time: Tue Nov 26 16:20:00 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/fake_ram.vhd
+    Source file: VHDL/fake_ram.vhd
+    Start location: VHDL/fake_ram.vhd:4
+    Version string: ^FWHbYYT0TCWVnN3KodCN1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY fake_ram_arch
+    Source modified time: Tue Nov 26 16:20:38 2013
+    Depends on: E work fake_ram ^FWHbYYT0TCWVnN3KodCN1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/fake_ram-fake_ram_arch.vhd
+    Source file: VHDL/fake_ram-fake_ram_arch.vhd
+    Start location: VHDL/fake_ram-fake_ram_arch.vhd:4
+    Version string: icfeEiMA_ASSI`NPj1:GC1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
 ENTITY vga
     Source modified time: Tue Nov 26 10:28:29 2013
     Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
