@@ -1,0 +1,5 @@
+rm -rf /home/tqiu/Documents/CheckMask/syn_work_bak
+mv -f /home/tqiu/Documents/CheckMask/syn_work /home/tqiu/Documents/CheckMask/syn_work_bak
+cp -r /tmp/tqiu/Documents/CheckMask/syn_work /home/tqiu/Documents/CheckMask
+cp /tmp/tqiu/Documents/CheckMask/ADB/checkmask.ddc /home/tqiu/Documents/CheckMask/ADB/checkmask.ddc
+cp /tmp/tqiu/Documents/CheckMask/VHDL/checkmask_SYNTH.vhd /home/tqiu/Documents/CheckMask/VHDL/checkmask_SYNTH.vhd
