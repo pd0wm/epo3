@@ -1,10 +1,10 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
-entity draw_erase_piece_testbench is
-end entity draw_erase_piece_testbench;
+entity depiece_testbench is
+end entity depiece_testbench;
 
-architecture test of draw_erase_piece_testbench is
-component draw_erase_piece is
+architecture test of depiece_testbench is
+component depiece is
 PORT
 (
 	clk        : in    std_logic;
@@ -17,7 +17,7 @@ PORT
   addr       : out   std_logic_vector(7 downto 0);
   data       : inout std_logic
 );
-END component draw_erase_piece;
+END component depiece;
 	
 	signal clk,rst, draw_erase, start, data, ready, write: std_logic;
 	signal mask, addr: std_logic_vector(7 downto 0);
@@ -30,7 +30,7 @@ END component draw_erase_piece;
 	  mask <= "11101111" after 0 ns, "10110001" after 500 ns, "11110000" after 1100 ns;
 	  data <= '1' after 0 ns, 'Z' after 100 ns, '0' after 500 ns, 'Z' after 780 ns, '1' after 1000 ns, 'Z' after 1380 ns;
 	  
-fghjk: draw_erase_piece port map(
+fghjk: depiece port map(
   clk=>clk,
   rst =>rst,
   mask => mask,

@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-entity draw_erase_piece is
+entity depiece is
     port(
         clk        : in    std_logic;
         rst        : in    std_logic;
@@ -16,6 +16,6 @@ entity draw_erase_piece is
         addr       : out   std_logic_vector(7 downto 0);
         data       : inout std_logic
     );
-end draw_erase_piece;
+end depiece;
 
 

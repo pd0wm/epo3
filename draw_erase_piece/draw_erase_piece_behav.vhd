@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-architecture behaviour of draw_erase_piece is
+architecture behaviour of depiece is
 type sending_state is (waiting, writing, done);
 signal state, new_state : sending_state;
 

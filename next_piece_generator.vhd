@@ -1,6 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
-entity next_piece_generator is
+entity npgen is
 	port(
 		clk         : in  std_logic;
 		rst         : in  std_logic;
@@ -10,6 +10,6 @@ entity next_piece_generator is
 
 		button_seed : in  std_logic
 	);
-end next_piece_generator;
+end npgen;
 
 
