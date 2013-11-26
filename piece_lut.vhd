@@ -16,6 +16,7 @@ entity piece_lut is
 		error       : out std_logic;
 		start       : in  std_logic;
 
+
 		rom_addr    : out std_logic_vector(7 downto 0);
 		rom_data    : in  std_logic_vector(15 downto 0)
 	);
