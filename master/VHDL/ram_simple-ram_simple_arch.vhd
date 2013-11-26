@@ -30,12 +30,7 @@ begin
 	-- Combinatorial networks for data outs
 	main_out : process(dr1, rw_write_enable)
 	begin
-		-- Tri-state buffer for interface 1
-		if (rw_write_enable = '0') then
-			rw_data <= dr1;
-		else
-			rw_data <= 'Z';
-		end if;
+		rw_data_out <= dr1;
 	end process;
 
 	ro1_out_comb : process(dr2)
@@ -67,7 +62,7 @@ begin
 
 			-- Use the new address because the buffered address will be set now
 			if (rw_write_enable = '1') then
-				ram(to_integer(unsigned(addr1_new))) <= rw_data;
+				ram(to_integer(unsigned(addr1_new))) <= rw_data_in;
 			end if;
 		end if;
 	end process;
