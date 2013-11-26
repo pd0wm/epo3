@@ -86,26 +86,6 @@ gen6mhz:inst1
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-7ad3393cb7c586ec048216054308e30
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 vga
 # storage
 db|top_de2.(3).cnf
@@ -490,6 +470,26 @@ vga:inst6|vga_read:read_and_output
 
 # end
 # entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+bd3b546c3db6aa58cbccb168e52da72
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 ram_simple
 # storage
 db|top_de2.(11).cnf
@@ -501,7 +501,7 @@ ON
 # case_insensitive
 # source_file
 |home|epo3-user|Desktop|epo3|master|VHDL|ram_simple.vhd
-b33fa47410d98aa680987794a5444010
+43a82c5c36b9ef4284c0a35aee52c450
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -517,10 +517,49 @@ ON
 |home|epo3-user|Desktop|epo3|master|VHDL|ram_simple_ram_simple_arch_cfg.vhd
 79c5d192e3d057207a87efaf4a6097f5
 |home|epo3-user|Desktop|epo3|master|VHDL|ram_simple-ram_simple_arch.vhd
-c4ae708acc5d6aa0974916a8b9eadb
+9f73928acd8ebce661a271e055f836f7
 }
 # hierarchies {
-ram_simple:inst5
+ram_simple:inst2
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+depiece_simple
+# storage
+db|top_de2.(12).cnf
+db|top_de2.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|epo3|master|VHDL|depiece_simple.vhd
+9b77167405243b3d761c9baf9a3eadd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|epo3|master|VHDL|depiece_simple-depiece_simple_arch.vhd
+4679ee611c416ccfbadb8bac8f27be9
+|home|epo3-user|Desktop|epo3|master|VHDL|params.vhd
+4f8b7d5d10b2e3f08bcf19ee27a23fc
+}
+# hierarchies {
+depiece_simple:inst5
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
