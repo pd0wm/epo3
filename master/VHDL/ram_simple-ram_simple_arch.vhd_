@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-architecture ram_simple_arch of ram_simple is
+architecture ram_behav of ram_simple is
 	type mem is array (0 to 2 ** 8 - 1) of std_logic;
 
 	-- Memory
@@ -71,6 +71,4 @@ begin
 			end if;
 		end if;
 	end process;
-end ram_simple_arch;
-
-
+end ram_behav;

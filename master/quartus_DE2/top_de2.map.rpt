@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Tue Nov 26 18:59:41 2013
+Tue Nov 26 19:28:02 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -16,9 +16,8 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   8. Registers Removed During Synthesis
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "vga:inst3|vga_triggers:triggers"
- 13. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +43,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 26 18:59:41 2013          ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 26 19:28:02 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 55                                             ;
-;     Total combinational functions  ; 49                                             ;
-;     Dedicated logic registers      ; 36                                             ;
-; Total registers                    ; 36                                             ;
+; Total logic elements               ; 40                                             ;
+;     Total combinational functions  ; 34                                             ;
+;     Dedicated logic registers      ; 29                                             ;
+; Total registers                    ; 29                                             ;
 ; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -164,6 +163,9 @@ applicable agreement for further details.
 +------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path                     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ;
 +------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
+; ../VHDL/ram_simple_ram_simple_arch_cfg.vhd           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple_ram_simple_arch_cfg.vhd           ;
+; ../VHDL/ram_simple.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple.vhd                               ;
+; ../VHDL/ram_simple-ram_simple_arch.vhd               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple-ram_simple_arch.vhd               ;
 ; ../VHDL/vga_vga_arch_cfg.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_vga_arch_cfg.vhd                         ;
 ; ../VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ;
 ; ../VHDL/vga_triggers_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_arch.vhd                        ;
@@ -189,41 +191,39 @@ applicable agreement for further details.
 ; ../VHDL/vga_arch.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_arch.vhd                                 ;
 ; ../VHDL/vga.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga.vhd                                      ;
 ; ../VHDL/params.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/params.vhd                                   ;
-; ../VHDL/fake_ram.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/fake_ram.vhd                                 ;
-; ../VHDL/fake_ram-fake_ram_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/fake_ram-fake_ram_arch.vhd                   ;
 ; top_de2.bdf                                          ; yes             ; User Block Diagram/Schematic File  ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/top_de2.bdf                           ;
 ; pre_vga_dac.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/pre_vga_dac.vhd                       ;
 ; gen6mhz.vhd                                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/gen6mhz.vhd                           ;
 +------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                          ;
-+---------------------------------------------+------------------------+
-; Resource                                    ; Usage                  ;
-+---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 55                     ;
-;                                             ;                        ;
-; Total combinational functions               ; 49                     ;
-; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 14                     ;
-;     -- 3 input functions                    ; 12                     ;
-;     -- <=2 input functions                  ; 23                     ;
-;                                             ;                        ;
-; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 35                     ;
-;     -- arithmetic mode                      ; 14                     ;
-;                                             ;                        ;
-; Total registers                             ; 36                     ;
-;     -- Dedicated logic registers            ; 36                     ;
-;     -- I/O registers                        ; 0                      ;
-;                                             ;                        ;
-; I/O pins                                    ; 37                     ;
-; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
-; Maximum fan-out                             ; 35                     ;
-; Total fan-out                               ; 283                    ;
-; Average fan-out                             ; 2.32                   ;
-+---------------------------------------------+------------------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Estimated Total logic elements              ; 40                                         ;
+;                                             ;                                            ;
+; Total combinational functions               ; 34                                         ;
+; Logic element usage by number of LUT inputs ;                                            ;
+;     -- 4 input functions                    ; 5                                          ;
+;     -- 3 input functions                    ; 11                                         ;
+;     -- <=2 input functions                  ; 18                                         ;
+;                                             ;                                            ;
+; Logic elements by mode                      ;                                            ;
+;     -- normal mode                          ; 20                                         ;
+;     -- arithmetic mode                      ; 14                                         ;
+;                                             ;                                            ;
+; Total registers                             ; 29                                         ;
+;     -- Dedicated logic registers            ; 29                                         ;
+;     -- I/O registers                        ; 0                                          ;
+;                                             ;                                            ;
+; I/O pins                                    ; 37                                         ;
+; Maximum fan-out node                        ; vga:inst6|vga_read:read_and_output|red_out ;
+; Maximum fan-out                             ; 30                                         ;
+; Total fan-out                               ; 211                                        ;
+; Average fan-out                             ; 2.11                                       ;
++---------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -231,16 +231,13 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |top_de2                            ; 49 (1)            ; 36 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
-;    |fake_ram:inst5|                 ; 1 (1)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|fake_ram:inst5                        ;              ;
+; |top_de2                            ; 34 (0)            ; 29 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
 ;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
-;    |vga:inst3|                      ; 44 (0)            ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                             ;              ;
-;       |vga_counter:counter|         ; 22 (22)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter         ;              ;
-;       |vga_field_check:field_check| ; 4 (4)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_check:field_check ;              ;
-;       |vga_read:read_and_output|    ; 1 (1)             ; 7 (7)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_read:read_and_output    ;              ;
-;       |vga_sync:sync|               ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_sync:sync               ;              ;
-;       |vga_trans:trans|             ; 6 (6)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_trans:trans             ;              ;
-;       |vga_triggers:triggers|       ; 7 (7)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_triggers:triggers       ;              ;
+;    |vga:inst6|                      ; 31 (0)            ; 26 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6                             ;              ;
+;       |vga_counter:counter|         ; 23 (23)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_counter:counter         ;              ;
+;       |vga_field_check:field_check| ; 4 (4)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_field_check:field_check ;              ;
+;       |vga_read:read_and_output|    ; 0 (0)             ; 6 (6)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_read:read_and_output    ;              ;
+;       |vga_sync:sync|               ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_sync:sync               ;              ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -250,14 +247,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+--------------------------------------------------------+
 ; Register name                                              ; Reason for Removal                                     ;
 +------------------------------------------------------------+--------------------------------------------------------+
-; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[0..2] ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst3|vga_triggers:triggers|end_frame_state            ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst3|vga_read:read_and_output|green_out               ; Merged with vga:inst3|vga_read:read_and_output|red_out ;
-; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[3..6] ; Lost fanout                                            ;
-; vga:inst3|vga_field_check:field_check|end_field_line_state ; Lost fanout                                            ;
-; vga:inst3|vga_trans_reset:trans_reset|counter_state[0..3]  ; Lost fanout                                            ;
-; vga:inst3|vga_trans:trans|mem_addr_state[1..6]             ; Lost fanout                                            ;
-; Total Number of Removed Registers = 20                     ;                                                        ;
+; ram_simple:inst5|ram[0]                                    ; Stuck at GND due to stuck port clock_enable            ;
+; ram_simple:inst5|addr1[0..7]                               ; Lost fanout                                            ;
+; ram_simple:inst5|ram[1..255]                               ; Stuck at GND due to stuck port clock_enable            ;
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2] ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst6|vga_triggers:triggers|end_frame_state            ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst6|vga_read:read_and_output|green_out               ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
+; vga:inst6|vga_read:read_and_output|blue_out                ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
+; ram_simple:inst5|addr2[0..7]                               ; Lost fanout                                            ;
+; vga:inst6|vga_trans:trans|mem_addr_state[0..7]             ; Lost fanout                                            ;
+; vga:inst6|vga_trans:trans|counter_state[0..1]              ; Lost fanout                                            ;
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[7]    ; Lost fanout                                            ;
+; vga:inst6|vga_triggers:triggers|new_line_state             ; Lost fanout                                            ;
+; vga:inst6|vga_triggers:triggers|new_frame_state            ; Lost fanout                                            ;
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[3..6] ; Lost fanout                                            ;
+; vga:inst6|vga_field_check:field_check|end_field_line_state ; Lost fanout                                            ;
+; vga:inst6|vga_trans_reset:trans_reset|counter_state[0..3]  ; Lost fanout                                            ;
+; Total Number of Removed Registers = 300                    ;                                                        ;
 +------------------------------------------------------------+--------------------------------------------------------+
 
 
@@ -266,13 +272,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+---------------------------+------------------------------------------------------------+
 ; Register name                                           ; Reason for Removal        ; Registers Removed due to This Register                     ;
 +---------------------------------------------------------+---------------------------+------------------------------------------------------------+
-; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[5] ; Lost Fanouts              ; vga:inst3|vga_trans_reset:trans_reset|counter_state[3],    ;
-;                                                         ;                           ; vga:inst3|vga_trans_reset:trans_reset|counter_state[2],    ;
-;                                                         ;                           ; vga:inst3|vga_trans_reset:trans_reset|counter_state[1],    ;
-;                                                         ;                           ; vga:inst3|vga_trans_reset:trans_reset|counter_state[0]     ;
-; vga:inst3|vga_triggers:triggers|end_frame_state         ; Stuck at GND              ; vga:inst3|vga_field_check:field_check|end_field_line_state ;
+; vga:inst6|vga_trans_reset:trans_reset|counter_state[3]  ; Lost Fanouts              ; vga:inst6|vga_trans_reset:trans_reset|counter_state[2],    ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|counter_state[1],    ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|counter_state[0]     ;
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0] ; Stuck at GND              ; vga:inst6|vga_triggers:triggers|new_line_state,            ;
+;                                                         ; due to stuck port data_in ; vga:inst6|vga_triggers:triggers|new_frame_state            ;
+; ram_simple:inst5|addr2[7]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[7],               ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[7]    ;
+; ram_simple:inst5|addr2[6]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[6],               ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[6]    ;
+; ram_simple:inst5|addr2[5]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[5],               ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[5]    ;
+; ram_simple:inst5|addr2[4]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[4],               ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[4]    ;
+; ram_simple:inst5|addr2[3]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[3],               ;
+;                                                         ;                           ; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[3]    ;
+; vga:inst6|vga_triggers:triggers|end_frame_state         ; Stuck at GND              ; vga:inst6|vga_field_check:field_check|end_field_line_state ;
 ;                                                         ; due to stuck port data_in ;                                                            ;
-; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4] ; Lost Fanouts              ; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[3]    ;
+; ram_simple:inst5|addr2[2]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[2]                ;
+; ram_simple:inst5|addr2[1]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[1]                ;
+; ram_simple:inst5|addr2[0]                               ; Lost Fanouts              ; vga:inst6|vga_trans:trans|mem_addr_state[0]                ;
 +---------------------------------------------------------+---------------------------+------------------------------------------------------------+
 
 
@@ -281,29 +300,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|mem_addr_state[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|mem_addr_state[6] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|counter_state[1]  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga:inst3|vga_triggers:triggers"                                                            ;
+; Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"                                                            ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -317,9 +325,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Nov 26 18:59:37 2013
+    Info: Processing started: Tue Nov 26 19:27:55 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple_ram_simple_arch_cfg.vhd
+    Info: Found design unit 1: ram_simple_ram_simple_arch_cfg
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple.vhd
+    Info: Found entity 1: ram_simple
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple-ram_simple_arch.vhd
+    Info: Found design unit 1: ram_simple-ram_simple_arch
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_vga_arch_cfg.vhd
     Info: Found design unit 1: vga_vga_arch_cfg
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
@@ -391,44 +405,68 @@ Info: Found 2 design units, including 1 entities, in source file gen6mhz.vhd
 Info: Elaborating entity "top_de2" for the top level hierarchy
 Info: Elaborating entity "pre_vga_dac" for hierarchy "pre_vga_dac:inst"
 Info: Elaborating entity "gen6mhz" for hierarchy "gen6mhz:inst1"
-Info: Elaborating entity "vga" for hierarchy "vga:inst3"
+Info: Elaborating entity "vga" for hierarchy "vga:inst6"
 Warning (10036): Verilog HDL or VHDL warning at vga_arch.vhd(48): object "end_line" assigned a value but never read
-Info: Elaborating entity "vga_counter" for hierarchy "vga:inst3|vga_counter:counter"
-Info: Elaborating entity "vga_sync" for hierarchy "vga:inst3|vga_sync:sync"
-Info: Elaborating entity "vga_field_check" for hierarchy "vga:inst3|vga_field_check:field_check"
-Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst3|vga_triggers:triggers"
-Info: Elaborating entity "vga_trans" for hierarchy "vga:inst3|vga_trans:trans"
-Info: Elaborating entity "vga_trans_reset" for hierarchy "vga:inst3|vga_trans_reset:trans_reset"
-Info: Elaborating entity "vga_read" for hierarchy "vga:inst3|vga_read:read_and_output"
-Info: Elaborating entity "fake_ram" for hierarchy "fake_ram:inst5"
+Info: Elaborating entity "vga_counter" for hierarchy "vga:inst6|vga_counter:counter"
+Info: Elaborating entity "vga_sync" for hierarchy "vga:inst6|vga_sync:sync"
+Info: Elaborating entity "vga_field_check" for hierarchy "vga:inst6|vga_field_check:field_check"
+Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst6|vga_triggers:triggers"
+Info: Elaborating entity "vga_trans" for hierarchy "vga:inst6|vga_trans:trans"
+Info: Elaborating entity "vga_trans_reset" for hierarchy "vga:inst6|vga_trans_reset:trans_reset"
+Info: Elaborating entity "vga_read" for hierarchy "vga:inst6|vga_read:read_and_output"
+Info: Elaborating entity "ram_simple" for hierarchy "ram_simple:inst5"
+Warning (10036): Verilog HDL or VHDL warning at ram_simple-ram_simple_arch.vhd(9): object "ram_new" assigned a value but never read
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
-Info: 15 registers lost all their fanouts during netlist optimizations. The first 15 are displayed below.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[3]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_field_check:field_check|end_field_line_state" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|counter_state[3]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|counter_state[2]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|counter_state[1]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans_reset:trans_reset|counter_state[0]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[1]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[2]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[3]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_trans:trans|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
+Info: 38 registers lost all their fanouts during netlist optimizations. The first 38 are displayed below.
+    Info: Register "ram_simple:inst5|addr1[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr1[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "ram_simple:inst5|addr2[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|mem_addr_state[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|counter_state[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans:trans|counter_state[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_triggers:triggers|new_line_state" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_triggers:triggers|new_frame_state" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_field_check:field_check|end_field_line_state" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|counter_state[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|counter_state[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|counter_state[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst6|vga_trans_reset:trans_reset|counter_state[0]" lost all its fanouts during netlist optimizations.
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 92 device resources after synthesis - the final resource count might be different
+Info: Implemented 77 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 55 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 263 megabytes
-    Info: Processing ended: Tue Nov 26 18:59:41 2013
-    Info: Elapsed time: 00:00:04
+    Info: Implemented 40 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 264 megabytes
+    Info: Processing ended: Tue Nov 26 19:28:02 2013
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:02
 
 
