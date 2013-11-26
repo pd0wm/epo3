@@ -6,7 +6,7 @@ entity depiece is
 		rst        : in    std_logic;
 
 		mask       : in    std_logic_vector(7 downto 0);
-		mask_select : out std_logic_vector(2 downto 0);
+		mask_select : out std_logic_vector(1 downto 0);
 
 		draw_erase : in    std_logic;   --draw = 1, erase = 0
 		ready      : out   std_logic;

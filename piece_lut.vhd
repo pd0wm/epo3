@@ -6,7 +6,7 @@ entity piece_lut is
 		rst         : in  std_logic;
 
 		mask        : out std_logic_vector(7 downto 0);
-		mask_select : in  std_logic_vector(2 downto 0);
+		mask_select : in  std_logic_vector(1 downto 0);
 
 		x           : in  std_logic_vector(3 downto 0);
 		y           : in  std_logic_vector(4 downto 0);

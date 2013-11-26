@@ -6,7 +6,7 @@ entity check_mask is
 		rst         : in    std_logic;
 
 		mask        : in    std_logic_vector(7 downto 0);
-		mask_select : out   std_logic_vector(2 downto 0);
+		mask_select : out   std_logic_vector(1 downto 0);
 
 		ready       : out   std_logic;
 		emtpy       : out   std_logic;
