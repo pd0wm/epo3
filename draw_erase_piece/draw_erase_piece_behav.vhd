@@ -22,7 +22,7 @@ lbl2: process(state, clk, mask, draw_erase, start, data)
 begin
   case state is
     when waiting =>
-      write <= 'Z';
+      write <= '0';
       ready <= '0';
       addr <= "ZZZZZZZZ";
       data <= 'Z';
@@ -38,7 +38,7 @@ begin
       data <= draw_erase;
       new_state <= done;
     when done =>
-      write <= 'Z';
+      write <= '0';
       ready <= '1';
       addr <= "ZZZZZZZZ";
       data <= 'Z';

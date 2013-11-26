@@ -5,8 +5,8 @@ entity debounce is
 		clk         : in  std_logic;
 		rst         : in  std_logic;
 
-		inputs      : in  std_logic_vector(2 downto 0);
-		output      : out std_logic_vector(2 downto 0);
+		inputs      : in  std_logic_vector(5 downto 0);
+		output      : out std_logic_vector(5 downto 0);
 
 		random_seed : out std_logic
 	);
