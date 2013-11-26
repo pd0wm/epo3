@@ -10,62 +10,22 @@ V`gJz8KK?HTLUKMYW:4d?Z0
 o-quiet -auto_acc_if_foreign -work work
 n@_opt
 OE;O;10.1b;51
-dvga
-Efake_ram
-w1385479200
-Z0 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z1 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-dvga
-8VHDL/fake_ram.vhd
-FVHDL/fake_ram.vhd
-l0
-L4
-V^FWHbYYT0TCWVnN3KodCN1
-Z2 OE;C;10.1b;51
-32
-Z3 o-lower -explicit -work work -quiet -nologo
-Z4 tExplicit 1
-!s100 MPf07JbbE]Jd7XLHhChmJ3
-!i10b 1
-!s108 1385479200.283986
-!s90 -lower|-explicit|-work|work|VHDL/fake_ram.vhd|-quiet|-nologo|
-!s107 VHDL/fake_ram.vhd|
-Afake_ram_arch
-w1385479238
-DEx4 work 8 fake_ram 0 22 ^FWHbYYT0TCWVnN3KodCN1
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-R1
-dvga
-8VHDL/fake_ram-fake_ram_arch.vhd
-FVHDL/fake_ram-fake_ram_arch.vhd
-l5
-L4
-VicfeEiMA_ASSI`NPj1:GC1
-!s100 HN7:>C=Fb33zd8Aa1>N9c0
-R2
-32
-!i10b 1
-!s108 1385479238.929879
-!s90 -lower|-explicit|-work|work|VHDL/fake_ram-fake_ram_arch.vhd|-quiet|-nologo|
-!s107 VHDL/fake_ram-fake_ram_arch.vhd|
-R3
-R4
 Evga
 w1385458109
-Z6 DPx4 work 10 vga_params 0 22 ^JDn_h>W5PoET@2OoE7N80
-Z7 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-R5
-R1
+Z0 DPx4 work 10 vga_params 0 22 ^JDn_h>W5PoET@2OoE7N80
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 dvga
 8VHDL/vga.vhd
 FVHDL/vga.vhd
 l0
 L6
 VLK8T0U5X@UlUIeJ^XQm>L1
-R2
+Z4 OE;C;10.1b;51
 32
-R3
-R4
+Z5 o-lower -explicit -work work -quiet -nologo
+Z6 tExplicit 1
 !s100 dFbYL=OG;H;LKk9R?:JAa0
 !i10b 1
 !s108 1385458370.694649
@@ -73,20 +33,20 @@ R4
 !s107 VHDL/vga.vhd|
 Avga_arch
 w1385458140
-Z8 DEx4 work 3 vga 0 22 LK8T0U5X@UlUIeJ^XQm>L1
-R6
-R7
-R5
+Z7 DEx4 work 3 vga 0 22 LK8T0U5X@UlUIeJ^XQm>L1
+Z8 DPx4 work 10 vga_params 0 22 ^JDn_h>W5PoET@2OoE7N80
 R1
+R2
+R3
 8VHDL/vga_arch.vhd
 FVHDL/vga_arch.vhd
 l85
 L6
 V]iHC`FW?o@AF09Dn_fCj80
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 eXOA6Mc4NB<CoQkT<b]X70
 !i10b 1
 !s108 1385458371.156074
@@ -94,20 +54,20 @@ R4
 !s107 VHDL/vga_arch.vhd|
 Evga_counter
 Z9 w1385458071
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_counter.vhd
 FVHDL/vga_counter.vhd
 l0
 L6
 VG3HgN>WznB_7eB3]Ei8Q23
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 `PJ3Aol_?fBS?;Nn4U;@33
 !i10b 1
 !s108 1385458370.611338
@@ -115,19 +75,19 @@ R4
 !s107 VHDL/vga_counter.vhd|
 Avga_counter_behav
 Z10 DEx4 work 11 vga_counter 0 22 G3HgN>WznB_7eB3]Ei8Q23
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_counter_arch.vhd
 FVHDL/vga_counter_arch.vhd
 l10
 L6
 VeP7;^l;Dn7ZHB[bnO?gYh2
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 ^=>cGQk3Gm=kzz7[CO6fn2
 !i10b 1
 !s108 1385458371.198567
@@ -137,10 +97,10 @@ Cvga_counter_vga_counter_behav_cfg
 avga_counter_behav
 evga_counter
 DAx4 work 11 vga_counter 17 vga_counter_behav 22 eP7;^l;Dn7ZHB[bnO?gYh2
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R10
 w1385458498
 dvga
@@ -149,10 +109,10 @@ FVHDL/vga_counter_vga_counter_behav_cfg.vhd
 l0
 L1
 V:g=<F=2X5^do[HAKeBW:71
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 Eh`]@PUjga^B`:AS6Ba<A1
 !i10b 0
 !s108 1385458498.434295
@@ -160,20 +120,20 @@ R4
 !s107 VHDL/vga_counter_vga_counter_behav_cfg.vhd|
 Evga_field_check
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_field_check.vhd
 FVHDL/vga_field_check.vhd
 l0
 L6
 VMB8jMgkoTXdZjV6DTi0nI1
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 :k75gol;mV@`CgB?4RkOC3
 !i10b 1
 !s108 1385458370.735951
@@ -181,19 +141,19 @@ R4
 !s107 VHDL/vga_field_check.vhd|
 Avga_field_check_arch
 Z11 DEx4 work 15 vga_field_check 0 22 MB8jMgkoTXdZjV6DTi0nI1
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_field_check_arch.vhd
 FVHDL/vga_field_check_arch.vhd
 l9
 L6
 Vgc<O0e:4ToGP4c?QYWSzW0
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 lB];ffTm6g6nfY6:11;Gi1
 !i10b 1
 !s108 1385458371.242032
@@ -203,10 +163,10 @@ Cvga_field_check_vga_field_check_arch_cfg
 avga_field_check_arch
 evga_field_check
 DAx4 work 15 vga_field_check 20 vga_field_check_arch 22 gc<O0e:4ToGP4c?QYWSzW0
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R11
 w1385458492
 dvga
@@ -215,18 +175,18 @@ FVHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 l0
 L1
 VY[WmzlAMdD>`3m0ZN^S9m3
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 zdgSkj[AoJ:36>[6ad@]`2
 !i10b 0
 !s108 1385458492.636868
 !s90 -lower|-explicit|-work|work|VHDL/vga_field_check_vga_field_check_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_field_check_vga_field_check_arch_cfg.vhd|
 Pvga_params
-R5
-R1
+R2
+R3
 R9
 dvga
 Z12 8VHDL/params.vhd
@@ -234,48 +194,48 @@ Z13 FVHDL/params.vhd
 l0
 L4
 V^JDn_h>W5PoET@2OoE7N80
-R2
+R4
 32
 Z14 !s108 1385458370.561018
 Z15 !s90 -lower|-explicit|-work|work|VHDL/params.vhd|-quiet|-nologo|
 Z16 !s107 VHDL/params.vhd|
-R3
-R4
+R5
+R6
 !s100 GQh0dUU[ZAKPFB@TdlY;_3
 !i10b 1
 Bbody
-R6
-R5
-R1
+R8
+R2
+R3
 l0
 L41
 V<ml_:;<e4J1>nKJ@U[AX41
-R2
+R4
 32
 R14
 R15
 R16
-R3
-R4
+R5
+R6
 nbody
 !s100 V6HOaF7BoAS8m:UlKzSRz1
 !i10b 1
 Evga_read
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_read.vhd
 FVHDL/vga_read.vhd
 l0
 L6
 Vl@?;BWdIcSFdWimbCS:371
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 `mbgT[c=>V4kcDZDQ:5A]2
 !i10b 1
 !s108 1385458370.654030
@@ -283,19 +243,19 @@ R4
 !s107 VHDL/vga_read.vhd|
 Avga_read_behav
 Z17 DEx4 work 8 vga_read 0 22 l@?;BWdIcSFdWimbCS:371
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_read_arch.vhd
 FVHDL/vga_read_arch.vhd
 l10
 L6
 V=6CE=Il_7_X;L6M?QP_370
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 3kD^bjAMHg`7YOnYkmo7W0
 !i10b 1
 !s108 1385458371.066965
@@ -305,10 +265,10 @@ Cvga_read_vga_read_behav_cfg
 avga_read_behav
 evga_read
 DAx4 work 8 vga_read 14 vga_read_behav 22 =6CE=Il_7_X;L6M?QP_370
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R17
 w1385458487
 dvga
@@ -317,10 +277,10 @@ FVHDL/vga_read_vga_read_behav_cfg.vhd
 l0
 L1
 Vbj3hkb;SfC=HcfFZcimJT0
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 :l^[DbTm]0>WU63<=Xl813
 !i10b 0
 !s108 1385458487.195779
@@ -328,20 +288,20 @@ R4
 !s107 VHDL/vga_read_vga_read_behav_cfg.vhd|
 Evga_sync
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_sync.vhd
 FVHDL/vga_sync.vhd
 l0
 L6
 V0SDPm_WI1G1WeGal3ld5h1
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 aHWGM>BWPY61Y]F4QGg4I2
 !i10b 1
 !s108 1385458370.902346
@@ -349,19 +309,19 @@ R4
 !s107 VHDL/vga_sync.vhd|
 Avga_sync_arch
 Z18 DEx4 work 8 vga_sync 0 22 0SDPm_WI1G1WeGal3ld5h1
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_sync_arch.vhd
 FVHDL/vga_sync_arch.vhd
 l9
 L6
 V:`VJ8MZoc6D;@[IC`RZZ;1
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 jfVchAT1^=K5_8?Jba7zQ1
 !i10b 1
 !s108 1385458371.025714
@@ -371,10 +331,10 @@ Cvga_sync_vga_sync_arch_cfg
 avga_sync_arch
 evga_sync
 DAx4 work 8 vga_sync 13 vga_sync_arch 22 :`VJ8MZoc6D;@[IC`RZZ;1
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R18
 w1385458480
 dvga
@@ -383,10 +343,10 @@ FVHDL/vga_sync_vga_sync_arch_cfg.vhd
 l0
 L1
 VkZ[oN:dbQo:Ca]2TM]^?M3
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 MYkoV6z5078:`G8?7kD[n3
 !i10b 0
 !s108 1385458480.882767
@@ -394,51 +354,51 @@ R4
 !s107 VHDL/vga_sync_vga_sync_arch_cfg.vhd|
 Evga_tb
 Z19 w1385458700
-R6
-R7
-R5
+R8
 R1
-dvga
+R2
+R3
+d/vga
 Z20 8VHDL/vga_tb.vhd
 Z21 FVHDL/vga_tb.vhd
 l0
 L6
 VSS51nAkk5i9fSo`2V`K_b2
-R2
+R4
 32
 Z22 !s108 1385458700.806108
 Z23 !s90 -lower|-explicit|-work|work|VHDL/vga_tb.vhd|-quiet|-nologo|
 Z24 !s107 VHDL/vga_tb.vhd|
-R3
-R4
+R5
+R6
 !s100 ]J8YXFILR9N;CPc>DSV1Y0
 !i10b 1
 Avga_tb_arch
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 Z25 DEx4 work 6 vga_tb 0 22 SS51nAkk5i9fSo`2V`K_b2
 l29
 L10
 VF_LlR8^UBbfFE=k0`:Bke1
-R2
+R4
 32
 R22
 R23
 R24
-R3
-R4
+R5
+R6
 !s100 aX]=HaU^dWc`K4Ib0P6:a3
 !i10b 1
 Cvga_tb_vga_tb_arch_cfg
 avga_tb_arch
 evga_tb
 DAx4 work 6 vga_tb 11 vga_tb_arch 22 `9b3NRh:bHl^Y5WzYaA=91
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R25
 w1385458454
 dvga
@@ -447,10 +407,10 @@ FVHDL/vga_tb_vga_tb_arch_cfg.vhd
 l0
 L1
 Vd^8>UhkPD2>m;gH?3fRiQ2
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 L27Gh1S4Fl74b_bnGi5Cf2
 !i10b 0
 !s108 1385458454.834852
@@ -458,20 +418,20 @@ R4
 !s107 VHDL/vga_tb_vga_tb_arch_cfg.vhd|
 Evga_trans
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_trans.vhd
 FVHDL/vga_trans.vhd
 l0
 L6
 Vj3AKgHnSaoVeZk_CP8PAG0
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 o_nomh5PO]25>8XToKlIc3
 !i10b 1
 !s108 1385458370.943579
@@ -479,19 +439,19 @@ R4
 !s107 VHDL/vga_trans.vhd|
 Avga_trans_arch
 Z26 DEx4 work 9 vga_trans 0 22 j3AKgHnSaoVeZk_CP8PAG0
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_trans_arch.vhd
 FVHDL/vga_trans_arch.vhd
 l9
 L6
 Ve;eTg[YO6=Dg1>gDfaB8a1
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 TNZUcYE3I2?iSfBN5U^dc3
 !i10b 1
 !s108 1385458371.283869
@@ -499,20 +459,20 @@ R4
 !s107 VHDL/vga_trans_arch.vhd|
 Evga_trans_reset
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_trans_reset.vhd
 FVHDL/vga_trans_reset.vhd
 l0
 L6
 VLB783LT`2fIcVjmd4BcXM2
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 V@KCR;BL4CGR7Hk_ZGXfO0
 !i10b 1
 !s108 1385458370.776807
@@ -520,19 +480,19 @@ R4
 !s107 VHDL/vga_trans_reset.vhd|
 Avga_trans_reset_arch
 Z27 DEx4 work 15 vga_trans_reset 0 22 LB783LT`2fIcVjmd4BcXM2
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_trans_reset_arch.vhd
 FVHDL/vga_trans_reset_arch.vhd
 l9
 L6
 V05?3345H9ZNVgaI8GiPGf3
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 Y^RD>dO=6d5BoInRm=zZ32
 !i10b 1
 !s108 1385458371.109922
@@ -542,10 +502,10 @@ Cvga_trans_reset_vga_trans_reset_arch_cfg
 avga_trans_reset_arch
 evga_trans_reset
 DAx4 work 15 vga_trans_reset 20 vga_trans_reset_arch 22 05?3345H9ZNVgaI8GiPGf3
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R27
 w1385458408
 dvga
@@ -554,10 +514,10 @@ FVHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
 l0
 L1
 VZH_5eGfdL_4;bGb8n[fkz0
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 XPa]GZHEK02b0><S8^Q]T3
 !i10b 0
 !s108 1385458408.798463
@@ -567,10 +527,10 @@ Cvga_trans_vga_trans_arch_cfg
 avga_trans_arch
 evga_trans
 DAx4 work 9 vga_trans 14 vga_trans_arch 22 e;eTg[YO6=Dg1>gDfaB8a1
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R26
 w1385458415
 dvga
@@ -579,10 +539,10 @@ FVHDL/vga_trans_vga_trans_arch_cfg.vhd
 l0
 L1
 VMo9DKoE2C=MfYQ7WRbm:B1
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 zZS_h[@P^CP@OzA8@7QOB2
 !i10b 0
 !s108 1385458415.564463
@@ -590,20 +550,20 @@ R4
 !s107 VHDL/vga_trans_vga_trans_arch_cfg.vhd|
 Evga_triggers
 R9
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 dvga
 8VHDL/vga_triggers.vhd
 FVHDL/vga_triggers.vhd
 l0
 L6
 Va_8e4zcD4lD2PUSfiP?h71
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 5XzIdhEd:ER_dVe8U]_^S1
 !i10b 1
 !s108 1385458370.818238
@@ -611,19 +571,19 @@ R4
 !s107 VHDL/vga_triggers.vhd|
 Avga_triggers_arch
 Z28 DEx4 work 12 vga_triggers 0 22 a_8e4zcD4lD2PUSfiP?h71
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 8VHDL/vga_triggers_arch.vhd
 FVHDL/vga_triggers_arch.vhd
 l12
 L6
 VoY`XCK_l_ZdGLA@nXY3[?2
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 GcLDd]mA>`13J4=CTnVR40
 !i10b 1
 !s108 1385458370.984164
@@ -633,10 +593,10 @@ Cvga_triggers_vga_triggers_arch_cfg
 avga_triggers_arch
 evga_triggers
 DAx4 work 12 vga_triggers 17 vga_triggers_arch 22 oY`XCK_l_ZdGLA@nXY3[?2
-R6
-R7
-R5
+R8
 R1
+R2
+R3
 R28
 w1385458400
 dvga
@@ -645,10 +605,10 @@ FVHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 l0
 L1
 V266c=H8<F8718J1cl3Yml3
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 HF5QU>AgV3IHSEYW_PO0>2
 !i10b 0
 !s108 1385458400.893102
@@ -672,11 +632,11 @@ DCx4 work 40 vga_field_check_vga_field_check_arch_cfg 0 22 Y[WmzlAMdD>`3m0ZN^S9m
 DCx4 work 26 vga_sync_vga_sync_arch_cfg 0 22 kZ[oN:dbQo:Ca]2TM]^?M3
 DCx4 work 33 vga_counter_vga_counter_behav_cfg 0 22 :g=<F=2X5^do[HAKeBW:71
 DAx4 work 3 vga 8 vga_arch 22 ]iHC`FW?o@AF09Dn_fCj80
-R6
-R7
-R5
-R1
 R8
+R1
+R2
+R3
+R7
 w1385458503
 dvga
 8VHDL/vga_vga_arch_cfg.vhd
@@ -684,10 +644,10 @@ FVHDL/vga_vga_arch_cfg.vhd
 l0
 L1
 V9NRi0RlI`<XMV6IUDX1E11
-R2
-32
-R3
 R4
+32
+R5
+R6
 !s100 1k<<I8I@;5;5>MhPzD3N<0
 !i10b 0
 !s108 1385458504.029766
