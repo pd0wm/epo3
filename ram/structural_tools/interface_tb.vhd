@@ -1,25 +1,25 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity sr_interface_tb is
+entity sr_if_tb is
 	constant clk_period     : time := 20 ns;
 	constant initial_offset : time := 5 ns;
 end entity;
 
-architecture sr_interface_tb_behav of sr_interface_tb is
-	component sr_interface
+architecture sr_if_tb_behav of sr_if_tb is
+	component sr_if
 		port(clk, rst     : in  std_logic;
 			 di           : in  std_logic;
 			 do1, do2     : out std_logic;
 			 we           : in  std_logic;
 			 addr1, addr2 : in  std_logic_vector(7 downto 0));
-	end component sr_interface;
+	end component sr_if;
 	
 	signal clk, rst   : std_logic;
 	signal addr1, addr2       : std_logic_vector(7 downto 0);
 	signal do1, do2, we, di : std_logic;
 begin
-	uut : sr_interface
+	uut : sr_if
 		port map(clk   => clk,
 			     rst   => rst,
 			     di    => di,
@@ -93,6 +93,9 @@ begin
 		wait for clk_period * 4;
 	end process;
 end;
+
+
+
 
 
 

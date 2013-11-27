@@ -49,19 +49,28 @@ begin
 
 	mux5_do1 : mux5
 		port map(di => do1_i,
-			     do => do1,
+			     do => do1_buf,
 			     s  => addr1(7 downto 5));
 
 	mux5_do2 : mux5
 		port map(di => do2_i,
-			     do => do2,
+			     do => do2_buf,
 			     s  => addr2(7 downto 5));
 
 	demux5_we : demux5
 		port map(di => we,
 			     do => we_i,
-			     s  => addr2(7 downto 5));
+			     s  => addr2(7 downto 5));	
 end architecture;
+
+
+
+
+
+
+
+
+
 
 
 
