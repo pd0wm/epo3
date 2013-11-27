@@ -60,7 +60,26 @@ begin
 	demux5_we : demux5
 		port map(di => we,
 			     do => we_i,
-			     s  => addr2(7 downto 5));	
+			     s  => addr2(7 downto 5));
+
+	do1_buf : process(clk, rst)
+	begin
+		if (rst = '1') then
+			do1 <= '0';
+		elsif (clk'event and clk = '1') then
+			do1 <= do1_buf;
+		end if;
+	end process;
+
+	do2_buf : process(clk, rst)
+	begin
+		if (rst = '1') then
+			do2 <= '0';
+		elsif (clk'event and clk = '1') then
+			do2 <= do2_buf;
+		end if;
+	end process;
+
 end architecture;
 
 
