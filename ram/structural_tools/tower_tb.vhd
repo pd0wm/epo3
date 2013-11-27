@@ -6,7 +6,7 @@ entity sr_tower_tb is
 	constant initial_offset : time := 5 ns;
 end entity;
 
-architecture sr_tower_tb_behav of sr_tower is
+architecture sr_tower_tb_behav of sr_tower_tb is
 	component sr_tower
 		port(clk, rst     : in  std_logic;
 			 di           : in  std_logic;
@@ -19,13 +19,15 @@ architecture sr_tower_tb_behav of sr_tower is
 	signal addr1, addr2       : std_logic_vector(4 downto 0);
 	signal do1, do2, we, di : std_logic;
 begin
-	uut : sr_160b
-		port map(clk  => clk,
-			     rst  => rst,
-			     addr => addr,
-			     di   => di,
-			     do   => do,
-			     we   => we);
+	uut : sr_tower
+		port map(clk   => clk,
+			     rst   => rst,
+			     di    => di,
+			     do1   => do1,
+			     do2   => do2,
+			     we    => we,
+			     addr1 => addr1,
+			     addr2 => addr2);
 
 	clock : process
 	begin
