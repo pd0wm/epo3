@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-architecture demux40_arch of demux40 is
+architecture demux40_behav of demux40 is
 begin
 	process(di, s)
 		variable sel : integer range 0 to 39;
