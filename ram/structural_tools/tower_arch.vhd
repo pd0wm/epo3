@@ -12,17 +12,17 @@ architecture sr_tower_behav of sr_tower is
 			 addr1_1, addr1_2, addr2_1, addr2_2 : in  std_logic);
 	end component bit4;
 
-	component demux8
+	component demux8_inv
 		port(di : in  std_logic;
 			 do : out std_logic_vector(7 downto 0);
 			 s  : in  std_logic_vector(2 downto 0));
-	end component demux8;
+	end component demux8_inv;
 	
-	component demux4
+	component demux4_inv
 		port(di : in  std_logic;
 			 do : out std_logic_vector(3 downto 0);
 			 s  : in  std_logic_vector(1 downto 0));
-	end component demux4;
+	end component demux4_inv;
 	
 	component dec8
 		port(do : out std_logic_vector(7 downto 0);
@@ -53,7 +53,7 @@ begin
 			);
 	end generate;
 	
-	demux8_we_com : demux8
+	demux8_inv_we_com : demux8_inv
 		port map(di => we,
 			     do => we_com,
 			     s  => addr1(4 downto 2));
@@ -66,7 +66,7 @@ begin
 		port map(do => re_2,
 			     s  => addr2(4 downto 2));
 
-	demux4_we_i : demux4
+	demux4_inv_we_i : demux4_inv
 		port map(di => we,
 			     do => we_i,
 			     s  => addr1(1 downto 0));

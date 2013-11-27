@@ -12,66 +12,55 @@ architecture sr_if_behav of sr_if is
 			 addr1_1, addr1_2, addr2_1, addr2_2 : in  std_logic);
 	end component bit4;
 
-	component demux40
-		port(di : in  std_logic;
-			 do : out std_logic_vector(39 downto 0);
-			 s  : in  std_logic_vector(7 downto 0));
-	end component demux40;
+	component mux5
+		port(di : in  std_logic_vector(4 downto 0);
+			 do : out std_logic;
+			 s  : in  std_logic_vector(2 downto 0));
+	end component mux5;
 
-	signal we_com, re_1, re_2 : std_logic_vector(39 downto 0);
-	signal we_i               : std_logic_vector(3 downto 0);
+	component demux5
+		port(di : in  std_logic;
+			 do : out std_logic_vector(4 downto 0);
+			 s  : in  std_logic_vector(2 downto 0));
+	end component demux5;
+
+	component sr_tower
+		port(clk, rst     : in  std_logic;
+			 di           : in  std_logic;
+			 do1, do2     : out std_logic;
+			 we           : in  std_logic;
+			 addr1, addr2 : in  std_logic_vector(4 downto 0));
+	end component sr_tower;
+
+	signal do1_i, do2_i, we_i : std_logic_vector(4 downto 0);
+	signal do1_buf, do2_buf   : std_logic;
 begin
-	generate_bit4 : for i in 0 to 39 generate
-		bit4_mod : bit4 port map(
-				clk     => clk,
-				rst     => rst,
-				we_com  => we_com(i),
-				we1     => we_i(0),
-				we2     => we_i(1),
-				we3     => we_i(2),
-				we4     => we_i(3),
-				re_1    => re_1(i),
-				re_2    => re_2(i),
-				di      => di,
-				do_1    => do1,
-				do_2    => do2,
-				addr1_1 => addr1(0),
-				addr1_2 => addr1(1),
-				addr2_1 => addr2(0),
-				addr2_2 => addr2(1)
-			);
+	generate_tower : for i in 0 to 4 generate
+		tower_mod : sr_tower
+			port map(clk   => clk,
+				     rst   => rst,
+				     di    => di,
+				     do1   => do1_i(i),
+				     do2   => do2_i(i),
+				     we    => we_i(i),
+				     addr1 => addr1(4 downto 0),
+				     addr2 => addr2(4 downto 0));
 	end generate;
 
-	demux40_we_com : demux40
+	mux5_do1 : mux5
+		port map(di => do1_i,
+			     do => do1,
+			     s  => addr1(7 downto 5));
+
+	mux5_do2 : mux5
+		port map(di => do2_i,
+			     do => do2,
+			     s  => addr2(7 downto 5));
+
+	demux5_we : demux5
 		port map(di => we,
-			     do => we_com,
-			     s  => addr1);
-
-	demux40_re_1 : demux40
-		port map(di => '1',
-			     do => re_1,
-			     s  => addr1
-		);
-
-	demux40_re_2 : demux40
-		port map(di => '1',
-			     do => re_2,
-			     s  => addr2);
-
-	demux4_we_i : process(addr1(1 downto 0), we)
-		variable s : integer range 0 to 3;
-	begin
-		we_i <= (others => '0');
-		s    := to_integer(unsigned(addr1(1 downto 0)));
-
-		case s is
-			when 0 => we_i(0) <= we;
-			when 1 => we_i(1) <= we;
-			when 2 => we_i(2) <= we;
-			when 3 => we_i(3) <= we;
-		end case;
-	end process;
-
+			     do => we_i,
+			     s  => addr2(7 downto 5));
 end architecture;
 
 
