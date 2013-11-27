@@ -67,6 +67,33 @@ begin
 		
 		addr2 <= "00010";
 		wait for clk_period * 4;
+-- Cycle 2
+		-- First read some stuff
+		we   <= '0';
+		addr1 <= "10000";
+		di   <= '0';
+		
+		addr2 <= "00010";
+		wait for clk_period * 4;
+
+		-- Write
+		we   <= '1';
+		addr1 <= "10000";
+		di   <= '1';
+		
+		addr2 <= "00010";
+		wait for clk_period * 4;
+
+		-- Read again
+		we   <= '0';
+		addr1 <= "10000";
+		di   <= '0';
+		
+		addr2 <= "00010";
+		wait for clk_period * 4;
 	end process;
 end;
+
+
+
 

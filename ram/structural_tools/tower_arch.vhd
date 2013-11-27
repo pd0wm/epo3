@@ -54,7 +54,7 @@ begin
 	end generate;
 	
 	demux8_we_com : demux8
-		port map(di => di,
+		port map(di => we,
 			     do => we_com,
 			     s  => addr1(4 downto 2));
 
@@ -72,5 +72,8 @@ begin
 			     s  => addr1(1 downto 0));
 
 end architecture;
+
+
+
 
 
