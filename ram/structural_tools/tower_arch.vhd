@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-architecture tower_behav of tower is
+architecture sr_tower_behav of sr_tower is
 	component bit4
 		port(clk, rst                           : in  std_logic;
 			 we_com, we1, we2, we3, we4         : in  std_logic;
@@ -72,3 +72,5 @@ begin
 			     s  => addr1(1 downto 0));
 
 end architecture;
+
+
