@@ -1016,14 +1016,14 @@ mask_select[1] <= mask_select[1].DB_MAX_OUTPUT_PORT_TYPE
 draw_erase => ~NO_FANOUT~
 ready <= comb.DB_MAX_OUTPUT_PORT_TYPE
 start => ~NO_FANOUT~
-write <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+write <= write_state[2].DB_MAX_OUTPUT_PORT_TYPE
 addr[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 addr[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 addr[2] <= <GND>
-addr[3] <= <GND>
+addr[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 addr[4] <= <GND>
 addr[5] <= <GND>
 addr[6] <= <GND>
-data_out <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+data_out <= write_state[2].DB_MAX_OUTPUT_PORT_TYPE
 
 

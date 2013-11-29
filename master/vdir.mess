@@ -19,11 +19,40 @@ ENTITY controller
     Depends on: E work controller kVkKfe4dNfi@J7RK=oEl[1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
     HDL source file: VHDL/controller-controller_arch.vhd
     Source file: VHDL/controller-controller_arch.vhd
     Start location: VHDL/controller-controller_arch.vhd:4
     Version string: ;6JaV4m>12c4Sk0PKT_500
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: master
+    Debug Symbol file exists
+ENTITY controller_tb
+    Source modified time: Fri Nov 29 10:52:59 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/controller_tb.vhd
+    Source file: VHDL/controller_tb.vhd
+    Start location: VHDL/controller_tb.vhd:4
+    Version string: ab591K;5n32gi;zbb@6d<2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY controller_tb_arch
+    Source modified time: Fri Nov 29 10:53:15 2013
+    Depends on: E work controller_tb ab591K;5n32gi;zbb@6d<2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/controller_tb-controller_tb_arch.vhd
+    Source file: VHDL/controller_tb-controller_tb_arch.vhd
+    Start location: VHDL/controller_tb-controller_tb_arch.vhd:4
+    Version string: IJlGCN_[TQZ5F:zL]lz:k0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo

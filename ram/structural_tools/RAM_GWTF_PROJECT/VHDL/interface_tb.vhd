@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity sr_if_tb is
 	constant clk_period     : time := 160 ns;
-	constant initial_offset : time := 100 ns;
+	constant initial_offset : time := 20 ns;
 end entity;
 
 architecture sr_if_tb_behav of sr_if_tb is
@@ -49,56 +49,68 @@ begin
 		we    <= '0';
 		di    <= '0';
 		addr1 <= "00000010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '1';
-		di    <= '0';
+		di    <= '1';
 		addr1 <= "00000010";
-		wait for clk_period;
+		wait for clk_period*4;
 		
 		we    <= '0';
 		di    <= '0';
 		addr1 <= "00001010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '1';
-		di    <= '0';
+		di    <= '1';
 		addr1 <= "00001010";
-		wait for clk_period;
+		wait for clk_period*4;
 		
 		we    <= '0';
 		di    <= '0';
-		addr1 <= "01101010";
-		wait for clk_period;
+		addr1 <= "00101010";
+		wait for clk_period*4;
+		we    <= '1';
+		di    <= '1';
+		addr1 <= "00101010";
+		wait for clk_period*4;
 		we    <= '1';
 		di    <= '0';
-		addr1 <= "01101010";
-		wait for clk_period;
-		we    <= '1';
-		di    <= '0';
-		addr1 <= "01101010";
-		wait for clk_period;
+		addr1 <= "00101010";
+		wait for clk_period*4;
 		
 		we    <= '0';
 		addr1 <= "00000010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '0';
 		addr1 <= "00001010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '0';
-		addr1 <= "01101010";
-		wait for clk_period;
+		addr1 <= "00101010";
+		wait for clk_period*4;
 		
 		we    <= '0';
 		addr2 <= "00000010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '0';
 		addr2 <= "00001010";
-		wait for clk_period;
+		wait for clk_period*4;
 		we    <= '0';
-		addr2 <= "01101010";
-		wait for clk_period;
+		addr2 <= "00101010";
+		wait for clk_period*4;
 
 	end process;
 end;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
