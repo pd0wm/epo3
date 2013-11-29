@@ -1,0 +1,66 @@
+>>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
+>>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ reading placement 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ building data structure  ------
+------ making grid  ------
+------ routing started Fri Nov 29 11:12:28 2013
+ 46 nets have to be routed.
+Routing net 'addr2_7_0_7' (2/2): . OK!
+Routing net 'do1' (2/2): . OK!
+Routing net 'do2' (2/2): . OK!
+Routing net 'we' (2/2): . OK!
+Routing net 'addr2_7_0_6' (2/2): . OK!
+Routing net 'addr2_7_0_5' (2/2): . OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'n3' (2/2): . OK!
+Routing net 'n4' (2/2): . OK!
+Routing net 'n5' (2/2): . OK!
+Routing net 'n1' (2/2): . OK!
+Routing net 'we_i_4_port' (2/2): . OK!
+Routing net 'clk' (8/8): ....... OK!
+Routing net 'do1_i_2_port' (2/2): . OK!
+Routing net 'we_i_1_port' (2/2): . OK!
+Routing net 'we_i_3_port' (2/2): . OK!
+Routing net 'do2_i_4_port' (2/2): . OK!
+Routing net 'do1_i_0_port' (2/2): . OK!
+Routing net 'addr1_7_0_7' (3/3): .. OK!
+Routing net 'addr1_7_0_6' (3/3): .. OK!
+Routing net 'addr1_7_0_5' (3/3): .. OK!
+Routing net 'do1_i_3_port' (2/2): . OK!
+Routing net 'do2_buf' (2/2): . OK!
+Routing net 'we_i_2_port' (2/2): . OK!
+Routing net 'do2_i_1_port' (2/2): . OK!
+Routing net 'do2_i_3_port' (2/2): . OK!
+Routing net 'do1_buf' (2/2): . OK!
+Routing net 'do1_i_4_port' (2/2): . OK!
+Routing net 'we_i_0_port' (2/2): . OK!
+Routing net 'do2_i_2_port' (2/2): . OK!
+Routing net 'di' (6/6): ..... OK!
+Routing net 'addr1_7_0_4' (6/6): ..... OK!
+Routing net 'addr1_7_0_3' (6/6): ..... OK!
+Routing net 'addr1_7_0_2' (6/6): ..... OK!
+Routing net 'addr1_7_0_1' (6/6): ..... OK!
+Routing net 'addr1_7_0_0' (6/6): ..... OK!
+Routing net 'addr2_7_0_1' (6/6): ..... OK!
+Routing net 'addr2_7_0_0' (6/6): ..... OK!
+Routing net 'do1_i_1_port' (2/2): . OK!
+Routing net 'addr2_7_0_2' (6/6): ..... OK!
+Routing net 'addr2_7_0_4' (6/6): ..... OK!
+Routing net 'addr2_7_0_3' (6/6): ..... OK!
+Routing net 'do2_i_0_port' (2/2): . OK!
+Routing net 'vdd' :  (Power special)
+Routing net 'vss' :  (Power special)
+Routing net 'rst' (8/8): ....... OK!
+READY
+----- Some interesting statistics ------
+Total number of nets:                 46 (100% completion)
+Total length of routed wires:         0 (No new wires created)
+No. of transistors (total / used):    20580/15616 = 75.88 %
+CPU-time consumption:                 0.13 sec.
+Elapsed time during routing:          0.20 sec. (80.00 % of cpu)
+------ Verifying Connectivity ------
+------ No unconnect nor short-circuits ------
+------ Writing 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ Trout: task completed on Fri Nov 29 11:12:28 2013
+ terminate
