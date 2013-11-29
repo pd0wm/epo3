@@ -302,9 +302,6 @@ begin
 			when kernel_panic =>
 				-- Kill it!
 				next_state <= game_over;
-
-			when others =>
-				null;
 		end case;
 	end process;
 end;
