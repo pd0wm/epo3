@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Fri Nov 29 09:47:41 2013
+Fri Nov 29 10:03:31 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -43,15 +43,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 09:47:41 2013          ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 10:03:31 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 79                                             ;
-;     Total combinational functions  ; 72                                             ;
-;     Dedicated logic registers      ; 55                                             ;
-; Total registers                    ; 55                                             ;
+; Total logic elements               ; 83                                             ;
+;     Total combinational functions  ; 77                                             ;
+;     Dedicated logic registers      ; 58                                             ;
+; Total registers                    ; 58                                             ;
 ; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -204,27 +204,27 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 79                     ;
+; Estimated Total logic elements              ; 83                     ;
 ;                                             ;                        ;
-; Total combinational functions               ; 72                     ;
+; Total combinational functions               ; 77                     ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 24                     ;
-;     -- 3 input functions                    ; 16                     ;
-;     -- <=2 input functions                  ; 32                     ;
+;     -- 4 input functions                    ; 29                     ;
+;     -- 3 input functions                    ; 17                     ;
+;     -- <=2 input functions                  ; 31                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 52                     ;
+;     -- normal mode                          ; 57                     ;
 ;     -- arithmetic mode                      ; 20                     ;
 ;                                             ;                        ;
-; Total registers                             ; 55                     ;
-;     -- Dedicated logic registers            ; 55                     ;
+; Total registers                             ; 58                     ;
+;     -- Dedicated logic registers            ; 58                     ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 37                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
-; Maximum fan-out                             ; 54                     ;
-; Total fan-out                               ; 427                    ;
-; Average fan-out                             ; 2.60                   ;
+; Maximum fan-out                             ; 57                     ;
+; Total fan-out                               ; 458                    ;
+; Average fan-out                             ; 2.66                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -233,10 +233,10 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |top_de2                            ; 72 (1)            ; 55 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
-;    |depiece_simple:inst5|           ; 0 (0)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                  ;              ;
+; |top_de2                            ; 77 (1)            ; 58 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
+;    |depiece_simple:inst5|           ; 1 (1)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                  ;              ;
 ;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
-;    |ram_simple:inst8|               ; 6 (6)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|ram_simple:inst8                      ;              ;
+;    |ram_simple:inst8|               ; 10 (10)           ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|ram_simple:inst8                      ;              ;
 ;    |vga:inst6|                      ; 62 (0)            ; 47 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6                             ;              ;
 ;       |vga_counter:counter|         ; 22 (22)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_counter:counter         ;              ;
 ;       |vga_field_check:field_check| ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_field_check:field_check ;              ;
@@ -249,22 +249,21 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; Register name                                                                                              ; Reason for Removal                                     ;
-+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                                 ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst6|vga_triggers:triggers|end_frame_state                                                            ; Stuck at GND due to stuck port data_in                 ;
-; ram_simple:inst8|ram[6,9..10,17..19,31,33,57,59,61,63,66,111,113,115,117,119,121,123,125,127]              ; Merged with ram_simple:inst8|ram[4]                    ;
-; ram_simple:inst8|ram[7..8,11..16,20..30,32,34..56,58,60,62,64..65,67..110,112,114,116,118,120,122,124,126] ; Merged with ram_simple:inst8|ram[5]                    ;
-; ram_simple:inst8|ram[5]                                                                                    ; Merged with ram_simple:inst8|ram[4]                    ;
-; depiece_simple:inst5|write_state[1]                                                                        ; Merged with depiece_simple:inst5|write_state[2]        ;
-; vga:inst6|vga_read:read_and_output|green_out                                                               ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
-; ram_simple:inst8|ram[4]                                                                                    ; Stuck at GND due to stuck port data_in                 ;
-; ram_simple:inst8|ram[0,3]                                                                                  ; Stuck at GND due to stuck port clock_enable            ;
-; Total Number of Removed Registers = 132                                                                    ;                                                        ;
-+------------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; Register name                                                                                         ; Reason for Removal                                     ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                            ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst6|vga_triggers:triggers|end_frame_state                                                       ; Stuck at GND due to stuck port data_in                 ;
+; ram_simple:inst8|ram[5,7,12,15..20,23..34,36..37,40..60,62,64,66..69,71..114,116,118,120,122,124,126] ; Merged with ram_simple:inst8|ram[4]                    ;
+; ram_simple:inst8|ram[13..14,21..22,35,38..39,61,63,65,70,115,117,119,121,123,125,127]                 ; Merged with ram_simple:inst8|ram[6]                    ;
+; ram_simple:inst8|ram[6]                                                                               ; Merged with ram_simple:inst8|ram[4]                    ;
+; vga:inst6|vga_read:read_and_output|green_out                                                          ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
+; ram_simple:inst8|ram[4]                                                                               ; Stuck at GND due to stuck port data_in                 ;
+; ram_simple:inst8|ram[0,8..9,11]                                                                       ; Stuck at GND due to stuck port clock_enable            ;
+; Total Number of Removed Registers = 129                                                               ;                                                        ;
++-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -272,10 +271,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 55    ;
+; Total registers                              ; 58    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 51    ;
+; Number of registers using Asynchronous Clear ; 54    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 18    ;
 ; Number of registers using Preset             ; 0     ;
@@ -308,7 +307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Nov 29 09:47:39 2013
+    Info: Processing started: Fri Nov 29 10:03:29 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple.vhd
@@ -409,13 +408,13 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 116 device resources after synthesis - the final resource count might be different
+Info: Implemented 120 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 79 logic cells
+    Info: Implemented 83 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 263 megabytes
-    Info: Processing ended: Fri Nov 29 09:47:41 2013
+    Info: Processing ended: Fri Nov 29 10:03:31 2013
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
