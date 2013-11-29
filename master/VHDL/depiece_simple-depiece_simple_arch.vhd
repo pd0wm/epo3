@@ -20,18 +20,7 @@ begin
 				write    <= '1';
 				addr     <= "0000010";
 				data_out <= '1';
-				next_write_state <= "010";
-			when "010" =>
-				write    <= '1';
-				addr     <= "0000010";
-				data_out <= '1';
-			when "011" =>
-				write    <= '0';
-				addr     <= "0000010";
-				data_out <= '0';
 				next_write_state <= "111";
-
-			
 			when others =>
 				next_write_state <= "111";
 				write    <= '0';

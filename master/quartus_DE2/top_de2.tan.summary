@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.997 ns
+Actual Time    : -0.961 ns
 From           : rst
-To             : ram_simple:inst8|ro_addrs[0]
+To             : ram_simple:inst8|ro_data_out
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.029 ns
-From           : vga:inst6|vga_read:read_and_output|red_out
-To             : vga_r[0]
+Actual Time    : 9.760 ns
+From           : vga:inst6|vga_read:read_and_output|h_sync_out
+To             : vga_hsync
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.227 ns
+Actual Time    : 1.191 ns
 From           : rst
-To             : ram_simple:inst8|ro_addrs[0]
+To             : ram_simple:inst8|ro_data_out
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -35,22 +35,12 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 242.84 MHz ( period = 4.118 ns )
-From           : depiece_simple:inst5|next_write_state[0]
-To             : depiece_simple:inst5|write_state[0]
+Actual Time    : 352.49 MHz ( period = 2.837 ns )
+From           : vga:inst6|vga_counter:counter|pos_x[6]
+To             : vga:inst6|vga_counter:counter|pos_y[2]
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
-
-Type           : Clock Hold: 'clock_50mhz'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : depiece_simple:inst5|write_state[2]
-To             : ram_simple:inst8|ram[1]
-From Clock     : clock_50mhz
-To Clock       : clock_50mhz
-Failed Paths   : 13
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +50,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 13
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 
