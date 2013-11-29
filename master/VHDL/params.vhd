@@ -32,7 +32,7 @@ package vga_params is
 	constant pos_x_len : integer := 8;
 	constant pos_y_len : integer := 9;
 	
-	constant mem_addr_len : integer := 7;
+	constant mem_addr_len : integer := 8;
 	
 	constant counter_block_height_len : integer := 4;
 	constant counter_block_width_len : integer := 2;

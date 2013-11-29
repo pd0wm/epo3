@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Fri Nov 29 10:03:31 2013
+Fri Nov 29 12:02:32 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -9,15 +9,14 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"
- 12. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "vga:inst3|vga_triggers:triggers"
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +42,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 10:03:31 2013          ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 12:02:32 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 83                                             ;
-;     Total combinational functions  ; 77                                             ;
-;     Dedicated logic registers      ; 58                                             ;
-; Total registers                    ; 58                                             ;
+; Total logic elements               ; 84                                             ;
+;     Total combinational functions  ; 78                                             ;
+;     Dedicated logic registers      ; 60                                             ;
+; Total registers                    ; 60                                             ;
 ; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -141,62 +140,67 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     1 processor            ; 100.0%      ;
-;     2-8 processors         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
-; File Name with User-Entered Path                     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                          ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
-; ../VHDL/depiece_simple.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple.vhd                           ;
-; ../VHDL/depiece_simple-depiece_simple_arch.vhd       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd       ;
-; ../VHDL/ram_simple_ram_simple_arch_cfg.vhd           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple_ram_simple_arch_cfg.vhd           ;
-; ../VHDL/ram_simple.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple.vhd                               ;
-; ../VHDL/ram_simple-ram_simple_arch.vhd               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple-ram_simple_arch.vhd               ;
-; ../VHDL/vga_vga_arch_cfg.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_vga_arch_cfg.vhd                         ;
-; ../VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ;
-; ../VHDL/vga_triggers_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_arch.vhd                        ;
-; ../VHDL/vga_triggers.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers.vhd                             ;
-; ../VHDL/vga_trans_vga_trans_arch_cfg.vhd             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_vga_trans_arch_cfg.vhd             ;
-; ../VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd ;
-; ../VHDL/vga_trans_reset_arch.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset_arch.vhd                     ;
-; ../VHDL/vga_trans_reset.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset.vhd                          ;
-; ../VHDL/vga_trans_arch.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_arch.vhd                           ;
-; ../VHDL/vga_trans.vhd                                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans.vhd                                ;
-; ../VHDL/vga_sync_vga_sync_arch_cfg.vhd               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync_vga_sync_arch_cfg.vhd               ;
-; ../VHDL/vga_sync_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync_arch.vhd                            ;
-; ../VHDL/vga_sync.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync.vhd                                 ;
-; ../VHDL/vga_read_vga_read_behav_cfg.vhd              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_read_vga_read_behav_cfg.vhd              ;
-; ../VHDL/vga_read_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_read_arch.vhd                            ;
-; ../VHDL/vga_read.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_read.vhd                                 ;
-; ../VHDL/vga_field_check_vga_field_check_arch_cfg.vhd ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check_vga_field_check_arch_cfg.vhd ;
-; ../VHDL/vga_field_check_arch.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check_arch.vhd                     ;
-; ../VHDL/vga_field_check.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check.vhd                          ;
-; ../VHDL/vga_counter_vga_counter_behav_cfg.vhd        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter_vga_counter_behav_cfg.vhd        ;
-; ../VHDL/vga_counter_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter_arch.vhd                         ;
-; ../VHDL/vga_counter.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter.vhd                              ;
-; ../VHDL/vga_arch.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga_arch.vhd                                 ;
-; ../VHDL/vga.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/vga.vhd                                      ;
-; ../VHDL/params.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/VHDL/params.vhd                                   ;
-; top_de2.bdf                                          ; yes             ; User Block Diagram/Schematic File  ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/top_de2.bdf                           ;
-; pre_vga_dac.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/pre_vga_dac.vhd                       ;
-; gen6mhz.vhd                                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/epo3/master/quartus_DE2/gen6mhz.vhd                           ;
-+------------------------------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                     ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                              ;
++------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+
+; /data/public/common/software/opprog/vhdl/cells.vhd   ; yes             ; User VHDL File                     ; /data/public/common/software/opprog/vhdl/cells.vhd                                        ;
+; ../VHDL/vga_vga_arch_cfg.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_vga_arch_cfg.vhd                         ;
+; ../VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd       ;
+; ../VHDL/vga_triggers_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_arch.vhd                        ;
+; ../VHDL/vga_triggers.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers.vhd                             ;
+; ../VHDL/vga_trans_vga_trans_arch_cfg.vhd             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_vga_trans_arch_cfg.vhd             ;
+; ../VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd ;
+; ../VHDL/vga_trans_reset_arch.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset_arch.vhd                     ;
+; ../VHDL/vga_trans_reset.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset.vhd                          ;
+; ../VHDL/vga_trans_arch.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_arch.vhd                           ;
+; ../VHDL/vga_trans.vhd                                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans.vhd                                ;
+; ../VHDL/vga_sync_vga_sync_arch_cfg.vhd               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_vga_sync_arch_cfg.vhd               ;
+; ../VHDL/vga_sync_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_arch.vhd                            ;
+; ../VHDL/vga_sync.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync.vhd                                 ;
+; ../VHDL/vga_read_vga_read_behav_cfg.vhd              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_vga_read_behav_cfg.vhd              ;
+; ../VHDL/vga_read_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_arch.vhd                            ;
+; ../VHDL/vga_read.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read.vhd                                 ;
+; ../VHDL/vga_field_check_vga_field_check_arch_cfg.vhd ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_vga_field_check_arch_cfg.vhd ;
+; ../VHDL/vga_field_check_arch.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_arch.vhd                     ;
+; ../VHDL/vga_field_check.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check.vhd                          ;
+; ../VHDL/vga_counter_vga_counter_behav_cfg.vhd        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_vga_counter_behav_cfg.vhd        ;
+; ../VHDL/vga_counter_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_arch.vhd                         ;
+; ../VHDL/vga_counter.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter.vhd                              ;
+; ../VHDL/vga_arch.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_arch.vhd                                 ;
+; ../VHDL/vga.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga.vhd                                      ;
+; ../VHDL/tower_arch.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd                               ;
+; ../VHDL/tower.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd                                    ;
+; ../VHDL/sr_tower_sr_tower_behav_cfg.vhd              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd              ;
+; ../VHDL/sr_if_sr_if_behav_cfg.vhd                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_sr_if_behav_cfg.vhd                    ;
+; ../VHDL/params.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd                                   ;
+; ../VHDL/mux5_mux5_behav_cfg.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_mux5_behav_cfg.vhd                      ;
+; ../VHDL/mux5_arch.vhd                                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd                                ;
+; ../VHDL/mux5.vhd                                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd                                     ;
+; ../VHDL/interface_arch.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_arch.vhd                           ;
+; ../VHDL/interface.vhd                                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface.vhd                                ;
+; ../VHDL/depiece_simple.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple.vhd                           ;
+; ../VHDL/depiece_simple-depiece_simple_arch.vhd       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd       ;
+; ../VHDL/demux8_inv_demux8_inv_behav_cfg.vhd          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd          ;
+; ../VHDL/demux8_inv_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd                          ;
+; ../VHDL/demux8_inv.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd                               ;
+; ../VHDL/demux5_demux5_behav_cfg.vhd                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd                  ;
+; ../VHDL/demux5_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd                              ;
+; ../VHDL/demux5.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd                                   ;
+; ../VHDL/demux4_inv_demux4_inv_behav_cfg.vhd          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd          ;
+; ../VHDL/demux4_inv_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd                          ;
+; ../VHDL/demux4_inv.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd                               ;
+; ../VHDL/dec8_dec8_behav_cfg.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd                      ;
+; ../VHDL/dec8_arch.vhd                                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd                                ;
+; ../VHDL/dec8.vhd                                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd                                     ;
+; ../VHDL/bit4_bit4_behav_cfg.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_bit4_behav_cfg.vhd                      ;
+; ../VHDL/bit4.vhd                                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4.vhd                                     ;
+; ../VHDL/bit4-bit4_behav.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4-bit4_behav.vhd                          ;
+; top_de2.bdf                                          ; yes             ; User Block Diagram/Schematic File  ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/top_de2.bdf                           ;
+; pre_vga_dac.vhd                                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/pre_vga_dac.vhd                       ;
+; gen6mhz.vhd                                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/gen6mhz.vhd                           ;
++------------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -204,66 +208,230 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 83                     ;
+; Estimated Total logic elements              ; 84                     ;
 ;                                             ;                        ;
-; Total combinational functions               ; 77                     ;
+; Total combinational functions               ; 78                     ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 29                     ;
-;     -- 3 input functions                    ; 17                     ;
-;     -- <=2 input functions                  ; 31                     ;
+;     -- 4 input functions                    ; 27                     ;
+;     -- 3 input functions                    ; 16                     ;
+;     -- <=2 input functions                  ; 35                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 57                     ;
-;     -- arithmetic mode                      ; 20                     ;
+;     -- normal mode                          ; 54                     ;
+;     -- arithmetic mode                      ; 24                     ;
 ;                                             ;                        ;
-; Total registers                             ; 58                     ;
-;     -- Dedicated logic registers            ; 58                     ;
+; Total registers                             ; 60                     ;
+;     -- Dedicated logic registers            ; 60                     ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 37                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
-; Maximum fan-out                             ; 57                     ;
-; Total fan-out                               ; 458                    ;
-; Average fan-out                             ; 2.66                   ;
+; Maximum fan-out                             ; 59                     ;
+; Total fan-out                               ; 467                    ;
+; Average fan-out                             ; 2.67                   ;
 +---------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
-+-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
-+-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |top_de2                            ; 77 (1)            ; 58 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
-;    |depiece_simple:inst5|           ; 1 (1)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                  ;              ;
-;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
-;    |ram_simple:inst8|               ; 10 (10)           ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|ram_simple:inst8                      ;              ;
-;    |vga:inst6|                      ; 62 (0)            ; 47 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6                             ;              ;
-;       |vga_counter:counter|         ; 22 (22)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_counter:counter         ;              ;
-;       |vga_field_check:field_check| ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_field_check:field_check ;              ;
-;       |vga_read:read_and_output|    ; 1 (1)             ; 7 (7)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_read:read_and_output    ;              ;
-;       |vga_sync:sync|               ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_sync:sync               ;              ;
-;       |vga_trans:trans|             ; 12 (12)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans:trans             ;              ;
-;       |vga_trans_reset:trans_reset| ; 11 (11)           ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_trans_reset:trans_reset ;              ;
-;       |vga_triggers:triggers|       ; 7 (7)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst6|vga_triggers:triggers       ;              ;
-+-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++----------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |top_de2                                     ; 78 (1)            ; 60 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                                                                                ;              ;
+;    |depiece_simple:inst5|                    ; 2 (2)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                                                                           ;              ;
+;    |gen6mhz:inst1|                           ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                                                                                  ;              ;
+;    |sr_if:inst2|                             ; 9 (0)             ; 5 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2                                                                                    ;              ;
+;       |mux5:mux5_do2|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
+;       |sr_tower:\generate_tower:0:tower_mod| ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
+;          |bit4:\generate_bit4:0:bit4_mod|    ; 4 (0)             ; 3 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
+;             |dfr11:dfr11_6|                  ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
+;             |dfr11:dfr11_7|                  ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7  ;              ;
+;             |dfr11:dfr11_8|                  ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8  ;              ;
+;             |mu111:mu111_10|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_10 ;              ;
+;             |mu111:mu111_11|                 ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
+;             |mu111:mu111_9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
+;             |no210:no210_3|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_3  ;              ;
+;          |bit4:\generate_bit4:2:bit4_mod|    ; 1 (0)             ; 1 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
+;             |dfr11:dfr11_7|                  ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
+;             |mu111:mu111_9|                  ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
+;    |vga:inst3|                               ; 63 (0)            ; 49 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                                                                                      ;              ;
+;       |vga_counter:counter|                  ; 22 (22)           ; 17 (17)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter                                                                  ;              ;
+;       |vga_field_check:field_check|          ; 4 (4)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_check:field_check                                                          ;              ;
+;       |vga_read:read_and_output|             ; 1 (1)             ; 7 (7)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_read:read_and_output                                                             ;              ;
+;       |vga_sync:sync|                        ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_sync:sync                                                                        ;              ;
+;       |vga_trans:trans|                      ; 13 (13)           ; 10 (10)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_trans:trans                                                                      ;              ;
+;       |vga_trans_reset:trans_reset|          ; 11 (11)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_trans_reset:trans_reset                                                          ;              ;
+;       |vga_triggers:triggers|                ; 7 (7)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_triggers:triggers                                                                ;              ;
++----------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                             ;
-+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; Register name                                                                                         ; Reason for Removal                                     ;
-+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-; vga:inst6|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                            ; Stuck at GND due to stuck port data_in                 ;
-; vga:inst6|vga_triggers:triggers|end_frame_state                                                       ; Stuck at GND due to stuck port data_in                 ;
-; ram_simple:inst8|ram[5,7,12,15..20,23..34,36..37,40..60,62,64,66..69,71..114,116,118,120,122,124,126] ; Merged with ram_simple:inst8|ram[4]                    ;
-; ram_simple:inst8|ram[13..14,21..22,35,38..39,61,63,65,70,115,117,119,121,123,125,127]                 ; Merged with ram_simple:inst8|ram[6]                    ;
-; ram_simple:inst8|ram[6]                                                                               ; Merged with ram_simple:inst8|ram[4]                    ;
-; vga:inst6|vga_read:read_and_output|green_out                                                          ; Merged with vga:inst6|vga_read:read_and_output|red_out ;
-; ram_simple:inst8|ram[4]                                                                               ; Stuck at GND due to stuck port data_in                 ;
-; ram_simple:inst8|ram[0,8..9,11]                                                                       ; Stuck at GND due to stuck port clock_enable            ;
-; Total Number of Removed Registers = 129                                                               ;                                                        ;
-+-------------------------------------------------------------------------------------------------------+--------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                                    ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal                                                                                              ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[0..2]                                          ; Stuck at GND due to stuck port data_in                                                                          ;
+; vga:inst3|vga_triggers:triggers|end_frame_state                                                     ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; vga:inst3|vga_read:read_and_output|green_out                                                        ; Merged with vga:inst3|vga_read:read_and_output|red_out                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
+; Total Number of Removed Registers = 161                                                             ;                                                                                                                 ;
++-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -271,12 +439,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 7     ;
-; Number of registers using Asynchronous Clear ; 54    ;
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 4     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 53    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 22    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -286,14 +454,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|mem_addr_state[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|mem_addr_state[6] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst6|vga_trans:trans|counter_state[1]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|mem_addr_state[0] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|mem_addr_state[4] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_trans:trans|counter_state[1]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga:inst6|vga_triggers:triggers"                                                            ;
+; Port Connectivity Checks: "vga:inst3|vga_triggers:triggers"                                                            ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port         ; Type   ; Severity ; Details                                                                             ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -307,79 +475,185 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Nov 29 10:03:29 2013
+    Info: Processing started: Fri Nov 29 12:02:27 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
-Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple.vhd
-    Info: Found entity 1: depiece_simple
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd
-    Info: Found design unit 1: depiece_simple-depiece_simple_arch
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple_ram_simple_arch_cfg.vhd
-    Info: Found design unit 1: ram_simple_ram_simple_arch_cfg
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple.vhd
-    Info: Found entity 1: ram_simple
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/ram_simple-ram_simple_arch.vhd
-    Info: Found design unit 1: ram_simple-ram_simple_arch
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_vga_arch_cfg.vhd
+Info: Only one processor detected - disabling parallel compilation
+Info: Found 44 design units, including 22 entities, in source file /data/public/common/software/opprog/vhdl/cells.vhd
+    Info: Found design unit 1: mir_nin-dataflow
+    Info: Found design unit 2: mir_pin-dataflow
+    Info: Found design unit 3: mir_nout-dataflow
+    Info: Found design unit 4: mir_pout-dataflow
+    Info: Found design unit 5: ln3x3-dataflow
+    Info: Found design unit 6: lp3x3-dataflow
+    Info: Found design unit 7: osc10-dataflow
+    Info: Found design unit 8: iv110-dataflow
+    Info: Found design unit 9: no210-dataflow
+    Info: Found design unit 10: no310-dataflow
+    Info: Found design unit 11: na210-dataflow
+    Info: Found design unit 12: na310-dataflow
+    Info: Found design unit 13: ex210-dataflow
+    Info: Found design unit 14: buf40-dataflow
+    Info: Found design unit 15: tbuf10-dataflow
+    Info: Found design unit 16: tinv10-dataflow
+    Info: Found design unit 17: mu111-dataflow
+    Info: Found design unit 18: mu210-dataflow
+    Info: Found design unit 19: de211-dataflow
+    Info: Found design unit 20: dfn10-dataflow
+    Info: Found design unit 21: dfr11-dataflow
+    Info: Found design unit 22: dfa11-dataflow
+    Info: Found entity 1: mir_nin
+    Info: Found entity 2: mir_pin
+    Info: Found entity 3: mir_nout
+    Info: Found entity 4: mir_pout
+    Info: Found entity 5: ln3x3
+    Info: Found entity 6: lp3x3
+    Info: Found entity 7: osc10
+    Info: Found entity 8: iv110
+    Info: Found entity 9: no210
+    Info: Found entity 10: no310
+    Info: Found entity 11: na210
+    Info: Found entity 12: na310
+    Info: Found entity 13: ex210
+    Info: Found entity 14: buf40
+    Info: Found entity 15: tbuf10
+    Info: Found entity 16: tinv10
+    Info: Found entity 17: mu111
+    Info: Found entity 18: mu210
+    Info: Found entity 19: de211
+    Info: Found entity 20: dfn10
+    Info: Found entity 21: dfr11
+    Info: Found entity 22: dfa11
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_vga_arch_cfg.vhd
     Info: Found design unit 1: vga_vga_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
     Info: Found design unit 1: vga_triggers_vga_triggers_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_arch.vhd
     Info: Found design unit 1: vga_triggers-vga_triggers_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_triggers.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers.vhd
     Info: Found entity 1: vga_triggers
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_vga_trans_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_vga_trans_arch_cfg.vhd
     Info: Found design unit 1: vga_trans_vga_trans_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
     Info: Found design unit 1: vga_trans_reset_vga_trans_reset_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset_arch.vhd
     Info: Found design unit 1: vga_trans_reset-vga_trans_reset_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_reset.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_reset.vhd
     Info: Found entity 1: vga_trans_reset
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans_arch.vhd
     Info: Found design unit 1: vga_trans-vga_trans_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_trans.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_trans.vhd
     Info: Found entity 1: vga_trans
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_tb_vga_tb_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_tb_vga_tb_arch_cfg.vhd
     Info: Found design unit 1: vga_tb_vga_tb_arch_cfg
-Info: Found 2 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_tb.vhd
+Info: Found 2 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_tb.vhd
     Info: Found design unit 1: vga_tb-vga_tb_arch
     Info: Found entity 1: vga_tb
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync_vga_sync_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_vga_sync_arch_cfg.vhd
     Info: Found design unit 1: vga_sync_vga_sync_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_arch.vhd
     Info: Found design unit 1: vga_sync-vga_sync_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_sync.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync.vhd
     Info: Found entity 1: vga_sync
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_read_vga_read_behav_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_vga_read_behav_cfg.vhd
     Info: Found design unit 1: vga_read_vga_read_behav_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_read_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_arch.vhd
     Info: Found design unit 1: vga_read-vga_read_behav
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_read.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read.vhd
     Info: Found entity 1: vga_read
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
     Info: Found design unit 1: vga_field_check_vga_field_check_arch_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_arch.vhd
     Info: Found design unit 1: vga_field_check-vga_field_check_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_field_check.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check.vhd
     Info: Found entity 1: vga_field_check
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter_vga_counter_behav_cfg.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_vga_counter_behav_cfg.vhd
     Info: Found design unit 1: vga_counter_vga_counter_behav_cfg
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_arch.vhd
     Info: Found design unit 1: vga_counter-vga_counter_behav
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_counter.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter.vhd
     Info: Found entity 1: vga_counter
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga_arch.vhd
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_arch.vhd
     Info: Found design unit 1: vga-vga_arch
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/vga.vhd
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga.vhd
     Info: Found entity 1: vga
-Info: Found 2 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/params.vhd
+Info: Found 2 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
+    Info: Found design unit 1: sr_tower_tb-sr_tower_tb_behav
+    Info: Found entity 1: sr_tower_tb
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd
+    Info: Found design unit 1: sr_tower-sr_tower_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd
+    Info: Found entity 1: sr_tower
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
+    Info: Found design unit 1: sr_tower_tb_sr_tower_tb_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd
+    Info: Found design unit 1: sr_tower_sr_tower_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_sr_if_behav_cfg.vhd
+    Info: Found design unit 1: sr_if_sr_if_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/sim.vhd
+    Info: Found design unit 1: sim
+Info: Found 2 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd
     Info: Found design unit 1: vga_params
     Info: Found design unit 2: vga_params-body
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/fake_ram.vhd
-    Info: Found entity 1: fake_ram
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/epo3/master/VHDL/fake_ram-fake_ram_arch.vhd
-    Info: Found design unit 1: fake_ram-fake_ram_arch
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_mux5_behav_cfg.vhd
+    Info: Found design unit 1: mux5_mux5_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd
+    Info: Found design unit 1: mux5-mux5_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd
+    Info: Found entity 1: mux5
+Info: Found 2 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_tb.vhd
+    Info: Found design unit 1: sr_if_tb-sr_if_tb_behav
+    Info: Found entity 1: sr_if_tb
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_arch.vhd
+    Info: Found design unit 1: sr_if-sr_if_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/interface.vhd
+    Info: Found entity 1: sr_if
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple.vhd
+    Info: Found entity 1: depiece_simple
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd
+    Info: Found design unit 1: depiece_simple-depiece_simple_arch
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
+    Info: Found design unit 1: demux8_inv_demux8_inv_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd
+    Info: Found design unit 1: demux8_inv-demux8_inv_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd
+    Info: Found entity 1: demux8_inv
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd
+    Info: Found design unit 1: demux5_demux5_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd
+    Info: Found design unit 1: demux5-demux5_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd
+    Info: Found entity 1: demux5
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd
+    Info: Found design unit 1: demux4_inv_demux4_inv_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd
+    Info: Found design unit 1: demux4_inv-demux4_inv_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd
+    Info: Found entity 1: demux4_inv
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd
+    Info: Found design unit 1: dec8_dec8_behav_cfg
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd
+    Info: Found design unit 1: dec8-dec8_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd
+    Info: Found entity 1: dec8
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/controller_tb.vhd
+    Info: Found entity 1: controller_tb
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/controller_tb-controller_tb_arch.vhd
+    Info: Found design unit 1: controller_tb-controller_tb_arch
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/controller.vhd
+    Info: Found entity 1: controller
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/controller-controller_arch.vhd
+    Info: Found design unit 1: controller-controller_arch
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
+    Info: Found design unit 1: bit4_tb_bit4_tb_behav_cfg
+Info: Found 2 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb.vhd
+    Info: Found design unit 1: bit4_tb-bit4_tb_behav
+    Info: Found entity 1: bit4_tb
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_bit4_behav_cfg.vhd
+    Info: Found design unit 1: bit4_bit4_behav_cfg
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4.vhd
+    Info: Found entity 1: bit4
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4-bit4_behav.vhd
+    Info: Found design unit 1: bit4-bit4_behav
 Info: Found 1 design units, including 1 entities, in source file top_de2.bdf
     Info: Found entity 1: top_de2
 Info: Found 2 design units, including 1 entities, in source file pre_vga_dac.vhd
@@ -391,31 +665,49 @@ Info: Found 2 design units, including 1 entities, in source file gen6mhz.vhd
 Info: Elaborating entity "top_de2" for the top level hierarchy
 Info: Elaborating entity "pre_vga_dac" for hierarchy "pre_vga_dac:inst"
 Info: Elaborating entity "gen6mhz" for hierarchy "gen6mhz:inst1"
-Info: Elaborating entity "vga" for hierarchy "vga:inst6"
+Info: Elaborating entity "vga" for hierarchy "vga:inst3"
 Warning (10036): Verilog HDL or VHDL warning at vga_arch.vhd(48): object "end_line" assigned a value but never read
-Info: Elaborating entity "vga_counter" for hierarchy "vga:inst6|vga_counter:counter"
-Info: Elaborating entity "vga_sync" for hierarchy "vga:inst6|vga_sync:sync"
-Info: Elaborating entity "vga_field_check" for hierarchy "vga:inst6|vga_field_check:field_check"
-Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst6|vga_triggers:triggers"
-Info: Elaborating entity "vga_trans" for hierarchy "vga:inst6|vga_trans:trans"
-Info: Elaborating entity "vga_trans_reset" for hierarchy "vga:inst6|vga_trans_reset:trans_reset"
-Info: Elaborating entity "vga_read" for hierarchy "vga:inst6|vga_read:read_and_output"
-Info: Elaborating entity "ram_simple" for hierarchy "ram_simple:inst8"
+Info: Elaborating entity "vga_counter" for hierarchy "vga:inst3|vga_counter:counter"
+Info: Elaborating entity "vga_sync" for hierarchy "vga:inst3|vga_sync:sync"
+Info: Elaborating entity "vga_field_check" for hierarchy "vga:inst3|vga_field_check:field_check"
+Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst3|vga_triggers:triggers"
+Info: Elaborating entity "vga_trans" for hierarchy "vga:inst3|vga_trans:trans"
+Info: Elaborating entity "vga_trans_reset" for hierarchy "vga:inst3|vga_trans_reset:trans_reset"
+Info: Elaborating entity "vga_read" for hierarchy "vga:inst3|vga_read:read_and_output"
+Info: Elaborating entity "sr_if" for hierarchy "sr_if:inst2"
+Info: Elaborating entity "sr_tower" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod"
+Info: Elaborating entity "bit4" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod"
+Info: Elaborating entity "dfr11" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0"
+Info: Elaborating entity "mu111" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_1"
+Info: Elaborating entity "no210" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_2"
+Info: Elaborating entity "mu210" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_12"
+Info: Elaborating entity "tbuf10" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|tbuf10:tbuf10_14"
+Info: Elaborating entity "demux8_inv" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux8_inv:demux8_inv_we_com"
+Info: Elaborating entity "dec8" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|dec8:dec8_re_1"
+Info: Elaborating entity "demux4_inv" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i"
+Info: Elaborating entity "mux5" for hierarchy "sr_if:inst2|mux5:mux5_do1"
+Info: Elaborating entity "demux5" for hierarchy "sr_if:inst2|demux5:demux5_we"
 Info: Elaborating entity "depiece_simple" for hierarchy "depiece_simple:inst5"
 Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(9): used implicit default value for signal "mask_select" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(12): used implicit default value for signal "ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|do2" into a selector
+    Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|do2" into a selector
+    Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|do2" into a selector
+    Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|do2" into a selector
+    Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|do2" into a selector
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 120 device resources after synthesis - the final resource count might be different
+Info: Implemented 121 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 83 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 263 megabytes
-    Info: Processing ended: Fri Nov 29 10:03:31 2013
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Implemented 84 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 268 megabytes
+    Info: Processing ended: Fri Nov 29 12:02:32 2013
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
