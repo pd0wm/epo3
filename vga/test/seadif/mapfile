@@ -1,0 +1,26 @@
+# This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
+# Written on: Tue Nov 26 17:33:34 2013
+# You can edit this file to control the mapping process
+# Each line contains the name of a nelsis cell and its corresponding seadif cell
+# The status field may contain the following values:
+#    'written'       the cell was successfully written into seadif resp. nelsis
+#    'primitive'     the cell is a primitive which should not be read or converted
+#    [anything else] the cell will be written if necessary
+# To check the consistency of this table: use 'nelsea -C'
+#    N E L S I S     |                   S E A D I F                     | nelsis->sdf sdf->nelsis
+# view    cellname   | library      function     circuit      layout     |   status      status
+#--------------------+---------------------------------------------------+------------------------
+ layout   Error_Marker_ test         Error_Marker_ Error_Marker_ Error_Marker_ not_written not_written
+ layout   vga_field_check test         vga_field_check vga_field_check vga_field_check not_written not_written
+ layout   vga_counter  test         vga_counter  vga_counter  vga_counter  not_written not_written
+ layout   vga_sync     test         vga_sync     vga_sync     vga_sync     not_written not_written
+ layout   vga_triggers test         vga_triggers vga_triggers vga_triggers not_written not_written
+ layout   vga_trans_reset test         vga_trans_reset vga_trans_reset vga_trans_reset not_written not_written
+ layout   vga_trans    test         vga_trans    vga_trans    vga_trans    not_written not_written
+ layout   vga_read     test         vga_read     vga_read     vga_read     not_written not_written
+ layout   Tmpvga6386   test         vga          vga          Tmp_Cell_    not_written written
+ circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
+ circuit  res          primitives   res          res          $dummy       primitive   primitive
+ circuit  penh         primitives   penh         penh         $dummy       primitive   primitive
+ circuit  nenh         primitives   nenh         nenh         $dummy       primitive   primitive
+ layout   Error_Marker tmplib       Error_Marker Error_Marker Error_Marker primitive   primitive

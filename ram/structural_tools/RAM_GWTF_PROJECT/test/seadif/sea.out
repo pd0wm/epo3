@@ -1,0 +1,17 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+Warning: A new sealib will be generated: 'test2'
+         This indicates most likeley that the project was renamed.
+------ checking your circuit 'sr_if' ------
+------ circuit 'sr_if' is still up-to-date ------
+------ checking match with placement layout 'Tmpsr_if2978' ------
+------ reading nelsis layout-cell 'Tmpsr_if2978' ------
+------ writing nelsis 'Tmpsr_if2978' as sdflay 'Tmp_Cell_(sr_if(sr_if(test2)))' ------
+------ input seems good enough: calling router ------
+calling program: trout -l test2 -f sr_if -c sr_if -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmpsr_if2978' ------
+calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if2978 
+------ sea: task completed ------

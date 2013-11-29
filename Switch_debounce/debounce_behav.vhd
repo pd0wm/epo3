@@ -4,8 +4,8 @@ use IEEE.numeric_std.all;
 
 
 architecture behaviour of debounce is
-type button_state is (uit,links, links2, rechts, rechts2, beneden, beneden2, hdrop, hdrop2, rotatel, rotatel2, rotater, rotarer2);
-signal count, new_count: unsigned (16 downto 0);
+type button_state is (uit,links, links2, rechts, rechts2, beneden, beneden2, hdrop, hdrop2, rotatel, rotatel2, rotater, rotater2);
+signal count, new_count: unsigned (6 downto 0);
 signal rst_sig: std_logic;
 signal state, new_state :button_state;
 
@@ -26,7 +26,7 @@ end if;
 
 lbl4: process(count, new_count)
 begin
-	if count < 21 then
+	if count < 127 then
          		new_count <= count+1;
          		else
                 new_count<=count;
@@ -72,7 +72,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(0) = '0')) then
          new_state <= uit;
          else
-         	if (count > 20) then
+         	if (count = 127) then
 	new_state <= links2;
 	else
 	new_state <= links;
@@ -95,7 +95,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(1) = '0')) then
          new_state <= uit;
          else
-	  if (count > 20) then
+	  if (count = 127) then
 	new_state <= rechts2;
 	else
 	new_state <= rechts;
@@ -118,7 +118,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(2) = '0')) then
          new_state <= uit;
          else
-	   if (count > 20) then
+	   if (count = 127) then
 	new_state <= beneden2;
 	else
 	new_state <= beneden;
@@ -141,7 +141,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(3) = '0')) then
          new_state <= uit;
          else
-	   if (count > 20) then
+	   if (count = 127) then
 	new_state <= hdrop2;
 	else
 	new_state <= hdrop;
@@ -164,7 +164,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(4) = '0')) then
          new_state <= uit;
          else
-	   if (count > 20) then
+	   if (count = 127) then
 	new_state <= rotatel2;
 	else
 	new_state <= rotatel;
@@ -187,7 +187,7 @@ lbl3: process(state,clk, inputs )
          if ((rst = '1') or (inputs(5) = '0')) then
          new_state <= uit;
          else
-	   if (count > 20) then
+	   if (count = 127) then
 	new_state <= rotater2;
 	else
 	new_state <= rotater;

@@ -1,6 +1,9 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 
+entity debounce_tb is
+end entity debounce_tb;
+
 architecture behaviour of debounce_tb is
 component debounce is
 PORT
@@ -17,7 +20,7 @@ END component debounce;
         signal inputs, output: std_logic_vector(5 downto 0);
         begin
          clk <= '1' after 0 ns,
-         '0' after 200 ns when clk /= '0' else '1' after 200 ns;
+         '0' after 20 ns when clk /= '0' else '1' after 20 ns;
          rst <= '1' after 0 ns, '0' after 2000 ns;
          inputs <= "000000" after 0 ns, "100000" after 1000 ns, "010000" after 7000 ns, "110000" after 79000 ns, "100000" after 80000 ns, 
 

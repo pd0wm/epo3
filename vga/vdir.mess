@@ -1,0 +1,697 @@
+Library vendor : Model Technology
+Maximum unnamed designs : 3
+OPTIMIZED DESIGN _opt
+    Version string: e3MQ=C^c9J:`SboY5j6m93
+    Top-level model: work vga_tb_vga_tb_arch_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: vga
+ENTITY fake_ram
+    Source modified time: Tue Nov 26 16:35:18 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/fake_ram.vhd
+    Source file: VHDL/fake_ram.vhd
+    Start location: VHDL/fake_ram.vhd:5
+    Version string: ABcEj_OcG_ZFS`oDECV3Z1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY fake_ram_arch
+    Source modified time: Tue Nov 26 16:36:53 2013
+    Depends on: E work fake_ram ABcEj_OcG_ZFS`oDECV3Z1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/fake_ram-fake_ram_arch.vhd
+    Source file: VHDL/fake_ram-fake_ram_arch.vhd
+    Start location: VHDL/fake_ram-fake_ram_arch.vhd:6
+    Version string: N;d[4fVLFD``Q4CS`]V`B0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+ENTITY vga
+    Source modified time: Tue Nov 26 10:28:29 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga.vhd
+    Source file: VHDL/vga.vhd
+    Start location: VHDL/vga.vhd:6
+    Version string: LK8T0U5X@UlUIeJ^XQm>L1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:58:12 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga LK8T0U5X@UlUIeJ^XQm>L1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_SYNTH.vhd
+    Source file: VHDL/vga_SYNTH.vhd
+    Start location: VHDL/vga_SYNTH.vhd:7
+    Version string: nQ:]fN@_UhL:if`I9eAJ=2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_arch
+    Source modified time: Tue Nov 26 10:29:00 2013
+    Depends on: E work vga LK8T0U5X@UlUIeJ^XQm>L1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_arch.vhd
+    Source file: VHDL/vga_arch.vhd
+    Start location: VHDL/vga_arch.vhd:6
+    Version string: ]iHC`FW?o@AF09Dn_fCj80
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+ENTITY vga_counter
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_counter.vhd
+    Source file: VHDL/vga_counter.vhd
+    Start location: VHDL/vga_counter.vhd:6
+    Version string: G3HgN>WznB_7eB3]Ei8Q23
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:57:48 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_counter G3HgN>WznB_7eB3]Ei8Q23
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_counter_SYNTH.vhd
+    Source file: VHDL/vga_counter_SYNTH.vhd
+    Start location: VHDL/vga_counter_SYNTH.vhd:7
+    Version string: _LZGb2?>F=cOaW9LO8G7Y2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_counter_behav
+    Depends on: E work vga_counter G3HgN>WznB_7eB3]Ei8Q23
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_counter_arch.vhd
+    Source file: VHDL/vga_counter_arch.vhd
+    Start location: VHDL/vga_counter_arch.vhd:6
+    Version string: eP7;^l;Dn7ZHB[bnO?gYh2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_counter_vga_counter_behav_cfg
+    Configuration for architecture: vga_counter_behav
+    Configuration for entity: vga_counter
+    Depends on: A work vga_counter vga_counter_behav eP7;^l;Dn7ZHB[bnO?gYh2
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_counter G3HgN>WznB_7eB3]Ei8Q23
+    Source modified time: Tue Nov 26 10:34:58 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_counter_vga_counter_behav_cfg.vhd
+    Source file: VHDL/vga_counter_vga_counter_behav_cfg.vhd
+    Start location: VHDL/vga_counter_vga_counter_behav_cfg.vhd:1
+    Version string: :g=<F=2X5^do[HAKeBW:71
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY vga_field_check
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_field_check.vhd
+    Source file: VHDL/vga_field_check.vhd
+    Start location: VHDL/vga_field_check.vhd:6
+    Version string: MB8jMgkoTXdZjV6DTi0nI1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:57:31 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_field_check MB8jMgkoTXdZjV6DTi0nI1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_field_check_SYNTH.vhd
+    Source file: VHDL/vga_field_check_SYNTH.vhd
+    Start location: VHDL/vga_field_check_SYNTH.vhd:7
+    Version string: z^i;8FJVoMe<5In?koe=_2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_field_check_arch
+    Depends on: E work vga_field_check MB8jMgkoTXdZjV6DTi0nI1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_field_check_arch.vhd
+    Source file: VHDL/vga_field_check_arch.vhd
+    Start location: VHDL/vga_field_check_arch.vhd:6
+    Version string: gc<O0e:4ToGP4c?QYWSzW0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_field_check_vga_field_check_arch_cfg
+    Configuration for architecture: vga_field_check_arch
+    Configuration for entity: vga_field_check
+    Depends on: A work vga_field_check vga_field_check_arch gc<O0e:4ToGP4c?QYWSzW0
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_field_check MB8jMgkoTXdZjV6DTi0nI1
+    Source modified time: Tue Nov 26 10:34:52 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
+    Source file: VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
+    Start location: VHDL/vga_field_check_vga_field_check_arch_cfg.vhd:1
+    Version string: Y[WmzlAMdD>`3m0ZN^S9m3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL PACKAGE vga_params
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Source directory: vga
+    HDL source file: VHDL/params.vhd
+    Source file: VHDL/params.vhd
+    Start location: VHDL/params.vhd:4
+    Version string: ^JDn_h>W5PoET@2OoE7N80
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  PACKAGE BODY vga_params
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Start location: VHDL/params.vhd:41
+    Version string: <ml_:;<e4J1>nKJ@U[AX41
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Short name: body
+    Source directory: vga
+    Source file: VHDL/params.vhd
+    Source modified time: Tue Nov 26 10:27:51 2013
+    HDL source file: VHDL/params.vhd
+    Debug Symbol file exists
+ENTITY vga_read
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_read.vhd
+    Source file: VHDL/vga_read.vhd
+    Start location: VHDL/vga_read.vhd:6
+    Version string: l@?;BWdIcSFdWimbCS:371
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:57:15 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_read l@?;BWdIcSFdWimbCS:371
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_read_SYNTH.vhd
+    Source file: VHDL/vga_read_SYNTH.vhd
+    Start location: VHDL/vga_read_SYNTH.vhd:7
+    Version string: H^1nfGPSnmL2M4k60@J[Y3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_read_behav
+    Depends on: E work vga_read l@?;BWdIcSFdWimbCS:371
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_read_arch.vhd
+    Source file: VHDL/vga_read_arch.vhd
+    Start location: VHDL/vga_read_arch.vhd:6
+    Version string: =6CE=Il_7_X;L6M?QP_370
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_read_vga_read_behav_cfg
+    Configuration for architecture: vga_read_behav
+    Configuration for entity: vga_read
+    Depends on: A work vga_read vga_read_behav =6CE=Il_7_X;L6M?QP_370
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_read l@?;BWdIcSFdWimbCS:371
+    Source modified time: Tue Nov 26 10:34:47 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_read_vga_read_behav_cfg.vhd
+    Source file: VHDL/vga_read_vga_read_behav_cfg.vhd
+    Start location: VHDL/vga_read_vga_read_behav_cfg.vhd:1
+    Version string: bj3hkb;SfC=HcfFZcimJT0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY vga_sync
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_sync.vhd
+    Source file: VHDL/vga_sync.vhd
+    Start location: VHDL/vga_sync.vhd:6
+    Version string: 0SDPm_WI1G1WeGal3ld5h1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:56:59 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_sync 0SDPm_WI1G1WeGal3ld5h1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_sync_SYNTH.vhd
+    Source file: VHDL/vga_sync_SYNTH.vhd
+    Start location: VHDL/vga_sync_SYNTH.vhd:7
+    Version string: jkhgc:khkmMIfi@][794?0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_sync_arch
+    Depends on: E work vga_sync 0SDPm_WI1G1WeGal3ld5h1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_sync_arch.vhd
+    Source file: VHDL/vga_sync_arch.vhd
+    Start location: VHDL/vga_sync_arch.vhd:6
+    Version string: :`VJ8MZoc6D;@[IC`RZZ;1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_sync_vga_sync_arch_cfg
+    Configuration for architecture: vga_sync_arch
+    Configuration for entity: vga_sync
+    Depends on: A work vga_sync vga_sync_arch :`VJ8MZoc6D;@[IC`RZZ;1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_sync 0SDPm_WI1G1WeGal3ld5h1
+    Source modified time: Tue Nov 26 10:34:40 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_sync_vga_sync_arch_cfg.vhd
+    Source file: VHDL/vga_sync_vga_sync_arch_cfg.vhd
+    Start location: VHDL/vga_sync_vga_sync_arch_cfg.vhd:1
+    Version string: kZ[oN:dbQo:Ca]2TM]^?M3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY vga_tb
+    Source modified time: Tue Nov 26 10:38:20 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_tb.vhd
+    Source file: VHDL/vga_tb.vhd
+    Start location: VHDL/vga_tb.vhd:6
+    Version string: SS51nAkk5i9fSo`2V`K_b2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_tb_arch
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_tb SS51nAkk5i9fSo`2V`K_b2
+    Start location: VHDL/vga_tb.vhd:10
+    Version string: F_LlR8^UBbfFE=k0`:Bke1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source file: VHDL/vga_tb.vhd
+    Source modified time: Tue Nov 26 10:38:20 2013
+    HDL source file: VHDL/vga_tb.vhd
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_tb_vga_tb_arch_cfg
+    Configuration for architecture: vga_tb_arch
+    Configuration for entity: vga_tb
+    Depends on: A work vga_tb vga_tb_arch `9b3NRh:bHl^Y5WzYaA=91
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_tb SS51nAkk5i9fSo`2V`K_b2
+    Source modified time: Tue Nov 26 10:34:14 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_tb_vga_tb_arch_cfg.vhd
+    Source file: VHDL/vga_tb_vga_tb_arch_cfg.vhd
+    Start location: VHDL/vga_tb_vga_tb_arch_cfg.vhd:1
+    Version string: d^8>UhkPD2>m;gH?3fRiQ2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY vga_trans
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_trans.vhd
+    Source file: VHDL/vga_trans.vhd
+    Start location: VHDL/vga_trans.vhd:6
+    Version string: j3AKgHnSaoVeZk_CP8PAG0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:55:46 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_trans j3AKgHnSaoVeZk_CP8PAG0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_trans_SYNTH.vhd
+    Source file: VHDL/vga_trans_SYNTH.vhd
+    Start location: VHDL/vga_trans_SYNTH.vhd:7
+    Version string: z0gj5EKEB[d4SBVc<jlV=1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_trans_arch
+    Depends on: E work vga_trans j3AKgHnSaoVeZk_CP8PAG0
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_trans_arch.vhd
+    Source file: VHDL/vga_trans_arch.vhd
+    Start location: VHDL/vga_trans_arch.vhd:6
+    Version string: e;eTg[YO6=Dg1>gDfaB8a1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+ENTITY vga_trans_reset
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_trans_reset.vhd
+    Source file: VHDL/vga_trans_reset.vhd
+    Start location: VHDL/vga_trans_reset.vhd:6
+    Version string: LB783LT`2fIcVjmd4BcXM2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:55:30 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_trans_reset LB783LT`2fIcVjmd4BcXM2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_trans_reset_SYNTH.vhd
+    Source file: VHDL/vga_trans_reset_SYNTH.vhd
+    Start location: VHDL/vga_trans_reset_SYNTH.vhd:7
+    Version string: >fCOWMO0lzomnlW7V>Nc:3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_trans_reset_arch
+    Depends on: E work vga_trans_reset LB783LT`2fIcVjmd4BcXM2
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_trans_reset_arch.vhd
+    Source file: VHDL/vga_trans_reset_arch.vhd
+    Start location: VHDL/vga_trans_reset_arch.vhd:6
+    Version string: 05?3345H9ZNVgaI8GiPGf3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_trans_reset_vga_trans_reset_arch_cfg
+    Configuration for architecture: vga_trans_reset_arch
+    Configuration for entity: vga_trans_reset
+    Depends on: A work vga_trans_reset vga_trans_reset_arch 05?3345H9ZNVgaI8GiPGf3
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_trans_reset LB783LT`2fIcVjmd4BcXM2
+    Source modified time: Tue Nov 26 10:33:28 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
+    Source file: VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
+    Start location: VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd:1
+    Version string: ZH_5eGfdL_4;bGb8n[fkz0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION vga_trans_vga_trans_arch_cfg
+    Configuration for architecture: vga_trans_arch
+    Configuration for entity: vga_trans
+    Depends on: A work vga_trans vga_trans_arch e;eTg[YO6=Dg1>gDfaB8a1
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_trans j3AKgHnSaoVeZk_CP8PAG0
+    Source modified time: Tue Nov 26 10:33:35 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_trans_vga_trans_arch_cfg.vhd
+    Source file: VHDL/vga_trans_vga_trans_arch_cfg.vhd
+    Start location: VHDL/vga_trans_vga_trans_arch_cfg.vhd:1
+    Version string: Mo9DKoE2C=MfYQ7WRbm:B1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY vga_triggers
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: vga
+    HDL source file: VHDL/vga_triggers.vhd
+    Source file: VHDL/vga_triggers.vhd
+    Start location: VHDL/vga_triggers.vhd:6
+    Version string: a_8e4zcD4lD2PUSfiP?h71
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 16:55:05 2013
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_triggers a_8e4zcD4lD2PUSfiP?h71
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_triggers_SYNTH.vhd
+    Source file: VHDL/vga_triggers_SYNTH.vhd
+    Start location: VHDL/vga_triggers_SYNTH.vhd:7
+    Version string: d@TR=YTTgnNeYhzJL:]5:1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Debug Symbol file exists
+  ARCHITECTURE BODY vga_triggers_arch
+    Depends on: E work vga_triggers a_8e4zcD4lD2PUSfiP?h71
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_triggers_arch.vhd
+    Source file: VHDL/vga_triggers_arch.vhd
+    Start location: VHDL/vga_triggers_arch.vhd:6
+    Version string: oY`XCK_l_ZdGLA@nXY3[?2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: vga
+    Source modified time: Tue Nov 26 10:27:51 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION vga_triggers_vga_triggers_arch_cfg
+    Configuration for architecture: vga_triggers_arch
+    Configuration for entity: vga_triggers
+    Depends on: A work vga_triggers vga_triggers_arch oY`XCK_l_ZdGLA@nXY3[?2
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga_triggers a_8e4zcD4lD2PUSfiP?h71
+    Source modified time: Tue Nov 26 10:33:20 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
+    Source file: VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
+    Start location: VHDL/vga_triggers_vga_triggers_arch_cfg.vhd:1
+    Version string: 266c=H8<F8718J1cl3Yml3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION vga_vga_arch_cfg
+    Configuration for architecture: vga_arch
+    Configuration for entity: vga
+    Depends on: E work vga_read l@?;BWdIcSFdWimbCS:371
+    Depends on: E work vga_trans_reset LB783LT`2fIcVjmd4BcXM2
+    Depends on: E work vga_trans j3AKgHnSaoVeZk_CP8PAG0
+    Depends on: E work vga_triggers a_8e4zcD4lD2PUSfiP?h71
+    Depends on: E work vga_field_check MB8jMgkoTXdZjV6DTi0nI1
+    Depends on: E work vga_sync 0SDPm_WI1G1WeGal3ld5h1
+    Depends on: E work vga_counter G3HgN>WznB_7eB3]Ei8Q23
+    Depends on: C work vga_read_vga_read_behav_cfg bj3hkb;SfC=HcfFZcimJT0
+    Depends on: C work vga_trans_reset_vga_trans_reset_arch_cfg ZH_5eGfdL_4;bGb8n[fkz0
+    Depends on: C work vga_trans_vga_trans_arch_cfg Mo9DKoE2C=MfYQ7WRbm:B1
+    Depends on: C work vga_triggers_vga_triggers_arch_cfg 266c=H8<F8718J1cl3Yml3
+    Depends on: C work vga_field_check_vga_field_check_arch_cfg Y[WmzlAMdD>`3m0ZN^S9m3
+    Depends on: C work vga_sync_vga_sync_arch_cfg kZ[oN:dbQo:Ca]2TM]^?M3
+    Depends on: C work vga_counter_vga_counter_behav_cfg :g=<F=2X5^do[HAKeBW:71
+    Depends on: A work vga vga_arch ]iHC`FW?o@AF09Dn_fCj80
+    Depends on: P work vga_params ^JDn_h>W5PoET@2OoE7N80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work vga LK8T0U5X@UlUIeJ^XQm>L1
+    Source modified time: Tue Nov 26 10:35:03 2013
+    Source directory: vga
+    HDL source file: VHDL/vga_vga_arch_cfg.vhd
+    Source file: VHDL/vga_vga_arch_cfg.vhd
+    Start location: VHDL/vga_vga_arch_cfg.vhd:1
+    Version string: 9NRi0RlI`<XMV6IUDX1E11
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1

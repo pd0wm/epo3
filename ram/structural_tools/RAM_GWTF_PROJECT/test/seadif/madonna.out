@@ -1,0 +1,80 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "sr_if(sr_if(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 46):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    28     3     0     0    11     0     2     2     0
+
+------ partitioning 15 cells into (hor x vert) = (3 x 1) partitions
+
+------ requested grid points = (366, 364)
+
+------ cost@start = 186, cost@end = 130, moves = 8
+------ s, w, b = 23, 46, 23; perm = 1 3 2 
+------ cost@start = 130, cost@end = 130, moves = 0
+------ s, w, b = 23, 46, 23; perm = 1 3 2 
+------ 21 nets have to be routed on a 5 x 1 global grid
+     + routing net clk (2 terminals):  weight = 200
+     + routing net rst (2 terminals):  weight = 200
+     + routing net di (2 terminals):  weight = 200
+     + routing net do2_i_0_port (2 terminals):  weight = 200
+     + routing net n2 (2 terminals):  weight = 200
+     + routing net addr1_7_0_4 (2 terminals):  weight = 200
+     + routing net addr1_7_0_3 (2 terminals):  weight = 200
+     + routing net addr1_7_0_2 (2 terminals):  weight = 200
+     + routing net addr1_7_0_1 (2 terminals):  weight = 200
+     + routing net addr1_7_0_0 (2 terminals):  weight = 200
+     + routing net addr2_7_0_4 (2 terminals):  weight = 200
+     + routing net addr2_7_0_3 (2 terminals):  weight = 200
+     + routing net addr2_7_0_2 (2 terminals):  weight = 200
+     + routing net addr2_7_0_1 (2 terminals):  weight = 200
+     + routing net addr2_7_0_0 (2 terminals):  weight = 200
+     + routing net do1_i_1_port (2 terminals):  weight = 200
+     + routing net do1_i_2_port (2 terminals):  weight = 200
+     + routing net do1_i_3_port (2 terminals):  weight = 200
+     + routing net do2_i_4_port (2 terminals):  weight = 200
+     + routing net n1 (2 terminals):  weight = 200
+     + routing net do2_buf (2 terminals):  weight = 200
+
+------ Routed 21 nets, total weight = 4200
+
+
+
+------ Detailed placement of (Tmp_Cell_(sr_if(sr_if(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [366:364]
+------ Doing placement 
+ Can't place cell :tower_mod_2  in window at (244,0)
+ Can't place cell :tower_mod_1  in window at (244,0)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [475:364]
+------ Doing placement 
+ Can't place cell :tower_mod_2  in window at (316,0)
+ Can't place cell :tower_mod_3  in window at (316,0)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [617:364]
+------ Doing placement 
+------ Compacting  
+
+         116  column[s] deleted.
+
+         Magnification coefficient obtained :1.26636
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.0 seconds of your cpu
+terminate
