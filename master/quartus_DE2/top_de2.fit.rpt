@@ -1,5 +1,5 @@
 Fitter report for top_de2
-Fri Nov 29 12:02:42 2013
+Fri Nov 29 14:34:00 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -9,35 +9,36 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   1. Legal Notice
   2. Fitter Summary
   3. Fitter Settings
-  4. Incremental Compilation Preservation Summary
-  5. Incremental Compilation Partition Settings
-  6. Incremental Compilation Placement Preservation
-  7. Pin-Out File
-  8. Fitter Resource Usage Summary
-  9. Fitter Partition Statistics
- 10. Input Pins
- 11. Output Pins
- 12. I/O Bank Usage
- 13. All Package Pins
- 14. Output Pin Default Load For Reported TCO
- 15. Fitter Resource Utilization by Entity
- 16. Delay Chain Summary
- 17. Pad To Core Delay Chain Fanout
- 18. Control Signals
- 19. Global & Other Fast Signals
- 20. Non-Global High Fan-Out Signals
- 21. Interconnect Usage Summary
- 22. LAB Logic Elements
- 23. LAB-wide Signals
- 24. LAB Signals Sourced
- 25. LAB Signals Sourced Out
- 26. LAB Distinct Inputs
- 27. Fitter Device Options
- 28. Operating Settings and Conditions
- 29. Estimated Delay Added for Hold Timing Summary
- 30. Estimated Delay Added for Hold Timing Details
- 31. Fitter Messages
- 32. Fitter Suppressed Messages
+  4. Parallel Compilation
+  5. Incremental Compilation Preservation Summary
+  6. Incremental Compilation Partition Settings
+  7. Incremental Compilation Placement Preservation
+  8. Pin-Out File
+  9. Fitter Resource Usage Summary
+ 10. Fitter Partition Statistics
+ 11. Input Pins
+ 12. Output Pins
+ 13. I/O Bank Usage
+ 14. All Package Pins
+ 15. Output Pin Default Load For Reported TCO
+ 16. Fitter Resource Utilization by Entity
+ 17. Delay Chain Summary
+ 18. Pad To Core Delay Chain Fanout
+ 19. Control Signals
+ 20. Global & Other Fast Signals
+ 21. Non-Global High Fan-Out Signals
+ 22. Interconnect Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. Fitter Device Options
+ 29. Operating Settings and Conditions
+ 30. Estimated Delay Added for Hold Timing Summary
+ 31. Estimated Delay Added for Hold Timing Details
+ 32. Fitter Messages
+ 33. Fitter Suppressed Messages
 
 
 
@@ -63,17 +64,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Nov 29 12:02:42 2013          ;
+; Fitter Status                      ; Successful - Fri Nov 29 14:34:00 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 84 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 78 / 33,216 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 60 / 33,216 ( < 1 % )                          ;
-; Total registers                    ; 60                                             ;
+; Total logic elements               ; 83 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 77 / 33,216 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 59 / 33,216 ( < 1 % )                          ;
+; Total registers                    ; 59                                             ;
 ; Total pins                         ; 37 / 475 ( 8 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                            ;
@@ -133,14 +134,31 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------------------+--------------------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 2.09        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;  12.5%      ;
++----------------------------+-------------+
+
+
 +----------------------------------------------+
 ; Incremental Compilation Preservation Summary ;
 +---------------------+------------------------+
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 181 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 181 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 179 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 179 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -163,7 +181,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 178     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 176     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -179,23 +197,23 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +---------------------------------------------+--------------------------------------------+
 ; Resource                                    ; Usage                                      ;
 +---------------------------------------------+--------------------------------------------+
-; Total logic elements                        ; 84 / 33,216 ( < 1 % )                      ;
+; Total logic elements                        ; 83 / 33,216 ( < 1 % )                      ;
 ;     -- Combinational with no register       ; 24                                         ;
 ;     -- Register only                        ; 6                                          ;
-;     -- Combinational with a register        ; 54                                         ;
+;     -- Combinational with a register        ; 53                                         ;
 ;                                             ;                                            ;
 ; Logic element usage by number of LUT inputs ;                                            ;
-;     -- 4 input functions                    ; 27                                         ;
-;     -- 3 input functions                    ; 16                                         ;
+;     -- 4 input functions                    ; 24                                         ;
+;     -- 3 input functions                    ; 18                                         ;
 ;     -- <=2 input functions                  ; 35                                         ;
 ;     -- Register only                        ; 6                                          ;
 ;                                             ;                                            ;
 ; Logic elements by mode                      ;                                            ;
-;     -- normal mode                          ; 54                                         ;
+;     -- normal mode                          ; 53                                         ;
 ;     -- arithmetic mode                      ; 24                                         ;
 ;                                             ;                                            ;
-; Total registers*                            ; 60 / 34,593 ( < 1 % )                      ;
-;     -- Dedicated logic registers            ; 60 / 33,216 ( < 1 % )                      ;
+; Total registers*                            ; 59 / 34,593 ( < 1 % )                      ;
+;     -- Dedicated logic registers            ; 59 / 33,216 ( < 1 % )                      ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )                          ;
 ;                                             ;                                            ;
 ; Total LABs:  partially or completely used   ; 10 / 2,076 ( < 1 % )                       ;
@@ -217,11 +235,11 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                               ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%                               ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2]~clkctrl             ;
-; Maximum fan-out                             ; 57                                         ;
+; Maximum fan-out                             ; 56                                         ;
 ; Highest non-global fan-out signal           ; vga:inst3|vga_read:read_and_output|red_out ;
 ; Highest non-global fan-out                  ; 20                                         ;
-; Total fan-out                               ; 475                                        ;
-; Average fan-out                             ; 2.55                                       ;
+; Total fan-out                               ; 466                                        ;
+; Average fan-out                             ; 2.53                                       ;
 +---------------------------------------------+--------------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -234,23 +252,23 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 84 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+; Total logic elements                        ; 83 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;     -- Combinational with no register       ; 24                   ; 0                              ;
 ;     -- Register only                        ; 6                    ; 0                              ;
-;     -- Combinational with a register        ; 54                   ; 0                              ;
+;     -- Combinational with a register        ; 53                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 27                   ; 0                              ;
-;     -- 3 input functions                    ; 16                   ; 0                              ;
+;     -- 4 input functions                    ; 24                   ; 0                              ;
+;     -- 3 input functions                    ; 18                   ; 0                              ;
 ;     -- <=2 input functions                  ; 35                   ; 0                              ;
 ;     -- Register only                        ; 6                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 54                   ; 0                              ;
+;     -- normal mode                          ; 53                   ; 0                              ;
 ;     -- arithmetic mode                      ; 24                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 60                   ; 0                              ;
-;     -- Dedicated logic registers            ; 60 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 59                   ; 0                              ;
+;     -- Dedicated logic registers            ; 59 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Total LABs:  partially or completely used   ; 10 / 2076 ( < 1 % )  ; 0 / 2076 ( 0 % )               ;
@@ -269,8 +287,8 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 475                  ; 0                              ;
-;     -- Registered Connections               ; 205                  ; 0                              ;
+;     -- Total Connections                    ; 466                  ; 0                              ;
+;     -- Registered Connections               ; 199                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
 ;     -- Top                                  ; 0                    ; 0                              ;
@@ -303,7 +321,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; clock_50mhz ; N2    ; 2        ; 0            ; 18           ; 0           ; 2                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; rst         ; N25   ; 5        ; 65           ; 19           ; 0           ; 5                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; rst         ; N25   ; 5        ; 65           ; 19           ; 0           ; 4                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -1089,23 +1107,20 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |top_de2                                     ; 84 (1)      ; 60 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 24 (1)       ; 6 (0)             ; 54 (0)           ; |top_de2                                                                                                ;              ;
+; |top_de2                                     ; 83 (1)      ; 59 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; 24 (1)       ; 6 (0)             ; 53 (0)           ; |top_de2                                                                                                ;              ;
 ;    |depiece_simple:inst5|                    ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |top_de2|depiece_simple:inst5                                                                           ;              ;
 ;    |gen6mhz:inst1|                           ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |top_de2|gen6mhz:inst1                                                                                  ;              ;
-;    |sr_if:inst2|                             ; 9 (1)       ; 5 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 6 (0)            ; |top_de2|sr_if:inst2                                                                                    ;              ;
+;    |sr_if:inst2|                             ; 7 (1)       ; 4 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2                                                                                    ;              ;
 ;       |mux5:mux5_do2|                        ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
-;       |sr_tower:\generate_tower:0:tower_mod| ; 5 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
-;          |bit4:\generate_bit4:0:bit4_mod|    ; 4 (0)       ; 3 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
-;             |dfr11:dfr11_6|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                 ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                 ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
-;             |no210:no210_3|                  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_3  ;              ;
-;          |bit4:\generate_bit4:2:bit4_mod|    ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
-;             |dfr11:dfr11_7|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |mu111:mu111_9|                  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
+;       |sr_tower:\generate_tower:4:tower_mod| ; 3 (0)       ; 3 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod                                               ;              ;
+;          |bit4:\generate_bit4:0:bit4_mod|    ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
+;             |dfr11:dfr11_6|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
+;             |dfr11:dfr11_8|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8  ;              ;
+;             |mu111:mu111_10|                 ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_10 ;              ;
+;             |mu111:mu111_11|                 ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
+;          |bit4:\generate_bit4:2:bit4_mod|    ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
+;             |dfr11:dfr11_7|                  ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
+;             |mu111:mu111_9|                  ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
 ;    |vga:inst3|                               ; 69 (0)      ; 49 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (0)       ; 6 (0)             ; 43 (0)           ; |top_de2|vga:inst3                                                                                      ;              ;
 ;       |vga_counter:counter|                  ; 22 (22)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 17 (17)          ; |top_de2|vga:inst3|vga_counter:counter                                                                  ;              ;
 ;       |vga_field_check:field_check|          ; 4 (4)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 2 (2)            ; |top_de2|vga:inst3|vga_field_check:field_check                                                          ;              ;
@@ -1180,13 +1195,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clock_50mhz                                                ; PIN_N2             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clock_50mhz                                                ; PIN_N2             ; 2       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; gen6mhz:inst1|count[2]                                     ; LCFF_X1_Y18_N21    ; 57      ; Clock        ; yes    ; Global Clock         ; GCLK1            ; --                        ;
-; rst                                                        ; PIN_N25            ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; gen6mhz:inst1|count[2]                                     ; LCFF_X1_Y18_N21    ; 56      ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; rst                                                        ; PIN_N25            ; 4       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; rst                                                        ; PIN_N25            ; 53      ; Async. clear ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; vga:inst3|vga_counter:counter|Equal0~1                     ; LCCOMB_X31_Y32_N24 ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_trans:trans|mem_addr_state[4]~24             ; LCCOMB_X28_Y32_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_trans:trans|process_0~0                      ; LCCOMB_X29_Y32_N0  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~13 ; LCCOMB_X27_Y32_N12 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_counter:counter|Equal0~1                     ; LCCOMB_X29_Y27_N0  ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_trans:trans|mem_addr_state[4]~24             ; LCCOMB_X29_Y28_N30 ; 10      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_trans:trans|process_0~0                      ; LCCOMB_X30_Y28_N0  ; 8       ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~13 ; LCCOMB_X28_Y28_N12 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1196,7 +1211,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                   ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 ; clock_50mhz            ; PIN_N2          ; 2       ; Global Clock         ; GCLK2            ; --                        ;
-; gen6mhz:inst1|count[2] ; LCFF_X1_Y18_N21 ; 57      ; Global Clock         ; GCLK1            ; --                        ;
+; gen6mhz:inst1|count[2] ; LCFF_X1_Y18_N21 ; 56      ; Global Clock         ; GCLK0            ; --                        ;
 ; rst                    ; PIN_N25         ; 53      ; Global Clock         ; GCLK6            ; --                        ;
 +------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
@@ -1212,14 +1227,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga:inst3|vga_counter:counter|Equal0~1                     ; 9       ;
 ; vga:inst3|vga_counter:counter|pos_x[7]                     ; 9       ;
 ; vga:inst3|vga_trans:trans|process_0~0                      ; 8       ;
-; depiece_simple:inst5|write_state[2]                        ; 7       ;
-; depiece_simple:inst5|write_state[0]                        ; 7       ;
-; depiece_simple:inst5|write_state[1]                        ; 7       ;
 ; vga:inst3|vga_triggers:triggers|Equal0~0                   ; 6       ;
+; depiece_simple:inst5|write_state[3]                        ; 6       ;
+; depiece_simple:inst5|write_state[1]                        ; 6       ;
 ; vga:inst3|vga_counter:counter|pos_y[8]                     ; 6       ;
 ; vga:inst3|vga_counter:counter|Equal0~0                     ; 5       ;
+; depiece_simple:inst5|write_state[0]                        ; 5       ;
 ; vga:inst3|vga_counter:counter|pos_x[6]                     ; 5       ;
-; rst                                                        ; 4       ;
 ; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~13 ; 4       ;
 ; vga:inst3|vga_trans_reset:trans_reset|counter_state[0]     ; 4       ;
 ; vga:inst3|vga_field_check:field_check|end_field_line_state ; 4       ;
@@ -1233,6 +1247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga:inst3|vga_counter:counter|pos_y[6]                     ; 4       ;
 ; vga:inst3|vga_counter:counter|pos_y[5]                     ; 4       ;
 ; vga:inst3|vga_counter:counter|pos_y[4]                     ; 4       ;
+; rst                                                        ; 3       ;
 ; ~GND                                                       ; 3       ;
 ; vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~12 ; 3       ;
 ; vga:inst3|vga_trans_reset:trans_reset|counter_state[1]     ; 3       ;
@@ -1247,6 +1262,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga:inst3|vga_counter:counter|pos_y[1]                     ; 3       ;
 ; vga:inst3|vga_counter:counter|pos_y[2]                     ; 3       ;
 ; vga:inst3|vga_trans:trans|mem_addr_state[0]                ; 3       ;
+; vga:inst3|vga_trans:trans|mem_addr_state[1]                ; 3       ;
+; vga:inst3|vga_trans:trans|mem_addr_state[3]                ; 3       ;
 ; vga:inst3|vga_triggers:triggers|Equal0~2                   ; 2       ;
 ; vga:inst3|vga_triggers:triggers|Equal1~1                   ; 2       ;
 ; vga:inst3|vga_triggers:triggers|Equal1~0                   ; 2       ;
@@ -1254,8 +1271,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga:inst3|vga_trans:trans|counter_state[1]                 ; 2       ;
 ; vga:inst3|vga_field_check:field_check|LessThan2~0          ; 2       ;
 ; vga:inst3|vga_field_check:field_check|in_field_state       ; 2       ;
-; vga:inst3|vga_read:read_and_output|in_field_buf            ; 2       ;
-; gen6mhz:inst1|count[1]                                     ; 2       ;
 +------------------------------------------------------------+---------+
 
 
@@ -1264,29 +1279,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-----------------------+
 ; Interconnect Resource Type ; Usage                 ;
 +----------------------------+-----------------------+
-; Block interconnects        ; 71 / 94,460 ( < 1 % ) ;
+; Block interconnects        ; 63 / 94,460 ( < 1 % ) ;
 ; C16 interconnects          ; 2 / 3,315 ( < 1 % )   ;
-; C4 interconnects           ; 18 / 60,840 ( < 1 % ) ;
-; Direct links               ; 29 / 94,460 ( < 1 % ) ;
+; C4 interconnects           ; 31 / 60,840 ( < 1 % ) ;
+; Direct links               ; 19 / 94,460 ( < 1 % ) ;
 ; Global clocks              ; 3 / 16 ( 19 % )       ;
 ; Local interconnects        ; 60 / 33,216 ( < 1 % ) ;
 ; R24 interconnects          ; 3 / 3,091 ( < 1 % )   ;
-; R4 interconnects           ; 37 / 81,294 ( < 1 % ) ;
+; R4 interconnects           ; 33 / 81,294 ( < 1 % ) ;
 +----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 8.40) ; Number of LABs  (Total = 10) ;
+; Number of Logic Elements  (Average = 8.30) ; Number of LABs  (Total = 10) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 2                            ;
 ; 2                                          ; 1                            ;
 ; 3                                          ; 1                            ;
 ; 4                                          ; 0                            ;
 ; 5                                          ; 0                            ;
-; 6                                          ; 0                            ;
-; 7                                          ; 1                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 0                            ;
 ; 8                                          ; 0                            ;
 ; 9                                          ; 0                            ;
 ; 10                                         ; 0                            ;
@@ -1316,7 +1331,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.30) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced  (Average = 14.10) ; Number of LABs  (Total = 10) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 2                            ;
@@ -1330,9 +1345,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 12                                           ; 1                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
@@ -1352,13 +1367,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 3.60) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced Out  (Average = 3.50) ; Number of LABs  (Total = 10) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 5                            ;
 ; 2                                               ; 0                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 1                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 0                            ;
 ; 5                                               ; 2                            ;
 ; 6                                               ; 1                            ;
 ; 7                                               ; 0                            ;
@@ -1372,7 +1387,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 5.20) ; Number of LABs  (Total = 10) ;
+; Number of Distinct Inputs  (Average = 5.10) ; Number of LABs  (Total = 10) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
@@ -1389,8 +1404,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                          ; 0                            ;
 ; 13                                          ; 1                            ;
 ; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 1                            ;
+; 15                                          ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -1443,9 +1457,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Nov 29 12:02:34 2013
+    Info: Processing started: Fri Nov 29 14:33:52 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off de2 -c top_de2
-Info: Only one processor detected - disabling parallel compilation
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Selected device EP2C35F672C6 for design "top_de2"
 Info: Low junction temperature is 0 degrees C
 Info: High junction temperature is 85 degrees C
@@ -1472,10 +1486,9 @@ Info: Automatically promoted node gen6mhz:inst1|count[2]
 Info: Automatically promoted node rst (placed in PIN N25 (CLK4, LVDSCLK2p, Input))
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G6
     Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT
+        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT
+        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT
+        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT
 Info: Starting register packing
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
@@ -1485,13 +1498,13 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
-Info: Estimated most critical path is register to register delay of 2.556 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X31_Y32; Fanout = 4; REG Node = 'vga:inst3|vga_field_check:field_check|end_field_line_state'
-    Info: 2: + IC(0.809 ns) + CELL(0.275 ns) = 1.084 ns; Loc. = LAB_X27_Y32; Fanout = 3; COMB Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~12'
-    Info: 3: + IC(0.145 ns) + CELL(0.420 ns) = 1.649 ns; Loc. = LAB_X27_Y32; Fanout = 4; COMB Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~13'
-    Info: 4: + IC(0.247 ns) + CELL(0.660 ns) = 2.556 ns; Loc. = LAB_X27_Y32; Fanout = 2; REG Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[7]'
-    Info: Total cell delay = 1.355 ns ( 53.01 % )
-    Info: Total interconnect delay = 1.201 ns ( 46.99 % )
+Info: Estimated most critical path is register to register delay of 2.571 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X29_Y27; Fanout = 4; REG Node = 'vga:inst3|vga_field_check:field_check|end_field_line_state'
+    Info: 2: + IC(0.824 ns) + CELL(0.275 ns) = 1.099 ns; Loc. = LAB_X28_Y28; Fanout = 3; COMB Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~12'
+    Info: 3: + IC(0.145 ns) + CELL(0.420 ns) = 1.664 ns; Loc. = LAB_X28_Y28; Fanout = 4; COMB Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[4]~13'
+    Info: 4: + IC(0.247 ns) + CELL(0.660 ns) = 2.571 ns; Loc. = LAB_X28_Y28; Fanout = 2; REG Node = 'vga:inst3|vga_trans_reset:trans_reset|mem_addr_state[7]'
+    Info: Total cell delay = 1.355 ns ( 52.70 % )
+    Info: Total interconnect delay = 1.216 ns ( 47.30 % )
 Info: Fitter routing operations beginning
 Info: Router estimated average interconnect usage is 0% of the available device resources
     Info: Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
@@ -1540,10 +1553,10 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Generated suppressed messages file /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/top_de2.fit.smsg
 Info: Quartus II Fitter was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 323 megabytes
-    Info: Processing ended: Fri Nov 29 12:02:42 2013
+    Info: Peak virtual memory: 367 megabytes
+    Info: Processing ended: Fri Nov 29 14:34:00 2013
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+

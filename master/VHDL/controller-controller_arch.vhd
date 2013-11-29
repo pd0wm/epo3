@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw_1, draw_2, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_5, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, rotate, game_over);
+	is (reset, init, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw_1, draw_2, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, rotate, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece        : std_logic_vector(2 downto 0);
@@ -302,3 +302,5 @@ begin
 		end case;
 	end process;
 end;
+
+

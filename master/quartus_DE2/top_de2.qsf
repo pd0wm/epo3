@@ -146,10 +146,6 @@ set_global_assignment -name VHDL_FILE ../VHDL/demux4_inv.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/dec8_dec8_behav_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/dec8_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/dec8.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/controller_tb.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/controller_tb-controller_tb_arch.vhd"
-set_global_assignment -name VHDL_FILE ../VHDL/controller.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/controller-controller_arch.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/bit4_tb.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/bit4_bit4_behav_cfg.vhd

@@ -76,20 +76,20 @@ WORK__extracted = $(LIB_WORK)/extracted/_primary.dat
 WORK__depiece_simple__depiece_simple_arch = $(LIB_WORK)/depiece_simple/depiece_simple_arch.dat
 WORK__depiece_simple = $(LIB_WORK)/depiece_simple/_primary.dat
 WORK__demux8_inv_demux8_inv_behav_cfg = $(LIB_WORK)/demux8_inv_demux8_inv_behav_cfg/_primary.dat
-WORK__demux8_inv__synthesised = $(LIB_WORK)/demux8_inv/synthesised.dat
 WORK__demux8_inv__demux8_inv_behav = $(LIB_WORK)/demux8_inv/demux8_inv_behav.dat
+WORK__demux8_inv__synthesised = $(LIB_WORK)/demux8_inv/synthesised.dat
 WORK__demux8_inv = $(LIB_WORK)/demux8_inv/_primary.dat
 WORK__demux5_demux5_behav_cfg = $(LIB_WORK)/demux5_demux5_behav_cfg/_primary.dat
-WORK__demux5__synthesised = $(LIB_WORK)/demux5/synthesised.dat
 WORK__demux5__demux5_behav = $(LIB_WORK)/demux5/demux5_behav.dat
+WORK__demux5__synthesised = $(LIB_WORK)/demux5/synthesised.dat
 WORK__demux5 = $(LIB_WORK)/demux5/_primary.dat
 WORK__demux4_inv_demux4_inv_behav_cfg = $(LIB_WORK)/demux4_inv_demux4_inv_behav_cfg/_primary.dat
-WORK__demux4_inv__synthesised = $(LIB_WORK)/demux4_inv/synthesised.dat
 WORK__demux4_inv__demux4_inv_behav = $(LIB_WORK)/demux4_inv/demux4_inv_behav.dat
+WORK__demux4_inv__synthesised = $(LIB_WORK)/demux4_inv/synthesised.dat
 WORK__demux4_inv = $(LIB_WORK)/demux4_inv/_primary.dat
 WORK__dec8_dec8_behav_cfg = $(LIB_WORK)/dec8_dec8_behav_cfg/_primary.dat
-WORK__dec8__synthesised = $(LIB_WORK)/dec8/synthesised.dat
 WORK__dec8__dec8_behav = $(LIB_WORK)/dec8/dec8_behav.dat
+WORK__dec8__synthesised = $(LIB_WORK)/dec8/synthesised.dat
 WORK__dec8 = $(LIB_WORK)/dec8/_primary.dat
 WORK__controller_tb__controller_tb_arch = $(LIB_WORK)/controller_tb/controller_tb_arch.dat
 WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
@@ -160,20 +160,20 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__depiece_simple__depiece_simple_arch) \
     $(WORK__depiece_simple) \
     $(WORK__demux8_inv_demux8_inv_behav_cfg) \
-    $(WORK__demux8_inv__synthesised) \
     $(WORK__demux8_inv__demux8_inv_behav) \
+    $(WORK__demux8_inv__synthesised) \
     $(WORK__demux8_inv) \
     $(WORK__demux5_demux5_behav_cfg) \
-    $(WORK__demux5__synthesised) \
     $(WORK__demux5__demux5_behav) \
+    $(WORK__demux5__synthesised) \
     $(WORK__demux5) \
     $(WORK__demux4_inv_demux4_inv_behav_cfg) \
-    $(WORK__demux4_inv__synthesised) \
     $(WORK__demux4_inv__demux4_inv_behav) \
+    $(WORK__demux4_inv__synthesised) \
     $(WORK__demux4_inv) \
     $(WORK__dec8_dec8_behav_cfg) \
-    $(WORK__dec8__synthesised) \
     $(WORK__dec8__dec8_behav) \
+    $(WORK__dec8__synthesised) \
     $(WORK__dec8) \
     $(WORK__controller_tb__controller_tb_arch) \
     $(WORK__controller_tb) \
@@ -270,14 +270,6 @@ $(WORK__dec8) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd
 
-$(WORK__dec8__dec8_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd \
-		$(WORK__dec8) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd
-
 $(WORK__dec8__synthesised) : VHDL/dec8_SYNTH.vhd \
 		$(WORK__dec8) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -285,6 +277,14 @@ $(WORK__dec8__synthesised) : VHDL/dec8_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/dec8_SYNTH.vhd
+
+$(WORK__dec8__dec8_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd \
+		$(WORK__dec8) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd
 
 $(WORK__dec8_dec8_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd \
 		$(IEEE__numeric_std) \
@@ -301,14 +301,6 @@ $(WORK__demux4_inv) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vh
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd
 
-$(WORK__demux4_inv__demux4_inv_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd \
-		$(WORK__demux4_inv) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd
-
 $(WORK__demux4_inv__synthesised) : VHDL/demux4_inv_SYNTH.vhd \
 		$(WORK__demux4_inv) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -316,6 +308,14 @@ $(WORK__demux4_inv__synthesised) : VHDL/demux4_inv_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/demux4_inv_SYNTH.vhd
+
+$(WORK__demux4_inv__demux4_inv_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd \
+		$(WORK__demux4_inv) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd
 
 $(WORK__demux4_inv_demux4_inv_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd \
 		$(IEEE__numeric_std) \
@@ -332,14 +332,6 @@ $(WORK__demux5) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd
 
-$(WORK__demux5__demux5_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd \
-		$(WORK__demux5) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd
-
 $(WORK__demux5__synthesised) : VHDL/demux5_SYNTH.vhd \
 		$(WORK__demux5) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -347,6 +339,14 @@ $(WORK__demux5__synthesised) : VHDL/demux5_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/demux5_SYNTH.vhd
+
+$(WORK__demux5__demux5_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd \
+		$(WORK__demux5) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd
 
 $(WORK__demux5_demux5_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd \
 		$(IEEE__numeric_std) \
@@ -363,14 +363,6 @@ $(WORK__demux8_inv) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vh
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd
 
-$(WORK__demux8_inv__demux8_inv_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd \
-		$(WORK__demux8_inv) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd
-
 $(WORK__demux8_inv__synthesised) : VHDL/demux8_inv_SYNTH.vhd \
 		$(WORK__demux8_inv) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -378,6 +370,14 @@ $(WORK__demux8_inv__synthesised) : VHDL/demux8_inv_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/demux8_inv_SYNTH.vhd
+
+$(WORK__demux8_inv__demux8_inv_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd \
+		$(WORK__demux8_inv) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd
 
 $(WORK__demux8_inv_demux8_inv_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd \
 		$(IEEE__numeric_std) \
@@ -396,6 +396,8 @@ $(WORK__depiece_simple) : VHDL/depiece_simple.vhd \
 
 $(WORK__depiece_simple__depiece_simple_arch) : VHDL/depiece_simple-depiece_simple_arch.vhd \
 		$(WORK__depiece_simple) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
