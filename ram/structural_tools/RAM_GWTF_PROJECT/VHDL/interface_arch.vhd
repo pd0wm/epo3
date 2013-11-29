@@ -60,7 +60,7 @@ begin
 	demux5_we : demux5
 		port map(di => we,
 			     do => we_i,
-			     s  => addr2(7 downto 5));
+			     s  => addr1(7 downto 5));
 
 	dff_do1_buf : process(clk, rst)
 	begin
