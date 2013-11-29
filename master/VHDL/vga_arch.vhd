@@ -47,7 +47,7 @@ architecture vga_arch of vga is
 	
 	signal new_line, new_frame, end_line, end_frame : std_logic;
 	
-	component vga_trans
+	component vga_field_trans
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
 			 mem_addr_reset_in : in  std_logic_vector(mem_addr_len - 1 downto 0);
@@ -55,17 +55,17 @@ architecture vga_arch of vga is
 			 in_field_in       : in  std_logic;
 			 new_line_in       : in std_logic;
 			 new_frame_in      : in std_logic);
-	end component vga_trans;
+	end component vga_field_trans;
 	
 	signal mem_addr_reset : std_logic_vector(mem_addr_len-1 downto 0);
 	
-	component vga_trans_reset
+	component vga_field_trans_reset
 		port(clk                : in  std_logic;
 			 rst                : in  std_logic;
 			 mem_addr_reset_out : out std_logic_vector(mem_addr_len - 1 downto 0);
 			 end_field_line_in  : in  std_logic;
 			 end_frame_in       : in  std_logic);
-	end component vga_trans_reset;
+	end component vga_field_trans_reset;
 	
 	component vga_read
 		port(clk         : in  std_logic;
@@ -116,7 +116,7 @@ triggers: vga_triggers
 		     end_line_out  => end_line,
 		     end_frame_out => end_frame);	
 		     
-trans: vga_trans
+trans: vga_field_trans
 	port map(clk               => clk,
 		     rst               => rst,
 		     mem_addr_reset_in => mem_addr_reset,
@@ -125,7 +125,7 @@ trans: vga_trans
 		     new_line_in       => new_line,
 		     new_frame_in      => new_frame);
 		     
-trans_reset: vga_trans_reset
+trans_reset: vga_field_trans_reset
 	port map(clk                => clk,
 		     rst                => rst,
 		     mem_addr_reset_out => mem_addr_reset,
