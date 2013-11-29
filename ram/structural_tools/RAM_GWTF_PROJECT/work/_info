@@ -10,22 +10,22 @@ VR^1j^Wc`?V?_oB0Zn0EZh1
 Z0 o-quiet -auto_acc_if_foreign -work work
 n@_opt
 Z1 OE;O;10.1b;51
+dRAM
 T_opt1
-Vj0QV<PWC8?g9GC4[j;eLO3
-04 3 0 work sim 1
-=1-00505622dd1e-52967a7d-8cbb1-3d8d
+VQW1P3Oe55^1;jgWiRKQV41
+04 25 0 work bit4_tb_bit4_tb_behav_cfg 1
+=1-00505622dd1e-52985624-5c0cd-d68
 Z2 o-quiet -auto_acc_if_foreign -work work
 n@_opt1
 R1
 dRAM
 T_opt2
-V<LG2A`neYk=Xl70zKBVK31
-04 33 0 work sr_tower_tb_sr_tower_tb_behav_cfg 1
-=1-00505622dd1e-52964f63-73dce-320c
+VF4hNOF^kV5aAUR=LD=Zn22
+04 3 0 work sim 1
+=1-00505622dd1e-52985759-333ad-f1f
 R2
 n@_opt2
 R1
-dRAM
 Ebit4
 Z3 w1385576923
 Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
@@ -131,28 +131,28 @@ abit4_tb_behav
 ebit4_tb
 R9
 DCx4 work 19 bit4_bit4_behav_cfg 0 22 >BdJe9i2eVF?QiFJHY0C=3
-DAx4 work 7 bit4_tb 13 bit4_tb_behav 22 :J02MCN?FKDjT[^MJVbDo0
+DAx4 work 7 bit4_tb 13 bit4_tb_behav 22 ^Qi7=na:18nI]ECLL>RQI2
 R4
 R5
 R21
 w1385576998
-dRAM
+Z22 d/RAM_GWTF_PROJECT
 8VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
 FVHDL/bit4_tb_bit4_tb_behav_cfg.vhd
 l0
 L1
-VTK_cSCTQ883<5<hS@n;b^0
+VbJNQ]acW3[n>4ZFnSDz:f1
 R6
 32
-R7
+Z23 o-2002 -lower -explicit -work work -quiet -nologo
 R8
 !s100 BZVCS;]2PKj^^24;Z?7[G2
 !i10b 0
-!s108 1385576998.321761
-!s90 -lower|-explicit|-work|work|VHDL/bit4_tb_bit4_tb_behav_cfg.vhd|-quiet|-nologo|
+!s108 1385715329.209172
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/bit4_tb_bit4_tb_behav_cfg.vhd|
 !s107 VHDL/bit4_tb_bit4_tb_behav_cfg.vhd|
 Edec8
-Z22 w1385551505
+Z24 w1385551505
 R4
 R5
 dRAM
@@ -171,8 +171,8 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/dec8.vhd|-quiet|-nologo|
 !s107 VHDL/dec8.vhd|
 Adec8_behav
-Z23 DEx4 work 4 dec8 0 22 TNli=K?B;PIiCTVEe=2=i1
-Z24 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z25 DEx4 work 4 dec8 0 22 TNli=K?B;PIiCTVEe=2=i1
+Z26 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R4
 R5
 8VHDL/dec8_arch.vhd
@@ -192,11 +192,11 @@ R8
 Cdec8_dec8_behav_cfg
 adec8_behav
 edec8
-R24
+R26
 DAx4 work 4 dec8 10 dec8_behav 22 @86V^I9^?YP>ffCRo41OZ2
 R4
 R5
-R23
+R25
 w1385577096
 dRAM
 8VHDL/dec8_dec8_behav_cfg.vhd
@@ -214,7 +214,7 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/dec8_dec8_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/dec8_dec8_behav_cfg.vhd|
 Edemux4_inv
-Z25 w1385575662
+Z27 w1385575662
 R4
 R5
 dRAM
@@ -233,8 +233,8 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/demux4_inv.vhd|-quiet|-nologo|
 !s107 VHDL/demux4_inv.vhd|
 Ademux4_inv_behav
-Z26 DEx4 work 10 demux4_inv 0 22 kPZi0>9G;nkOJ5j``MBem2
-R24
+Z28 DEx4 work 10 demux4_inv 0 22 kPZi0>9G;nkOJ5j``MBem2
+R26
 R4
 R5
 8VHDL/demux4_inv_arch.vhd
@@ -254,11 +254,11 @@ R8
 Cdemux4_inv_demux4_inv_behav_cfg
 ademux4_inv_behav
 edemux4_inv
-R24
+R26
 DAx4 work 10 demux4_inv 16 demux4_inv_behav 22 Za3MG^l[8Q[c9hGa]FJWK0
 R4
 R5
-R26
+R28
 w1385577107
 dRAM
 8VHDL/demux4_inv_demux4_inv_behav_cfg.vhd
@@ -276,7 +276,7 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/demux4_inv_demux4_inv_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/demux4_inv_demux4_inv_behav_cfg.vhd|
 Edemux5
-R25
+R27
 R4
 R5
 dRAM
@@ -295,8 +295,8 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/demux5.vhd|-quiet|-nologo|
 !s107 VHDL/demux5.vhd|
 Ademux5_behav
-Z27 DEx4 work 6 demux5 0 22 iC:5o@^>BU><B?FLXHekW3
-R24
+Z29 DEx4 work 6 demux5 0 22 iC:5o@^>BU><B?FLXHekW3
+R26
 R4
 R5
 8VHDL/demux5_arch.vhd
@@ -316,11 +316,11 @@ R8
 Cdemux5_demux5_behav_cfg
 ademux5_behav
 edemux5
-R24
+R26
 DAx4 work 6 demux5 12 demux5_behav 22 OM<;FQBGLk5093]I@FhbY3
 R4
 R5
-R27
+R29
 w1385577118
 dRAM
 8VHDL/demux5_demux5_behav_cfg.vhd
@@ -338,7 +338,7 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/demux5_demux5_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/demux5_demux5_behav_cfg.vhd|
 Edemux8_inv
-R25
+R27
 R4
 R5
 dRAM
@@ -358,8 +358,8 @@ R8
 !s107 VHDL/demux8_inv.vhd|
 Ademux8_inv_behav
 w1385585130
-Z28 DEx4 work 10 demux8_inv 0 22 eDe^OVzXRI4ei9eMg8FZJ0
-R24
+Z30 DEx4 work 10 demux8_inv 0 22 eDe^OVzXRI4ei9eMg8FZJ0
+R26
 R4
 R5
 8VHDL/demux8_inv_arch.vhd
@@ -379,13 +379,13 @@ R8
 Cdemux8_inv_demux8_inv_behav_cfg
 ademux8_inv_behav
 edemux8_inv
-R24
-DAx4 work 10 demux8_inv 16 demux8_inv_behav 22 Z_0><l[z^H=zf5fA9EJc^1
+R26
+DAx4 work 10 demux8_inv 16 demux8_inv_behav 22 XEM;IXLJLn[I]a8nWHf4L2
 R4
 R5
-R28
+R30
 w1385577132
-dRAM
+R22
 8VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
 FVHDL/demux8_inv_demux8_inv_behav_cfg.vhd
 l0
@@ -397,37 +397,37 @@ R7
 R8
 !s100 @cRz8I2Zd^FePD0DYJ_301
 !i10b 0
-!s108 1385577132.172308
+!s108 1385715330.215238
 !s90 -lower|-explicit|-work|work|VHDL/demux8_inv_demux8_inv_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/demux8_inv_demux8_inv_behav_cfg.vhd|
 Cextracted
-Z29 asr_if_tb_behav
-Z30 esr_if_tb
-Z31 DEx4 work 5 sr_if 0 22 zbBEO9B7W93z[[<nO^54S2
-R24
-DCx4 work 19 sr_if_extracted_cfg 0 22 NUR<>l<g]_VPFU=B2^mTH1
-Z32 DAx4 work 8 sr_if_tb 14 sr_if_tb_behav 22 dNCRH3^:0aVg1OaLlIia:1
+Z31 asr_if_tb_behav
+Z32 esr_if_tb
+Z33 DEx4 work 5 sr_if 0 22 zbBEO9B7W93z[[<nO^54S2
+R26
+DCx4 work 19 sr_if_extracted_cfg 0 22 EAoLFZ3lIc?bzF?k9:izL2
+Z34 DAx4 work 8 sr_if_tb 14 sr_if_tb_behav 22 YRQj9CfJzc_@00cgRK5DW1
 R4
 R5
-Z33 DEx4 work 8 sr_if_tb 0 22 ^=7=z0Mh54GTECc?[geUO0
+Z35 DEx4 work 8 sr_if_tb 0 22 Y:5fJzOzCFf][?925Eo8G0
 w1385580802
-dRAM
+R22
 8VHDL/extracted.vhd
 FVHDL/extracted.vhd
 l0
 L1
-V@QTQmRdTimiP18]U8IX^F1
+VIf0;@;:<hjRmdLoa3aS873
 R6
 32
-R7
+R23
 R8
 !s100 CC`IK_IFUdS=W_mfa3H@>0
 !i10b 0
-!s108 1385580802.446517
-!s90 -lower|-explicit|-work|work|VHDL/extracted.vhd|-quiet|-nologo|
+!s108 1385715523.764137
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/extracted.vhd|
 !s107 VHDL/extracted.vhd|
 Emux5
-R25
+R27
 R4
 R5
 dRAM
@@ -446,8 +446,8 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/mux5.vhd|-quiet|-nologo|
 !s107 VHDL/mux5.vhd|
 Amux5_behav
-Z34 DEx4 work 4 mux5 0 22 jz1h3Z?[0e]V=ID0HDNaM3
-R24
+Z36 DEx4 work 4 mux5 0 22 jz1h3Z?[0e]V=ID0HDNaM3
+R26
 R4
 R5
 8VHDL/mux5_arch.vhd
@@ -467,11 +467,11 @@ R8
 Cmux5_mux5_behav_cfg
 amux5_behav
 emux5
-R24
+R26
 DAx4 work 4 mux5 10 mux5_behav 22 UD5=J9Rb>2mk]5^X^3SR`2
 R4
 R5
-R34
+R36
 w1385577138
 dRAM
 8VHDL/mux5_mux5_behav_cfg.vhd
@@ -489,17 +489,17 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/mux5_mux5_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/mux5_mux5_behav_cfg.vhd|
 Csim
-R29
-R30
 R31
-R24
-DCx4 work 21 sr_if_sr_if_behav_cfg 0 22 _V6CVee2i>NeXQWMzkY]11
 R32
+R33
+R26
+DCx4 work 21 sr_if_sr_if_behav_cfg 0 22 _V6CVee2i>NeXQWMzkY]11
+R34
 R4
 R5
-R33
+R35
 w1385580812
-dRAM
+R22
 8VHDL/sim.vhd
 FVHDL/sim.vhd
 l0
@@ -511,12 +511,12 @@ R7
 R8
 !s100 >PQ3gz:K1o?3IRYM1DS6O1
 !i10b 0
-!s108 1385580812.170924
+!s108 1385715524.905000
 !s90 -lower|-explicit|-work|work|VHDL/sim.vhd|-quiet|-nologo|
 !s107 VHDL/sim.vhd|
 Esr_if
 w1385489146
-R24
+R26
 R4
 R5
 dRAM
@@ -536,9 +536,9 @@ R8
 !s107 VHDL/interface.vhd|
 Aextracted
 w1385593392
-R24
-R31
-Z35 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
+R26
+R33
+Z37 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
 R4
 R5
 8VHDL/sr_if_EXTR.vhd
@@ -557,8 +557,8 @@ R8
 !s107 VHDL/sr_if_EXTR.vhd|
 Asr_if_behav
 w1385578685
-R31
-R24
+R33
+R26
 R4
 R5
 8VHDL/interface_arch.vhd
@@ -577,52 +577,54 @@ R8
 !s107 VHDL/interface_arch.vhd|
 Csr_if_extracted_cfg
 aextracted
-Z36 esr_if
+Z38 esr_if
+DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
+DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
+R12
+DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
+DEx8 cellslib 5 buf40 0 22 fYh_:jK1MnK`S6jg]1d]e0
+R11
+R13
 DEx8 cellslib 5 dfa11 0 22 iNebJXX9fMW>MEo3akSV31
 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
-DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
-DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
-R12
-R13
 R14
-R11
 R10
-DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
-R35
-DAx4 work 5 sr_if 9 extracted 22 Sd3f`ak=;f56^HI[dNS_A1
-R24
+DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
+R37
+DAx4 work 5 sr_if 9 extracted 22 >cT0XZb]lk=5Za9896>n81
+R26
 R4
 R5
-R31
+R33
 w1385580614
-dRAM
+R22
 8VHDL/sr_if_extracted_cfg.vhd
 FVHDL/sr_if_extracted_cfg.vhd
 l0
 L1
-VNUR<>l<g]_VPFU=B2^mTH1
+VEAoLFZ3lIc?bzF?k9:izL2
 R6
 32
-R7
+R23
 R8
 !s100 UXAio5Wj9=R]mn^9S>>2l2
 !i10b 0
-!s108 1385580614.730630
-!s90 -lower|-explicit|-work|work|VHDL/sr_if_extracted_cfg.vhd|-quiet|-nologo|
+!s108 1385715329.002664
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/sr_if_extracted_cfg.vhd|
 !s107 VHDL/sr_if_extracted_cfg.vhd|
 Csr_if_sr_if_behav_cfg
 asr_if_behav
+R38
+R29
 R36
-R27
-R34
-Z37 DEx4 work 8 sr_tower 0 22 TFM`Fio;Uk4JKH^lSXkhX2
+Z39 DEx4 work 8 sr_tower 0 22 TFM`Fio;Uk4JKH^lSXkhX2
 DCx4 work 23 demux5_demux5_behav_cfg 0 22 2B8;<ch>6M0jBNV];GNbR2
 DCx4 work 19 mux5_mux5_behav_cfg 0 22 UgR^Fm]eSTY`z3X1@Q81;2
 DAx4 work 5 sr_if 11 sr_if_behav 22 ZMo_0[9CA`==z0BG;z`g@2
-R24
+R26
 R4
 R5
-R31
+R33
 w1385577220
 dRAM
 8VHDL/sr_if_sr_if_behav_cfg.vhd
@@ -640,43 +642,43 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/sr_if_sr_if_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/sr_if_sr_if_behav_cfg.vhd|
 Esr_if_tb
-Z38 w1385595574
+Z40 w1385715507
 R4
 R5
-dRAM
-Z39 8VHDL/interface_tb.vhd
-Z40 FVHDL/interface_tb.vhd
+R22
+Z41 8VHDL/interface_tb.vhd
+Z42 FVHDL/interface_tb.vhd
 l0
 L4
-V5`Q50Y8UD@5OR=LIT4JUG0
+VY:5fJzOzCFf][?925Eo8G0
 R6
 32
-Z41 !s108 1385595575.030941
-Z42 !s90 -lower|-explicit|-work|work|VHDL/interface_tb.vhd|-quiet|-nologo|
-Z43 !s107 VHDL/interface_tb.vhd|
+Z43 !s108 1385715513.655317
+Z44 !s90 -lower|-explicit|-work|work|VHDL/interface_tb.vhd|-quiet|-nologo|
+Z45 !s107 VHDL/interface_tb.vhd|
 R7
 R8
-!s100 jFEX07J^[2CZYZk^f4]E30
+!s100 g8<kUC3PZ=o5F9^Ll=Nc=2
 !i10b 1
 Asr_if_tb_behav
 R4
 R5
-DEx4 work 8 sr_if_tb 0 22 5`Q50Y8UD@5OR=LIT4JUG0
+R35
 l21
 L9
-V6PkfTWJU1?HLneh[H]ZN50
+VYRQj9CfJzc_@00cgRK5DW1
 R6
 32
-R41
-R42
 R43
+R44
+R45
 R7
 R8
-!s100 V4?]ni]GR<NPK_UkkPiec3
+!s100 VIEY23M5k7@h5TeYZ?RWR3
 !i10b 1
 Esr_tower
-R22
 R24
+R26
 R4
 R5
 dRAM
@@ -695,9 +697,9 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/tower.vhd|-quiet|-nologo|
 !s107 VHDL/tower.vhd|
 Asr_tower_behav
-R25
-R37
-R24
+R27
+R39
+R26
 R4
 R5
 8VHDL/tower_arch.vhd
@@ -717,20 +719,20 @@ R8
 Csr_tower_sr_tower_behav_cfg
 asr_tower_behav
 esr_tower
-R26
-R23
 R28
+R25
+R30
 R9
 DCx4 work 31 demux4_inv_demux4_inv_behav_cfg 0 22 P@abi_@KTAhef:m8]MQX40
 DCx4 work 19 dec8_dec8_behav_cfg 0 22 l^Gm2PYlNLgBSTa5Q5kAz3
 DCx4 work 31 demux8_inv_demux8_inv_behav_cfg 0 22 i0fAmWR9FeGQaY189Nz7F2
 DAx4 work 8 sr_tower 14 sr_tower_behav 22 QnD1A[]20]>_KMb:bV2e`0
-R24
+R26
 R4
 R5
-R37
+R39
 w1385577162
-dRAM
+R22
 8VHDL/sr_tower_sr_tower_behav_cfg.vhd
 FVHDL/sr_tower_sr_tower_behav_cfg.vhd
 l0
@@ -742,24 +744,24 @@ R7
 R8
 !s100 jW=Zan39nASBoj2RzKofa1
 !i10b 0
-!s108 1385577162.404666
+!s108 1385715332.990652
 !s90 -lower|-explicit|-work|work|VHDL/sr_tower_sr_tower_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/sr_tower_sr_tower_behav_cfg.vhd|
 Esr_tower_tb
-Z44 w1385582428
+Z46 w1385582428
 R4
 R5
 dRAM
-Z45 8VHDL/tower_tb.vhd
-Z46 FVHDL/tower_tb.vhd
+Z47 8VHDL/tower_tb.vhd
+Z48 FVHDL/tower_tb.vhd
 l0
 L4
 V7ccmiz>Z2>ZhbCIe6VZz;3
 R6
 32
-Z47 !s108 1385582428.953713
-Z48 !s90 -lower|-explicit|-work|work|VHDL/tower_tb.vhd|-quiet|-nologo|
-Z49 !s107 VHDL/tower_tb.vhd|
+Z49 !s108 1385582428.953713
+Z50 !s90 -lower|-explicit|-work|work|VHDL/tower_tb.vhd|-quiet|-nologo|
+Z51 !s107 VHDL/tower_tb.vhd|
 R7
 R8
 !s100 OPkJ?F<?z<CT]i0Uo_J4X1
@@ -767,15 +769,15 @@ R8
 Asr_tower_tb_behav
 R4
 R5
-Z50 DEx4 work 11 sr_tower_tb 0 22 7ccmiz>Z2>ZhbCIe6VZz;3
+Z52 DEx4 work 11 sr_tower_tb 0 22 7ccmiz>Z2>ZhbCIe6VZz;3
 l21
 L9
 VeUO37WJLT0bLD<j9S0;6S2
 R6
 32
-R47
-R48
 R49
+R50
+R51
 R7
 R8
 !s100 UPPzjk2ffaNcZK]h0`MBD2
@@ -783,15 +785,15 @@ R8
 Csr_tower_tb_sr_tower_tb_behav_cfg
 asr_tower_tb_behav
 esr_tower_tb
-R37
-R24
+R39
+R26
 DCx4 work 27 sr_tower_sr_tower_behav_cfg 0 22 4JYhf=lHB>1z[9:B8V]DO2
-DAx4 work 11 sr_tower_tb 17 sr_tower_tb_behav 22 2leaDKk<RacbgLJfEca=>3
+DAx4 work 11 sr_tower_tb 17 sr_tower_tb_behav 22 eUO37WJLT0bLD<j9S0;6S2
 R4
 R5
-R50
+R52
 w1385577168
-dRAM
+dRAM_GWTF_PROJECT
 8VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
 FVHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
 l0
@@ -803,6 +805,6 @@ R7
 R8
 !s100 FazTWZEWV4ilKo5]fB5`21
 !i10b 0
-!s108 1385577168.996321
+!s108 1385715335.782738
 !s90 -lower|-explicit|-work|work|VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd|
