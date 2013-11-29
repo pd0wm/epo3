@@ -43,9 +43,9 @@ begin
 				green_next <= '0';
 				blue_next <= '1';
 			else
-				red_next <= '1';
-				green_next <= '1';
-				blue_next <= '1';
+				red_next <= '0';
+				green_next <= '0';
+				blue_next <= '0';
 			end if;
 		else
 			red_next <= '0';
