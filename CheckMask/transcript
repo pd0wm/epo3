@@ -7,31 +7,17 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work checkmask_tb_behaviour_ext_fg 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.checkmask_extracted_cfg because work.checkmask(extracted) has changed.
-# ** Warning: (vopt-12) Recompile work.checkmask_tb_behaviour_ext_fg after work.checkmask_extracted_cfg is recompiled.
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work checkmask_tb_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading cellslib.cellslib_decl_pack
-# Loading work.checkmask_tb_behaviour_ext_fg#1
+# Loading ieee.numeric_std(body)
+# Loading work.checkmask_tb_behaviour_cfg#1
 # Loading work.checkmask_tb(checkmask_tb_behaviour)#1
-# Loading work.checkmask_extracted_cfg#1
-# Loading work.checkmask(extracted)#1
-# Loading cellslib.iv110(dataflow)#1
-# Loading cellslib.tinv10(dataflow)#1
-# Loading cellslib.dfr11(dataflow)#1
-# Loading cellslib.ex210(dataflow)#1
-# Loading cellslib.no210(dataflow)#1
-# Loading cellslib.na210(dataflow)#1
+# Loading work.checkmask_behaviour_cfg#1
+# Loading work.checkmask(checkmask_behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-add wave -position insertpoint sim:/checkmask_tb/checkmask_port/*
-run
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /checkmask_tb/checkmask_port/state_reg_1_inst
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /checkmask_tb/checkmask_port/state_reg_0_inst
 run
 run
 run
@@ -39,4 +25,22 @@ run
 run
 run
 run
-# Causality operation skipped due to absense of debug database file
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

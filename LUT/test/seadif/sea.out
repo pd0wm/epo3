@@ -1,0 +1,42 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'piece_lut' ------
+WARNING: Imported nelsis cell 'dfr11' is younger than its corresponding
+         seadif cell $dummy(dfr11(dfr11(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na310' is younger than its corresponding
+         seadif cell $dummy(na310(na310(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na210' is younger than its corresponding
+         seadif cell $dummy(na210(na210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'ex210' is younger than its corresponding
+         seadif cell $dummy(ex210(ex210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'iv110' is younger than its corresponding
+         seadif cell $dummy(iv110(iv110(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no210' is younger than its corresponding
+         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no310' is younger than its corresponding
+         seadif cell $dummy(no310(no310(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+------ reading nelsis circuit-cell 'piece_lut' ------
+WARNING: Zero terminal net: 'mask_6_port' (cell 'piece_lut')
+WARNING: Zero terminal net: 'mask_5_port' (cell 'piece_lut')
+WARNING: Zero terminal net: 'mask_4_port' (cell 'piece_lut')
+WARNING: Zero terminal net: 'mask_3_port' (cell 'piece_lut')
+WARNING: Zero terminal net: 'mask_2_port' (cell 'piece_lut')
+WARNING: many (7) useless nets were removed (printed only 5)
+------ input check seems good enough: calling placer ------
+calling program: madonna -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -x 54 -y 111 -ex piece_lut 
+------ madonna successful ------
+------ calling router ------
+calling program: trout -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmppiece_lut2483' ------
+calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut2483 
+------ sea: task completed ------
