@@ -12,12 +12,13 @@ entity piece_lut is
 		y           : in  std_logic_vector(4 downto 0);
 		rot         : in  std_logic_vector(1 downto 0);
 		piece_type  : in  std_logic_vector(2 downto 0);
+		next_piece  : in  std_logic_vector;
 		ready       : out std_logic;
 		error       : out std_logic;
 		start       : in  std_logic;
 
-		rom_addr    : out std_logic_vector(7 downto 0);
-		rom_data    : in  std_logic_vector(15 downto 0)
+		rom_addr    : out std_logic_vector(6 downto 0);
+		rom_data    : in  std_logic_vector(3 downto 0)
 	);
 end piece_lut;
 
