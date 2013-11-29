@@ -31,15 +31,15 @@ begin
 	clk <= '1' after 0 ns,
 		   '0' after 10 ns when clk /= '0' else '1' after 10 ns;
 	rst <= '1' after 0 ns, '0' after 30 ns,
-	       '1' after 950 ns, '0' after 970 ns,
-	       '1' after 1950 ns, '0' after 1970 ns;
+	       '0' after 950 ns, '0' after 970 ns,
+	       '0' after 1950 ns, '0' after 1970 ns;
 	start <= '0' after 0 ns,
 	         '1' after 50 ns,
-	         '0' after 70 ns,
+	         '0' after 970 ns,
 	         '1' after 990 ns,
-	         '0' after 1010 ns,
+	         '0' after 1910 ns,
 	         '1' after 1990 ns,
-	         '0' after 2010 ns;
+	         '0' after 2910 ns;
 	mask <= "01101100" after 50 ns,
 	          "00001111" after 990 ns,
 	          "01100110" after 1990 ns;
@@ -49,6 +49,12 @@ begin
 	
 	
 end check_mask_tb_behaviour;
+
+
+
+
+
+
 
 
 
