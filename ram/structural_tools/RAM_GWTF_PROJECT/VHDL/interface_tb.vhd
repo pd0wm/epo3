@@ -14,9 +14,9 @@ architecture sr_if_tb_behav of sr_if_tb is
 			 we           : in  std_logic;
 			 addr1, addr2 : in  std_logic_vector(7 downto 0));
 	end component sr_if;
-	
-	signal clk, rst   : std_logic;
-	signal addr1, addr2       : std_logic_vector(7 downto 0);
+
+	signal clk, rst         : std_logic;
+	signal addr1, addr2     : std_logic_vector(7 downto 0);
 	signal do1, do2, we, di : std_logic;
 begin
 	uut : sr_if
@@ -41,80 +41,62 @@ begin
 	begin
 		rst <= '1';
 		we  <= '0';
-		wait for clk_period*2 - initial_offset;
+		wait for clk_period * 2 - initial_offset;
 		rst <= '0';
 
-		-- First read some stuff
-		we   <= '0';
+		addr2 <= "00001010";
+
+		we    <= '0';
+		di    <= '0';
 		addr1 <= "00000010";
-		di   <= '0';
-		
-		addr2 <= "00000010";
-		wait for clk_period * 4;
-
-		-- Write
-		we   <= '1';
+		wait for clk_period;
+		we    <= '1';
+		di    <= '0';
 		addr1 <= "00000010";
-		di   <= '1';
+		wait for clk_period;
 		
-		addr2 <= "00000010";
-		wait for clk_period * 4;
-
-		-- Read again
-		we   <= '0';
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "00001010";
+		wait for clk_period;
+		we    <= '1';
+		di    <= '0';
+		addr1 <= "00001010";
+		wait for clk_period;
+		
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "01101010";
+		wait for clk_period;
+		we    <= '1';
+		di    <= '0';
+		addr1 <= "01101010";
+		wait for clk_period;
+		we    <= '1';
+		di    <= '0';
+		addr1 <= "01101010";
+		wait for clk_period;
+		
+		we    <= '0';
 		addr1 <= "00000010";
-		di   <= '0';
+		wait for clk_period;
+		we    <= '0';
+		addr1 <= "00001010";
+		wait for clk_period;
+		we    <= '0';
+		addr1 <= "01101010";
+		wait for clk_period;
 		
+		we    <= '0';
 		addr2 <= "00000010";
-		wait for clk_period * 4;
--- Cycle 2
-		-- First read some stuff
-		we   <= '0';
-		addr1 <= "10000000";
-		di   <= '0';
-		
-		addr2 <= "00000010";
-		wait for clk_period * 4;
-
-		-- Write
-		we   <= '1';
-		addr1 <= "10000000";
-		di   <= '1';
-		
-		addr2 <= "00000010";
-		wait for clk_period * 4;
-
-		-- Read again
-		we   <= '0';
-		addr1 <= "10000000";
-		di   <= '0';
-		
-		addr2 <= "00000010";
-		wait for clk_period * 4;
--- Tempo writing
-		-- First read some stuff
-		we   <= '0';
-		addr1 <= "10010101";
-		di   <= '0';
-		
-		addr2 <= "10010101";
+		wait for clk_period;
+		we    <= '0';
+		addr2 <= "00001010";
+		wait for clk_period;
+		we    <= '0';
+		addr2 <= "01101010";
 		wait for clk_period;
 
-		-- Write
-		we   <= '1';
-		addr1 <= "10010101";
-		di   <= '1';
-		
-		addr2 <= "10010101";
-		wait for clk_period;
-
-		-- Read again
-		we   <= '0';
-		addr1 <= "10010101";
-		di   <= '0';
-		
-		addr2 <= "10011111";
-		wait for clk_period;
 	end process;
 end;
 
