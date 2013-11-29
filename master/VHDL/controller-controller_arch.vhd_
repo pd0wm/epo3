@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, spaxe_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, drop_overflow, rotate, key, lock_timer_start, drop_timer_reset, game_over);
+	is (reset, init, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, spaxe_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, drop_overflow, rotate, key, lock_timer_start, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece        : std_logic_vector(2 downto 0);
@@ -286,7 +286,7 @@ begin
 			when key =>
 				if (inputs = "00000000") then
 					-- no input
-					next_state <= drop_timer_reset;
+					next_state <= drop_timer_reset_1;
 				else
 					next_state <= rotate;
 				end if;
@@ -302,9 +302,15 @@ begin
 			when kernel_panic =>
 				-- Kill it!
 				next_state <= game_over;
+
+			when others =>
+				null;
 		end case;
 	end process;
 end;
+
+
+
 
 
 
