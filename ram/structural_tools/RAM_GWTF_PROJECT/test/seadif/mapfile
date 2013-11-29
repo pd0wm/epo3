@@ -1,5 +1,5 @@
 # This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
-# Written on: Thu Nov 28 00:29:12 2013
+# Written on: Fri Nov 29 09:23:15 2013
 # You can edit this file to control the mapping process
 # Each line contains the name of a nelsis cell and its corresponding seadif cell
 # The status field may contain the following values:
@@ -10,12 +10,12 @@
 #    N E L S I S     |                   S E A D I F                     | nelsis->sdf sdf->nelsis
 # view    cellname   | library      function     circuit      layout     |   status      status
 #--------------------+---------------------------------------------------+------------------------
- layout   demux5       test         demux5       demux5       demux5       not_written not_written
- layout   buf40        g_digilib5_99 buf40        buf40        buf40        not_written not_written
- layout   mux5         test         mux5         mux5         mux5         not_written not_written
  layout   dfa11        g_digilib5_99 dfa11        dfa11        dfa11        not_written not_written
- layout   sr_tower     test         sr_tower     sr_tower     sr_tower     not_written not_written
- layout   Tmpsr_if16044 test         sr_if        sr_if        Tmp_Cell_    not_written written
+ layout   buf40        g_digilib5_99 buf40        buf40        buf40        not_written not_written
+ layout   mux5         test2        mux5         mux5         mux5         not_written not_written
+ layout   demux5       test2        demux5       demux5       demux5       not_written not_written
+ layout   sr_tower     test2        sr_tower     sr_tower     sr_tower     not_written not_written
+ layout   Tmpsr_if2978 test2        sr_if        sr_if        Tmp_Cell_    not_written written
  circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
  circuit  res          primitives   res          res          $dummy       primitive   primitive
  circuit  penh         primitives   penh         penh         $dummy       primitive   primitive

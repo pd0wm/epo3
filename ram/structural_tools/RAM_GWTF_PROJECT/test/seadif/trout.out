@@ -1,10 +1,10 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ reading placement 'Tmp_Cell_(sr_if(sr_if(test2)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Thu Nov 28 00:29:11 2013
+------ routing started Fri Nov 29 09:23:13 2013
  46 nets have to be routed.
 Routing net 'addr1_7_0_7' (2/2): .b OK!
 Routing net 'addr1_7_0_6' (2/2): .b OK!
@@ -57,10 +57,10 @@ READY
 Total number of nets:                 46 (100% completion)
 Total length of routed wires:         7622 grids = 67.074 mm
 No. of transistors (total / used):    20580/15616 = 75.88 %
-CPU-time consumption:                 0.33 sec.
-Elapsed time during routing:          0.65 sec. (63.08 % of cpu)
+CPU-time consumption:                 0.40 sec.
+Elapsed time during routing:          0.64 sec. (78.12 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(sr_if(sr_if(test)))' ------
------- Trout: task completed on Thu Nov 28 00:29:12 2013
+------ Writing 'Tmp_Cell_(sr_if(sr_if(test2)))' ------
+------ Trout: task completed on Fri Nov 29 09:23:15 2013
  terminate
