@@ -9,6 +9,7 @@
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work piece_lut_tb_behaviour_cfg 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-13) Recompile work.piece_lut_tb_behaviour_cfg because work.piece_lut_tb(piece_lut_tb_behaviour) has changed.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -27,3 +28,11 @@ run
 #    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+run
+run
+run
+run
+run
+run
+run
+run

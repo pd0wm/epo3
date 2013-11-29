@@ -35,8 +35,8 @@ begin
 		   '0' after 10 ns when clk /= '0' else '1' after 10 ns;
 	rst <= '1' after 0 ns, '0' after 30 ns;
 	rot <= "01" after 0 ns;
-	y <= "1010" after 0 ns; --10
-	x <= "110"	after 0 ns;  --6
+	y <= "1110" after 0 ns; --14
+	x <= "011"	after 0 ns;  --3
 	start <= '0' after 0 ns, 
 	         '1' after 110 ns, 
 	         '0' after 130 ns,
@@ -59,6 +59,9 @@ begin
 		 "00" after 690 ns;
 	piece_type <= "011" after 0 ns;
 end piece_lut_tb_behaviour;
+
+
+
 
 
 
