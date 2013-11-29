@@ -1,5 +1,34 @@
 Library vendor : Model Technology
 Maximum unnamed designs : 3
+ENTITY controller
+    Source modified time: Fri Nov 29 09:49:07 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/controller.vhd
+    Source file: VHDL/controller.vhd
+    Start location: VHDL/controller.vhd:4
+    Version string: kVkKfe4dNfi@J7RK=oEl[1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY controller_arch
+    Source modified time: Fri Nov 29 09:49:18 2013
+    Depends on: E work controller kVkKfe4dNfi@J7RK=oEl[1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/controller-controller_arch.vhd
+    Source file: VHDL/controller-controller_arch.vhd
+    Start location: VHDL/controller-controller_arch.vhd:4
+    Version string: ;6JaV4m>12c4Sk0PKT_500
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
 ENTITY depiece_simple
     Source modified time: Tue Nov 26 19:33:31 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -19,7 +48,6 @@ ENTITY depiece_simple
     Depends on: E work depiece_simple BX8:K1Ah2_`BIU;`7nFo40
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
     HDL source file: VHDL/depiece_simple-depiece_simple_arch.vhd
     Source file: VHDL/depiece_simple-depiece_simple_arch.vhd
     Start location: VHDL/depiece_simple-depiece_simple_arch.vhd:4
@@ -28,6 +56,7 @@ ENTITY depiece_simple
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Source directory: master
     Debug Symbol file exists
 ENTITY fake_ram
     Source modified time: Tue Nov 26 16:42:00 2013
