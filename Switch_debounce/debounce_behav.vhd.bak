@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 
 architecture behaviour of debounce is
-type button_state is (uit,links, links2, rechts, rechts2, beneden, beneden2, hdrop, hdrop2, rotatel, rotatel2, rotater, rotater2);
+type button_state is (uit,links, links2, rechts, rechts2, beneden, beneden2, hdrop, hdrop2, rotatel, rotatel2, rotater, rotarer2);
 signal count, new_count: unsigned (6 downto 0);
 signal rst_sig: std_logic;
 signal state, new_state :button_state;
