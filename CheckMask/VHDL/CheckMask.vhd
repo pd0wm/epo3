@@ -1,14 +1,33 @@
-library IEEE;
-use IEEE.std_logic_1164.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+entity check_mask is
+        port(
+                clk : in std_logic;
+                rst : in std_logic;
 
-entity checkmask is
-   port(clk				  :IN		 std_logic;
-		  reset		  :IN		 std_logic;
-		  data     :IN   std_logic;
-		  start    :IN   std_logic;
-        ram_in   :IN   std_logic_vector(7 downto 0);
-        write    :OUT  std_logic;
-        ready    :OUT  std_logic;
-        empty    :OUT  std_logic;
-        ram_out  :OUT  std_logic_vector(7 downto 0));
-end checkmask;
+                mask : in std_logic_vector(7 downto 0);
+                mask_select : out std_logic_vector(1 downto 0);
+
+                ready : out std_logic;
+                empty : out std_logic;
+
+                start : in std_logic;
+
+                write : out std_logic;
+                addr : out std_logic_vector(7 downto 0);
+                data_in : in std_logic;
+		data_out : out std_logic
+        );
+end check_mask;
+
+
+
+
+
+
+
+
+
+
+
+

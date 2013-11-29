@@ -88,11 +88,10 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name VHDL_FILE ../VHDL/depiece_simple.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/depiece_simple-depiece_simple_arch.vhd"
-set_global_assignment -name VHDL_FILE ../VHDL/ram_simple_ram_simple_arch_cfg.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/ram_simple.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/ram_simple-ram_simple_arch.vhd"
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SEARCH_PATH /data/public/common/software/opprog/sim_libs/CellsLib
+set_global_assignment -name VHDL_FILE /data/public/common/software/opprog/vhdl/cells.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_vga_arch_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers_arch.vhd
@@ -119,9 +118,43 @@ set_global_assignment -name VHDL_FILE ../VHDL/vga_counter_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_counter.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/tower_tb.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/tower_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/tower.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/sr_tower_sr_tower_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/sr_if_sr_if_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/sim.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/params.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/fake_ram.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/fake_ram-fake_ram_arch.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/mux5_mux5_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/mux5_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/mux5.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/interface_tb.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/interface_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/interface.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/depiece_simple.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/depiece_simple-depiece_simple_arch.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux8_inv_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux8_inv.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux5_demux5_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux5_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux5.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux4_inv_demux4_inv_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux4_inv_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/demux4_inv.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/dec8_dec8_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/dec8_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/dec8.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/controller_tb.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/controller_tb-controller_tb_arch.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/controller.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/controller-controller_arch.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/bit4_tb.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/bit4_bit4_behav_cfg.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/bit4.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/bit4-bit4_behav.vhd"
 set_global_assignment -name BDF_FILE top_de2.bdf
 set_global_assignment -name VHDL_FILE pre_vga_dac.vhd
 set_global_assignment -name VHDL_FILE gen6mhz.vhd

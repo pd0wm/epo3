@@ -13,7 +13,7 @@ entity depiece_simple is
 		start      : in    std_logic;
 
 		write      : out   std_logic;
-		addr       : out   std_logic_vector(6 downto 0);
+		addr       : out   std_logic_vector(7 downto 0);
 		data_out   : out std_logic
 	);
 end depiece_simple;

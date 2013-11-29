@@ -13,28 +13,28 @@ begin
 		case write_state is
 			when "000" =>
 				write    <= '1';
-				addr     <= "0000001";
+				addr     <= "00000001";
 				data_out <= '1';
 				next_write_state <= "001";
 			when "001" =>
 				write    <= '1';
-				addr     <= "0000010";
+				addr     <= "00000010";
 				data_out <= '1';
 				next_write_state <= "010";
 			when "010" =>
 				write    <= '1';
-				addr     <= "0000011";
+				addr     <= "00000011";
 				data_out <= '1';
 				next_write_state <= "011";
 			when "011" =>
 				write    <= '1';
-				addr     <= "0001010";
+				addr     <= "00001010";
 				data_out <= '1';
 				next_write_state <= "111";
 			when others =>
 				next_write_state <= "111";
 				write    <= '0';
-				addr     <= "0000000";
+				addr     <= "00000000";
 				data_out <= '0';
 		end case;	
 	end process;
