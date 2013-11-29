@@ -7,11 +7,19 @@ LIB_IEEE = /data/public/common/software/modeltech/10.1b/modeltech/linux/../ieee
 LIB_WORK = work
 
 # Define path to each design unit
-CELLSLIB__dfr11 = $(LIB_CELLSLIB)/dfr11/_primary.dat
-CELLSLIB__mu111 = $(LIB_CELLSLIB)/mu111/_primary.dat
-CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
-CELLSLIB__mu210 = $(LIB_CELLSLIB)/mu210/_primary.dat
+CELLSLIB__cellslib_decl_pack = $(LIB_CELLSLIB)/cellslib_decl_pack/_primary.dat
+CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
 CELLSLIB__tbuf10 = $(LIB_CELLSLIB)/tbuf10/_primary.dat
+CELLSLIB__dfr11 = $(LIB_CELLSLIB)/dfr11/_primary.dat
+CELLSLIB__na310 = $(LIB_CELLSLIB)/na310/_primary.dat
+CELLSLIB__dfa11 = $(LIB_CELLSLIB)/dfa11/_primary.dat
+CELLSLIB__mu111 = $(LIB_CELLSLIB)/mu111/_primary.dat
+CELLSLIB__mu210 = $(LIB_CELLSLIB)/mu210/_primary.dat
+CELLSLIB__buf40 = $(LIB_CELLSLIB)/buf40/_primary.dat
+CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
+CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
+CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
+CELLSLIB__no310 = $(LIB_CELLSLIB)/no310/_primary.dat
 IEEE__std_logic_1164 = $(LIB_IEEE)/std_logic_1164/_primary.dat
 STD__textio = $(LIB_STD)/textio/_primary.dat
 IEEE__numeric_std = $(LIB_IEEE)/numeric_std/_primary.dat
@@ -21,15 +29,18 @@ WORK__sr_tower_tb = $(LIB_WORK)/sr_tower_tb/_primary.dat
 WORK__sr_tower_sr_tower_behav_cfg = $(LIB_WORK)/sr_tower_sr_tower_behav_cfg/_primary.dat
 WORK__sr_tower__sr_tower_behav = $(LIB_WORK)/sr_tower/sr_tower_behav.dat
 WORK__sr_tower = $(LIB_WORK)/sr_tower/_primary.dat
-WORK__sr_if_tb_sr_if_tb_behav_cfg = $(LIB_WORK)/sr_if_tb_sr_if_tb_behav_cfg/_primary.dat
 WORK__sr_if_tb__sr_if_tb_behav = $(LIB_WORK)/sr_if_tb/sr_if_tb_behav.dat
 WORK__sr_if_tb = $(LIB_WORK)/sr_if_tb/_primary.dat
 WORK__sr_if_sr_if_behav_cfg = $(LIB_WORK)/sr_if_sr_if_behav_cfg/_primary.dat
+WORK__sr_if_extracted_cfg = $(LIB_WORK)/sr_if_extracted_cfg/_primary.dat
 WORK__sr_if__sr_if_behav = $(LIB_WORK)/sr_if/sr_if_behav.dat
+WORK__sr_if__extracted = $(LIB_WORK)/sr_if/extracted.dat
 WORK__sr_if = $(LIB_WORK)/sr_if/_primary.dat
+WORK__sim = $(LIB_WORK)/sim/_primary.dat
 WORK__mux5_mux5_behav_cfg = $(LIB_WORK)/mux5_mux5_behav_cfg/_primary.dat
 WORK__mux5__mux5_behav = $(LIB_WORK)/mux5/mux5_behav.dat
 WORK__mux5 = $(LIB_WORK)/mux5/_primary.dat
+WORK__extracted = $(LIB_WORK)/extracted/_primary.dat
 WORK__demux8_inv_demux8_inv_behav_cfg = $(LIB_WORK)/demux8_inv_demux8_inv_behav_cfg/_primary.dat
 WORK__demux8_inv__demux8_inv_behav = $(LIB_WORK)/demux8_inv/demux8_inv_behav.dat
 WORK__demux8_inv = $(LIB_WORK)/demux8_inv/_primary.dat
@@ -59,15 +70,18 @@ whole_library :     $(WORK__sr_tower_tb_sr_tower_tb_behav_cfg) \
     $(WORK__sr_tower_sr_tower_behav_cfg) \
     $(WORK__sr_tower__sr_tower_behav) \
     $(WORK__sr_tower) \
-    $(WORK__sr_if_tb_sr_if_tb_behav_cfg) \
     $(WORK__sr_if_tb__sr_if_tb_behav) \
     $(WORK__sr_if_tb) \
     $(WORK__sr_if_sr_if_behav_cfg) \
+    $(WORK__sr_if_extracted_cfg) \
     $(WORK__sr_if__sr_if_behav) \
+    $(WORK__sr_if__extracted) \
     $(WORK__sr_if) \
+    $(WORK__sim) \
     $(WORK__mux5_mux5_behav_cfg) \
     $(WORK__mux5__mux5_behav) \
     $(WORK__mux5) \
+    $(WORK__extracted) \
     $(WORK__demux8_inv_demux8_inv_behav_cfg) \
     $(WORK__demux8_inv__demux8_inv_behav) \
     $(WORK__demux8_inv) \
@@ -222,6 +236,17 @@ $(WORK__demux8_inv_demux8_inv_behav_cfg) : VHDL/demux8_inv_demux8_inv_behav_cfg.
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
 
+$(WORK__extracted) : VHDL/extracted.vhd \
+		$(WORK__sr_if) \
+		$(IEEE__numeric_std) \
+		$(WORK__sr_if_extracted_cfg) \
+		$(WORK__sr_if_tb__sr_if_tb_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__sr_if_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/extracted.vhd
+
 $(WORK__mux5) : VHDL/mux5.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
@@ -245,12 +270,32 @@ $(WORK__mux5_mux5_behav_cfg) : VHDL/mux5_mux5_behav_cfg.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/mux5_mux5_behav_cfg.vhd
 
+$(WORK__sim) : VHDL/sim.vhd \
+		$(WORK__sr_if) \
+		$(IEEE__numeric_std) \
+		$(WORK__sr_if_sr_if_behav_cfg) \
+		$(WORK__sr_if_tb__sr_if_tb_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__sr_if_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/sim.vhd
+
 $(WORK__sr_if) : VHDL/interface.vhd \
 		$(IEEE__numeric_std) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/interface.vhd
+
+$(WORK__sr_if__extracted) : VHDL/sr_if_EXTR.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__sr_if) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/sr_if_EXTR.vhd
 
 $(WORK__sr_if__sr_if_behav) : VHDL/interface_arch.vhd \
 		$(WORK__sr_if) \
@@ -259,6 +304,28 @@ $(WORK__sr_if__sr_if_behav) : VHDL/interface_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/interface_arch.vhd
+
+$(WORK__sr_if_extracted_cfg) : VHDL/sr_if_extracted_cfg.vhd \
+		$(CELLSLIB__no310) \
+		$(CELLSLIB__na210) \
+		$(CELLSLIB__no210) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__buf40) \
+		$(CELLSLIB__mu210) \
+		$(CELLSLIB__mu111) \
+		$(CELLSLIB__dfa11) \
+		$(CELLSLIB__na310) \
+		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__tbuf10) \
+		$(CELLSLIB__ex210) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__sr_if__extracted) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__sr_if)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/sr_if_extracted_cfg.vhd
 
 $(WORK__sr_if_sr_if_behav_cfg) : VHDL/sr_if_sr_if_behav_cfg.vhd \
 		$(WORK__demux5) \
@@ -280,17 +347,6 @@ $(WORK__sr_if_tb__sr_if_tb_behav) : VHDL/interface_tb.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/interface_tb.vhd
-
-$(WORK__sr_if_tb_sr_if_tb_behav_cfg) : VHDL/sr_if_tb_sr_if_tb_behav_cfg.vhd \
-		$(WORK__sr_if) \
-		$(IEEE__numeric_std) \
-		$(WORK__sr_if_sr_if_behav_cfg) \
-		$(WORK__sr_if_tb__sr_if_tb_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__sr_if_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/sr_if_tb_sr_if_tb_behav_cfg.vhd
 
 $(WORK__sr_tower) : VHDL/tower.vhd \
 		$(IEEE__numeric_std) \
