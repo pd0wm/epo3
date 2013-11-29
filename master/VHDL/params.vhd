@@ -14,12 +14,12 @@ package vga_params is
 	constant frame_bp : integer := 33; -- 33
 	
 	-- Field
-	constant field_start_x : integer := 24; -- 64
-	constant field_start_y : integer := 112; -- 112
-	constant field_width : integer := 32; -- 32
-	constant field_height : integer := 256; -- 256
-	constant field_block_width : integer := 4; -- 4
-	constant field_block_height : integer := 16; -- 16
+	constant field_start_x : integer := 16; -- 64
+	constant field_start_y : integer := 48; -- 112
+	constant field_width : integer := 48; -- 32
+	constant field_height : integer := 384; -- 256
+	constant field_block_width : integer := 6; -- 4
+	constant field_block_height : integer := 24; -- 16
 	
 	-- Resultant constants
 	constant offset_x : integer := line_fp + line_pw + line_bp;
@@ -29,13 +29,13 @@ package vga_params is
 	constant total_height : integer := height + offset_y;
 	
 	-- Variables length
-	constant pos_x_len : integer := 8;
-	constant pos_y_len : integer := 9;
+	constant pos_x_len : integer := 8; -- 8
+	constant pos_y_len : integer := 10; -- 10
 	
-	constant mem_addr_len : integer := 8;
+	constant mem_addr_len : integer := 8; -- 8
 	
-	constant counter_block_height_len : integer := 4;
-	constant counter_block_width_len : integer := 2;
+	constant counter_block_height_len : integer := 5; -- 4
+	constant counter_block_width_len : integer := 3; -- 2
 end vga_params;
 
 package body vga_params is
