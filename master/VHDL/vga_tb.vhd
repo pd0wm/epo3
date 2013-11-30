@@ -22,7 +22,7 @@ architecture vga_tb_arch of vga_tb is
 
 	signal clk, rst, data : std_logic;
 	signal h_sync, v_sync : std_logic;
-	signal ram_addr       : std_logic_vector(6 downto 0);
+	signal ram_addr       : std_logic_vector(7 downto 0);
 
 	signal r, g, b : std_logic;
 
@@ -55,7 +55,7 @@ begin
 			data <= '0';
 
 			if (
-				addr = 5 or addr = 6 or addr = 9 or addr = 10
+				addr = 5 or addr = 6 or addr = 9 or addr = 10 or addr = 128
 			) then
 				data <= '1';
 			end if;

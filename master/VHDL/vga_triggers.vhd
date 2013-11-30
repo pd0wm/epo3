@@ -14,7 +14,6 @@ entity vga_triggers is
 		new_line_out  : out std_logic;
 		new_frame_out : out std_logic;
 
-		end_line_out  : out std_logic;
 		end_frame_out : out std_logic
 	);
 end entity;
