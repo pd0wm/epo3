@@ -117,6 +117,29 @@ architecture vga_arch of vga is
 			 end_np_line_in     : in  std_logic;
 			 end_frame_in       : in  std_logic);
 	end component vga_np_trans_reset;
+
+	-- SCORE
+
+	component vga_score_check
+		port(clk                : in  std_logic;
+			 rst                : in  std_logic;
+			 pos_x_in           : in  std_logic_vector(pos_x_len - 1 downto 0);
+			 pos_y_in           : in  std_logic_vector(pos_y_len - 1 downto 0);
+			 in_score_out       : out std_logic;
+			 end_score_line_out : out std_logic);
+	end component vga_score_check;
+
+	signal in_score, end_score_line : std_logic;
+
+	component vga_score_trans
+		port(clk               : in  std_logic;
+			 rst               : in  std_logic;
+			 mem_addr_out      : out std_logic_vector(mem_addr_len - 1 downto 0);
+			 end_score_line_in : in  std_logic;
+			 end_frame_in      : in  std_logic);
+	end component vga_score_trans;
+
+	signal mem_addr_score : std_logic_vector(mem_addr_len - 1 downto 0);
 begin
 	counter : vga_counter
 		port map(clk       => clk,
@@ -207,12 +230,33 @@ begin
 			     in_np_out       => in_np,
 			     end_np_line_out => end_np_line);
 
+	-- SCORE
+
+	score_translation : vga_score_trans
+		port map(clk               => clk,
+			     rst               => rst,
+			     mem_addr_out      => mem_addr_score,
+			     end_score_line_in => end_score_line,
+			     end_frame_in      => end_frame);
+
+	score_check : vga_score_check
+		port map(clk                => clk,
+			     rst                => rst,
+			     pos_x_in           => pos_x,
+			     pos_y_in           => pos_y,
+			     in_score_out       => in_score,
+			     end_score_line_out => end_score_line);
+
 	mem_addr_multiplexer : process(mem_addr_field, mem_addr_np, in_np, in_field)
 	begin
+		mem_addr <= mem_addr_field;
+
 		if (in_np = '1') then
 			mem_addr <= mem_addr_np;
-		else
-			mem_addr <= mem_addr_field;
+		end if;
+
+		if (in_score = '1') then
+			mem_addr <= mem_addr_score;
 		end if;
 	end process;
 
