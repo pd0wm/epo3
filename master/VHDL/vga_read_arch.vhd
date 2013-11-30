@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use work.vga_params.all;
 
 architecture vga_read_behav of vga_read is
-	signal h_sync_buf, v_sync_buf, in_field_buf : std_logic;
+	signal h_sync_buf, v_sync_buf, in_field_buf, in_np_buf : std_logic;
 	signal red_next, green_next, blue_next : std_logic;
 
 begin
@@ -35,9 +35,18 @@ begin
 		end if;
 	end process;
 	
-	out_comb : process(in_field_buf, data_in)
+	in_np_in_buf_comb : process(clk, rst)
 	begin
-		if (in_field_buf = '1') then
+		if (rst = '1') then
+			in_np_buf <= '0';
+		elsif (clk'event and clk = '1') then
+			in_np_buf <= in_np_in;
+		end if;
+	end process;
+	
+	out_comb : process(in_field_buf, in_np_buf, data_in)
+	begin
+		if (in_field_buf = '1' or in_np_buf = '1') then
 			if (data_in = '1') then
 				red_next <= '0';
 				green_next <= '0';

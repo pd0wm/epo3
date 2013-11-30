@@ -13,7 +13,6 @@ begin
 	new_line_out  <= new_line_state;
 	new_frame_out <= new_frame_state;
 	
-	end_line_out <= end_line_state;
 	end_frame_out <= end_frame_state;
 
 	process(pos_x_in, pos_y_in)
@@ -32,14 +31,11 @@ begin
 	
 	process(pos_x_in, pos_y_in)
 	begin
-		end_line_new <= '0';
 		end_frame_new <= '0';
 		
 		if (unsigned(pos_x_in) = total_width-1) then
 			if (unsigned(pos_y_in) = total_height-1) then
 				end_frame_new <= '1';
-			else
-				end_line_new <= '1';
 			end if;
 		end if;
 	end process;
@@ -50,13 +46,11 @@ begin
 			new_line_state  <= '0';
 			new_frame_state <= '0';
 			
-			end_line_state <= '0';
 			end_frame_state <= '0';
 		elsif (clk'event and clk = '1') then
 			new_line_state  <= new_line_new;
 			new_frame_state <= new_frame_new;
 			
-			end_line_state <= end_line_new;
 			end_frame_state <= end_frame_new;
 		end if;
 	end process;
