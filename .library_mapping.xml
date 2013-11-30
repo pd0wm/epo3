@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.sigasi.hdt.vhdl.scoping.librarymapping.model:LibraryMappings xmlns:com.sigasi.hdt.vhdl.scoping.librarymapping.model="com.sigasi.hdt.vhdl.scoping.librarymapping" Version="2">
+<com.sigasi.hdt.shared.librarymapping.model:LibraryMappings xmlns:com.sigasi.hdt.shared.librarymapping.model="com.sigasi.hdt.vhdl.scoping.librarymapping" Version="2">
   <Mappings Location="Common Libraries/IEEE" Library="ieee"/>
   <Mappings Location="Common Libraries/IEEE Synopsys" Library="ieee"/>
+  <Mappings Location="CheckMask" Library="not mapped"/>
   <Mappings Location="Common Libraries" Library="not mapped"/>
+  <Mappings Location="LUT" Library="not mapped"/>
+  <Mappings Location="ProjectOutputs" Library="not mapped"/>
+  <Mappings Location="Switch_debounce" Library="not mapped"/>
+  <Mappings Location="__Previews" Library="not mapped"/>
+  <Mappings Location="check_mask.vhd" Library="not mapped"/>
+  <Mappings Location="clear_shift.vhd" Library="not mapped"/>
+  <Mappings Location="controller.vhd" Library="not mapped"/>
+  <Mappings Location="debounce.vhd" Library="not mapped"/>
+  <Mappings Location="depiece.vhd" Library="not mapped"/>
+  <Mappings Location="draw_erase_piece" Library="not mapped"/>
+  <Mappings Location="draw_score.vhd" Library="not mapped"/>
+  <Mappings Location="next_piece_generator" Library="not mapped"/>
+  <Mappings Location="npgen.vhd" Library="not mapped"/>
+  <Mappings Location="piece_lut.vhd" Library="not mapped"/>
+  <Mappings Location="rom.vhd" Library="not mapped"/>
+  <Mappings Location="score.vhd" Library="not mapped"/>
+  <Mappings Location="timer.vhd" Library="not mapped"/>
+  <Mappings Location="vga" Library="not mapped"/>
+  <Mappings Location="vga.vhd" Library="not mapped"/>
   <Mappings Location="Common Libraries/STD" Library="std"/>
   <Mappings Location="" Library="work"/>
-</com.sigasi.hdt.vhdl.scoping.librarymapping.model:LibraryMappings>
+</com.sigasi.hdt.shared.librarymapping.model:LibraryMappings>
