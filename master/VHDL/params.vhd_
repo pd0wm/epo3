@@ -25,8 +25,8 @@ package vga_params is
 	constant field_counter_block_width_len : integer := 3; -- 3
 	
 	-- Next piece
-	constant np_start_x : integer := 108; --
-	constant np_start_y : integer := 48; --
+	constant np_start_x : integer := 108; -- 108
+	constant np_start_y : integer := 48; -- 48
 	constant np_width : integer := 24; -- 24
 	constant np_height : integer := 96; -- 96
 	constant np_block_width : integer := 6; -- 6
@@ -53,5 +53,8 @@ end vga_params;
 
 package body vga_params is
 end vga_params;
+
+
+
 
 
