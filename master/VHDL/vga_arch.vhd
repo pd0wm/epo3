@@ -40,6 +40,7 @@ architecture vga_arch of vga is
 			 rst         : in  std_logic;
 			 in_field_in : in  std_logic;
 			 in_np_in    : in  std_logic;
+			 in_score_in  : in  std_logic;
 			 data_in     : in  std_logic;
 			 h_sync_in   : in  std_logic;
 			 v_sync_in   : in  std_logic;
@@ -168,6 +169,7 @@ begin
 		port map(clk         => clk,
 			     rst         => rst,
 			     in_field_in => in_field,
+				  in_score_in => in_score,
 			     in_np_in    => in_np,
 			     data_in     => data,
 			     h_sync_in   => h_sync_buf,

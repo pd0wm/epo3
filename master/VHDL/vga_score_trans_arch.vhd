@@ -7,7 +7,7 @@ architecture vga_score_trans_arch of vga_score_trans is
 	signal counter_state, counter_new   : std_logic_vector(score_counter_block_height_len-1 downto 0);
 	signal mem_addr_state, mem_addr_new : std_logic_vector(mem_addr_len - 1 downto 0);
 begin
-	mem_addr_out <= mem_addr_state;
+	mem_addr_out <= mem_addr_state or "10010000";
 
 	process(end_score_line_in, counter_state, mem_addr_state, end_frame_in)
 	begin

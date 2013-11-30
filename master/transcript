@@ -8,8 +8,6 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work extracted 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.extracted because work.sr_if_tb(sr_if_tb_behav) has changed.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -32,7 +30,7 @@
 # Loading cellslib.iv110(dataflow)#1
 # Loading cellslib.na310(dataflow)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 10us
+run 20us
 # ** Warning: setup_violation of R
 #    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/tower_mod_3_bit4_mod_6_dfr11_7
 # ** Warning: setup_violation of R
@@ -353,5 +351,4 @@ run 10us
 #    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/tower_mod_2_bit4_mod_2_dfr11_0
 # ** Warning: setup_violation of R
 #    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/tower_mod_0_bit4_mod_2_dfr11_0
-# Causality operation skipped due to absense of debug database file
 quit
