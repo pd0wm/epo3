@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.vga_params.all;
 
-entity vga_trans is
+entity vga_field_trans is
 	port(
 		clk               : in  std_logic;
 		rst               : in  std_logic;

@@ -8,9 +8,9 @@ configuration vga_vga_arch_cfg of vga is
       end for;
       for all: vga_triggers use configuration work.vga_triggers_vga_triggers_arch_cfg;
       end for;
-      for all: vga_trans use configuration work.vga_trans_vga_trans_arch_cfg;
+      for all: vga_field_trans use configuration work.vga_field_trans_vga_trans_arch_cfg;
       end for;
-      for all: vga_trans_reset use configuration work.vga_trans_reset_vga_trans_reset_arch_cfg;
+      for all: vga_field_trans_reset use configuration work.vga_field_trans_reset_vga_trans_reset_arch_cfg;
       end for;
       for all: vga_read use configuration work.vga_read_vga_read_behav_cfg;
       end for;

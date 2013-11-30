@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.vga_params.all;
 
-architecture vga_trans_arch of vga_trans is
+architecture vga_field_trans_arch of vga_field_trans is
 	signal counter_state, counter_new   : std_logic_vector(field_counter_block_width_len-1 downto 0);
 	signal mem_addr_state, mem_addr_new : std_logic_vector(mem_addr_len - 1 downto 0);
 begin
