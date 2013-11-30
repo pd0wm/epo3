@@ -1,0 +1,99 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "piece_lut(piece_lut(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 74):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    45    12    12     0     0     2     1     0     2
+
+------ partitioning 50 cells into (hor x vert) = (7 x 2) partitions
+
+------ requested grid points = (49, 112)
+
+------ cost@start = -1095286818, cost@end = -1095287003, moves = 62
+------ cost@start = -1095287003, cost@end = -1095287028, moves = 34
+------ cost@start = -1095287028, cost@end = -1095287061, moves = 24
+------ cost@start = -1095287061, cost@end = -1095287066, moves = 9
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ cost@start = -1095287066, cost@end = -1095287066, moves = 7
+------ 30 nets have to be routed on a 13 x 3 global grid
+     + routing net lut_next_state_0_port (2 terminals):  weight = 200
+     + routing net lut_rst (3 terminals):  weight = 400
+     + routing net lut_clk (3 terminals):  weight = 400
+     + routing net lut_state_0_port (3 terminals):  weight = 400
+     + routing net lut_next_state_1_port (2 terminals):  weight = 202
+     + routing net lut_state_1_port (2 terminals):  weight = 200
+     + routing net lut_next_state_2_port (2 terminals):  weight = 200
+     + routing net lut_state_2_port (2 terminals):  weight = 200
+     + routing net n49 (2 terminals):  weight = 200
+     + routing net n50 (2 terminals):  weight = 202
+     + routing net n51 (3 terminals):  weight = 400
+     + routing net n54 (4 terminals):  weight = 600
+     + routing net n55 (3 terminals):  weight = 400
+     + routing net n57 (2 terminals):  weight = 200
+     + routing net n60 (3 terminals):  weight = 400
+     + routing net n61 (2 terminals):  weight = 202
+     + routing net n62 (2 terminals):  weight = 204
+     + routing net lut_x_2_0_2 (2 terminals):  weight = 200
+     + routing net n63 (2 terminals):  weight = 204
+     + routing net n65 (2 terminals):  weight = 200
+     + routing net n66 (2 terminals):  weight = 204
+     + routing net n67 (2 terminals):  weight = 200
+     + routing net n68 (2 terminals):  weight = 200
+     + routing net n70 (2 terminals):  weight = 200
+     + routing net n71 (2 terminals):  weight = 202
+     + routing net n73 (2 terminals):  weight = 200
+     + routing net n75 (2 terminals):  weight = 200
+     + routing net n76 (2 terminals):  weight = 200
+     + routing net n77 (2 terminals):  weight = 202
+     + routing net n79 (2 terminals):  weight = 200
+
+------ Routed 30 nets, total weight = 7622
+
+
+
+------ Detailed placement of (Tmp_Cell_(piece_lut(piece_lut(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [49:112]
+------ Doing placement 
+------ Compacting  
+
+         Magnification coefficient obtained :0.800607
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.0 seconds of your cpu
+terminate

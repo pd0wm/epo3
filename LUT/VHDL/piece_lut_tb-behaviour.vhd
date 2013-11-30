@@ -36,7 +36,7 @@ begin
 	rst <= '1' after 0 ns, '0' after 30 ns;
 	rot <= "01" after 0 ns;
 	y <= "1110" after 0 ns; --14
-	x <= "011"	after 0 ns;  --3
+	x <= "111"	after 0 ns;  --7
 	start <= '0' after 0 ns, 
 	         '1' after 110 ns, 
 	         '0' after 130 ns,
@@ -47,18 +47,21 @@ begin
 	         '1' after 710 ns,
 	         '0' after 730 ns;
 	rom_data <= --"0000" after 0 ns,
-	          "1000" after 00 ns,
-	          "1001" after 350 ns,
-	          "1010" after 550 ns,
-	          "1011" after 750 ns;
+	          "0000" after 00 ns,
+	          "0100" after 350 ns,
+	          "1000" after 550 ns,
+	          "0101" after 750 ns;
 	next_piece <= '0' after 0 ns;
 	mask_select <= --"00" after 0 ns,
-		 "01" after 00 ns,
-		 "10" after 290 ns,
-		 "11" after 490 ns,
-		 "00" after 690 ns;
-	piece_type <= "011" after 0 ns;
+		 "00" after 00 ns,
+		 "01" after 290 ns,
+		 "10" after 490 ns,
+		 "11" after 690 ns;
+	piece_type <= "101" after 0 ns;
 end piece_lut_tb_behaviour;
+
+
+
 
 
 
