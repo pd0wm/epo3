@@ -12,21 +12,21 @@ architecture piece_lut_tb_behaviour of piece_lut_tb is
 	signal mask : std_logic_vector(7 downto 0);
 
 	component piece_lut is
-   	port(clk				:IN		 std_logic;
-		 rst		  	:IN		 std_logic;
-		 start     	:IN    std_logic;
-         rot       	:IN    std_logic_vector(1 downto 0);
-         y         	:IN    std_logic_vector(3 downto 0);
-         x         	:IN    std_logic_vector(2 downto 0);
-         piece_type    	:IN    std_logic_vector(2 downto 0);
-         rom_data    	:IN    std_logic_vector(3 downto 0);
-	 mask_select      :IN    std_logic_vector(1 downto 0);
-		 rom_addr		 	:OUT		 std_logic_vector(6 downto 0);
-	 next_piece  :in    std_logic;
-         ready     	:OUT   std_logic;
-         error_side	:OUT   std_logic;
-         error_bot 	:OUT   std_logic;
-         mask			    	:OUT   std_logic_vector(7 downto 0));
+   	port(lut_clk				:IN		 std_logic;
+		 lut_rst		  	:IN		 std_logic;
+		 lut_start     	:IN    std_logic;
+         lut_rot       	:IN    std_logic_vector(1 downto 0);
+         lut_y         	:IN    std_logic_vector(3 downto 0);
+         lut_x         	:IN    std_logic_vector(2 downto 0);
+         lut_piece_type    	:IN    std_logic_vector(2 downto 0);
+         lut_rom_data    	:IN    std_logic_vector(3 downto 0);
+	 lut_mask_select      :IN    std_logic_vector(1 downto 0);
+		 lut_rom_addr		 	:OUT		 std_logic_vector(6 downto 0);
+	 lut_next_piece  :in    std_logic;
+         lut_ready     	:OUT   std_logic;
+         lut_error_side	:OUT   std_logic;
+         lut_error_bot 	:OUT   std_logic;
+         lut_mask			    	:OUT   std_logic_vector(7 downto 0));
 	end component;
 begin
 	piece_lut_port : piece_lut port map(clk, rst, start, rot, y, x, piece_type, rom_data, mask_select, rom_addr, next_piece, ready, error_side, error_bot, mask);
@@ -59,6 +59,9 @@ begin
 		 "00" after 690 ns;
 	piece_type <= "011" after 0 ns;
 end piece_lut_tb_behaviour;
+
+
+
 
 
 
