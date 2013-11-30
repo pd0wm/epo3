@@ -32,8 +32,8 @@ package vga_params is
 	constant np_block_width : integer := 6; -- 6
 	constant np_block_height : integer := 24; --  24
 	
-	constant np_counter_block_height_len : integer := 2; -- 2
-	constant np_counter_block_width_len : integer := 2; -- 2
+	constant np_counter_block_height_len : integer := 5; -- 2
+	constant np_counter_block_width_len : integer := 3; -- 2
 	
 	-- Resultant constants
 	constant offset_x : integer := line_fp + line_pw + line_bp;
@@ -53,6 +53,9 @@ end vga_params;
 
 package body vga_params is
 end vga_params;
+
+
+
 
 
 

@@ -7,7 +7,7 @@ architecture vga_np_trans_arch of vga_np_trans is
 	signal counter_state, counter_new   : std_logic_vector(np_counter_block_width_len-1 downto 0);
 	signal mem_addr_state, mem_addr_new : std_logic_vector(mem_addr_len - 1 downto 0);
 begin
-	mem_addr_out <= '1' & mem_addr_state(6 downto 0);
+	mem_addr_out <= "10000000" or mem_addr_state;
 
 	process(in_np_in, counter_state, new_line_in, new_frame_in, mem_addr_state, mem_addr_reset_in)
 	begin
@@ -28,7 +28,7 @@ begin
 
 		if (new_line_in = '1' or new_frame_in = '1') then
 			counter_new  <= (others => '0');
-			mem_addr_new <= (others => '0');
+			mem_addr_new <= mem_addr_reset_in;
 		end if;
 	end process;
 
