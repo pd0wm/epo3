@@ -1,0 +1,15 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'piece_lut' ------
+------ circuit 'piece_lut' is still up-to-date ------
+------ input check seems good enough: calling placer ------
+calling program: madonna -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -x 49 -y 111 -ex piece_lut 
+------ madonna successful ------
+------ calling router ------
+calling program: trout -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmppiece_lut5784' ------
+calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut5784 
+------ sea: task completed ------
