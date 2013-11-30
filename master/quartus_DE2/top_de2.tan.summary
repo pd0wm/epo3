@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.328 ns
+Actual Time    : -1.123 ns
 From           : rst
-To             : sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT
+To             : sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 11.638 ns
-From           : vga:inst3|vga_read:read_and_output|h_sync_out
-To             : vga_hsync
+Actual Time    : 10.817 ns
+From           : vga:inst3|vga_read:read_and_output|v_sync_out
+To             : vga_vsync
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.558 ns
+Actual Time    : 1.568 ns
 From           : rst
-To             : sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT
+To             : sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 332.89 MHz ( period = 3.004 ns )
-From           : vga:inst3|vga_counter:counter|pos_x[0]
-To             : vga:inst3|vga_counter:counter|pos_y[1]
+Actual Time    : 273.22 MHz ( period = 3.660 ns )
+From           : vga:inst3|vga_field_trans:field_translation|mem_addr_state[0]
+To             : sr_if:inst2|do2
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0

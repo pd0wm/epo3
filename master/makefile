@@ -27,12 +27,6 @@ WORK__vga_vga_arch_cfg = $(LIB_WORK)/vga_vga_arch_cfg/_primary.dat
 WORK__vga_triggers_vga_triggers_arch_cfg = $(LIB_WORK)/vga_triggers_vga_triggers_arch_cfg/_primary.dat
 WORK__vga_triggers__vga_triggers_arch = $(LIB_WORK)/vga_triggers/vga_triggers_arch.dat
 WORK__vga_triggers = $(LIB_WORK)/vga_triggers/_primary.dat
-WORK__vga_trans_vga_trans_arch_cfg = $(LIB_WORK)/vga_trans_vga_trans_arch_cfg/_primary.dat
-WORK__vga_trans_reset_vga_trans_reset_arch_cfg = $(LIB_WORK)/vga_trans_reset_vga_trans_reset_arch_cfg/_primary.dat
-WORK__vga_trans_reset__vga_trans_reset_arch = $(LIB_WORK)/vga_trans_reset/vga_trans_reset_arch.dat
-WORK__vga_trans_reset = $(LIB_WORK)/vga_trans_reset/_primary.dat
-WORK__vga_trans__vga_trans_arch = $(LIB_WORK)/vga_trans/vga_trans_arch.dat
-WORK__vga_trans = $(LIB_WORK)/vga_trans/_primary.dat
 WORK__vga_tb_vga_tb_arch_cfg = $(LIB_WORK)/vga_tb_vga_tb_arch_cfg/_primary.dat
 WORK__vga_tb__vga_tb_arch = $(LIB_WORK)/vga_tb/vga_tb_arch.dat
 WORK__vga_tb = $(LIB_WORK)/vga_tb/_primary.dat
@@ -44,6 +38,21 @@ WORK__vga_read__vga_read_behav = $(LIB_WORK)/vga_read/vga_read_behav.dat
 WORK__vga_read = $(LIB_WORK)/vga_read/_primary.dat
 WORK__vga_params__body = $(LIB_WORK)/vga_params/body.dat
 WORK__vga_params = $(LIB_WORK)/vga_params/_primary.dat
+WORK__vga_np_trans_vga_np_trans_arch_cfg = $(LIB_WORK)/vga_np_trans_vga_np_trans_arch_cfg/_primary.dat
+WORK__vga_np_trans_reset_vga_np_trans_reset_arch_cfg = $(LIB_WORK)/vga_np_trans_reset_vga_np_trans_reset_arch_cfg/_primary.dat
+WORK__vga_np_trans_reset__vga_np_trans_reset_arch = $(LIB_WORK)/vga_np_trans_reset/vga_np_trans_reset_arch.dat
+WORK__vga_np_trans_reset = $(LIB_WORK)/vga_np_trans_reset/_primary.dat
+WORK__vga_np_trans__vga_np_trans_arch = $(LIB_WORK)/vga_np_trans/vga_np_trans_arch.dat
+WORK__vga_np_trans = $(LIB_WORK)/vga_np_trans/_primary.dat
+WORK__vga_np_check_vga_np_check_arch_cfg = $(LIB_WORK)/vga_np_check_vga_np_check_arch_cfg/_primary.dat
+WORK__vga_np_check__vga_np_check_arch = $(LIB_WORK)/vga_np_check/vga_np_check_arch.dat
+WORK__vga_np_check = $(LIB_WORK)/vga_np_check/_primary.dat
+WORK__vga_field_trans_vga_field_trans_arch_cfg = $(LIB_WORK)/vga_field_trans_vga_field_trans_arch_cfg/_primary.dat
+WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg = $(LIB_WORK)/vga_field_trans_reset_vga_field_trans_reset_arch_cfg/_primary.dat
+WORK__vga_field_trans_reset__vga_field_trans_reset_arch = $(LIB_WORK)/vga_field_trans_reset/vga_field_trans_reset_arch.dat
+WORK__vga_field_trans_reset = $(LIB_WORK)/vga_field_trans_reset/_primary.dat
+WORK__vga_field_trans__vga_field_trans_arch = $(LIB_WORK)/vga_field_trans/vga_field_trans_arch.dat
+WORK__vga_field_trans = $(LIB_WORK)/vga_field_trans/_primary.dat
 WORK__vga_field_check_vga_field_check_arch_cfg = $(LIB_WORK)/vga_field_check_vga_field_check_arch_cfg/_primary.dat
 WORK__vga_field_check__vga_field_check_arch = $(LIB_WORK)/vga_field_check/vga_field_check_arch.dat
 WORK__vga_field_check = $(LIB_WORK)/vga_field_check/_primary.dat
@@ -111,12 +120,6 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_triggers_vga_triggers_arch_cfg) \
     $(WORK__vga_triggers__vga_triggers_arch) \
     $(WORK__vga_triggers) \
-    $(WORK__vga_trans_vga_trans_arch_cfg) \
-    $(WORK__vga_trans_reset_vga_trans_reset_arch_cfg) \
-    $(WORK__vga_trans_reset__vga_trans_reset_arch) \
-    $(WORK__vga_trans_reset) \
-    $(WORK__vga_trans__vga_trans_arch) \
-    $(WORK__vga_trans) \
     $(WORK__vga_tb_vga_tb_arch_cfg) \
     $(WORK__vga_tb__vga_tb_arch) \
     $(WORK__vga_tb) \
@@ -128,6 +131,21 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_read) \
     $(WORK__vga_params__body) \
     $(WORK__vga_params) \
+    $(WORK__vga_np_trans_vga_np_trans_arch_cfg) \
+    $(WORK__vga_np_trans_reset_vga_np_trans_reset_arch_cfg) \
+    $(WORK__vga_np_trans_reset__vga_np_trans_reset_arch) \
+    $(WORK__vga_np_trans_reset) \
+    $(WORK__vga_np_trans__vga_np_trans_arch) \
+    $(WORK__vga_np_trans) \
+    $(WORK__vga_np_check_vga_np_check_arch_cfg) \
+    $(WORK__vga_np_check__vga_np_check_arch) \
+    $(WORK__vga_np_check) \
+    $(WORK__vga_field_trans_vga_field_trans_arch_cfg) \
+    $(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) \
+    $(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) \
+    $(WORK__vga_field_trans_reset) \
+    $(WORK__vga_field_trans__vga_field_trans_arch) \
+    $(WORK__vga_field_trans) \
     $(WORK__vga_field_check_vga_field_check_arch_cfg) \
     $(WORK__vga_field_check__vga_field_check_arch) \
     $(WORK__vga_field_check) \
@@ -659,6 +677,141 @@ $(WORK__vga_field_check_vga_field_check_arch_cfg) : VHDL/vga_field_check_vga_fie
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 
+$(WORK__vga_field_trans) : VHDL/vga_field_trans.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans.vhd
+
+$(WORK__vga_field_trans__vga_field_trans_arch) : VHDL/vga_field_trans_arch.vhd \
+		$(WORK__vga_field_trans) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_arch.vhd
+
+$(WORK__vga_field_trans_reset) : VHDL/vga_field_trans_reset.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_reset.vhd
+
+$(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) : VHDL/vga_field_trans_reset_arch.vhd \
+		$(WORK__vga_field_trans_reset) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_reset_arch.vhd
+
+$(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) : VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd \
+		$(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_field_trans_reset)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd
+
+$(WORK__vga_field_trans_vga_field_trans_arch_cfg) : VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd \
+		$(WORK__vga_field_trans__vga_field_trans_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_field_trans)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd
+
+$(WORK__vga_np_check) : VHDL/vga_np_check.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_check.vhd
+
+$(WORK__vga_np_check__vga_np_check_arch) : VHDL/vga_np_check_arch.vhd \
+		$(WORK__vga_np_check) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_check_arch.vhd
+
+$(WORK__vga_np_check_vga_np_check_arch_cfg) : VHDL/vga_np_check_vga_np_check_arch_cfg.vhd \
+		$(WORK__vga_np_check__vga_np_check_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_np_check)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_check_vga_np_check_arch_cfg.vhd
+
+$(WORK__vga_np_trans) : VHDL/vga_np_trans.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans.vhd
+
+$(WORK__vga_np_trans__vga_np_trans_arch) : VHDL/vga_np_trans_arch.vhd \
+		$(WORK__vga_np_trans) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans_arch.vhd
+
+$(WORK__vga_np_trans_reset) : VHDL/vga_np_trans_reset.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans_reset.vhd
+
+$(WORK__vga_np_trans_reset__vga_np_trans_reset_arch) : VHDL/vga_np_trans_reset_arch.vhd \
+		$(WORK__vga_np_trans_reset) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans_reset_arch.vhd
+
+$(WORK__vga_np_trans_reset_vga_np_trans_reset_arch_cfg) : VHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd \
+		$(WORK__vga_np_trans_reset__vga_np_trans_reset_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_np_trans_reset)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd
+
+$(WORK__vga_np_trans_vga_np_trans_arch_cfg) : VHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd \
+		$(WORK__vga_np_trans__vga_np_trans_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_np_trans)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd
+
 $(WORK__vga_params) \
 $(WORK__vga_params__body) : VHDL/params.vhd \
 		$(STD__textio) \
@@ -731,6 +884,7 @@ $(WORK__vga_tb__vga_tb_arch) : VHDL/vga_tb.vhd \
 
 $(WORK__vga_tb_vga_tb_arch_cfg) : VHDL/vga_tb_vga_tb_arch_cfg.vhd \
 		$(WORK__vga) \
+		$(WORK__vga_vga_arch_cfg) \
 		$(WORK__vga_tb__vga_tb_arch) \
 		$(WORK__vga_params) \
 		$(IEEE__numeric_std) \
@@ -739,60 +893,6 @@ $(WORK__vga_tb_vga_tb_arch_cfg) : VHDL/vga_tb_vga_tb_arch_cfg.vhd \
 		$(WORK__vga_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_tb_vga_tb_arch_cfg.vhd
-
-$(WORK__vga_trans) : VHDL/vga_trans.vhd \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans.vhd
-
-$(WORK__vga_trans__vga_trans_arch) : VHDL/vga_trans_arch.vhd \
-		$(WORK__vga_trans) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans_arch.vhd
-
-$(WORK__vga_trans_reset) : VHDL/vga_trans_reset.vhd \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans_reset.vhd
-
-$(WORK__vga_trans_reset__vga_trans_reset_arch) : VHDL/vga_trans_reset_arch.vhd \
-		$(WORK__vga_trans_reset) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans_reset_arch.vhd
-
-$(WORK__vga_trans_reset_vga_trans_reset_arch_cfg) : VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd \
-		$(WORK__vga_trans_reset__vga_trans_reset_arch) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga_trans_reset)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans_reset_vga_trans_reset_arch_cfg.vhd
-
-$(WORK__vga_trans_vga_trans_arch_cfg) : VHDL/vga_trans_vga_trans_arch_cfg.vhd \
-		$(WORK__vga_trans__vga_trans_arch) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga_trans)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_trans_vga_trans_arch_cfg.vhd
 
 $(WORK__vga_triggers) : VHDL/vga_triggers.vhd \
 		$(WORK__vga_params) \
@@ -822,18 +922,24 @@ $(WORK__vga_triggers_vga_triggers_arch_cfg) : VHDL/vga_triggers_vga_triggers_arc
 		 work -quiet -nologo VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 
 $(WORK__vga_vga_arch_cfg) : VHDL/vga_vga_arch_cfg.vhd \
-		$(WORK__vga_read) \
-		$(WORK__vga_trans_reset) \
-		$(WORK__vga_trans) \
-		$(WORK__vga_triggers) \
+		$(WORK__vga_np_check) \
+		$(WORK__vga_np_trans_reset) \
+		$(WORK__vga_np_trans) \
 		$(WORK__vga_field_check) \
+		$(WORK__vga_field_trans_reset) \
+		$(WORK__vga_field_trans) \
+		$(WORK__vga_read) \
+		$(WORK__vga_triggers) \
 		$(WORK__vga_sync) \
 		$(WORK__vga_counter) \
-		$(WORK__vga_read_vga_read_behav_cfg) \
-		$(WORK__vga_trans_reset_vga_trans_reset_arch_cfg) \
-		$(WORK__vga_trans_vga_trans_arch_cfg) \
-		$(WORK__vga_triggers_vga_triggers_arch_cfg) \
+		$(WORK__vga_np_check_vga_np_check_arch_cfg) \
+		$(WORK__vga_np_trans_reset_vga_np_trans_reset_arch_cfg) \
+		$(WORK__vga_np_trans_vga_np_trans_arch_cfg) \
 		$(WORK__vga_field_check_vga_field_check_arch_cfg) \
+		$(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) \
+		$(WORK__vga_field_trans_vga_field_trans_arch_cfg) \
+		$(WORK__vga_read_vga_read_behav_cfg) \
+		$(WORK__vga_triggers_vga_triggers_arch_cfg) \
 		$(WORK__vga_sync_vga_sync_arch_cfg) \
 		$(WORK__vga_counter_vga_counter_behav_cfg) \
 		$(WORK__vga__vga_arch) \

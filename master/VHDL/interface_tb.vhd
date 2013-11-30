@@ -97,8 +97,42 @@ begin
 		addr2 <= "00101010";
 		wait for clk_period;
 
+
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "00000001";
+		wait for clk_period;
+		we    <= '1';
+		di    <= '1';
+		addr1 <= "00000001";
+		wait for clk_period;
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "00000001";
+		wait for clk_period;
+
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "10000001";
+		wait for clk_period;
+		we    <= '1';
+		di    <= '1';
+		addr1 <= "10000001";
+		wait for clk_period;
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "10000001";
+		wait for clk_period;
+		we    <= '0';
+		di    <= '0';
+		addr1 <= "00000001";
+		wait for clk_period;
+
 	end process;
 end;
+
+
+
 
 
 

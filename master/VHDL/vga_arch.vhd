@@ -208,14 +208,12 @@ begin
 			     end_np_line_out => end_np_line);
 
 	mem_addr_multiplexer : process(mem_addr_field, mem_addr_np, in_np, in_field)
-		variable selector : std_logic_vector(1 downto 0);
 	begin
-		selector := in_np & in_field;
-
-		case selector is
-			when "01"   => mem_addr <= mem_addr_field;
-			when others => mem_addr <= mem_addr_np;
-		end case;
+		if (in_np = '1') then
+			mem_addr <= mem_addr_np;
+		else
+			mem_addr <= mem_addr_field;
+		end if;
 	end process;
 
 end;
