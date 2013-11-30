@@ -12,21 +12,21 @@ architecture piece_lut_tb_behaviour of piece_lut_tb is
 	signal mask : std_logic_vector(7 downto 0);
 
 	component piece_lut is
-   	port(clk				:IN		 std_logic;
-		 rst		  	:IN		 std_logic;
-		 start     	:IN    std_logic;
-         rot       	:IN    std_logic_vector(1 downto 0);
-         y         	:IN    std_logic_vector(3 downto 0);
-         x         	:IN    std_logic_vector(2 downto 0);
-         piece_type    	:IN    std_logic_vector(2 downto 0);
-         rom_data    	:IN    std_logic_vector(3 downto 0);
-	 mask_select      :IN    std_logic_vector(1 downto 0);
-		 rom_addr		 	:OUT		 std_logic_vector(6 downto 0);
-	 next_piece  :in    std_logic;
-         ready     	:OUT   std_logic;
-         error_side	:OUT   std_logic;
-         error_bot 	:OUT   std_logic;
-         mask			    	:OUT   std_logic_vector(7 downto 0));
+   	port(lut_clk				:IN		 std_logic;
+		 lut_rst		  	:IN		 std_logic;
+		 lut_start     	:IN    std_logic;
+         lut_rot       	:IN    std_logic_vector(1 downto 0);
+         lut_y         	:IN    std_logic_vector(3 downto 0);
+         lut_x         	:IN    std_logic_vector(2 downto 0);
+         lut_piece_type    	:IN    std_logic_vector(2 downto 0);
+         lut_rom_data    	:IN    std_logic_vector(3 downto 0);
+	 lut_mask_select      :IN    std_logic_vector(1 downto 0);
+		 lut_rom_addr		 	:OUT		 std_logic_vector(6 downto 0);
+	 lut_next_piece  :in    std_logic;
+         lut_ready     	:OUT   std_logic;
+         lut_error_side	:OUT   std_logic;
+         lut_error_bot 	:OUT   std_logic;
+         lut_mask			    	:OUT   std_logic_vector(7 downto 0));
 	end component;
 begin
 	piece_lut_port : piece_lut port map(clk, rst, start, rot, y, x, piece_type, rom_data, mask_select, rom_addr, next_piece, ready, error_side, error_bot, mask);
@@ -36,7 +36,7 @@ begin
 	rst <= '1' after 0 ns, '0' after 30 ns;
 	rot <= "01" after 0 ns;
 	y <= "1110" after 0 ns; --14
-	x <= "011"	after 0 ns;  --3
+	x <= "111"	after 0 ns;  --7
 	start <= '0' after 0 ns, 
 	         '1' after 110 ns, 
 	         '0' after 130 ns,
@@ -47,18 +47,24 @@ begin
 	         '1' after 710 ns,
 	         '0' after 730 ns;
 	rom_data <= --"0000" after 0 ns,
-	          "1000" after 00 ns,
-	          "1001" after 350 ns,
-	          "1010" after 550 ns,
-	          "1011" after 750 ns;
+	          "0000" after 00 ns,
+	          "0100" after 350 ns,
+	          "1000" after 550 ns,
+	          "0101" after 750 ns;
 	next_piece <= '0' after 0 ns;
 	mask_select <= --"00" after 0 ns,
-		 "01" after 00 ns,
-		 "10" after 290 ns,
-		 "11" after 490 ns,
-		 "00" after 690 ns;
+		 "00" after 00 ns,
+		 "01" after 290 ns,
+		 "10" after 490 ns,
+		 "11" after 690 ns;
 	piece_type <= "011" after 0 ns;
 end piece_lut_tb_behaviour;
+
+
+
+
+
+
 
 
 
