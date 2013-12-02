@@ -107,298 +107,6 @@ gen6mhz:inst1
 
 # end
 # entity
-vga
-# storage
-db|top_de2.(3).cnf
-db|top_de2.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga.vhd
-bba5288cb0e826421506373bd496ad
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_vga_arch_cfg.vhd
-1b904bd0c3cd8fef4b70c620206872a
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_arch.vhd
-3a99db2cb33d4b265570c652ca76ff
-}
-# hierarchies {
-vga:inst3
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-vga_counter
-# storage
-db|top_de2.(4).cnf
-db|top_de2.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter.vhd
-d638d3a945c4dce242daccd372f7499c
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(pos_x_out)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(pos_y_out)
-8 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_vga_counter_behav_cfg.vhd
-fab26d6d1399da3a430b23e355ea5e
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_arch.vhd
-33a6f82137911e70d724b39af2474185
-}
-# hierarchies {
-vga:inst3|vga_counter:counter
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-vga_sync
-# storage
-db|top_de2.(5).cnf
-db|top_de2.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync.vhd
-6f1999a7fb7b347db6e0d61ab07a76da
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(pos_x_in)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(pos_y_in)
-8 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync_vga_sync_arch_cfg.vhd
-96bce45116baf7c7ec5288295c82056
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync_arch.vhd
-4f91f8202a15387a13b321bcc71d803d
-}
-# hierarchies {
-vga:inst3|vga_sync:sync
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-vga_field_check
-# storage
-db|top_de2.(6).cnf
-db|top_de2.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check.vhd
-107d28874ba6c95a42f1dae1e2f7a37
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(pos_x_in)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(pos_y_in)
-8 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check_vga_field_check_arch_cfg.vhd
-aeb96b6dcbc4bece6470b7f8d9e3eebf
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check_arch.vhd
-a135134f77cf50cda72e412dcf049e9
-}
-# hierarchies {
-vga:inst3|vga_field_check:field_check
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-vga_triggers
-# storage
-db|top_de2.(7).cnf
-db|top_de2.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers.vhd
-24c285f7ce8715e9eea6d9faf9e461e5
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(pos_x_in)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(pos_y_in)
-8 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers_arch.vhd
-93662adb1346b6271a6cc76518ed127
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers_vga_triggers_arch_cfg.vhd
-53a5753dc340d8907189f242c773eb
-}
-# hierarchies {
-vga:inst3|vga_triggers:triggers
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-vga_trans_reset
-# storage
-db|top_de2.(9).cnf
-db|top_de2.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans_reset.vhd
-5f3679377811e0992998533aca61108e
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(mem_addr_reset_out)
-7 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans_reset_vga_trans_reset_arch_cfg.vhd
-e3e285e2f6af067d361571048fe52ba
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans_reset_arch.vhd
-3e06986c0a992a48947d1ada655a
-}
-# hierarchies {
-vga:inst3|vga_trans_reset:trans_reset
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 sr_if
 # storage
 db|top_de2.(11).cnf
@@ -427,9 +135,6 @@ ON
 3d15d17d8c7cbd65a19b268ede565c8e
 |home|epo3-user|Desktop|git|epo3|master|VHDL|sr_if_sr_if_behav_cfg.vhd
 5b6db7958481f4bff4f6b6187e7f5c92
-}
-# hierarchies {
-sr_if:inst2
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -477,13 +182,6 @@ USR
 |home|epo3-user|Desktop|git|epo3|master|VHDL|sr_tower_sr_tower_behav_cfg.vhd
 2f8fe47f89f5e64abb5999b74968c41
 }
-# hierarchies {
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod
-}
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -519,48 +217,6 @@ ON
 1e745ddd6361378b435a3522e5eda2f
 |home|epo3-user|Desktop|git|epo3|master|VHDL|bit4_bit4_behav_cfg.vhd
 1fd9eb192a287a8dd130d9b52e5750
-}
-# hierarchies {
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -608,13 +264,6 @@ USR
 |home|epo3-user|Desktop|git|epo3|master|VHDL|demux8_inv_arch.vhd
 8ec31242cf70b82cbd2dd39aa2a9ead
 }
-# hierarchies {
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux8_inv:demux8_inv_we_com
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|demux8_inv:demux8_inv_we_com
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|demux8_inv:demux8_inv_we_com
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|demux8_inv:demux8_inv_we_com
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux8_inv:demux8_inv_we_com
-}
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -660,18 +309,6 @@ USR
 b11c6b8332dd6b8a6924c8115a3dffc
 |home|epo3-user|Desktop|git|epo3|master|VHDL|dec8_dec8_behav_cfg.vhd
 6870bf2567895699a9f58818d61b32
-}
-# hierarchies {
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|dec8:dec8_re_1
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|dec8:dec8_re_2
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|dec8:dec8_re_1
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|dec8:dec8_re_2
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|dec8:dec8_re_1
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|dec8:dec8_re_2
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|dec8:dec8_re_1
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|dec8:dec8_re_2
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|dec8:dec8_re_1
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|dec8:dec8_re_2
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -719,13 +356,6 @@ c1b3fdb06f264014c22b32b812f41cd8
 |home|epo3-user|Desktop|git|epo3|master|VHDL|demux4_inv_demux4_inv_behav_cfg.vhd
 49e71622e1b37741347d5cf9c21395f2
 }
-# hierarchies {
-sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i
-sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|demux4_inv:demux4_inv_we_i
-sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|demux4_inv:demux4_inv_we_i
-sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|demux4_inv:demux4_inv_we_i
-sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux4_inv:demux4_inv_we_i
-}
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -772,10 +402,6 @@ a111cfe36ef3d2a03cda1350ec465c2f
 |home|epo3-user|Desktop|git|epo3|master|VHDL|mux5_mux5_behav_cfg.vhd
 c2e7d1dd858f439314f7112896a4e76
 }
-# hierarchies {
-sr_if:inst2|mux5:mux5_do1
-sr_if:inst2|mux5:mux5_do2
-}
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -821,9 +447,6 @@ USR
 ded1211d98c71d4eed7012b86a7ece5
 |home|epo3-user|Desktop|git|epo3|master|VHDL|demux5_demux5_behav_cfg.vhd
 646258b0da42adccdb1a43e8132d3c9
-}
-# hierarchies {
-sr_if:inst2|demux5:demux5_we
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -1632,18 +1255,18 @@ sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|
 
 # end
 # entity
-vga_read
+sr_if
 # storage
-db|top_de2.(10).cnf
-db|top_de2.(10).cnf
+db|top_de2.(27).cnf
+db|top_de2.(27).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read.vhd
-9b141cb057c8e28ee25f706b2dc09768
+|home|epo3-user|Desktop|git|epo3|master|VHDL|interface.vhd
+cdc22aa843c276535416e8dd086c212
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1656,12 +1279,613 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read_arch.vhd
-33a8512971bc7a457e759578ca3d55
+|home|epo3-user|Desktop|git|epo3|master|VHDL|interface_arch.vhd
+3d15d17d8c7cbd65a19b268ede565c8e
+}
+# hierarchies {
+sr_if:inst2
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+sr_tower
+# storage
+db|top_de2.(28).cnf
+db|top_de2.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|tower.vhd
+0bdfedb8c7d517820a63ed0237fe1bf
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(addr1)
+4 downto 0
+PARAMETER_STRING
+USR
+ constraint(addr2)
+4 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|tower_arch.vhd
+0186f379fba2fb6f2f14a93fd707c69
+}
+# hierarchies {
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+bit4
+# storage
+db|top_de2.(29).cnf
+db|top_de2.(29).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|bit4.vhd
+bda8ff35d431cf7dc180956732cffc
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|bit4-bit4_behav.vhd
+1e745ddd6361378b435a3522e5eda2f
+}
+# hierarchies {
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+demux8_inv
+# storage
+db|top_de2.(30).cnf
+db|top_de2.(30).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux8_inv.vhd
+a621285211ee5865f13d60719edc9397
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(do)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux8_inv_arch.vhd
+8ec31242cf70b82cbd2dd39aa2a9ead
+}
+# hierarchies {
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux8_inv:demux8_inv_we_com
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|demux8_inv:demux8_inv_we_com
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|demux8_inv:demux8_inv_we_com
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|demux8_inv:demux8_inv_we_com
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux8_inv:demux8_inv_we_com
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+dec8
+# storage
+db|top_de2.(31).cnf
+db|top_de2.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|dec8.vhd
+d950d11e970159ea1abc6a3edf49ac
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(do)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|dec8_arch.vhd
+b11c6b8332dd6b8a6924c8115a3dffc
+}
+# hierarchies {
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|dec8:dec8_re_1
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|dec8:dec8_re_2
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|dec8:dec8_re_1
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|dec8:dec8_re_2
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|dec8:dec8_re_1
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|dec8:dec8_re_2
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|dec8:dec8_re_1
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|dec8:dec8_re_2
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|dec8:dec8_re_1
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|dec8:dec8_re_2
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+demux4_inv
+# storage
+db|top_de2.(32).cnf
+db|top_de2.(32).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux4_inv.vhd
+46cc95c73d32be1f5a72d3460eaa8d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(do)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux4_inv_arch.vhd
+c1b3fdb06f264014c22b32b812f41cd8
+}
+# hierarchies {
+sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i
+sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|demux4_inv:demux4_inv_we_i
+sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|demux4_inv:demux4_inv_we_i
+sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|demux4_inv:demux4_inv_we_i
+sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux4_inv:demux4_inv_we_i
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+mux5
+# storage
+db|top_de2.(33).cnf
+db|top_de2.(33).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|mux5.vhd
+26a8ac35cf211c39c9d76b63f9dfcc8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(di)
+4 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|mux5_arch.vhd
+a111cfe36ef3d2a03cda1350ec465c2f
+}
+# hierarchies {
+sr_if:inst2|mux5:mux5_do1
+sr_if:inst2|mux5:mux5_do2
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+demux5
+# storage
+db|top_de2.(34).cnf
+db|top_de2.(34).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux5.vhd
+2ac78c3127633be863223d20fb7684
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(do)
+4 downto 0
+PARAMETER_STRING
+USR
+ constraint(s)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|demux5_arch.vhd
+ded1211d98c71d4eed7012b86a7ece5
+}
+# hierarchies {
+sr_if:inst2|demux5:demux5_we
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga
+# storage
+db|top_de2.(3).cnf
+db|top_de2.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga.vhd
+bba5288cb0e826421506373bd496ad
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
 |home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read_vga_read_behav_cfg.vhd
-56505f1db66744b952419fdbdae98d48
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_arch.vhd
+8994545dbe3a9c833286354c32daba1
+}
+# hierarchies {
+vga:inst3
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_counter
+# storage
+db|top_de2.(4).cnf
+db|top_de2.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter.vhd
+d638d3a945c4dce242daccd372f7499c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_out)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_out)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_arch.vhd
+33a6f82137911e70d724b39af2474185
+}
+# hierarchies {
+vga:inst3|vga_counter:counter
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_sync
+# storage
+db|top_de2.(5).cnf
+db|top_de2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync.vhd
+6f1999a7fb7b347db6e0d61ab07a76da
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_in)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync_arch.vhd
+4f91f8202a15387a13b321bcc71d803d
+}
+# hierarchies {
+vga:inst3|vga_sync:sync
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_triggers
+# storage
+db|top_de2.(6).cnf
+db|top_de2.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers.vhd
+ac3a6e52749eeecbf033ac29435f632
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_in)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers_arch.vhd
+a44685658227b581274dd927d4be59
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+}
+# hierarchies {
+vga:inst3|vga_triggers:triggers
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_read
+# storage
+db|top_de2.(7).cnf
+db|top_de2.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read.vhd
+37138e7eed7fb94e822b68fd23a94a3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read_arch.vhd
+bfb03851948eacecd79f7aab512844c5
 }
 # hierarchies {
 vga:inst3|vga_read:read_and_output
@@ -1673,7 +1897,7 @@ vga:inst3|vga_read:read_and_output
 
 # end
 # entity
-vga_trans
+vga_field_trans
 # storage
 db|top_de2.(8).cnf
 db|top_de2.(8).cnf
@@ -1683,8 +1907,8 @@ ON
 }
 # case_insensitive
 # source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans.vhd
-984fa51d55ac7b0c0b8be2ffa9648ee
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans.vhd
+bb7c6af69dbb850d17f9615ce3392d
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1707,15 +1931,344 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans_arch.vhd
-f8f53d397ea7766a38d5b3c4dbb2d7e
 |home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_trans_vga_trans_arch_cfg.vhd
-252efb8afce287888842f86bec24ef
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans_arch.vhd
+2bc5445a3a78b970d613697cc7c39c
 }
 # hierarchies {
-vga:inst3|vga_trans:trans
+vga:inst3|vga_field_trans:field_translation
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_field_trans_reset
+# storage
+db|top_de2.(9).cnf
+db|top_de2.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans_reset.vhd
+14cc68964867904e57e2ec8fb5e8bda6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(mem_addr_reset_out)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans_reset_arch.vhd
+63bbaa561cc84678798581e9ec9794
+}
+# hierarchies {
+vga:inst3|vga_field_trans_reset:field_translation_reset
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_field_check
+# storage
+db|top_de2.(10).cnf
+db|top_de2.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check.vhd
+107d28874ba6c95a42f1dae1e2f7a37
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_in)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check_arch.vhd
+a135134f77cf50cda72e412dcf049e9
+}
+# hierarchies {
+vga:inst3|vga_field_check:field_check
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_np_trans
+# storage
+db|top_de2.(19).cnf
+db|top_de2.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans.vhd
+db426bbcff6a461f4831b753f1bec0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(mem_addr_reset_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(mem_addr_out)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans_arch.vhd
+c04a9cf6ff17d046ba1f09b16d4c596
+}
+# hierarchies {
+vga:inst3|vga_np_trans:np_translation
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_np_trans_reset
+# storage
+db|top_de2.(25).cnf
+db|top_de2.(25).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans_reset.vhd
+d140da719e6055bd4dcc73fe20e5af6b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(mem_addr_reset_out)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans_reset_arch.vhd
+a81c2d299fabf9695870dc977a207f3f
+}
+# hierarchies {
+vga:inst3|vga_np_trans_reset:np_translation_reset
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_np_check
+# storage
+db|top_de2.(26).cnf
+db|top_de2.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_check.vhd
+2582191c778dc94b2f23266effb923b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_in)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_check_arch.vhd
+909c4a9019c79534d15d5895595fb41d
+}
+# hierarchies {
+vga:inst3|vga_np_check:np_check
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_score_trans
+# storage
+db|top_de2.(35).cnf
+db|top_de2.(35).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_trans.vhd
+953f9ac5b51f9cda9c891b1db1f87fcb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(mem_addr_out)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_trans_arch.vhd
+cecc66db17d8d8c4e7158e07175395c
+}
+# hierarchies {
+vga:inst3|vga_score_trans:score_translation
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_score_check
+# storage
+db|top_de2.(36).cnf
+db|top_de2.(36).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_check.vhd
+30d4c423a77abc466fe31da2039855
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(pos_x_in)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(pos_y_in)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_check_arch.vhd
+722ed5af885e117f138c63d4753977c4
+}
+# hierarchies {
+vga:inst3|vga_score_check:score_check
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -1726,8 +2279,8 @@ vga:inst3|vga_trans:trans
 # entity
 depiece_simple
 # storage
-db|top_de2.(19).cnf
-db|top_de2.(19).cnf
+db|top_de2.(37).cnf
+db|top_de2.(37).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1748,10 +2301,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-4f8b7d5d10b2e3f08bcf19ee27a23fc
 |home|epo3-user|Desktop|git|epo3|master|VHDL|depiece_simple-depiece_simple_arch.vhd
-f6d7f119a0c59687258c25d5a793da1a
+bca390e3e73514134d981fa912e8bcf
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
 }
 # hierarchies {
 depiece_simple:inst5

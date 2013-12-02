@@ -55,7 +55,7 @@ begin
 			data <= '0';
 
 			if (
-				addr = 5 or addr = 6 or addr = 9 or addr = 10
+				addr = 5 or addr = 6 or addr = 9 or addr = 10 or addr = 128
 			) then
 				data <= '1';
 			end if;
@@ -64,9 +64,6 @@ begin
 
 	rst <= '1', '0' after clk_period;
 end;
-
-
-
 
 
 

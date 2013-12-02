@@ -4,91 +4,91 @@
 ------ reading placement 'Tmp_Cell_(piece_lut(piece_lut(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Fri Nov 29 12:15:10 2013
+------ routing started Sat Nov 30 13:59:32 2013
  74 nets have to be routed.
-Routing net 'clk' (4/4): ...b OK!
-Routing net 'mask_7_0_5' (2/2): .b OK!
-Routing net 'mask_7_0_6' (2/2): .b OK!
-Routing net 'mask_7_0_2' (2/2): .b OK!
-Routing net 'error_side' (2/2): .b OK!
-Routing net 'mask_7_0_4' (2/2): .b OK!
-Routing net 'mask_7_0_3' (2/2): .b OK!
-Routing net 'mask_7_0_1' (2/2): .b OK!
-Routing net 'mask_7_0_0' (2/2): .b OK!
-Routing net 'start' (2/2): .b OK!
-Routing net 'error_bot' (2/2): .b OK!
-Routing net 'ready' (2/2): .b OK!
-Routing net 'n79' (2/2): . OK!
-Routing net 'n58' (2/2): . OK!
-Routing net 'y_3_0_3' (3/3): ..b OK!
-Routing net 'n74' (2/2): . OK!
-Routing net 'n75' (2/2): . OK!
-Routing net 'n56' (2/2): . OK!
-Routing net 'n78' (2/2): . OK!
-Routing net 'n49' (2/2): . OK!
-Routing net 'rom_data_3_0_1' (3/3): ..b OK!
-Routing net 'x_2_0_1' (3/3): ..b OK!
-Routing net 'n68' (2/2): . OK!
-Routing net 'n80' (2/2): . OK!
-Routing net 'n55' (2/2): . OK!
-Routing net 'n54' (2/2): . OK!
-Routing net 'n69' (2/2): . OK!
-Routing net 'n50' (2/2): . OK!
-Routing net 'n61' (2/2): . OK!
-Routing net 'n47' (3/3): .. OK!
-Routing net 'n76' (2/2): . OK!
-Routing net 'rom_data_3_0_3' (3/3): ..b OK!
-Routing net 'y_3_0_1' (3/3): ..b OK!
-Routing net 'rst' (4/4): ...b OK!
-Routing net 'rom_data_3_0_0' (4/4): ...b OK!
-Routing net 'x_2_0_0' (4/4): ...b OK!
-Routing net 'rom_data_3_0_2' (4/4): ...b OK!
-Routing net 'y_3_0_0' (4/4): ...b OK!
-Routing net 'n67' (3/3): .. OK!
-Routing net 'n73' (3/3): .. OK!
-Routing net 'n63' (3/3): .. OK!
-Routing net 'n64' (2/2): . OK!
-Routing net 'n65' (2/2): . OK!
+Routing net 'lut_mask_7_0_6' (2/2): .b OK!
+Routing net 'lut_mask_7_0_0' (2/2): .b OK!
+Routing net 'lut_mask_7_0_1' (2/2): .b OK!
+Routing net 'lut_mask_7_0_5' (2/2): .b OK!
+Routing net 'lut_mask_7_0_4' (2/2): .b OK!
+Routing net 'lut_mask_7_0_3' (2/2): .b OK!
+Routing net 'lut_mask_7_0_2' (2/2): .b OK!
+Routing net 'n53' (2/2): . OK!
+Routing net 'lut_start' (2/2): .b OK!
+Routing net 'lut_error_side' (2/2): .b OK!
+Routing net 'lut_error_bot' (2/2): .b OK!
+Routing net 'lut_ready' (2/2): .b OK!
 Routing net 'n71' (2/2): . OK!
+Routing net 'n80' (2/2): . OK!
+Routing net 'n56' (3/3): .. OK!
+Routing net 'n64' (2/2): . OK!
+Routing net 'n78' (2/2): . OK!
 Routing net 'n59' (2/2): . OK!
-Routing net 'n66' (2/2): . OK!
-Routing net 'n72' (2/2): . OK!
-Routing net 'n53' (3/3): .. OK!
-Routing net 'y_3_0_2' (4/4): ...b OK!
-Routing net 'next_state_1_port' (2/2): . OK!
-Routing net 'x_2_0_2' (4/4): ...b OK!
-Routing net 'n77' (2/2): . OK!
+Routing net 'n75' (2/2): . OK!
+Routing net 'n57' (2/2): . OK!
+Routing net 'n69' (2/2): . OK!
+Routing net 'n74' (2/2): . OK!
+Routing net 'lut_rom_data_3_0_1' (3/3): ..b OK!
+Routing net 'lut_x_2_0_1' (3/3): ..b OK!
+Routing net 'lut_rom_data_3_0_3' (3/3): ..b OK!
+Routing net 'lut_y_3_0_1' (3/3): ..b OK!
+Routing net 'n68' (2/2): . OK!
+Routing net 'lut_next_state_2_port' (2/2): . OK!
+Routing net 'lut_y_3_0_2' (4/4): ...b OK!
+Routing net 'n76' (2/2): . OK!
+Routing net 'n58' (2/2): . OK!
+Routing net 'n66' (3/3): .. OK!
+Routing net 'lut_rom_data_3_0_0' (4/4): ...b OK!
+Routing net 'n65' (2/2): . OK!
+Routing net 'lut_x_2_0_0' (4/4): ...b OK!
+Routing net 'n67' (2/2): . OK!
+Routing net 'n79' (2/2): . OK!
 Routing net 'n62' (2/2): . OK!
-Routing net 'n60' (4/4): ... OK!
-Routing net 'n48' (3/3): .. OK!
+Routing net 'n49' (3/3): .. OK!
+Routing net 'n73' (3/3): .. OK!
+Routing net 'lut_rom_data_3_0_2' (4/4): ...b OK!
+Routing net 'lut_y_3_0_0' (4/4): ...b OK!
+Routing net 'lut_state_2_port' (3/3): .. OK!
+Routing net 'n52' (2/2): . OK!
+Routing net 'n63' (4/4): ... OK!
+Routing net 'n47' (2/2): . OK!
+Routing net 'lut_y_3_0_3' (3/3): ..b OK!
+Routing net 'n48' (2/2): . OK!
+Routing net 'n72' (2/2): . OK!
+Routing net 'n77' (2/2): . OK!
+Routing net 'lut_x_2_0_2' (4/4): ...b OK!
+Routing net 'lut_rst' (4/4): ...b OK!
+Routing net 'lut_clk' (4/4): ...b OK!
+Routing net 'lut_state_1_port' (4/4): ... OK!
+Routing net 'n54' (8/8): ....... OK!
+Routing net 'lut_next_state_0_port' (2/2): . OK!
+Routing net 'n50' (3/3): .. OK!
+Routing net 'n51' (3/3): .. OK!
+Routing net 'n61' (2/2): . OK!
 Routing net 'n70' (4/4): ... OK!
-Routing net 'n52' (7/7): ...... OK!
-Routing net 'next_state_0_port' (2/2): . OK!
-Routing net 'n51' (8/8): ....... OK!
-Routing net 'n57' (7/7): ...... OK!
-Routing net 'next_state_2_port' (2/2): . OK!
-Routing net 'state_2_port' (3/3): .. OK!
-Routing net 'state_0_port' (4/4): ... OK!
-Routing net 'state_1_port' (4/4): ... OK!
+Routing net 'n55' (7/7): ...... OK!
+Routing net 'lut_next_state_1_port' (2/2): . OK!
+Routing net 'n60' (7/7): ...... OK!
+Routing net 'lut_state_0_port' (4/4): ... OK!
 Routing net 'vdd' :  (Power special)
 Routing net 'vss' :  (Power special)
-Routing net 'mask_7_0_7' (2/2): . OK!
-Routing net 'rom_addr_6_0_6' (2/2): . OK!
-Routing net 'rom_addr_6_0_5' (2/2): . OK!
-Routing net 'rom_addr_6_0_4' (2/2): . OK!
-Routing net 'rom_addr_6_0_3' (2/2): . OK!
-Routing net 'rom_addr_6_0_2' (2/2): . OK!
-Routing net 'rom_addr_6_0_1' (2/2): . OK!
-Routing net 'rom_addr_6_0_0' (2/2): . OK!
+Routing net 'lut_mask_7_0_7' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_6' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_5' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_4' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_3' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_2' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_1' (2/2): . OK!
+Routing net 'lut_rom_addr_6_0_0' (2/2): . OK!
 READY
 ----- Some interesting statistics ------
 Total number of nets:                 74 (100% completion)
-Total length of routed wires:         3807 grids = 33.502 mm
-No. of transistors (total / used):    832/494 = 59.38 %
-CPU-time consumption:                 0.00 sec.
-Elapsed time during routing:          0.01 sec. (0.00 % of cpu)
+Total length of routed wires:         3703 grids = 32.586 mm
+No. of transistors (total / used):    784/494 = 63.01 %
+CPU-time consumption:                 0.04 sec.
+Elapsed time during routing:          0.13 sec. (38.46 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
 ------ Writing 'Tmp_Cell_(piece_lut(piece_lut(test)))' ------
------- Trout: task completed on Fri Nov 29 12:15:10 2013
+------ Trout: task completed on Sat Nov 30 13:59:32 2013
  terminate

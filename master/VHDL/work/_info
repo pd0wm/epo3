@@ -1,0 +1,820 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/master/VHDL
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+Evga
+Z1 w1385486205
+Z2 DPx4 work 10 vga_params 0 22 T7ZWiE<lURSjHA_znC6l61
+Z3 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z4 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z6 dC:/Users/Wessel Bruinsma/Dropbox/TU/EPO/EPO-3 Personal/git/master/VHDL
+8vga.vhd
+Fvga.vhd
+l0
+L6
+VOeWS^<mfT<f9U165@d8`?2
+!s100 dFbYL=OG;H;LKk9R?:JAa0
+Z7 OP;C;10.2c;57
+32
+Z8 !s110 1385814759
+!i10b 1
+Z9 !s108 1385814759.282000
+Z10 !s90 -reportprogress|300|vga.vhd|vga_arch.vhd|vga_counter.vhd|vga_counter_arch.vhd|vga_counter_vga_counter_behav_cfg.vhd|vga_field_check.vhd|vga_field_check_arch.vhd|vga_field_check_vga_field_check_arch_cfg.vhd|vga_field_trans.vhd|vga_field_trans_arch.vhd|vga_field_trans_reset.vhd|vga_field_trans_reset_arch.vhd|vga_field_trans_reset_vga_trans_reset_arch_cfg.vhd|vga_field_trans_vga_trans_arch_cfg.vhd|vga_np_check.vhd|vga_np_check_arch.vhd|vga_np_trans.vhd|vga_np_trans_arch.vhd|vga_np_trans_reset.vhd|vga_np_trans_reset_arch.vhd|vga_read.vhd|vga_read_arch.vhd|vga_read_vga_read_behav_cfg.vhd|vga_sync.vhd|vga_sync_arch.vhd|vga_sync_vga_sync_arch_cfg.vhd|vga_tb.vhd|vga_tb_vga_tb_arch_cfg.vhd|vga_triggers.vhd|vga_triggers_arch.vhd|vga_triggers_vga_triggers_arch_cfg.vhd|vga_vga_arch_cfg.vhd|
+Z11 !s107 vga_vga_arch_cfg.vhd|vga_triggers_vga_triggers_arch_cfg.vhd|vga_triggers_arch.vhd|vga_triggers.vhd|vga_tb_vga_tb_arch_cfg.vhd|vga_tb.vhd|vga_sync_vga_sync_arch_cfg.vhd|vga_sync_arch.vhd|vga_sync.vhd|vga_read_vga_read_behav_cfg.vhd|vga_read_arch.vhd|vga_read.vhd|vga_np_trans_reset_arch.vhd|vga_np_trans_reset.vhd|vga_np_trans_arch.vhd|vga_np_trans.vhd|vga_np_check_arch.vhd|vga_np_check.vhd|vga_field_trans_vga_trans_arch_cfg.vhd|vga_field_trans_reset_vga_trans_reset_arch_cfg.vhd|vga_field_trans_reset_arch.vhd|vga_field_trans_reset.vhd|vga_field_trans_arch.vhd|vga_field_trans.vhd|vga_field_check_vga_field_check_arch_cfg.vhd|vga_field_check_arch.vhd|vga_field_check.vhd|vga_counter_vga_counter_behav_cfg.vhd|vga_counter_arch.vhd|vga_counter.vhd|vga_arch.vhd|vga.vhd|
+o-O0
+Z12 tExplicit 1
+Avga_arch
+Z13 w1385814584
+Z14 DEx4 work 3 vga 0 22 OeWS^<mfT<f9U165@d8`?2
+R2
+R3
+R4
+R5
+Z15 8vga_arch.vhd
+Z16 Fvga_arch.vhd
+l120
+L6
+Z17 VR>^Gz<jR6cDb1V5dDh=8^2
+Z18 !s100 AoYGWX]R0O?=amNNQ`1Gf0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Evga_counter
+R1
+R2
+R3
+R4
+R5
+R6
+8vga_counter.vhd
+Fvga_counter.vhd
+l0
+L6
+VGjMTl]eYiQD2@]52FGUkd2
+!s100 `PJ3Aol_?fBS?;Nn4U;@33
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_counter_behav
+Z19 DEx4 work 11 vga_counter 0 22 GjMTl]eYiQD2@]52FGUkd2
+R2
+R3
+R4
+R5
+Z20 8vga_counter_arch.vhd
+Z21 Fvga_counter_arch.vhd
+l10
+L6
+Z22 V@KQIJa_`8SKJmc_Gd_i`11
+Z23 !s100 ^=>cGQk3Gm=kzz7[CO6fn2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_counter_vga_counter_behav_cfg
+evga_counter
+avga_counter_behav
+DAx4 work 11 vga_counter 17 vga_counter_behav 22 @KQIJa_`8SKJmc_Gd_i`11
+R2
+R3
+R4
+R5
+R19
+R1
+R6
+8vga_counter_vga_counter_behav_cfg.vhd
+Fvga_counter_vga_counter_behav_cfg.vhd
+l0
+L1
+VGn@PcT41B`4MK8K]IU5Lb2
+!s100 Eh`]@PUjga^B`:AS6Ba<A1
+R7
+32
+R8
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_field_check
+R1
+R2
+R3
+R4
+R5
+R6
+8vga_field_check.vhd
+Fvga_field_check.vhd
+l0
+L6
+VJb96lFj]BNh`2]oS7Pceo3
+!s100 :k75gol;mV@`CgB?4RkOC3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_field_check_arch
+Z24 DEx4 work 15 vga_field_check 0 22 Jb96lFj]BNh`2]oS7Pceo3
+R2
+R3
+R4
+R5
+Z25 8vga_field_check_arch.vhd
+Z26 Fvga_field_check_arch.vhd
+l9
+L6
+Z27 V[T;LEDS^HLjZ^J2mliG0b1
+Z28 !s100 [8nEWeHCQ=AIMIibBe5:S1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_field_check_vga_field_check_arch_cfg
+evga_field_check
+avga_field_check_arch
+DAx4 work 15 vga_field_check 20 vga_field_check_arch 22 [T;LEDS^HLjZ^J2mliG0b1
+R2
+R3
+R4
+R5
+R24
+R1
+R6
+8vga_field_check_vga_field_check_arch_cfg.vhd
+Fvga_field_check_vga_field_check_arch_cfg.vhd
+l0
+L1
+V0kX0K2co60canKz8n;`f`3
+!s100 zdgSkj[AoJ:36>[6ad@]`2
+R7
+32
+R8
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_field_trans
+Z29 w1385746549
+R2
+R3
+R4
+R5
+R6
+8vga_field_trans.vhd
+Fvga_field_trans.vhd
+l0
+L6
+VbN6AV;Nk[<jIE]XL5:SRI1
+!s100 bDH=EiSfmocKkC:C>3=3A0
+R7
+32
+Z30 !s110 1385814760
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_field_trans_arch
+Z31 DEx4 work 15 vga_field_trans 0 22 bN6AV;Nk[<jIE]XL5:SRI1
+R2
+R3
+R4
+R5
+Z32 8vga_field_trans_arch.vhd
+Z33 Fvga_field_trans_arch.vhd
+l9
+L6
+Z34 V^TlVm8z9mW3nQ]QMJPf]n0
+Z35 !s100 Vk[d2=gmmMa9JV;eQETcd3
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Evga_field_trans_reset
+Z36 w1385746537
+R2
+R3
+R4
+R5
+R6
+8vga_field_trans_reset.vhd
+Fvga_field_trans_reset.vhd
+l0
+L6
+VoS29iKYzFIa`4h_b9@=IU0
+!s100 o@n^4:FS`aO`DFH?f1L<K2
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_field_trans_reset_arch
+Z37 DEx4 work 21 vga_field_trans_reset 0 22 oS29iKYzFIa`4h_b9@=IU0
+R2
+R3
+R4
+R5
+Z38 8vga_field_trans_reset_arch.vhd
+Z39 Fvga_field_trans_reset_arch.vhd
+l9
+L6
+Z40 V]CMZzIQ6bD;H:Ve[4[ObZ0
+Z41 !s100 <8PnWmTz>EChFY;S7[C8N3
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_field_trans_reset_vga_trans_reset_arch_cfg
+evga_field_trans_reset
+avga_field_trans_reset_arch
+DAx4 work 21 vga_field_trans_reset 26 vga_field_trans_reset_arch 22 ]CMZzIQ6bD;H:Ve[4[ObZ0
+R2
+R3
+R4
+R5
+R37
+w1385746555
+R6
+8vga_field_trans_reset_vga_trans_reset_arch_cfg.vhd
+Fvga_field_trans_reset_vga_trans_reset_arch_cfg.vhd
+l0
+L1
+VVC4^feYYl]3d?;m_N94=W1
+!s100 3NAl32K9@gKRSe8E<k9ai3
+R7
+32
+R30
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Cvga_field_trans_vga_trans_arch_cfg
+evga_field_trans
+avga_field_trans_arch
+DAx4 work 15 vga_field_trans 20 vga_field_trans_arch 22 ^TlVm8z9mW3nQ]QMJPf]n0
+R2
+R3
+R4
+R5
+R31
+w1385746628
+R6
+8vga_field_trans_vga_trans_arch_cfg.vhd
+Fvga_field_trans_vga_trans_arch_cfg.vhd
+l0
+L1
+VD3_1?b2=EU8EP]I0fWI1G3
+!s100 n83B7jHR:k8IIddjBUff_3
+R7
+32
+R30
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_np_check
+w1385813020
+R2
+R3
+R4
+R5
+R6
+8vga_np_check.vhd
+Fvga_np_check.vhd
+l0
+L6
+VFA4C[`YKL1ban0mnT6J9m2
+!s100 QK45DLCd=LPBVV9I^?gH>3
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_np_check_arch
+Z42 w1385813059
+Z43 DEx4 work 12 vga_np_check 0 22 FA4C[`YKL1ban0mnT6J9m2
+R2
+R3
+R4
+R5
+Z44 8vga_np_check_arch.vhd
+Z45 Fvga_np_check_arch.vhd
+l9
+L6
+Z46 V:a^0n8IMnFe41EG20EQ?U0
+Z47 !s100 l6NA2hmQnmhE3QUNf[V[V0
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Evga_np_trans
+w1385813106
+R2
+R3
+R4
+R5
+R6
+8vga_np_trans.vhd
+Fvga_np_trans.vhd
+l0
+L6
+VeJ;U^8]X>C11z56VVgn>;0
+!s100 37>em7H32d0JlDYR7ZG6V1
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_np_trans_arch
+w1385814739
+Z48 DEx4 work 12 vga_np_trans 0 22 eJ;U^8]X>C11z56VVgn>;0
+R2
+R3
+R4
+R5
+Z49 8vga_np_trans_arch.vhd
+Z50 Fvga_np_trans_arch.vhd
+l9
+L6
+V:fUZ?mh=59_CJ5VJ<Wm_50
+!s100 igP[Y73F78CBdH[l>?Slf2
+R7
+32
+R30
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Evga_np_trans_reset
+w1385813276
+R2
+R3
+R4
+R5
+R6
+8vga_np_trans_reset.vhd
+Fvga_np_trans_reset.vhd
+l0
+L6
+VG]YRR[06fB9USKfgo@zo61
+!s100 z_:TdzHl[_Gzj;D@]^Lkl2
+R7
+32
+Z51 !s110 1385814761
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_np_trans_reset_arch
+Z52 w1385813295
+Z53 DEx4 work 18 vga_np_trans_reset 0 22 G]YRR[06fB9USKfgo@zo61
+R2
+R3
+R4
+R5
+Z54 8vga_np_trans_reset_arch.vhd
+Z55 Fvga_np_trans_reset_arch.vhd
+l9
+L6
+Z56 V;`ejJQk:4=>W79=cG:TY<0
+Z57 !s100 FcEa=`62:HL<9S<f6:36i2
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Pvga_params
+R4
+R5
+Z58 w1385814664
+R6
+Z59 8params.vhd
+Z60 Fparams.vhd
+l0
+L4
+VT7ZWiE<lURSjHA_znC6l61
+R7
+32
+R8
+Z61 !s108 1385814759.001000
+Z62 !s90 -reportprogress|300|params.vhd|
+Z63 !s107 params.vhd|
+o-O0
+R12
+!s100 @lKmXfd4E@=9zCO[A58Co0
+!i10b 1
+Bbody
+R2
+R4
+R5
+l0
+L54
+VAhen_W@SB3d1Im1ck84]=3
+!s100 @kg@m=Q:o`FJfHBSj^]lU3
+R7
+32
+R8
+R61
+R62
+R63
+o-O0
+R12
+nbody
+!i10b 1
+Evga_read
+w1385814448
+R2
+R3
+R4
+R5
+R6
+8vga_read.vhd
+Fvga_read.vhd
+l0
+L6
+VA=Q1?ZKlNLdl1kOH`f>DY2
+!s100 >>d8>0obdH73Azm`3zJm=3
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_read_behav
+Z64 w1385814521
+Z65 DEx4 work 8 vga_read 0 22 A=Q1?ZKlNLdl1kOH`f>DY2
+R2
+R3
+R4
+R5
+Z66 8vga_read_arch.vhd
+Z67 Fvga_read_arch.vhd
+l10
+L6
+Z68 V_dK7nizLX1RTdTm8L53UB0
+Z69 !s100 d^n@`=jZVAETJiO]V6?R<3
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_read_vga_read_behav_cfg
+evga_read
+avga_read_behav
+DAx4 work 8 vga_read 14 vga_read_behav 22 _dK7nizLX1RTdTm8L53UB0
+R2
+R3
+R4
+R5
+R65
+R1
+R6
+8vga_read_vga_read_behav_cfg.vhd
+Fvga_read_vga_read_behav_cfg.vhd
+l0
+L1
+V_gh?<4lZeQUI9hJLLihDL2
+!s100 :l^[DbTm]0>WU63<=Xl813
+R7
+32
+R51
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_sync
+R1
+R2
+R3
+R4
+R5
+R6
+8vga_sync.vhd
+Fvga_sync.vhd
+l0
+L6
+V=IgcTRZ?OcI71NZI73MH52
+!s100 aHWGM>BWPY61Y]F4QGg4I2
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_sync_arch
+Z70 DEx4 work 8 vga_sync 0 22 =IgcTRZ?OcI71NZI73MH52
+R2
+R3
+R4
+R5
+Z71 8vga_sync_arch.vhd
+Z72 Fvga_sync_arch.vhd
+l9
+L6
+Z73 VnbiajgTN=>ISOAJ@jODfz1
+Z74 !s100 :[z=nQngZZ?1Y9b8H708Y2
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_sync_vga_sync_arch_cfg
+evga_sync
+avga_sync_arch
+DAx4 work 8 vga_sync 13 vga_sync_arch 22 nbiajgTN=>ISOAJ@jODfz1
+R2
+R3
+R4
+R5
+R70
+R1
+R6
+8vga_sync_vga_sync_arch_cfg.vhd
+Fvga_sync_vga_sync_arch_cfg.vhd
+l0
+L1
+VAY1]cBU:n[8c7_U^nVNaQ2
+!s100 MYkoV6z5078:`G8?7kD[n3
+R7
+32
+R51
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_tb
+Z75 w1385814756
+R2
+R3
+R4
+R5
+R6
+Z76 8vga_tb.vhd
+Z77 Fvga_tb.vhd
+l0
+L6
+VLRPm??Bm5X3oeYJ>27j9g3
+!s100 ]J8YXFILR9N;CPc>DSV1Y0
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_tb_arch
+R2
+R3
+R4
+R5
+Z78 DEx4 work 6 vga_tb 0 22 LRPm??Bm5X3oeYJ>27j9g3
+l29
+L10
+VQB4YFC5DPP;M_^0BRcoJ13
+!s100 nkNd`X8Kii<gIJh3g`Zh21
+R7
+32
+R51
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_tb_vga_tb_arch_cfg
+evga_tb
+avga_tb_arch
+R14
+DAx4 work 6 vga_tb 11 vga_tb_arch 22 QB4YFC5DPP;M_^0BRcoJ13
+R2
+R3
+R4
+R5
+R78
+R1
+R6
+8vga_tb_vga_tb_arch_cfg.vhd
+Fvga_tb_vga_tb_arch_cfg.vhd
+l0
+L1
+V1EfL;Dd907mDcS=LzXA<G0
+!s100 L27Gh1S4Fl74b_bnGi5Cf2
+R7
+32
+R51
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Evga_triggers
+w1385812024
+R2
+R3
+R4
+R5
+R6
+8vga_triggers.vhd
+Fvga_triggers.vhd
+l0
+L6
+VI?HE>:XGRjhNBDl9a872_1
+!s100 ^Nz[aHc4kGV9b>9];9Bkc0
+R7
+32
+Z79 !s110 1385814762
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Avga_triggers_arch
+Z80 w1385812297
+Z81 DEx4 work 12 vga_triggers 0 22 I?HE>:XGRjhNBDl9a872_1
+R2
+R3
+R4
+R5
+Z82 8vga_triggers_arch.vhd
+Z83 Fvga_triggers_arch.vhd
+l12
+L6
+Z84 V>1:;J75AHH]@lEo2>JDJX3
+Z85 !s100 fAgLK9?dh5SXUz3=CDNjS3
+R7
+32
+R79
+!i10b 1
+R9
+R10
+R11
+o-O0
+R12
+Cvga_triggers_vga_triggers_arch_cfg
+evga_triggers
+avga_triggers_arch
+DAx4 work 12 vga_triggers 17 vga_triggers_arch 22 >1:;J75AHH]@lEo2>JDJX3
+R2
+R3
+R4
+R5
+R81
+R1
+R6
+8vga_triggers_vga_triggers_arch_cfg.vhd
+Fvga_triggers_vga_triggers_arch_cfg.vhd
+l0
+L1
+Vc9MG?U:;?j^dnF=oe5UFC3
+!s100 HF5QU>AgV3IHSEYW_PO0>2
+R7
+32
+R79
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12
+Cvga_vga_arch_cfg
+evga
+avga_arch
+R43
+R53
+R48
+R24
+R37
+R31
+R65
+R81
+R70
+R19
+DCx4 work 27 vga_read_vga_read_behav_cfg 0 22 _gh?<4lZeQUI9hJLLihDL2
+DCx4 work 46 vga_field_trans_reset_vga_trans_reset_arch_cfg 0 22 VC4^feYYl]3d?;m_N94=W1
+DCx4 work 34 vga_field_trans_vga_trans_arch_cfg 0 22 D3_1?b2=EU8EP]I0fWI1G3
+DCx4 work 34 vga_triggers_vga_triggers_arch_cfg 0 22 c9MG?U:;?j^dnF=oe5UFC3
+DCx4 work 40 vga_field_check_vga_field_check_arch_cfg 0 22 0kX0K2co60canKz8n;`f`3
+DCx4 work 26 vga_sync_vga_sync_arch_cfg 0 22 AY1]cBU:n[8c7_U^nVNaQ2
+DCx4 work 33 vga_counter_vga_counter_behav_cfg 0 22 Gn@PcT41B`4MK8K]IU5Lb2
+DAx4 work 3 vga 8 vga_arch 22 R>^Gz<jR6cDb1V5dDh=8^2
+R2
+R3
+R4
+R5
+R14
+w1385746631
+R6
+8vga_vga_arch_cfg.vhd
+Fvga_vga_arch_cfg.vhd
+l0
+L1
+VelOiZVMJ]DhC;HP]z=H0?2
+!s100 A4MzIM[Y@3KKhYQ?U@bST1
+R7
+32
+!s110 1385814763
+!i10b 0
+R9
+R10
+R11
+o-O0
+R12

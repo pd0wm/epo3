@@ -1,9 +1,8 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.vga_params.all;
+library IEEE;
+use IEEE.std_logic_1164.ALL;
 
 architecture controller_tb_arch of controller_tb is
+<<<<<<< HEAD
 	constant clk_period : time := 20 ns;
 
 	component controller
@@ -68,5 +67,9 @@ end;
 
 
 
+=======
+begin
+end controller_tb_arch;
+>>>>>>> c8e9bc57a69bbc272e74803a3f0d0b12d9e576f0
 
 

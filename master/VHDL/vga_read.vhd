@@ -9,6 +9,8 @@ entity vga_read is
 		rst         : in  std_logic;
 
 		in_field_in : in  std_logic;
+		in_np_in    : in  std_logic;
+		in_score_in : in  std_logic;
 		data_in     : in  std_logic;
 
 		h_sync_in   : in  std_logic;

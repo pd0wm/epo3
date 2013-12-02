@@ -27,6 +27,7 @@ begin
 		end if;
 
 		if (end_frame_in = '1') then
+			counter_new <= (others => '0');
 			mem_addr_new <= (others => '0');
 		end if;
 	end process;
