@@ -42,7 +42,11 @@ begin
       ready <= '1';
       addr <= "ZZZZZZZZ";
       data <= 'Z';
+	  if(start = '1') then
+	  new_state <= done;
+	  else
       new_state <= waiting;
+	  end if;
   end case;
 end process;
 end behaviour;
