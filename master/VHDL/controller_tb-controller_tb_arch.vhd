@@ -2,7 +2,6 @@ library IEEE;
 use IEEE.std_logic_1164.ALL;
 
 architecture controller_tb_arch of controller_tb is
-<<<<<<< HEAD
 	constant clk_period : time := 20 ns;
 
 	component controller
@@ -38,14 +37,70 @@ architecture controller_tb_arch of controller_tb is
 			 inputs            : in  std_logic_vector(7 downto 0));
 	end component controller;
 
-	signal clk, rst : std_logic;
+	signal clk, rst          : std_logic;
+	signal lut_x             : std_logic_vector(2 downto 0);
+	signal lut_y             : std_logic_vector(3 downto 0);
+	signal lut_rot           : std_logic_vector(1 downto 0);
+	signal lut_piece_type    : std_logic_vector(2 downto 0);
+	signal lut_ready         : std_logic;
+	signal lut_error         : std_logic;
+	signal lut_start         : std_logic;
+	signal new_piece         : std_logic;
+	signal next_piece        : std_logic_vector(2 downto 0);
+	signal check_empty       : std_logic;
+	signal check_start       : std_logic;
+	signal check_ready       : std_logic;
+	signal draw_erase_draw   : std_logic;
+	signal draw_erase_start  : std_logic;
+	signal draw_erase_ready  : std_logic;
+	signal clear_shift_start : std_logic;
+	signal clear_shift_ready : std_logic;
+	signal draw_score_draw   : std_logic;
+	signal draw_score_ready  : std_logic;
+	signal timer_1_time      : std_logic_vector(7 downto 0);
+	signal timer_1_start     : std_logic;
+	signal timer_1_reset     : std_logic;
+	signal timer_1_done      : std_logic;
+	signal timer_2_time      : std_logic_vector(7 downto 0);
+	signal timer_2_start     : std_logic;
+	signal timer_2_reset     : std_logic;
+	signal timer_2_done      : std_logic;
+	signal inputs            : std_logic_vector(7 downto 0);
 
 begin
-	uut : controller port map(
-			clk => clk,
-			rst => rst
-		);
-
+	dut : controller port map(
+		clk               => clk,
+		rst               => rst,
+		lut_x             => lut_x,
+		lut_y             => lut_y,
+		lut_rot           => lut_rot,
+		lut_piece_type    => lut_piece_type,
+		lut_ready         => lut_ready,
+		lut_error         => lut_error,
+		lut_start         => lut_start,
+		new_piece         => new_piece,
+		next_piece        => next_piece,
+		check_empty       => check_empty,
+		check_start       => check_start,
+		check_ready       => check_ready,
+		draw_erase_draw   => draw_erase_draw,
+		draw_erase_start  => draw_erase_start,
+		draw_erase_ready  => draw_erase_ready,
+		clear_shift_start => clear_shift_start,
+		clear_shift_ready => clear_shift_ready,
+		draw_score_draw   => draw_score_draw,
+		draw_score_ready  => draw_score_ready,
+		timer_1_time      => timer_1_time,
+		timer_1_start     => timer_1_start,
+		timer_1_reset     => timer_1_reset,
+		timer_1_done      => timer_1_done,
+		timer_2_time      => timer_2_time,
+		timer_2_start     => timer_2_start,
+		timer_2_reset     => timer_2_reset,
+		timer_2_done      => timer_2_done,
+		inputs            => inputs
+	);
+	
 	clock : process
 	begin
 		clk <= '1';
@@ -63,13 +118,5 @@ begin
 
 	rst <= '1', '0' after clk_period;
 end;
-
-
-
-
-=======
-begin
-end controller_tb_arch;
->>>>>>> c8e9bc57a69bbc272e74803a3f0d0b12d9e576f0
 
 
