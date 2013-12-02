@@ -170,7 +170,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -264,7 +264,7 @@ begin
 				new_cur_rot_new <= cur_rot_new;
 
 				-- Keep outputs
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -303,7 +303,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -335,7 +335,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -372,7 +372,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -401,7 +401,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -438,7 +438,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -474,7 +474,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -510,7 +510,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -538,7 +538,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -605,7 +605,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -640,7 +640,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -673,7 +673,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
@@ -710,7 +710,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -739,7 +739,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -771,7 +771,7 @@ begin
 				new_cur_rot_new <= cur_rot_new;
 
 				-- Keep outputs
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -809,7 +809,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -845,7 +845,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -875,7 +875,7 @@ begin
 				new_cur_rot_new <= cur_rot_new;
 
 				-- Keep outputs
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -913,7 +913,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -945,7 +945,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
@@ -982,7 +982,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -1012,7 +1012,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1043,7 +1043,7 @@ begin
 				new_cur_rot_new <= cur_rot_new;
 
 				-- Keep outputs
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1081,7 +1081,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1113,7 +1113,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
@@ -1150,7 +1150,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -1182,7 +1182,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1211,7 +1211,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1247,7 +1247,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1278,7 +1278,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1310,7 +1310,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -1342,7 +1342,7 @@ begin
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= new_piece;
+				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
