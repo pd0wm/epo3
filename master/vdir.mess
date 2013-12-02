@@ -151,6 +151,7 @@ ENTITY controller
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY controller_arch
+    Source modified time: Mon Dec  2 20:30:58 2013
     Depends on: E work controller Z4Pg`z=5?:?geXVE0RV2>2
     Depends on: P work vga_params k9F]S[jE>zJo[VY[Bzio<1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -165,8 +166,26 @@ ENTITY controller
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-    Source modified time: Mon Dec  2 20:29:46 2013
     Debug Symbol file exists
+VHDL CONFIGURATION controller_controller_arch_cfg
+    Configuration for architecture: controller_arch
+    Configuration for entity: controller
+    Depends on: P work vga_params k9F]S[jE>zJo[VY[Bzio<1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work controller controller_arch g=n1]c;_Gm=dZEAjXAHIS0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work controller Z4Pg`z=5?:?geXVE0RV2>2
+    Source modified time: Mon Dec  2 20:31:14 2013
+    Source directory: master
+    HDL source file: VHDL/controller_controller_arch_cfg.vhd
+    Source file: VHDL/controller_controller_arch_cfg.vhd
+    Start location: VHDL/controller_controller_arch_cfg.vhd:1
+    Version string: AK:PTiQLzHN][=WhNQhC82
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 ENTITY controller_tb
     Source modified time: Fri Nov 29 10:52:59 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -196,6 +215,25 @@ ENTITY controller_tb
     Compile defaults: Explicit=1
     Source directory: master
     Debug Symbol file exists
+VHDL CONFIGURATION controller_tb_controller_tb_arch_cfg
+    Configuration for architecture: controller_tb_arch
+    Configuration for entity: controller_tb
+    Depends on: E work controller Z4Pg`z=5?:?geXVE0RV2>2
+    Depends on: C work controller_controller_arch_cfg AK:PTiQLzHN][=WhNQhC82
+    Depends on: A work controller_tb controller_tb_arch :gT;FOHOTUB]BbgZVJ<BW1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work controller_tb ab591K;5n32gi;zbb@6d<2
+    Source modified time: Mon Dec  2 20:31:20 2013
+    Source directory: master
+    HDL source file: VHDL/controller_tb_controller_tb_arch_cfg.vhd
+    Source file: VHDL/controller_tb_controller_tb_arch_cfg.vhd
+    Start location: VHDL/controller_tb_controller_tb_arch_cfg.vhd:1
+    Version string: V?cjISM1EPaZA:5A6[5B43
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 ENTITY dec8
     Source modified time: Wed Nov 27 12:25:05 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
