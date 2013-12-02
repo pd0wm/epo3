@@ -568,18 +568,18 @@ begin
 				new_lut_y            <= cur_lut_y;
 				new_lut_rot          <= cur_lut_rot;
 				new_lut_piece_type   <= cur_lut_piece_type;
-				new_lut_start        <= lut_start;
-				new_new_piece        <= new_piece;
-				new_check_start      <= check_start;
-				new_draw_erase_draw  <= draw_erase_draw;
-				new_draw_erase_start <= draw_erase_start;
-				new_draw_score_draw  <= draw_score_draw;
-				new_timer_1_time     <= timer_1_time;
-				new_timer_1_start    <= timer_1_start;
-				new_timer_1_reset    <= timer_1_reset;
-				new_timer_2_time     <= timer_2_time;
-				new_timer_2_start    <= timer_2_start;
-				new_timer_2_reset    <= timer_2_reset;
+				new_lut_start        <= cur_lut_start;
+				new_new_piece        <= cur_new_piece;
+				new_check_start      <= cur_check_start;
+				new_draw_erase_draw  <= cur_draw_erase_draw;
+				new_draw_erase_start <= cur_draw_erase_start;
+				new_draw_score_draw  <= cur_draw_score_draw;
+				new_timer_1_time     <= cur_timer_1_time;
+				new_timer_1_start    <= cur_timer_1_start;
+				new_timer_1_reset    <= cur_timer_1_reset;
+				new_timer_2_time     <= cur_timer_2_time;
+				new_timer_2_start    <= cur_timer_2_start;
+				new_timer_2_reset    <= cur_timer_2_reset;
 
 				next_state <= clear_shift_2;
 
@@ -1360,6 +1360,9 @@ begin
 		end case;
 	end process;
 end;
+
+
+
 
 
 
