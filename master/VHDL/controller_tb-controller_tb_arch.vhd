@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_tb_arch of controller_tb is
 	constant clk_period : time := 20 ns;
-	
+
 	component controller
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
@@ -44,7 +44,10 @@ architecture controller_tb_arch of controller_tb is
 begin
 	uut : controller port map(
 			clk => clk,
-			rst => rst,) clock : process
+			rst => rst
+		);
+
+	clock : process
 	begin
 		clk <= '1';
 		wait for clk_period / 2;
@@ -52,7 +55,7 @@ begin
 		wait for clk_period / 2;
 	end process;
 
-	data_lut : process(clk, rst)
+	stimulus : process
 	begin
 		wait for 40 ns;
 
