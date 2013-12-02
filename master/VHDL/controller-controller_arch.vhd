@@ -214,6 +214,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 				next_state <= gen_piece_2;
+
 			when gen_piece_2 =>
 				new_new_piece <= '0';
 
@@ -712,7 +713,7 @@ begin
 				new_lut_start         <= cur_lut_start;
 				new_new_piece         <= cur_new_piece;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
-				new_draw_erase_start  <= cur_draw_erase_start;
+				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
 				new_timer_1_time      <= cur_timer_1_time;
@@ -1193,6 +1194,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 				next_state <= reset_timers_b_2;
+
 			when reset_timers_b_2 =>
 				new_timer_1_reset <= '0';
 
@@ -1224,6 +1226,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 				next_state <= draw;
+
 			when key =>
 				if (inputs = "00000000") then
 					-- no input
