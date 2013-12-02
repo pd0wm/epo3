@@ -8,10 +8,13 @@ architecture controller_arch of controller is
 	is (reset, init, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, spaxe_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, drop_overflow, rotate, key, lock_timer_start, game_over);
 	signal cur_state, next_state : state_type;
 
-	signal cur_piece        : std_logic_vector(2 downto 0);
-	signal cur_x, new_x     : std_logic_vector(2 downto 0);
-	signal cur_y, new_y     : std_logic_vector(3 downto 0);
-	signal cur_rot, new_rot : std_logic_vector(1 downto 0);
+	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
+	signal cur_x, new_cur_x             : std_logic_vector(2 downto 0);
+	signal cur_x_new, new_cur_x_new     : std_logic_vector(2 downto 0);
+	signal cur_y, new_cur_y             : std_logic_vector(3 downto 0);
+	signal cur_y_new, new_cur_y_new     : std_logic_vector(3 downto 0);
+	signal cur_rot, new_cur_rot         : std_logic_vector(1 downto 0);
+	signal cur_rot_new, new_cur_rot_new : std_logic_vector(1 downto 0);
 
 begin
 	process(clk, rst)
@@ -20,7 +23,14 @@ begin
 			if (rst = '1') then
 				cur_state <= reset;
 			else
-				cur_state <= next_state;
+				cur_piece   <= new_cur_piece;
+				cur_x       <= new_cur_x;
+				cur_x_new   <= new_cur_x_new;
+				cur_y       <= new_cur_y;
+				cur_y_new   <= new_cur_y_new;
+				cur_rot     <= new_cur_rot;
+				cur_rot_new <= new_cur_rot_new;
+				cur_state   <= next_state;
 			end if;
 		end if;
 	end process;
@@ -54,59 +64,39 @@ begin
 				timer_2_start     <= '0';
 				timer_2_reset     <= '0';
 				-- local signals
-				cur_piece <= (others => '0');
-				cur_x <= (others => '0');
-				cur_y <= (others => '0');
-				cur_rot <= (others => '0');
-				new_piece <= (others => '0');
-				new_x <= (others => '0');
-				new_y <= (others => '0');
-				new_rot <= (others => '0');
+				new_cur_piece     <= (others => '0');
+				new_cur_x         <= (others => '0');
+				new_cur_y         <= (others => '0');
+				new_cur_rot       <= (others => '0');
+				new_piece         <= (others => '0');
+				new_cur_x_new     <= (others => '0');
+				new_cur_y_new     <= (others => '0');
+				new_cur_rot_new   <= (others => '0');
 
 				next_state <= init;
 
 			when init =>
 				timer_1_time <= "00111100"; -- 60, 1 second
 				timer_2_time <= "00111100"; -- 60, 1 second
-				cur_x        <= "011";
-				cur_y        <= "0000";
-				
-				
-				-- LUT
-				lut_x             <= (others => '0');
-				lut_y             <= (others => '0');
-				lut_rot           <= (others => '0');
-				lut_piece_type    <= (others => '0');
-				lut_start         <= '0';
-				-- next piece
-				new_piece         <= '0';
-				--check mask
-				check_start       <= '0';
-				-- draw erase
-				draw_erase_draw   <= '0';
-				draw_erase_start  <= '0';
-				-- clear shift
-				clear_shift_start <= '0';
-				-- draw_score
-				draw_score_draw   <= '0';
-				-- timers
-				timer_1_start     <= '0';
-				timer_1_reset     <= '0';
-				timer_2_start     <= '0';
-				timer_2_reset     <= '0';
-				-- local signals
-				cur_piece <= (others => '0');
-				cur_rot <= (others => '0');
-				new_piece <= (others => '0');
-				new_x <= (others => '0');
-				new_y <= (others => '0');
-				new_rot <= (others => '0');
+				new_cur_x    <= "011";
+				new_cur_y    <= "0000";
+
+				-- Keep others
+				new_cur_piece   <= cur_piece;
+				new_cur_x       <= cur_x;
+				new_cur_x_new   <= cur_x_new;
+				new_cur_y       <= cur_y;
+				new_cur_y_new   <= cur_y_new;
+				new_cur_rot     <= cur_rot;
+				new_cur_rot_new <= cur_rot_new;
+				next_state      <= cur_state;
 
 				next_state <= gen_piece_1;
 
 			when gen_piece_1 =>
-				cur_piece <= next_piece;
-				new_piece <= '1';       -- generate new piece for next time
+				new_cur_piece <= next_piece;
+				new_piece     <= '1';   -- generate new piece for next time
+
 
 				next_state <= gen_piece_2;
 			when gen_piece_2 =>
@@ -116,10 +106,10 @@ begin
 
 			when collision_1 =>
 				-- Generate mask for cur_piece
-				lut_rot        <= cur_rot;
-				lut_x          <= cur_x;
-				lut_y          <= cur_y;
-				lut_piece_type <= cur_piece;
+				lut_rot        <= new_cur_rot;
+				lut_x          <= new_cur_x;
+				lut_y          <= new_cur_y;
+				lut_piece_type <= new_cur_piece;
 				lut_start      <= '1';
 
 				next_state <= collision_2;
@@ -216,15 +206,15 @@ begin
 				end if;
 
 			when space_3 =>
-				new_y <= std_logic_vector(unsigned(cur_y) + 1);
+				new_cur_y_new <= std_logic_vector(unsigned(new_cur_y) + 1);
 
 				next_state <= space_4;
 
 			when space_4 =>
-				lut_rot        <= cur_rot;
-				lut_x          <= cur_x;
-				lut_y          <= new_y;
-				lut_piece_type <= cur_piece;
+				lut_rot        <= new_cur_rot;
+				lut_x          <= new_cur_x;
+				lut_y          <= new_cur_y_new;
+				lut_piece_type <= new_cur_piece;
 				lut_start      <= '1';
 
 				next_state <= space_5;
@@ -239,17 +229,17 @@ begin
 
 			when space_6 =>
 				if (lut_error = '0') then
-					cur_y      <= new_y;
+					new_cur_y  <= new_cur_y_new;
 					next_state <= move_down_1;
 				else
 					next_state <= put_back_1;
 				end if;
 
 			when put_back_1 =>
-				lut_rot        <= cur_rot;
-				lut_x          <= cur_x;
-				lut_y          <= cur_y;
-				lut_piece_type <= cur_piece;
+				lut_rot        <= new_cur_rot;
+				lut_x          <= new_cur_x;
+				lut_y          <= new_cur_y;
+				lut_piece_type <= new_cur_piece;
 				lut_start      <= '1';
 
 				next_state <= put_back_2;
@@ -282,10 +272,10 @@ begin
 				next_state <= draw;
 
 			when move_down_1 =>
-				lut_rot        <= cur_rot;
-				lut_x          <= cur_x;
-				lut_y          <= cur_y;
-				lut_piece_type <= cur_piece;
+				lut_rot        <= new_cur_rot;
+				lut_x          <= new_cur_x;
+				lut_y          <= new_cur_y;
+				lut_piece_type <= new_cur_piece;
 				lut_start      <= '1';
 
 				next_state <= move_down_2;
