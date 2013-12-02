@@ -59,25 +59,7 @@ begin
 		if (rising_edge(clk)) then
 			if (rst = '1') then
 				cur_state <= reset;
-				
-				lut_x             <= (others  => '0');
-				lut_y             <= (others  => '0');
-				lut_rot           <= (others  => '0');
-				lut_piece_type    <= (others  => '0');
-				lut_start         <= '0';
-				new_piece         <= '0';
-				check_start       <= '0';
-				draw_erase_draw   <= '0';
-				draw_erase_start  <= '0';
-				clear_shift_start <= '0';
-				draw_score_draw   <= '0';
-				timer_1_time      <= (others  => '0');
-				timer_1_start     <= '0';
-				timer_1_reset     <= '0';
-				timer_2_time      <= (others  => '0');
-				timer_2_start     <= '0';
-				timer_2_reset     <= '0';
-				
+
 			else
 
 				-- Signals
@@ -89,25 +71,6 @@ begin
 				cur_rot     <= new_cur_rot;
 				cur_rot_new <= new_cur_rot_new;
 				cur_state   <= next_state;
-
-				-- Outputs
-				lut_x             <= new_lut_x;
-				lut_y             <= new_lut_y;
-				lut_rot           <= new_lut_rot;
-				lut_piece_type    <= new_lut_piece_type;
-				lut_start         <= new_lut_start;
-				new_piece         <= new_new_piece;
-				check_start       <= new_check_start;
-				draw_erase_draw   <= new_draw_erase_draw;
-				draw_erase_start  <= new_draw_erase_start;
-				clear_shift_start <= new_clear_shift_start;
-				draw_score_draw   <= new_draw_score_draw;
-				timer_1_time      <= new_timer_1_time;
-				timer_1_start     <= new_timer_1_start;
-				timer_1_reset     <= new_timer_1_reset;
-				timer_2_time      <= new_timer_2_time;
-				timer_2_start     <= new_timer_2_start;
-				timer_2_reset     <= new_timer_2_reset;
 
 				cur_lut_x             <= new_lut_x;
 				cur_lut_y             <= new_lut_y;
@@ -128,6 +91,26 @@ begin
 				cur_timer_2_reset     <= new_timer_2_reset;
 			end if;
 		end if;
+
+		-- Outputs
+		lut_x             <= new_lut_x;
+		lut_y             <= new_lut_y;
+		lut_rot           <= new_lut_rot;
+		lut_piece_type    <= new_lut_piece_type;
+		lut_start         <= new_lut_start;
+		new_piece         <= new_new_piece;
+		check_start       <= new_check_start;
+		draw_erase_draw   <= new_draw_erase_draw;
+		draw_erase_start  <= new_draw_erase_start;
+		clear_shift_start <= new_clear_shift_start;
+		draw_score_draw   <= new_draw_score_draw;
+		timer_1_time      <= new_timer_1_time;
+		timer_1_start     <= new_timer_1_start;
+		timer_1_reset     <= new_timer_1_reset;
+		timer_2_time      <= new_timer_2_time;
+		timer_2_start     <= new_timer_2_start;
+		timer_2_reset     <= new_timer_2_reset;
+
 	end process;
 
 	process(cur_state, lut_ready, draw_erase_ready, clear_shift_ready, draw_score_ready, timer_1_done, inputs)
@@ -1376,7 +1359,7 @@ begin
 				new_timer_2_time      <= cur_timer_2_time;
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
-				
+
 			when game_over =>
 				-- Kill it!
 				next_state <= game_over;
