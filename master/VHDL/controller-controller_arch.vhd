@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, spaxe_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_timer_reset_1, drop_timer_reset_2, drop_timer_reset_3, drop_overflow, rotate, key, lock_timer_start, game_over);
+	is (reset, init, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, rotate, key, lock_timer_start, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
@@ -1227,7 +1227,7 @@ begin
 			when key =>
 				if (inputs = "00000000") then
 					-- no input
-					next_state <= drop_timer_reset_1;
+					next_state <= drop_timer_reset;
 				else
 					next_state <= rotate;
 				end if;
@@ -1354,9 +1354,39 @@ begin
 				new_timer_2_time      <= cur_timer_2_time;
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
+				
+			when game_over =>
+				-- Kill it!
+				next_state <= game_over;
 
-			when others =>
-				null;
+				-- Keep signals
+				new_cur_piece   <= cur_piece;
+				new_cur_x       <= cur_x;
+				new_cur_x_new   <= cur_x_new;
+				new_cur_y       <= cur_y;
+				new_cur_y_new   <= cur_y_new;
+				new_cur_rot     <= cur_rot;
+				new_cur_rot_new <= cur_rot_new;
+
+				-- Keep outputs
+				new_lut_x             <= cur_lut_x;
+				new_lut_y             <= cur_lut_y;
+				new_lut_rot           <= cur_lut_rot;
+				new_lut_piece_type    <= cur_lut_piece_type;
+				new_lut_start         <= cur_lut_start;
+				new_new_piece         <= cur_new_piece;
+				new_check_start       <= cur_check_start;
+				new_draw_erase_draw   <= cur_draw_erase_draw;
+				new_draw_erase_start  <= cur_draw_erase_start;
+				new_clear_shift_start <= cur_clear_shift_start;
+				new_draw_score_draw   <= cur_draw_score_draw;
+				new_timer_1_time      <= cur_timer_1_time;
+				new_timer_1_start     <= cur_timer_1_start;
+				new_timer_1_reset     <= cur_timer_1_reset;
+				new_timer_2_time      <= cur_timer_2_time;
+				new_timer_2_start     <= cur_timer_2_start;
+				new_timer_2_reset     <= cur_timer_2_reset;
+
 		end case;
 	end process;
 end;
