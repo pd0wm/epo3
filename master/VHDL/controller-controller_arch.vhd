@@ -59,6 +59,25 @@ begin
 		if (rising_edge(clk)) then
 			if (rst = '1') then
 				cur_state <= reset;
+				
+				lut_x             <= (others  => '0');
+				lut_y             <= (others  => '0');
+				lut_rot           <= (others  => '0');
+				lut_piece_type    <= (others  => '0');
+				lut_start         <= '0';
+				new_piece         <= '0';
+				check_start       <= '0';
+				draw_erase_draw   <= '0';
+				draw_erase_start  <= '0';
+				clear_shift_start <= '0';
+				draw_score_draw   <= '0';
+				timer_1_time      <= (others  => '0');
+				timer_1_start     <= '0';
+				timer_1_reset     <= '0';
+				timer_2_time      <= (others  => '0');
+				timer_2_start     <= '0';
+				timer_2_reset     <= '0';
+				
 			else
 
 				-- Signals
