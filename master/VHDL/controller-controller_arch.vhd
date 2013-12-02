@@ -49,11 +49,19 @@ begin
 				-- timers
 				timer_1_time      <= (others => '0');
 				timer_1_start     <= '0';
+				timer_1_reset     <= '0';
 				timer_2_time      <= (others => '0');
 				timer_2_start     <= '0';
-
-				-- reset local signals
+				timer_2_reset     <= '0';
+				-- local signals
 				cur_piece <= (others => '0');
+				cur_x <= (others => '0');
+				cur_y <= (others => '0');
+				cur_rot <= (others => '0');
+				new_piece <= (others => '0');
+				new_x <= (others => '0');
+				new_y <= (others => '0');
+				new_rot <= (others => '0');
 
 				next_state <= init;
 
@@ -62,6 +70,37 @@ begin
 				timer_2_time <= "00111100"; -- 60, 1 second
 				cur_x        <= "011";
 				cur_y        <= "0000";
+				
+				
+				-- LUT
+				lut_x             <= (others => '0');
+				lut_y             <= (others => '0');
+				lut_rot           <= (others => '0');
+				lut_piece_type    <= (others => '0');
+				lut_start         <= '0';
+				-- next piece
+				new_piece         <= '0';
+				--check mask
+				check_start       <= '0';
+				-- draw erase
+				draw_erase_draw   <= '0';
+				draw_erase_start  <= '0';
+				-- clear shift
+				clear_shift_start <= '0';
+				-- draw_score
+				draw_score_draw   <= '0';
+				-- timers
+				timer_1_start     <= '0';
+				timer_1_reset     <= '0';
+				timer_2_start     <= '0';
+				timer_2_reset     <= '0';
+				-- local signals
+				cur_piece <= (others => '0');
+				cur_rot <= (others => '0');
+				new_piece <= (others => '0');
+				new_x <= (others => '0');
+				new_y <= (others => '0');
+				new_rot <= (others => '0');
 
 				next_state <= gen_piece_1;
 
@@ -163,7 +202,7 @@ begin
 
 			when space_1 =>
 				-- First remove current piece
-				draw_erase_draw <= '0'; -- erase
+				draw_erase_draw  <= '0'; -- erase
 				draw_erase_start <= '1';
 
 				next_state <= space_2;
@@ -239,7 +278,7 @@ begin
 
 			when lock_timer_start =>
 				timer_2_start <= '1';
-				
+
 				next_state <= draw;
 
 			when move_down_1 =>
@@ -295,8 +334,8 @@ begin
 				timer_1_time <= "00111100"; -- 60, 1 second
 
 				next_state <= draw;
-				
-			when rotate => 
+
+			when rotate =>
 				next_state <= draw;
 
 			when kernel_panic =>
