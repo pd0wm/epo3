@@ -1,0 +1,5 @@
+rm -rf /home/rdmiedema/draw_score/syn_work_bak
+mv -f /home/rdmiedema/draw_score/syn_work /home/rdmiedema/draw_score/syn_work_bak
+cp -r /tmp/rdmiedema/draw_score/syn_work /home/rdmiedema/draw_score
+cp /tmp/rdmiedema/draw_score/ADB/draw_score.ddc /home/rdmiedema/draw_score/ADB/draw_score.ddc
+cp /tmp/rdmiedema/draw_score/VHDL/draw_score_SYNTH.vhd /home/rdmiedema/draw_score/VHDL/draw_score_SYNTH.vhd
