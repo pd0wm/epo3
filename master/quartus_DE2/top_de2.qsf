@@ -91,6 +91,22 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name SEARCH_PATH /data/public/common/software/opprog/sim_libs/CellsLib
+set_global_assignment -name VHDL_FILE ../VHDL/rom_mux44.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/rom_mux44-rom_mux44_behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/rom_mux24.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/rom_mux24-rom_mux24_behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/rom_mux4.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/rom_mux4-rom_mux4_behaviour.vhd"
+set_global_assignment -name VHDL_FILE "../VHDL/rom_mux2-rom_mux2_behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/rom_mux2.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/piece_lut-behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/piece_lut.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/rom-rom_behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/rom.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/de_piece.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/de_piece-behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/CheckMask.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/check_mask-behaviour.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/vga_score_trans_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_score_trans.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_score_check_arch.vhd

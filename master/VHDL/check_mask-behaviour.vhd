@@ -27,7 +27,7 @@ begin
 	begin	
 		case state is
 			when rust =>
-			   write <= '0';
+			   write <= 'Z';
 			   next_empty <= '0';
 			   ready <= '0';
 			   lut_start <= '0';

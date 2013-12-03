@@ -2208,26 +2208,6 @@ vga:inst3|vga_score_trans:score_translation
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-c2599be9ad8671c6ce4644ac0d2b044
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 vga_score_check
 # storage
 db|top_de2.(36).cnf
@@ -2269,6 +2249,573 @@ a3e1c226bf8bc866459f1057d37de2db
 }
 # hierarchies {
 vga:inst3|vga_score_check:score_check
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+7cf2b2acd6abf504f4351d4baef5a0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+de_piece
+# storage
+db|top_de2.(37).cnf
+db|top_de2.(37).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
+302216c171e525a08ca0a639ed291b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
+993d9bc29e4c1d61c61781dd7ea2210
+}
+# hierarchies {
+de_piece:inst6
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+controller
+# storage
+db|top_de2.(38).cnf
+db|top_de2.(38).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
+8f3d8971872e46c79566adecd4d8238
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
+4cd9eb41f91bfb1cd195fff5e8ef11
+}
+# hierarchies {
+controller:inst4
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+piece_lut
+# storage
+db|top_de2.(40).cnf
+db|top_de2.(40).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut.vhd
+3d4faeaba6fe2dd814e4738da9d4ff52
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut-behaviour.vhd
+e4c2d6769c39073bf99b63dc983a53
+}
+# hierarchies {
+piece_lut:inst7
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rom
+# storage
+db|top_de2.(41).cnf
+db|top_de2.(41).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom.vhd
+424d711646d2b7f5f83e5d5cf174796
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom-rom_behaviour.vhd
+45b02847c8c8c4e970544b20af884c1
+}
+# hierarchies {
+rom:inst8
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rom_mux44
+# storage
+db|top_de2.(42).cnf
+db|top_de2.(42).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux44.vhd
+1f5cab73e7edf66e58c4e0b2582d51
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_3)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_4)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(selector)
+1 downto 0
+PARAMETER_STRING
+USR
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux44-rom_mux44_behaviour.vhd
+35d08179a9b8c2836a90fd016e6377b
+}
+# hierarchies {
+rom:inst8|rom_mux44:ptype2north
+rom:inst8|rom_mux44:ptype2east
+rom:inst8|rom_mux44:ptype2south
+rom:inst8|rom_mux44:ptype2west
+rom:inst8|rom_mux44:ptype3north
+rom:inst8|rom_mux44:ptype3east
+rom:inst8|rom_mux44:ptype3south
+rom:inst8|rom_mux44:ptype3west
+rom:inst8|rom_mux44:ptype4north
+rom:inst8|rom_mux44:ptype4east
+rom:inst8|rom_mux44:ptype4south
+rom:inst8|rom_mux44:ptype4west
+rom:inst8|rom_mux44:ptype5north
+rom:inst8|rom_mux44:ptype5east
+rom:inst8|rom_mux44:ptype5south
+rom:inst8|rom_mux44:ptype5west
+rom:inst8|rom_mux44:ptype6north
+rom:inst8|rom_mux44:ptype6east
+rom:inst8|rom_mux44:ptype6south
+rom:inst8|rom_mux44:ptype6west
+rom:inst8|rom_mux44:ptype7north
+rom:inst8|rom_mux44:ptype7east
+rom:inst8|rom_mux44:ptype7south
+rom:inst8|rom_mux44:ptype7west
+rom:inst8|rom_mux44:ptype1
+rom:inst8|rom_mux44:ptype2
+rom:inst8|rom_mux44:ptype3
+rom:inst8|rom_mux44:ptype4
+rom:inst8|rom_mux44:ptype5
+rom:inst8|rom_mux44:ptype6
+rom:inst8|rom_mux44:ptype7
+rom:inst8|rom_mux44:subresult1
+rom:inst8|rom_mux44:subresult2
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rom_mux4
+# storage
+db|top_de2.(43).cnf
+db|top_de2.(43).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux4.vhd
+4e76f4d1a5a24a4e66be2958338495
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(selector)
+1 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux4-rom_mux4_behaviour.vhd
+ffe599c8e7d377cbc121d03724178394
+}
+# hierarchies {
+rom:inst8|rom_mux44:ptype2north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype2north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype2north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype2north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype2east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype2east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype2east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype2east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype2south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype2south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype2south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype2south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype2west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype2west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype2west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype2west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype3north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype3north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype3north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype3north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype3east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype3east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype3east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype3east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype3south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype3south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype3south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype3south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype3west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype3west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype3west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype3west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype4north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype4north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype4north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype4north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype4east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype4east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype4east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype4east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype4south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype4south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype4south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype4south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype4west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype4west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype4west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype4west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype5north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype5north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype5north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype5north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype5east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype5east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype5east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype5east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype5south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype5south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype5south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype5south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype5west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype5west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype5west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype5west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype6north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype6north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype6north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype6north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype6east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype6east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype6east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype6east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype6south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype6south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype6south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype6south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype6west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype6west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype6west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype6west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype7north|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype7north|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype7north|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype7north|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype7east|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype7east|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype7east|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype7east|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype7south|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype7south|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype7south|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype7south|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype7west|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype7west|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype7west|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype7west|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype1|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype1|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype1|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype1|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype2|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype2|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype2|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype2|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype3|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype3|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype3|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype3|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype4|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype4|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype4|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype4|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype5|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype5|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype5|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype5|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype6|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype6|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype6|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype6|rom_mux4:bit4
+rom:inst8|rom_mux44:ptype7|rom_mux4:bit1
+rom:inst8|rom_mux44:ptype7|rom_mux4:bit2
+rom:inst8|rom_mux44:ptype7|rom_mux4:bit3
+rom:inst8|rom_mux44:ptype7|rom_mux4:bit4
+rom:inst8|rom_mux44:subresult1|rom_mux4:bit1
+rom:inst8|rom_mux44:subresult1|rom_mux4:bit2
+rom:inst8|rom_mux44:subresult1|rom_mux4:bit3
+rom:inst8|rom_mux44:subresult1|rom_mux4:bit4
+rom:inst8|rom_mux44:subresult2|rom_mux4:bit1
+rom:inst8|rom_mux44:subresult2|rom_mux4:bit2
+rom:inst8|rom_mux44:subresult2|rom_mux4:bit3
+rom:inst8|rom_mux44:subresult2|rom_mux4:bit4
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rom_mux24
+# storage
+db|top_de2.(44).cnf
+db|top_de2.(44).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux24.vhd
+2cb722fd3b9285576acbb6e24f03f1b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(data_1)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_2)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(output)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux24-rom_mux24_behaviour.vhd
+bb687bca673e80aac9726158b56b6d7
+}
+# hierarchies {
+rom:inst8|rom_mux24:result
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+rom_mux2
+# storage
+db|top_de2.(45).cnf
+db|top_de2.(45).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux2.vhd
+baad4a137c6e184e176c42ad9fe26e13
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|rom_mux2-rom_mux2_behaviour.vhd
+dd98b06944e259dbfda853f9bb192ce
+}
+# hierarchies {
+rom:inst8|rom_mux24:result|rom_mux2:bit1
+rom:inst8|rom_mux24:result|rom_mux2:bit2
+rom:inst8|rom_mux24:result|rom_mux2:bit3
+rom:inst8|rom_mux24:result|rom_mux2:bit4
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+check_mask
+# storage
+db|top_de2.(39).cnf
+db|top_de2.(39).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|CheckMask.vhd
+eb581f27818c2921e2e3c5fbb4eef45
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|check_mask-behaviour.vhd
+adf3d73be0128b1af775d85eae525d3
+}
+# hierarchies {
+check_mask:inst5
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf

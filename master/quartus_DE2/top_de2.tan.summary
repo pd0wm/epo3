@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.640 ns
+Actual Time    : 9.482 ns
 From           : vga:inst3|vga_read:read_and_output|h_sync_out
 To             : vga_hsync
 From Clock     : clock_50mhz
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 352.36 MHz ( period = 2.838 ns )
-From           : vga:inst3|vga_counter:counter|pos_x[2]
+Actual Time    : 372.02 MHz ( period = 2.688 ns )
+From           : vga:inst3|vga_counter:counter|pos_x[4]
 To             : vga:inst3|vga_counter:counter|pos_y[2]
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
