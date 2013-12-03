@@ -25,7 +25,7 @@ begin
 		end if;
 	end process;
 
-	process(state, rst, check_start, draw_start)
+	process(state, rst, check_start, draw_start, y_out, x_out, rom_data)
 	begin
 		rom_addr(6 downto 4) <= piece_type;
 		rom_addr(3 downto 2) <= rot;
