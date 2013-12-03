@@ -22,13 +22,13 @@ END component draw_erase_piece;
 	signal clk,rst, draw_erase, start, data, ready, write: std_logic;
 	signal mask, addr: std_logic_vector(7 downto 0);
 	begin
-	  clk <= '1' after 0 ns,
-	  '0' after 20 ns when clk /= '0' else '1' after 20 ns;
-	  rst <= '1' after 0 ns, '0' after 200 ns;
-	  start <= '0' after 0 ns, '1' after 300 ns, '0' after 340 ns, '1' after 800 ns, '0' after 900 ns, '1' after 1400 ns, '0' after 1460 ns;
-	  draw_erase <= '0' after 0 ns, '1' after 300 ns, '0' after 800 ns, '1' after 900 ns;
-	  mask <= "11101111" after 0 ns, "10110001" after 500 ns, "11110000" after 1100 ns;
-	  data <= '1' after 0 ns, 'Z' after 100 ns, '0' after 500 ns, 'Z' after 780 ns, '1' after 1000 ns, 'Z' after 1380 ns;
+	  clk <= '1' after 00 ns,
+	  '0' after 200 ns when clk /= '0' else '1' after 200 ns;
+	  rst <= '1' after 00 ns, '0' after 2000 ns;
+	  start <= '0' after 00 ns, '1' after 3000 ns, '0' after 3400 ns, '1' after 8000 ns, '0' after 9000 ns, '1' after 14000 ns, '0' after 14600 ns;
+	  draw_erase <= '0' after 00 ns, '1' after 3000 ns, '0' after 8000 ns, '1' after 9000 ns;
+	  mask <= "11101111" after 00 ns, "10110001" after 5000 ns, "11110000" after 11000 ns;
+	  data <= '1' after 00 ns, 'Z' after 1000 ns, '0' after 5000 ns, 'Z' after 7800 ns, '1' after 10000 ns, 'Z' after 13800 ns;
 	  
 fghjk: draw_erase_piece port map(
   clk=>clk,

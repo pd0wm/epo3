@@ -2,35 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'sr_if' ------
------- reading nelsis circuit-cell 'sr_tower' ------
------- reading nelsis circuit-cell 'mux5' ------
------- reading nelsis circuit-cell 'demux5' ------
------- reading nelsis circuit-cell 'sr_if' ------
------- reading nelsis layout-cell 'demux8_inv' ------
------- reading nelsis layout-cell 'bit4' ------
------- reading nelsis layout-cell 'dec8' ------
------- reading nelsis layout-cell 'demux4_inv' ------
------- reading nelsis layout-cell 'sr_tower' ------
------- reading nelsis layout-cell 'mux5' ------
------- reading nelsis layout-cell 'demux5' ------
------- checking match with placement layout 'Tmpsr_if15144' ------
------- reading nelsis layout-cell 'Tmpsr_if15144' ------
------- writing nelsis 'Tmpsr_if15144' as sdflay 'Tmp_Cell_(sr_if(sr_if(test)))' ------
------- writing nelsis 'demux5' as sdflay 'demux5(demux5(demux5(test)))' ------
------- writing nelsis 'mux5' as sdflay 'mux5(mux5(mux5(test)))' ------
------- writing nelsis 'demux4_inv' as sdflay 'demux4_inv(demux4_inv(demux4_inv(test)))' ------
------- writing nelsis 'dec8' as sdflay 'dec8(dec8(dec8(test)))' ------
------- writing nelsis 'bit4' as sdflay 'bit4(bit4(bit4(test)))' ------
------- writing nelsis 'demux8_inv' as sdflay 'demux8_inv(demux8_inv(demux8_inv(test)))' ------
------- writing nelsis 'sr_tower' as sdflay 'sr_tower(sr_tower(sr_tower(test)))' ------
------- writing nelsis 'demux5' as sdfcir 'demux5(demux5(test)) ------
------- writing nelsis 'mux5' as sdfcir 'mux5(mux5(test)) ------
------- writing nelsis 'sr_tower' as sdfcir 'sr_tower(sr_tower(test)) ------
------- writing nelsis 'sr_if' as sdfcir 'sr_if(sr_if(test)) ------
+------ checking your circuit 'vga' ------
+------ circuit 'vga' is still up-to-date ------
+------ checking match with placement layout 'Tmpvga17408' ------
+------ reading nelsis layout-cell 'Tmpvga17408' ------
+------ writing nelsis 'Tmpvga17408' as sdflay 'Tmp_Cell_(vga(vga(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f sr_if -c sr_if -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmpsr_if15144' ------
-calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if15144 
+calling program: trout -l test -f vga -c vga -o Tmp_Cell_ -d Tmp_Cell_ 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmpvga17408' ------
+calling program: nelsea -rLH -f vga -c vga -l Tmp_Cell_ Tmpvga17408 
 ------ sea: task completed ------

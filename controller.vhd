@@ -10,9 +10,7 @@ entity controller is
         lut_y             : out std_logic_vector(4 downto 0);
         lut_rot           : out std_logic_vector(1 downto 0);
         lut_piece_type    : out std_logic_vector(2 downto 0);
-        lut_ready         : in  std_logic;
-        lut_error         : in  std_logic;
-        lut_start         : out std_logic;
+        lut_next_piece : out std_logic;
 
         --next piece
         new_piece         : out std_logic;
@@ -44,10 +42,6 @@ entity controller is
         timer_2_time      : out std_logic_vector(7 downto 0);
         timer_2_start     : out std_logic;
         timer_2_done      : in  std_logic;
-
-        timer_3_time      : out std_logic_vector(7 downto 0);
-        timer_3_start     : out std_logic;
-        timer_3_done      : in  std_logic;
 
         --inputs
         inputs            : in  std_logic_vector(7 downto 0)

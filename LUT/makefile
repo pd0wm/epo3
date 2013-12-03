@@ -26,9 +26,9 @@ WORK__piece_lut_tb = $(LIB_WORK)/piece_lut_tb/_primary.dat
 WORK__piece_lut_synthesised_cfg = $(LIB_WORK)/piece_lut_synthesised_cfg/_primary.dat
 WORK__piece_lut_extracted_cfg = $(LIB_WORK)/piece_lut_extracted_cfg/_primary.dat
 WORK__piece_lut_behaviour_cfg = $(LIB_WORK)/piece_lut_behaviour_cfg/_primary.dat
-WORK__piece_lut__piece_lut_behaviour = $(LIB_WORK)/piece_lut/piece_lut_behaviour.dat
 WORK__piece_lut__synthesised = $(LIB_WORK)/piece_lut/synthesised.dat
 WORK__piece_lut__extracted = $(LIB_WORK)/piece_lut/extracted.dat
+WORK__piece_lut__piece_lut_behaviour = $(LIB_WORK)/piece_lut/piece_lut_behaviour.dat
 WORK__piece_lut = $(LIB_WORK)/piece_lut/_primary.dat
 VCOM = vcom
 VLOG = vlog
@@ -43,9 +43,9 @@ whole_library :     $(WORK__piece_lut_tb_behaviour_syn_cfg) \
     $(WORK__piece_lut_synthesised_cfg) \
     $(WORK__piece_lut_extracted_cfg) \
     $(WORK__piece_lut_behaviour_cfg) \
-    $(WORK__piece_lut__piece_lut_behaviour) \
     $(WORK__piece_lut__synthesised) \
     $(WORK__piece_lut__extracted) \
+    $(WORK__piece_lut__piece_lut_behaviour) \
     $(WORK__piece_lut)
 
 $(WORK__piece_lut) : VHDL/piece_lut.vhd \
@@ -53,6 +53,14 @@ $(WORK__piece_lut) : VHDL/piece_lut.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/piece_lut.vhd
+
+$(WORK__piece_lut__piece_lut_behaviour) : VHDL/piece_lut-behaviour.vhd \
+		$(WORK__piece_lut) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/piece_lut-behaviour.vhd
 
 $(WORK__piece_lut__extracted) : VHDL/piece_lut_EXTR.vhd \
 		$(WORK__piece_lut) \
@@ -70,14 +78,6 @@ $(WORK__piece_lut__synthesised) : VHDL/piece_lut_SYNTH.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/piece_lut_SYNTH.vhd
 
-$(WORK__piece_lut__piece_lut_behaviour) : VHDL/piece_lut-behaviour.vhd \
-		$(WORK__piece_lut) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/piece_lut-behaviour.vhd
-
 $(WORK__piece_lut_behaviour_cfg) : VHDL/piece_lut_behaviour_cfg.vhd \
 		$(IEEE__numeric_std) \
 		$(WORK__piece_lut__piece_lut_behaviour) \
@@ -90,11 +90,11 @@ $(WORK__piece_lut_behaviour_cfg) : VHDL/piece_lut_behaviour_cfg.vhd \
 $(WORK__piece_lut_extracted_cfg) : VHDL/piece_lut_extracted_cfg.vhd \
 		$(CELLSLIB__dfr11) \
 		$(CELLSLIB__no210) \
+		$(CELLSLIB__ex210) \
+		$(CELLSLIB__na210) \
+		$(CELLSLIB__iv110) \
 		$(CELLSLIB__no310) \
 		$(CELLSLIB__na310) \
-		$(CELLSLIB__iv110) \
-		$(CELLSLIB__na210) \
-		$(CELLSLIB__ex210) \
 		$(CELLSLIB__cellslib_decl_pack) \
 		$(WORK__piece_lut__extracted) \
 		$(STD__textio) \

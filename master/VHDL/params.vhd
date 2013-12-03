@@ -32,8 +32,17 @@ package vga_params is
 	constant np_block_width : integer := 6; -- 6
 	constant np_block_height : integer := 24; --  24
 	
-	constant np_counter_block_height_len : integer := 5; -- 2
-	constant np_counter_block_width_len : integer := 3; -- 2
+	constant np_counter_block_height_len : integer := 5; -- 5
+	constant np_counter_block_width_len : integer := 3; -- 3
+	
+	-- Score
+	constant score_start_x : integer := 118; -- 108
+	constant score_start_y : integer := 176; -- 48
+	constant score_width : integer := 4; -- 24
+	constant score_height : integer := 256; -- 96
+	constant score_block_height : integer := 32; --  24
+	
+	constant score_counter_block_height_len : integer := 5; -- 4
 	
 	-- Resultant constants
 	constant offset_x : integer := line_fp + line_pw + line_bp;

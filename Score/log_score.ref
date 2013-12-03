@@ -1,0 +1,51 @@
+# Tabular Link File created on Tue 03 Dec 2013 12:06:07
+# By Program: design_flow
+# From Source: /home/epo3-user/EPO3/score/log_score.lst
+# Clock_column: 0
+INP clk;
+INP rst;
+INP increase;
+OUT output_7_0_7;
+OUT output_7_0_6;
+OUT output_7_0_5;
+OUT output_7_0_4;
+OUT output_7_0_3;
+OUT output_7_0_2;
+OUT output_7_0_1;
+OUT output_7_0_0;
+PERIOD 170ns;
+TIME_UNIT 1.0e-10s;
+TABLE_FORMAT D<11c;
+DATA_SECTION
+             00<HXLllllllll
+            850<LXLllllllll
+            900<LHLllllllll
+           1700<HHLllllllll
+           1800<HLLllllllll
+           2550<LLLllllllll
+           2700<LLHllllllll
+           3400<HLHlllllllh
+           4250<LLHlllllllh
+           5100<HLHllllllhh
+           5950<LLHllllllhh
+           6800<HLHllllllhh
+           7650<LLHllllllhh
+           8500<HLHlllllhhh
+           9350<LLHlllllhhh
+          10200<HLHlllllhhh
+          11050<LLHlllllhhh
+          11700<LLLlllllhhh
+          11900<HLLlllllhhh
+          12700<HLHlllllhhh
+          12750<LLHlllllhhh
+          13600<HLHlllllhhh
+          13700<HLLlllllhhh
+          14450<LLLlllllhhh
+          15300<HLLlllllhhh
+          16150<LLLlllllhhh
+          17000<HLLlllllhhh
+          17850<LLLlllllhhh
+          18700<HLLlllllhhh
+          19550<LLLlllllhhh
+
+
