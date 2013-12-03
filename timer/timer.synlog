@@ -1,0 +1,317 @@
+#*********************************************************
+#  synthesize script for cell: timer                      *
+#*********************************************************
+set hdlin_vhdl_93 false
+set hdlin_ff_always_async_set_reset true
+set hdlin_ff_always_sync_set_reset true
+set vhdlout_architecture_name "synthesised"
+set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
+set company "ontwerp_practicum"
+set designer "epo3-user"
+set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
+set link_library [list "*" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+define_design_lib MY_LIB -path ./syn_work
+define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
+read_file -format vhdl -work MY_LIB {VHDL/timer.vhd VHDL/timer-behaviour.vhd}
+set_dont_touch {g_analib8_00/*}
+# set_max_fanout 1.8 all_inputs() 
+# set_max_area 1000 
+set compile_preserve_subdesign_interfaces true
+compile
+ungroup -all -flat
+report_area
+report_fsm
+write_file -f ddc timer -output ./ADB/timer.ddc
+write_file -f vhdl timer -output ./VHDL/timer_SYNTH.vhd
+quit
+
+----- invoking synthesizer .....
+
+
+                      Design Compiler Graphical
+                            DC Ultra (TM)
+                             DFTMAX (TM)
+                         Power Compiler (TM)
+                           DesignWare (R)
+                           DC Expert (TM)
+                         Design Vision (TM)
+                          HDL Compiler (TM)
+                         VHDL Compiler (TM)
+                            DFT Compiler
+                        Library Compiler (TM)
+                         Design Compiler(R)
+
+            Version G-2012.06 for RHEL32 -- May 30, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+#*********************************************************
+#  synthesize script for cell: timer                      *
+#*********************************************************
+set hdlin_vhdl_93 false
+false
+set hdlin_ff_always_async_set_reset true
+true
+set hdlin_ff_always_sync_set_reset true
+true
+set vhdlout_architecture_name "synthesised"
+synthesised
+set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
+"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"
+set company "ontwerp_practicum"
+ontwerp_practicum
+set designer "epo3-user"
+epo3-user
+set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
+"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"
+set link_library [list "*" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+* /data/public/common/software/opprog/synth_libs/g_digilib5_99.db /data/public/common/software/opprog/synth_libs/g_analib8_00.db /data/public/common/software/opprog/synth_libs/buffers.db
+define_design_lib MY_LIB -path ./syn_work
+1
+define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
+1
+read_file -format vhdl -work MY_LIB {VHDL/timer.vhd VHDL/timer-behaviour.vhd}
+Loading db file '/data/public/common/software/opprog/synth_libs/g_digilib5_99.db'
+Loading db file '/data/public/common/software/opprog/synth_libs/g_analib8_00.db'
+Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
+Loading db file '/data/public/common/software/synopsys/G-2012.06/libraries/syn/gtech.db'
+Loading db file '/data/public/common/software/synopsys/G-2012.06/libraries/syn/standard.sldb'
+  Loading link library 'g_digilib5_99'
+  Loading link library 'g_analib8_00'
+  Loading link library 'buffers'
+  Loading link library 'gtech'
+Loading vhdl files: '/home/epo3-user/vhdl/timer/VHDL/timer.vhd' '/home/epo3-user/vhdl/timer/VHDL/timer-behaviour.vhd' 
+Running PRESTO HDLC
+-- Compiling Source File /home/epo3-user/vhdl/timer/VHDL/timer.vhd
+Compiling Entity Declaration TIMER
+-- Compiling Source File /home/epo3-user/vhdl/timer/VHDL/timer-behaviour.vhd
+Compiling Architecture BEHAVIOUR of TIMER
+Warning:  /home/epo3-user/vhdl/timer/VHDL/timer-behaviour.vhd:6: The architecture behaviour has already been analyzed. It is being replaced. (VHD-4)
+Warning:  The entity 'timer' has multiple architectures defined. The last defined architecture 'behaviour' will be used to build the design by default. (VHD-6)
+
+Statistics for case statements in always block at line 35 in file
+	'/home/epo3-user/vhdl/timer/VHDL/timer-behaviour.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine timer line 15 in file
+		'/home/epo3-user/vhdl/timer/VHDL/timer-behaviour.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      count_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | Y  | N  | N  |
+|      state_reg      | Flip-flop |   2   |  Y  | N  | N  | N  | Y  | N  | N  |
+===============================================================================
+Information:  Complex logic will not be considered for set/reset inference. (ELAB-2008)
+Presto compilation completed successfully.
+Current design is now '/home/epo3-user/vhdl/timer/VHDL/timer.db:timer'
+Loaded 1 design.
+Current design is 'timer'.
+timer
+set_dont_touch {g_analib8_00/*}
+1
+# set_max_fanout 1.8 all_inputs() 
+# set_max_area 1000 
+set compile_preserve_subdesign_interfaces true
+true
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | G-2012.06-DWBB_201206.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'timer'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'timer' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'timer_DW01_inc_0'
+  Processing 'timer_DW01_cmp6_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'timer'
+  Mapping 'timer'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+    0:00:02     480.0      0.00       0.0       0.0                          
+Loading db file '/data/public/common/software/opprog/synth_libs/g_digilib5_99.db'
+Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
+
+  Optimization Complete
+  ---------------------
+1
+ungroup -all -flat
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+report_area
+ 
+****************************************
+Report : area
+Design : timer
+Version: G-2012.06
+Date   : Sat Nov 30 19:28:09 2013
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    g_digilib5_99 (File: /data/public/common/software/opprog/synth_libs/g_digilib5_99.db)
+
+Number of ports:                           13
+Number of nets:                            90
+Number of cells:                           78
+Number of combinational cells:             68
+Number of sequential cells:                10
+Number of macros:                           0
+Number of buf/inv:                         15
+Number of references:                       8
+
+Combinational area:        270.000000
+Noncombinational area:     210.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:           480.000000
+Total area:                 undefined
+1
+report_fsm
+ 
+****************************************
+Report : FSM
+Design : timer
+Version: G-2012.06
+Date   : Sat Nov 30 19:28:09 2013
+****************************************
+
+
+Clock             : Unspecified
+Asynchronous Reset: Unspecified
+
+Encoding Bit Length: 2
+Encoding style     : auto
+
+State Vector: { state_reg[1] state_reg[0] }
+
+
+State Encodings and Order: 
+
+uit        : 00
+laag       : 01
+hoog       : 10
+klaar      : 11
+
+
+1
+write_file -f ddc timer -output ./ADB/timer.ddc
+Writing ddc file './ADB/timer.ddc'.
+1
+write_file -f vhdl timer -output ./VHDL/timer_SYNTH.vhd
+Writing vhdl file '/home/epo3-user/vhdl/timer/VHDL/timer_SYNTH.vhd'.
+1
+quit
+
+Thank you...
+
+******* SYNTHESIS DONE ******
+
+|=============================================================
+| db_file (re)written:
+|-------------------------------------------------------------
+| ADB/timer.ddc
+|=============================================================
+
+
+|=============================================================
+| sls_file (re)written:
+|-------------------------------------------------------------
+| SLS/timer.sls
+|=============================================================
+
+
+|=============================================================
+| vhdl_files (re)written:
+|-------------------------------------------------------------
+| VHDL/timer_SYNTH.vhd
+|=============================================================
+
+--compiling VHDL/timer_SYNTH.vhd --
+--VHDL/timer_SYNTH.vhd compiled--
+
+--- parsing /home/epo3-user/vhdl/timer/SLS/timer.sls ---
+
+--- parsing done ---
+
+

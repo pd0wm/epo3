@@ -1,0 +1,5 @@
+rm -rf /home/rdmiedema/EPO3/timer/syn_work_bak
+mv -f /home/rdmiedema/EPO3/timer/syn_work /home/rdmiedema/EPO3/timer/syn_work_bak
+cp -r /tmp/rdmiedema/EPO3/timer/syn_work /home/rdmiedema/EPO3/timer
+cp /tmp/rdmiedema/EPO3/timer/ADB/timer.ddc /home/rdmiedema/EPO3/timer/ADB/timer.ddc
+cp /tmp/rdmiedema/EPO3/timer/VHDL/timer_SYNTH.vhd /home/rdmiedema/EPO3/timer/VHDL/timer_SYNTH.vhd

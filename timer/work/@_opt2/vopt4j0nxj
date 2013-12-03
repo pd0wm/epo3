@@ -1,0 +1,329 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/timer
+T_opt
+VPS;9k1XZ0B3zcSz5WajBV0
+Z1 04 22 0 work timer_tb_behaviour_cfg 1
+=1-5cf9dd6dec2d-5253ce78-53528-3382
+Z2 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z3 OE;O;10.1b;51
+Z4 d/timer
+T_opt1
+VS?@4H=fHfhV77RX_^NZ?^3
+R1
+=1-5cf9dd6de96f-5260f798-9b1d0-4e39
+R2
+n@_opt1
+R3
+R4
+T_opt2
+VA85ZM7EKN4[=H=3DjOLhW1
+04 19 0 work timer_behaviour_cfg 1
+=1-5cf9dd6de96f-52820b24-eaa95-7205
+R2
+n@_opt2
+R3
+Etimer
+Z5 w1384249464
+Z6 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z7 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z8 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z9 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z10 dtimer
+8VHDL/timer.vhd
+FVHDL/timer.vhd
+l0
+L5
+VAgN<F]c?EKBz?n@^b3ka71
+Z11 OE;C;10.1b;51
+32
+Z12 o-lower -explicit -work work -quiet -nologo
+Z13 tExplicit 1
+!s100 247h:m1denkm]P7BTUh<Y2
+!i10b 1
+!s108 1384251399.450961
+!s90 -lower|-explicit|-work|work|VHDL/timer.vhd|-quiet|-nologo|
+!s107 VHDL/timer.vhd|
+Abehaviour
+w1384254171
+R6
+R7
+Z14 DEx4 work 5 timer 0 22 AgN<F]c?EKBz?n@^b3ka71
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R8
+R9
+Z16 d/home/rdmiedema/EPO3/timer
+8VHDL/timer-behaviour.vhd
+FVHDL/timer-behaviour.vhd
+l12
+L6
+V2HV8M08PV:[U_U97z=B8a3
+R11
+32
+R12
+R13
+!s100 iDAK18F80fze`E8^OO;Ul0
+!s90 -lower|-explicit|-work|work|VHDL/timer-behaviour.vhd|-quiet|-nologo|
+!i10b 1
+!s108 1384254178.394992
+!s107 VHDL/timer-behaviour.vhd|
+Aextracted
+w1384248151
+R6
+R7
+Z17 DEx4 work 5 timer 0 22 MBIHF?^P8^HheLFVoE_9T0
+Z18 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
+R8
+R9
+8VHDL/timer_EXTR.vhd
+FVHDL/timer_EXTR.vhd
+l102
+L13
+V[7`LoTj3DCZkK0boW<lj62
+R11
+32
+R12
+R13
+!s100 @6TCBhZjB9E5A_GK30ZHQ2
+!i10b 1
+!s108 1384248153.653207
+!s90 -lower|-explicit|-work|work|VHDL/timer_EXTR.vhd|-quiet|-nologo|
+!s107 VHDL/timer_EXTR.vhd|
+Asynthesised
+R6
+R7
+R17
+R18
+R8
+R9
+8VHDL/timer_SYNTH.vhd
+FVHDL/timer_SYNTH.vhd
+l52
+L7
+VCPKTJc^Ji3V9J2_ld>7nW3
+R11
+32
+R12
+R13
+!s100 4[Eo_E?7Rf`l1_52Pe^EF2
+!s90 -lower|-explicit|-work|work|VHDL/timer_SYNTH.vhd|-quiet|-nologo|
+!i10b 1
+!s108 1384247966.470936
+!s107 VHDL/timer_SYNTH.vhd|
+Ctimer_behaviour_cfg
+Z19 abehaviour
+Z20 etimer
+R15
+DAx4 work 5 timer 9 behaviour 22 2HV8M08PV:[U_U97z=B8a3
+R6
+R7
+R8
+R9
+R14
+w1381221789
+R16
+8VHDL/timer_behaviour_cfg.vhd
+FVHDL/timer_behaviour_cfg.vhd
+l0
+L1
+VHfV8ng1TIkbmh?OL@RJaX3
+R11
+32
+R12
+R13
+!s100 DVf0T_4dXQ=U5e]>kcTWl1
+!i10b 0
+!s108 1384254179.864346
+!s90 -lower|-explicit|-work|work|VHDL/timer_behaviour_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_behaviour_cfg.vhd|
+Ctimer_extracted_cfg
+aextracted
+R20
+Z21 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
+Z22 DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
+Z23 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
+Z24 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
+Z25 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
+Z26 DEx8 cellslib 5 mu111 0 22 hknW;QzWV8Je@9eJh_5o`3
+Z27 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
+Z28 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
+R18
+DAx4 work 5 timer 9 extracted 22 [7`LoTj3DCZkK0boW<lj62
+R6
+R7
+R8
+R9
+R17
+w1384248181
+R10
+8VHDL/timer_extracted_cfg.vhd
+FVHDL/timer_extracted_cfg.vhd
+l0
+L1
+V=IN@7A86X][dM:21d4^VS2
+R11
+32
+R12
+R13
+!s100 U@neI:;SLb]E@8eBkcWz:0
+!i10b 0
+!s108 1384248182.012610
+!s90 -lower|-explicit|-work|work|VHDL/timer_extracted_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_extracted_cfg.vhd|
+Ctimer_synthesised_cfg
+asynthesised
+R20
+R21
+R23
+R22
+R28
+R26
+R24
+R27
+R25
+R18
+DAx4 work 5 timer 11 synthesised 22 CPKTJc^Ji3V9J2_ld>7nW3
+R6
+R7
+R8
+R9
+R17
+w1384243582
+R4
+8VHDL/timer_synthesised_cfg.vhd
+FVHDL/timer_synthesised_cfg.vhd
+l0
+L1
+VIcg3i9onoPER>EDFFQe:61
+R11
+32
+R12
+R13
+!s100 k<VXn6DQQMZXMh0?FJ<[@2
+!i10b 0
+!s108 1384247309.248595
+!s90 -lower|-explicit|-work|work|VHDL/timer_synthesised_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_synthesised_cfg.vhd|
+Etimer_tb
+w1381221873
+R8
+R9
+R4
+8VHDL/timer_tb.vhd
+FVHDL/timer_tb.vhd
+l0
+L4
+VOYm7PB@Z?<BDd<jl;R`KC1
+R11
+32
+R12
+R13
+!s100 `BSADQ[7@E6[<eZo9cDRm2
+!i10b 1
+!s108 1381221873.254820
+!s90 -lower|-explicit|-work|work|VHDL/timer_tb.vhd|-quiet|-nologo|
+!s107 VHDL/timer_tb.vhd|
+Abehaviour
+w1384252224
+Z29 DEx4 work 8 timer_tb 0 22 OYm7PB@Z?<BDd<jl;R`KC1
+R8
+R9
+R16
+8VHDL/timer_tb-behaviour.vhd
+FVHDL/timer_tb-behaviour.vhd
+l17
+L4
+VWESe6HfdaYn[6zQzW3<?:0
+R11
+32
+R12
+R13
+!s100 KNfTbOi]19cO6``]lQaV82
+!s90 -lower|-explicit|-work|work|VHDL/timer_tb-behaviour.vhd|-quiet|-nologo|
+!i10b 1
+!s108 1384254182.430732
+!s107 VHDL/timer_tb-behaviour.vhd|
+Ctimer_tb_behaviour_cfg
+R19
+Z30 etimer_tb
+R14
+R6
+R7
+DCx4 work 19 timer_behaviour_cfg 0 22 HfV8ng1TIkbmh?OL@RJaX3
+DAx4 work 8 timer_tb 9 behaviour 22 WESe6HfdaYn[6zQzW3<?:0
+R8
+R9
+R29
+w1381223474
+R16
+8VHDL/timer_tb_behaviour_cfg.vhd
+FVHDL/timer_tb_behaviour_cfg.vhd
+l0
+L1
+V8^QRXDOfi`dXJ9k]_WaMF0
+R11
+32
+R12
+R13
+!s100 Q_H_?JU3:ka;d^=4ADal<3
+!i10b 0
+!s108 1384254183.776676
+!s90 -lower|-explicit|-work|work|VHDL/timer_tb_behaviour_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_tb_behaviour_cfg.vhd|
+Ctimer_tb_behaviour_extr_cfg
+R19
+R30
+R17
+R6
+R7
+DCx4 work 19 timer_extracted_cfg 0 22 =IN@7A86X][dM:21d4^VS2
+Z31 DAx4 work 8 timer_tb 9 behaviour 22 =Jf]KS;c=B77Vb[I4ogM[3
+R8
+R9
+R29
+w1384248219
+R10
+8VHDL/timer_tb_behaviour_extr_cfg.vhd
+FVHDL/timer_tb_behaviour_extr_cfg.vhd
+l0
+L1
+VY1UOO0e7DngA0IT;af0On1
+R11
+32
+R12
+R13
+!s100 @RQz2;KSlhDGK0he1Q4WL2
+!i10b 0
+!s108 1384248219.415967
+!s90 -lower|-explicit|-work|work|VHDL/timer_tb_behaviour_extr_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_tb_behaviour_extr_cfg.vhd|
+Ctimer_tb_behaviour_syn_cfg
+R19
+R30
+R17
+R6
+R7
+DCx4 work 21 timer_synthesised_cfg 0 22 Icg3i9onoPER>EDFFQe:61
+R31
+R8
+R9
+R29
+w1384243602
+R10
+8VHDL/timer_tb_behaviour_syn_cfg.vhd
+FVHDL/timer_tb_behaviour_syn_cfg.vhd
+l0
+L1
+VGFbHf0JFh`jbYdHC5m6C?2
+R11
+32
+R12
+R13
+!s100 j04B3aPARliMdO`dCzkIM3
+!i10b 0
+!s108 1384247312.912449
+!s90 -lower|-explicit|-work|work|VHDL/timer_tb_behaviour_syn_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/timer_tb_behaviour_syn_cfg.vhd|
