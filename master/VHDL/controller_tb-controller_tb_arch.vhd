@@ -7,8 +7,8 @@ architecture controller_tb_arch of controller_tb is
 	component controller
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
-			 lut_x             : out std_logic_vector(3 downto 0);
-			 lut_y             : out std_logic_vector(4 downto 0);
+			 lut_x             : out std_logic_vector(2 downto 0);
+			 lut_y             : out std_logic_vector(3 downto 0);
 			 lut_rot           : out std_logic_vector(1 downto 0);
 			 lut_piece_type    : out std_logic_vector(2 downto 0);
 			 lut_next_piece    : out std_logic;
@@ -37,8 +37,8 @@ architecture controller_tb_arch of controller_tb is
 
 	signal clk               : std_logic;
 	signal rst               : std_logic;
-	signal lut_x             : std_logic_vector(3 downto 0);
-	signal lut_y             : std_logic_vector(4 downto 0);
+	signal lut_x             : std_logic_vector(2 downto 0);
+	signal lut_y             : std_logic_vector(3 downto 0);
 	signal lut_rot           : std_logic_vector(1 downto 0);
 	signal lut_piece_type    : std_logic_vector(2 downto 0);
 	signal lut_next_piece    : std_logic;
