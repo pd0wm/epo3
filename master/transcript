@@ -7,20 +7,55 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work controller_tb_controller_tb_arch_cfg 
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work piece_lut_tb_behaviour_cfg 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.vga_params(body)
-# Loading work.controller_tb_controller_tb_arch_cfg#1
-# Loading work.controller_tb(controller_tb_arch)#1
-# Loading work.controller_controller_arch_cfg#1
-# Loading work.controller(controller_arch)#1
+# Loading work.piece_lut_tb_behaviour_cfg#1
+# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
+# Loading work.piece_lut_behaviour_cfg#1
+# Loading work.piece_lut(piece_lut_behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 200 ns
-add wave -position insertpoint  \
-sim:/controller_tb/dut/cur_state \
-sim:/controller_tb/dut/next_state
-restart; run 200 ns
+run 1000 ns
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 30 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ns  Iteration: 0  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 120 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 120 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ns  Iteration: 1  Instance: /piece_lut_tb/piece_lut_port
+# reading modelsim.ini
+# vsim -lib work check_mask_tb_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.check_mask_tb_behaviour_cfg#1
+# Loading work.checkmask_tb(check_mask_tb_behaviour)#1
+# Loading work.check_mask_behaviour_cfg#1
+# Loading work.check_mask(check_mask_behaviour)#1
+run 1000 ns
