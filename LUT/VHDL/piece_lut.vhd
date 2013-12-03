@@ -14,21 +14,14 @@ entity piece_lut is
 		piece_type  : in  std_logic_vector(2 downto 0);
 		next_piece  : in  std_logic;
 		ready       : out std_logic;
-		error_side  : out std_logic;
-		error_bot   : out std_logic;
-		start       : in  std_logic;
+		overflow    : out std_logic;
+		check_start : in  std_logic;
+		draw_start  : in  std_logic;
 
 		rom_addr    : out std_logic_vector(6 downto 0);
 		rom_data    : in  std_logic_vector(3 downto 0)
 	);
 end piece_lut;
-
-
-
-
-
-
-
 
 
 

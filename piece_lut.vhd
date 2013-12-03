@@ -14,7 +14,7 @@ entity piece_lut is
         piece_type  : in  std_logic_vector(2 downto 0);
         next_piece  : in  std_logic;
         ready       : out std_logic;
-        error       : out std_logic;
+        overflow    : out std_logic;
         check_start       : in  std_logic;
         draw_start       : in  std_logic;
 
