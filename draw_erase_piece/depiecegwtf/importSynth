@@ -1,0 +1,5 @@
+rm -rf /home/swarmerdam/depiece/syn_work_bak
+mv -f /home/swarmerdam/depiece/syn_work /home/swarmerdam/depiece/syn_work_bak
+cp -r /tmp/swarmerdam/depiece/syn_work /home/swarmerdam/depiece
+cp /tmp/swarmerdam/depiece/ADB/de_piece.ddc /home/swarmerdam/depiece/ADB/de_piece.ddc
+cp /tmp/swarmerdam/depiece/VHDL/de_piece_SYNTH.vhd /home/swarmerdam/depiece/VHDL/de_piece_SYNTH.vhd
