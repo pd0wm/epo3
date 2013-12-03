@@ -7,7 +7,7 @@ component score is
 		clk            : in  std_logic;
 		rst            : in  std_logic;
 
-		increase_value : in  std_logic_vector(2 downto 0);
+		
 		increase       : in  std_logic;
 
 		output         : out std_logic_vector(7 downto 0)
@@ -23,9 +23,12 @@ signal score_to_log : std_logic_vector (7 downto 0);
 
 begin
 
-L1: score port map ( clk => clk, rst => rst, increase_value => increase_value, increase => increase, output => score_to_log);
+L1: score port map ( clk => clk, rst => rst, increase => increase, output => score_to_log);
 L2: log port map ( log_in => score_to_log, log_out => output);
 
 end behaviour;
+
+
+
 
 

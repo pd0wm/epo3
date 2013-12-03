@@ -1,30 +1,23 @@
 set vdd = h*~
 set vss = l*~
-set clk = (h*1000 l*1000)*50\
-          h*~
-set rst = x*4000\
-          h*4000 l*~
-set increase_value_2_0_2 = l*78200 h*~
-set increase_value_2_0_1 = l*78200 h*~
-set increase_value_2_0_0 = l*54200 h*~
-set increase = x*10200\
-               h*4000\
-               l*40000\
-               h*4000\
-               l*20000 h*~
+set clk = (h*85 l*85)*11\
+          h*85 l*~
+set rst = x*90\
+          h*90 l*~
+set increase = l*270\
+               h*900\
+               l*100\
+               h*100 l*~
 
 option sigunit   = 1n
 option outacc    = 100p
 option level     = 3
 option initialize random = on
-option simperiod = 100000
+option simperiod = 1955
 
 print \
       clk,\
       rst,\
-      increase_value_2_0_2,\
-      increase_value_2_0_1,\
-      increase_value_2_0_0,\
       increase,\
       output_7_0_7,\
       output_7_0_6,\
@@ -38,9 +31,6 @@ print \
 plot \
       clk,\
       rst,\
-      increase_value_2_0_2,\
-      increase_value_2_0_1,\
-      increase_value_2_0_0,\
       increase,\
       output_7_0_7,\
       output_7_0_6,\
