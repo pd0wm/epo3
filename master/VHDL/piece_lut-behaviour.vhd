@@ -21,11 +21,13 @@ begin
 			else
 				state     <= next_state;
 				overflow1 <= next_overflow;
+				prev_start    <= check_start or draw_start;
+				
 			end if;
 		end if;
 	end process;
 
-	process(state, rst, check_start, draw_start, y_out, x_out, rom_data, x, y, rot, piece_type, mask_select, next_piece, overflow1, next_overflow, prev_start)
+	process(state, rst, prev_start, check_start, draw_start, y_out, x_out, rom_data, x, y, rot, piece_type, mask_select, next_piece, overflow1, next_overflow, prev_start)
 	begin
 		rom_addr(6 downto 4) <= piece_type;
 		rom_addr(3 downto 2) <= rot;
@@ -36,8 +38,7 @@ begin
 		case state is
 			when rust =>
 				ready         <= '0';
-				next_overflow <= '0';
-				prev_start    <= check_start or draw_start;
+				next_overflow <= '0';				
 				x_out         <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out         <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				if ((check_start or draw_start) = '1' and prev_start = '0') then
