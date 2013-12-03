@@ -95,17 +95,22 @@ begin
 			timer_2_reset     => timer_2_reset,
 			inputs            => inputs
 		);
-		
-	check_mask : process
+	
+	lbl_new_piece : process
 	begin
-		if (check_start = '1') then
-			wait for 100 ns;
-			check_ready <= '1';
-			check_empty <= '1';
-		else
-			check_empty <= '0';
-			check_ready <= '0';
-		end if;
+		next_piece <= "001";
+		wait;
+	end process;
+	
+	lbl_check_mask : process
+	begin
+		check_empty <= '0';
+		check_ready <= '0';
+		wait until (check_start = '1');
+		wait for 100 ns;
+		check_ready <= '1';
+		check_empty <= '1';
+		wait until (check_start = '0');
 	end process;
 
 	clock : process
@@ -125,5 +130,14 @@ begin
 
 	rst <= '1', '0' after clk_period;
 end;
+
+
+
+
+
+
+
+
+
 
 
