@@ -31,7 +31,7 @@ begin
 			   next_empty <= '0';
 			   ready <= '0';
 			   lut_start <= '0';
-			   next_pixel <= "00";
+			   next_pixel <= "ZZ";
 			   mask_select <= pixel;
 			   addr <= "ZZZZZZZZ";
 				if (start = '1') then
