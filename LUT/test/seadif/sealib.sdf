@@ -4,7 +4,7 @@
       (Technology "fishbone")
       (Status
 	 (Written
-	    (TimeStamp 113 11 29 12 14 58)
+	    (TimeStamp 113 11 29 12 31 0)
 	    (Author "by user; cpu tud204009; disk tud204009:/home/tqiu/Desktop/epo3/LUT/test")
 	    (Program "nelsea")))
       (Function "piece_lut"
@@ -17,7 +17,7 @@
 	 (Circuit "piece_lut"
 	    (Status
 	       (Written
-		  (TimeStamp 113 11 29 12 15 9)
+		  (TimeStamp 113 11 29 12 31 0)
 		  (Author "by user; cpu tud204009; disk tud204009:/home/tqiu/Desktop/epo3/LUT/test")
 		  (Program "sea; checked and OK")))
 	    (CirPortList
@@ -564,53 +564,53 @@
 	    (Layout "Tmp_Cell_"
 	       (Status
 		  (Written
-		     (TimeStamp 113 11 29 12 15 10)
+		     (TimeStamp 113 11 29 12 31 0)
 		     (Author "by user; tud204009:/home/tqiu/Desktop/epo3/LUT/test")
 		     (Program "trout")))
 	       (LayBbx 52 112)
 	       (LayPortList
-		  (LayPort "next_piece" (PortPos 51 111) (PortLayer 1))
-		  (LayPort "mask_7_0_7" (PortPos 51 110) (PortLayer 1))
-		  (LayPort "mask_7_0_6" (PortPos 0 47) (PortLayer 0))
-		  (LayPort "mask_7_0_5" (PortPos 2 1) (PortLayer 1))
-		  (LayPort "mask_7_0_4" (PortPos 17 111) (PortLayer 1))
-		  (LayPort "mask_7_0_3" (PortPos 0 80) (PortLayer 0))
-		  (LayPort "mask_7_0_2" (PortPos 46 1) (PortLayer 1))
-		  (LayPort "mask_7_0_1" (PortPos 24 111) (PortLayer 1))
-		  (LayPort "mask_7_0_0" (PortPos 0 73) (PortLayer 0))
-		  (LayPort "piece_type_2_0_2" (PortPos 51 109) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_6" (PortPos 51 108) (PortLayer 1))
-		  (LayPort "piece_type_2_0_1" (PortPos 51 107) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_5" (PortPos 51 106) (PortLayer 1))
-		  (LayPort "piece_type_2_0_0" (PortPos 51 105) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_4" (PortPos 51 104) (PortLayer 1))
-		  (LayPort "rot_1_0_1" (PortPos 51 103) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_3" (PortPos 51 102) (PortLayer 1))
-		  (LayPort "rot_1_0_0" (PortPos 51 101) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_2" (PortPos 51 100) (PortLayer 1))
-		  (LayPort "mask_select_1_0_1" (PortPos 51 99) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_1" (PortPos 51 98) (PortLayer 1))
-		  (LayPort "mask_select_1_0_0" (PortPos 51 97) (PortLayer 1))
-		  (LayPort "rom_addr_6_0_0" (PortPos 51 96) (PortLayer 1))
-		  (LayPort "rst" (PortPos 27 111) (PortLayer 1))
-		  (LayPort "clk" (PortPos 29 111) (PortLayer 1))
-		  (LayPort "vss" (PortPos 28 84) (PortLayer 0))
-		  (LayPort "vdd" (PortPos 28 98) (PortLayer 0))
-		  (LayPort "start" (PortPos 0 52) (PortLayer 0))
-		  (LayPort "x_2_0_2" (PortPos 51 11) (PortLayer 0))
-		  (LayPort "rom_data_3_0_0" (PortPos 20 111) (PortLayer 1))
-		  (LayPort "x_2_0_0" (PortPos 21 111) (PortLayer 1))
-		  (LayPort "y_3_0_3" (PortPos 0 21) (PortLayer 0))
-		  (LayPort "y_3_0_2" (PortPos 0 34) (PortLayer 0))
-		  (LayPort "rom_data_3_0_2" (PortPos 12 111) (PortLayer 1))
-		  (LayPort "y_3_0_0" (PortPos 14 111) (PortLayer 1))
-		  (LayPort "error_side" (PortPos 51 36) (PortLayer 0))
-		  (LayPort "rom_data_3_0_1" (PortPos 51 73) (PortLayer 0))
-		  (LayPort "x_2_0_1" (PortPos 51 74) (PortLayer 0))
-		  (LayPort "error_bot" (PortPos 0 24) (PortLayer 0))
-		  (LayPort "rom_data_3_0_3" (PortPos 0 57) (PortLayer 0))
 		  (LayPort "y_3_0_1" (PortPos 0 81) (PortLayer 0))
-		  (LayPort "ready" (PortPos 13 1) (PortLayer 1)))
+		  (LayPort "rom_data_3_0_3" (PortPos 0 57) (PortLayer 0))
+		  (LayPort "error_bot" (PortPos 0 24) (PortLayer 0))
+		  (LayPort "x_2_0_1" (PortPos 51 74) (PortLayer 0))
+		  (LayPort "rom_data_3_0_1" (PortPos 51 73) (PortLayer 0))
+		  (LayPort "error_side" (PortPos 51 36) (PortLayer 0))
+		  (LayPort "y_3_0_2" (PortPos 0 34) (PortLayer 0))
+		  (LayPort "y_3_0_3" (PortPos 0 21) (PortLayer 0))
+		  (LayPort "x_2_0_2" (PortPos 51 11) (PortLayer 0))
+		  (LayPort "start" (PortPos 0 52) (PortLayer 0))
+		  (LayPort "vdd" (PortPos 28 98) (PortLayer 0))
+		  (LayPort "vss" (PortPos 28 84) (PortLayer 0))
+		  (LayPort "mask_7_0_0" (PortPos 0 73) (PortLayer 0))
+		  (LayPort "mask_7_0_3" (PortPos 0 80) (PortLayer 0))
+		  (LayPort "mask_7_0_6" (PortPos 0 47) (PortLayer 0))
+		  (LayPort "ready" (PortPos 13 1) (PortLayer 1))
+		  (LayPort "y_3_0_0" (PortPos 14 111) (PortLayer 1))
+		  (LayPort "rom_data_3_0_2" (PortPos 12 111) (PortLayer 1))
+		  (LayPort "x_2_0_0" (PortPos 21 111) (PortLayer 1))
+		  (LayPort "rom_data_3_0_0" (PortPos 20 111) (PortLayer 1))
+		  (LayPort "clk" (PortPos 29 111) (PortLayer 1))
+		  (LayPort "rst" (PortPos 27 111) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_0" (PortPos 51 96) (PortLayer 1))
+		  (LayPort "mask_select_1_0_0" (PortPos 51 97) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_1" (PortPos 51 98) (PortLayer 1))
+		  (LayPort "mask_select_1_0_1" (PortPos 51 99) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_2" (PortPos 51 100) (PortLayer 1))
+		  (LayPort "rot_1_0_0" (PortPos 51 101) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_3" (PortPos 51 102) (PortLayer 1))
+		  (LayPort "rot_1_0_1" (PortPos 51 103) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_4" (PortPos 51 104) (PortLayer 1))
+		  (LayPort "piece_type_2_0_0" (PortPos 51 105) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_5" (PortPos 51 106) (PortLayer 1))
+		  (LayPort "piece_type_2_0_1" (PortPos 51 107) (PortLayer 1))
+		  (LayPort "rom_addr_6_0_6" (PortPos 51 108) (PortLayer 1))
+		  (LayPort "piece_type_2_0_2" (PortPos 51 109) (PortLayer 1))
+		  (LayPort "mask_7_0_1" (PortPos 24 111) (PortLayer 1))
+		  (LayPort "mask_7_0_2" (PortPos 46 1) (PortLayer 1))
+		  (LayPort "mask_7_0_4" (PortPos 17 111) (PortLayer 1))
+		  (LayPort "mask_7_0_5" (PortPos 2 1) (PortLayer 1))
+		  (LayPort "mask_7_0_7" (PortPos 51 110) (PortLayer 1))
+		  (LayPort "next_piece" (PortPos 51 111) (PortLayer 1)))
 	       (LayLabelList
 		  (LayLabel "state_1_port" (LabelPos 16 34) (LabelLayer 0))
 		  (LayLabel "state_0_port" (LabelPos 36 50) (LabelLayer 0))
@@ -652,164 +652,157 @@
 		  (LayLabel "n74" (LabelPos 44 35) (LabelLayer 0))
 		  (LayLabel "n58" (LabelPos 12 34) (LabelLayer 0))
 		  (LayLabel "n79" (LabelPos 2 90) (LabelLayer 0)))
-	       (LaySlice vertical
-		  (LaySlice horizontal
-		     (LayInst "U72"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 47 0 1 56))
-		     (LayInst "U67"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 44 0 1 0))
-		     (LayInst "U71"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 44 0 -1 28))
-		     (LayInst "U69"
-			(LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 44 0 1 28))
-		     (LayInst "U50"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 44 0 -1 56))
-		     (LayInst "U70"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 47 0 -1 56)))
-		  (LaySlice horizontal
-		     (LayInst "U51"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 42 0 1 56))
-		     (LayInst "U44"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 36 0 1 0))
-		     (LayInst "U45"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 36 0 -1 28))
-		     (LayInst "U43"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 36 0 1 28))
-		     (LayInst "U86"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 36 0 -1 56)))
-		  (LaySlice horizontal
-		     (LayInst "U74"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 1 56))
-		     (LayInst "U75"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 -1 84))
-		     (LayInst "state_reg_0_inst"
-			(LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 1 84))
-		     (LayInst "state_reg_1_inst"
-			(LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 31 0 -1 84))
-		     (LayInst "U42"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 1 0))
-		     (LayInst "U49"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 -1 28))
-		     (LayInst "U41"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 1 28))
-		     (LayInst "U84"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 28 0 -1 56)))
-		  (LayInstList
-		     (LayInst "U57"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 20 0 1 56))
-		     (LayInst "U68"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 20 0 -1 84))
-		     (LayInst "U73"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 20 0 1 84))
-		     (LayInst "U58"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 20 0 -1 112))
-		     (LayInst "U56"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 23 0 -1 112))
-		     (LayInst "state_reg_2_inst"
-			(LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 25 0 -1 112)))
-		  (LaySlice horizontal
-		     (LayInst "U64"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 1 56))
-		     (LayInst "U66"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 -1 84))
-		     (LayInst "U79"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 1 84))
-		     (LayInst "U65"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 -1 112))
-		     (LayInst "U63"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 15 0 -1 112))
-		     (LayInst "U83"
-			(LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 1 0))
-		     (LayInst "U76"
-			(LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 12 0 -1 28))
-		     (LayInst "U54"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 18 0 1 0))
-		     (LayInst "U40"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 18 0 -1 28))
-		     (LayInst "U82"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 16 0 1 28))
-		     (LayInst "U55"
-			(LayCellRef "no210" (LayCirRef "no210" (LayFunRef "no210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 16 0 -1 56))
-		     (LayInst "U85"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 16 0 1 0)))
-		  (LaySlice horizontal
-		     (LayInst "U52"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 9 0 1 56))
-		     (LayInst "U53"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 7 0 1 0))
-		     (LayInst "U46"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 7 0 -1 28))
-		     (LayInst "U47"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 11 0 1 28))
-		     (LayInst "U48"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 11 0 -1 56)))
-		  (LaySlice horizontal
-		     (LayInst "U80"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 1 56))
-		     (LayInst "U78"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 -1 84))
-		     (LayInst "U81"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 1 84))
-		     (LayInst "U62"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 1 0))
-		     (LayInst "U60"
-			(LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 -1 28))
-		     (LayInst "U77"
-			(LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 1 28))
-		     (LayInst "U61"
-			(LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 0 0 -1 56))
-		     (LayInst "U59"
-			(LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
-			(Orient 1 0 3 0 -1 56))))
+	       (LayInstList
+		  (LayInst "U59"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 3 0 -1 56))
+		  (LayInst "U61"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 -1 56))
+		  (LayInst "U77"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 1 28))
+		  (LayInst "U60"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 -1 28))
+		  (LayInst "U62"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 1 0))
+		  (LayInst "U81"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 1 84))
+		  (LayInst "U78"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 -1 84))
+		  (LayInst "U80"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 1 56))
+		  (LayInst "U48"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 11 0 -1 56))
+		  (LayInst "U47"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 11 0 1 28))
+		  (LayInst "U46"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 7 0 -1 28))
+		  (LayInst "U53"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 7 0 1 0))
+		  (LayInst "U52"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 9 0 1 56))
+		  (LayInst "U85"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 16 0 1 0))
+		  (LayInst "U55"
+		     (LayCellRef "no210" (LayCirRef "no210" (LayFunRef "no210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 16 0 -1 56))
+		  (LayInst "U82"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 16 0 1 28))
+		  (LayInst "U40"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 18 0 -1 28))
+		  (LayInst "U54"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 18 0 1 0))
+		  (LayInst "U76"
+		     (LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 -1 28))
+		  (LayInst "U83"
+		     (LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 1 0))
+		  (LayInst "U63"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 15 0 -1 112))
+		  (LayInst "U65"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 -1 112))
+		  (LayInst "U79"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 1 84))
+		  (LayInst "U66"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 -1 84))
+		  (LayInst "U64"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 12 0 1 56))
+		  (LayInst "state_reg_2_inst"
+		     (LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 25 0 -1 112))
+		  (LayInst "U56"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 23 0 -1 112))
+		  (LayInst "U58"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 20 0 -1 112))
+		  (LayInst "U73"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 20 0 1 84))
+		  (LayInst "U68"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 20 0 -1 84))
+		  (LayInst "U57"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 20 0 1 56))
+		  (LayInst "U84"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 -1 56))
+		  (LayInst "U41"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 1 28))
+		  (LayInst "U49"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 -1 28))
+		  (LayInst "U42"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 1 0))
+		  (LayInst "state_reg_1_inst"
+		     (LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 31 0 -1 84))
+		  (LayInst "state_reg_0_inst"
+		     (LayCellRef "dfr11" (LayCirRef "dfr11" (LayFunRef "dfr11" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 1 84))
+		  (LayInst "U75"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 -1 84))
+		  (LayInst "U74"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 28 0 1 56))
+		  (LayInst "U86"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 36 0 -1 56))
+		  (LayInst "U43"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 36 0 1 28))
+		  (LayInst "U45"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 36 0 -1 28))
+		  (LayInst "U44"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 36 0 1 0))
+		  (LayInst "U51"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 42 0 1 56))
+		  (LayInst "U70"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 47 0 -1 56))
+		  (LayInst "U50"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 44 0 -1 56))
+		  (LayInst "U69"
+		     (LayCellRef "no310" (LayCirRef "no310" (LayFunRef "no310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 44 0 1 28))
+		  (LayInst "U71"
+		     (LayCellRef "na310" (LayCirRef "na310" (LayFunRef "na310" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 44 0 -1 28))
+		  (LayInst "U67"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 44 0 1 0))
+		  (LayInst "U72"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 47 0 1 56)))
 	       (WireList
 		  (Wire 100 25 25 111 111)
 		  (Wire 100 13 13 111 111)
@@ -1493,6 +1486,6 @@
 	    (Layout "Error_Marker_"
 	       (Status
 		  (Written
-		     (TimeStamp 113 11 29 12 15 10)))
+		     (TimeStamp 113 11 29 12 31 0)))
 	       (WireList
 		  (Wire 200 0 0 0 0)))))))

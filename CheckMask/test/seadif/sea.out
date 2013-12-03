@@ -2,14 +2,35 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
+Warning: A new sealib will be generated: 'test2'
+         This indicates most likeley that the project was renamed.
 ------ checking your circuit 'checkmask' ------
------- circuit 'checkmask' is still up-to-date ------
------- checking match with placement layout 'Tmpcheckmask14958' ------
------- reading nelsis layout-cell 'Tmpcheckmask14958' ------
------- writing nelsis 'Tmpcheckmask14958' as sdflay 'Tmp_Cell_(checkmask(checkmask(test)))' ------
+WARNING: Imported nelsis cell 'iv110' is younger than its corresponding
+         seadif cell $dummy(iv110(iv110(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'tinv10' is younger than its corresponding
+         seadif cell $dummy(tinv10(tinv10(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'dfr11' is younger than its corresponding
+         seadif cell $dummy(dfr11(dfr11(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'ex210' is younger than its corresponding
+         seadif cell $dummy(ex210(ex210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no210' is younger than its corresponding
+         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na210' is younger than its corresponding
+         seadif cell $dummy(na210(na210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+------ reading nelsis circuit-cell 'checkmask' ------
+------ checking match with placement layout 'Tmpcheckmask4998' ------
+------ reading nelsis layout-cell 'Tmpcheckmask4998' ------
+------ writing nelsis 'Tmpcheckmask4998' as sdflay 'Tmp_Cell_(checkmask(checkmask(test2)))' ------
+------ writing nelsis 'checkmask' as sdfcir 'checkmask(checkmask(test2)) ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f checkmask -c checkmask -o Tmp_Cell_ -d Tmp_Cell_ 
+calling program: trout -l test2 -f checkmask -c checkmask -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpcheckmask14958' ------
-calling program: nelsea -rLH -f checkmask -c checkmask -l Tmp_Cell_ Tmpcheckmask14958 
+------ converting result back into nelsis as cell 'Tmpcheckmask4998' ------
+calling program: nelsea -rLH -f checkmask -c checkmask -l Tmp_Cell_ Tmpcheckmask4998 
 ------ sea: task completed ------

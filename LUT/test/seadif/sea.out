@@ -31,12 +31,12 @@ WARNING: Zero terminal net: 'mask_4_port' (cell 'piece_lut')
 WARNING: Zero terminal net: 'mask_3_port' (cell 'piece_lut')
 WARNING: Zero terminal net: 'mask_2_port' (cell 'piece_lut')
 WARNING: many (7) useless nets were removed (printed only 5)
------- input check seems good enough: calling placer ------
-calling program: madonna -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -x 54 -y 111 -ex piece_lut 
------- madonna successful ------
------- calling router ------
+------ checking match with placement layout 'Tmppiece_lut4754' ------
+------ reading nelsis layout-cell 'Tmppiece_lut4754' ------
+------ writing nelsis 'Tmppiece_lut4754' as sdflay 'Tmp_Cell_(piece_lut(piece_lut(test)))' ------
+------ input seems good enough: calling router ------
 calling program: trout -l test -f piece_lut -c piece_lut -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmppiece_lut2483' ------
-calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut2483 
+------ converting result back into nelsis as cell 'Tmppiece_lut4754' ------
+calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut4754 
 ------ sea: task completed ------
