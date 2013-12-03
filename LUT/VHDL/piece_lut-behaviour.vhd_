@@ -27,7 +27,7 @@ begin
 	begin
 		rom_addr(6 downto 4) <= piece_type;
 		rom_addr(3 downto 2) <= rot;
-		rom_addr(1 downto 0) <= mask_selector;
+		rom_addr(1 downto 0) <= mask_select;
 		mask(7) <= next_piece;
 		mask(6 downto 3) <= y_out(3 downto 0);
 		mask(2 downto 0) <= x_out(2 downto 0);

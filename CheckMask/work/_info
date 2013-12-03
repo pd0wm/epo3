@@ -10,6 +10,7 @@ V]z8h<gA;f^QI3@K;5BBA;3
 Z1 o-quiet -auto_acc_if_foreign -work work
 n@_opt
 Z2 OE;O;10.1b;51
+Z3 dCheckMask
 T_opt1
 VQfKbOTei;?AF3@REHMFZ11
 04 29 0 work checkmask_tb_behaviour_ext_fg 1
@@ -17,7 +18,7 @@ VQfKbOTei;?AF3@REHMFZ11
 R1
 n@_opt1
 R2
-Z3 dCheckMask
+R3
 T_opt2
 Vf2]B`=5e:Lmzf;FJ3A_;i3
 04 30 0 work checkmask_tb_behaviour_syn_cfg 1
@@ -45,10 +46,31 @@ Z8 tExplicit 1
 !s108 1385452196.641464
 !s90 -lower|-explicit|-work|work|VHDL/CheckMask.vhd|-quiet|-nologo|
 !s107 VHDL/CheckMask.vhd|
+Acheckmask_behaviour
+w1386057205
+Z9 DEx4 work 9 checkmask 0 22 ]JW7l?0;dD3b_ORDC=:EC1
+Z10 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+dCheckMask
+Z11 8VHDL/CheckMask_behaviour.vhd
+Z12 FVHDL/CheckMask_behaviour.vhd
+l9
+L5
+V7omYS5eEAW2C:l<o@LmK_3
+!s100 IMUoCiV:1kA]?dBKJNfNS2
+R6
+32
+!i10b 1
+!s108 1386057206.072780
+Z13 !s90 -lower|-explicit|-work|work|VHDL/CheckMask_behaviour.vhd|-quiet|-nologo|
+!s107 VHDL/CheckMask_behaviour.vhd|
+R7
+R8
 Aextracted
 w1385455611
-Z9 DEx4 work 9 checkmask 0 22 ]JW7l?0;dD3b_ORDC=:EC1
-Z10 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
+R9
+Z14 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
 R4
 R5
 8VHDL/checkmask_EXTR.vhd
@@ -68,7 +90,7 @@ R8
 Asynthesised
 w1385455568
 R9
-R10
+R14
 R4
 R5
 8VHDL/checkmask_SYNTH.vhd
@@ -85,30 +107,10 @@ R8
 !i10b 1
 !s108 1385455580.497877
 !s107 VHDL/checkmask_SYNTH.vhd|
-Acheckmask_behaviour
-w1385452377
-R9
-Z11 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-R4
-R5
-8VHDL/CheckMask_behaviour.vhd
-FVHDL/CheckMask_behaviour.vhd
-l9
-L5
-Vie1OibUDNjOdN[nMV9ZXC0
-R6
-32
-R7
-R8
-!s90 -lower|-explicit|-work|work|VHDL/CheckMask_behaviour.vhd|-quiet|-nologo|
-!s100 Y<RNBiQ87WRjR48P6]:U<2
-!i10b 1
-!s108 1385452377.475769
-!s107 VHDL/CheckMask_behaviour.vhd|
 Ccheckmask_behaviour_cfg
 acheckmask_behaviour
-Z12 echeckmask
-R11
+Z15 echeckmask
+R10
 DAx4 work 9 checkmask 19 checkmask_behaviour 22 ie1OibUDNjOdN[nMV9ZXC0
 R4
 R5
@@ -131,14 +133,14 @@ R8
 !s107 VHDL/checkmask_behaviour_cfg.vhd|
 Ccheckmask_extracted_cfg
 aextracted
-R12
-Z13 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
-Z14 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
-Z15 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
-Z16 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
-Z17 DEx8 cellslib 6 tinv10 0 22 LKW?@Sej^lT[<SF9KMaR>2
-Z18 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
-R10
+R15
+Z16 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
+Z17 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
+Z18 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
+Z19 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
+Z20 DEx8 cellslib 6 tinv10 0 22 LKW?@Sej^lT[<SF9KMaR>2
+Z21 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
+R14
 DAx4 work 9 checkmask 9 extracted 22 kl[b4OfX5lN8eIQA>`F`c1
 R4
 R5
@@ -161,14 +163,14 @@ R8
 !s107 VHDL/checkmask_extracted_cfg.vhd|
 Ccheckmask_synthesised_cfg
 asynthesised
-R12
-R14
-R13
 R15
-R18
 R17
 R16
-R10
+R18
+R21
+R20
+R19
+R14
 DAx4 work 9 checkmask 11 synthesised 22 g`0Hz`I>cnFV0FVCdZ>G^0
 R4
 R5
@@ -210,7 +212,7 @@ R8
 !s107 VHDL/CheckMask_tb.vhd|
 Acheckmask_tb_behaviour
 w1385119110
-Z19 DEx4 work 12 checkmask_tb 0 22 BagIkTjH6iU5O11KENW=N1
+Z22 DEx4 work 12 checkmask_tb 0 22 BagIkTjH6iU5O11KENW=N1
 R4
 R5
 8VHDL/CheckMask_tb_behaviour.vhd
@@ -228,14 +230,14 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/CheckMask_tb_behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/CheckMask_tb_behaviour.vhd|
 Ccheckmask_tb_behaviour_cfg
-Z20 acheckmask_tb_behaviour
-Z21 echeckmask_tb
+Z23 acheckmask_tb_behaviour
+Z24 echeckmask_tb
 R9
 DCx4 work 23 checkmask_behaviour_cfg 0 22 L`l^<P@zE<KWDlAi8ZG2<1
-Z22 DAx4 work 12 checkmask_tb 22 checkmask_tb_behaviour 22 IJBKbW665<;BCJoJDi[kc2
+Z25 DAx4 work 12 checkmask_tb 22 checkmask_tb_behaviour 22 IJBKbW665<;BCJoJDi[kc2
 R4
 R5
-R19
+R22
 w1385452397
 R3
 8VHDL/checkmask_tb_behaviour_cfg.vhd
@@ -253,14 +255,14 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/checkmask_tb_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/checkmask_tb_behaviour_cfg.vhd|
 Ccheckmask_tb_behaviour_ext_fg
-R20
-R21
+R23
+R24
 R9
 DCx4 work 23 checkmask_extracted_cfg 0 22 =[c6WdVG?K_B>:CA:VOEQ0
-R22
+R25
 R4
 R5
-R19
+R22
 w1385454779
 R3
 8VHDL/checkmask_tb_behaviour_ext_fg.vhd
@@ -278,14 +280,14 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/checkmask_tb_behaviour_ext_fg.vhd|-quiet|-nologo|
 !s107 VHDL/checkmask_tb_behaviour_ext_fg.vhd|
 Ccheckmask_tb_behaviour_syn_cfg
-R20
-R21
+R23
+R24
 R9
 DCx4 work 25 checkmask_synthesised_cfg 0 22 E:BH;@I[8c`[2BK4]PI<E2
-R22
+R25
 R4
 R5
-R19
+R22
 w1385455053
 R3
 8VHDL/checkmask_tb_behaviour_syn_cfg.vhd

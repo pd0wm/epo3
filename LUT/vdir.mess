@@ -35,6 +35,22 @@ ENTITY piece_lut
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY piece_lut_behaviour
+    Source modified time: Tue Dec  3 09:09:00 2013
+    Depends on: E work piece_lut ZUEklAXXQ0f6OVOMcFBjU1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: LUT
+    HDL source file: VHDL/piece_lut-behaviour.vhd
+    Source file: VHDL/piece_lut-behaviour.vhd
+    Start location: VHDL/piece_lut-behaviour.vhd:5
+    Version string: PBCn]4e0;S[Yh><U[o_3F3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
   ARCHITECTURE BODY extracted
     Source modified time: Fri Nov 29 12:15:33 2013
     Depends on: E work piece_lut ZUEklAXXQ0f6OVOMcFBjU1
@@ -66,22 +82,6 @@ ENTITY piece_lut
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: LUT
-    Debug Symbol file exists
-  ARCHITECTURE BODY piece_lut_behaviour
-    Depends on: E work piece_lut ZUEklAXXQ0f6OVOMcFBjU1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/piece_lut-behaviour.vhd
-    Source file: VHDL/piece_lut-behaviour.vhd
-    Start location: VHDL/piece_lut-behaviour.vhd:5
-    Version string: DIAbMH5hn3h]^z99ZUl[i2
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: LUT
-    Source modified time: Fri Nov 29 12:12:03 2013
     Debug Symbol file exists
 VHDL CONFIGURATION piece_lut_behaviour_cfg
     Configuration for architecture: piece_lut_behaviour

@@ -18,6 +18,7 @@ V12T<^9Ck7K>Z?A=EY2mQP0
 Z2 o-quiet -auto_acc_if_foreign -work work
 n@_opt1
 R1
+dLUT
 T_opt2
 VVTBZ6>8O[[FAZAJFl<fGH3
 04 30 0 work piece_lut_tb_behaviour_syn_cfg 1
@@ -45,10 +46,31 @@ Z8 tExplicit 1
 !s108 1385723523.357283
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut.vhd|
+Apiece_lut_behaviour
+w1386058140
+Z9 DEx4 work 9 piece_lut 0 22 ZUEklAXXQ0f6OVOMcFBjU1
+Z10 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+dLUT
+Z11 8VHDL/piece_lut-behaviour.vhd
+Z12 FVHDL/piece_lut-behaviour.vhd
+l13
+L5
+VPBCn]4e0;S[Yh><U[o_3F3
+!s100 oz]J_^nZWjLkU2ShKKO6>3
+R6
+32
+!i10b 1
+!s108 1386058140.808818
+Z13 !s90 -lower|-explicit|-work|work|VHDL/piece_lut-behaviour.vhd|-quiet|-nologo|
+!s107 VHDL/piece_lut-behaviour.vhd|
+R7
+R8
 Aextracted
 w1385723733
-Z9 DEx4 work 9 piece_lut 0 22 ZUEklAXXQ0f6OVOMcFBjU1
-Z10 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
+R9
+Z14 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
 R4
 R5
 8VHDL/piece_lut_EXTR.vhd
@@ -68,7 +90,7 @@ R8
 Asynthesised
 w1385723615
 R9
-R10
+R14
 R4
 R5
 8VHDL/piece_lut_SYNTH.vhd
@@ -85,29 +107,10 @@ R8
 !s108 1385723616.000036
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_SYNTH.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_SYNTH.vhd|
-Apiece_lut_behaviour
-R9
-Z11 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-R4
-R5
-8VHDL/piece_lut-behaviour.vhd
-FVHDL/piece_lut-behaviour.vhd
-l12
-L5
-VDIAbMH5hn3h]^z99ZUl[i2
-R6
-32
-R7
-R8
-!s100 H5WKLA5<fL<e>P2jU@fYj2
-!i10b 1
-!s108 1385723533.866334
-!s90 -lower|-explicit|-work|work|VHDL/piece_lut-behaviour.vhd|-quiet|-nologo|
-!s107 VHDL/piece_lut-behaviour.vhd|
 Cpiece_lut_behaviour_cfg
 apiece_lut_behaviour
-Z12 epiece_lut
-R11
+Z15 epiece_lut
+R10
 DAx4 work 9 piece_lut 19 piece_lut_behaviour 22 DIAbMH5hn3h]^z99ZUl[i2
 R4
 R5
@@ -130,15 +133,15 @@ R8
 !s107 VHDL/piece_lut_behaviour_cfg.vhd|
 Cpiece_lut_extracted_cfg
 aextracted
-R12
-Z13 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
-Z14 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
-Z15 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
-Z16 DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
-Z17 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
-Z18 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
-Z19 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
-R10
+R15
+Z16 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
+Z17 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
+Z18 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
+Z19 DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
+Z20 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
+Z21 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
+Z22 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
+R14
 DAx4 work 9 piece_lut 9 extracted 22 =c8[o6Y:b9>ND@I>110UF2
 R4
 R5
@@ -161,15 +164,15 @@ R8
 !s107 VHDL/piece_lut_extracted_cfg.vhd|
 Cpiece_lut_synthesised_cfg
 asynthesised
-R12
-R16
-R13
 R15
-R18
 R19
+R16
+R18
+R21
+R22
+R20
 R17
 R14
-R10
 DAx4 work 9 piece_lut 11 synthesised 22 49D]7dhfQaZnUc_oVSRnU3
 R4
 R5
@@ -211,7 +214,7 @@ R8
 !s107 VHDL/piece_lut_tb.vhd|
 Apiece_lut_tb_behaviour
 w1385724409
-Z20 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
+Z23 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
 R4
 R5
 8VHDL/piece_lut_tb-behaviour.vhd
@@ -229,14 +232,14 @@ R8
 !s108 1385724409.523885
 !s107 VHDL/piece_lut_tb-behaviour.vhd|
 Cpiece_lut_tb_behaviour_cfg
-Z21 apiece_lut_tb_behaviour
-Z22 epiece_lut_tb
+Z24 apiece_lut_tb_behaviour
+Z25 epiece_lut_tb
 R9
 DCx4 work 23 piece_lut_behaviour_cfg 0 22 bN8jTV^3VH_PXSMl6OHMj0
-Z23 DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 A=mJolciCLO7JCEIjW]b<3
+Z26 DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 A=mJolciCLO7JCEIjW]b<3
 R4
 R5
-R20
+R23
 w1385723574
 dLUT
 8VHDL/piece_lut_tb_behaviour_cfg.vhd
@@ -254,14 +257,14 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_cfg.vhd|
 Cpiece_lut_tb_behaviour_ext_cfg
-R21
-R22
+R24
+R25
 R9
 DCx4 work 23 piece_lut_extracted_cfg 0 22 NX01I=kHiU3NzI];m8[BI0
-R23
+R26
 R4
 R5
-R20
+R23
 w1385723750
 dLUT
 8VHDL/piece_lut_tb_behaviour_ext_cfg.vhd
@@ -279,14 +282,14 @@ R8
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_ext_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_ext_cfg.vhd|
 Cpiece_lut_tb_behaviour_syn_cfg
-R21
-R22
+R24
+R25
 R9
 DCx4 work 25 piece_lut_synthesised_cfg 0 22 imID4gOZec:jQBc;4mGVZ3
-R23
+R26
 R4
 R5
-R20
+R23
 w1385723641
 dLUT
 8VHDL/piece_lut_tb_behaviour_syn_cfg.vhd
