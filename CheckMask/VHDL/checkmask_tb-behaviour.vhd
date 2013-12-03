@@ -51,7 +51,9 @@ begin
 			'0' after 1250 ns,
 			'1' after 1710 ns,
 			'0' after 1750 ns;
-	lut_error <= '0' after 0 ns;
+	lut_error <= 		'0' after 0 ns,
+			'1' after 1210 ns,
+			'0' after 1310 ns;
 	mask <= "01101100" after 50 ns,
 	          "00001111" after 990 ns,
 	          "01100110" after 1990 ns;
@@ -61,6 +63,9 @@ begin
 	
 	
 end check_mask_tb_behaviour;
+
+
+
 
 
 
