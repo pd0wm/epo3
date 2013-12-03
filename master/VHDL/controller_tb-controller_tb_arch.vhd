@@ -152,7 +152,7 @@ begin
 	
 	lbl_inpts : process
 	begin
-		inputs <= "0000000";
+		inputs <= "0000001";
 		wait;
 	end process;
 
