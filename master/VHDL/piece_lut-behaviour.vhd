@@ -43,7 +43,6 @@ begin
 				y_out         <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				if ((check_start or draw_start) = '1' and prev_start = '0') then
 					next_state <= rom;
-					prev_start <= '1';
 				else
 					next_state <= rust;
 				end if;
