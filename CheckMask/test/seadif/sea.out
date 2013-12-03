@@ -1,0 +1,15 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'check_mask' ------
+------ circuit 'check_mask' is still up-to-date ------
+------ checking match with placement layout 'Tmpcheck_mask4302' ------
+------ reading nelsis layout-cell 'Tmpcheck_mask4302' ------
+------ writing nelsis 'Tmpcheck_mask4302' as sdflay 'Tmp_Cell_(check_mask(check_mask(test)))' ------
+------ input seems good enough: calling router ------
+calling program: trout -l test -f check_mask -c check_mask -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmpcheck_mask4302' ------
+calling program: nelsea -rLH -f check_mask -c check_mask -l Tmp_Cell_ Tmpcheck_mask4302 
+------ sea: task completed ------

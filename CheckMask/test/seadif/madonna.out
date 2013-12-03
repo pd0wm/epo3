@@ -1,0 +1,77 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "check_mask(check_mask(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 72):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    49     6     7     4     2     0     2     0     2
+
+------ partitioning 59 cells into (hor x vert) = (8 x 2) partitions
+
+------ requested grid points = (64, 112)
+
+------ cost@start = 520, cost@end = 353, moves = 50
+------ cost@start = 353, cost@end = 325, moves = 42
+------ cost@start = 325, cost@end = 319, moves = 56
+------ cost@start = 319, cost@end = 306, moves = 25
+------ cost@start = 306, cost@end = 286, moves = 23
+------ cost@start = 286, cost@end = 267, moves = 13
+------ cost@start = 267, cost@end = 261, moves = 12
+------ cost@start = 261, cost@end = 261, moves = 12
+------ 30 nets have to be routed on a 15 x 3 global grid
+     + routing net rst (3 terminals):  weight = 404
+     + routing net clk (3 terminals):  weight = 404
+     + routing net state_0_port (4 terminals):  weight = 600
+     + routing net next_state_2_port (2 terminals):  weight = 202
+     + routing net state_2_port (5 terminals):  weight = 802
+     + routing net next_state_1_port (2 terminals):  weight = 200
+     + routing net state_1_port (3 terminals):  weight = 400
+     + routing net n38 (7 terminals):  weight = 1210
+     + routing net n3 (16 terminals):  weight = 3000
+     + routing net n4 (16 terminals):  weight = 3000
+     + routing net n7 (2 terminals):  weight = 200
+     + routing net pixel_0_port (2 terminals):  weight = 200
+     + routing net pixel_1_port (2 terminals):  weight = 200
+     + routing net n9 (2 terminals):  weight = 200
+     + routing net n12 (2 terminals):  weight = 200
+     + routing net n15 (2 terminals):  weight = 200
+     + routing net n46 (3 terminals):  weight = 402
+     + routing net n48 (2 terminals):  weight = 208
+     + routing net n49 (2 terminals):  weight = 200
+     + routing net n50 (2 terminals):  weight = 200
+     + routing net n51 (2 terminals):  weight = 204
+     + routing net n52 (2 terminals):  weight = 206
+     + routing net n53 (2 terminals):  weight = 200
+     + routing net n54 (3 terminals):  weight = 400
+     + routing net n55 (2 terminals):  weight = 200
+     + routing net n56 (2 terminals):  weight = 200
+     + routing net n57 (2 terminals):  weight = 200
+     + routing net n60 (2 terminals):  weight = 200
+     + routing net n62 (2 terminals):  weight = 204
+     + routing net n63 (2 terminals):  weight = 204
+
+------ Routed 30 nets, total weight = 14650
+
+
+
+------ Detailed placement of (Tmp_Cell_(check_mask(check_mask(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [64:112]
+------ Doing placement 
+------ Compacting  
+
+         Magnification coefficient obtained :1.04147
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.0 seconds of your cpu
+terminate
