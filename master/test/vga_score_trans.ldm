@@ -1,0 +1,84 @@
+:: no-origin mode LDM
+ms vga_score_trans
+mc <U120> iv110 1086 0
+mc <U119> na310 1246 0
+mc <counter_state_reg_1_inst> dfa11 mx 3966 2998
+mc <mem_addr_state_reg_0_inst> dfa11 4166 988
+mc <U76> iv110 366 3952
+mc <U77> ex210 -34 3952
+mc <U78> na210 206 2964
+mc <U79> ex210 -34 0
+mc <U80> iv110 1326 2964
+mc <U10> iv110 mx 4966 2998
+mc <U81> na310 606 3952
+mc <mem_addr_state_reg_5_inst> dfa11 286 0
+mc <U11> no210 -34 2964
+mc <U82> iv110 1046 3952
+mc <U12> iv110 mx -34 2010
+mc <U83> ex210 1526 2964
+mc <U13> no210 126 988
+mc <U84> na210 846 3952
+mc <U14> iv110 -34 988
+mc <U85> ex210 3086 3952
+mc <U15> no210 1886 2964
+mc <U86> no210 2606 3952
+mc <counter_state_reg_3_inst> dfa11 mx -34 2998
+mc <mem_addr_state_reg_2_inst> dfa11 2886 2964
+mc <U16> iv110 1246 3952
+mc <U87> na310 2406 3952
+mc <U88> iv110 2566 2964
+mc <U17> no210 3846 2964
+mc <U90> na210 2086 2964
+mc <U89> ex210 2246 2964
+mc <U18> iv110 3686 2964
+mc <U91> ex210 286 988
+mc <U19> no210 2246 3952
+mc <U20> iv110 2726 2964
+mc <U92> no210 2206 0
+mc <U21> no210 766 988
+mc <U93> ex210 3406 0
+mc <counter_state_reg_0_inst> dfa11 mx 2406 2010
+mc <U22> iv110 606 988
+mc <U94> iv110 2926 3952
+mc <U23> no210 4126 0
+mc <U95> no210 2766 3952
+mc <U24> iv110 3846 0
+mc <U96> iv110 2126 988
+mc <U97> na210 mx 2286 2998
+mc <U98> na310 mx 2606 2998
+mc <U27> no210 mx 3646 2998
+mc <U99> na210 mx 1766 2010
+mc <U28> iv110 mx 3406 2010
+mc <mem_addr_state_reg_4_inst> dfa11 1446 3952
+mc <counter_state_reg_2_inst> dfa11 3246 988
+mc <mem_addr_state_reg_1_inst> dfa11 926 988
+mc <U100> na210 mx 2086 2010
+mc <U101> iv110 mx 3006 2998
+mc <U102> mu111 mx 1206 2998
+mc <U3> no210 mx 1966 2998
+mc <U103> na210 mx 3326 2998
+mc <U4> iv110 mx 1486 2010
+mc <U104> no210 mx 1686 2998
+mc <U5> no210 mx 206 2010
+mc <U105> mu111 2806 988
+mc <U6> iv110 mx 926 2998
+mc <U106> na210 2406 0
+mc <U7> no210 3166 0
+mc <U107> iv110 2326 988
+mc <U8> iv110 2926 0
+mc <U108> no310 2646 0
+mc <U9> no210 mx 4246 2010
+mc <U110> mu111 4726 0
+mc <U109> iv110 2526 988
+mc <U111> na210 2006 0
+mc <mem_addr_state_reg_6_inst> dfa11 446 2964
+mc <U112> no210 4406 0
+mc <U113> mu111 mx 3726 2010
+mc <U114> iv110 1926 988
+mc <U115> iv110 1806 0
+mc <U116> na210 1726 988
+mc <counter_state_reg_4_inst> dfa11 mx 486 2010
+mc <mem_addr_state_reg_3_inst> dfa11 3406 3952
+mc <U117> na310 1606 0
+mc <U118> iv110 1446 0
+me

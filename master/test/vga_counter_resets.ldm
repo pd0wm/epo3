@@ -1,0 +1,21 @@
+:: no-origin mode LDM
+ms vga_counter_resets
+mc <U29> no210 1606 0
+mc <U30> iv110 -34 0
+mc <U31> na310 3166 0
+mc <U32> no210 3006 0
+mc <U33> na210 2446 0
+mc <U34> na210 2606 0
+mc <U35> no210 2846 0
+mc <U36> no210 3406 0
+mc <U37> iv110 2206 0
+mc <U20> no210 166 0
+mc <U21> no210 566 0
+mc <U22> iv110 366 0
+mc <U23> na310 2006 0
+mc <U24> no210 1366 0
+mc <U25> na210 966 0
+mc <U26> na310 1166 0
+mc <U27> iv110 766 0
+mc <U28> no310 1766 0
+me

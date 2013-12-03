@@ -1,0 +1,83 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "vga(vga(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 51):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    28     1    18     0     0     0     4     0     0
+
+------ partitioning 7 cells into (hor x vert) = (2 x 2) partitions
+
+------ requested grid points = (190, 224)
+
+------ cost@start = 219, cost@end = 207, moves = 1
+------ s, w, b = 60, 60, 42; perm = 1 4 2 3 
+------ cost@start = 179, cost@end = 179, moves = 0
+------ s, w, b = 46, 60, 42; perm = 1 2 4 3 
+------ 26 nets have to be routed on a 3 x 3 global grid
+     + routing net clk (3 terminals):  weight = 400
+     + routing net rst (3 terminals):  weight = 400
+     + routing net pos_x_7_port (2 terminals):  weight = 200
+     + routing net pos_x_6_port (2 terminals):  weight = 200
+     + routing net pos_x_5_port (2 terminals):  weight = 200
+     + routing net pos_x_4_port (2 terminals):  weight = 200
+     + routing net pos_x_3_port (2 terminals):  weight = 200
+     + routing net pos_x_2_port (2 terminals):  weight = 200
+     + routing net pos_x_1_port (2 terminals):  weight = 200
+     + routing net pos_x_0_port (2 terminals):  weight = 200
+     + routing net pos_y_9_port (2 terminals):  weight = 200
+     + routing net pos_y_8_port (2 terminals):  weight = 200
+     + routing net pos_y_7_port (2 terminals):  weight = 200
+     + routing net pos_y_6_port (2 terminals):  weight = 200
+     + routing net pos_y_5_port (2 terminals):  weight = 200
+     + routing net pos_y_4_port (2 terminals):  weight = 200
+     + routing net pos_y_3_port (2 terminals):  weight = 200
+     + routing net pos_y_2_port (2 terminals):  weight = 200
+     + routing net pos_y_1_port (2 terminals):  weight = 200
+     + routing net pos_y_0_port (2 terminals):  weight = 200
+     + routing net new_line (2 terminals):  weight = 200
+     + routing net new_frame (2 terminals):  weight = 200
+     + routing net end_frame (2 terminals):  weight = 200
+     + routing net in_field (3 terminals):  weight = 400
+     + routing net X_Logic0_port (3 terminals):  weight = 400
+     + routing net end_field_line (2 terminals):  weight = 200
+
+------ Routed 26 nets, total weight = 6000
+
+
+
+------ Detailed placement of (Tmp_Cell_(vga(vga(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [190:224]
+------ Doing placement 
+ Can't place cell :field_translation  in window at (0,0)
+ Can't place cell :field_translation_reset  in window at (0,0)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [247:224]
+------ Doing placement 
+ Can't place cell :field_translation  in window at (0,0)
+ Can't place cell :field_translation_reset  in window at (0,0)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [321:224]
+------ Doing placement 
+------ Compacting  
+
+         Magnification coefficient obtained :1.35026
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.1 seconds of your cpu
+terminate
