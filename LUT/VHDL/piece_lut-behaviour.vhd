@@ -5,26 +5,27 @@ use IEEE.numeric_std.ALL;
 architecture piece_lut_behaviour of piece_lut is
 	type typestate is (rust, rom, wait_for_rom, x_calc, x_overflow, y_calc, y_overflow, output);
 	signal state, next_state : typestate;
-	signal next_mask         : std_logic_vector(7 downto 0); -- prev_mask was een signal
 	signal x_out             : std_logic_vector(3 downto 0);
 	signal y_out             : std_logic_vector(4 downto 0);
-	signal pixel, next_pixel : std_logic_vector(1 downto 0); -- interne pixel counter
+	signal prev_start        : std_logic;
+	signal next_overflow,overflow1 : std_logic;
 
 begin
+	overflow <= overflow1;
 	process(clk)
 	begin
 		if (clk'event and clk = '1') then
-			if rst = '1' then
+			if (rst = '1') then
 				state <= rust;
+				overflow1 <= '0';
 			else
 				state <= next_state;
-				pixel <= next_pixel;
+				overflow1 <= next_overflow;
 			end if;
 		end if;
 	end process;
 
-	process(state, rst, start)
-	--variable rom_v : std_logic_vector(6 downto 0);
+	process(state, rst, check_start, draw_start)
 	begin
 		rom_addr(6 downto 4) <= piece_type;
 		rom_addr(3 downto 2) <= rot;
@@ -35,78 +36,89 @@ begin
 		case state is
 			when rust =>
 				ready      <= '0';
-				error_side <= '0';
-				error_bot  <= '0';
+				next_overflow <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
-				if (start = '1') then
+				if ((check_start or draw_start) = '1' and prev_start = '0') then
 					next_state <= rom;
+					prev_start <= '1';
 				else
 					next_state <= rust;
 				end if;
 			when rom =>
 				ready      <= '0';
-				error_side <= '0';
-				error_bot  <= '0';
+				next_overflow <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				next_state <= wait_for_rom;
 			when wait_for_rom =>
 				ready      <= '0';
-				error_side <= '0';
-				error_bot  <= '0';
+				next_overflow <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				next_state <= x_calc;
 			when x_calc =>
 				ready      <= '0';
-				error_side <= '0';
-				error_bot  <= '0';
+				next_overflow <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				next_state <= x_overflow;
 			when x_overflow =>
-				ready     <= '0';
-				error_bot <= '0';
-				x_out     <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
-				y_out     <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
+				ready      <= '0';
+				prev_start <= check_start or draw_start;
+				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
+				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				if (x_out(3) = '1') then
-					next_state <= rust;
-					error_side <= '1';
+					next_state <= output;
+					next_overflow <= '1';
 				else
 					next_state <= y_calc;
-					error_side <= '0';
+					next_overflow <= '0';
 				end if;
 			when y_calc =>
 				ready      <= '0';
-				error_side <= '0';
-				error_bot  <= '0';
+				next_overflow <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
 				next_state <= y_overflow;
 			when y_overflow =>
 				ready      <= '0';
-				error_side <= '0';
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
-				if (y_out(4) = '1') then
-					next_state <= rust;
-					error_bot  <= '1';
-				else
-					next_state <= output;
-					error_bot  <= '0';
-				end if;
+				next_state <= output;
+				next_overflow <= y_out(4); -- als y_out(4) = '1', dan is er overflow, dus overflow
 			when output =>
 				ready      <= '1';
-				error_side <= '0';
-				error_bot  <= '0';
-				ready      <= '1';
+				next_overflow <= overflow1;
+				prev_start <= check_start or draw_start;
 				x_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(1 downto 0))) + to_integer(unsigned(x)), 4));
 				y_out      <= std_logic_vector(to_unsigned(to_integer(unsigned(rom_data(3 downto 2))) + to_integer(unsigned(y)), 5));
-				next_state <= rust;
+				if ((check_start or draw_start) = '1') then
+					next_state <= output;
+				else
+					next_state <= rust;
+				end if;
 		end case;
 	end process;
 end piece_lut_behaviour;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
