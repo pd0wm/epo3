@@ -23,7 +23,7 @@ begin
 		end if;
 	end process;
 
-	process (state, rst, start, lut_ready, lut_error)
+	process (state, rst, start, lut_ready, lut_error, pixel, mask, data_in, empty_s)
 	begin	
 		case state is
 			when rust =>
