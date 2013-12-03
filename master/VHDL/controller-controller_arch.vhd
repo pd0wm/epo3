@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_2, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_2, put_back_3, put_back_4, move_down_1, move_down_2, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, rotate, key, lock_timer_start, game_over);
+	is (reset, init, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, rotate, key, lock_timer_start, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
@@ -21,7 +21,6 @@ architecture controller_arch of controller is
 	signal new_lut_y             : std_logic_vector(3 downto 0);
 	signal new_lut_rot           : std_logic_vector(1 downto 0);
 	signal new_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal new_lut_start         : std_logic;
 	signal new_new_piece         : std_logic;
 	signal new_check_start       : std_logic;
 	signal new_draw_erase_draw   : std_logic;
@@ -39,7 +38,6 @@ architecture controller_arch of controller is
 	signal cur_lut_y             : std_logic_vector(3 downto 0);
 	signal cur_lut_rot           : std_logic_vector(1 downto 0);
 	signal cur_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal cur_lut_start         : std_logic;
 	signal cur_new_piece         : std_logic;
 	signal cur_check_start       : std_logic;
 	signal cur_draw_erase_draw   : std_logic;
@@ -76,7 +74,7 @@ begin
 				cur_lut_y             <= new_lut_y;
 				cur_lut_rot           <= new_lut_rot;
 				cur_lut_piece_type    <= new_lut_piece_type;
-				cur_lut_start         <= new_lut_start;
+				
 				cur_new_piece         <= new_new_piece;
 				cur_check_start       <= new_check_start;
 				cur_draw_erase_draw   <= new_draw_erase_draw;
@@ -97,7 +95,6 @@ begin
 		lut_y             <= new_lut_y;
 		lut_rot           <= new_lut_rot;
 		lut_piece_type    <= new_lut_piece_type;
-		lut_start         <= new_lut_start;
 		new_piece         <= new_new_piece;
 		check_start       <= new_check_start;
 		draw_erase_draw   <= new_draw_erase_draw;
@@ -113,7 +110,7 @@ begin
 
 	end process;
 
-	process(cur_state, lut_ready, draw_erase_ready, clear_shift_ready, draw_score_ready, timer_1_done, inputs)
+	process(cur_state, check_empty, check_ready, draw_erase_ready, clear_shift_ready, draw_score_ready, timer_1_done, inputs)
 	begin
 		case cur_state is
 			when reset =>
@@ -122,7 +119,6 @@ begin
 				new_lut_y             <= (others => '0');
 				new_lut_rot           <= (others => '0');
 				new_lut_piece_type    <= (others => '0');
-				new_lut_start         <= '0';
 				-- next piece
 				new_new_piece         <= '0';
 				--check mask
@@ -171,7 +167,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -202,7 +198,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -234,7 +230,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -255,7 +251,6 @@ begin
 				new_lut_x          <= new_cur_x;
 				new_lut_y          <= new_cur_y;
 				new_lut_piece_type <= new_cur_piece;
-				new_lut_start      <= '1';
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -280,44 +275,7 @@ begin
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
 
-				next_state <= collision_2;
-
-			when collision_2 =>
-				-- Wait for lut ready, about 6 cycles
-				if (lut_ready = '1') then
-					new_lut_start <= '0';
-					next_state    <= collision_3;
-				else
-					next_state <= collision_2;
-				end if;
-
-				-- Keep signals
-				new_cur_piece   <= cur_piece;
-				new_cur_x       <= cur_x;
-				new_cur_x_new   <= cur_x_new;
-				new_cur_y       <= cur_y;
-				new_cur_y_new   <= cur_y_new;
-				new_cur_rot     <= cur_rot;
-				new_cur_rot_new <= cur_rot_new;
-
-				-- Keep outputs
-				new_lut_x             <= cur_lut_x;
-				new_lut_y             <= cur_lut_y;
-				new_lut_rot           <= cur_lut_rot;
-				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
-				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
-				new_draw_erase_draw   <= cur_draw_erase_draw;
-				new_draw_erase_start  <= cur_draw_erase_start;
-				new_clear_shift_start <= cur_clear_shift_start;
-				new_draw_score_draw   <= cur_draw_score_draw;
-				new_timer_1_time      <= cur_timer_1_time;
-				new_timer_1_start     <= cur_timer_1_start;
-				new_timer_1_reset     <= cur_timer_1_reset;
-				new_timer_2_time      <= cur_timer_2_time;
-				new_timer_2_start     <= cur_timer_2_start;
-				new_timer_2_reset     <= cur_timer_2_reset;
+				next_state <= collision_3;
 
 			when collision_3 =>
 				-- Check mask
@@ -337,7 +295,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
@@ -374,7 +332,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -403,7 +361,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -440,7 +398,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -476,7 +434,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -512,7 +470,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -540,7 +498,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -571,7 +529,7 @@ begin
 				new_lut_y            <= cur_lut_y;
 				new_lut_rot          <= cur_lut_rot;
 				new_lut_piece_type   <= cur_lut_piece_type;
-				new_lut_start        <= cur_lut_start;
+				
 				new_new_piece        <= cur_new_piece;
 				new_check_start      <= cur_check_start;
 				new_draw_erase_draw  <= cur_draw_erase_draw;
@@ -607,7 +565,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -642,7 +600,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -675,7 +633,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -712,7 +670,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_check_start       <= cur_check_start;
@@ -741,7 +699,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -762,7 +720,8 @@ begin
 				new_lut_x          <= new_cur_x;
 				new_lut_y          <= new_cur_y_new;
 				new_lut_piece_type <= new_cur_piece;
-				new_lut_start      <= '1';
+
+				new_check_start <= '1';
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -775,7 +734,6 @@ begin
 
 				-- Keep outputs
 				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -790,12 +748,12 @@ begin
 				next_state <= space_5;
 
 			when space_5 =>
-				if (lut_ready = '1') then
-					new_lut_start <= '0';
-					next_state    <= space_6;
+				if (check_ready = '1') then
+					new_check_start <= '0';
+					next_state      <= space_6;
 				else
-					new_lut_start <= '1';
-					next_state    <= space_5;
+					new_check_start <= '1';
+					next_state      <= space_5;
 				end if;
 
 				-- Keep signals
@@ -811,9 +769,9 @@ begin
 				new_lut_x             <= cur_lut_x;
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
+				
 				new_lut_piece_type    <= cur_lut_piece_type;
 				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -826,7 +784,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 			when space_6 =>
-				if (lut_error_bot = '0') then
+				if (check_empty = '1') then
 					new_cur_y  <= cur_y_new;
 					next_state <= move_down_1;
 				else
@@ -847,7 +805,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -866,7 +824,6 @@ begin
 				new_lut_x          <= new_cur_x;
 				new_lut_y          <= new_cur_y;
 				new_lut_piece_type <= new_cur_piece;
-				new_lut_start      <= '1';
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -891,43 +848,9 @@ begin
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
 
-				next_state <= put_back_2;
+				next_state <= put_back_3;
 
-			when put_back_2 =>
-				if (lut_ready = '1') then
-					new_lut_start <= '0';
-					next_state    <= put_back_3;
-				else
-					new_lut_start <= '1';
-					next_state    <= put_back_2;
-				end if;
-
-				-- Keep signals
-				new_cur_piece   <= cur_piece;
-				new_cur_x       <= cur_x;
-				new_cur_x_new   <= cur_x_new;
-				new_cur_y       <= cur_y;
-				new_cur_y_new   <= cur_y_new;
-				new_cur_rot     <= cur_rot;
-				new_cur_rot_new <= cur_rot_new;
-
-				-- Keep outputs
-				new_lut_x             <= cur_lut_x;
-				new_lut_y             <= cur_lut_y;
-				new_lut_rot           <= cur_lut_rot;
-				new_lut_piece_type    <= cur_lut_piece_type;
-				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
-				new_draw_erase_draw   <= cur_draw_erase_draw;
-				new_draw_erase_start  <= cur_draw_erase_start;
-				new_clear_shift_start <= cur_clear_shift_start;
-				new_draw_score_draw   <= cur_draw_score_draw;
-				new_timer_1_time      <= cur_timer_1_time;
-				new_timer_1_start     <= cur_timer_1_start;
-				new_timer_1_reset     <= cur_timer_1_reset;
-				new_timer_2_time      <= cur_timer_2_time;
-				new_timer_2_start     <= cur_timer_2_start;
-				new_timer_2_reset     <= cur_timer_2_reset;
+			
 
 			when put_back_3 =>
 				new_draw_erase_draw  <= '1'; --draw
@@ -947,7 +870,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -984,7 +907,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1014,7 +937,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1034,7 +957,6 @@ begin
 				new_lut_x          <= new_cur_x;
 				new_lut_y          <= new_cur_y;
 				new_lut_piece_type <= new_cur_piece;
-				new_lut_start      <= '1';
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -1059,44 +981,9 @@ begin
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
 
-				next_state <= move_down_2;
+				next_state <= move_down_3;
 
-			when move_down_2 =>
-				if (lut_ready = '1') then
-					new_lut_start <= '0';
-					next_state    <= move_down_3;
-				else
-					new_lut_start <= '1';
-					next_state    <= move_down_2;
-				end if;
-
-				-- Keep signals
-				new_cur_piece   <= cur_piece;
-				new_cur_x       <= cur_x;
-				new_cur_x_new   <= cur_x_new;
-				new_cur_y       <= cur_y;
-				new_cur_y_new   <= cur_y_new;
-				new_cur_rot     <= cur_rot;
-				new_cur_rot_new <= cur_rot_new;
-
-				-- Keep outputs
-				new_lut_x             <= cur_lut_x;
-				new_lut_y             <= cur_lut_y;
-				new_lut_rot           <= cur_lut_rot;
-				new_lut_piece_type    <= cur_lut_piece_type;
-				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
-				new_draw_erase_draw   <= cur_draw_erase_draw;
-				new_draw_erase_start  <= cur_draw_erase_start;
-				new_clear_shift_start <= cur_clear_shift_start;
-				new_draw_score_draw   <= cur_draw_score_draw;
-				new_timer_1_time      <= cur_timer_1_time;
-				new_timer_1_start     <= cur_timer_1_start;
-				new_timer_1_reset     <= cur_timer_1_reset;
-				new_timer_2_time      <= cur_timer_2_time;
-				new_timer_2_start     <= cur_timer_2_start;
-				new_timer_2_reset     <= cur_timer_2_reset;
-
+			
 			when move_down_3 =>
 				new_draw_erase_draw  <= '1'; --draw
 				new_draw_erase_start <= '1';
@@ -1115,7 +1002,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_clear_shift_start <= cur_clear_shift_start;
@@ -1152,7 +1039,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1184,7 +1071,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1214,7 +1101,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1251,7 +1138,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1282,7 +1169,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1314,7 +1201,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1346,7 +1233,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
@@ -1378,7 +1265,7 @@ begin
 				new_lut_y             <= cur_lut_y;
 				new_lut_rot           <= cur_lut_rot;
 				new_lut_piece_type    <= cur_lut_piece_type;
-				new_lut_start         <= cur_lut_start;
+				
 				new_new_piece         <= cur_new_piece;
 				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
