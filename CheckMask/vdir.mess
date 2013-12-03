@@ -21,6 +21,36 @@ OPTIMIZED DESIGN _opt2
     Short name: @_opt2
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: CheckMask
+ENTITY check_mask
+    Source modified time: Tue Dec  3 17:36:44 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: CheckMask
+    HDL source file: VHDL/CheckMask.vhd
+    Source file: VHDL/CheckMask.vhd
+    Start location: VHDL/CheckMask.vhd:3
+    Version string: :3GJa9`ziGn`3kZT:^ZFA3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY check_mask_behaviour
+    Source modified time: Tue Dec  3 17:40:29 2013
+    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: CheckMask
+    HDL source file: VHDL/CheckMask_behaviour.vhd
+    Source file: VHDL/CheckMask_behaviour.vhd
+    Start location: VHDL/CheckMask_behaviour.vhd:5
+    Version string: 8e<TJXi6io7iEFKN8V2d52
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
 ENTITY checkmask
     Source modified time: Fri Nov 22 12:03:50 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -36,12 +66,11 @@ ENTITY checkmask
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY checkmask_behaviour
-    Source modified time: Tue Dec  3 08:53:25 2013
+    Source modified time: Tue Dec  3 17:38:07 2013
     Depends on: E work checkmask ]JW7l?0;dD3b_ORDC=:EC1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: CheckMask
     HDL source file: VHDL/CheckMask_behaviour.vhd
     Source file: VHDL/CheckMask_behaviour.vhd
     Start location: VHDL/CheckMask_behaviour.vhd:5
@@ -50,6 +79,7 @@ ENTITY checkmask
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Source directory: CheckMask
     Debug Symbol file exists
   ARCHITECTURE BODY extracted
     Source modified time: Tue Nov 26 09:46:51 2013

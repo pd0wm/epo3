@@ -16,7 +16,7 @@ entity check_mask is
                 write : out std_logic;
                 addr : out std_logic_vector(7 downto 0);
                 data_in : in std_logic;
-		data_out : out std_logic;
+		data_out : out std_logic
         );
 end check_mask;
 
