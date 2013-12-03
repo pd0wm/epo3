@@ -1,0 +1,553 @@
+# //  ModelSim SE 10.1b Apr 26 2012 Linux 3.0.80-0.5-default
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work testbench_synth_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_synth_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_synthesised_cfg#1
+# Loading work.clearandshift(synthesised)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+# do /data/public/common/software/opprog/do_files/init_simulator.do 
+run 100000 ns
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_out_tri_enable_reg
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_7_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_6_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_5_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_4_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_3_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_2_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_1_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_0_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_write_tri_enable_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_value_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# reading modelsim.ini
+# vsim -lib work testbench_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_behaviour_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_behaviour_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_behaviour_cfg#1
+# Loading work.clearandshift(clearandshift_behaviour)#1
+run 100000 ns
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_synth_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_synthesised_cfg#1
+# Loading work.clearandshift(synthesised)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+run
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_7_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_6_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_5_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_4_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_3_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_2_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_1_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_addr_tri_enable_reg_0_inst
+# ** Warning: setup_violation
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/ram_write_tri_enable_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_value_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_synth_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_synthesised_cfg#1
+# Loading work.clearandshift(synthesised)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+run 100000 ns
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_value_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# reading modelsim.ini
+# vsim -lib work testbench_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_behaviour_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_behaviour_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_behaviour_cfg#1
+# Loading work.clearandshift(clearandshift_behaviour)#1
+run 100000 ns
+# reading modelsim.ini
+# vsim -lib work testbench_extracted_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.clearandshift_extracted_cfg because work.clearandshift(extracted) has changed.
+# ** Warning: (vopt-12) Recompile work.testbench_extracted_cfg after work.clearandshift_extracted_cfg is recompiled.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_extracted_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_extracted_cfg#1
+# Loading work.clearandshift(extracted)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+run 100000 ns
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_value_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# reading modelsim.ini
+# vsim -lib work testbench_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_behaviour_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_behaviour_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_behaviour_cfg#1
+# Loading work.clearandshift(clearandshift_behaviour)#1
+run 10000 ns
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_synth_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_synthesised_cfg#1
+# Loading work.clearandshift(synthesised)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+# ** Warning: (vsim-8683) Uninitialized out port /testbench/clearshift_port/score_value(2 downto 0) has no driver.
+# This port will contribute value (UUU) to the signal network.
+run 100000 ns
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# ** Error: VHDL/testbench_synth_cfg.vhd(4): (vopt-1131) Port "score_value" is declared on component "clearandshift" but not on entity "clearandshift".
+# ** Error: VHDL/testbench-testbench_behaviour.vhd(22): (vopt-1131) Port "score_value" is declared on component "clearandshift" but not on entity "clearandshift".
+# ** Error: /data/public/common/software/opprog/vhdl/cells.vhd(317): Vopt Compiler exiting
+# Error loading design
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# ** Error: VHDL/testbench_synth_cfg.vhd(4): (vopt-1131) Port "score_value" is declared on component "clearandshift" but not on entity "clearandshift".
+# ** Error: VHDL/testbench-testbench_behaviour.vhd(22): (vopt-1131) Port "score_value" is declared on component "clearandshift" but not on entity "clearandshift".
+# ** Error: /data/public/common/software/opprog/vhdl/cells.vhd(317): Vopt Compiler exiting
+# Error loading design
+# reading modelsim.ini
+# vsim -lib work testbench_synth_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_synth_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_synth_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_synthesised_cfg#1
+# Loading work.clearandshift(synthesised)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+run 100000 ns
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# reading modelsim.ini
+# vsim -lib work testbench_extracted_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_extracted_cfg because work.testbench(testbench_behaviour) has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading cellslib.cellslib_decl_pack
+# Loading work.testbench_extracted_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_extracted_cfg#1
+# Loading work.clearandshift(extracted)#1
+# Loading cellslib.na310(dataflow)#1
+# Loading cellslib.na210(dataflow)#1
+# Loading cellslib.mu111(dataflow)#1
+# Loading cellslib.iv110(dataflow)#1
+# Loading cellslib.no210(dataflow)#1
+# Loading cellslib.dfr11(dataflow)#1
+# Loading cellslib.no310(dataflow)#1
+# Loading cellslib.tinv10(dataflow)#1
+# Loading cellslib.dfn10(dataflow)#1
+# Loading cellslib.ex210(dataflow)#1
+run 100000 ns
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/score_reg
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_0_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_row_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/state_reg_3_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/shift_col_reg_1_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/row_reg_2_inst
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 1  Instance: /testbench/clearshift_port/col_reg_0_inst
+# reading modelsim.ini
+# vsim -lib work testbench_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.testbench_behaviour_cfg because work.testbench(testbench_behaviour) has changed.
+# ** Warning: (vopt-13) Recompile work.clearandshift(clearandshift_behaviour) because work.clearandshift has changed.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.testbench_behaviour_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_behaviour_cfg#1
+# Loading work.clearandshift(clearandshift_behaviour)#1
+run 100000 ns

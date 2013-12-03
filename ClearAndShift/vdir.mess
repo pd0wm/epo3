@@ -1,0 +1,245 @@
+Library vendor : Model Technology
+Maximum unnamed designs : 3
+OPTIMIZED DESIGN _opt
+    Version string: h:K=90o1QQVBNUelj@Wl=1
+    Top-level model: work testbench_behaviour_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: ClearAndShift
+OPTIMIZED DESIGN _opt1
+    Version string: E<UH5blM`1Ni45^=fVZ;Y1
+    Top-level model: work testbench_synth_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt1
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: ClearAndShift
+OPTIMIZED DESIGN _opt2
+    Version string: l@VlK9mlJD`Kd41YFa`C_1
+    Top-level model: work testbench_synth_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt2
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: ClearAndShift
+ENTITY clearandshift
+    Source modified time: Tue Dec  3 12:04:09 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: ClearAndShift
+    HDL source file: VHDL/clearandshift.vhd
+    Source file: VHDL/clearandshift.vhd
+    Start location: VHDL/clearandshift.vhd:4
+    Version string: j<f?RD0;DLzzZf[4QhcVb3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY extracted
+    Source modified time: Tue Dec  3 12:07:46 2013
+    Depends on: E work clearandshift j<f?RD0;DLzzZf[4QhcVb3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: ClearAndShift
+    HDL source file: VHDL/clearandshift_EXTR.vhd
+    Source file: VHDL/clearandshift_EXTR.vhd
+    Start location: VHDL/clearandshift_EXTR.vhd:13
+    Version string: FHQefATkLOOYk7iTniI6j2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Dec  3 12:04:35 2013
+    Depends on: E work clearandshift j<f?RD0;DLzzZf[4QhcVb3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/clearandshift_SYNTH.vhd
+    Source file: VHDL/clearandshift_SYNTH.vhd
+    Start location: VHDL/clearandshift_SYNTH.vhd:7
+    Version string: SSzJzOcnGQDk:hY2H]=oY0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: ClearAndShift
+    Debug Symbol file exists
+  ARCHITECTURE BODY clearandshift_behaviour
+    Source modified time: Tue Dec  3 12:00:24 2013
+    Depends on: E work clearandshift nmSHjJH2NhDKdd[LobUiS2
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/clearandshift-clearandshift_behaviour.vhd
+    Source file: VHDL/clearandshift-clearandshift_behaviour.vhd
+    Start location: VHDL/clearandshift-clearandshift_behaviour.vhd:5
+    Version string: I<??G[9omBG4YX_TMoAY31
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: ClearAndShift
+    Debug Symbol file exists
+VHDL CONFIGURATION clearandshift_behaviour_cfg
+    Configuration for architecture: clearandshift_behaviour
+    Configuration for entity: clearandshift
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work clearandshift clearandshift_behaviour ZLj>k4]G817[_MZ;6z52>0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work clearandshift bQ1PTZ`j0XX8VLHc:RlE21
+    Source modified time: Tue Nov 26 10:17:43 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/clearandshift_behaviour_cfg.vhd
+    Source file: VHDL/clearandshift_behaviour_cfg.vhd
+    Start location: VHDL/clearandshift_behaviour_cfg.vhd:1
+    Version string: abD9C6L<:bTC=QF<0gM0Q3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION clearandshift_extracted_cfg
+    Configuration for architecture: extracted
+    Configuration for entity: clearandshift
+    Depends on: E cellslib ex210 jfbZcVZ_zElhH?3Ngm^Z<3
+    Depends on: E cellslib dfr11 8RHM1UV5ZACIokFFneMOO0
+    Depends on: E cellslib no310 5C0Y^_:?0B6SKY[lPJEV>1
+    Depends on: E cellslib dfn10 ^EjP]UF]D]znjm0Z9RYne0
+    Depends on: E cellslib na310 z]klTlH8iZ77=SW_]c<[_0
+    Depends on: E cellslib tinv10 LKW?@Sej^lT[<SF9KMaR>2
+    Depends on: E cellslib mu111 hknW;QzWV8Je@9eJh_5o`3
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work clearandshift extracted ;o7fAU03H<z@X5]lQ[EnR2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work clearandshift nmSHjJH2NhDKdd[LobUiS2
+    Source modified time: Fri Nov 29 11:16:19 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/clearandshift_extracted_cfg.vhd
+    Source file: VHDL/clearandshift_extracted_cfg.vhd
+    Start location: VHDL/clearandshift_extracted_cfg.vhd:1
+    Version string: <^OMJli8oYMdcXnZELAFM2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION clearandshift_synthesised_cfg
+    Configuration for architecture: synthesised
+    Configuration for entity: clearandshift
+    Depends on: E cellslib ex210 jfbZcVZ_zElhH?3Ngm^Z<3
+    Depends on: E cellslib mu111 hknW;QzWV8Je@9eJh_5o`3
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib no310 5C0Y^_:?0B6SKY[lPJEV>1
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib na310 z]klTlH8iZ77=SW_]c<[_0
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: E cellslib tinv10 LKW?@Sej^lT[<SF9KMaR>2
+    Depends on: E cellslib dfr11 8RHM1UV5ZACIokFFneMOO0
+    Depends on: E cellslib dfn10 ^EjP]UF]D]znjm0Z9RYne0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work clearandshift synthesised I?:<3U:OQOSQb@LY_?l`B2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work clearandshift bQ1PTZ`j0XX8VLHc:RlE21
+    Source modified time: Fri Nov 29 09:35:48 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/clearandshift_synthesised_cfg.vhd
+    Source file: VHDL/clearandshift_synthesised_cfg.vhd
+    Start location: VHDL/clearandshift_synthesised_cfg.vhd:1
+    Version string: AR6c@3::7XZYblM@2^bKm1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY testbench
+    Source modified time: Tue Nov 26 10:17:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: ClearAndShift
+    HDL source file: VHDL/testbench.vhd
+    Source file: VHDL/testbench.vhd
+    Start location: VHDL/testbench.vhd:4
+    Version string: IBfLbbMb:<4i7ZS?z>@=R0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY testbench_behaviour
+    Source modified time: Tue Dec  3 12:05:57 2013
+    Depends on: E work testbench IBfLbbMb:<4i7ZS?z>@=R0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/testbench-testbench_behaviour.vhd
+    Source file: VHDL/testbench-testbench_behaviour.vhd
+    Start location: VHDL/testbench-testbench_behaviour.vhd:4
+    Version string: TM6el^ZWcW`nn=?[T0OM42
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: ClearAndShift
+    Debug Symbol file exists
+VHDL CONFIGURATION testbench_behaviour_cfg
+    Configuration for architecture: testbench_behaviour
+    Configuration for entity: testbench
+    Depends on: E work clearandshift bQ1PTZ`j0XX8VLHc:RlE21
+    Depends on: C work clearandshift_behaviour_cfg abD9C6L<:bTC=QF<0gM0Q3
+    Depends on: A work testbench testbench_behaviour j6C6h6jBCWeoXekgVz5o=0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work testbench IBfLbbMb:<4i7ZS?z>@=R0
+    Source modified time: Tue Nov 26 10:33:04 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/testbench_behaviour_cfg.vhd
+    Source file: VHDL/testbench_behaviour_cfg.vhd
+    Start location: VHDL/testbench_behaviour_cfg.vhd:1
+    Version string: A1`if?G_N1PzE`F0nMFzo3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION testbench_extracted_cfg
+    Configuration for architecture: testbench_behaviour
+    Configuration for entity: testbench
+    Depends on: E work clearandshift nmSHjJH2NhDKdd[LobUiS2
+    Depends on: C work clearandshift_extracted_cfg <^OMJli8oYMdcXnZELAFM2
+    Depends on: A work testbench testbench_behaviour k_CC=@6ilWG]611B^Q]`g0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work testbench IBfLbbMb:<4i7ZS?z>@=R0
+    Source modified time: Fri Nov 29 11:17:25 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/testbench_extracted_cfg.vhd
+    Source file: VHDL/testbench_extracted_cfg.vhd
+    Start location: VHDL/testbench_extracted_cfg.vhd:1
+    Version string: lk?XA?jlZNAfI2kd<;Pd62
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION testbench_synth_cfg
+    Configuration for architecture: testbench_behaviour
+    Configuration for entity: testbench
+    Depends on: E work clearandshift bQ1PTZ`j0XX8VLHc:RlE21
+    Depends on: C work clearandshift_synthesised_cfg AR6c@3::7XZYblM@2^bKm1
+    Depends on: A work testbench testbench_behaviour kGd08`8U[iY0g:_C1OL9z1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work testbench IBfLbbMb:<4i7ZS?z>@=R0
+    Source modified time: Fri Nov 29 09:36:13 2013
+    Source directory: ClearAndShift
+    HDL source file: VHDL/testbench_synth_cfg.vhd
+    Source file: VHDL/testbench_synth_cfg.vhd
+    Start location: VHDL/testbench_synth_cfg.vhd:1
+    Version string: f^Dk]bD@fD2Ao4lXGOF7`0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1

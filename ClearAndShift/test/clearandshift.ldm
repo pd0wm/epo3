@@ -1,0 +1,262 @@
+:: no-origin mode LDM
+ms clearandshift
+mc <U272> na210 mx 5046 2010
+mc <U273> na210 mx 5246 2010
+mc <U274> na210 mx 4526 2998
+mc <U275> mu111 mx 3166 2010
+mc <U276> na210 mx 3846 2010
+mc <U277> na210 mx 4326 2010
+mc <U278> iv110 mx 4126 2010
+mc <col_reg_0_inst> dfr11 3206 9880
+mc <U279> no210 mx 3606 2010
+mc <U280> iv110 mx 3766 5962
+mc <U281> mu111 6006 988
+mc <U282> na210 mx 3566 4974
+mc <U283> na210 mx 4126 5962
+mc <U284> na210 mx 2286 2998
+mc <U285> na210 mx 2646 2010
+mc <ram_addr_tri2_7_inst> tinv10 126 0
+mc <U286> na210 mx 2886 2010
+mc <U287> na210 mx 2406 2010
+mc <U288> mu111 mx 5486 2010
+mc <U289> na210 mx 5726 2998
+mc <U290> na210 mx 6126 2998
+mc <U300> na310 mx 206 2998
+mc <U291> iv110 mx 5966 2998
+mc <U301> iv110 mx 4966 5962
+mc <ram_addr_tri2_4_inst> tinv10 4166 8892
+mc <U292> no310 mx 3966 4974
+mc <U302> na210 mx 566 2010
+mc <row_reg_2_inst> dfr11 mx 4766 2998
+mc <U293> mu111 mx 1606 2998
+mc <U303> iv110 mx 4846 4974
+mc <U294> na210 mx 846 2010
+mc <U304> no210 mx 5326 5962
+mc <U295> na210 mx 1126 2010
+mc <U305> no310 mx 366 5962
+mc <U296> iv110 mx 4566 5962
+mc <U306> na210 mx 806 5962
+mc <ram_addr_tri2_1_inst> tinv10 mx 206 8926
+mc <U297> no210 mx 2046 2998
+mc <U307> na210 mx 5206 4974
+mc <U298> iv110 mx 4446 4974
+mc <U308> na210 1486 6916
+mc <ram_addr_tri_5_inst> tinv10 5006 9880
+mc <U299> mu111 5566 988
+mc <U309> na310 1166 5928
+mc <U310> na210 1566 5928
+mc <U311> na210 806 5928
+mc <U312> mu111 3086 5928
+mc <U313> no210 2206 6916
+mc <U314> na210 2566 6916
+mc <ram_addr_tri_2_inst> tinv10 1246 8892
+mc <U315> na210 1846 6916
+mc <U316> iv110 mx 5766 5962
+mc <U317> mu111 3166 8892
+mc <U318> na310 4526 5928
+mc <U319> na210 4046 6916
+mc <U320> iv110 mx 5646 4974
+mc <U321> na210 mx 6126 5962
+mc <U322> na310 mx 6006 4974
+mc <ram_out_tri> tinv10 mx 2966 8926
+mc <U323> na210 4846 0
+mc <U324> na210 4406 988
+mc <U325> na210 3806 0
+mc <U326> na210 2766 0
+mc <U327> na210 3366 988
+mc <U328> na210 2326 988
+mc <U329> na210 1726 0
+mc <U330> na210 1286 988
+mc <U331> na210 686 0
+mc <shift_col_reg_1_inst> dfr11 mx 2526 2998
+mc <ram_addr_tri_enable_reg_6_inst> dfn10 1446 988
+mc <U332> na210 366 0
+mc <U333> iv110 mx 6566 5962
+mc <U334> no310 mx 6446 4974
+mc <ram_write_tri> tinv10 4086 5928
+mc <U335> na310 mx 6446 7938
+mc <U336> no210 5646 6916
+mc <ram_addr_tri_enable_reg_3_inst> dfn10 3526 988
+mc <U337> no210 6446 3952
+mc <U338> iv110 6286 2964
+mc <U339> na310 6046 3952
+mc <U340> na210 5966 6916
+mc <state_reg_3_inst> dfr11 mx 5646 8926
+mc <U341> iv110 6286 6916
+mc <U342> na210 mx 4766 7938
+mc <ram_addr_tri_enable_reg_0_inst> dfn10 4566 988
+mc <U343> na210 mx 4966 8926
+mc <U344> iv110 5926 2964
+mc <shift_row_reg_3_inst> dfr11 mx 526 8926
+mc <U345> na210 5686 3952
+mc <state_reg_0_inst> dfr11 5646 5928
+mc <U346> no310 mx 3566 7938
+mc <U347> na210 mx 3886 7938
+mc <U348> iv110 5326 988
+mc <U349> iv110 4686 0
+mc <U350> iv110 4246 988
+mc <shift_row_reg_0_inst> dfr11 1966 8892
+mc <U351> iv110 3206 988
+mc <U352> iv110 3646 0
+mc <U353> iv110 2606 0
+mc <U354> iv110 2166 988
+mc <U355> iv110 1566 0
+mc <U356> iv110 1126 988
+mc <U357> iv110 526 0
+mc <U358> no210 mx 2366 7938
+mc <U359> no210 mx 2646 7938
+mc <U360> iv110 5566 2964
+mc <U361> no210 mx 2406 8926
+mc <U362> iv110 5326 3952
+mc <U363> no210 mx 286 7938
+mc <U364> no210 mx 766 7938
+mc <U365> iv110 mx 1046 7938
+mc <U366> no210 mx 526 7938
+mc <U367> iv110 5206 2964
+mc <U368> no210 1046 8892
+mc <U370> iv110 4966 3952
+mc <U369> no210 646 8892
+mc <U371> no210 846 8892
+mc <U372> iv110 446 8892
+mc <U373> no210 2726 9880
+mc <U374> mu111 2126 9880
+mc <U375> no210 2526 9880
+mc <U376> iv110 4846 2964
+mc <U377> no310 4086 9880
+mc <U378> no210 3686 8892
+mc <U380> iv110 3846 8892
+mc <U379> iv110 4486 2964
+mc <U381> na210 3526 8892
+mc <col_reg_2_inst> dfr11 1966 5928
+mc <U382> ex210 4446 3952
+mc <U383> no210 4006 8892
+mc <U384> iv110 4846 9880
+mc <U385> na310 4726 8892
+mc <U386> na210 4526 9880
+mc <U387> iv110 4406 8892
+mc <U388> na210 4566 8892
+mc <U400> ex210 3566 3952
+mc <U390> na210 5246 9880
+mc <U389> na210 5406 9880
+mc <U401> no310 3406 2964
+mc <U391> na210 5166 8892
+mc <U402> iv110 3246 3952
+mc <U392> iv110 4126 2964
+mc <U403> no210 5726 9880
+mc <U393> iv110 4086 3952
+mc <ram_addr_tri2_6_inst> tinv10 5886 9880
+mc <U404> iv110 5486 8892
+mc <U394> iv110 5326 8892
+mc <U405> na210 3086 2964
+mc <U395> na210 4686 9880
+mc <U406> no210 2926 3952
+mc <U396> no310 5806 8892
+mc <U407> iv110 2766 2964
+mc <U397> no210 5566 9880
+mc <U408> no310 2566 3952
+mc <U398> iv110 3766 2964
+mc <ram_addr_tri2_3_inst> tinv10 2886 8892
+mc <U410> na310 2206 3952
+mc <U409> iv110 2446 2964
+mc <U399> no210 5646 8892
+mc <row_reg_1_inst> dfr11 mx 526 2998
+mc <U411> iv110 2126 2964
+mc <ram_addr_tri_7_inst> tinv10 166 988
+mc <U412> na310 6246 8892
+mc <U413> no210 6126 9880
+mc <U414> no310 6446 8892
+mc <ram_addr_tri2_0_inst> tinv10 mx 2046 8926
+mc <U415> na210 6286 9880
+mc <U416> no310 1846 3952
+mc <ram_addr_tri_4_inst> tinv10 4286 9880
+mc <U417> iv110 1806 2964
+mc <U418> na310 1486 3952
+mc <U420> na210 1126 2964
+mc <U419> no310 1446 2964
+mc <U421> no310 1126 3952
+mc <U422> iv110 806 2964
+mc <ram_addr_tri_1_inst> tinv10 mx -34 7938
+mc <U423> na210 806 3952
+mc <U424> na210 526 2964
+mc <U425> no210 526 3952
+mc <U426> iv110 246 2964
+mc <U427> na310 -34 988
+mc <U428> no210 -34 0
+mc <U430> na210 mx 2926 7938
+mc <U429> iv110 246 3952
+mc <U431> iv110 -34 2964
+mc <U432> na210 -34 3952
+mc <U433> iv110 mx -34 2998
+mc <ram_out_tri2> tinv10 mx 3206 7938
+mc <U434> no310 mx -34 2010
+mc <U435> iv110 mx 326 2010
+mc <shift_col_reg_0_inst> dfr11 6446 988
+mc <ram_addr_tri_enable_reg_5_inst> dfn10 1886 0
+mc <ram_addr_tri_enable_reg_2_inst> dfn10 2926 0
+mc <state_reg_2_inst> dfr11 mx -34 4974
+mc <shift_row_reg_2_inst> dfr11 246 9880
+mc <ram_out_tri_enable_reg> dfn10 406 988
+mc <ready_reg> dfn10 mx 5886 2010
+mc <col_reg_1_inst> dfr11 2966 6916
+mc <ram_write_tri_enable_reg> dfn10 5006 0
+mc <ram_addr_tri2_5_inst> tinv10 4926 8892
+mc <row_reg_3_inst> dfr11 mx 1406 2010
+mc <ram_addr_tri2_2_inst> tinv10 1166 9880
+mc <row_reg_0_inst> dfr11 5806 0
+mc <ram_addr_tri_6_inst> tinv10 6006 8892
+mc <ram_addr_tri_3_inst> tinv10 2926 9880
+mc <ram_addr_tri_0_inst> tinv10 mx 2006 7938
+mc <score_reg> dfr11 mx 2526 5962
+mc <shift_col_reg_2_inst> dfr11 mx 3526 2998
+mc <ram_addr_tri_enable_reg_7_inst> dfn10 846 0
+mc <U227> iv110 mx 6686 2010
+mc <U228> no210 6726 0
+mc <U229> na310 mx 1206 5962
+mc <U230> no310 mx 2086 5962
+mc <ram_addr_tri_enable_reg_4_inst> dfn10 2486 988
+mc <U231> no210 mx 2726 4974
+mc <U232> no210 mx 2326 4974
+mc <U233> no210 mx 1926 4974
+mc <U234> no210 mx 1126 4974
+mc <U235> no210 mx 1526 4974
+mc <ram_addr_tri_enable_reg_1_inst> dfn10 3966 0
+mc <U236> no310 mx 1646 5962
+mc <U237> na310 406 5928
+mc <ram_write_tri2> tinv10 3646 5928
+mc <U238> no310 -34 5928
+mc <state_reg_1_inst> dfr11 406 6916
+mc <U239> no210 mx -34 5962
+mc <U240> iv110 -34 6916
+mc <U241> na310 5286 6916
+mc <U242> no310 4926 5928
+mc <U243> na310 mx 5086 7938
+mc <shift_row_reg_1_inst> dfr11 mx 3326 8926
+mc <U244> na210 mx 5806 7938
+mc <U245> na310 mx 5446 7938
+mc <U246> iv110 mx 6166 7938
+mc <U247> iv110 mx 2726 8926
+mc <U248> na310 mx 5286 8926
+mc <U249> mu111 4446 6916
+mc <U250> na210 4966 6916
+mc <U251> no210 5286 5928
+mc <U252> na310 mx 1246 7938
+mc <U253> na210 mx 1766 7938
+mc <U254> na210 mx 1526 7938
+mc <U255> iv110 mx 1806 8926
+mc <U256> na210 mx 1526 8926
+mc <U257> na310 206 8892
+mc <U258> na210 mx -34 8926
+mc <U259> na210 -34 9880
+mc <U260> na210 -34 8892
+mc <U261> na310 mx 4166 7938
+mc <U262> na210 mx 4646 8926
+mc <U263> na210 mx 4486 7938
+mc <U264> na210 mx 4366 8926
+mc <U265> na210 1886 9880
+mc <U266> na210 1526 8892
+mc <U267> iv110 1726 8892
+mc <U268> mu111 1486 9880
+mc <U269> na310 mx 3126 4974
+mc <U270> na210 mx 4566 2010
+mc <U271> na310 mx 4806 2010
+me
