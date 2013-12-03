@@ -826,7 +826,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 			when space_6 =>
-				if (lut_error = '0') then
+				if (lut_error_bot = '0') then
 					new_cur_y  <= cur_y_new;
 					next_state <= move_down_1;
 				else
