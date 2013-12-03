@@ -6,8 +6,8 @@ entity controller is
         rst               : in  std_logic;
 
         -- piece lut
-        lut_x             : out std_logic_vector(3 downto 0);
-        lut_y             : out std_logic_vector(4 downto 0);
+        lut_x             : out std_logic_vector(2 downto 0);
+        lut_y             : out std_logic_vector(3 downto 0);
         lut_rot           : out std_logic_vector(1 downto 0);
         lut_piece_type    : out std_logic_vector(2 downto 0);
         lut_next_piece : out std_logic;
@@ -50,3 +50,6 @@ entity controller is
 
     );
 end controller;
+
+
+
