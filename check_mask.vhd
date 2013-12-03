@@ -12,10 +12,12 @@ entity check_mask is
                 empty : out std_logic;
 
                 start : in std_logic;
+                lut_start : out std_logic;
+                lut_ready : in std_logic;
+                lut_error : in std_logic;
 
                 write : out std_logic;
                 addr : out std_logic_vector(7 downto 0);
-                data_in : in std_logic;
-                data_out : out std_logic
+                data_in : in std_logic
         );
 end check_mask;
