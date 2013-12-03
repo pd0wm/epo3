@@ -10,24 +10,24 @@ LIB_WORK = work
 IEEE__numeric_std = $(LIB_IEEE)/numeric_std/_primary.dat
 CELLSLIB__cellslib_decl_pack = $(LIB_CELLSLIB)/cellslib_decl_pack/_primary.dat
 CELLSLIB__dfr11 = $(LIB_CELLSLIB)/dfr11/_primary.dat
-CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
-CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
 CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
 CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
+CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
+CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
 CELLSLIB__na310 = $(LIB_CELLSLIB)/na310/_primary.dat
 IEEE__std_logic_1164 = $(LIB_IEEE)/std_logic_1164/_primary.dat
 STD__textio = $(LIB_STD)/textio/_primary.dat
-WORK__score_tb_behaviour_syn_cfg = $(LIB_WORK)/score_tb_behaviour_syn_cfg/_primary.dat
-WORK__score_tb_behaviour_ext_cfg = $(LIB_WORK)/score_tb_behaviour_ext_cfg/_primary.dat
 WORK__score_tb_behaviour_cfg = $(LIB_WORK)/score_tb_behaviour_cfg/_primary.dat
 WORK__score_tb__behaviour = $(LIB_WORK)/score_tb/behaviour.dat
 WORK__score_tb = $(LIB_WORK)/score_tb/_primary.dat
 WORK__score_synthesised_cfg = $(LIB_WORK)/score_synthesised_cfg/_primary.dat
+WORK__score_syn_tb_behaviour_cfg = $(LIB_WORK)/score_syn_tb_behaviour_cfg/_primary.dat
 WORK__score_extracted_cfg = $(LIB_WORK)/score_extracted_cfg/_primary.dat
+WORK__score_extr_tb_behaviour_cfg = $(LIB_WORK)/score_extr_tb_behaviour_cfg/_primary.dat
 WORK__score_behaviour_cfg = $(LIB_WORK)/score_behaviour_cfg/_primary.dat
+WORK__score__synthesised = $(LIB_WORK)/score/synthesised.dat
 WORK__score__extracted = $(LIB_WORK)/score/extracted.dat
 WORK__score__behaviour = $(LIB_WORK)/score/behaviour.dat
-WORK__score__synthesised = $(LIB_WORK)/score/synthesised.dat
 WORK__score = $(LIB_WORK)/score/_primary.dat
 WORK__log_synthesised_cfg = $(LIB_WORK)/log_synthesised_cfg/_primary.dat
 WORK__log_score_tb_behaviour_cfg = $(LIB_WORK)/log_score_tb_behaviour_cfg/_primary.dat
@@ -53,17 +53,17 @@ VLOG = vlog
 VOPT = vopt
 SCCOM = sccom
 
-whole_library :     $(WORK__score_tb_behaviour_syn_cfg) \
-    $(WORK__score_tb_behaviour_ext_cfg) \
-    $(WORK__score_tb_behaviour_cfg) \
+whole_library :     $(WORK__score_tb_behaviour_cfg) \
     $(WORK__score_tb__behaviour) \
     $(WORK__score_tb) \
     $(WORK__score_synthesised_cfg) \
+    $(WORK__score_syn_tb_behaviour_cfg) \
     $(WORK__score_extracted_cfg) \
+    $(WORK__score_extr_tb_behaviour_cfg) \
     $(WORK__score_behaviour_cfg) \
+    $(WORK__score__synthesised) \
     $(WORK__score__extracted) \
     $(WORK__score__behaviour) \
-    $(WORK__score__synthesised) \
     $(WORK__score) \
     $(WORK__log_synthesised_cfg) \
     $(WORK__log_score_tb_behaviour_cfg) \
@@ -190,8 +190,8 @@ $(WORK__log_score_extracted_cfg) : VHDL/log_score_extracted_cfg.vhd \
 		$(CELLSLIB__no210) \
 		$(CELLSLIB__na210) \
 		$(CELLSLIB__na310) \
-		$(CELLSLIB__ex210) \
 		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__ex210) \
 		$(CELLSLIB__cellslib_decl_pack) \
 		$(WORK__log_score__extracted) \
 		$(STD__textio) \
@@ -264,14 +264,6 @@ $(WORK__score) : VHDL/score.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/score.vhd
 
-$(WORK__score__synthesised) : VHDL/score_SYNTH.vhd \
-		$(WORK__score) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/score_SYNTH.vhd
-
 $(WORK__score__behaviour) : VHDL/score-behaviour.vhd \
 		$(WORK__score) \
 		$(IEEE__numeric_std) \
@@ -288,6 +280,14 @@ $(WORK__score__extracted) : VHDL/score_EXTR.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/score_EXTR.vhd
 
+$(WORK__score__synthesised) : VHDL/score_SYNTH.vhd \
+		$(WORK__score) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/score_SYNTH.vhd
+
 $(WORK__score_behaviour_cfg) : VHDL/score_behaviour_cfg.vhd \
 		$(IEEE__numeric_std) \
 		$(WORK__score__behaviour) \
@@ -297,13 +297,23 @@ $(WORK__score_behaviour_cfg) : VHDL/score_behaviour_cfg.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/score_behaviour_cfg.vhd
 
+$(WORK__score_extr_tb_behaviour_cfg) : VHDL/score_extr_tb_behaviour_cfg.vhd \
+		$(WORK__score) \
+		$(WORK__score_extracted_cfg) \
+		$(WORK__score_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__score_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/score_extr_tb_behaviour_cfg.vhd
+
 $(WORK__score_extracted_cfg) : VHDL/score_extracted_cfg.vhd \
-		$(CELLSLIB__na310) \
-		$(CELLSLIB__dfr11) \
-		$(CELLSLIB__ex210) \
-		$(CELLSLIB__no210) \
-		$(CELLSLIB__iv110) \
 		$(CELLSLIB__na210) \
+		$(CELLSLIB__na310) \
+		$(CELLSLIB__no210) \
+		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__ex210) \
 		$(CELLSLIB__cellslib_decl_pack) \
 		$(WORK__score__extracted) \
 		$(STD__textio) \
@@ -312,12 +322,22 @@ $(WORK__score_extracted_cfg) : VHDL/score_extracted_cfg.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/score_extracted_cfg.vhd
 
+$(WORK__score_syn_tb_behaviour_cfg) : VHDL/score_syn_tb_behaviour_cfg.vhd \
+		$(WORK__score) \
+		$(WORK__score_synthesised_cfg) \
+		$(WORK__score_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__score_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/score_syn_tb_behaviour_cfg.vhd
+
 $(WORK__score_synthesised_cfg) : VHDL/score_synthesised_cfg.vhd \
 		$(CELLSLIB__na310) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__na210) \
 		$(CELLSLIB__no210) \
 		$(CELLSLIB__ex210) \
-		$(CELLSLIB__na210) \
-		$(CELLSLIB__iv110) \
 		$(CELLSLIB__dfr11) \
 		$(CELLSLIB__cellslib_decl_pack) \
 		$(WORK__score__synthesised) \
@@ -348,24 +368,4 @@ $(WORK__score_tb_behaviour_cfg) : VHDL/score_tb_behaviour_cfg.vhd \
 		$(WORK__score_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/score_tb_behaviour_cfg.vhd
-
-$(WORK__score_tb_behaviour_ext_cfg) : VHDL/score_tb_behaviour_ext_cfg.vhd \
-		$(WORK__score) \
-		$(WORK__score_extracted_cfg) \
-		$(WORK__score_tb__behaviour) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__score_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/score_tb_behaviour_ext_cfg.vhd
-
-$(WORK__score_tb_behaviour_syn_cfg) : VHDL/score_tb_behaviour_syn_cfg.vhd \
-		$(WORK__score) \
-		$(WORK__score_synthesised_cfg) \
-		$(WORK__score_tb__behaviour) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__score_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/score_tb_behaviour_syn_cfg.vhd
 

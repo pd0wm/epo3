@@ -4,15 +4,12 @@
 ------ reading placement 'Tmp_Cell_(log_score(log_score(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Tue Dec  3 10:31:48 2013
- 24 nets have to be routed.
+------ routing started Tue Dec  3 11:54:53 2013
+ 21 nets have to be routed.
 Routing net 'clk' (2/2): .b OK!
-Routing net 'rst' (2/2): .b OK!
-Routing net 'increase_value_2_0_1' (2/2): .b OK!
 Routing net 'output_7_0_5' (2/2): .b OK!
 Routing net 'output_7_0_4' (2/2): .b OK!
-Routing net 'increase_value_2_0_2' (2/2): .b OK!
-Routing net 'increase_value_2_0_0' (2/2): .b OK!
+Routing net 'rst' (2/2): .b OK!
 Routing net 'increase' (2/2): .b OK!
 Routing net 'output_7_0_7' (2/2): .b OK!
 Routing net 'output_7_0_6' (2/2): .b OK!
@@ -21,24 +18,24 @@ Routing net 'output_7_0_2' (2/2): .b OK!
 Routing net 'output_7_0_1' (2/2): .b OK!
 Routing net 'output_7_0_0' (2/2): .b OK!
 Routing net 'score_to_log_0_port' (2/2): . OK!
-Routing net 'score_to_log_1_port' (2/2): . OK!
+Routing net 'vss' :  (Power special)
 Routing net 'vdd' :  (Power special)
-Routing net 'score_to_log_7_port' (2/2): . OK!
-Routing net 'score_to_log_5_port' (2/2): . OK!
 Routing net 'score_to_log_2_port' (2/2): . OK!
-Routing net 'vss' : .. (Power special)
+Routing net 'score_to_log_7_port' (2/2): . OK!
+Routing net 'score_to_log_1_port' (2/2): . OK!
 Routing net 'score_to_log_4_port' (2/2): . OK!
-Routing net 'score_to_log_3_port' (2/2): . OK!
+Routing net 'score_to_log_5_port' (2/2): . OK!
 Routing net 'score_to_log_6_port' (2/2): . OK!
+Routing net 'score_to_log_3_port' (2/2): . OK!
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 24 (100% completion)
-Total length of routed wires:         473 grids = 4.162 mm
-No. of transistors (total / used):    1152/680 = 59.03 %
+Total number of nets:                 21 (100% completion)
+Total length of routed wires:         516 grids = 4.541 mm
+No. of transistors (total / used):    1168/590 = 50.51 %
 CPU-time consumption:                 0.00 sec.
-Elapsed time during routing:          0.01 sec. (0.00 % of cpu)
+Elapsed time during routing:          0.00 sec. (100.00 % of cpu)
 ------ Verifying Connectivity ------
-WARNING: 1 short-circuit(s) were detected among the 24 nets.
+WARNING: 1 short-circuit(s) were detected among the 21 nets.
 ------ Writing 'Tmp_Cell_(log_score(log_score(test)))' ------
------- Trout: task completed on Tue Dec  3 10:31:49 2013
+------ Trout: task completed on Tue Dec  3 11:54:53 2013
  

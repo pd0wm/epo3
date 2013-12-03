@@ -7,12 +7,12 @@ set hdlin_ff_always_sync_set_reset true
 set vhdlout_architecture_name "synthesised"
 set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
 set company "ontwerp_practicum"
-set designer "rdmiedema"
+set designer "epo3-user"
 set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
-set link_library [list "*" "/tmp/rdmiedema/epo3/score/ADB/log.ddc" "/tmp/rdmiedema/epo3/score/ADB/score.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
-define_design_lib MY_LIB -path /tmp/rdmiedema/epo3/score/syn_work
+set link_library [list "*" "./ADB/log.ddc" "./ADB/score.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+define_design_lib MY_LIB -path ./syn_work
 define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
-read_file -format vhdl -work MY_LIB {/tmp/rdmiedema/epo3/score/VHDL/log_score.vhd /tmp/rdmiedema/epo3/score/VHDL/log_score-behaviour.vhd}
+read_file -format vhdl -work MY_LIB {VHDL/log_score.vhd VHDL/log_score-behaviour.vhd}
 set_dont_touch {log score}
 set_dont_touch {g_analib8_00/*}
 # set_max_fanout 1.8 all_inputs() 
@@ -22,8 +22,8 @@ compile
 ungroup -all -flat
 report_area
 report_fsm
-write_file -f ddc log_score -output /tmp/rdmiedema/epo3/score/ADB/log_score.ddc
-write_file -f vhdl log_score -output /tmp/rdmiedema/epo3/score/VHDL/log_score_SYNTH.vhd
+write_file -f ddc log_score -output ./ADB/log_score.ddc
+write_file -f vhdl log_score -output ./VHDL/log_score_SYNTH.vhd
 quit
 
 ----- invoking synthesizer .....
@@ -42,7 +42,7 @@ quit
                         Library Compiler (TM)
                          Design Compiler(R)
 
-            Version G-2012.06 for suse32 -- May 30, 2012
+            Version G-2012.06 for RHEL32 -- May 30, 2012
                Copyright (c) 1988-2012 Synopsys, Inc.
 
 This software and the associated documentation are confidential and 
@@ -66,17 +66,17 @@ set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
 "ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"
 set company "ontwerp_practicum"
 ontwerp_practicum
-set designer "rdmiedema"
-rdmiedema
+set designer "epo3-user"
+epo3-user
 set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
 "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"
-set link_library [list "*" "/tmp/rdmiedema/epo3/score/ADB/log.ddc" "/tmp/rdmiedema/epo3/score/ADB/score.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
-* /tmp/rdmiedema/epo3/score/ADB/log.ddc /tmp/rdmiedema/epo3/score/ADB/score.ddc /data/public/common/software/opprog/synth_libs/g_digilib5_99.db /data/public/common/software/opprog/synth_libs/g_analib8_00.db /data/public/common/software/opprog/synth_libs/buffers.db
-define_design_lib MY_LIB -path /tmp/rdmiedema/epo3/score/syn_work
+set link_library [list "*" "./ADB/log.ddc" "./ADB/score.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+* ./ADB/log.ddc ./ADB/score.ddc /data/public/common/software/opprog/synth_libs/g_digilib5_99.db /data/public/common/software/opprog/synth_libs/g_analib8_00.db /data/public/common/software/opprog/synth_libs/buffers.db
+define_design_lib MY_LIB -path ./syn_work
 1
 define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
 1
-read_file -format vhdl -work MY_LIB {/tmp/rdmiedema/epo3/score/VHDL/log_score.vhd /tmp/rdmiedema/epo3/score/VHDL/log_score-behaviour.vhd}
+read_file -format vhdl -work MY_LIB {VHDL/log_score.vhd VHDL/log_score-behaviour.vhd}
 Loading db file '/data/public/common/software/opprog/synth_libs/g_digilib5_99.db'
 Loading db file '/data/public/common/software/opprog/synth_libs/g_analib8_00.db'
 Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
@@ -86,21 +86,21 @@ Loading db file '/data/public/common/software/synopsys/G-2012.06/libraries/syn/s
   Loading link library 'g_analib8_00'
   Loading link library 'buffers'
   Loading link library 'gtech'
-Loading vhdl files: '/tmp/rdmiedema/epo3/score/VHDL/log_score.vhd' '/tmp/rdmiedema/epo3/score/VHDL/log_score-behaviour.vhd' 
+Loading vhdl files: '/home/epo3-user/EPO3/score/VHDL/log_score.vhd' '/home/epo3-user/EPO3/score/VHDL/log_score-behaviour.vhd' 
 Running PRESTO HDLC
--- Compiling Source File /tmp/rdmiedema/epo3/score/VHDL/log_score.vhd
+-- Compiling Source File /home/epo3-user/EPO3/score/VHDL/log_score.vhd
 Compiling Entity Declaration LOG_SCORE
--- Compiling Source File /tmp/rdmiedema/epo3/score/VHDL/log_score-behaviour.vhd
+-- Compiling Source File /home/epo3-user/EPO3/score/VHDL/log_score-behaviour.vhd
 Compiling Architecture BEHAVIOUR of LOG_SCORE
-Warning:  /tmp/rdmiedema/epo3/score/VHDL/log_score-behaviour.vhd:4: The architecture behaviour has already been analyzed. It is being replaced. (VHD-4)
+Warning:  /home/epo3-user/EPO3/score/VHDL/log_score-behaviour.vhd:4: The architecture behaviour has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
-Current design is now '/tmp/rdmiedema/epo3/score/VHDL/log_score.db:log_score'
+Current design is now '/home/epo3-user/EPO3/score/VHDL/log_score.db:log_score'
 Loaded 1 design.
 Current design is 'log_score'.
 log_score
 set_dont_touch {log score}
-Reading ddc file '/tmp/rdmiedema/epo3/score/ADB/log.ddc'.
-Reading ddc file '/tmp/rdmiedema/epo3/score/ADB/score.ddc'.
+Reading ddc file '/home/epo3-user/EPO3/score/ADB/log.ddc'.
+Reading ddc file '/home/epo3-user/EPO3/score/ADB/score.ddc'.
 1
 set_dont_touch {g_analib8_00/*}
 1
@@ -119,7 +119,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -137,20 +137,20 @@ Information: Design 'log_score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
 
 
 
@@ -160,9 +160,9 @@ Information: Design 'log_score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -171,21 +171,21 @@ Information: Design 'log_score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
-    0:00:00     340.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
+    0:00:00     295.0      0.00       0.0       0.0                          
 Loading db file '/data/public/common/software/opprog/synth_libs/g_digilib5_99.db'
 Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
 
@@ -201,7 +201,7 @@ report_area
 Report : area
 Design : log_score
 Version: G-2012.06
-Date   : Tue Dec  3 10:28:16 2013
+Date   : Tue Dec  3 11:53:55 2013
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -209,8 +209,8 @@ Library(s) Used:
 
     g_digilib5_99 (File: /data/public/common/software/opprog/synth_libs/g_digilib5_99.db)
 
-Number of ports:                           14
-Number of nets:                            22
+Number of ports:                           11
+Number of nets:                            19
 Number of cells:                            2
 Number of combinational cells:              0
 Number of sequential cells:                 0
@@ -218,11 +218,11 @@ Number of macros:                           0
 Number of buf/inv:                          0
 Number of references:                       2
 
-Combinational area:        172.000000
+Combinational area:        127.000000
 Noncombinational area:     168.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:           340.000000
+Total cell area:           295.000000
 Total area:                 undefined
 1
 report_fsm
@@ -231,7 +231,7 @@ report_fsm
 Report : FSM
 Design : log_score
 Version: G-2012.06
-Date   : Tue Dec  3 10:28:16 2013
+Date   : Tue Dec  3 11:53:55 2013
 ****************************************
 
 
@@ -246,11 +246,11 @@ State Vector: Unspecified
 
 State Encodings and Order: Unspecified
 1
-write_file -f ddc log_score -output /tmp/rdmiedema/epo3/score/ADB/log_score.ddc
-Writing ddc file '/tmp/rdmiedema/epo3/score/ADB/log_score.ddc'.
+write_file -f ddc log_score -output ./ADB/log_score.ddc
+Writing ddc file './ADB/log_score.ddc'.
 1
-write_file -f vhdl log_score -output /tmp/rdmiedema/epo3/score/VHDL/log_score_SYNTH.vhd
-Writing vhdl file '/tmp/rdmiedema/epo3/score/VHDL/log_score_SYNTH.vhd'.
+write_file -f vhdl log_score -output ./VHDL/log_score_SYNTH.vhd
+Writing vhdl file '/home/epo3-user/EPO3/score/VHDL/log_score_SYNTH.vhd'.
 1
 quit
 
@@ -281,7 +281,7 @@ Thank you...
 --compiling VHDL/log_score_SYNTH.vhd --
 --VHDL/log_score_SYNTH.vhd compiled--
 
---- parsing /home/rdmiedema/epo3/score/SLS/log_score.sls ---
+--- parsing /home/epo3-user/EPO3/score/SLS/log_score.sls ---
 
 --- parsing done ---
 

@@ -41,12 +41,12 @@ end process;
  wait for 2200 ns;
 
  increase <= '1';
- wait for 4 us;
+ wait for 2 us;
  increase <= '0';
  wait for 40 us;
  increase_value <= "001" ;
  increase <= '1';
- wait for 4 us;
+ wait for 2 us;
  increase <= '0';
 wait for 20 us;
  increase <= '1' ;
@@ -56,5 +56,8 @@ wait for 20 us;
  
  end process; 
 end behaviour;
+
+
+
 
 

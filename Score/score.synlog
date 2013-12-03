@@ -85,24 +85,24 @@ Loading db file '/data/public/common/software/synopsys/G-2012.06/libraries/syn/s
   Loading link library 'g_analib8_00'
   Loading link library 'buffers'
   Loading link library 'gtech'
-Loading vhdl files: '/home/epo3-user/score3/score/VHDL/score.vhd' '/home/epo3-user/score3/score/VHDL/score-behaviour.vhd' 
+Loading vhdl files: '/home/epo3-user/EPO3/score/VHDL/score.vhd' '/home/epo3-user/EPO3/score/VHDL/score-behaviour.vhd' 
 Running PRESTO HDLC
--- Compiling Source File /home/epo3-user/score3/score/VHDL/score.vhd
+-- Compiling Source File /home/epo3-user/EPO3/score/VHDL/score.vhd
 Compiling Entity Declaration SCORE
--- Compiling Source File /home/epo3-user/score3/score/VHDL/score-behaviour.vhd
+-- Compiling Source File /home/epo3-user/EPO3/score/VHDL/score-behaviour.vhd
 Compiling Architecture BEHAVIOUR of SCORE
-Warning:  /home/epo3-user/score3/score/VHDL/score-behaviour.vhd:5: The architecture behaviour has already been analyzed. It is being replaced. (VHD-4)
+Warning:  /home/epo3-user/EPO3/score/VHDL/score-behaviour.vhd:5: The architecture behaviour has already been analyzed. It is being replaced. (VHD-4)
 
 Inferred memory devices in process
-	in routine score line 16 in file
-		'/home/epo3-user/score3/score/VHDL/score-behaviour.vhd'.
+	in routine score line 14 in file
+		'/home/epo3-user/EPO3/score/VHDL/score-behaviour.vhd'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      score_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | Y  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
-Current design is now '/home/epo3-user/score3/score/VHDL/score.db:score'
+Current design is now '/home/epo3-user/EPO3/score/VHDL/score.db:score'
 Loaded 1 design.
 Current design is 'score'.
 score
@@ -137,7 +137,7 @@ Information: Design 'score' has no optimization constraints set. (OPT-108)
 
   Beginning Implementation Selection
   ----------------------------------
-  Processing 'score_DW01_add_0'
+  Processing 'score_DW01_inc_0'
 
   Beginning Mapping Optimizations  (Medium effort)
   -------------------------------
@@ -147,20 +147,20 @@ Information: Design 'score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
 
 
 
@@ -170,9 +170,9 @@ Information: Design 'score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -181,21 +181,21 @@ Information: Design 'score' has no optimization constraints set. (OPT-108)
    ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
     TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
-    0:00:00     305.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
+    0:00:00     260.0      0.00       0.0       0.0                          
 Loading db file '/data/public/common/software/opprog/synth_libs/g_digilib5_99.db'
 Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
 
@@ -203,15 +203,15 @@ Loading db file '/data/public/common/software/opprog/synth_libs/buffers.db'
   ---------------------
 1
 ungroup -all -flat
-Information: Updating graph... (UID-83)
-1
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
 report_area
  
 ****************************************
 Report : area
 Design : score
 Version: G-2012.06
-Date   : Thu Nov 28 13:12:03 2013
+Date   : Tue Dec  3 11:37:21 2013
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -219,20 +219,20 @@ Library(s) Used:
 
     g_digilib5_99 (File: /data/public/common/software/opprog/synth_libs/g_digilib5_99.db)
 
-Number of ports:                           14
-Number of nets:                            49
-Number of cells:                           43
-Number of combinational cells:             35
+Number of ports:                           11
+Number of nets:                            32
+Number of cells:                           29
+Number of combinational cells:             21
 Number of sequential cells:                 8
 Number of macros:                           0
-Number of buf/inv:                          9
+Number of buf/inv:                          5
 Number of references:                       6
 
-Combinational area:        137.000000
+Combinational area:         92.000000
 Noncombinational area:     168.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:           305.000000
+Total cell area:           260.000000
 Total area:                 undefined
 1
 report_fsm
@@ -241,7 +241,7 @@ report_fsm
 Report : FSM
 Design : score
 Version: G-2012.06
-Date   : Thu Nov 28 13:12:03 2013
+Date   : Tue Dec  3 11:37:21 2013
 ****************************************
 
 
@@ -260,7 +260,7 @@ write_file -f ddc score -output ./ADB/score.ddc
 Writing ddc file './ADB/score.ddc'.
 1
 write_file -f vhdl score -output ./VHDL/score_SYNTH.vhd
-Writing vhdl file '/home/epo3-user/score3/score/VHDL/score_SYNTH.vhd'.
+Writing vhdl file '/home/epo3-user/EPO3/score/VHDL/score_SYNTH.vhd'.
 1
 quit
 
@@ -291,7 +291,7 @@ Thank you...
 --compiling VHDL/score_SYNTH.vhd --
 --VHDL/score_SYNTH.vhd compiled--
 
---- parsing /home/epo3-user/score3/score/SLS/score.sls ---
+--- parsing /home/epo3-user/EPO3/score/SLS/score.sls ---
 
 --- parsing done ---
 
