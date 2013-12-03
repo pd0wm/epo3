@@ -21,26 +21,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-5245dca48bbd508ab7c854edc998c1f5
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 pre_vga_dac
 # storage
 db|top_de2.(1).cnf
@@ -2228,6 +2208,26 @@ vga:inst3|vga_score_trans:score_translation
 
 # end
 # entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+c2599be9ad8671c6ce4644ac0d2b044
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 vga_score_check
 # storage
 db|top_de2.(36).cnf
@@ -2262,52 +2262,13 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_check_arch.vhd
 722ed5af885e117f138c63d4753977c4
+|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
+a3e1c226bf8bc866459f1057d37de2db
 }
 # hierarchies {
 vga:inst3|vga_score_check:score_check
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-depiece_simple
-# storage
-db|top_de2.(37).cnf
-db|top_de2.(37).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|depiece_simple.vhd
-9b77167405243b3d761c9baf9a3eadd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|depiece_simple-depiece_simple_arch.vhd
-bca390e3e73514134d981fa912e8bcf
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
-}
-# hierarchies {
-depiece_simple:inst5
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf

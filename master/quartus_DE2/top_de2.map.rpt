@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Sat Nov 30 18:10:02 2013
+Tue Dec  3 21:14:37 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -14,10 +14,8 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -43,15 +41,15 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 30 18:10:02 2013          ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec  3 21:14:37 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 331                                            ;
-;     Total combinational functions  ; 316                                            ;
-;     Dedicated logic registers      ; 157                                            ;
-; Total registers                    ; 157                                            ;
+; Total logic elements               ; 61                                             ;
+;     Total combinational functions  ; 54                                             ;
+;     Dedicated logic registers      ; 34                                             ;
+; Total registers                    ; 34                                             ;
 ; Total pins                         ; 37                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -146,73 +144,71 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     1 processor            ; 100.0%      ;
-;     2-4 processors         ;   0.0%      ;
+;     2-8 processors         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+----------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
-; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                        ;
-+----------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
-; ../VHDL/vga_score_trans_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans_arch.vhd               ;
-; ../VHDL/vga_score_trans.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans.vhd                    ;
-; ../VHDL/vga_score_check_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_check_arch.vhd               ;
-; ../VHDL/vga_score_check.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_check.vhd                    ;
-; ../VHDL/vga_triggers_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_arch.vhd                  ;
-; ../VHDL/vga_triggers.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers.vhd                       ;
-; ../VHDL/vga_sync_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_arch.vhd                      ;
-; ../VHDL/vga_sync.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync.vhd                           ;
-; ../VHDL/vga_read_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_arch.vhd                      ;
-; ../VHDL/vga_read.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read.vhd                           ;
-; ../VHDL/vga_np_trans_reset_arch.vhd                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_reset_arch.vhd            ;
-; ../VHDL/vga_np_trans_reset.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_reset.vhd                 ;
-; ../VHDL/vga_np_trans_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_arch.vhd                  ;
-; ../VHDL/vga_np_trans.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans.vhd                       ;
-; ../VHDL/vga_np_check_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_check_arch.vhd                  ;
-; ../VHDL/vga_np_check.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_check.vhd                       ;
-; ../VHDL/vga_field_trans_reset_arch.vhd             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_reset_arch.vhd         ;
-; ../VHDL/vga_field_trans_reset.vhd                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_reset.vhd              ;
-; ../VHDL/vga_field_trans_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_arch.vhd               ;
-; ../VHDL/vga_field_trans.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans.vhd                    ;
-; ../VHDL/vga_field_check_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_arch.vhd               ;
-; ../VHDL/vga_field_check.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check.vhd                    ;
-; ../VHDL/vga_counter_arch.vhd                       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_arch.vhd                   ;
-; ../VHDL/vga_counter.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter.vhd                        ;
-; ../VHDL/vga_arch.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_arch.vhd                           ;
-; ../VHDL/vga.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga.vhd                                ;
-; ../VHDL/tower_arch.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd                         ;
-; ../VHDL/tower.vhd                                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd                              ;
-; ../VHDL/params.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd                             ;
-; ../VHDL/mux5_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd                          ;
-; ../VHDL/mux5.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd                               ;
-; ../VHDL/interface_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_arch.vhd                     ;
-; ../VHDL/interface.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface.vhd                          ;
-; ../VHDL/depiece_simple.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple.vhd                     ;
-; ../VHDL/depiece_simple-depiece_simple_arch.vhd     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd ;
-; ../VHDL/demux8_inv_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd                    ;
-; ../VHDL/demux8_inv.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd                         ;
-; ../VHDL/demux5_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd                        ;
-; ../VHDL/demux5.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd                             ;
-; ../VHDL/demux4_inv_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd                    ;
-; ../VHDL/demux4_inv.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd                         ;
-; ../VHDL/dec8_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd                          ;
-; ../VHDL/dec8.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd                               ;
-; ../VHDL/bit4.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4.vhd                               ;
-; ../VHDL/bit4-bit4_behav.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4-bit4_behav.vhd                    ;
-; /data/public/common/software/opprog/vhdl/cells.vhd ; yes             ; User VHDL File                     ; /data/public/common/software/opprog/vhdl/cells.vhd                                  ;
-; top_de2.bdf                                        ; yes             ; User Block Diagram/Schematic File  ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/top_de2.bdf                     ;
-; pre_vga_dac.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/pre_vga_dac.vhd                 ;
-; gen6mhz.vhd                                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/gen6mhz.vhd                     ;
-+----------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
+; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
+; ../VHDL/vga_score_trans_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans_arch.vhd       ;
+; ../VHDL/vga_score_trans.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans.vhd            ;
+; ../VHDL/vga_score_check_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_check_arch.vhd       ;
+; ../VHDL/vga_score_check.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_check.vhd            ;
+; ../VHDL/vga_triggers_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers_arch.vhd          ;
+; ../VHDL/vga_triggers.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_triggers.vhd               ;
+; ../VHDL/vga_sync_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync_arch.vhd              ;
+; ../VHDL/vga_sync.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_sync.vhd                   ;
+; ../VHDL/vga_read_arch.vhd                          ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read_arch.vhd              ;
+; ../VHDL/vga_read.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_read.vhd                   ;
+; ../VHDL/vga_np_trans_reset_arch.vhd                ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_reset_arch.vhd    ;
+; ../VHDL/vga_np_trans_reset.vhd                     ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_reset.vhd         ;
+; ../VHDL/vga_np_trans_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans_arch.vhd          ;
+; ../VHDL/vga_np_trans.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_trans.vhd               ;
+; ../VHDL/vga_np_check_arch.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_check_arch.vhd          ;
+; ../VHDL/vga_np_check.vhd                           ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_np_check.vhd               ;
+; ../VHDL/vga_field_trans_reset_arch.vhd             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_reset_arch.vhd ;
+; ../VHDL/vga_field_trans_reset.vhd                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_reset.vhd      ;
+; ../VHDL/vga_field_trans_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans_arch.vhd       ;
+; ../VHDL/vga_field_trans.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_trans.vhd            ;
+; ../VHDL/vga_field_check_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check_arch.vhd       ;
+; ../VHDL/vga_field_check.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_field_check.vhd            ;
+; ../VHDL/vga_counter_arch.vhd                       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_arch.vhd           ;
+; ../VHDL/vga_counter.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter.vhd                ;
+; ../VHDL/vga_arch.vhd                               ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_arch.vhd                   ;
+; ../VHDL/vga.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga.vhd                        ;
+; ../VHDL/tower_arch.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd                 ;
+; ../VHDL/tower.vhd                                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd                      ;
+; ../VHDL/params.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd                     ;
+; ../VHDL/mux5_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd                  ;
+; ../VHDL/mux5.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd                       ;
+; ../VHDL/interface_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_arch.vhd             ;
+; ../VHDL/interface.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface.vhd                  ;
+; ../VHDL/demux8_inv_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd            ;
+; ../VHDL/demux8_inv.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd                 ;
+; ../VHDL/demux5_arch.vhd                            ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd                ;
+; ../VHDL/demux5.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd                     ;
+; ../VHDL/demux4_inv_arch.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd            ;
+; ../VHDL/demux4_inv.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd                 ;
+; ../VHDL/dec8_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd                  ;
+; ../VHDL/dec8.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd                       ;
+; ../VHDL/bit4.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4.vhd                       ;
+; ../VHDL/bit4-bit4_behav.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4-bit4_behav.vhd            ;
+; /data/public/common/software/opprog/vhdl/cells.vhd ; yes             ; User VHDL File                     ; /data/public/common/software/opprog/vhdl/cells.vhd                          ;
+; top_de2.bdf                                        ; yes             ; User Block Diagram/Schematic File  ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/top_de2.bdf             ;
+; pre_vga_dac.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/pre_vga_dac.vhd         ;
+; gen6mhz.vhd                                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/gen6mhz.vhd             ;
++----------------------------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------+
@@ -220,350 +216,220 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 331                    ;
+; Estimated Total logic elements              ; 61                     ;
 ;                                             ;                        ;
-; Total combinational functions               ; 316                    ;
+; Total combinational functions               ; 54                     ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 137                    ;
-;     -- 3 input functions                    ; 101                    ;
-;     -- <=2 input functions                  ; 78                     ;
+;     -- 4 input functions                    ; 22                     ;
+;     -- 3 input functions                    ; 9                      ;
+;     -- <=2 input functions                  ; 23                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 268                    ;
-;     -- arithmetic mode                      ; 48                     ;
+;     -- normal mode                          ; 38                     ;
+;     -- arithmetic mode                      ; 16                     ;
 ;                                             ;                        ;
-; Total registers                             ; 157                    ;
-;     -- Dedicated logic registers            ; 157                    ;
+; Total registers                             ; 34                     ;
+;     -- Dedicated logic registers            ; 34                     ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
 ; I/O pins                                    ; 37                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
-; Maximum fan-out                             ; 156                    ;
-; Total fan-out                               ; 1604                   ;
-; Average fan-out                             ; 3.15                   ;
+; Maximum fan-out                             ; 33                     ;
+; Total fan-out                               ; 300                    ;
+; Average fan-out                             ; 2.40                   ;
 +---------------------------------------------+------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
-+-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
-+-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |top_de2                                              ; 316 (1)           ; 157 (0)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                                                                                ;              ;
-;    |depiece_simple:inst5|                             ; 17 (17)           ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                                                                           ;              ;
-;    |gen6mhz:inst1|                                    ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                                                                                  ;              ;
-;    |sr_if:inst2|                                      ; 162 (0)           ; 65 (1)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2                                                                                    ;              ;
-;       |mux5:mux5_do2|                                 ; 3 (3)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
-;       |sr_tower:\generate_tower:0:tower_mod|          ; 49 (4)            ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
-;          |bit4:\generate_bit4:0:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:1:bit4_mod|             ; 10 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
-;             |no210:no210_3|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_3  ;              ;
-;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_4  ;              ;
-;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_5  ;              ;
-;          |bit4:\generate_bit4:2:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:3:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:4:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:5:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:6:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:7:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
-;       |sr_tower:\generate_tower:4:tower_mod|          ; 110 (33)          ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod                                               ;              ;
-;          |bit4:\generate_bit4:0:bit4_mod|             ; 14 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13 ;              ;
-;             |no210:no210_2|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_2  ;              ;
-;             |no210:no210_3|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_3  ;              ;
-;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_4  ;              ;
-;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_5  ;              ;
-;          |bit4:\generate_bit4:1:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:2:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:3:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:4:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:5:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:6:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:7:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod                ;              ;
-;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0  ;              ;
-;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6  ;              ;
-;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7  ;              ;
-;             |dfr11:dfr11_8|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8  ;              ;
-;             |mu111:mu111_10|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_10 ;              ;
-;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_11 ;              ;
-;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_1  ;              ;
-;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
-;          |demux8_inv:demux8_inv_we_com|               ; 11 (11)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux8_inv:demux8_inv_we_com                  ;              ;
-;    |vga:inst3|                                        ; 133 (6)           ; 84 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                                                                                      ;              ;
-;       |vga_counter:counter|                           ; 31 (31)           ; 18 (18)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter                                                                  ;              ;
-;       |vga_field_check:field_check|                   ; 6 (6)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_check:field_check                                                          ;              ;
-;       |vga_field_trans:field_translation|             ; 14 (14)           ; 11 (11)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_trans:field_translation                                                    ;              ;
-;       |vga_field_trans_reset:field_translation_reset| ; 14 (14)           ; 10 (10)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset                                        ;              ;
-;       |vga_np_check:np_check|                         ; 6 (6)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_np_check:np_check                                                                ;              ;
-;       |vga_np_trans:np_translation|                   ; 10 (10)           ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_np_trans:np_translation                                                          ;              ;
-;       |vga_np_trans_reset:np_translation_reset|       ; 12 (12)           ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset                                              ;              ;
-;       |vga_read:read_and_output|                      ; 2 (2)             ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_read:read_and_output                                                             ;              ;
-;       |vga_score_check:score_check|                   ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_score_check:score_check                                                          ;              ;
-;       |vga_score_trans:score_translation|             ; 13 (13)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_score_trans:score_translation                                                    ;              ;
-;       |vga_sync:sync|                                 ; 6 (6)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_sync:sync                                                                        ;              ;
-;       |vga_triggers:triggers|                         ; 8 (8)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_triggers:triggers                                                                ;              ;
-+-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
++-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; |top_de2                            ; 54 (0)            ; 34 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
+;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
+;    |vga:inst3|                      ; 51 (0)            ; 31 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                             ;              ;
+;       |vga_counter:counter|         ; 32 (32)           ; 18 (18)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter         ;              ;
+;       |vga_field_check:field_check| ; 4 (4)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_check:field_check ;              ;
+;       |vga_np_check:np_check|       ; 5 (5)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_np_check:np_check       ;              ;
+;       |vga_read:read_and_output|    ; 1 (1)             ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_read:read_and_output    ;              ;
+;       |vga_score_check:score_check| ; 4 (4)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_score_check:score_check ;              ;
+;       |vga_sync:sync|               ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_sync:sync               ;              ;
++-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                    ;
-+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                       ; Reason for Removal                                                                                              ;
-+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[0..1]                              ; Stuck at GND due to stuck port data_in                                                                          ;
-; vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[0..2]                        ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Merged with sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ;
-; vga:inst3|vga_read:read_and_output|green_out                                                        ; Merged with vga:inst3|vga_read:read_and_output|red_out                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                                                                          ;
-; vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]                                             ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[7]                                       ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[7]                                 ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]                                       ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_np_trans:np_translation|mem_addr_state[6]                                             ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]                                       ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_np_trans:np_translation|mem_addr_state[5]                                             ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]                                       ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5..6]                              ; Lost fanout                                                                                                     ;
-; Total Number of Removed Registers = 112                                                             ;                                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                               ;
-+---------------------------------------------------------------+--------------------+----------------------------------------------------------------------+
-; Register name                                                 ; Reason for Removal ; Registers Removed due to This Register                               ;
-+---------------------------------------------------------------+--------------------+----------------------------------------------------------------------+
-; vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]       ; Lost Fanouts       ; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[7], ;
-;                                                               ;                    ; vga:inst3|vga_np_trans:np_translation|mem_addr_state[6],             ;
-;                                                               ;                    ; vga:inst3|vga_np_trans:np_translation|mem_addr_state[5],             ;
-;                                                               ;                    ; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[6], ;
-;                                                               ;                    ; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]  ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[7] ; Lost Fanouts       ; vga:inst3|vga_score_trans:score_translation|mem_addr_state[6],       ;
-;                                                               ;                    ; vga:inst3|vga_score_trans:score_translation|mem_addr_state[5],       ;
-;                                                               ;                    ; vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]        ;
-+---------------------------------------------------------------+--------------------+----------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                           ;
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; Register name                                                                                       ; Reason for Removal                                     ;
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[0..1]                              ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[0..2]                        ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst3|vga_read:read_and_output|green_out                                                        ; Merged with vga:inst3|vga_read:read_and_output|red_out ;
+; sr_if:inst2|do2                                                                                     ; Stuck at GND due to stuck port data_in                 ;
+; vga:inst3|vga_read:read_and_output|blue_out                                                         ; Merged with vga:inst3|vga_read:read_and_output|red_out ;
+; Total Number of Removed Registers = 168                                                             ;                                                        ;
++-----------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -571,35 +437,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 157   ;
-; Number of registers using Synchronous Clear  ; 91    ;
-; Number of registers using Synchronous Load   ; 13    ;
-; Number of registers using Asynchronous Clear ; 90    ;
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 31    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[0]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[4]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[0]                   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[4]                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|mem_addr_state[3]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[5] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|counter_state[2]              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|counter_state[1]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|counter_state[4]              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[1]  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[4]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_de2|vga:inst3|mem_addr[0]                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -608,9 +453,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Nov 30 18:09:53 2013
+    Info: Processing started: Tue Dec  3 21:14:31 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
-Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans_arch.vhd
     Info: Found design unit 1: vga_score_trans-vga_score_trans_arch
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans.vhd
@@ -687,10 +532,6 @@ Info: Found 1 design units, including 0 entities, in source file /home/epo3-user
     Info: Found design unit 1: sr_if-sr_if_behav
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/interface.vhd
     Info: Found entity 1: sr_if
-Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple.vhd
-    Info: Found entity 1: depiece_simple
-Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/depiece_simple-depiece_simple_arch.vhd
-    Info: Found design unit 1: depiece_simple-depiece_simple_arch
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd
     Info: Found design unit 1: demux8_inv-demux8_inv_behav
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd
@@ -806,9 +647,6 @@ Info: Elaborating entity "dec8" for hierarchy "sr_if:inst2|sr_tower:\generate_to
 Info: Elaborating entity "demux4_inv" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i"
 Info: Elaborating entity "mux5" for hierarchy "sr_if:inst2|mux5:mux5_do1"
 Info: Elaborating entity "demux5" for hierarchy "sr_if:inst2|demux5:demux5_we"
-Info: Elaborating entity "depiece_simple" for hierarchy "depiece_simple:inst5"
-Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(9): used implicit default value for signal "mask_select" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at depiece_simple.vhd(12): used implicit default value for signal "ready" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|do2" into a selector
     Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|do2" into a selector
@@ -818,26 +656,15 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
-Info: 10 registers lost all their fanouts during netlist optimizations. The first 10 are displayed below.
-    Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 368 device resources after synthesis - the final resource count might be different
+Info: Implemented 98 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 331 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 269 megabytes
-    Info: Processing ended: Sat Nov 30 18:10:02 2013
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Implemented 61 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 268 megabytes
+    Info: Processing ended: Tue Dec  3 21:14:37 2013
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 

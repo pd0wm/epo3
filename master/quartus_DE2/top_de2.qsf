@@ -127,8 +127,6 @@ set_global_assignment -name VHDL_FILE ../VHDL/mux5.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/interface_tb.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/interface_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/interface.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/depiece_simple.vhd
-set_global_assignment -name VHDL_FILE "../VHDL/depiece_simple-depiece_simple_arch.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/demux8_inv_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/demux8_inv.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/demux5_arch.vhd

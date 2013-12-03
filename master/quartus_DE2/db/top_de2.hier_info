@@ -3,7 +3,6 @@ vga_sync <= pre_vga_dac:inst.vga_sync
 clock_50mhz => gen6mhz:inst1.clk50mhz
 rst => vga:inst3.rst
 rst => sr_if:inst2.rst
-rst => depiece_simple:inst5.rst
 vga_clk <= pre_vga_dac:inst.vga_clk
 vga_blank <= pre_vga_dac:inst.vga_blank
 vga_hsync <= vga:inst3.h_sync
@@ -8319,41 +8318,5 @@ s[2] => Mux0.IN8
 s[2] => Mux1.IN8
 s[2] => Mux2.IN8
 s[2] => Mux3.IN8
-
-
-|top_de2|depiece_simple:inst5
-clk => write_state[0].CLK
-clk => write_state[1].CLK
-clk => write_state[2].CLK
-clk => write_state[3].CLK
-clk => write_state[4].CLK
-rst => write_state[0].ACLR
-rst => write_state[1].ACLR
-rst => write_state[2].ACLR
-rst => write_state[3].ACLR
-rst => write_state[4].ACLR
-mask[0] => ~NO_FANOUT~
-mask[1] => ~NO_FANOUT~
-mask[2] => ~NO_FANOUT~
-mask[3] => ~NO_FANOUT~
-mask[4] => ~NO_FANOUT~
-mask[5] => ~NO_FANOUT~
-mask[6] => ~NO_FANOUT~
-mask[7] => ~NO_FANOUT~
-mask_select[0] <= mask_select[0].DB_MAX_OUTPUT_PORT_TYPE
-mask_select[1] <= mask_select[1].DB_MAX_OUTPUT_PORT_TYPE
-draw_erase => ~NO_FANOUT~
-ready <= comb.DB_MAX_OUTPUT_PORT_TYPE
-start => ~NO_FANOUT~
-write <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-addr[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
-addr[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
-addr[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
-addr[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-addr[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-addr[5] <= <GND>
-addr[6] <= <GND>
-addr[7] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-data_out <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
 
 

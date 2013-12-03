@@ -7,16 +7,17 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work check_mask_tb_behaviour_cfg 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work testbench_behaviour_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.check_mask_tb_behaviour_cfg#1
-# Loading work.checkmask_tb(check_mask_tb_behaviour)#1
-# Loading work.check_mask_behaviour_cfg#1
-# Loading work.check_mask(check_mask_behaviour)#1
+# Loading work.testbench_behaviour_cfg#1
+# Loading work.testbench(testbench_behaviour)#1
+# Loading work.clearandshift_behaviour_cfg#1
+# Loading work.clearandshift(clearandshift_behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
 run 1000 ns
 run 10000 ns
+run 100000 ns
