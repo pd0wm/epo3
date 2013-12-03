@@ -4,303 +4,306 @@ K3
 cModel Technology
 dLUT
 T_opt
-V<2nZm?j>@Y683JWIRSADI3
-Z0 04 26 0 work piece_lut_tb_behaviour_cfg 1
-=1-5cf9dd6deb1d-529db7eb-41f19-161e
-Z1 o-quiet -auto_acc_if_foreign -work work
+Vz;QJnDTSlLZQ3f;H=zD<93
+04 26 0 work piece_lut_tb_behaviour_cfg 1
+=1-5cf9dd6deb1d-529dbcef-98746-2544
+Z0 o-quiet -auto_acc_if_foreign -work work
 n@_opt
-Z2 OE;O;10.1b;51
+Z1 OE;O;10.1b;51
 dLUT
 T_opt1
-V[`n9;SLA>B=8XLQg4jX2h1
-Z3 04 26 0 work piece_lut_tb_behaviour_cfg 1
-=1-00505622dd1e-5299de72-118e8-15e4
-R1
+V<1_>D`_Q2=LT3ckKk3U>M2
+04 30 0 work piece_lut_tb_behaviour_ext_cfg 1
+=1-5cf9dd6deb1d-529dbcb8-da701-24e0
+Z2 o-quiet -auto_acc_if_foreign -work work
 n@_opt1
-R2
+R1
 dLUT
 T_opt2
-VMmJ]ccnJ?1Xz7XkMaji9>0
+V1UUT4gCO4eNobX0fgiVo=2
 04 30 0 work piece_lut_tb_behaviour_syn_cfg 1
-=1-00505622dd1e-5299d774-33754-10bb
-R1
-n@_opt2
+=1-5cf9dd6deb1d-529dbd09-6de54-25c9
 R2
+n@_opt2
+R1
 dLUT
 Epiece_lut
-Z4 w1386068499
-Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
-Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-dLUT
+w1386068499
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/home/tqiu/Desktop/epo3/LUT
 8VHDL/piece_lut.vhd
 FVHDL/piece_lut.vhd
 l0
 L3
 VK0e6`R4?MCiiDhDAKhCN:0
-Z7 OE;C;10.1b;51
+Z6 OE;C;10.1b;51
 32
-Z8 o-lower -explicit -work work -quiet -nologo
-Z9 tExplicit 1
+Z7 o-lower -explicit -work work -quiet -nologo
+Z8 tExplicit 1
 !s100 QzA]C1[i@W10a?bWIeOzY1
 !i10b 1
-!s108 1386068499.820038
+!s108 1386069742.147785
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut.vhd|
-Apiece_lut_behaviour
-Z10 DEx4 work 9 piece_lut 0 22 K0e6`R4?MCiiDhDAKhCN:0
-Z11 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-R5
+Asynthesised
+w1386069628
+Z9 DEx4 work 9 piece_lut 0 22 K0e6`R4?MCiiDhDAKhCN:0
+Z10 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
+R3
+R4
+8VHDL/piece_lut_SYNTH.vhd
+FVHDL/piece_lut_SYNTH.vhd
+l44
+L7
+VM5CRDTRTXl3aO`@ZM>^_j1
 R6
+32
+R7
+R8
+!s100 gVCeMRMCWB?3XBLFYVl`O0
+!s90 -lower|-explicit|-work|work|VHDL/piece_lut_SYNTH.vhd|-quiet|-nologo|
+!i10b 1
+!s108 1386069742.941728
+!s107 VHDL/piece_lut_SYNTH.vhd|
+Aextracted
+w1386069163
+R9
+R10
+R3
+R4
+8VHDL/piece_lut_EXTR.vhd
+FVHDL/piece_lut_EXTR.vhd
+l61
+L13
+V>?dVXon23o3OkHh[GMQ^^0
+R6
+32
+R7
+R8
+dLUT
+!s100 QL3@zhP7bFN`R`Z9DMV_[1
+!s90 -lower|-explicit|-work|work|VHDL/piece_lut_EXTR.vhd|-quiet|-nologo|
+!i10b 1
+!s108 1386069168.598817
+!s107 VHDL/piece_lut_EXTR.vhd|
+Apiece_lut_behaviour
+w1386069051
+R9
+Z11 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R3
+R4
 8VHDL/piece_lut-behaviour.vhd
 FVHDL/piece_lut-behaviour.vhd
 l13
 L5
-VZDLcFQd>`cOISDaFi9?NP0
-R7
+V?=<1zW<`8i443;;PCnaS21
+R6
 32
+R7
 R8
-R9
+dLUT
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut-behaviour.vhd|-quiet|-nologo|
-!s100 bmhVEB8N3XnY_mMnlKh9X2
+!s100 e[b8Sz4l]NQAm?Kco:1ob0
 !i10b 1
-!s108 1386068511.853317
+!s108 1386069056.528567
 !s107 VHDL/piece_lut-behaviour.vhd|
-Aextracted
-w1385814809
-Z12 DEx4 work 9 piece_lut 0 22 ^:cJZRM0acMzC^]0R]=^R1
-Z13 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
-R5
-R6
-8VHDL/piece_lut_EXTR.vhd
-FVHDL/piece_lut_EXTR.vhd
-l62
-L13
-VN3`D[2C24_dX6NmBc0Ond2
-R7
-32
-R8
-R9
-!s90 -lower|-explicit|-work|work|VHDL/piece_lut_EXTR.vhd|-quiet|-nologo|
-!s100 T>Im9^g8Z4HU@Q>Qa@RT<1
-!i10b 1
-!s108 1385814820.411093
-!s107 VHDL/piece_lut_EXTR.vhd|
-Asynthesised
-R12
-R13
-R5
-R6
-8VHDL/piece_lut_SYNTH.vhd
-FVHDL/piece_lut_SYNTH.vhd
-l45
-L7
-V:R^aj=OfnU6ODP]`bBa^^2
-R7
-32
-R8
-R9
-w1386062782
-!s100 ZF@Xc7D8^E89dZJ<5SFbk2
-!s90 -lower|-explicit|-work|work|VHDL/piece_lut_SYNTH.vhd|-quiet|-nologo|
-!i10b 1
-!s108 1385814657.981421
-!s107 VHDL/piece_lut_SYNTH.vhd|
 Cpiece_lut_behaviour_cfg
 apiece_lut_behaviour
-Z14 epiece_lut
+Z12 epiece_lut
 R11
-DAx4 work 9 piece_lut 19 piece_lut_behaviour 22 ZDLcFQd>`cOISDaFi9?NP0
-R5
-R6
-R10
+DAx4 work 9 piece_lut 19 piece_lut_behaviour 22 ?=<1zW<`8i443;;PCnaS21
+R3
+R4
+R9
 w1385723499
-Z15 d/home/tqiu/Desktop/epo3/LUT
+dLUT
 8VHDL/piece_lut_behaviour_cfg.vhd
 FVHDL/piece_lut_behaviour_cfg.vhd
 l0
 L1
 VbN8jTV^3VH_PXSMl6OHMj0
-R7
+R6
 32
+R7
 R8
-R9
 !s100 ?D?3mR5IT7i_JAifL4U7`3
 !i10b 0
-!s108 1386068514.819333
+!s108 1386069057.740140
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_behaviour_cfg.vhd|
 Cpiece_lut_extracted_cfg
 aextracted
-R14
-Z16 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
-Z17 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
-Z18 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
-Z19 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
-Z20 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
-Z21 DEx8 cellslib 5 no310 0 22 5C0Y^_:?0B6SKY[lPJEV>1
-Z22 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
-R13
-DAx4 work 9 piece_lut 9 extracted 22 N3`D[2C24_dX6NmBc0Ond2
-R5
-R6
 R12
-Z23 w1385811693
+Z13 DEx8 cellslib 5 mu111 0 22 hknW;QzWV8Je@9eJh_5o`3
+Z14 DEx8 cellslib 5 no210 0 22 ]lRe4fhV8=dVn]MWXCKmY1
+Z15 DEx8 cellslib 5 dfr11 0 22 8RHM1UV5ZACIokFFneMOO0
+Z16 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
+Z17 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
+Z18 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
+Z19 DEx8 cellslib 5 ex210 0 22 jfbZcVZ_zElhH?3Ngm^Z<3
+R10
+DAx4 work 9 piece_lut 9 extracted 22 >?dVXon23o3OkHh[GMQ^^0
+R3
+R4
+R9
+w1385723739
 dLUT
 8VHDL/piece_lut_extracted_cfg.vhd
 FVHDL/piece_lut_extracted_cfg.vhd
 l0
 L1
-VZb[b6;XmT40c`E4jb6bHZ0
-R7
+VNX01I=kHiU3NzI];m8[BI0
+R6
 32
-Z24 o-2002 -lower -explicit -work work -quiet -nologo
-R9
+R7
+R8
 !s100 YF`;3^SJ<;8cY@GB;bEMJ3
 !i10b 0
-!s108 1385814828.825033
-!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/piece_lut_extracted_cfg.vhd|
+!s108 1386069169.485112
+!s90 -lower|-explicit|-work|work|VHDL/piece_lut_extracted_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_extracted_cfg.vhd|
 Cpiece_lut_synthesised_cfg
 asynthesised
+R12
 R14
-R21
 R17
-R22
 R19
-R18
-R20
 R16
 R13
-DAx4 work 9 piece_lut 11 synthesised 22 :R^aj=OfnU6ODP]`bBa^^2
+R18
+R15
+R10
+DAx4 work 9 piece_lut 11 synthesised 22 M5CRDTRTXl3aO`@ZM>^_j1
+R3
+R4
+R9
+w1385723623
 R5
-R6
-R12
-R23
-dLUT
 8VHDL/piece_lut_synthesised_cfg.vhd
 FVHDL/piece_lut_synthesised_cfg.vhd
 l0
 L1
 VimID4gOZec:jQBc;4mGVZ3
-R7
+R6
 32
+R7
 R8
-R9
 !s100 QVbnj?O56O7L@goT6k[=]3
 !i10b 0
-!s108 1385814831.989419
+!s108 1386069743.889399
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_synthesised_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_synthesised_cfg.vhd|
 Epiece_lut_tb
 w1386058429
+R3
+R4
 R5
-R6
-R15
 8VHDL/piece_lut_tb.vhd
 FVHDL/piece_lut_tb.vhd
 l0
 L4
 VIA`UY244LV[TZYMJOhCJC2
-R7
+R6
 32
+R7
 R8
-R9
 !s100 W09S0^i4Sfl5Q]:H6b=oi2
 !i10b 1
-!s108 1386068516.530591
+!s108 1386069745.100680
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb.vhd|
 Apiece_lut_tb_behaviour
 w1386068508
-Z25 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
-R5
-R6
+Z20 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
+R3
+R4
 8VHDL/piece_lut_tb-behaviour.vhd
 FVHDL/piece_lut_tb-behaviour.vhd
 l31
 L4
 V7Cim;_cOIlY:K5mF[WQ611
-!s100 Ic5He[j5MFi@6SG53?ACV0
-R7
+R6
 32
-!s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb-behaviour.vhd|-quiet|-nologo|
+R7
 R8
-R9
+!s100 Ic5He[j5MFi@6SG53?ACV0
+!s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb-behaviour.vhd|-quiet|-nologo|
 !i10b 1
-!s108 1386068517.611529
+!s108 1386069746.215042
 !s107 VHDL/piece_lut_tb-behaviour.vhd|
 Cpiece_lut_tb_behaviour_cfg
-Z26 apiece_lut_tb_behaviour
-Z27 epiece_lut_tb
-R10
+Z21 apiece_lut_tb_behaviour
+Z22 epiece_lut_tb
+R9
 DCx4 work 23 piece_lut_behaviour_cfg 0 22 bN8jTV^3VH_PXSMl6OHMj0
-DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 7Cim;_cOIlY:K5mF[WQ611
-R5
-R6
-R25
+Z23 DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 7Cim;_cOIlY:K5mF[WQ611
+R3
+R4
+R20
 w1385723574
-R15
+R5
 8VHDL/piece_lut_tb_behaviour_cfg.vhd
 FVHDL/piece_lut_tb_behaviour_cfg.vhd
 l0
 L1
 VmGaHS=ZiiZ00Jb=eA;Ye[2
-!s100 IE@;D@1=mEMSSMeBDmE7j2
-R7
+R6
 32
+R7
+R8
+!s100 IE@;D@1=mEMSSMeBDmE7j2
 !i10b 0
-!s108 1386068518.637917
+!s108 1386069747.620073
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_cfg.vhd|
-R8
-R9
 Cpiece_lut_tb_behaviour_ext_cfg
-R26
-R27
-R12
+R21
+R22
+R9
 DCx4 work 23 piece_lut_extracted_cfg 0 22 NX01I=kHiU3NzI];m8[BI0
-Z28 DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 b=_anM6ECn@C7<LQR=j681
-R5
-R6
-R25
 R23
-dLUT
+R3
+R4
+R20
+w1385723750
+R5
 8VHDL/piece_lut_tb_behaviour_ext_cfg.vhd
 FVHDL/piece_lut_tb_behaviour_ext_cfg.vhd
 l0
 L1
 VdbFM2KiWFc^BNgLIXeeYT1
-R7
+R6
 32
+R7
 R8
-R9
 !s100 mK=nPAISPGIP[3WA@JE660
 !i10b 0
-!s108 1385814237.963696
+!s108 1386069748.458112
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_ext_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_ext_cfg.vhd|
 Cpiece_lut_tb_behaviour_syn_cfg
-R26
-R27
-R12
-DCx4 work 25 piece_lut_synthesised_cfg 0 22 lCE1[RF76_KnRRzSk1`4G1
-R28
-R5
-R6
-R25
+R21
+R22
+R9
+DCx4 work 25 piece_lut_synthesised_cfg 0 22 imID4gOZec:jQBc;4mGVZ3
 R23
-dLUT
+R3
+R4
+R20
+w1385723641
+R5
 8VHDL/piece_lut_tb_behaviour_syn_cfg.vhd
 FVHDL/piece_lut_tb_behaviour_syn_cfg.vhd
 l0
 L1
-Vmn=gaOk<OdVNOg2:7<cSC2
-R7
-32
-R24
-R9
+V@jTXZ2ReIFOe8_]BF7W>U0
 !s100 S;VdTbcSZeGRTCbN_9fNW2
+R6
+32
 !i10b 0
-!s108 1385814828.206275
-!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/piece_lut_tb_behaviour_syn_cfg.vhd|
+!s108 1386069750.398550
+!s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_syn_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_syn_cfg.vhd|
+R7
+R8
