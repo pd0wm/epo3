@@ -1,5 +1,5 @@
 This is the file 'seadif/trout.error' which was created by
-the program 'trout' on Tue Dec  3 10:31:49 2013
+the program 'trout' on Tue Dec  3 11:54:53 2013
 Trout was verifying the netlist description of
 your circuit circuit 'log_score' with the current layout in seadali.
 The following nets in the layout are not according to
@@ -8,9 +8,9 @@ marked in the layout.
 ------------------------- list of errors -------------------------
 ##### suspected short-circuit no. 1:
   > net 'output_7_0_7' (1 terms, e.g. terminal  'log_out_7_0_7')
-  > net 'score_to_log_7_port' (2 terms, e.g. terminal 'log_in_7_0_7')
+  > net 'score_to_log_7_port' (2 terms, e.g. terminal 'output_7_0_7')
 
-WARNING: 1 short-circuit(s) were detected among the 24 nets.
+WARNING: 1 short-circuit(s) were detected among the 21 nets.
          These nets were separatedly specified in the circuit
          but are connected in the layout.  This may occur because of
          feed-throughs in sub-cells and it doesn't necessarily

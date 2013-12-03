@@ -24,7 +24,7 @@ L1: process (clk)
      end if;
     end process;
 
-L2: process (increase_value,increase,score)
+L2: process (clk,rst,increase_value,increase,score)
     begin
 	if increase = '1' and uns_incval > 0 then
 	 next_score <= score + uns_incval;
@@ -33,6 +33,9 @@ L2: process (increase_value,increase,score)
 	end if;
 end process;
 end behaviour;
+
+
+
 
 
 

@@ -7,7 +7,7 @@ component log_score is
 		clk            : in  std_logic;
 		rst            : in  std_logic;
 
-		increase_value : in  std_logic_vector(2 downto 0);
+		
 		increase       : in  std_logic;
 
 		output         : out std_logic_vector(7 downto 0)
@@ -15,47 +15,46 @@ component log_score is
 end component;
  
  signal clk,rst,increase: std_logic;
- signal increase_value: std_logic_vector(2 downto 0);
  signal output: std_logic_vector ( 7 downto 0);
  
  begin
    
    L1: log_score port map  ( clk => clk, rst => rst, 
-        increase_value => increase_value, increase => increase,output => output); 
+        increase => increase,output => output); 
  L2: process 
  begin
   clk <= '1';
-  wait for 1 us;
+  wait for 85 ns;
   clk <= '0';
-  wait for 1 us;
+  wait for 85 ns;
 end process;
  
  L3: process 
  begin
- wait for 0 us;
- increase_value <= "000";
-   wait for 4 us;
+ wait for 0 ns;
+ increase <= '0';
+   wait for 90 ns;
  rst <= '1';
- wait for 4 us;
+ wait for 90 ns;
  rst <= '0';
- wait for 2200 ns;
+ wait for 90 ns;
 
  increase <= '1';
- wait for 2 us;
+ wait for  900 ns;
  increase <= '0';
- wait for 40 us;
- increase_value <= "001" ;
- increase <= '1';
- wait for 2 us;
- increase <= '0';
-wait for 20 us;
- increase <= '1' ;
- increase_value <= "111";
+ wait for 100 ns;
 
+ increase <= '1';
+ wait for 100 ns;
+ increase <= '0';
  wait;
- 
+
+
  end process; 
 end behaviour;
+
+
+
 
 
 

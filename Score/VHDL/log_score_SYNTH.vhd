@@ -12,8 +12,7 @@ architecture synthesised of log_score is
    end component;
    
    component score
-      port( clk, rst : in std_logic;  increase_value : in std_logic_vector (2 
-            downto 0);  increase : in std_logic;  output : out std_logic_vector
+      port( clk, rst, increase : in std_logic;  output : out std_logic_vector 
             (7 downto 0));
    end component;
    
@@ -23,10 +22,7 @@ architecture synthesised of log_score is
 
 begin
    
-   L1 : score port map( clk => clk, rst => rst, increase_value(2) => 
-                           increase_value(2), increase_value(1) => 
-                           increase_value(1), increase_value(0) => 
-                           increase_value(0), increase => increase, output(7) 
+   L1 : score port map( clk => clk, rst => rst, increase => increase, output(7)
                            => score_to_log_7_port, output(6) => 
                            score_to_log_6_port, output(5) => 
                            score_to_log_5_port, output(4) => 
