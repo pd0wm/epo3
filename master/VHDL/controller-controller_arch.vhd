@@ -110,7 +110,7 @@ begin
 
 	end process;
 
-	process(cur_state, check_empty, check_ready, draw_erase_ready, clear_shift_ready, draw_score_ready, timer_1_done, inputs)
+	process(cur_state, check_empty, check_ready, draw_erase_ready, clear_shift_ready, draw_score_ready, timer_1_done, inputs, cur_piece, cur_x, cur_x_new, cur_y, cur_y_new, cur_rot, cur_rot_new, cur_state, cur_lut_x, cur_lut_y, cur_lut_rot, cur_lut_piece_type, cur_new_piece, cur_check_start, cur_draw_erase_draw, cur_draw_erase_start, cur_clear_shift_start, cur_draw_score_draw, cur_timer_1_time, cur_timer_1_start, cur_timer_1_reset, cur_timer_2_time, cur_timer_2_start, cur_timer_2_reset)
 	begin
 		case cur_state is
 			when reset =>
