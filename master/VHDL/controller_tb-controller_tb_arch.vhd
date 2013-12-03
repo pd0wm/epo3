@@ -7,13 +7,11 @@ architecture controller_tb_arch of controller_tb is
 	component controller
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
-			 lut_x             : out std_logic_vector(2 downto 0);
-			 lut_y             : out std_logic_vector(3 downto 0);
+			 lut_x             : out std_logic_vector(3 downto 0);
+			 lut_y             : out std_logic_vector(4 downto 0);
 			 lut_rot           : out std_logic_vector(1 downto 0);
 			 lut_piece_type    : out std_logic_vector(2 downto 0);
-			 lut_ready         : in  std_logic;
-			 lut_error         : in  std_logic;
-			 lut_start         : out std_logic;
+			 lut_next_piece    : out std_logic;
 			 new_piece         : out std_logic;
 			 next_piece        : in  std_logic_vector(2 downto 0);
 			 check_empty       : in  std_logic;
@@ -28,23 +26,22 @@ architecture controller_tb_arch of controller_tb is
 			 draw_score_ready  : in  std_logic;
 			 timer_1_time      : out std_logic_vector(7 downto 0);
 			 timer_1_start     : out std_logic;
-			 timer_1_reset     : out std_logic;
 			 timer_1_done      : in  std_logic;
+			 timer_1_reset     : out std_logic;
 			 timer_2_time      : out std_logic_vector(7 downto 0);
 			 timer_2_start     : out std_logic;
-			 timer_2_reset     : out std_logic;
 			 timer_2_done      : in  std_logic;
+			 timer_2_reset     : out std_logic;
 			 inputs            : in  std_logic_vector(7 downto 0));
 	end component controller;
 
-	signal clk, rst          : std_logic;
-	signal lut_x             : std_logic_vector(2 downto 0);
-	signal lut_y             : std_logic_vector(3 downto 0);
+	signal clk               : std_logic;
+	signal rst               : std_logic;
+	signal lut_x             : std_logic_vector(3 downto 0);
+	signal lut_y             : std_logic_vector(4 downto 0);
 	signal lut_rot           : std_logic_vector(1 downto 0);
 	signal lut_piece_type    : std_logic_vector(2 downto 0);
-	signal lut_ready         : std_logic;
-	signal lut_error         : std_logic;
-	signal lut_start         : std_logic;
+	signal lut_next_piece    : std_logic;
 	signal new_piece         : std_logic;
 	signal next_piece        : std_logic_vector(2 downto 0);
 	signal check_empty       : std_logic;
@@ -59,48 +56,58 @@ architecture controller_tb_arch of controller_tb is
 	signal draw_score_ready  : std_logic;
 	signal timer_1_time      : std_logic_vector(7 downto 0);
 	signal timer_1_start     : std_logic;
-	signal timer_1_reset     : std_logic;
 	signal timer_1_done      : std_logic;
+	signal timer_1_reset     : std_logic;
 	signal timer_2_time      : std_logic_vector(7 downto 0);
 	signal timer_2_start     : std_logic;
-	signal timer_2_reset     : std_logic;
 	signal timer_2_done      : std_logic;
+	signal timer_2_reset     : std_logic;
 	signal inputs            : std_logic_vector(7 downto 0);
 
 begin
 	dut : controller port map(
-		clk               => clk,
-		rst               => rst,
-		lut_x             => lut_x,
-		lut_y             => lut_y,
-		lut_rot           => lut_rot,
-		lut_piece_type    => lut_piece_type,
-		lut_ready         => lut_ready,
-		lut_error         => lut_error,
-		lut_start         => lut_start,
-		new_piece         => new_piece,
-		next_piece        => next_piece,
-		check_empty       => check_empty,
-		check_start       => check_start,
-		check_ready       => check_ready,
-		draw_erase_draw   => draw_erase_draw,
-		draw_erase_start  => draw_erase_start,
-		draw_erase_ready  => draw_erase_ready,
-		clear_shift_start => clear_shift_start,
-		clear_shift_ready => clear_shift_ready,
-		draw_score_draw   => draw_score_draw,
-		draw_score_ready  => draw_score_ready,
-		timer_1_time      => timer_1_time,
-		timer_1_start     => timer_1_start,
-		timer_1_reset     => timer_1_reset,
-		timer_1_done      => timer_1_done,
-		timer_2_time      => timer_2_time,
-		timer_2_start     => timer_2_start,
-		timer_2_reset     => timer_2_reset,
-		timer_2_done      => timer_2_done,
-		inputs            => inputs
-	);
-	
+			clk               => clk,
+			rst               => rst,
+			lut_x             => lut_x,
+			lut_y             => lut_y,
+			lut_rot           => lut_rot,
+			lut_piece_type    => lut_piece_type,
+			lut_next_piece    => lut_next_piece,
+			new_piece         => new_piece,
+			next_piece        => next_piece,
+			check_empty       => check_empty,
+			check_start       => check_start,
+			check_ready       => check_ready,
+			draw_erase_draw   => draw_erase_draw,
+			draw_erase_start  => draw_erase_start,
+			draw_erase_ready  => draw_erase_ready,
+			clear_shift_start => clear_shift_start,
+			clear_shift_ready => clear_shift_ready,
+			draw_score_draw   => draw_score_draw,
+			draw_score_ready  => draw_score_ready,
+			timer_1_time      => timer_1_time,
+			timer_1_start     => timer_1_start,
+			timer_1_done      => timer_1_done,
+			timer_1_reset     => timer_1_reset,
+			timer_2_time      => timer_2_time,
+			timer_2_start     => timer_2_start,
+			timer_2_done      => timer_2_done,
+			timer_2_reset     => timer_2_reset,
+			inputs            => inputs
+		);
+		
+	check_mask : process
+	begin
+		if (check_start = '1') then
+			wait for 100 ns;
+			check_ready <= '1';
+			check_empty <= '1';
+		else
+			check_empty <= '0';
+			check_ready <= '0';
+		end if;
+	end process;
+
 	clock : process
 	begin
 		clk <= '1';
