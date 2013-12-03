@@ -159,6 +159,12 @@ WORK__dec8_dec8_behav_cfg = $(LIB_WORK)/dec8_dec8_behav_cfg/_primary.dat
 WORK__dec8__synthesised = $(LIB_WORK)/dec8/synthesised.dat
 WORK__dec8__dec8_behav = $(LIB_WORK)/dec8/dec8_behav.dat
 WORK__dec8 = $(LIB_WORK)/dec8/_primary.dat
+WORK__de_piece_testbench__behaviour = $(LIB_WORK)/de_piece_testbench/behaviour.dat
+WORK__de_piece_testbench = $(LIB_WORK)/de_piece_testbench/_primary.dat
+WORK__de_piece_behaviour_cfg = $(LIB_WORK)/de_piece_behaviour_cfg/_primary.dat
+WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
+WORK__de_piece__synthesised = $(LIB_WORK)/de_piece/synthesised.dat
+WORK__de_piece = $(LIB_WORK)/de_piece/_primary.dat
 WORK__controller_tb_controller_tb_arch_cfg = $(LIB_WORK)/controller_tb_controller_tb_arch_cfg/_primary.dat
 WORK__controller_tb__controller_tb_arch = $(LIB_WORK)/controller_tb/controller_tb_arch.dat
 WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
@@ -324,6 +330,12 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__dec8__synthesised) \
     $(WORK__dec8__dec8_behav) \
     $(WORK__dec8) \
+    $(WORK__de_piece_testbench__behaviour) \
+    $(WORK__de_piece_testbench) \
+    $(WORK__de_piece_behaviour_cfg) \
+    $(WORK__de_piece__behaviour) \
+    $(WORK__de_piece__synthesised) \
+    $(WORK__de_piece) \
     $(WORK__controller_tb_controller_tb_arch_cfg) \
     $(WORK__controller_tb__controller_tb_arch) \
     $(WORK__controller_tb) \
@@ -575,6 +587,46 @@ $(WORK__controller_tb_controller_tb_arch_cfg) : VHDL/controller_tb_controller_tb
 		$(WORK__controller_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_tb_controller_tb_arch_cfg.vhd
+
+$(WORK__de_piece) : VHDL/de_piece.vhd \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece.vhd
+
+$(WORK__de_piece__synthesised) : VHDL/de_piece_SYNTH.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__de_piece) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece_SYNTH.vhd
+
+$(WORK__de_piece__behaviour) : VHDL/de_piece-behaviour.vhd \
+		$(WORK__de_piece) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece-behaviour.vhd
+
+$(WORK__de_piece_behaviour_cfg) : VHDL/de_piece_behaviour_cfg.vhd \
+		$(WORK__de_piece__behaviour) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__de_piece)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece_behaviour_cfg.vhd
+
+$(WORK__de_piece_testbench) \
+$(WORK__de_piece_testbench__behaviour) : VHDL/de_piece_tb-behaviour.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece_tb-behaviour.vhd
 
 $(WORK__dec8) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd \
 		$(STD__textio) \
