@@ -12,6 +12,7 @@ architecture piece_lut_behaviour of piece_lut is
 	signal new_ready, cur_ready       : std_logic;
 	signal cur_mask, new_mask         : std_logic_vector(7 downto 0);
 	signal cur_rom_addr, new_rom_addr : std_logic_vector(6 downto 0);
+	signal new_change, cur_change : std_logic;
 
 begin
 	process(clk)
@@ -26,22 +27,26 @@ begin
 				cur_ready    <= new_ready;
 				cur_overflow <= new_overflow;
 				cur_mask     <= new_mask;
-				prev_start   <= check_start or draw_start;
+				cur_change  <= new_change;
+				cur_rom_addr <= new_rom_addr;
+				new_change   <= check_start or draw_start;
 
 			end if;
 
 			overflow <= cur_overflow;
 			mask     <= cur_mask;
 			ready    <= cur_ready;
+			rom_addr <= cur_rom_addr;
+			
 
 		end if;
 	end process;
 
-	process(state, rst, prev_start, check_start, draw_start, rom_data, x, y, rot, piece_type, mask_select, next_piece, prev_start)
+	process(state, rst, cur_x_out, new_x_out, cur_y_out, new_y_out, prev_start, new_overflow, cur_overflow, new_ready, cur_ready, cur_mask, new_mask, cur_rom_addr, new_rom_addr, new_change, cur_change)
 	begin
 		case state is
 			when reset =>
-				if ((check_start or draw_start) = '1' and prev_start = '0') then
+				if ((check_start or draw_start) = '1' and cur_change = '0') then
 					next_state <= calc_rom_addr_1;
 				else
 					next_state <= reset;
@@ -58,7 +63,7 @@ begin
 				new_ready    <= '0';
 				new_overflow <= '0';
 				new_x_out    <= cur_x_out;
-				new_y_out    <= cur_x_out;
+				new_y_out    <= cur_y_out;
 
 				new_ready    <= cur_ready;
 				new_rom_addr <= cur_rom_addr;
@@ -71,14 +76,13 @@ begin
 				new_rom_addr(3 downto 2) <= rot;
 				new_rom_addr(1 downto 0) <= mask_select;
 
-				new_mask(7)          <= next_piece;
-				new_mask(6 downto 3) <= cur_y_out(3 downto 0);
-				new_mask(2 downto 0) <= cur_x_out(2 downto 0);
+				
 
 				new_ready    <= cur_ready;
 				new_overflow <= cur_overflow;
 				new_x_out    <= cur_x_out;
 				new_y_out    <= cur_y_out;
+				new_mask <= cur_mask;
 
 				next_state <= wait_for_rom;
 
@@ -104,16 +108,20 @@ begin
 				next_state <= cord_overflow;
 				
 			when cord_overflow =>
-				if (cur_x_out(3) = 1 or cur_y_out(4) = '1') then
+				if (cur_x_out(3) = '1' or cur_y_out(4) = '1') then
 					new_overflow <= '1';
 				else
 					new_overflow <= '0';
 				end if;
 				
-				new_ready    <= '1';
 				
+
+				new_mask(7)          <= next_piece;
+				new_mask(6 downto 3) <= cur_y_out(3 downto 0);
+				new_mask(2 downto 0) <= cur_x_out(2 downto 0);
+
+				new_ready    <= cur_ready;
 				new_rom_addr <= cur_rom_addr;
-				new_mask     <= cur_mask;
 				new_x_out    <= cur_x_out;
 				new_y_out    <= cur_y_out;
 				
@@ -122,14 +130,15 @@ begin
 
 			when output =>			
 				if ((check_start or draw_start) = '1') then
+					new_ready    <= '1';
 					next_state <= output;
 				else
+					new_ready    <= '0';
 					next_state <= reset;
 				end if;
 			
 				new_rom_addr <= cur_rom_addr;
 				new_mask     <= cur_mask;
-				new_ready    <= cur_ready;
 				new_overflow <= cur_overflow;
 				new_x_out    <= cur_x_out;
 				new_y_out    <= cur_y_out;
@@ -138,6 +147,15 @@ begin
 		end case;
 	end process;
 end piece_lut_behaviour;
+
+
+
+
+
+
+
+
+
 
 
 
