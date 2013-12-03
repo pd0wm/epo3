@@ -1,0 +1,5 @@
+rm -rf /home/rdmiedema/epo3/score/syn_work_bak
+mv -f /home/rdmiedema/epo3/score/syn_work /home/rdmiedema/epo3/score/syn_work_bak
+cp -r /tmp/rdmiedema/epo3/score/syn_work /home/rdmiedema/epo3/score
+cp /tmp/rdmiedema/epo3/score/ADB/log_score.ddc /home/rdmiedema/epo3/score/ADB/log_score.ddc
+cp /tmp/rdmiedema/epo3/score/VHDL/log_score_SYNTH.vhd /home/rdmiedema/epo3/score/VHDL/log_score_SYNTH.vhd

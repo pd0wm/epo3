@@ -1,0 +1,15 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'log_score' ------
+------ circuit 'log_score' is still up-to-date ------
+------ input check seems good enough: calling placer ------
+calling program: madonna -l test -f log_score -c log_score -o Tmp_Cell_ -ex log_score 
+------ madonna successful ------
+------ calling router ------
+calling program: trout -l test -f log_score -c log_score -o Tmp_Cell_ -d Tmp_Cell_ 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmplog_score10999' ------
+calling program: nelsea -rLH -f log_score -c log_score -l Tmp_Cell_ Tmplog_score10999 
+------ sea: task completed ------

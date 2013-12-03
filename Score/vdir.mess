@@ -1,0 +1,570 @@
+Library vendor : Model Technology
+Maximum unnamed designs : 3
+OPTIMIZED DESIGN _opt
+    Version string: @ngCiNFG^KJ95Q_on>D`32
+    Top-level model: work log_extracted_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: score
+OPTIMIZED DESIGN _opt1
+    Version string: UYzBfSjjeRE7:e9e5hz`Z0
+    Top-level model: work log_score_tb_behaviour_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt1
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: score
+OPTIMIZED DESIGN _opt2
+    Version string: YRz;lIoB=lVYPdNnXg=b?0
+    Top-level model: work score_tb_behaviour_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt2
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: score
+ENTITY log
+    Source modified time: Sat Nov 23 19:55:17 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/log.vhd
+    Source file: VHDL/log.vhd
+    Start location: VHDL/log.vhd:4
+    Version string: Ki`KASEjB]Y`a1Hf<9UV63
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Nov 26 10:11:06 2013
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log_SYNTH.vhd
+    Source file: VHDL/log_SYNTH.vhd
+    Start location: VHDL/log_SYNTH.vhd:7
+    Version string: CU8oK=`HSIFie;^;>c1l73
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY extracted
+    Source modified time: Tue Dec  3 10:12:50 2013
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log_EXTR.vhd
+    Source file: VHDL/log_EXTR.vhd
+    Start location: VHDL/log_EXTR.vhd:13
+    Version string: le0?PY`LH>bJ<iFbhLKFW0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Tue Nov 26 10:10:40 2013
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log-behaviour.vhd
+    Source file: VHDL/log-behaviour.vhd
+    Start location: VHDL/log-behaviour.vhd:4
+    Version string: eYXeAZgGdOIG>LGUf]>TD0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+VHDL CONFIGURATION log_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: log
+    Depends on: A work log behaviour eYXeAZgGdOIG>LGUf]>TD0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Source modified time: Sat Nov 23 19:00:58 2013
+    Source directory: /score
+    HDL source file: VHDL/log_behaviour_cfg.vhd
+    Source file: VHDL/log_behaviour_cfg.vhd
+    Start location: VHDL/log_behaviour_cfg.vhd:1
+    Version string: NmRnba_ajQ>TY8fOjFf8K1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_extracted_cfg
+    Configuration for architecture: extracted
+    Configuration for entity: log
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work log extracted le0?PY`LH>bJ<iFbhLKFW0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Source modified time: Tue Nov 26 09:12:43 2013
+    Source directory: /score
+    HDL source file: VHDL/log_extracted_cfg.vhd
+    Source file: VHDL/log_extracted_cfg.vhd
+    Start location: VHDL/log_extracted_cfg.vhd:1
+    Version string: ;dAa^?:CV6YHm];n?jBYY1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY log_score
+    Source modified time: Mon Nov 25 16:09:41 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/log_score.vhd
+    Source file: VHDL/log_score.vhd
+    Start location: VHDL/log_score.vhd:4
+    Version string: AeSc3Aia208CgZ=JOcJ7B1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY extracted
+    Source modified time: Tue Dec  3 10:32:19 2013
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/log_score_EXTR.vhd
+    Source file: VHDL/log_score_EXTR.vhd
+    Start location: VHDL/log_score_EXTR.vhd:13
+    Version string: 2cCO;PS5To4zUWBDTgGoh1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Dec  3 10:28:16 2013
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log_score_SYNTH.vhd
+    Source file: VHDL/log_score_SYNTH.vhd
+    Start location: VHDL/log_score_SYNTH.vhd:7
+    Version string: 3^BQ6g;fl<E9WRmkh47TK1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log_score-behaviour.vhd
+    Source file: VHDL/log_score-behaviour.vhd
+    Start location: VHDL/log_score-behaviour.vhd:4
+    Version string: [L>7R3IU^jKkcLM=T3;og0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source modified time: Mon Nov 25 16:09:41 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION log_score_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: log_score
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: C work log_behaviour_cfg NmRnba_ajQ>TY8fOjFf8K1
+    Depends on: C work score_behaviour_cfg NC^i?lAGbWH]a>9d;R[:c3
+    Depends on: A work log_score behaviour [L>7R3IU^jKkcLM=T3;og0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Source modified time: Mon Nov 25 16:10:27 2013
+    Source directory: /score
+    HDL source file: VHDL/log_score_behaviour_cfg.vhd
+    Source file: VHDL/log_score_behaviour_cfg.vhd
+    Start location: VHDL/log_score_behaviour_cfg.vhd:1
+    Version string: hGSQCBzbEVdAK2MI9cV3X3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_score_extr_tb_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: log_score_tb
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: C work log_score_extracted_cfg dC[eA:4W`@Ml;64o@hXR=3
+    Depends on: A work log_score_tb behaviour kA?[g7;VQ?7b_PnVdmd5U1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score_tb jT=D83[bo7ZX1=UCDdajV2
+    Source modified time: Tue Nov 26 09:45:16 2013
+    Source directory: /score
+    HDL source file: VHDL/log_score_extr_tb_behaviour_cfg.vhd
+    Source file: VHDL/log_score_extr_tb_behaviour_cfg.vhd
+    Start location: VHDL/log_score_extr_tb_behaviour_cfg.vhd:1
+    Version string: =aaee1Uk<ac<Cz>dH^z]01
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_score_extracted_cfg
+    Configuration for architecture: extracted
+    Configuration for entity: log_score
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib na310 z]klTlH8iZ77=SW_]c<[_0
+    Depends on: E cellslib dfr11 8RHM1UV5ZACIokFFneMOO0
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: E cellslib ex210 jfbZcVZ_zElhH?3Ngm^Z<3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work log_score extracted >fK1BbdR@?<WQ9=P1Bo9m3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Source modified time: Tue Nov 26 09:44:51 2013
+    Source directory: score
+    HDL source file: VHDL/log_score_extracted_cfg.vhd
+    Source file: VHDL/log_score_extracted_cfg.vhd
+    Start location: VHDL/log_score_extracted_cfg.vhd:1
+    Version string: dC[eA:4W`@Ml;64o@hXR=3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_score_syn_tb_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: log_score_tb
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: C work log_score_synthesised_cfg nR3QL:QnD@o4I6m_1HL7Z3
+    Depends on: A work log_score_tb behaviour kA?[g7;VQ?7b_PnVdmd5U1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score_tb jT=D83[bo7ZX1=UCDdajV2
+    Source modified time: Tue Nov 26 09:14:46 2013
+    Source directory: /score
+    HDL source file: VHDL/log_score_syn_tb_behaviour_cfg.vhd
+    Source file: VHDL/log_score_syn_tb_behaviour_cfg.vhd
+    Start location: VHDL/log_score_syn_tb_behaviour_cfg.vhd:1
+    Version string: Q4MD9A9;1nDU2nP=K183B0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_score_synthesised_cfg
+    Configuration for architecture: synthesised
+    Configuration for entity: log_score
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: C work log_synthesised_cfg 8Y>cWzLIA?X_B>R@>o3Hg0
+    Depends on: C work score_synthesised_cfg GC9z1Iofe@h2QJOz9WaEJ1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work log_score synthesised 3^BQ6g;fl<E9WRmkh47TK1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Source modified time: Tue Nov 26 09:14:13 2013
+    Source directory: /score
+    HDL source file: VHDL/log_score_synthesised_cfg.vhd
+    Source file: VHDL/log_score_synthesised_cfg.vhd
+    Start location: VHDL/log_score_synthesised_cfg.vhd:1
+    Version string: dIe9QP^d7QX63;^_>zP:>2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY log_score_tb
+    Source modified time: Mon Nov 25 16:11:47 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/log_score_tb.vhd
+    Source file: VHDL/log_score_tb.vhd
+    Start location: VHDL/log_score_tb.vhd:4
+    Version string: jT=D83[bo7ZX1=UCDdajV2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Tue Nov 26 09:17:03 2013
+    Depends on: E work log_score_tb jT=D83[bo7ZX1=UCDdajV2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /score
+    HDL source file: VHDL/log_score_tb-behaviour.vhd
+    Source file: VHDL/log_score_tb-behaviour.vhd
+    Start location: VHDL/log_score_tb-behaviour.vhd:4
+    Version string: kA?[g7;VQ?7b_PnVdmd5U1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+VHDL CONFIGURATION log_score_tb_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: log_score_tb
+    Depends on: E work log_score AeSc3Aia208CgZ=JOcJ7B1
+    Depends on: C work log_score_behaviour_cfg hGSQCBzbEVdAK2MI9cV3X3
+    Depends on: A work log_score_tb behaviour kA?[g7;VQ?7b_PnVdmd5U1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log_score_tb jT=D83[bo7ZX1=UCDdajV2
+    Source modified time: Tue Nov 26 10:32:12 2013
+    Source directory: score
+    HDL source file: VHDL/log_score_tb_behaviour_cfg.vhd
+    Source file: VHDL/log_score_tb_behaviour_cfg.vhd
+    Start location: VHDL/log_score_tb_behaviour_cfg.vhd:1
+    Version string: aRSc0hLUTR:?JS`_Q2;8J2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION log_synthesised_cfg
+    Configuration for architecture: synthesised
+    Configuration for entity: log
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work log synthesised CU8oK=`HSIFie;^;>c1l73
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Source modified time: Sat Nov 23 19:16:26 2013
+    Source directory: /score
+    HDL source file: VHDL/log_synthesised_cfg.vhd
+    Source file: VHDL/log_synthesised_cfg.vhd
+    Start location: VHDL/log_synthesised_cfg.vhd:1
+    Version string: 8Y>cWzLIA?X_B>R@>o3Hg0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY score
+    Source modified time: Sat Nov 23 20:10:39 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/score.vhd
+    Source file: VHDL/score.vhd
+    Start location: VHDL/score.vhd:4
+    Version string: BOEZ9?2W=>N_dL]>`@Mda1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Nov 28 13:12:03 2013
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/score_SYNTH.vhd
+    Source file: VHDL/score_SYNTH.vhd
+    Start location: VHDL/score_SYNTH.vhd:7
+    Version string: @H;bLbzA<5_KB0n?A2j[O3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: score
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Tue Nov 26 10:40:46 2013
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/score-behaviour.vhd
+    Source file: VHDL/score-behaviour.vhd
+    Start location: VHDL/score-behaviour.vhd:5
+    Version string: Chb=IfG8UQjM1kHhg2A1Q3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: score
+    Debug Symbol file exists
+  ARCHITECTURE BODY extracted
+    Source modified time: Sun Nov 24 15:51:47 2013
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/score_EXTR.vhd
+    Source file: VHDL/score_EXTR.vhd
+    Start location: VHDL/score_EXTR.vhd:13
+    Version string: 4[=M4a8?ml6i:Og@YbjQX0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: score
+    Debug Symbol file exists
+VHDL CONFIGURATION score_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: score
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work score behaviour Chb=IfG8UQjM1kHhg2A1Q3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Source modified time: Sat Nov 23 19:14:20 2013
+    Source directory: score
+    HDL source file: VHDL/score_behaviour_cfg.vhd
+    Source file: VHDL/score_behaviour_cfg.vhd
+    Start location: VHDL/score_behaviour_cfg.vhd:1
+    Version string: NC^i?lAGbWH]a>9d;R[:c3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION score_extracted_cfg
+    Configuration for architecture: extracted
+    Configuration for entity: score
+    Depends on: E cellslib na310 z]klTlH8iZ77=SW_]c<[_0
+    Depends on: E cellslib dfr11 8RHM1UV5ZACIokFFneMOO0
+    Depends on: E cellslib ex210 jfbZcVZ_zElhH?3Ngm^Z<3
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work score extracted 4[=M4a8?ml6i:Og@YbjQX0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Source modified time: Sun Nov 24 15:52:50 2013
+    Source directory: score
+    HDL source file: VHDL/score_extracted_cfg.vhd
+    Source file: VHDL/score_extracted_cfg.vhd
+    Start location: VHDL/score_extracted_cfg.vhd:1
+    Version string: @>oSQ8cCLcQMkC:FN>f661
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION score_synthesised_cfg
+    Configuration for architecture: synthesised
+    Configuration for entity: score
+    Depends on: E cellslib na310 z]klTlH8iZ77=SW_]c<[_0
+    Depends on: E cellslib no210 ]lRe4fhV8=dVn]MWXCKmY1
+    Depends on: E cellslib ex210 jfbZcVZ_zElhH?3Ngm^Z<3
+    Depends on: E cellslib na210 Q7aJ;UTN[fYM;jh8iJg^41
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib dfr11 8RHM1UV5ZACIokFFneMOO0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work score synthesised @H;bLbzA<5_KB0n?A2j[O3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Source modified time: Sun Nov 24 14:07:40 2013
+    Source directory: /score
+    HDL source file: VHDL/score_synthesised_cfg.vhd
+    Source file: VHDL/score_synthesised_cfg.vhd
+    Start location: VHDL/score_synthesised_cfg.vhd:1
+    Version string: GC9z1Iofe@h2QJOz9WaEJ1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY score_tb
+    Source modified time: Sat Nov 23 20:25:24 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: score
+    HDL source file: VHDL/score_tb.vhd
+    Source file: VHDL/score_tb.vhd
+    Start location: VHDL/score_tb.vhd:4
+    Version string: @Yb;;GX28dES`CWlDRo^h2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Sun Nov 24 15:39:53 2013
+    Depends on: E work score_tb @Yb;;GX28dES`CWlDRo^h2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/score_tb-behaviour.vhd
+    Source file: VHDL/score_tb-behaviour.vhd
+    Start location: VHDL/score_tb-behaviour.vhd:4
+    Version string: 0FiPF`j9daQ0N5dZQFZ7T2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: score
+    Debug Symbol file exists
+VHDL CONFIGURATION score_tb_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: score_tb
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: A work score_tb behaviour 0FiPF`j9daQ0N5dZQFZ7T2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score_tb @Yb;;GX28dES`CWlDRo^h2
+    Source modified time: Sat Nov 23 20:26:25 2013
+    Source directory: /score
+    HDL source file: VHDL/score_tb_behaviour_cfg.vhd
+    Source file: VHDL/score_tb_behaviour_cfg.vhd
+    Start location: VHDL/score_tb_behaviour_cfg.vhd:1
+    Version string: PeVB<CLMNDF5L<l[Rg6E63
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION score_tb_behaviour_ext_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: score_tb
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: C work score_extracted_cfg @>oSQ8cCLcQMkC:FN>f661
+    Depends on: A work score_tb behaviour 0FiPF`j9daQ0N5dZQFZ7T2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score_tb @Yb;;GX28dES`CWlDRo^h2
+    Source modified time: Sun Nov 24 15:53:09 2013
+    Source directory: score
+    HDL source file: VHDL/score_tb_behaviour_ext_cfg.vhd
+    Source file: VHDL/score_tb_behaviour_ext_cfg.vhd
+    Start location: VHDL/score_tb_behaviour_ext_cfg.vhd:1
+    Version string: iM9m1jif>:N2^MIhPiZ@b2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION score_tb_behaviour_syn_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: score_tb
+    Depends on: E work score BOEZ9?2W=>N_dL]>`@Mda1
+    Depends on: C work score_synthesised_cfg GC9z1Iofe@h2QJOz9WaEJ1
+    Depends on: A work score_tb behaviour 0FiPF`j9daQ0N5dZQFZ7T2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work score_tb @Yb;;GX28dES`CWlDRo^h2
+    Source modified time: Sun Nov 24 14:08:10 2013
+    Source directory: /score
+    HDL source file: VHDL/score_tb_behaviour_syn_cfg.vhd
+    Source file: VHDL/score_tb_behaviour_syn_cfg.vhd
+    Start location: VHDL/score_tb_behaviour_syn_cfg.vhd:1
+    Version string: >h8G9z=imI=^BBQO^fDZX3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
