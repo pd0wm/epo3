@@ -313,8 +313,10 @@ begin
 			when collision_4 =>
 				-- Wait for check mask ready, about ?
 				if (check_ready = '1') then
+					new_check_start <= '0';
 					next_state <= collision_5;
 				else
+					new_check_start <= '1';
 					next_state <= collision_4;
 				end if;
 
@@ -334,7 +336,6 @@ begin
 				new_lut_piece_type    <= cur_lut_piece_type;
 				
 				new_new_piece         <= cur_new_piece;
-				new_check_start       <= cur_check_start;
 				new_draw_erase_draw   <= cur_draw_erase_draw;
 				new_draw_erase_start  <= cur_draw_erase_start;
 				new_clear_shift_start <= cur_clear_shift_start;
