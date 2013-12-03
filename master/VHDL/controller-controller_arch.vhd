@@ -375,7 +375,7 @@ begin
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
 
-				if (check_empty = '1') then
+				if (check_empty = '0') then
 					next_state <= game_over;
 				else
 					next_state <= draw;
