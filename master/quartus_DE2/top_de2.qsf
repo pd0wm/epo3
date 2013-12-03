@@ -162,4 +162,9 @@ set_global_assignment -name VHDL_FILE /data/public/common/software/opprog/vhdl/c
 set_global_assignment -name BDF_FILE top_de2.bdf
 set_global_assignment -name VHDL_FILE pre_vga_dac.vhd
 set_global_assignment -name VHDL_FILE gen6mhz.vhd
+set_location_assignment PIN_V2 -to piece_input[2]
+set_location_assignment PIN_V1 -to piece_input[1]
+set_location_assignment PIN_U4 -to piece_input[0]
+set_location_assignment PIN_U3 -to timer_1_debug
+set_location_assignment PIN_T7 -to timer_2_debug
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Tue Dec  3 21:48:36 2013
+Tue Dec  3 22:06:36 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec  3 21:48:35 2013          ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec  3 22:06:36 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
@@ -82,7 +82,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 54                                             ;
 ;     Dedicated logic registers      ; 34                                             ;
 ; Total registers                    ; 34                                             ;
-; Total pins                         ; 37                                             ;
+; Total pins                         ; 42                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -282,11 +282,11 @@ applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 34                     ;
 ;     -- I/O registers                        ; 0                      ;
 ;                                             ;                        ;
-; I/O pins                                    ; 37                     ;
+; I/O pins                                    ; 42                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
 ; Maximum fan-out                             ; 33                     ;
 ; Total fan-out                               ; 303                    ;
-; Average fan-out                             ; 2.42                   ;
+; Average fan-out                             ; 2.33                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -295,7 +295,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +-------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |top_de2                            ; 54 (0)            ; 34 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                       ;              ;
+; |top_de2                            ; 54 (0)            ; 34 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 42   ; 0            ; |top_de2                                       ;              ;
 ;    |gen6mhz:inst1|                  ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                         ;              ;
 ;    |vga:inst3|                      ; 51 (0)            ; 31 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                             ;              ;
 ;       |vga_counter:counter|         ; 32 (32)           ; 18 (18)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter         ;              ;
@@ -405,17 +405,14 @@ Encoding Type:  One-Hot
 ; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[0..1]                              ; Stuck at GND due to stuck port data_in                  ;
 ; vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[0..2]                        ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_rot[1]                                                                         ; Merged with controller:inst4|cur_rot[0]                 ;
-; controller:inst4|cur_lut_piece_type[1..2]                                                           ; Merged with controller:inst4|cur_lut_piece_type[0]      ;
 ; controller:inst4|cur_lut_rot[1]                                                                     ; Merged with controller:inst4|cur_lut_rot[0]             ;
 ; controller:inst4|cur_lut_x[1]                                                                       ; Merged with controller:inst4|cur_lut_x[0]               ;
 ; controller:inst4|cur_x[1]                                                                           ; Merged with controller:inst4|cur_x[0]                   ;
-; controller:inst4|cur_piece[1..2]                                                                    ; Merged with controller:inst4|cur_piece[0]               ;
 ; vga:inst3|vga_read:read_and_output|green_out                                                        ; Merged with vga:inst3|vga_read:read_and_output|red_out  ;
 ; controller:inst4|cur_rot[0]                                                                         ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_x[2]                                                                           ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_lut_rot[0]                                                                     ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_lut_x[2]                                                                       ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_piece[0]                                                                       ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
@@ -448,65 +445,8 @@ Encoding Type:  One-Hot
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_lut_piece_type[0]                                                              ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; piece_lut:inst7|overflow1                                                                           ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.kernel_panic                                                             ; Lost fanout                                             ;
-; controller:inst4|cur_state.reset_timers_a_1                                                         ; Lost fanout                                             ;
-; controller:inst4|cur_state.reset_timers_a_2                                                         ; Lost fanout                                             ;
-; controller:inst4|cur_state.clear_shift_1                                                            ; Lost fanout                                             ;
-; controller:inst4|cur_state.space_1                                                                  ; Lost fanout                                             ;
 ; controller:inst4|cur_state.rotate                                                                   ; Lost fanout                                             ;
 ; piece_lut:inst7|state.rom                                                                           ; Lost fanout                                             ;
 ; piece_lut:inst7|state.wait_for_rom                                                                  ; Lost fanout                                             ;
@@ -515,126 +455,170 @@ Encoding Type:  One-Hot
 ; piece_lut:inst7|state.y_calc                                                                        ; Lost fanout                                             ;
 ; piece_lut:inst7|state.y_overflow                                                                    ; Lost fanout                                             ;
 ; piece_lut:inst7|state.rust                                                                          ; Lost fanout                                             ;
-; controller:inst4|cur_state.drop_timer_reset                                                         ; Lost fanout                                             ;
-; controller:inst4|cur_state.draw                                                                     ; Lost fanout                                             ;
-; controller:inst4|cur_state.lock_overflow                                                            ; Lost fanout                                             ;
+; controller:inst4|cur_state.reset_timers_a_1                                                         ; Lost fanout                                             ;
+; controller:inst4|cur_state.reset_timers_a_2                                                         ; Lost fanout                                             ;
+; controller:inst4|cur_state.clear_shift_1                                                            ; Lost fanout                                             ;
 ; controller:inst4|cur_state.clear_shift_2                                                            ; Lost fanout                                             ;
-; controller:inst4|cur_state.reset_timers_b_2                                                         ; Lost fanout                                             ;
-; controller:inst4|cur_state.drop_overflow                                                            ; Lost fanout                                             ;
-; controller:inst4|cur_state.key                                                                      ; Lost fanout                                             ;
 ; controller:inst4|cur_state.game_over                                                                ; Lost fanout                                             ;
 ; piece_lut:inst7|state.output                                                                        ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.space_2                                                                  ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.space_3                                                                  ; Stuck at GND due to stuck port data_in                  ;
 ; de_piece:inst6|state.writing                                                                        ; Stuck at GND due to stuck port data_in                  ;
 ; check_mask:inst5|state.wait_for_ram                                                                 ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.space_4                                                                  ; Stuck at GND due to stuck port data_in                  ;
 ; check_mask:inst5|state.check                                                                        ; Stuck at GND due to stuck port data_in                  ;
+; check_mask:inst5|empty_s                                                                            ; Stuck at GND due to stuck port data_in                  ;
 ; check_mask:inst5|pixel[1]                                                                           ; Stuck at GND due to stuck port data_in                  ;
 ; de_piece:inst6|current_block[1]                                                                     ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_y_new[0]                                                                       ; Stuck at GND due to stuck port data_in                  ;
-; check_mask:inst5|empty_s                                                                            ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_y_new[1..3]                                                                    ; Stuck at GND due to stuck port data_in                  ;
 ; de_piece:inst6|state.done                                                                           ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.space_5                                                                  ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.space_6                                                                  ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.move_down_1                                                              ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.space_3                                                                  ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.lock_timer_start                                                         ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.reset_timers_b_1                                                         ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.put_back_1                                                               ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.space_4                                                                  ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.move_down_3                                                              ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.reset_timers_b_2                                                         ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_y_new[0..3]                                                                    ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.space_5                                                                  ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.move_down_4                                                              ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.space_6                                                                  ; Stuck at GND due to stuck port data_in                  ;
+; controller:inst4|cur_state.put_back_1                                                               ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.put_back_3                                                               ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_y[0..3]                                                                        ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.put_back_4                                                               ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_state.move_down_4                                                              ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_lut_y[0..3]                                                                    ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_draw_erase_draw                                                                ; Stuck at GND due to stuck port data_in                  ;
 ; check_mask:inst5|state.output                                                                       ; Stuck at GND due to stuck port data_in                  ;
-; controller:inst4|cur_draw_erase_start                                                               ; Stuck at GND due to stuck port data_in                  ;
 ; controller:inst4|cur_state.collision_5                                                              ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
-; de_piece:inst6|state.lut_lookup                                                                     ; Stuck at GND due to stuck port data_in                  ;
-; de_piece:inst6|current_block[0]                                                                     ; Stuck at GND due to stuck port data_in                  ;
-; sr_if:inst2|do1                                                                                     ; Stuck at GND due to stuck port data_in                  ;
-; de_piece:inst6|state.waiting                                                                        ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT ; Stuck at GND due to stuck port data_in                  ;
 ; sr_if:inst2|do2                                                                                     ; Stuck at GND due to stuck port data_in                  ;
+; sr_if:inst2|do1                                                                                     ; Stuck at GND due to stuck port data_in                  ;
 ; vga:inst3|vga_read:read_and_output|red_out                                                          ; Merged with vga:inst3|vga_read:read_and_output|blue_out ;
-; Total Number of Removed Registers = 245                                                             ;                                                         ;
+; Total Number of Removed Registers = 228                                                             ;                                                         ;
 +-----------------------------------------------------------------------------------------------------+---------------------------------------------------------+
 
 
@@ -645,103 +629,150 @@ Encoding Type:  One-Hot
 +---------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+
 ; de_piece:inst6|state.writing                ; Stuck at GND              ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ; due to stuck port data_in ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT, ;
 ;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT  ;
-; controller:inst4|cur_state.space_3          ; Stuck at GND              ; controller:inst4|cur_state.space_4, controller:inst4|cur_y_new[2],                                   ;
-;                                             ; due to stuck port data_in ; controller:inst4|cur_y_new[3], controller:inst4|cur_state.space_5,                                   ;
-;                                             ;                           ; controller:inst4|cur_lut_y[2],                                                                       ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT, ;
-;                                             ;                           ; controller:inst4|cur_draw_erase_start                                                                ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT, ;
+;                                             ;                           ; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT  ;
+; de_piece:inst6|state.done                   ; Stuck at GND              ; controller:inst4|cur_state.space_3, controller:inst4|cur_state.space_4,                              ;
+;                                             ; due to stuck port data_in ; controller:inst4|cur_y_new[2], controller:inst4|cur_y_new[3],                                        ;
+;                                             ;                           ; controller:inst4|cur_state.space_5, controller:inst4|cur_lut_y[2]                                    ;
+; check_mask:inst5|empty_s                    ; Stuck at GND              ; controller:inst4|cur_state.put_back_1, controller:inst4|cur_state.put_back_3,                        ;
+;                                             ; due to stuck port data_in ; controller:inst4|cur_lut_y[0], controller:inst4|cur_lut_y[3]                                         ;
 ; piece_lut:inst7|state.output                ; Stuck at GND              ; check_mask:inst5|state.wait_for_ram, check_mask:inst5|state.output,                                  ;
-;                                             ; due to stuck port data_in ; controller:inst4|cur_state.collision_5, de_piece:inst6|state.lut_lookup                              ;
-; check_mask:inst5|empty_s                    ; Stuck at GND              ; controller:inst4|cur_state.move_down_1, controller:inst4|cur_state.move_down_3,                      ;
-;                                             ; due to stuck port data_in ; controller:inst4|cur_state.move_down_4                                                               ;
+;                                             ; due to stuck port data_in ; controller:inst4|cur_state.collision_5                                                               ;
 ; controller:inst4|cur_rot[0]                 ; Stuck at GND              ; controller:inst4|cur_lut_rot[0], sr_if:inst2|do1                                                     ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
-; de_piece:inst6|state.done                   ; Stuck at GND              ; controller:inst4|cur_state.reset_timers_b_1, de_piece:inst6|state.waiting                            ;
-;                                             ; due to stuck port data_in ;                                                                                                      ;
-; controller:inst4|cur_state.space_6          ; Stuck at GND              ; controller:inst4|cur_state.put_back_1, controller:inst4|cur_state.put_back_3                         ;
+; controller:inst4|cur_state.move_down_1      ; Stuck at GND              ; controller:inst4|cur_state.move_down_3, controller:inst4|cur_state.move_down_4                       ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
 ; controller:inst4|cur_x[2]                   ; Stuck at GND              ; controller:inst4|cur_lut_x[2]                                                                        ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
 ; controller:inst4|cur_state.lock_timer_start ; Stuck at GND              ; controller:inst4|cur_draw_erase_draw                                                                 ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
-; controller:inst4|cur_y[0]                   ; Stuck at GND              ; controller:inst4|cur_lut_y[0]                                                                        ;
+; controller:inst4|cur_state.reset_timers_b_1 ; Stuck at GND              ; controller:inst4|cur_state.reset_timers_b_2                                                          ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
 ; controller:inst4|cur_y[1]                   ; Stuck at GND              ; controller:inst4|cur_lut_y[1]                                                                        ;
-;                                             ; due to stuck port data_in ;                                                                                                      ;
-; controller:inst4|cur_y[3]                   ; Stuck at GND              ; controller:inst4|cur_lut_y[3]                                                                        ;
 ;                                             ; due to stuck port data_in ;                                                                                                      ;
 +---------------------------------------------+---------------------------+------------------------------------------------------------------------------------------------------+
 
@@ -766,21 +797,23 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[2]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[4]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[0]                   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[3]                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|mem_addr_state[2]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[4] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[2]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|counter_state[2]              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|counter_state[1]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|counter_state[0]              ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[0]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[5]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[1]                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[5]                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|mem_addr_state[0]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[3] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]       ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|counter_state[0]              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|counter_state[2]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|counter_state[2]              ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[4]  ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[4]        ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_de2|controller:inst4|cur_state                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_de2|controller:inst4|cur_state                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_de2|controller:inst4|cur_state                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top_de2|check_mask:inst5|next_pixel                                               ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_de2|vga:inst3|mem_addr[5]                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_de2|vga:inst3|mem_addr[0]                                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_de2|controller:inst4|Selector6                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 
@@ -1270,7 +1303,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Dec  3 21:48:28 2013
+    Info: Processing started: Tue Dec  3 22:06:29 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/rom_mux44.vhd
@@ -2360,15 +2393,12 @@ Warning: Tri-state node(s) do not directly drive top-level pin(s)
     Warning: Converted tri-state node "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|do2" into a selector
 Warning: LATCH primitive "controller:inst4|new_draw_erase_draw" is permanently enabled
 Warning: LATCH primitive "controller:inst4|new_draw_erase_start" is permanently enabled
+Warning: LATCH primitive "controller:inst4|new_draw_erase_start" is permanently enabled
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "vga_sync" is stuck at GND
     Warning (13410): Pin "vga_blank" is stuck at VCC
-Info: 21 registers lost all their fanouts during netlist optimizations. The first 21 are displayed below.
+Info: 14 registers lost all their fanouts during netlist optimizations. The first 14 are displayed below.
     Info: Register "controller:inst4|cur_state.kernel_panic" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.reset_timers_a_1" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.reset_timers_a_2" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.clear_shift_1" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.space_1" lost all its fanouts during netlist optimizations.
     Info: Register "controller:inst4|cur_state.rotate" lost all its fanouts during netlist optimizations.
     Info: Register "piece_lut:inst7|state.rom" lost all its fanouts during netlist optimizations.
     Info: Register "piece_lut:inst7|state.wait_for_rom" lost all its fanouts during netlist optimizations.
@@ -2377,23 +2407,26 @@ Info: 21 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "piece_lut:inst7|state.y_calc" lost all its fanouts during netlist optimizations.
     Info: Register "piece_lut:inst7|state.y_overflow" lost all its fanouts during netlist optimizations.
     Info: Register "piece_lut:inst7|state.rust" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.drop_timer_reset" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.draw" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.lock_overflow" lost all its fanouts during netlist optimizations.
+    Info: Register "controller:inst4|cur_state.reset_timers_a_1" lost all its fanouts during netlist optimizations.
+    Info: Register "controller:inst4|cur_state.reset_timers_a_2" lost all its fanouts during netlist optimizations.
+    Info: Register "controller:inst4|cur_state.clear_shift_1" lost all its fanouts during netlist optimizations.
     Info: Register "controller:inst4|cur_state.clear_shift_2" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.reset_timers_b_2" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.drop_overflow" lost all its fanouts during netlist optimizations.
-    Info: Register "controller:inst4|cur_state.key" lost all its fanouts during netlist optimizations.
     Info: Register "controller:inst4|cur_state.game_over" lost all its fanouts during netlist optimizations.
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 98 device resources after synthesis - the final resource count might be different
-    Info: Implemented 2 input pins
+Warning: Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "piece_input[1]"
+    Warning (15610): No output dependent on input pin "piece_input[0]"
+    Warning (15610): No output dependent on input pin "piece_input[2]"
+    Warning (15610): No output dependent on input pin "timer_1_debug"
+    Warning (15610): No output dependent on input pin "timer_2_debug"
+Info: Implemented 103 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
     Info: Implemented 35 output pins
     Info: Implemented 61 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 858 warnings
-    Info: Peak virtual memory: 271 megabytes
-    Info: Processing ended: Tue Dec  3 21:48:36 2013
-    Info: Elapsed time: 00:00:08
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 865 warnings
+    Info: Peak virtual memory: 272 megabytes
+    Info: Processing ended: Tue Dec  3 22:06:36 2013
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 
 
