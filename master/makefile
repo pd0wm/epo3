@@ -23,16 +23,20 @@ CELLSLIB__cellslib_decl_pack = $(LIB_CELLSLIB)/cellslib_decl_pack/_primary.dat
 IEEE__std_logic_1164 = $(LIB_IEEE)/std_logic_1164/_primary.dat
 STD__textio = $(LIB_STD)/textio/_primary.dat
 IEEE__numeric_std = $(LIB_IEEE)/numeric_std/_primary.dat
+WORK__vga_vga_arch_cfg = $(LIB_WORK)/vga_vga_arch_cfg/_primary.dat
+WORK__vga_triggers_vga_triggers_arch_cfg = $(LIB_WORK)/vga_triggers_vga_triggers_arch_cfg/_primary.dat
 WORK__vga_triggers__vga_triggers_arch = $(LIB_WORK)/vga_triggers/vga_triggers_arch.dat
 WORK__vga_triggers = $(LIB_WORK)/vga_triggers/_primary.dat
 WORK__vga_tb__vga_tb_arch = $(LIB_WORK)/vga_tb/vga_tb_arch.dat
 WORK__vga_tb = $(LIB_WORK)/vga_tb/_primary.dat
+WORK__vga_sync_vga_sync_arch_cfg = $(LIB_WORK)/vga_sync_vga_sync_arch_cfg/_primary.dat
 WORK__vga_sync__vga_sync_arch = $(LIB_WORK)/vga_sync/vga_sync_arch.dat
 WORK__vga_sync = $(LIB_WORK)/vga_sync/_primary.dat
 WORK__vga_score_trans__vga_score_trans_arch = $(LIB_WORK)/vga_score_trans/vga_score_trans_arch.dat
 WORK__vga_score_trans = $(LIB_WORK)/vga_score_trans/_primary.dat
 WORK__vga_score_check__vga_score_check_arch = $(LIB_WORK)/vga_score_check/vga_score_check_arch.dat
 WORK__vga_score_check = $(LIB_WORK)/vga_score_check/_primary.dat
+WORK__vga_read_vga_read_behav_cfg = $(LIB_WORK)/vga_read_vga_read_behav_cfg/_primary.dat
 WORK__vga_read__vga_read_behav = $(LIB_WORK)/vga_read/vga_read_behav.dat
 WORK__vga_read = $(LIB_WORK)/vga_read/_primary.dat
 WORK__vga_params__body = $(LIB_WORK)/vga_params/body.dat
@@ -43,12 +47,34 @@ WORK__vga_np_trans__vga_np_trans_arch = $(LIB_WORK)/vga_np_trans/vga_np_trans_ar
 WORK__vga_np_trans = $(LIB_WORK)/vga_np_trans/_primary.dat
 WORK__vga_np_check__vga_np_check_arch = $(LIB_WORK)/vga_np_check/vga_np_check_arch.dat
 WORK__vga_np_check = $(LIB_WORK)/vga_np_check/_primary.dat
+WORK__vga_field_trans_vga_field_trans_arch_cfg = $(LIB_WORK)/vga_field_trans_vga_field_trans_arch_cfg/_primary.dat
+WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg = $(LIB_WORK)/vga_field_trans_reset_vga_field_trans_reset_arch_cfg/_primary.dat
 WORK__vga_field_trans_reset__vga_field_trans_reset_arch = $(LIB_WORK)/vga_field_trans_reset/vga_field_trans_reset_arch.dat
 WORK__vga_field_trans_reset = $(LIB_WORK)/vga_field_trans_reset/_primary.dat
 WORK__vga_field_trans__vga_field_trans_arch = $(LIB_WORK)/vga_field_trans/vga_field_trans_arch.dat
 WORK__vga_field_trans = $(LIB_WORK)/vga_field_trans/_primary.dat
+WORK__vga_field_check_vga_field_check_arch_cfg = $(LIB_WORK)/vga_field_check_vga_field_check_arch_cfg/_primary.dat
 WORK__vga_field_check__vga_field_check_arch = $(LIB_WORK)/vga_field_check/vga_field_check_arch.dat
 WORK__vga_field_check = $(LIB_WORK)/vga_field_check/_primary.dat
+WORK__vga_demux_vga_demux_behav_cfg = $(LIB_WORK)/vga_demux_vga_demux_behav_cfg/_primary.dat
+WORK__vga_demux__vga_demux_behav = $(LIB_WORK)/vga_demux/vga_demux_behav.dat
+WORK__vga_demux = $(LIB_WORK)/vga_demux/_primary.dat
+WORK__vga_counter_vga_counter_behav_cfg = $(LIB_WORK)/vga_counter_vga_counter_behav_cfg/_primary.dat
+WORK__vga_counter_resets_vga_counter_resets_behav_cfg = $(LIB_WORK)/vga_counter_resets_vga_counter_resets_behav_cfg/_primary.dat
+WORK__vga_counter_resets__vga_counter_resets_behav = $(LIB_WORK)/vga_counter_resets/vga_counter_resets_behav.dat
+WORK__vga_counter_resets = $(LIB_WORK)/vga_counter_resets/_primary.dat
+WORK__vga_counter_8bitset_vga_counter_8bitset_behav_cfg = $(LIB_WORK)/vga_counter_8bitset_vga_counter_8bitset_behav_cfg/_primary.dat
+WORK__vga_counter_8bitset__vga_counter_8bitset_behav = $(LIB_WORK)/vga_counter_8bitset/vga_counter_8bitset_behav.dat
+WORK__vga_counter_8bitset = $(LIB_WORK)/vga_counter_8bitset/_primary.dat
+WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg = $(LIB_WORK)/vga_counter_8bit_vga_counter_8bit_behav_cfg/_primary.dat
+WORK__vga_counter_8bit__vga_counter_8bit_behav = $(LIB_WORK)/vga_counter_8bit/vga_counter_8bit_behav.dat
+WORK__vga_counter_8bit = $(LIB_WORK)/vga_counter_8bit/_primary.dat
+WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg = $(LIB_WORK)/vga_counter_5bit_vga_counter_5bit_behav_cfg/_primary.dat
+WORK__vga_counter_5bit__vga_counter_5bit_behav = $(LIB_WORK)/vga_counter_5bit/vga_counter_5bit_behav.dat
+WORK__vga_counter_5bit = $(LIB_WORK)/vga_counter_5bit/_primary.dat
+WORK__vga_counter_10bit_vga_counter_10bit_behav_cfg = $(LIB_WORK)/vga_counter_10bit_vga_counter_10bit_behav_cfg/_primary.dat
+WORK__vga_counter_10bit__vga_counter_10bit_behav = $(LIB_WORK)/vga_counter_10bit/vga_counter_10bit_behav.dat
+WORK__vga_counter_10bit = $(LIB_WORK)/vga_counter_10bit/_primary.dat
 WORK__vga_counter__vga_counter_behav = $(LIB_WORK)/vga_counter/vga_counter_behav.dat
 WORK__vga_counter = $(LIB_WORK)/vga_counter/_primary.dat
 WORK__vga__vga_arch = $(LIB_WORK)/vga/vga_arch.dat
@@ -108,16 +134,20 @@ VLOG = vlog
 VOPT = vopt
 SCCOM = sccom
 
-whole_library :     $(WORK__vga_triggers__vga_triggers_arch) \
+whole_library :     $(WORK__vga_vga_arch_cfg) \
+    $(WORK__vga_triggers_vga_triggers_arch_cfg) \
+    $(WORK__vga_triggers__vga_triggers_arch) \
     $(WORK__vga_triggers) \
     $(WORK__vga_tb__vga_tb_arch) \
     $(WORK__vga_tb) \
+    $(WORK__vga_sync_vga_sync_arch_cfg) \
     $(WORK__vga_sync__vga_sync_arch) \
     $(WORK__vga_sync) \
     $(WORK__vga_score_trans__vga_score_trans_arch) \
     $(WORK__vga_score_trans) \
     $(WORK__vga_score_check__vga_score_check_arch) \
     $(WORK__vga_score_check) \
+    $(WORK__vga_read_vga_read_behav_cfg) \
     $(WORK__vga_read__vga_read_behav) \
     $(WORK__vga_read) \
     $(WORK__vga_params__body) \
@@ -128,12 +158,34 @@ whole_library :     $(WORK__vga_triggers__vga_triggers_arch) \
     $(WORK__vga_np_trans) \
     $(WORK__vga_np_check__vga_np_check_arch) \
     $(WORK__vga_np_check) \
+    $(WORK__vga_field_trans_vga_field_trans_arch_cfg) \
+    $(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) \
     $(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) \
     $(WORK__vga_field_trans_reset) \
     $(WORK__vga_field_trans__vga_field_trans_arch) \
     $(WORK__vga_field_trans) \
+    $(WORK__vga_field_check_vga_field_check_arch_cfg) \
     $(WORK__vga_field_check__vga_field_check_arch) \
     $(WORK__vga_field_check) \
+    $(WORK__vga_demux_vga_demux_behav_cfg) \
+    $(WORK__vga_demux__vga_demux_behav) \
+    $(WORK__vga_demux) \
+    $(WORK__vga_counter_vga_counter_behav_cfg) \
+    $(WORK__vga_counter_resets_vga_counter_resets_behav_cfg) \
+    $(WORK__vga_counter_resets__vga_counter_resets_behav) \
+    $(WORK__vga_counter_resets) \
+    $(WORK__vga_counter_8bitset_vga_counter_8bitset_behav_cfg) \
+    $(WORK__vga_counter_8bitset__vga_counter_8bitset_behav) \
+    $(WORK__vga_counter_8bitset) \
+    $(WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg) \
+    $(WORK__vga_counter_8bit__vga_counter_8bit_behav) \
+    $(WORK__vga_counter_8bit) \
+    $(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) \
+    $(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
+    $(WORK__vga_counter_5bit) \
+    $(WORK__vga_counter_10bit_vga_counter_10bit_behav_cfg) \
+    $(WORK__vga_counter_10bit__vga_counter_10bit_behav) \
+    $(WORK__vga_counter_10bit) \
     $(WORK__vga_counter__vga_counter_behav) \
     $(WORK__vga_counter) \
     $(WORK__vga__vga_arch) \
@@ -558,7 +610,7 @@ $(WORK__sr_tower__sr_tower_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd
 
-$(WORK__sr_tower_sr_tower_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd \
+$(WORK__sr_tower_sr_tower_behav_cfg) : VHDL/sr_tower_sr_tower_behav_cfg.vhd \
 		$(WORK__demux4_inv) \
 		$(WORK__dec8) \
 		$(WORK__demux8_inv) \
@@ -572,7 +624,7 @@ $(WORK__sr_tower_sr_tower_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/V
 		$(IEEE__std_logic_1164) \
 		$(WORK__sr_tower)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd
+		 work -quiet -nologo VHDL/sr_tower_sr_tower_behav_cfg.vhd
 
 $(WORK__sr_tower_tb) \
 $(WORK__sr_tower_tb__sr_tower_tb_behav) : /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd \
@@ -581,7 +633,7 @@ $(WORK__sr_tower_tb__sr_tower_tb_behav) : /home/epo3-user/Desktop/git/epo3/maste
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
 
-$(WORK__sr_tower_tb_sr_tower_tb_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd \
+$(WORK__sr_tower_tb_sr_tower_tb_behav_cfg) : VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd \
 		$(WORK__sr_tower) \
 		$(IEEE__numeric_std) \
 		$(WORK__sr_tower_sr_tower_behav_cfg) \
@@ -590,7 +642,7 @@ $(WORK__sr_tower_tb_sr_tower_tb_behav_cfg) : /home/epo3-user/Desktop/git/epo3/ma
 		$(IEEE__std_logic_1164) \
 		$(WORK__sr_tower_tb)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
+		 work -quiet -nologo VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
 
 $(WORK__vga) : VHDL/vga.vhd \
 		$(WORK__vga_params) \
@@ -626,6 +678,169 @@ $(WORK__vga_counter__vga_counter_behav) : VHDL/vga_counter_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_counter_arch.vhd
 
+$(WORK__vga_counter_10bit) : VHDL/vga_counter_10bit.vhd \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_10bit.vhd
+
+$(WORK__vga_counter_10bit__vga_counter_10bit_behav) : VHDL/vga_counter_10bit_arch.vhd \
+		$(WORK__vga_counter_10bit) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_10bit_arch.vhd
+
+$(WORK__vga_counter_10bit_vga_counter_10bit_behav_cfg) : VHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd \
+		$(WORK__vga_counter_10bit__vga_counter_10bit_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter_10bit)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd
+
+$(WORK__vga_counter_5bit) : VHDL/vga_counter_5bit.vhd \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_5bit.vhd
+
+$(WORK__vga_counter_5bit__vga_counter_5bit_behav) : VHDL/vga_counter_5bit_arch.vhd \
+		$(WORK__vga_counter_5bit) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_5bit_arch.vhd
+
+$(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) : VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd \
+		$(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter_5bit)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd
+
+$(WORK__vga_counter_8bit) : VHDL/vga_counter_8bit.vhd \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bit.vhd
+
+$(WORK__vga_counter_8bit__vga_counter_8bit_behav) : VHDL/vga_counter_8bit_arch.vhd \
+		$(WORK__vga_counter_8bit) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bit_arch.vhd
+
+$(WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg) : VHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd \
+		$(WORK__vga_counter_8bit__vga_counter_8bit_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter_8bit)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd
+
+$(WORK__vga_counter_8bitset) : VHDL/vga_counter_8bitset.vhd \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bitset.vhd
+
+$(WORK__vga_counter_8bitset__vga_counter_8bitset_behav) : VHDL/vga_counter_8bitset_arch.vhd \
+		$(WORK__vga_counter_8bitset) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bitset_arch.vhd
+
+$(WORK__vga_counter_8bitset_vga_counter_8bitset_behav_cfg) : VHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd \
+		$(WORK__vga_counter_8bitset__vga_counter_8bitset_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter_8bitset)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd
+
+$(WORK__vga_counter_resets) : VHDL/vga_counter_resets.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_resets.vhd
+
+$(WORK__vga_counter_resets__vga_counter_resets_behav) : VHDL/vga_counter_resets_arch.vhd \
+		$(WORK__vga_counter_resets) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_resets_arch.vhd
+
+$(WORK__vga_counter_resets_vga_counter_resets_behav_cfg) : VHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd \
+		$(WORK__vga_counter_resets__vga_counter_resets_behav) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter_resets)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd
+
+$(WORK__vga_counter_vga_counter_behav_cfg) : VHDL/vga_counter_vga_counter_behav_cfg.vhd \
+		$(WORK__vga_counter_resets) \
+		$(WORK__vga_counter_10bit) \
+		$(WORK__vga_counter_8bit) \
+		$(WORK__vga_counter_resets_vga_counter_resets_behav_cfg) \
+		$(WORK__vga_counter_10bit_vga_counter_10bit_behav_cfg) \
+		$(WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg) \
+		$(WORK__vga_counter__vga_counter_behav) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_counter)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_counter_vga_counter_behav_cfg.vhd
+
+$(WORK__vga_demux) : VHDL/vga_demux.vhd \
+		$(WORK__vga_params) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_demux.vhd
+
+$(WORK__vga_demux__vga_demux_behav) : VHDL/vga_demux_arch.vhd \
+		$(WORK__vga_params) \
+		$(WORK__vga_demux) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_demux_arch.vhd
+
+$(WORK__vga_demux_vga_demux_behav_cfg) : VHDL/vga_demux_vga_demux_behav_cfg.vhd \
+		$(WORK__vga_demux__vga_demux_behav) \
+		$(WORK__vga_params) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_demux)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_demux_vga_demux_behav_cfg.vhd
+
 $(WORK__vga_field_check) : VHDL/vga_field_check.vhd \
 		$(WORK__vga_params) \
 		$(IEEE__numeric_std) \
@@ -642,6 +857,16 @@ $(WORK__vga_field_check__vga_field_check_arch) : VHDL/vga_field_check_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_field_check_arch.vhd
+
+$(WORK__vga_field_check_vga_field_check_arch_cfg) : VHDL/vga_field_check_vga_field_check_arch_cfg.vhd \
+		$(WORK__vga_field_check__vga_field_check_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_field_check)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 
 $(WORK__vga_field_trans) : VHDL/vga_field_trans.vhd \
 		$(WORK__vga_params) \
@@ -676,6 +901,30 @@ $(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) : VHDL/vga_field_tran
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_field_trans_reset_arch.vhd
+
+$(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) : VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd \
+		$(WORK__vga_counter_5bit) \
+		$(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) \
+		$(WORK__vga_field_trans_reset__vga_field_trans_reset_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_field_trans_reset)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd
+
+$(WORK__vga_field_trans_vga_field_trans_arch_cfg) : VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd \
+		$(WORK__vga_counter_8bitset) \
+		$(WORK__vga_counter_8bitset_vga_counter_8bitset_behav_cfg) \
+		$(WORK__vga_field_trans__vga_field_trans_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_field_trans)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd
 
 $(WORK__vga_np_check) : VHDL/vga_np_check.vhd \
 		$(WORK__vga_params) \
@@ -729,11 +978,11 @@ $(WORK__vga_np_trans_reset__vga_np_trans_reset_arch) : VHDL/vga_np_trans_reset_a
 		 work -quiet -nologo VHDL/vga_np_trans_reset_arch.vhd
 
 $(WORK__vga_params) \
-$(WORK__vga_params__body) : VHDL/params.vhd \
+$(WORK__vga_params__body) : VHDL/vga_params.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/params.vhd
+		 work -quiet -nologo VHDL/vga_params.vhd
 
 $(WORK__vga_read) : VHDL/vga_read.vhd \
 		$(WORK__vga_params) \
@@ -751,6 +1000,16 @@ $(WORK__vga_read__vga_read_behav) : VHDL/vga_read_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_read_arch.vhd
+
+$(WORK__vga_read_vga_read_behav_cfg) : VHDL/vga_read_vga_read_behav_cfg.vhd \
+		$(WORK__vga_read__vga_read_behav) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_read)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_read_vga_read_behav_cfg.vhd
 
 $(WORK__vga_score_check) : VHDL/vga_score_check.vhd \
 		$(WORK__vga_params) \
@@ -803,6 +1062,16 @@ $(WORK__vga_sync__vga_sync_arch) : VHDL/vga_sync_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_sync_arch.vhd
 
+$(WORK__vga_sync_vga_sync_arch_cfg) : VHDL/vga_sync_vga_sync_arch_cfg.vhd \
+		$(WORK__vga_sync__vga_sync_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_sync)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_sync_vga_sync_arch_cfg.vhd
+
 $(WORK__vga_tb) \
 $(WORK__vga_tb__vga_tb_arch) : VHDL/vga_tb.vhd \
 		$(WORK__vga_params) \
@@ -828,4 +1097,33 @@ $(WORK__vga_triggers__vga_triggers_arch) : VHDL/vga_triggers_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_triggers_arch.vhd
+
+$(WORK__vga_triggers_vga_triggers_arch_cfg) : VHDL/vga_triggers_vga_triggers_arch_cfg.vhd \
+		$(WORK__vga_triggers__vga_triggers_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga_triggers)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
+
+$(WORK__vga_vga_arch_cfg) : VHDL/vga_vga_arch_cfg.vhd \
+		$(WORK__vga_field_trans_reset) \
+		$(WORK__vga_field_trans) \
+		$(WORK__vga_field_check_vga_field_check_arch_cfg) \
+		$(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) \
+		$(WORK__vga_field_trans_vga_field_trans_arch_cfg) \
+		$(WORK__vga_read_vga_read_behav_cfg) \
+		$(WORK__vga_triggers_vga_triggers_arch_cfg) \
+		$(WORK__vga_sync_vga_sync_arch_cfg) \
+		$(WORK__vga_counter_vga_counter_behav_cfg) \
+		$(WORK__vga__vga_arch) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__vga)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/vga_vga_arch_cfg.vhd
 

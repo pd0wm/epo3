@@ -1696,10 +1696,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_arch.vhd
-8994545dbe3a9c833286354c32daba1
+4b2a235bd9d32c267facb30db903fff
 }
 # hierarchies {
 vga:inst3
@@ -1745,10 +1745,10 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_arch.vhd
-33a6f82137911e70d724b39af2474185
+b2f9ac8320b8e230f4b5f7d56ee8f6
 }
 # hierarchies {
 vga:inst3|vga_counter:counter
@@ -1760,10 +1760,96 @@ vga:inst3|vga_counter:counter
 
 # end
 # entity
-vga_sync
+vga_counter_8bit
 # storage
 db|top_de2.(5).cnf
 db|top_de2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_8bit.vhd
+379cc440892fe7af26788a89425ea7e8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(val)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_8bit_arch.vhd
+9df2c5c7ca38ceb341ceb69497fc83
+}
+# hierarchies {
+vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_counter_10bit
+# storage
+db|top_de2.(6).cnf
+db|top_de2.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_10bit.vhd
+5b507a12698764e08a544b051ac8290
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(val)
+9 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_counter_10bit_arch.vhd
+f513dac84240aa3b5b47b2a9714dcbfe
+}
+# hierarchies {
+vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+vga_sync
+# storage
+db|top_de2.(7).cnf
+db|top_de2.(7).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1794,8 +1880,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_sync_arch.vhd
 4f91f8202a15387a13b321bcc71d803d
 }
@@ -1811,8 +1897,8 @@ vga:inst3|vga_sync:sync
 # entity
 vga_triggers
 # storage
-db|top_de2.(6).cnf
-db|top_de2.(6).cnf
+db|top_de2.(8).cnf
+db|top_de2.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1843,10 +1929,10 @@ PARAMETER_STRING
 USR
 }
 # include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_triggers_arch.vhd
 a44685658227b581274dd927d4be59
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
 }
 # hierarchies {
 vga:inst3|vga_triggers:triggers
@@ -1860,8 +1946,8 @@ vga:inst3|vga_triggers:triggers
 # entity
 vga_read
 # storage
-db|top_de2.(7).cnf
-db|top_de2.(7).cnf
+db|top_de2.(9).cnf
+db|top_de2.(9).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1882,8 +1968,8 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_read_arch.vhd
 bfb03851948eacecd79f7aab512844c5
 }
@@ -1899,8 +1985,8 @@ vga:inst3|vga_read:read_and_output
 # entity
 vga_field_trans
 # storage
-db|top_de2.(8).cnf
-db|top_de2.(8).cnf
+db|top_de2.(10).cnf
+db|top_de2.(10).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1931,8 +2017,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans_arch.vhd
 2bc5445a3a78b970d613697cc7c39c
 }
@@ -1948,8 +2034,8 @@ vga:inst3|vga_field_trans:field_translation
 # entity
 vga_field_trans_reset
 # storage
-db|top_de2.(9).cnf
-db|top_de2.(9).cnf
+db|top_de2.(19).cnf
+db|top_de2.(19).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1976,8 +2062,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_trans_reset_arch.vhd
 63bbaa561cc84678798581e9ec9794
 }
@@ -1993,8 +2079,8 @@ vga:inst3|vga_field_trans_reset:field_translation_reset
 # entity
 vga_field_check
 # storage
-db|top_de2.(10).cnf
-db|top_de2.(10).cnf
+db|top_de2.(25).cnf
+db|top_de2.(25).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2025,8 +2111,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_field_check_arch.vhd
 a135134f77cf50cda72e412dcf049e9
 }
@@ -2042,8 +2128,8 @@ vga:inst3|vga_field_check:field_check
 # entity
 vga_np_trans
 # storage
-db|top_de2.(19).cnf
-db|top_de2.(19).cnf
+db|top_de2.(26).cnf
+db|top_de2.(26).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2074,8 +2160,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans_arch.vhd
 c04a9cf6ff17d046ba1f09b16d4c596
 }
@@ -2091,8 +2177,8 @@ vga:inst3|vga_np_trans:np_translation
 # entity
 vga_np_trans_reset
 # storage
-db|top_de2.(25).cnf
-db|top_de2.(25).cnf
+db|top_de2.(35).cnf
+db|top_de2.(35).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2119,8 +2205,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_trans_reset_arch.vhd
 a81c2d299fabf9695870dc977a207f3f
 }
@@ -2136,8 +2222,8 @@ vga:inst3|vga_np_trans_reset:np_translation_reset
 # entity
 vga_np_check
 # storage
-db|top_de2.(26).cnf
-db|top_de2.(26).cnf
+db|top_de2.(36).cnf
+db|top_de2.(36).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2168,8 +2254,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_np_check_arch.vhd
 909c4a9019c79534d15d5895595fb41d
 }
@@ -2185,8 +2271,8 @@ vga:inst3|vga_np_check:np_check
 # entity
 vga_score_trans
 # storage
-db|top_de2.(35).cnf
-db|top_de2.(35).cnf
+db|top_de2.(37).cnf
+db|top_de2.(37).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2213,8 +2299,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_trans_arch.vhd
 cecc66db17d8d8c4e7158e07175395c
 }
@@ -2230,8 +2316,8 @@ vga:inst3|vga_score_trans:score_translation
 # entity
 vga_score_check
 # storage
-db|top_de2.(36).cnf
-db|top_de2.(36).cnf
+db|top_de2.(38).cnf
+db|top_de2.(38).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2262,8 +2348,8 @@ PARAMETER_STRING
 USR
 }
 # include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_score_check_arch.vhd
 722ed5af885e117f138c63d4753977c4
 }
@@ -2277,10 +2363,67 @@ vga:inst3|vga_score_check:score_check
 
 # end
 # entity
+vga_demux
+# storage
+db|top_de2.(39).cnf
+db|top_de2.(39).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_demux.vhd
+1082413af194d75cb4ee2c0a060d4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(def)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(di1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(di2)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(do)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_demux_arch.vhd
+cf89fe55771396b217c634177c2c162b
+}
+# hierarchies {
+vga:inst3|vga_demux:mem_addr_demux
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 depiece_simple
 # storage
-db|top_de2.(37).cnf
-db|top_de2.(37).cnf
+db|top_de2.(40).cnf
+db|top_de2.(40).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2301,10 +2444,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
 |home|epo3-user|Desktop|git|epo3|master|VHDL|depiece_simple-depiece_simple_arch.vhd
 bca390e3e73514134d981fa912e8bcf
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
 }
 # hierarchies {
 depiece_simple:inst5

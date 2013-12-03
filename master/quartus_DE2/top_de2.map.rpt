@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Sat Nov 30 18:10:02 2013
+Tue Dec  3 11:42:35 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -17,7 +17,8 @@ Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter"
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +44,13 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 30 18:10:02 2013          ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec  3 11:42:35 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 331                                            ;
-;     Total combinational functions  ; 316                                            ;
+; Total logic elements               ; 297                                            ;
+;     Total combinational functions  ; 282                                            ;
 ;     Dedicated logic registers      ; 157                                            ;
 ; Total registers                    ; 157                                            ;
 ; Total pins                         ; 37                                             ;
@@ -163,6 +164,13 @@ applicable agreement for further details.
 +----------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                        ;
 +----------------------------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------------------+
+; ../VHDL/vga_counter_10bit_arch.vhd                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_10bit_arch.vhd             ;
+; ../VHDL/vga_counter_10bit.vhd                      ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_10bit.vhd                  ;
+; ../VHDL/vga_counter_8bit_arch.vhd                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_8bit_arch.vhd              ;
+; ../VHDL/vga_counter_8bit.vhd                       ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_8bit.vhd                   ;
+; ../VHDL/vga_demux_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_demux_arch.vhd                     ;
+; ../VHDL/vga_demux.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_demux.vhd                          ;
+; ../VHDL/vga_params.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_params.vhd                         ;
 ; ../VHDL/vga_score_trans_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans_arch.vhd               ;
 ; ../VHDL/vga_score_trans.vhd                        ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans.vhd                    ;
 ; ../VHDL/vga_score_check_arch.vhd                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_check_arch.vhd               ;
@@ -191,7 +199,6 @@ applicable agreement for further details.
 ; ../VHDL/vga.vhd                                    ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/vga.vhd                                ;
 ; ../VHDL/tower_arch.vhd                             ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_arch.vhd                         ;
 ; ../VHDL/tower.vhd                                  ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd                              ;
-; ../VHDL/params.vhd                                 ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd                             ;
 ; ../VHDL/mux5_arch.vhd                              ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd                          ;
 ; ../VHDL/mux5.vhd                                   ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd                               ;
 ; ../VHDL/interface_arch.vhd                         ; yes             ; User VHDL File                     ; /home/epo3-user/Desktop/git/epo3/master/VHDL/interface_arch.vhd                     ;
@@ -220,16 +227,16 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 331                    ;
+; Estimated Total logic elements              ; 297                    ;
 ;                                             ;                        ;
-; Total combinational functions               ; 316                    ;
+; Total combinational functions               ; 282                    ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 137                    ;
+;     -- 4 input functions                    ; 110                    ;
 ;     -- 3 input functions                    ; 101                    ;
-;     -- <=2 input functions                  ; 78                     ;
+;     -- <=2 input functions                  ; 71                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 268                    ;
+;     -- normal mode                          ; 234                    ;
 ;     -- arithmetic mode                      ; 48                     ;
 ;                                             ;                        ;
 ; Total registers                             ; 157                    ;
@@ -239,8 +246,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 37                     ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2] ;
 ; Maximum fan-out                             ; 156                    ;
-; Total fan-out                               ; 1604                   ;
-; Average fan-out                             ; 3.15                   ;
+; Total fan-out                               ; 1472                   ;
+; Average fan-out                             ; 3.09                   ;
 +---------------------------------------------+------------------------+
 
 
@@ -249,11 +256,11 @@ applicable agreement for further details.
 +-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |top_de2                                              ; 316 (1)           ; 157 (0)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                                                                                ;              ;
+; |top_de2                                              ; 282 (1)           ; 157 (0)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 37   ; 0            ; |top_de2                                                                                                ;              ;
 ;    |depiece_simple:inst5|                             ; 17 (17)           ; 5 (5)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|depiece_simple:inst5                                                                           ;              ;
 ;    |gen6mhz:inst1|                                    ; 3 (3)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|gen6mhz:inst1                                                                                  ;              ;
-;    |sr_if:inst2|                                      ; 162 (0)           ; 65 (1)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2                                                                                    ;              ;
-;       |mux5:mux5_do2|                                 ; 3 (3)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
+;    |sr_if:inst2|                                      ; 135 (0)           ; 65 (1)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2                                                                                    ;              ;
+;       |mux5:mux5_do2|                                 ; 9 (9)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
 ;       |sr_tower:\generate_tower:0:tower_mod|          ; 49 (4)            ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
 ;          |bit4:\generate_bit4:0:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
@@ -264,7 +271,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:1:bit4_mod|             ; 10 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:1:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -273,10 +280,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
-;             |no210:no210_3|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_3  ;              ;
-;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_4  ;              ;
-;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|no210:no210_5  ;              ;
-;          |bit4:\generate_bit4:2:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:2:bit4_mod|             ; 10 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -285,6 +289,9 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_13 ;              ;
+;             |no210:no210_3|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|no210:no210_3  ;              ;
+;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|no210:no210_4  ;              ;
+;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|no210:no210_5  ;              ;
 ;          |bit4:\generate_bit4:3:bit4_mod|             ; 5 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6  ;              ;
@@ -330,8 +337,8 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
-;       |sr_tower:\generate_tower:4:tower_mod|          ; 110 (33)          ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod                                               ;              ;
-;          |bit4:\generate_bit4:0:bit4_mod|             ; 14 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
+;       |sr_tower:\generate_tower:4:tower_mod|          ; 77 (8)            ; 32 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod                                               ;              ;
+;          |bit4:\generate_bit4:0:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -341,11 +348,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13 ;              ;
-;             |no210:no210_2|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_2  ;              ;
-;             |no210:no210_3|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_3  ;              ;
-;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_4  ;              ;
-;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:0:bit4_mod|no210:no210_5  ;              ;
-;          |bit4:\generate_bit4:1:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:1:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -354,7 +357,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
+;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
 ;          |bit4:\generate_bit4:2:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6  ;              ;
@@ -375,7 +378,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:3:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:4:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:4:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -384,8 +387,8 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:5:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod                ;              ;
+;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:4:bit4_mod|mu210:mu210_13 ;              ;
+;          |bit4:\generate_bit4:5:bit4_mod|             ; 14 (0)            ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -394,7 +397,11 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13 ;              ;
+;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13 ;              ;
+;             |no210:no210_2|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|no210:no210_2  ;              ;
+;             |no210:no210_3|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|no210:no210_3  ;              ;
+;             |no210:no210_4|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|no210:no210_4  ;              ;
+;             |no210:no210_5|                           ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:5:bit4_mod|no210:no210_5  ;              ;
 ;          |bit4:\generate_bit4:6:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6  ;              ;
@@ -405,7 +412,7 @@ applicable agreement for further details.
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:6:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:7:bit4_mod|             ; 8 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:7:bit4_mod|             ; 6 (0)             ; 4 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 0 (0)             ; 1 (1)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -414,10 +421,13 @@ applicable agreement for further details.
 ;             |mu111:mu111_11|                          ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_1|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_13|                          ; 4 (4)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
+;             |mu210:mu210_13|                          ; 2 (2)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
 ;          |demux8_inv:demux8_inv_we_com|               ; 11 (11)           ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:4:tower_mod|demux8_inv:demux8_inv_we_com                  ;              ;
-;    |vga:inst3|                                        ; 133 (6)           ; 84 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                                                                                      ;              ;
-;       |vga_counter:counter|                           ; 31 (31)           ; 18 (18)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter                                                                  ;              ;
+;    |vga:inst3|                                        ; 126 (0)           ; 84 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3                                                                                      ;              ;
+;       |vga_counter:counter|                           ; 26 (6)            ; 18 (0)       ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter                                                                  ;              ;
+;          |vga_counter_10bit:pos_y_counter|            ; 11 (11)           ; 10 (10)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter                                  ;              ;
+;          |vga_counter_8bit:pos_x_counter|             ; 9 (9)             ; 8 (8)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter                                   ;              ;
+;       |vga_demux:mem_addr_demux|                      ; 5 (5)             ; 0 (0)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_demux:mem_addr_demux                                                             ;              ;
 ;       |vga_field_check:field_check|                   ; 6 (6)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_check:field_check                                                          ;              ;
 ;       |vga_field_trans:field_translation|             ; 14 (14)           ; 11 (11)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_trans:field_translation                                                    ;              ;
 ;       |vga_field_trans_reset:field_translation_reset| ; 14 (14)           ; 10 (10)      ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset                                        ;              ;
@@ -428,7 +438,7 @@ applicable agreement for further details.
 ;       |vga_score_check:score_check|                   ; 5 (5)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_score_check:score_check                                                          ;              ;
 ;       |vga_score_trans:score_translation|             ; 13 (13)           ; 9 (9)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_score_trans:score_translation                                                    ;              ;
 ;       |vga_sync:sync|                                 ; 6 (6)             ; 2 (2)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_sync:sync                                                                        ;              ;
-;       |vga_triggers:triggers|                         ; 8 (8)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_triggers:triggers                                                                ;              ;
+;       |vga_triggers:triggers|                         ; 7 (7)             ; 3 (3)        ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|vga:inst3|vga_triggers:triggers                                                                ;              ;
 +-------------------------------------------------------+-------------------+--------------+-------------+------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -540,12 +550,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]                                             ; Lost fanout                                                                                                     ;
 ; vga:inst3|vga_score_trans:score_translation|mem_addr_state[7]                                       ; Lost fanout                                                                                                     ;
 ; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[7]                                 ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]                                       ; Lost fanout                                                                                                     ;
 ; vga:inst3|vga_np_trans:np_translation|mem_addr_state[6]                                             ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]                                       ; Lost fanout                                                                                                     ;
+; vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]                                       ; Lost fanout                                                                                                     ;
 ; vga:inst3|vga_np_trans:np_translation|mem_addr_state[5]                                             ; Lost fanout                                                                                                     ;
+; vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]                                       ; Lost fanout                                                                                                     ;
+; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[6]                                 ; Lost fanout                                                                                                     ;
 ; vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]                                       ; Lost fanout                                                                                                     ;
-; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5..6]                              ; Lost fanout                                                                                                     ;
+; vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]                                 ; Lost fanout                                                                                                     ;
 ; Total Number of Removed Registers = 112                                                             ;                                                                                                                 ;
 +-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
@@ -572,11 +583,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 157   ;
-; Number of registers using Synchronous Clear  ; 91    ;
+; Number of registers using Synchronous Clear  ; 109   ;
 ; Number of registers using Synchronous Load   ; 13    ;
-; Number of registers using Asynchronous Clear ; 90    ;
+; Number of registers using Asynchronous Clear ; 72    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Clock Enable       ; 46    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -586,20 +597,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[0]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[4]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[0]                   ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[4]                   ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|mem_addr_state[3]             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[5] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]       ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|counter_state[2]              ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|counter_state[1]                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[2]             ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|mem_addr_state[7]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[1]                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]                   ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|mem_addr_state[2]             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[4]       ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|mem_addr_state[4] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans:field_translation|counter_state[0]              ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_score_trans:score_translation|counter_state[4]              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[1]  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans:np_translation|counter_state[1]                    ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[4]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top_de2|vga:inst3|mem_addr[0]                                                     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[4]  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top_de2|vga:inst3|vga_demux:mem_addr_demux|do[1]                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; en   ; Input ; Info     ; Stuck at VCC                                                   ;
++------+-------+----------+----------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -608,9 +628,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Sat Nov 30 18:09:53 2013
+    Info: Processing started: Tue Dec  3 11:42:28 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_10bit_arch.vhd
+    Info: Found design unit 1: vga_counter_10bit-vga_counter_10bit_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_10bit.vhd
+    Info: Found entity 1: vga_counter_10bit
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_8bit_arch.vhd
+    Info: Found design unit 1: vga_counter_8bit-vga_counter_8bit_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_counter_8bit.vhd
+    Info: Found entity 1: vga_counter_8bit
+Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_demux_arch.vhd
+    Info: Found design unit 1: vga_demux-vga_demux_behav
+Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_demux.vhd
+    Info: Found entity 1: vga_demux
+Info: Found 2 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_params.vhd
+    Info: Found design unit 1: vga_params
+    Info: Found design unit 2: vga_params-body
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans_arch.vhd
     Info: Found design unit 1: vga_score_trans-vga_score_trans_arch
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/vga_score_trans.vhd
@@ -673,9 +708,6 @@ Info: Found 1 design units, including 0 entities, in source file /home/epo3-user
     Info: Found design unit 1: sr_tower-sr_tower_behav
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/tower.vhd
     Info: Found entity 1: sr_tower
-Info: Found 2 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/params.vhd
-    Info: Found design unit 1: vga_params
-    Info: Found design unit 2: vga_params-body
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_arch.vhd
     Info: Found design unit 1: mux5-mux5_behav
 Info: Found 1 design units, including 1 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd
@@ -779,9 +811,9 @@ Info: Elaborating entity "top_de2" for the top level hierarchy
 Info: Elaborating entity "pre_vga_dac" for hierarchy "pre_vga_dac:inst"
 Info: Elaborating entity "gen6mhz" for hierarchy "gen6mhz:inst1"
 Info: Elaborating entity "vga" for hierarchy "vga:inst3"
-Warning (10492): VHDL Process Statement warning at vga_arch.vhd(260): signal "in_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at vga_arch.vhd(261): signal "mem_addr_score" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Elaborating entity "vga_counter" for hierarchy "vga:inst3|vga_counter:counter"
+Info: Elaborating entity "vga_counter_8bit" for hierarchy "vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter"
+Info: Elaborating entity "vga_counter_10bit" for hierarchy "vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter"
 Info: Elaborating entity "vga_sync" for hierarchy "vga:inst3|vga_sync:sync"
 Info: Elaborating entity "vga_triggers" for hierarchy "vga:inst3|vga_triggers:triggers"
 Info: Elaborating entity "vga_read" for hierarchy "vga:inst3|vga_read:read_and_output"
@@ -793,6 +825,7 @@ Info: Elaborating entity "vga_np_trans_reset" for hierarchy "vga:inst3|vga_np_tr
 Info: Elaborating entity "vga_np_check" for hierarchy "vga:inst3|vga_np_check:np_check"
 Info: Elaborating entity "vga_score_trans" for hierarchy "vga:inst3|vga_score_trans:score_translation"
 Info: Elaborating entity "vga_score_check" for hierarchy "vga:inst3|vga_score_check:score_check"
+Info: Elaborating entity "vga_demux" for hierarchy "vga:inst3|vga_demux:mem_addr_demux"
 Info: Elaborating entity "sr_if" for hierarchy "sr_if:inst2"
 Info: Elaborating entity "sr_tower" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod"
 Info: Elaborating entity "bit4" for hierarchy "sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod"
@@ -822,22 +855,22 @@ Info: 10 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[7]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_np_trans:np_translation|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
-    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "vga:inst3|vga_score_trans:score_translation|mem_addr_state[4]" lost all its fanouts during netlist optimizations.
     Info: Register "vga:inst3|vga_np_trans_reset:np_translation_reset|mem_addr_state[5]" lost all its fanouts during netlist optimizations.
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
-Info: Implemented 368 device resources after synthesis - the final resource count might be different
+Info: Implemented 334 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 35 output pins
-    Info: Implemented 331 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Implemented 297 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 269 megabytes
-    Info: Processing ended: Sat Nov 30 18:10:02 2013
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Processing ended: Tue Dec  3 11:42:35 2013
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
