@@ -13,6 +13,9 @@ O mask_select_1_0_0 mask_select(0)
 O ready ready
 O empty empty
 I start start
+O lut_start lut_start
+I lut_ready lut_ready
+I lut_error lut_error
 O write write
 O addr_7_0_7 addr(7)
 O addr_7_0_6 addr(6)
@@ -22,4 +25,4 @@ O addr_7_0_3 addr(3)
 O addr_7_0_2 addr(2)
 O addr_7_0_1 addr(1)
 O addr_7_0_0 addr(0)
-B data data
+I data_in data_in

@@ -6,10 +6,10 @@ architecture check_mask_behaviour of check_mask is
 	type typestate is (rust, startup, wait_for_lut, wait_for_ram, check, output);
 	signal state, next_state : typestate;
 	signal pixel, next_pixel : std_logic_vector(1 downto 0); 
-	signal next_empty : std_logic;	
+	signal next_empty, empty_s : std_logic;	
 
 begin	
-	--data_in <= 'Z';
+	empty <= empty_s;
 	process(clk)
 	begin
 		if (clk'event and clk = '1') then
@@ -18,7 +18,7 @@ begin
 			else
 				state <= next_state;
 				pixel <= next_pixel;
-				empty <= next_empty;
+				empty_s <= next_empty;
 			end if;
 		end if;
 	end process;
@@ -44,7 +44,7 @@ begin
 			   next_empty <= '0';
 			   ready <= '0';
 			   lut_start <= '1';
-			   next_pixel <= next_pixel;
+			   next_pixel <= pixel;
 			   mask_select <= pixel;
 			   addr <= "ZZZZZZZZ";
 			   next_state <= wait_for_lut;
@@ -53,7 +53,7 @@ begin
 			   next_empty <= '0';
 			   ready <= '0';
 			   lut_start <= '1';
-			   next_pixel <= next_pixel;
+			   next_pixel <= pixel;
 			   mask_select <= pixel;
 			   addr <= "ZZZZZZZZ";
 			   if(lut_ready = '1') then
@@ -70,7 +70,7 @@ begin
 			   next_empty <= '0';
 			   ready <= '0';
 			   lut_start <= '0';
-			   next_pixel <= next_pixel;
+			   next_pixel <= pixel;
 			   mask_select <= pixel;
 			   addr <= mask;
 			   next_state <= check;
@@ -98,11 +98,11 @@ begin
 			   end if;
 			when output =>
 			   write <= '0';
-			   next_empty <= next_empty;
+			   next_empty <= empty_s;
 			   ready <= '1';
 			   lut_start <= '0';
 			   addr <= "ZZZZZZZZ";
-			   next_pixel <= next_pixel;
+			   next_pixel <= pixel;
 			   mask_select <= pixel;
 			   if(start = '0') then
 			   	next_state <= rust;
@@ -112,6 +112,9 @@ begin
 		end case;
 	end process;
 end check_mask_behaviour;
+
+
+
 
 
 

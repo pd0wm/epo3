@@ -19,6 +19,7 @@
 # Loading work.check_mask_behaviour_cfg#1
 # Loading work.check_mask(check_mask_behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-add wave -position insertpoint sim:/checkmask_tb/check_mask_port/*
+run
+run
 run
 run
