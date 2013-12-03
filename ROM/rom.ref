@@ -1,0 +1,31 @@
+# Tabular Link File created on Sat 30 Nov 2013 15:29:20
+# By Program: design_flow
+# From Source: /home/epo3-user/Downloads/ROM/rom.lst
+# Clock_column: -1
+INP addr_6_0_6;
+INP addr_6_0_5;
+INP addr_6_0_4;
+INP addr_6_0_3;
+INP addr_6_0_2;
+INP addr_6_0_1;
+INP addr_6_0_0;
+OUT data_3_0_3;
+OUT data_3_0_2;
+OUT data_3_0_1;
+OUT data_3_0_0;
+PERIOD 900ns;
+TIME_UNIT 1.0e-10s;
+TABLE_FORMAT D<11c;
+DATA_SECTION
+             00<LLLLLLLllll
+           1000<LLLLLLHlllh
+           2000<HHLHLLHlllh
+           3000<HLLLHHHhllh
+           4000<LHLHHLHlhlh
+           5000<LLHLLHHlhhh
+           6000<HLLLHHHhllh
+           7000<LLHLHHHhhhl
+           8000<HLLLLLLllll
+           9000<HLLHHHHllll
+
+

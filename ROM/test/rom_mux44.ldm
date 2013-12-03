@@ -1,0 +1,7 @@
+:: no-origin mode LDM
+ms rom_mux44
+mc <bit1> rom_mux4 640 0
+mc <bit2> rom_mux4 mx 640 1022
+mc <bit3> rom_mux4 0 0
+mc <bit4> rom_mux4 mx 0 1022
+me
