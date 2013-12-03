@@ -95,22 +95,32 @@ begin
 			timer_2_reset     => timer_2_reset,
 			inputs            => inputs
 		);
-	
+
 	lbl_new_piece : process
 	begin
 		next_piece <= "001";
 		wait;
 	end process;
-	
+
 	lbl_check_mask : process
 	begin
 		check_empty <= '0';
 		check_ready <= '0';
 		wait until (check_start = '1');
-		wait for 100 ns;
+		wait for 50 ns;
 		check_ready <= '1';
 		check_empty <= '1';
 		wait until (check_start = '0');
+	end process;
+	
+	lbl_draw : process
+	begin
+		draw_erase_ready <= '0';
+		wait until (draw_erase_start = '1');
+		wait for 50 ns;
+		draw_erase_ready <= '1';
+		wait until (draw_erase_start = '0');
+	
 	end process;
 
 	clock : process
