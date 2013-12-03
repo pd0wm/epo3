@@ -113,14 +113,47 @@ begin
 		wait until (check_start = '0');
 	end process;
 	
+	lbl_clear_shift : process
+	begin
+		clear_shift_ready <= '0';
+		wait until (clear_shift_start = '1');
+		wait for 50 ns;
+		clear_shift_ready <= '1';
+		wait until (clear_shift_start = '0');
+	end process;
+	
+	
 	lbl_draw : process
 	begin
 		draw_erase_ready <= '0';
 		wait until (draw_erase_start = '1');
 		wait for 50 ns;
 		draw_erase_ready <= '1';
-		wait until (draw_erase_start = '0');
+		wait until (draw_erase_start = '0');	
+	end process;
 	
+	lbl_tmr1 : process
+	begin
+		timer_1_done <= '0';
+		wait until (timer_1_start = '1');
+		wait for 1000 ns;
+		timer_1_done <= '1';		
+		wait until (timer_1_start = '0');	
+	end process;
+	
+	lbl_tmr2 : process
+	begin
+		timer_2_done <= '0';
+		wait until (timer_2_start = '1');
+		wait for 1000 ns;
+		timer_2_done <= '1';		
+		wait until (timer_2_start = '0');	
+	end process;
+	
+	lbl_inpts : process
+	begin
+		inputs <= "0000000";
+		wait;
 	end process;
 
 	clock : process
