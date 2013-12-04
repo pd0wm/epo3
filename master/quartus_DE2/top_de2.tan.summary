@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.793 ns
-From           : piece_input[0]
-To             : piece_lut:inst7|cur_rom_addr[4]
+Actual Time    : 3.386 ns
+From           : piece_input[1]
+To             : piece_lut:inst7|cur_rom_addr[5]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,32 +15,72 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.149 ns
+Actual Time    : 11.578 ns
 From           : vga:inst3|vga_read:read_and_output|red_out
 To             : vga_r[0]
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
 
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.612 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.665 ns
+Actual Time    : 5.905 ns
 From           : rst
-To             : sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_data_in_reg[53]
 From Clock     : --
 To Clock       : clock_50mhz
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 131.30 MHz ( period = 7.616 ns )
+From           : sld_hub:auto_hub|irf_reg[1][4]
+To             : sld_hub:auto_hub|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 131.54 MHz ( period = 7.602 ns )
+Actual Time    : 145.48 MHz ( period = 6.874 ns )
 From           : de_piece:inst6|state.reset
 To             : sr_if:inst2|do1
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
+
+Type           : Clock Setup: 'rst'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 316.56 MHz ( period = 3.159 ns )
+From           : timer:inst9|count[2]
+To             : timer:inst9|count[7]
+From Clock     : rst
+To Clock       : rst
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock_50mhz'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : vga:inst3|vga_read:read_and_output|v_sync_out
+To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_data_in_reg[63]
+From Clock     : clock_50mhz
+To Clock       : clock_50mhz
+Failed Paths   : 60
 
 Type           : Total number of failed paths
 Slack          : 
@@ -50,7 +90,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 60
 
 --------------------------------------------------------------------------------------
 

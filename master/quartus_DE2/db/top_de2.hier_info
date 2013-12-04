@@ -7,7 +7,7 @@ rst => de_piece:inst6.rst
 rst => controller:inst4.rst
 rst => check_mask:inst5.rst
 rst => piece_lut:inst7.rst
-timer_1_debug => controller:inst4.timer_1_done
+rst => timer:inst9.timer_rst
 timer_2_debug => controller:inst4.timer_2_done
 piece_input[0] => controller:inst4.next_piece[0]
 piece_input[1] => controller:inst4.next_piece[1]
@@ -11245,5 +11245,26 @@ data_1 => output.DATAB
 data_2 => output.DATAA
 selector => output.OUTPUTSELECT
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|timer:inst9
+timer_clk => clk_sig.DATAB
+timer_vga_clk => clk_sig.DATAA
+timer_rst => clk_sig.OUTPUTSELECT
+timer_rst => lbl1.IN0
+timer_ctr_rst => lbl1.IN1
+timer_time[0] => Equal0.IN15
+timer_time[1] => Equal0.IN14
+timer_time[2] => Equal0.IN13
+timer_time[3] => Equal0.IN12
+timer_time[4] => Equal0.IN11
+timer_time[5] => Equal0.IN10
+timer_time[6] => Equal0.IN9
+timer_time[7] => Equal0.IN8
+timer_start => Selector0.IN3
+timer_start => Selector1.IN3
+timer_start => new_state.uit.DATAB
+timer_start => Selector2.IN1
+timer_done <= timer_done.DB_MAX_OUTPUT_PORT_TYPE
 
 

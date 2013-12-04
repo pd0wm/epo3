@@ -1,4 +1,11 @@
 
+State Machine - |top_de2|timer:inst9|state
+Name state.klaar state.hoog state.laag state.uit 
+state.uit 0 0 0 0 
+state.laag 0 0 1 1 
+state.hoog 0 1 0 1 
+state.klaar 1 0 0 1 
+
 State Machine - |top_de2|piece_lut:inst7|state
 Name state.output state.cord_overflow state.cord_calc state.wait_for_rom state.calc_rom_addr_2 state.calc_rom_addr_1 state.reset 
 state.reset 0 0 0 0 0 0 0 

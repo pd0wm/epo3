@@ -72,24 +72,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -488 912 -320 928)
-	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "timer_1_debug" (rect 5 0 76 11)(font "Arial" ))
-	(pt 168 8)
-	(drawing
-		(line (pt 92 12)(pt 117 12))
-		(line (pt 92 4)(pt 117 4))
-		(line (pt 121 8)(pt 168 8))
-		(line (pt 92 12)(pt 92 4))
-		(line (pt 117 4)(pt 121 8))
-		(line (pt 117 12)(pt 121 8))
-	)
-	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -544 928 -488 944))
-)
-(pin
-	(input)
-	(rect -488 928 -320 944)
+	(rect -520 920 -352 936)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "timer_2_debug" (rect 5 0 76 11)(font "Arial" ))
 	(pt 168 8)
@@ -102,7 +85,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
-	(annotation_block (location)(rect -544 944 -488 960))
+	(annotation_block (location)(rect -576 936 -520 952))
 )
 (pin
 	(output)
@@ -1022,6 +1005,63 @@ applicable agreement for further details.
 		(rectangle (rect 16 16 176 80))
 	)
 )
+(symbol
+	(rect -200 1112 40 1272)
+	(text "timer" (rect 5 0 29 11)(font "Arial" ))
+	(text "inst9" (rect 8 144 31 155)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "timer_clk" (rect 0 0 44 11)(font "Arial" ))
+		(text "timer_clk" (rect 21 27 65 38)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "timer_vga_clk" (rect 0 0 68 11)(font "Arial" ))
+		(text "timer_vga_clk" (rect 21 43 89 54)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "timer_rst" (rect 0 0 43 11)(font "Arial" ))
+		(text "timer_rst" (rect 21 59 64 70)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "timer_ctr_rst" (rect 0 0 62 11)(font "Arial" ))
+		(text "timer_ctr_rst" (rect 21 75 83 86)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "timer_time[7..0]" (rect 0 0 77 11)(font "Arial" ))
+		(text "timer_time[7..0]" (rect 21 91 98 102)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "timer_start" (rect 0 0 53 11)(font "Arial" ))
+		(text "timer_start" (rect 21 107 74 118)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "timer_done" (rect 0 0 54 11)(font "Arial" ))
+		(text "timer_done" (rect 149 27 203 38)(font "Arial" ))
+		(line (pt 240 32)(pt 224 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 144))
+	)
+)
 (connector
 	(pt 536 240)
 	(pt 464 240)
@@ -1111,10 +1151,6 @@ applicable agreement for further details.
 (connector
 	(pt 720 256)
 	(pt 800 256)
-)
-(connector
-	(pt 800 256)
-	(pt 800 152)
 )
 (connector
 	(pt 912 152)
@@ -1635,10 +1671,6 @@ applicable agreement for further details.
 )
 (connector
 	(pt -272 384)
-	(pt -272 800)
-)
-(connector
-	(pt -272 384)
 	(pt 464 384)
 )
 (connector
@@ -1649,18 +1681,6 @@ applicable agreement for further details.
 	(pt -240 816)
 	(pt -392 816)
 	(bus)
-)
-(connector
-	(pt -320 912)
-	(pt -320 920)
-)
-(connector
-	(pt -240 928)
-	(pt -320 928)
-)
-(connector
-	(pt -320 928)
-	(pt -320 936)
 )
 (connector
 	(pt 72 896)
@@ -1689,14 +1709,6 @@ applicable agreement for further details.
 (connector
 	(pt 72 880)
 	(pt 224 880)
-)
-(connector
-	(pt -320 912)
-	(pt -240 912)
-)
-(connector
-	(pt -256 400)
-	(pt -256 784)
 )
 (connector
 	(pt 792 368)
@@ -1774,6 +1786,155 @@ applicable agreement for further details.
 	(pt 720 472)
 	(pt 792 472)
 )
+(connector
+	(pt -256 1144)
+	(pt -200 1144)
+)
+(connector
+	(pt -256 400)
+	(pt -256 784)
+)
+(connector
+	(pt -256 784)
+	(pt -256 1144)
+)
+(connector
+	(pt -272 384)
+	(pt -272 800)
+)
+(connector
+	(pt 72 992)
+	(pt 104 992)
+)
+(connector
+	(pt 104 992)
+	(pt 104 1080)
+)
+(connector
+	(pt 104 1080)
+	(pt -216 1080)
+)
+(connector
+	(pt 72 976)
+	(pt 120 976)
+)
+(connector
+	(pt 120 1096)
+	(pt 120 976)
+)
+(connector
+	(pt 120 1096)
+	(pt -232 1096)
+)
+(connector
+	(pt -200 1176)
+	(pt -272 1176)
+)
+(connector
+	(pt -272 800)
+	(pt -272 1176)
+)
+(connector
+	(pt -216 1080)
+	(pt -216 1192)
+)
+(connector
+	(pt -200 1192)
+	(pt -216 1192)
+)
+(connector
+	(pt -200 1224)
+	(pt -232 1224)
+)
+(connector
+	(pt -232 1224)
+	(pt -232 1096)
+)
+(connector
+	(pt 88 1064)
+	(pt -240 1064)
+	(bus)
+)
+(connector
+	(pt -200 1208)
+	(pt -240 1208)
+	(bus)
+)
+(connector
+	(pt -240 1208)
+	(pt -240 1064)
+	(bus)
+)
+(connector
+	(pt 800 152)
+	(pt 800 256)
+)
+(connector
+	(pt 800 256)
+	(pt 800 344)
+)
+(connector
+	(pt 856 344)
+	(pt 800 344)
+)
+(connector
+	(pt 856 488)
+	(pt 856 344)
+)
+(connector
+	(pt 856 488)
+	(pt 1160 488)
+)
+(connector
+	(pt 1160 1576)
+	(pt 1160 488)
+)
+(connector
+	(pt -200 1160)
+	(pt -336 1160)
+)
+(connector
+	(pt -336 1160)
+	(pt -336 1576)
+)
+(connector
+	(pt -336 1576)
+	(pt 1160 1576)
+)
+(connector
+	(pt -312 912)
+	(pt -240 912)
+)
+(connector
+	(pt 40 1144)
+	(pt 72 1144)
+)
+(connector
+	(pt 72 1144)
+	(pt 72 1280)
+)
+(connector
+	(pt -312 1280)
+	(pt -312 912)
+)
+(connector
+	(pt -312 1280)
+	(pt 72 1280)
+)
+(connector
+	(pt -240 928)
+	(pt -352 928)
+)
+(connector
+	(pt 72 960)
+	(pt 88 960)
+	(bus)
+)
+(connector
+	(pt 88 960)
+	(pt 88 1064)
+	(bus)
+)
 (junction (pt 464 240))
 (junction (pt 480 224))
 (junction (pt 704 -16))
@@ -1790,3 +1951,6 @@ applicable agreement for further details.
 (junction (pt 400 904))
 (junction (pt 480 400))
 (junction (pt 464 384))
+(junction (pt -256 784))
+(junction (pt -272 800))
+(junction (pt 800 256))
