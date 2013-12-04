@@ -18,7 +18,7 @@ begin
 	lbl1 : process(clk)
 	begin
 		if (rising_edge(clk)) then
-			if (rst = '1') then
+			if rst = '1' then
 				state     <= reset;
 			else
 				state           <= new_state;
@@ -49,7 +49,7 @@ begin
 				new_ready       <= '0';
 				new_addr        <= "ZZZZZZZZ";
 				new_mask_select <= "ZZ";
-				new_lut_start   <= '0';
+				new_lut_start   <= 'Z';
 				new_block       <= "00";
 				new_data        <= 'Z';
 
@@ -101,18 +101,15 @@ begin
 
 				new_write       <= 'Z';
 				
-				new_lut_start   <= '0';
+				new_lut_start   <= 'Z';
 				new_mask_select <= "ZZ";
-				new_block       <= "00";
+				new_block       <= "ZZ";
 				new_addr        <= "ZZZZZZZZ";
 				new_data        <= 'Z';
 
 		end case;
 	end process;
 end behaviour;
-
-
-
 
 
 

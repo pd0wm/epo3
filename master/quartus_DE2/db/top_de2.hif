@@ -27561,26 +27561,6 @@ ENABLE
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-dc5665ab49d64e58ad102da0c78373
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 sld_signaltap
 # storage
 db|top_de2.(189).cnf
@@ -34944,43 +34924,6 @@ ENABLE
 -1
 2
 }
-# macro_sequence
-
-# end
-# entity
-de_piece
-# storage
-db|top_de2.(37).cnf
-db|top_de2.(37).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
-302216c171e525a08ca0a639ed291b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
-67763a11b285417dc337e6413a9a679b
-}
-# hierarchies {
-de_piece:inst6
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -53846,7 +53789,7 @@ ON
 }
 # include_file {
 |home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut-behaviour.vhd
-3374bd28e445ce9abfcdbd7df84156f0
+fa703d62ef42aae966e3789bb2cc232
 }
 # hierarchies {
 piece_lut:inst7
@@ -53854,6 +53797,63 @@ piece_lut:inst7
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+de_piece
+# storage
+db|top_de2.(37).cnf
+db|top_de2.(37).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
+ce5230727a809b9bd8e1ea9a842ee30
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
+be61499d791f6f5fe85c628d5b6c4ba8
+}
+# hierarchies {
+de_piece:inst6
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+ab116f8f73f4cc31b86c4b91b91d76
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end

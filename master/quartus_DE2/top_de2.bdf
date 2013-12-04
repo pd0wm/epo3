@@ -57,7 +57,7 @@ applicable agreement for further details.
 	(input)
 	(rect -560 808 -392 824)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "piece_input[2..0]" (rect 5 0 87 11)(font "Arial" ))
+	(text "piece_input[2..0]" (rect 5 0 86 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -74,7 +74,7 @@ applicable agreement for further details.
 	(input)
 	(rect -488 912 -320 928)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "timer_1_debug" (rect 5 0 77 11)(font "Arial" ))
+	(text "timer_1_debug" (rect 5 0 76 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -91,7 +91,7 @@ applicable agreement for further details.
 	(input)
 	(rect -488 928 -320 944)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "timer_2_debug" (rect 5 0 77 11)(font "Arial" ))
+	(text "timer_2_debug" (rect 5 0 76 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -358,7 +358,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 560 424 712 584)
+	(rect 568 424 720 584)
 	(text "sr_if" (rect 5 0 26 11)(font "Arial" ))
 	(text "inst2" (rect 8 144 31 155)(font "Arial" ))
 	(port
@@ -1153,42 +1153,12 @@ applicable agreement for further details.
 	(pt 520 368)
 )
 (connector
-	(pt 792 472)
-	(pt 792 368)
-)
-(connector
 	(pt 480 72)
 	(pt 480 224)
 )
 (connector
 	(pt 464 32)
 	(pt 464 240)
-)
-(connector
-	(pt 464 472)
-	(pt 560 472)
-)
-(connector
-	(pt 704 472)
-	(pt 712 472)
-)
-(connector
-	(pt 712 472)
-	(pt 792 472)
-)
-(connector
-	(pt 560 536)
-	(pt 416 536)
-	(bus)
-)
-(connector
-	(pt 416 168)
-	(pt 416 536)
-	(bus)
-)
-(connector
-	(pt 480 456)
-	(pt 560 456)
 )
 (connector
 	(pt 480 1104)
@@ -1207,10 +1177,6 @@ applicable agreement for further details.
 	(pt 480 648)
 )
 (connector
-	(pt 480 456)
-	(pt 480 648)
-)
-(connector
 	(pt 480 648)
 	(pt 480 824)
 )
@@ -1221,10 +1187,6 @@ applicable agreement for further details.
 (connector
 	(pt 512 840)
 	(pt 464 840)
-)
-(connector
-	(pt 464 472)
-	(pt 464 664)
 )
 (connector
 	(pt 512 1120)
@@ -1356,15 +1318,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 560 504)
-	(pt 504 504)
-)
-(connector
-	(pt 560 520)
-	(pt 520 520)
-	(bus)
-)
-(connector
 	(pt 760 728)
 	(pt 816 728)
 	(bus)
@@ -1375,11 +1328,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 520 600)
-	(pt 520 520)
-	(bus)
-)
-(connector
 	(pt 816 600)
 	(pt 816 728)
 	(bus)
@@ -1393,10 +1341,6 @@ applicable agreement for further details.
 	(pt 520 600)
 	(pt 816 600)
 	(bus)
-)
-(connector
-	(pt 504 616)
-	(pt 504 504)
 )
 (connector
 	(pt 504 616)
@@ -1546,22 +1490,6 @@ applicable agreement for further details.
 	(pt 488 584)
 )
 (connector
-	(pt 560 488)
-	(pt 488 488)
-)
-(connector
-	(pt 488 488)
-	(pt 488 584)
-)
-(connector
-	(pt 712 456)
-	(pt 736 456)
-)
-(connector
-	(pt 736 456)
-	(pt 736 568)
-)
-(connector
 	(pt 736 568)
 	(pt 440 568)
 )
@@ -1702,10 +1630,6 @@ applicable agreement for further details.
 	(pt 480 400)
 )
 (connector
-	(pt 480 400)
-	(pt 480 456)
-)
-(connector
 	(pt -240 800)
 	(pt -272 800)
 )
@@ -1720,10 +1644,6 @@ applicable agreement for further details.
 (connector
 	(pt 464 240)
 	(pt 464 384)
-)
-(connector
-	(pt 464 384)
-	(pt 464 472)
 )
 (connector
 	(pt -240 816)
@@ -1778,10 +1698,85 @@ applicable agreement for further details.
 	(pt -256 400)
 	(pt -256 784)
 )
+(connector
+	(pt 792 368)
+	(pt 792 472)
+)
+(connector
+	(pt 416 168)
+	(pt 416 536)
+	(bus)
+)
+(connector
+	(pt 520 600)
+	(pt 520 520)
+	(bus)
+)
+(connector
+	(pt 504 616)
+	(pt 504 504)
+)
+(connector
+	(pt 488 584)
+	(pt 488 488)
+)
+(connector
+	(pt 736 456)
+	(pt 720 456)
+)
+(connector
+	(pt 736 568)
+	(pt 736 456)
+)
+(connector
+	(pt 480 400)
+	(pt 480 456)
+)
+(connector
+	(pt 480 456)
+	(pt 480 648)
+)
+(connector
+	(pt 464 384)
+	(pt 464 472)
+)
+(connector
+	(pt 464 472)
+	(pt 464 664)
+)
+(connector
+	(pt 480 456)
+	(pt 568 456)
+)
+(connector
+	(pt 464 472)
+	(pt 568 472)
+)
+(connector
+	(pt 488 488)
+	(pt 568 488)
+)
+(connector
+	(pt 504 504)
+	(pt 568 504)
+)
+(connector
+	(pt 520 520)
+	(pt 568 520)
+	(bus)
+)
+(connector
+	(pt 416 536)
+	(pt 568 536)
+	(bus)
+)
+(connector
+	(pt 720 472)
+	(pt 792 472)
+)
 (junction (pt 464 240))
 (junction (pt 480 224))
 (junction (pt 704 -16))
-(junction (pt 712 472))
 (junction (pt 480 456))
 (junction (pt 480 824))
 (junction (pt 480 648))

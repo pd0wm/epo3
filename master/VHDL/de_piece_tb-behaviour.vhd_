@@ -38,7 +38,7 @@ END component de_piece;
 	lut_ready <= '0' after 0 ns, '1' after 4000 ns, '0' after 4950 ns, '1' after 8200 ns, '0' after 8950 ns, '1' after 15000 ns, '0' after 16000 ns;
 	  data <= '1' after 00 ns, 'Z' after 1000 ns, '0' after 5000 ns, 'Z' after 7800 ns, '1' after 10000 ns, 'Z' after 13800 ns;
 	  
-dut: de_piece port map(
+fghjk: de_piece port map(
   clk=>clk,
   rst =>rst,
   mask => mask,
@@ -53,9 +53,6 @@ dut: de_piece port map(
   data => data
   );
 end behaviour;
-
-
-
 
 
 

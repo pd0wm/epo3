@@ -60,8 +60,8 @@ cur_state.lock_timer_start 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 cur_state.game_over 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |top_de2|de_piece:inst6|state
-Name state.lut_lookup state.done state.writing state.waiting 
-state.waiting 0 0 0 0 
+Name state.lut_lookup state.done state.writing state.reset 
+state.reset 0 0 0 0 
 state.writing 0 0 1 1 
 state.done 0 1 0 1 
 state.lut_lookup 1 0 0 1 

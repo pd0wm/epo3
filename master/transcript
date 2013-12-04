@@ -7,115 +7,19 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work piece_lut_tb_behaviour_cfg 
-# ** Note: (vsim-3812) Design is being optimized...
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work de_piece_testbench_behaviour_cfg 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-13) Recompile work.de_piece_testbench_behaviour_cfg because work.de_piece_testbench(behaviour) has changed.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.piece_lut_tb_behaviour_cfg#1
-# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
-# Loading work.piece_lut_behaviour_cfg#1
-# Loading work.piece_lut(piece_lut_behaviour)#1
-# ** Warning: (vsim-8683) Uninitialized out port /piece_lut_tb/piece_lut_port/rom_addr(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
+# Loading work.de_piece_testbench_behaviour_cfg#1
+# Loading work.de_piece_testbench(behaviour)#1
+# Loading work.de_piece_behaviour_cfg#1
+# Loading work.de_piece(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 1000 ns
+run 10000 ns
 add wave -position insertpoint  \
-sim:/piece_lut_tb/piece_lut_port/state \
-sim:/piece_lut_tb/piece_lut_port/next_state
-restart; run 1000 ns
-# ** Warning: (vsim-8683) Uninitialized out port /piece_lut_tb/piece_lut_port/rom_addr(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-add wave -position insertpoint  \
-sim:/piece_lut_tb/piece_lut_port/prev_start
-restart; run 1000 ns
-# ** Warning: (vsim-8683) Uninitialized out port /piece_lut_tb/piece_lut_port/rom_addr(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-#  Trace back: bad window path name ""
-#     while executing
-# "winfo rootx $widget"
-#     (procedure "drag" line 14)
-#     invoked from within
-# "drag .main_pane.wave.interior.cs.body.pw.wf.grid.row0,name.data"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval [linsert $args 0 $cmd]"
-#     (procedure "dnd" line 2)
-#     invoked from within
-# "dnd drag $w "
-#     (procedure "TreeB1Motion" line 13)
-#     invoked from within
-# "TreeB1Motion .main_pane.wave.interior.cs.body.pw.wf.grid.row0,name.data 272 257 1274 "
-#     (command bound to event) 
-#    <2: ::tkerror {bad window path name ""} 
-#    <1: ::bgerror {bad window path name ""} 
-restart; run 1000 ns
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.piece_lut_behaviour_cfg because work.piece_lut(piece_lut_behaviour) has changed.
-# ** Warning: (vopt-12) Recompile work.piece_lut_tb_behaviour_cfg after work.piece_lut_behaviour_cfg is recompiled.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.piece_lut_tb_behaviour_cfg#1
-# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
-# Loading work.piece_lut_behaviour_cfg#1
-# Loading work.piece_lut(piece_lut_behaviour)#1
-# ** Warning: (vsim-8683) Uninitialized out port /piece_lut_tb/piece_lut_port/rom_addr(6 downto 0) has no driver.
-# This port will contribute value (UUUUUUU) to the signal network.
-
-restart; run 1000 ns
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.piece_lut_behaviour_cfg because work.piece_lut(piece_lut_behaviour) has changed.
-# ** Warning: (vopt-12) Recompile work.piece_lut_tb_behaviour_cfg after work.piece_lut_behaviour_cfg is recompiled.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.piece_lut_tb_behaviour_cfg#1
-# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
-# Loading work.piece_lut_behaviour_cfg#1
-# Loading work.piece_lut(piece_lut_behaviour)#1
-restart; run 1000 ns
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.piece_lut_behaviour_cfg because work.piece_lut(piece_lut_behaviour) has changed.
-# ** Warning: (vopt-12) Recompile work.piece_lut_tb_behaviour_cfg after work.piece_lut_behaviour_cfg is recompiled.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.piece_lut_tb_behaviour_cfg#1
-# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
-# Loading work.piece_lut_behaviour_cfg#1
-# Loading work.piece_lut(piece_lut_behaviour)#1
-#  Trace back: bad window path name ""
-#     while executing
-# "winfo rootx $widget"
-#     (procedure "drag" line 14)
-#     invoked from within
-# "drag .main_pane.wave.interior.cs.body.pw.wf.grid.row0,name.data"
-#     ("eval" body line 1)
-#     invoked from within
-# "eval [linsert $args 0 $cmd]"
-#     (procedure "dnd" line 2)
-#     invoked from within
-# "dnd drag $w "
-#     (procedure "TreeB1Motion" line 13)
-#     invoked from within
-# "TreeB1Motion .main_pane.wave.interior.cs.body.pw.wf.grid.row0,name.data 272 1337 1272 "
-#     (command bound to event) 
-#    <2: ::tkerror {bad window path name ""} 
-#    <1: ::bgerror {bad window path name ""} 
-restart; run 1000 ns
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Warning: (vopt-13) Recompile work.piece_lut_behaviour_cfg because work.piece_lut(piece_lut_behaviour) has changed.
-# ** Warning: (vopt-12) Recompile work.piece_lut_tb_behaviour_cfg after work.piece_lut_behaviour_cfg is recompiled.
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.piece_lut_tb_behaviour_cfg#1
-# Loading work.piece_lut_tb(piece_lut_tb_behaviour)#1
-# Loading work.piece_lut_behaviour_cfg#1
-# Loading work.piece_lut(piece_lut_behaviour)#1
+sim:/de_piece_testbench/dut/state
+restart; run 10us
