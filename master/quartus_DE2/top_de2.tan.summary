@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.761 ns
+Actual Time    : 4.793 ns
 From           : piece_input[0]
-To             : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|acq_trigger_in_reg[60]
+To             : piece_lut:inst7|cur_rom_addr[4]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,49 +15,29 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.717 ns
-From           : vga:inst3|vga_read:read_and_output|v_sync_out
-To             : vga_vsync
+Actual Time    : 10.149 ns
+From           : vga:inst3|vga_read:read_and_output|red_out
+To             : vga_r[0]
 From Clock     : clock_50mhz
-To Clock       : --
-Failed Paths   : 0
-
-Type           : Worst-case tpd
-Slack          : N/A
-Required Time  : None
-Actual Time    : 2.612 ns
-From           : altera_internal_jtag~TDO
-To             : altera_reserved_tdo
-From Clock     : --
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.928 ns
-From           : altera_internal_jtag~TDIUTAP
-To             : sld_hub:auto_hub|irsr_reg[8]
+Actual Time    : 1.665 ns
+From           : rst
+To             : sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT
 From Clock     : --
-To Clock       : altera_internal_jtag~TCKUTAP
-Failed Paths   : 0
-
-Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 132.59 MHz ( period = 7.542 ns )
-From           : sld_hub:auto_hub|irf_reg[1][4]
-To             : sld_hub:auto_hub|tdo
-From Clock     : altera_internal_jtag~TCKUTAP
-To Clock       : altera_internal_jtag~TCKUTAP
+To Clock       : clock_50mhz
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 139.10 MHz ( period = 7.189 ns )
-From           : controller:inst4|cur_state.reset_timers_a_1
-To             : piece_lut:inst7|cur_y_out[2]
+Actual Time    : 131.54 MHz ( period = 7.602 ns )
+From           : de_piece:inst6|state.reset
+To             : sr_if:inst2|do1
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0

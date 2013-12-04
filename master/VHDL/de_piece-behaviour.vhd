@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 architecture behaviour of de_piece is
-	type sending_state is (reset, writing, done, lut_lookup);
+	type sending_state is (reset, waiting_1, writing, waiting_2, done, lut_lookup);
 
 	signal state, new_state                 : sending_state;
 	signal cur_block, new_block             : unsigned(1 downto 0);
@@ -63,6 +63,8 @@ begin
 					new_state <= reset;
 				end if;
 
+
+
 			when lut_lookup =>
 				new_write       <= '0';
 				new_lut_start   <= '1';
@@ -73,11 +75,23 @@ begin
 				new_data  <= cur_data;
 				new_block <= cur_block;
 
-				if (lut_ready = '1') then
-					new_state <= writing;
+				new_state <= waiting_1;
+			when waiting_1 =>
+				if (lut_ready = '0') then
+					new_state <= waiting_1;
 				else
-					new_state <= lut_lookup;
+					new_state <= writing;
 				end if;
+
+
+				new_write       <= cur_write;
+				new_lut_start   <= cur_lut_start;
+				new_mask_select <= cur_mask_select;
+				new_block       <= cur_block;
+				new_addr        <= cur_addr;
+				new_data        <= cur_data;
+				new_ready <= cur_ready;
+				
 
 			when writing =>
 				new_write       <= '1';
@@ -91,8 +105,24 @@ begin
 				if (cur_block = 3) then
 					new_state <= done;
 				else
+					new_state <= waiting_2;
+				end if;
+
+			when waiting_2 =>
+				if (lut_ready = '1') then
+					new_state <= waiting_2;
+				else
 					new_state <= lut_lookup;
 				end if;
+
+
+				new_write       <= cur_write;
+				new_lut_start   <= cur_lut_start;
+				new_mask_select <= cur_mask_select;
+				new_block       <= cur_block;
+				new_addr        <= cur_addr;
+				new_data        <= cur_data;
+				new_ready <= cur_ready;
 
 			when done =>
 				if (start = '1') then
@@ -114,6 +144,15 @@ begin
 		end case;
 	end process;
 end behaviour;
+
+
+
+
+
+
+
+
+
 
 
 
