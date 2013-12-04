@@ -2654,43 +2654,6 @@ rom:inst8|rom_mux24:result|rom_mux2:bit4
 
 # end
 # entity
-check_mask
-# storage
-db|top_de2.(39).cnf
-db|top_de2.(39).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|CheckMask.vhd
-eb581f27818c2921e2e3c5fbb4eef45
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|check_mask-behaviour.vhd
-9cc177d48fbebfc931fe72efad4cf28f
-}
-# hierarchies {
-check_mask:inst5
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 sld_signaltap
 # storage
 db|top_de2.(46).cnf
@@ -53801,6 +53764,63 @@ piece_lut:inst7
 
 # end
 # entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+ab116f8f73f4cc31b86c4b91b91d76
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+check_mask
+# storage
+db|top_de2.(39).cnf
+db|top_de2.(39).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|CheckMask.vhd
+eb581f27818c2921e2e3c5fbb4eef45
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|check_mask-behaviour.vhd
+e037c675c599b0e83e88e2ad23bf623
+}
+# hierarchies {
+check_mask:inst5
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 de_piece
 # storage
 db|top_de2.(37).cnf
@@ -53826,7 +53846,7 @@ ON
 }
 # include_file {
 |home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
-be61499d791f6f5fe85c628d5b6c4ba8
+1ce3c62206c676d8cfdeee3a4ea6a31
 }
 # hierarchies {
 de_piece:inst6
@@ -53834,26 +53854,6 @@ de_piece:inst6
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-ab116f8f73f4cc31b86c4b91b91d76
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end

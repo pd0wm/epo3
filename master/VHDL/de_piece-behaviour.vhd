@@ -20,31 +20,35 @@ begin
 		if (rising_edge(clk)) then
 			if (rst = '1') then
 				state     <= reset;
-			else
-				state           <= new_state;
-				cur_block       <= new_block;
-				cur_ready       <= new_ready;
-				cur_addr        <= new_addr;
-				cur_mask_select <= new_mask_select;
-				cur_lut_start   <= new_lut_start;
-				cur_data        <= new_data;
-				cur_write       <= new_write;
 			end if;
-
-			ready       <= cur_ready;
-			mask_select <= cur_mask_select;
-			lut_start   <= cur_lut_start;
-			write       <= cur_write;
-			addr        <= cur_addr;
-			data        <= cur_data;
-
+			
+			state           <= new_state;
+			cur_block       <= new_block;
+			cur_ready       <= new_ready;
+			cur_addr        <= new_addr;
+			cur_mask_select <= new_mask_select;
+			cur_lut_start   <= new_lut_start;
+			cur_data        <= new_data;
+			cur_write       <= new_write;			
 		end if;
 	end process;
 
 	lbl2 : process(state, clk, cur_block, new_block, cur_ready, new_ready, cur_addr, new_addr, cur_mask_select, new_mask_select, cur_lut_start, new_lut_start, cur_data, new_data, cur_write, new_write)
 	begin
-		case state is
+		ready       <= cur_ready;
+		mask_select <= cur_mask_select;
+		lut_start   <= cur_lut_start;
+		write       <= cur_write;
+		addr        <= cur_addr;
+		data        <= cur_data;
+	
+	case state is
 			when reset =>
+				addr <= "ZZZZZZZZ";
+				write <= 'Z';
+				mask_select <= "ZZ";
+				data <= 'Z';
+
 				new_write       <= 'Z';
 				new_ready       <= '0';
 				new_addr        <= "ZZZZZZZZ";
@@ -110,6 +114,12 @@ begin
 		end case;
 	end process;
 end behaviour;
+
+
+
+
+
+
 
 
 

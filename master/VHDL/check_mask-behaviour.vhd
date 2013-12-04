@@ -39,6 +39,8 @@ begin
 				else
 					next_state <= rust;
 				end if;
+
+			next_state <= rust;
 			when startup =>
 			   write <= '0';
 			   next_empty <= '0';
@@ -112,6 +114,9 @@ begin
 		end case;
 	end process;
 end check_mask_behaviour;
+
+
+
 
 
 
