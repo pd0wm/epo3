@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture vga_field_trans_arch of vga_field_trans is
 	signal counter_state, counter_new   : std_logic_vector(field_counter_block_width_len-1 downto 0);
-	signal mem_addr_half : std_logic_vector(mem_addr_len - 1 downto 0);
+	signal mem_addr_uncompressed : std_logic_vector(mem_addr_len - 1 downto 0);
 	signal mem_addr_enable, mem_addr_reset : std_logic;
 	
 	
@@ -19,13 +19,15 @@ architecture vga_field_trans_arch of vga_field_trans is
 			 val     : out std_logic_vector(7 downto 0));
 	end component vga_counter_8bitset;
 begin
+	mem_addr_uncompressed <= '0' & mem_addr_reset_in & '0' & '0' & '0'; -- Bit shift
+
 	mem_addr_counter : vga_counter_8bitset
 		port map(clk     => clk,
 			     rst     => rst,
 			     rst_ext => '0',
 			     en      => mem_addr_enable,
 			     set     => mem_addr_reset,
-			     di      => mem_addr_reset_in,
+			     di      => mem_addr_uncompressed,
 			     val     => mem_addr_out);
 
 	process (counter_state, in_field_in, new_line_in, new_frame_in)

@@ -69,19 +69,20 @@ architecture vga_arch of vga is
 	component vga_field_trans
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
-			 mem_addr_reset_in : in  std_logic_vector(mem_addr_len - 1 downto 0);
+			 mem_addr_reset_in : in  std_logic_vector(3 downto 0);
 			 mem_addr_out      : out std_logic_vector(mem_addr_len - 1 downto 0);
 			 in_field_in       : in  std_logic;
 			 new_line_in       : in  std_logic;
 			 new_frame_in      : in  std_logic);
 	end component vga_field_trans;
 
-	signal mem_addr_reset_field, mem_addr_field : std_logic_vector(mem_addr_len - 1 downto 0);
+	signal mem_addr_field : std_logic_vector(mem_addr_len - 1 downto 0);
+	signal mem_addr_reset_field : std_logic_vector(3 downto 0);
 
 	component vga_field_trans_reset
 		port(clk                : in  std_logic;
 			 rst                : in  std_logic;
-			 mem_addr_reset_out : out std_logic_vector(mem_addr_len - 1 downto 0);
+			 mem_addr_reset_out : out std_logic_vector(3 downto 0);
 			 end_field_line_in  : in  std_logic;
 			 end_frame_in       : in  std_logic);
 	end component vga_field_trans_reset;
@@ -102,19 +103,20 @@ architecture vga_arch of vga is
 	component vga_np_trans
 		port(clk               : in  std_logic;
 			 rst               : in  std_logic;
-			 mem_addr_reset_in : in  std_logic_vector(mem_addr_len - 1 downto 0);
+			 mem_addr_reset_in : in  std_logic_vector(1 downto 0);
 			 mem_addr_out      : out std_logic_vector(mem_addr_len - 1 downto 0);
 			 in_np_in          : in  std_logic;
 			 new_line_in       : in  std_logic;
 			 new_frame_in      : in  std_logic);
 	end component vga_np_trans;
 
-	signal mem_addr_reset_np, mem_addr_np : std_logic_vector(mem_addr_len - 1 downto 0);
+	signal mem_addr_np : std_logic_vector(mem_addr_len - 1 downto 0);
+	signal mem_addr_reset_np : std_logic_vector(1 downto 0);
 
 	component vga_np_trans_reset
 		port(clk                : in  std_logic;
 			 rst                : in  std_logic;
-			 mem_addr_reset_out : out std_logic_vector(mem_addr_len - 1 downto 0);
+			 mem_addr_reset_out : out std_logic_vector(1 downto 0);
 			 end_np_line_in     : in  std_logic;
 			 end_frame_in       : in  std_logic);
 	end component vga_np_trans_reset;
@@ -219,55 +221,53 @@ begin
 
 	-- NP		     
 
---	np_translation : vga_np_trans
---		port map(clk               => clk,
---			     rst               => rst,
---			     mem_addr_reset_in => mem_addr_reset_np,
---			     mem_addr_out      => mem_addr_np,
---			     in_np_in          => in_np,
---			     new_line_in       => new_line,
---			     new_frame_in      => new_frame);
---
---	np_translation_reset : vga_np_trans_reset
---		port map(clk                => clk,
---			     rst                => rst,
---			     mem_addr_reset_out => mem_addr_reset_np,
---			     end_np_line_in     => end_np_line,
---			     end_frame_in       => end_frame);
---
---	np_check : vga_np_check
---		port map(clk             => clk,
---			     rst             => rst,
---			     pos_x_in        => pos_x,
---			     pos_y_in        => pos_y,
---			     in_np_out       => in_np,
---			     end_np_line_out => end_np_line);
+	np_translation : vga_np_trans
+		port map(clk               => clk,
+			     rst               => rst,
+			     mem_addr_reset_in => mem_addr_reset_np,
+			     mem_addr_out      => mem_addr_np,
+			     in_np_in          => in_np,
+			     new_line_in       => new_line,
+			     new_frame_in      => new_frame);
+
+	np_translation_reset : vga_np_trans_reset
+		port map(clk                => clk,
+			     rst                => rst,
+			     mem_addr_reset_out => mem_addr_reset_np,
+			     end_np_line_in     => end_np_line,
+			     end_frame_in       => end_frame);
+
+	np_check : vga_np_check
+		port map(clk             => clk,
+			     rst             => rst,
+			     pos_x_in        => pos_x,
+			     pos_y_in        => pos_y,
+			     in_np_out       => in_np,
+			     end_np_line_out => end_np_line);
 
 	-- SCORE
---
---	score_translation : vga_score_trans
---		port map(clk               => clk,
---			     rst               => rst,
---			     mem_addr_out      => mem_addr_score,
---			     end_score_line_in => end_score_line,
---			     end_frame_in      => end_frame);
---
---	score_check : vga_score_check
---		port map(clk                => clk,
---			     rst                => rst,
---			     pos_x_in           => pos_x,
---			     pos_y_in           => pos_y,
---			     in_score_out       => in_score,
---			     end_score_line_out => end_score_line);
 	
---	mem_addr_demux : vga_demux
---		port map(def => mem_addr_field,
---			     s1  => in_np,
---			     di1 => mem_addr_np,
---			     s2  => in_score,
---			     di2 => mem_addr_score,
---			     do  => mem_addr);
+	score_translation : vga_score_trans
+		port map(clk               => clk,
+			     rst               => rst,
+			     mem_addr_out      => mem_addr_score,
+			     end_score_line_in => end_score_line,
+			     end_frame_in      => end_frame);
 
-	mem_addr <= mem_addr_field;
+	score_check : vga_score_check
+		port map(clk                => clk,
+			     rst                => rst,
+			     pos_x_in           => pos_x,
+			     pos_y_in           => pos_y,
+			     in_score_out       => in_score,
+			     end_score_line_out => end_score_line);
+	
+	mem_addr_demux : vga_demux
+		port map(def => mem_addr_field,
+			     s1  => in_np,
+			     di1 => mem_addr_np,
+			     s2  => in_score,
+			     di2 => mem_addr_score,
+			     do  => mem_addr);
 
 end;

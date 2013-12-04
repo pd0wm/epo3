@@ -3,30 +3,29 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.vga_params.all;
 
------------------------------------------------ THIS MODULE ASSUMES THE MEMORY ADDRESS LENGTH IS 8 -------------------
+-- Important:
+-- THIS MODULE ASSUMES THE MEMORY ADDRESS LENGTH IS 8 AND HEIGHT IS 16 (4 bits)
 
 architecture vga_field_trans_reset_arch of vga_field_trans_reset is
 	signal counter_state, counter_new   : std_logic_vector(field_counter_block_height_len - 1 downto 0);
-	signal mem_addr_compressed : std_logic_vector(4 downto 0);
 	
 	signal mem_addr_reset, mem_addr_enable : std_logic;
 
-	component vga_counter_5bit
+	component vga_counter_4bit
 		port(clk     : in  std_logic;
 			 rst     : in  std_logic;
 			 rst_ext : in  std_logic;
 			 en      : in  std_logic;
-			 val     : out std_logic_vector(4 downto 0));
-	end component vga_counter_5bit;
+			 val     : out std_logic_vector(3 downto 0));
+	end component vga_counter_4bit;
 begin
-	mem_addr_reset_out <= mem_addr_compressed & '0' & '0' & '0'; -- Manual bitshift for ultra condense implementation :D
 
-	mem_addr_counter : vga_counter_5bit
+	mem_addr_counter : vga_counter_4bit
 		port map(clk     => clk,
 			     rst     => rst,
 			     rst_ext => mem_addr_reset,
 			     en      => mem_addr_enable,
-			     val     => mem_addr_compressed);
+			     val     => mem_addr_reset_out);
 
 	process(counter_state, end_field_line_in, end_frame_in)
 	begin
@@ -59,3 +58,8 @@ begin
 		end if;
 	end process;
 end;
+
+
+
+
+

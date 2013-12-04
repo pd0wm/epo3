@@ -4,12 +4,12 @@ six
 ------ opening seadif ------
 ------ checking your circuit 'vga' ------
 ------ circuit 'vga' is still up-to-date ------
------- checking match with placement layout 'Tmpvga21891' ------
------- reading nelsis layout-cell 'Tmpvga21891' ------
------- writing nelsis 'Tmpvga21891' as sdflay 'Tmp_Cell_(vga(vga(test)))' ------
+------ checking match with placement layout 'Tmpvga777' ------
+------ reading nelsis layout-cell 'Tmpvga777' ------
+------ writing nelsis 'Tmpvga777' as sdflay 'Tmp_Cell_(vga(vga(test)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f vga -c vga -o Tmp_Cell_ -d Tmp_Cell_ 
 WARNING: routing is not 100% successful
------- converting result back into nelsis as cell 'Tmpvga21891' ------
-calling program: nelsea -rLH -f vga -c vga -l Tmp_Cell_ Tmpvga21891 
+------ converting result back into nelsis as cell 'Tmpvga777' ------
+calling program: nelsea -rLH -f vga -c vga -l Tmp_Cell_ Tmpvga777 
 ------ sea: task completed ------

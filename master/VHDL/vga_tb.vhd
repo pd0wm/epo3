@@ -4,7 +4,8 @@ use ieee.numeric_std.all;
 use work.vga_params.all;
 
 entity vga_tb is
-	constant clk_period : time := 20 ns;
+	constant clk_period : time := 200 ns;
+	constant initial_offset : time := 50 ns;
 end entity;
 
 architecture vga_tb_arch of vga_tb is
@@ -62,8 +63,17 @@ begin
 		end if;
 	end process;
 
-	rst <= '1', '0' after clk_period;
+	rst <= '1', '0' after clk_period*4 - initial_offset;
 end;
+
+
+
+
+
+
+
+
+
 
 
 

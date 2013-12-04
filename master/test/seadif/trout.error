@@ -1,5 +1,5 @@
 This is the file 'seadif/trout.error' which was created by
-the program 'trout' on Tue Dec  3 18:01:30 2013
+the program 'trout' on Tue Dec  3 21:02:55 2013
 Trout was verifying the netlist description of
 your circuit circuit 'vga' with the current layout in seadali.
 The following nets in the layout are not according to
@@ -8,8 +8,8 @@ marked in the layout.
 ------------------------- list of errors -------------------------
 ##### suspected short-circuit no. 1:
   > net 'mem_addr_reset_field_2_port' (1 terms, e.g. terminal  'mem_addr_reset_out_7_0_2')
-  > net 'mem_addr_reset_field_1_port' (2 terms, e.g. terminal 'mem_addr_reset_in_7_0_1')
   > net 'mem_addr_reset_field_0_port' (2 terms, e.g. terminal 'mem_addr_reset_in_7_0_0')
+  > net 'mem_addr_reset_field_1_port' (2 terms, e.g. terminal 'mem_addr_reset_in_7_0_1')
   > net 'X_Logic0_port' (10 terms, e.g. terminal 'vss')
 
 WARNING: 1 short-circuit(s) were detected among the 51 nets.

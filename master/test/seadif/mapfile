@@ -1,5 +1,5 @@
 # This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
-# Written on: Tue Dec  3 18:01:30 2013
+# Written on: Tue Dec  3 21:02:55 2013
 # You can edit this file to control the mapping process
 # Each line contains the name of a nelsis cell and its corresponding seadif cell
 # The status field may contain the following values:
@@ -18,7 +18,7 @@
  layout   vga_field_check test         vga_field_check vga_field_check vga_field_check not_written not_written
  layout   vga_triggers test         vga_triggers vga_triggers vga_triggers not_written not_written
  layout   vga_counter  test         vga_counter  vga_counter  vga_counter  not_written not_written
- layout   Tmpvga21891  test         vga          vga          Tmp_Cell_    not_written written
+ layout   Tmpvga777    test         vga          vga          Tmp_Cell_    not_written written
  circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
  circuit  res          primitives   res          res          $dummy       primitive   primitive
  circuit  penh         primitives   penh         penh         $dummy       primitive   primitive
