@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, first_draw_1, first_draw_2, first_draw_3, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, rotate, key, lock_timer_start, game_over);
+	is (reset, init, first_draw_1, first_draw_2, first_draw_3, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, lock_overflow, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, rotate, key, lock_timer_start, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
@@ -484,8 +484,48 @@ begin
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
 				
-				next_state <= draw;
+				next_state <= first_draw_4;
+			
+			when first_draw_4 =>
+				if (draw_erase_ready = '1') then
+					new_draw_erase_start <= '0';
+					next_state <= draw;
+				else
+					new_draw_erase_start <= '1';
+					next_state <= first_draw_4;
+				end if
 
+				-- Generate mask for cur_piece
+				new_lut_rot        <= new_cur_rot;
+				new_lut_x          <= new_cur_x;
+				new_lut_y          <= new_cur_y;
+				new_lut_piece_type <= new_cur_piece;
+
+				-- Keep signals
+				new_cur_piece   <= cur_piece;
+				new_cur_x       <= cur_x;
+				new_cur_x_new   <= cur_x_new;
+				new_cur_y       <= cur_y;
+				new_cur_y_new   <= cur_y_new;
+				new_cur_rot     <= cur_rot;
+				new_cur_rot_new <= cur_rot_new;
+
+				-- Keep outputs
+				new_new_piece         <= cur_new_piece;
+				new_check_start       <= cur_check_start;
+				new_draw_erase_draw   <= cur_draw_erase_draw;
+				new_clear_shift_start <= cur_clear_shift_start;
+				new_draw_score_draw   <= cur_draw_score_draw;
+				new_timer_1_time      <= cur_timer_1_time;
+				new_timer_1_start     <= cur_timer_1_start;
+				new_timer_1_reset     <= cur_timer_1_reset;
+				new_timer_2_time      <= cur_timer_2_time;
+				new_timer_2_start     <= cur_timer_2_start;
+				new_timer_2_reset     <= cur_timer_2_reset;
+				
+				next_state <= draw;
+				
+				
 			when draw =>
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -1385,20 +1425,3 @@ begin
 		end case;
 	end process;
 end;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
