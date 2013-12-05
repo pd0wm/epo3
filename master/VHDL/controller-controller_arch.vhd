@@ -1157,7 +1157,7 @@ begin
 			when reset_timers_b_1 =>
 				new_draw_erase_start <= '0';
 				new_timer_1_start    <= '0';
-				new_timer_1_reset    <= '0';
+				new_timer_1_reset    <= '1';
 				new_timer_1_time     <= "00111100"; -- 60, 1 second
 
 				-- Keep signals
@@ -1189,6 +1189,7 @@ begin
 
 			when reset_timers_b_2 =>
 				new_timer_1_reset <= '0';
+				new_timer_1_start <= '1';
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
