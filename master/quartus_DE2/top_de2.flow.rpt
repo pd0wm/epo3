@@ -1,5 +1,5 @@
 Flow report for top_de2
-Thu Dec  5 21:30:41 2013
+Thu Dec  5 22:17:56 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec  5 21:30:41 2013          ;
+; Flow Status                        ; Successful - Thu Dec  5 22:17:56 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
 ; Met timing requirements            ; N/A                                            ;
-; Total logic elements               ; 750 / 33,216 ( 2 % )                           ;
-;     Total combinational functions  ; 738 / 33,216 ( 2 % )                           ;
-;     Dedicated logic registers      ; 372 / 33,216 ( 1 % )                           ;
-; Total registers                    ; 372                                            ;
+; Total logic elements               ; 782 / 33,216 ( 2 % )                           ;
+;     Total combinational functions  ; 770 / 33,216 ( 2 % )                           ;
+;     Dedicated logic registers      ; 391 / 33,216 ( 1 % )                           ;
+; Total registers                    ; 391                                            ;
 ; Total pins                         ; 53 / 475 ( 11 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                            ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/05/2013 21:30:18 ;
+; Start date & time ; 12/05/2013 22:17:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de2             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +-------------------------------------+-----------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 345042509086.138627541805799                                    ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 345042509086.138627824508186                                    ; --            ; --          ; --         ;
 ; ENABLE_SIGNALTAP                    ; Off                                                             ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                               ; --            ; --          ; --         ;
@@ -94,10 +94,10 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; --                  ; 00:00:07                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; --                  ; 00:00:07                           ;
 ; Fitter               ; 00:00:09     ; 1.0                     ; --                  ; 00:00:08                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; --                  ; 00:00:02                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:17                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; --                  ; 00:00:02                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,8 +116,8 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
-quartus_fit --read_settings_files=off --write_settings_files=off de2 -c top_de2
-quartus_asm --read_settings_files=off --write_settings_files=off de2 -c top_de2
+quartus_fit --read_settings_files=on --write_settings_files=off de2 -c top_de2
+quartus_asm --read_settings_files=on --write_settings_files=off de2 -c top_de2
 
 
 

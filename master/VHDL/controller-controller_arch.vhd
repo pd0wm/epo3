@@ -150,12 +150,13 @@ begin
 				next_state <= init;
 
 			when init =>
-				new_timer_1_time <= "00111100"; -- 60, 1 second
-				new_timer_2_time <= "00111100"; -- 60, 1 second
-				new_cur_x        <= "011";
-				new_cur_y        <= "0000";
+				new_timer_1_time <= "00011110"; -- 30, .5 second
+				new_timer_2_time <= "00011110"; -- 40, .5 second
+				
 
 				-- Keep signals
+				new_cur_x       <= cur_x;
+				new_cur_y       <= cur_y;
 				new_cur_piece   <= cur_piece;
 				new_cur_x_new   <= cur_x_new;
 				new_cur_y_new   <= cur_y_new;
@@ -184,11 +185,12 @@ begin
 			when gen_piece_1 =>
 				new_cur_piece <= next_piece;
 				new_new_piece <= '1';   -- generate new piece for next time
+				
+				new_cur_x        <= "011";
+				new_cur_y        <= "0000";
 
-				-- Keep signals
-				new_cur_x       <= cur_x;
-				new_cur_x_new   <= cur_x_new;
-				new_cur_y       <= cur_y;
+				-- Keep signals				
+				new_cur_x_new   <= cur_x_new;				
 				new_cur_y_new   <= cur_y_new;
 				new_cur_rot     <= cur_rot;
 				new_cur_rot_new <= cur_rot_new;
@@ -493,7 +495,7 @@ begin
 				else
 					new_draw_erase_start <= '1';
 					next_state <= first_draw_4;
-				end if
+				end if;
 
 				-- Generate mask for cur_piece
 				new_lut_rot        <= new_cur_rot;
@@ -597,8 +599,8 @@ begin
 				new_timer_2_start <= '0';
 				new_timer_1_reset <= '1';
 				new_timer_2_reset <= '1';
-				new_timer_1_time  <= "00111100"; -- 60, 1 second
-				new_timer_2_time  <= "00111100"; -- 60, 1 second
+				new_timer_1_time  <= "00011110"; -- 30, .5 second
+				new_timer_2_time  <= "00011110"; -- 30, .5 second
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -724,7 +726,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 			when drop_overflow =>
-				if (timer_1_done = '1') then
+				if (timer_1_done = '1' and cur_timer_2_start = '0') then
 					next_state <= space_1;
 				else
 					next_state <= key;
@@ -1197,7 +1199,7 @@ begin
 			when reset_timers_b_1 =>
 				new_draw_erase_start <= '0';
 				new_timer_1_start    <= '0';
-				new_timer_1_time     <= "00111100"; -- 60, 1 second
+				new_timer_1_time     <= "00011110"; -- 30, .5 second
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
@@ -1296,7 +1298,7 @@ begin
 				new_timer_2_reset     <= cur_timer_2_reset;
 
 			when drop_timer_reset =>
-				new_timer_1_time <= "00111100"; -- 60, 1 second
+				new_timer_1_time <= "00011110"; -- 30, .5 second
 
 				-- Keep signals
 				new_cur_piece   <= cur_piece;
