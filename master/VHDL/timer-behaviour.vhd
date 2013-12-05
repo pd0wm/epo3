@@ -58,7 +58,7 @@ begin
 				new_ready <= cur_ready;
 
 			when check =>
-				if (cur_count = time) then
+				if (cur_count = unsigned(time)) then
 					next_state <= done;
 				else
 					next_state <= vga_low;
@@ -80,6 +80,9 @@ begin
 		end case;
 	end process;
 end behaviour;
+
+
+
 
 
 

@@ -1157,7 +1157,6 @@ begin
 			when reset_timers_b_1 =>
 				new_draw_erase_start <= '0';
 				new_timer_1_start    <= '0';
-				new_timer_1_reset    <= '1';
 				new_timer_1_time     <= "00111100"; -- 60, 1 second
 
 				-- Keep signals
@@ -1181,6 +1180,7 @@ begin
 
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
+				new_timer_1_reset     <= cur_timer_1_reset;
 				new_timer_2_time      <= cur_timer_2_time;
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
@@ -1188,7 +1188,6 @@ begin
 				next_state <= reset_timers_b_2;
 
 			when reset_timers_b_2 =>
-				new_timer_1_reset <= '0';
 				new_timer_1_start <= '1';
 
 				-- Keep signals
@@ -1213,7 +1212,7 @@ begin
 				new_clear_shift_start <= cur_clear_shift_start;
 				new_draw_score_draw   <= cur_draw_score_draw;
 				new_timer_1_time      <= cur_timer_1_time;
-				new_timer_1_start     <= cur_timer_1_start;
+				new_timer_1_reset     <= cur_timer_1_reset;
 				new_timer_2_time      <= cur_timer_2_time;
 				new_timer_2_start     <= cur_timer_2_start;
 				new_timer_2_reset     <= cur_timer_2_reset;
