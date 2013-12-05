@@ -1,0 +1,5 @@
+rm -rf /home/swarmerdam/NPG3000/syn_work_bak
+mv -f /home/swarmerdam/NPG3000/syn_work /home/swarmerdam/NPG3000/syn_work_bak
+cp -r /tmp/swarmerdam/NPG3000/syn_work /home/swarmerdam/NPG3000
+cp /tmp/swarmerdam/NPG3000/ADB/npg.ddc /home/swarmerdam/NPG3000/ADB/npg.ddc
+cp /tmp/swarmerdam/NPG3000/VHDL/npg_SYNTH.vhd /home/swarmerdam/NPG3000/VHDL/npg_SYNTH.vhd
