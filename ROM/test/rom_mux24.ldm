@@ -1,7 +1,0 @@
-:: no-origin mode LDM
-ms rom_mux24
-mc <bit1> rom_mux2 0 0
-mc <bit2> rom_mux2 mx 280 1022
-mc <bit3> rom_mux2 280 0
-mc <bit4> rom_mux2 mx 0 1022
-me
