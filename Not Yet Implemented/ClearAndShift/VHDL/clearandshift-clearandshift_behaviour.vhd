@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.ALL;
 use IEEE.numeric_std.ALL;
 
 architecture clearandshift_behaviour of clearandshift is
-	type typestate is (rust, read_ram, compare, next_row, next_col, increase_score, shift_read, shift_wait, shift_write, shift_next_col, shift_next_row, clear_top_row, clear_top_row_next_col);
+	type typestate is (rust, read_ram, compare, next_row, next_col, increase_score, shift_read, shift_write, shift_next_col, shift_next_row, clear_top_row, clear_top_row_next_col);
 	signal state, next_state : typestate;
 	signal row, n_row, shift_row, n_shift_row : std_logic_vector(3 downto 0);
 	signal col, n_col, shift_col, n_shift_col : std_logic_vector(2 downto 0);
@@ -41,7 +41,7 @@ begin
 	process(clk)
 	begin
 		if (clk'event and clk = '1') then
-			if reset = '1' then
+			if reset = '1' or start = '0' then
 				state <= rust;
 				
 				ready <= '1';
@@ -200,21 +200,6 @@ begin
 				n_shift_row <= shift_row;
 				n_shift_col <= shift_col;
 				
-				next_state <= shift_wait;
-			when shift_wait =>
-				n_ready <= '0';
-				n_ram_out <= '0';
-				n_ram_out_enable <= '0';
-				n_ram_addr <= v_shift_read_addr;
-				n_ram_addr_enable <= '1';
-				n_ram_write <= '0';
-				n_ram_write_enable <= '1';
-				n_score <= '0';
-				n_row <= row;
-				n_col <= col;
-				n_shift_row <= shift_row;
-				n_shift_col <= shift_col;
-				
 				next_state <= shift_write;
 			when shift_write =>
 				n_ready <= '0';
@@ -306,6 +291,12 @@ begin
 		end case;
 	end process;
 end clearandshift_behaviour;
+
+
+
+
+
+
 
 
 

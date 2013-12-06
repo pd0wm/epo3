@@ -1,16 +1,17 @@
 set vdd = h*~
 set vss = l*~
-set clk = (h*160 l*160)*312\
-          h*160 l*~
-set reset = h*300 l*~
-set start = l*1000 h*~
+set clk = (h*160 l*160)*6250\
+          h*~
+set reset = h*400 l*~
+set start = l*1000\
+            h*1453720 l*~
 set ram_in = h*~
 
 option sigunit   = 1n
 option outacc    = 100p
 option level     = 3
 option initialize random = on
-option simperiod = 100000
+option simperiod = 2000000
 
 print \
       clk,\
