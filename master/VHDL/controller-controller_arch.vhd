@@ -199,6 +199,12 @@ begin
 				next_state <= collision_1;
 
 			when collision_1 =>
+				-- Generate mask for cur_piece
+				new_lut_rot        <= new_cur_rot;
+				new_lut_x          <= new_cur_x;
+				new_lut_y          <= new_cur_y;
+				new_lut_piece_type <= new_cur_piece;
+
 				next_state <= collision_3;
 
 			when collision_3 =>
@@ -224,13 +230,11 @@ begin
 					next_state <= first_draw_1;
 				end if;
 
-
 			when first_draw_1 =>
 				new_timer_1_start <= '1';
 
 				new_draw_erase_draw  <= '1';
 				new_draw_erase_start <= '1';
-
 
 				next_state <= first_draw_2;
 
@@ -240,8 +244,6 @@ begin
 				else
 					next_state <= first_draw_2;
 				end if;
-
-
 
 			when first_draw_3 =>
 				new_draw_erase_start <= '1';
@@ -260,7 +262,6 @@ begin
 				next_state <= draw;
 
 			when draw =>
-
 				next_state <= lock_overflow;
 
 			when lock_overflow =>
@@ -269,7 +270,6 @@ begin
 				else
 					next_state <= drop_overflow;
 				end if;
-
 
 			when reset_timers_a_1 =>
 				new_timer_1_start <= '0';
@@ -300,14 +300,12 @@ begin
 					next_state <= clear_shift_2;
 				end if;
 
-
 			when drop_overflow =>
 				if (timer_1_done = '1' and cur_timer_2_start = '0') then
 					next_state <= space_1;
 				else
 					next_state <= key;
 				end if;
-
 
 			when space_1 =>
 				-- First remove current piece
@@ -346,7 +344,6 @@ begin
 					next_state <= space_5;
 				end if;
 
-
 			when space_6 =>
 				new_check_start <= '0';
 
@@ -379,7 +376,6 @@ begin
 					next_state <= put_back_4;
 				end if;
 
-
 			when lock_timer_start =>
 				new_draw_erase_start <= '0';
 				new_timer_2_start    <= '1';
@@ -387,13 +383,11 @@ begin
 				next_state <= draw;
 
 			when move_down_1 =>
-
 				next_state <= move_down_3;
 
 			when move_down_3 =>
 				new_draw_erase_draw  <= '1'; --draw
 				new_draw_erase_start <= '1';
-
 
 				next_state <= move_down_4;
 
@@ -403,7 +397,6 @@ begin
 				else
 					next_state <= move_down_4;
 				end if;
-
 
 			when reset_timers_b_1 =>
 				new_draw_erase_start <= '0';
@@ -416,7 +409,6 @@ begin
 			when reset_timers_b_2 =>
 				new_timer_1_start <= '1';
 
-
 				next_state <= draw;
 
 			when key =>
@@ -427,7 +419,6 @@ begin
 					next_state <= rotate;
 				end if;
 
-
 			when drop_timer_reset =>
 				new_timer_1_time <= "00011110"; -- 30, .5 second
 
@@ -436,11 +427,9 @@ begin
 			when rotate =>
 				next_state <= draw;
 
-
 			when kernel_panic =>
 				-- Kill it!
 				next_state <= game_over;
-
 
 			when game_over =>
 				-- Kill it!
