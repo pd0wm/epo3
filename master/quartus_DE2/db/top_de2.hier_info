@@ -9,10 +9,16 @@ rst => check_mask:inst5.rst
 rst => piece_lut:inst7.rst
 rst => timer:inst9.rst
 rst => timer:inst12.rst
+rst => npg:inst10.rst
 timer_2_debug => controller:inst4.clear_shift_ready
-piece_input[0] => controller:inst4.next_piece[0]
-piece_input[1] => controller:inst4.next_piece[1]
-piece_input[2] => controller:inst4.next_piece[2]
+dbg_inputs[0] => controller:inst4.inputs[0]
+dbg_inputs[1] => controller:inst4.inputs[1]
+dbg_inputs[2] => controller:inst4.inputs[2]
+dbg_inputs[3] => controller:inst4.inputs[3]
+dbg_inputs[4] => controller:inst4.inputs[4]
+dbg_inputs[5] => controller:inst4.inputs[5]
+dbg_inputs[6] => controller:inst4.inputs[6]
+dbg_inputs[7] => controller:inst4.inputs[7]
 vga_clk <= pre_vga_dac:inst.vga_clk
 vga_blank <= pre_vga_dac:inst.vga_blank
 vga_hsync <= vga:inst3.h_sync
@@ -11432,5 +11438,70 @@ start => Selector1.IN4
 start => Selector2.IN3
 start => Selector0.IN1
 ready <= cur_ready.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10
+clk => npg_ff:Button.clk
+clk => npg_ff:L1.clk
+clk => npg_ff:L2.clk
+clk => npg_ff:L3.clk
+rst => reset_or_new.IN0
+rst => npg_ff:L1.rst
+rst => npg_ff:L2.rst
+rst => npg_ff:L3.rst
+button_seed => button_xor_self.IN1
+new_number => reset_or_new.IN1
+output[0] <= npg_ff:L3.q
+output[1] <= npg_ff:L2.q
+output[2] <= npg_ff:L1.q
+
+
+|top_de2|npg:inst10|npg_ff:Button
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M1
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L1
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M2
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L2
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M3
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L3
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

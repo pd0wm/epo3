@@ -1,5 +1,5 @@
 Fitter report for top_de2
-Fri Dec  6 09:53:41 2013
+Fri Dec  6 10:50:43 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -64,18 +64,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec  6 09:53:41 2013          ;
+; Fitter Status                      ; Successful - Fri Dec  6 10:50:43 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
 ; Family                             ; Cyclone II                                     ;
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 851 / 33,216 ( 3 % )                           ;
-;     Total combinational functions  ; 839 / 33,216 ( 3 % )                           ;
-;     Dedicated logic registers      ; 384 / 33,216 ( 1 % )                           ;
-; Total registers                    ; 384                                            ;
-; Total pins                         ; 53 / 475 ( 11 % )                              ;
+; Total logic elements               ; 858 / 33,216 ( 3 % )                           ;
+;     Total combinational functions  ; 846 / 33,216 ( 3 % )                           ;
+;     Dedicated logic registers      ; 388 / 33,216 ( 1 % )                           ;
+; Total registers                    ; 388                                            ;
+; Total pins                         ; 58 / 475 ( 12 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                 ;
@@ -159,8 +159,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1283 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1283 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1298 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1298 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -183,7 +183,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1280    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1295    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -199,49 +199,49 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Total logic elements                        ; 851 / 33,216 ( 3 % )           ;
-;     -- Combinational with no register       ; 467                            ;
+; Total logic elements                        ; 858 / 33,216 ( 3 % )           ;
+;     -- Combinational with no register       ; 470                            ;
 ;     -- Register only                        ; 12                             ;
-;     -- Combinational with a register        ; 372                            ;
+;     -- Combinational with a register        ; 376                            ;
 ;                                             ;                                ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 618                            ;
+;     -- 4 input functions                    ; 622                            ;
 ;     -- 3 input functions                    ; 92                             ;
-;     -- <=2 input functions                  ; 129                            ;
+;     -- <=2 input functions                  ; 132                            ;
 ;     -- Register only                        ; 12                             ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 776                            ;
+;     -- normal mode                          ; 783                            ;
 ;     -- arithmetic mode                      ; 63                             ;
 ;                                             ;                                ;
-; Total registers*                            ; 384 / 34,593 ( 1 % )           ;
-;     -- Dedicated logic registers            ; 384 / 33,216 ( 1 % )           ;
+; Total registers*                            ; 388 / 34,593 ( 1 % )           ;
+;     -- Dedicated logic registers            ; 388 / 33,216 ( 1 % )           ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )              ;
 ;                                             ;                                ;
 ; Total LABs:  partially or completely used   ; 77 / 2,076 ( 4 % )             ;
 ; User inserted logic elements                ; 0                              ;
 ; Virtual pins                                ; 0                              ;
-; I/O pins                                    ; 53 / 475 ( 11 % )              ;
+; I/O pins                                    ; 58 / 475 ( 12 % )              ;
 ;     -- Clock pins                           ; 2 / 8 ( 25 % )                 ;
-; Global signals                              ; 3                              ;
+; Global signals                              ; 2                              ;
 ; M4Ks                                        ; 0 / 105 ( 0 % )                ;
 ; Total block memory bits                     ; 0 / 483,840 ( 0 % )            ;
 ; Total block memory implementation bits      ; 0 / 483,840 ( 0 % )            ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )                 ;
 ; DSP Blocks                                  ; 0 / 35 ( 0 % )                 ;
 ; PLLs                                        ; 0 / 4 ( 0 % )                  ;
-; Global clocks                               ; 3 / 16 ( 19 % )                ;
+; Global clocks                               ; 2 / 16 ( 13 % )                ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )                  ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                  ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )                  ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                   ;
-; Peak interconnect usage (total/H/V)         ; 6% / 6% / 7%                   ;
+; Peak interconnect usage (total/H/V)         ; 8% / 8% / 9%                   ;
 ; Maximum fan-out node                        ; gen6mhz:inst1|count[2]~clkctrl ;
-; Maximum fan-out                             ; 381                            ;
+; Maximum fan-out                             ; 385                            ;
 ; Highest non-global fan-out signal           ; rst                            ;
-; Highest non-global fan-out                  ; 261                            ;
-; Total fan-out                               ; 4181                           ;
-; Average fan-out                             ; 3.24                           ;
+; Highest non-global fan-out                  ; 304                            ;
+; Total fan-out                               ; 4214                           ;
+; Average fan-out                             ; 3.22                           ;
 +---------------------------------------------+--------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -254,33 +254,33 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 851 / 33216 ( 2 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 467                 ; 0                              ;
+; Total logic elements                        ; 858 / 33216 ( 2 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 470                 ; 0                              ;
 ;     -- Register only                        ; 12                  ; 0                              ;
-;     -- Combinational with a register        ; 372                 ; 0                              ;
+;     -- Combinational with a register        ; 376                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 618                 ; 0                              ;
+;     -- 4 input functions                    ; 622                 ; 0                              ;
 ;     -- 3 input functions                    ; 92                  ; 0                              ;
-;     -- <=2 input functions                  ; 129                 ; 0                              ;
+;     -- <=2 input functions                  ; 132                 ; 0                              ;
 ;     -- Register only                        ; 12                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 776                 ; 0                              ;
+;     -- normal mode                          ; 783                 ; 0                              ;
 ;     -- arithmetic mode                      ; 63                  ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total registers                             ; 384                 ; 0                              ;
-;     -- Dedicated logic registers            ; 384 / 33216 ( 1 % ) ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 388                 ; 0                              ;
+;     -- Dedicated logic registers            ; 388 / 33216 ( 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total LABs:  partially or completely used   ; 77 / 2076 ( 3 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 53                  ; 0                              ;
+; I/O pins                                    ; 58                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )      ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 3 / 20 ( 15 % )     ; 0 / 20 ( 0 % )                 ;
+; Clock control block                         ; 2 / 20 ( 10 % )     ; 0 / 20 ( 0 % )                 ;
 ;                                             ;                     ;                                ;
 ; Connections                                 ;                     ;                                ;
 ;     -- Input Connections                    ; 0                   ; 0                              ;
@@ -289,15 +289,15 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 4181                ; 0                              ;
-;     -- Registered Connections               ; 1454                ; 0                              ;
+;     -- Total Connections                    ; 4214                ; 0                              ;
+;     -- Registered Connections               ; 1463                ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 6                   ; 0                              ;
+;     -- Input Ports                          ; 11                  ; 0                              ;
 ;     -- Output Ports                         ; 47                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
@@ -317,18 +317,23 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +---------------------------------------------+---------------------+--------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                           ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
-; clock_50mhz    ; N2    ; 2        ; 0            ; 18           ; 0           ; 2                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; piece_input[0] ; U4    ; 1        ; 0            ; 12           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; piece_input[1] ; V1    ; 1        ; 0            ; 12           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; piece_input[2] ; V2    ; 1        ; 0            ; 12           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; rst            ; N25   ; 5        ; 65           ; 19           ; 0           ; 262                   ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; timer_2_debug  ; T7    ; 1        ; 0            ; 11           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-+----------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                          ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+; clock_50mhz   ; N2    ; 2        ; 0            ; 18           ; 0           ; 2                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; dbg_inputs[0] ; W26   ; 6        ; 65           ; 10           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; dbg_inputs[1] ; G26   ; 5        ; 65           ; 27           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; dbg_inputs[2] ; N23   ; 5        ; 65           ; 20           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; dbg_inputs[3] ; P23   ; 6        ; 65           ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; dbg_inputs[4] ; C15   ; 4        ; 37           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dbg_inputs[5] ; J1    ; 2        ; 0            ; 26           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dbg_inputs[6] ; D13   ; 3        ; 31           ; 36           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; dbg_inputs[7] ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; rst           ; V2    ; 1        ; 0            ; 12           ; 3           ; 304                   ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; timer_2_debug ; V1    ; 1        ; 0            ; 12           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
++---------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -391,12 +396,12 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 4 / 64 ( 6 % )   ; 3.3V          ; --           ;
-; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
-; 3        ; 35 / 56 ( 63 % ) ; 3.3V          ; --           ;
-; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 2 / 65 ( 3 % )   ; 3.3V          ; --           ;
-; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
+; 1        ; 2 / 64 ( 3 % )   ; 3.3V          ; --           ;
+; 2        ; 4 / 59 ( 7 % )   ; 3.3V          ; --           ;
+; 3        ; 37 / 56 ( 66 % ) ; 3.3V          ; --           ;
+; 4        ; 1 / 58 ( 2 % )   ; 3.3V          ; --           ;
+; 5        ; 3 / 65 ( 5 % )   ; 3.3V          ; --           ;
+; 6        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
 ; 7        ; 11 / 58 ( 19 % ) ; 3.3V          ; --           ;
 ; 8        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
@@ -623,9 +628,9 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; C10      ; 450        ; 3        ; vga_g[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; vga_b[6]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; vga_b[8]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; C13      ; 431        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; C13      ; 431        ; 3        ; dbg_inputs[7]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C15      ; 421        ; 4        ; dbg_inputs[4]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C16      ; 418        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C17      ; 404        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -649,7 +654,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; D10      ; 449        ; 3        ; vga_g[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D11      ; 445        ; 3        ; vga_g[7]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; D12      ; 443        ; 3        ; vga_g[9]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; D13      ; 432        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; D13      ; 432        ; 3        ; dbg_inputs[6]                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; D14      ; 426        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 417        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 415        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -740,7 +745,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; G23      ; 346        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G26      ; 342        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G26      ; 342        ; 5        ; dbg_inputs[1]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H2       ; 36         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H3       ; 32         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -767,7 +772,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; H24      ; 340        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H25      ; 337        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H26      ; 336        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; J1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J1       ; 39         ; 2        ; dbg_inputs[5]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; J2       ; 38         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J3       ; 34         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J4       ; 35         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -893,9 +898,9 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; N20      ; 315        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; N23      ; 311        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N23      ; 311        ; 5        ; dbg_inputs[2]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N25      ; 309        ; 5        ; rst                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -919,7 +924,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; P20      ; 301        ; 6        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ; 300        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P23      ; 305        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P23      ; 305        ; 6        ; dbg_inputs[3]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P24      ; 304        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P25      ; 307        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; P26      ; 306        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -955,7 +960,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; T4       ; 83         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T6       ; 93         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T7       ; 92         ; 1        ; timer_2_debug                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; T7       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T8       ; 111        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T9       ; 76         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T10      ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -978,7 +983,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; U1       ; 85         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U2       ; 84         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U3       ; 88         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U4       ; 89         ; 1        ; piece_input[0]                           ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U4       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U5       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1001,8 +1006,8 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; U24      ; 283        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U25      ; 285        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U26      ; 286        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V1       ; 90         ; 1        ; piece_input[1]                           ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; V2       ; 91         ; 1        ; piece_input[2]                           ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V1       ; 90         ; 1        ; timer_2_debug                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V2       ; 91         ; 1        ; rst                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V3       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V4       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V5       ; 104        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1052,7 +1057,7 @@ The pin-out file can be found in /home/epo3-user/Desktop/git/epo3/master/quartus
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W26      ; 274        ; 6        ; dbg_inputs[0]                            ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1125,11 +1130,15 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                     ; Library Name ;
 +-------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------------------------------------+--------------+
-; |top_de2                                              ; 851 (2)     ; 384 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 53   ; 0            ; 467 (2)      ; 12 (0)            ; 372 (4)          ; |top_de2                                                                                                ;              ;
+; |top_de2                                              ; 858 (2)     ; 388 (0)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 58   ; 0            ; 470 (2)      ; 12 (0)            ; 376 (4)          ; |top_de2                                                                                                ;              ;
 ;    |check_mask:inst5|                                 ; 15 (15)     ; 9 (9)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 10 (10)          ; |top_de2|check_mask:inst5                                                                               ;              ;
-;    |controller:inst4|                                 ; 86 (86)     ; 64 (64)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 64 (64)          ; |top_de2|controller:inst4                                                                               ;              ;
+;    |controller:inst4|                                 ; 90 (90)     ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 65 (65)          ; |top_de2|controller:inst4                                                                               ;              ;
 ;    |de_piece:inst6|                                   ; 24 (24)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 2 (2)             ; 19 (19)          ; |top_de2|de_piece:inst6                                                                                 ;              ;
 ;    |gen6mhz:inst1|                                    ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |top_de2|gen6mhz:inst1                                                                                  ;              ;
+;    |npg:inst10|                                       ; 3 (0)       ; 3 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (1)            ; |top_de2|npg:inst10                                                                                     ;              ;
+;       |npg_ff:L1|                                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|npg:inst10|npg_ff:L1                                                                           ;              ;
+;       |npg_ff:L2|                                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|npg:inst10|npg_ff:L2                                                                           ;              ;
+;       |npg_ff:L3|                                     ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|npg:inst10|npg_ff:L3                                                                           ;              ;
 ;    |piece_lut:inst7|                                  ; 56 (56)     ; 45 (45)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 4 (4)             ; 41 (41)          ; |top_de2|piece_lut:inst7                                                                                ;              ;
 ;    |rom:inst8|                                        ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|rom:inst8                                                                                      ;              ;
 ;       |rom_mux44:subresult1|                          ; 6 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|rom:inst8|rom_mux44:subresult1                                                                 ;              ;
@@ -1139,7 +1148,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |sr_if:inst2|                                      ; 465 (2)     ; 130 (2)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 327 (0)      ; 0 (0)             ; 138 (0)          ; |top_de2|sr_if:inst2                                                                                    ;              ;
 ;       |mux5:mux5_do1|                                 ; 82 (82)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 76 (76)      ; 0 (0)             ; 6 (6)            ; |top_de2|sr_if:inst2|mux5:mux5_do1                                                                      ;              ;
 ;       |mux5:mux5_do2|                                 ; 24 (24)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|mux5:mux5_do2                                                                      ;              ;
-;       |sr_tower:\generate_tower:0:tower_mod|          ; 90 (6)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 58 (6)       ; 0 (0)             ; 32 (0)           ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
+;       |sr_tower:\generate_tower:0:tower_mod|          ; 93 (6)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 60 (6)       ; 0 (0)             ; 33 (0)           ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod                                               ;              ;
 ;          |bit4:\generate_bit4:0:bit4_mod|             ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
@@ -1228,6 +1237,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |mu111:mu111_9|                           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_12|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_12 ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
+;          |demux4_inv:demux4_inv_we_i|                 ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i                    ;              ;
 ;          |demux8_inv:demux8_inv_we_com|               ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux8_inv:demux8_inv_we_com                  ;              ;
 ;       |sr_tower:\generate_tower:1:tower_mod|          ; 88 (8)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (8)       ; 0 (0)             ; 32 (0)           ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:1:tower_mod                                               ;              ;
 ;          |bit4:\generate_bit4:0:bit4_mod|             ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
@@ -1409,7 +1419,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |mu210:mu210_12|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_12 ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_13 ;              ;
 ;          |demux8_inv:demux8_inv_we_com|               ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|demux8_inv:demux8_inv_we_com                  ;              ;
-;       |sr_tower:\generate_tower:3:tower_mod|          ; 92 (8)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 58 (8)       ; 0 (0)             ; 34 (0)           ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod                                               ;              ;
+;       |sr_tower:\generate_tower:3:tower_mod|          ; 89 (8)      ; 32 (0)                    ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (8)       ; 0 (0)             ; 33 (0)           ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod                                               ;              ;
 ;          |bit4:\generate_bit4:0:bit4_mod|             ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6  ;              ;
@@ -1432,7 +1442,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |mu111:mu111_9|                           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu111:mu111_9  ;              ;
 ;             |mu210:mu210_12|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_12 ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|mu210:mu210_13 ;              ;
-;          |bit4:\generate_bit4:2:bit4_mod|             ; 11 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 5 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
+;          |bit4:\generate_bit4:2:bit4_mod|             ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0  ;              ;
 ;             |dfr11:dfr11_6|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6  ;              ;
 ;             |dfr11:dfr11_7|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7  ;              ;
@@ -1441,7 +1451,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |mu111:mu111_11|                          ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_11 ;              ;
 ;             |mu111:mu111_1|                           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_1  ;              ;
 ;             |mu111:mu111_9|                           ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu111:mu111_9  ;              ;
-;             |mu210:mu210_12|                          ; 5 (5)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_12 ;              ;
+;             |mu210:mu210_12|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_12 ;              ;
 ;             |mu210:mu210_13|                          ; 2 (2)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_13 ;              ;
 ;          |bit4:\generate_bit4:3:bit4_mod|             ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod                ;              ;
 ;             |dfr11:dfr11_0|                           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |top_de2|sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0  ;              ;
@@ -1527,115 +1537,431 @@ Note: User assignments will override these defaults. The user specified values a
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------+
-; Delay Chain Summary                                                                     ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
-; Name           ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
-; vga_sync       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_clk        ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_blank      ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_hsync      ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_vsync      ; Output   ; --            ; --            ; --                    ; --  ;
-; 6mhz_clk       ; Output   ; --            ; --            ; --                    ; --  ;
-; led1           ; Output   ; --            ; --            ; --                    ; --  ;
-; led2           ; Output   ; --            ; --            ; --                    ; --  ;
-; led3           ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[7]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[6]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[5]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[4]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[3]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[2]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[1]      ; Output   ; --            ; --            ; --                    ; --  ;
-; led_8b[0]      ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[9]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[8]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[7]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[6]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[5]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[4]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[3]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[2]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[1]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_b[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[9]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[8]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[7]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[6]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[5]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[4]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[3]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[2]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[1]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_g[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[9]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[8]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[7]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[6]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[5]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[4]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[3]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[2]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[1]       ; Output   ; --            ; --            ; --                    ; --  ;
-; vga_r[0]       ; Output   ; --            ; --            ; --                    ; --  ;
-; clock_50mhz    ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
-; rst            ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
-; timer_2_debug  ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; piece_input[2] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; piece_input[0] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; piece_input[1] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-+----------------+----------+---------------+---------------+-----------------------+-----+
++----------------------------------------------------------------------------------------+
+; Delay Chain Summary                                                                    ;
++---------------+----------+---------------+---------------+-----------------------+-----+
+; Name          ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
++---------------+----------+---------------+---------------+-----------------------+-----+
+; vga_sync      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_clk       ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_blank     ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_hsync     ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_vsync     ; Output   ; --            ; --            ; --                    ; --  ;
+; 6mhz_clk      ; Output   ; --            ; --            ; --                    ; --  ;
+; led1          ; Output   ; --            ; --            ; --                    ; --  ;
+; led2          ; Output   ; --            ; --            ; --                    ; --  ;
+; led3          ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[7]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[6]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[5]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[4]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[3]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[2]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[1]     ; Output   ; --            ; --            ; --                    ; --  ;
+; led_8b[0]     ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[9]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[8]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[7]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[6]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[5]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[4]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[3]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[2]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[1]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_b[0]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[9]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[8]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[7]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[6]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[5]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[4]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[3]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[2]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[1]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_g[0]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[9]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[8]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[7]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[6]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[5]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[4]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[3]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[2]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[1]      ; Output   ; --            ; --            ; --                    ; --  ;
+; vga_r[0]      ; Output   ; --            ; --            ; --                    ; --  ;
+; clock_50mhz   ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
+; rst           ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; timer_2_debug ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; dbg_inputs[7] ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; dbg_inputs[6] ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; dbg_inputs[5] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; dbg_inputs[4] ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
+; dbg_inputs[3] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; dbg_inputs[2] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; dbg_inputs[1] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; dbg_inputs[0] ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
++---------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+--------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                     ;
-+--------------------------------------+-------------------+---------+
-; Source Pin / Fanout                  ; Pad To Core Index ; Setting ;
-+--------------------------------------+-------------------+---------+
-; clock_50mhz                          ;                   ;         ;
-; rst                                  ;                   ;         ;
-; timer_2_debug                        ;                   ;         ;
-;      - controller:inst4|Selector43~0 ; 0                 ; 6       ;
-;      - controller:inst4|Selector45~0 ; 0                 ; 6       ;
-; piece_input[2]                       ;                   ;         ;
-;      - controller:inst4|Selector29~0 ; 1                 ; 6       ;
-; piece_input[0]                       ;                   ;         ;
-;      - controller:inst4|Selector31~0 ; 1                 ; 6       ;
-; piece_input[1]                       ;                   ;         ;
-;      - controller:inst4|Selector30~0 ; 0                 ; 6       ;
-+--------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                                                             ;
++--------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                                                          ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------------------------------------------------------+-------------------+---------+
+; clock_50mhz                                                                                                  ;                   ;         ;
+; rst                                                                                                          ;                   ;         ;
+;      - vga:inst3|vga_read:read_and_output|v_sync_out                                                         ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|h_sync_out                                                         ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|blue_out                                                           ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|h_sync_buf                                                         ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|red_out                                                            ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:1:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:5:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:3:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:6:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_0|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_8|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_7|Q_INT   ; 1                 ; 6       ;
+;      - sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|dfr11:dfr11_6|Q_INT   ; 1                 ; 6       ;
+;      - vga:inst3|vga_sync:sync|h_sync_state                                                                  ; 1                 ; 6       ;
+;      - vga:inst3|vga_sync:sync|v_sync_state                                                                  ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_check:field_check|in_field_state                                                  ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state[2]                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state[4]             ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state[3]             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state[3]                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state[6]             ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state[5]             ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_check:field_check|end_field_line_state                                            ; 1                 ; 6       ;
+;      - npg:inst10|npg_ff:L1|q                                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.first_draw_2                                                               ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.space_2                                                                    ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.move_down_4                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.put_back_4                                                                 ; 1                 ; 6       ;
+;      - check_mask:inst5|state.output                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.collision_4                                                                ; 1                 ; 6       ;
+;      - check_mask:inst5|state.startup                                                                        ; 1                 ; 6       ;
+;      - check_mask:inst5|state.wait_for_lut                                                                   ; 1                 ; 6       ;
+;      - piece_lut:inst7|state.output                                                                          ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.gen_piece_1                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.draw                                                                       ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.space_5                                                                    ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.clear_shift_2                                                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|counter_state[0]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|counter_state[1]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|counter_state[2]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|counter_state[3]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|counter_state[4]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[0]                                    ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[1]                                    ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[2]                                    ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[3]                                    ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[4]                                    ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[0]                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[1]                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[2]                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[3]                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[4]                              ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_y_out[2]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_y_out[3]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_y_out[0]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_y_out[1]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_y_out[4]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_rom_addr[1]                                                                       ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_rom_addr[0]                                                                       ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|v_sync_buf                                                         ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|in_field_buf                                                       ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|in_np_buf                                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_read:read_and_output|in_score_buf                                                       ; 1                 ; 6       ;
+;      - sr_if:inst2|do2                                                                                       ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_check:np_check|in_np_state                                                           ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_check:score_check|in_score_state                                                  ; 1                 ; 6       ;
+;      - vga:inst3|vga_triggers:triggers|end_frame_state                                                       ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans_reset:field_translation_reset|vga_counter_4bit:mem_addr_counter|process_0~0 ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_check:score_check|end_score_line_state                                            ; 1                 ; 6       ;
+;      - vga:inst3|vga_triggers:triggers|new_line_state                                                        ; 1                 ; 6       ;
+;      - vga:inst3|vga_triggers:triggers|new_frame_state                                                       ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|counter_state[1]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|counter_state[0]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|counter_state[2]                                          ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|counter_state[1]                                                ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|counter_state[0]                                                ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|counter_state[2]                                                ; 1                 ; 6       ;
+;      - vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter|process_0~0                              ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[6]                                                                           ; 1                 ; 6       ;
+;      - controller:inst4|cur_draw_erase_start                                                                 ; 1                 ; 6       ;
+;      - controller:inst4|cur_draw_erase_draw                                                                  ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[5]                                                                           ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[0]                                                                           ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[1]                                                                           ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[2]                                                                           ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[3]                                                                           ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_mask[4]                                                                           ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_check:np_check|end_np_line_state                                                     ; 1                 ; 6       ;
+;      - controller:inst4|cur_timer_2_start                                                                    ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~41                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~42                                                                         ; 1                 ; 6       ;
+;      - check_mask:inst5|empty_s                                                                              ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~43                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~44                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~45                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~46                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~47                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~48                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~49                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_x_out[0]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_x_out[1]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_x_out[2]                                                                          ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_ready                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_y_new[3]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_y[3]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_y_new[0]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_y[0]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_y_new[1]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_y[1]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_y_new[2]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_y[2]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_y[3]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_y[2]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_y[1]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_y[0]                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_change                                                                            ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~9                                                                               ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~11                                                                              ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~50                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_timer_1_reset                                                                    ; 1                 ; 6       ;
+;      - timer:inst12|lbl1~0                                                                                   ; 1                 ; 6       ;
+;      - sr_if:inst2|do1                                                                                       ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~51                                                                         ; 1                 ; 6       ;
+;      - check_mask:inst5|pixel[0]                                                                             ; 1                 ; 6       ;
+;      - check_mask:inst5|pixel[1]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~52                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~53                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_x[0]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_x[0]                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~54                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~55                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~56                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_rom_addr[6]                                                                       ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_rom_addr[4]                                                                       ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_rom_addr[5]                                                                       ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~12                                                                              ; 1                 ; 6       ;
+;      - piece_lut:inst7|new_change                                                                            ; 1                 ; 6       ;
+;      - controller:inst4|cur_check_start                                                                      ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~57                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~58                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_timer_1_start                                                                    ; 1                 ; 6       ;
+;      - controller:inst4|cur_timer_1_time[4]                                                                  ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~59                                                                         ; 1                 ; 6       ;
+;      - check_mask:inst5|state~8                                                                              ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~60                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~61                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_piece_type[2]                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_piece[2]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_piece_type[0]                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_piece[0]                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_lut_piece_type[1]                                                                ; 1                 ; 6       ;
+;      - controller:inst4|cur_piece[1]                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~13                                                                              ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~62                                                                         ; 1                 ; 6       ;
+;      - check_mask:inst5|state~9                                                                              ; 1                 ; 6       ;
+;      - controller:inst4|cur_timer_2_time[4]                                                                  ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~63                                                                         ; 1                 ; 6       ;
+;      - timer:inst9|state~10                                                                                  ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~64                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|cur_overflow                                                                          ; 1                 ; 6       ;
+;      - check_mask:inst5|state~10                                                                             ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~65                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~14                                                                              ; 1                 ; 6       ;
+;      - npg:inst10|npg_ff:L3|q~0                                                                              ; 1                 ; 6       ;
+;      - npg:inst10|npg_ff:L2|q~0                                                                              ; 1                 ; 6       ;
+;      - timer:inst12|state~10                                                                                 ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~66                                                                         ; 1                 ; 6       ;
+;      - controller:inst4|cur_state~67                                                                         ; 1                 ; 6       ;
+;      - piece_lut:inst7|state~15                                                                              ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|vga_counter_3bit:mem_addr_counter|state~5                 ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state~16             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~16                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_score_trans:score_translation|vga_counter_3bit:mem_addr_counter|state~6                 ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state~17             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~17                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~18                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state~18             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~21                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~22                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter|state~23             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter|state~23                   ; 1                 ; 6       ;
+;      - vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter|process_0~2                             ; 1                 ; 6       ;
+;      - vga:inst3|vga_np_trans_reset:np_translation_reset|vga_counter_2bit:mem_addr_counter|state~3           ; 1                 ; 6       ;
+;      - controller:inst4|cur_state.reset~0                                                                    ; 1                 ; 6       ;
+; timer_2_debug                                                                                                ;                   ;         ;
+;      - controller:inst4|Selector43~0                                                                         ; 0                 ; 6       ;
+;      - controller:inst4|Selector45~0                                                                         ; 0                 ; 6       ;
+; dbg_inputs[7]                                                                                                ;                   ;         ;
+; dbg_inputs[6]                                                                                                ;                   ;         ;
+; dbg_inputs[5]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~0                                                                             ; 1                 ; 6       ;
+; dbg_inputs[4]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~0                                                                             ; 0                 ; 6       ;
+; dbg_inputs[3]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~1                                                                             ; 0                 ; 6       ;
+; dbg_inputs[2]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~1                                                                             ; 1                 ; 6       ;
+; dbg_inputs[1]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~1                                                                             ; 1                 ; 6       ;
+; dbg_inputs[0]                                                                                                ;                   ;         ;
+;      - controller:inst4|Equal0~1                                                                             ; 0                 ; 6       ;
++--------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                  ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-------------------------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; clock_50mhz                                                                                           ; PIN_N2             ; 2       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; clock_50mhz                                                                                           ; PIN_N2             ; 2       ; Clock                     ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; de_piece:inst6|new_lut_start~0                                                                        ; LCCOMB_X34_Y19_N6  ; 4       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; de_piece:inst6|state.writing                                                                          ; LCFF_X30_Y23_N7    ; 13      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; gen6mhz:inst1|count[2]                                                                                ; LCFF_X3_Y29_N17    ; 381     ; Clock                     ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; piece_lut:inst7|state.calc_rom_addr_2                                                                 ; LCFF_X30_Y22_N3    ; 6       ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; piece_lut:inst7|state.cord_calc                                                                       ; LCFF_X30_Y22_N17   ; 11      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; rst                                                                                                   ; PIN_N25            ; 262     ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; rst                                                                                                   ; PIN_N25            ; 39      ; Async. clear              ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; timer:inst12|lbl1~0                                                                                   ; LCCOMB_X27_Y25_N22 ; 26      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; timer:inst12|state.vga_high                                                                           ; LCFF_X27_Y25_N9    ; 10      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; timer:inst9|state.vga_high                                                                            ; LCFF_X27_Y26_N1    ; 10      ; Sync. load                ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter|process_0~2                             ; LCCOMB_X30_Y21_N30 ; 10      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter|process_0~0                              ; LCCOMB_X30_Y21_N18 ; 8       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_field_trans:field_translation|counter_state[2]~0                                        ; LCCOMB_X32_Y15_N14 ; 3       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[0]~13                           ; LCCOMB_X31_Y17_N14 ; 5       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[0]~14                           ; LCCOMB_X31_Y17_N24 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_field_trans_reset:field_translation_reset|vga_counter_4bit:mem_addr_counter|process_0~0 ; LCCOMB_X31_Y17_N0  ; 6       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_np_trans:np_translation|counter_state[0]~0                                              ; LCCOMB_X36_Y15_N30 ; 3       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[0]~13                                 ; LCCOMB_X31_Y18_N18 ; 5       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[0]~14                                 ; LCCOMB_X31_Y18_N20 ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_score_trans:score_translation|counter_state[4]~15                                       ; LCCOMB_X30_Y21_N6  ; 5       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vga:inst3|vga_score_trans:score_translation|counter_state[4]~16                                       ; LCCOMB_X30_Y21_N0  ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-+-------------------------------------------------------------------------------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                               ;
++-------------------------------------------------------------------------------------------------------+--------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                  ; Location           ; Fan-Out ; Usage                                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------------------------------------------------------+--------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
+; clock_50mhz                                                                                           ; PIN_N2             ; 2       ; Clock                                   ; no     ; --                   ; --               ; --                        ;
+; clock_50mhz                                                                                           ; PIN_N2             ; 2       ; Clock                                   ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; de_piece:inst6|new_lut_start~0                                                                        ; LCCOMB_X41_Y22_N26 ; 4       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; de_piece:inst6|state.writing                                                                          ; LCFF_X42_Y25_N23   ; 13      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; gen6mhz:inst1|count[2]                                                                                ; LCFF_X2_Y18_N13    ; 385     ; Clock                                   ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+; piece_lut:inst7|state.calc_rom_addr_2                                                                 ; LCFF_X38_Y25_N11   ; 6       ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; piece_lut:inst7|state.cord_calc                                                                       ; LCFF_X38_Y25_N25   ; 11      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; rst                                                                                                   ; PIN_V2             ; 304     ; Async. clear, Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; timer:inst12|lbl1~0                                                                                   ; LCCOMB_X35_Y26_N16 ; 26      ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; timer:inst12|state.vga_high                                                                           ; LCFF_X34_Y26_N11   ; 10      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; timer:inst9|state.vga_high                                                                            ; LCFF_X35_Y25_N9    ; 10      ; Sync. load                              ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter|process_0~2                             ; LCCOMB_X34_Y22_N30 ; 10      ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter|process_0~0                              ; LCCOMB_X34_Y22_N20 ; 8       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_field_trans:field_translation|counter_state[0]~0                                        ; LCCOMB_X35_Y23_N30 ; 3       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[0]~13                           ; LCCOMB_X32_Y22_N30 ; 5       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_field_trans_reset:field_translation_reset|counter_state[0]~14                           ; LCCOMB_X32_Y22_N8  ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_field_trans_reset:field_translation_reset|vga_counter_4bit:mem_addr_counter|process_0~0 ; LCCOMB_X32_Y22_N16 ; 6       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_np_trans:np_translation|counter_state[0]~0                                              ; LCCOMB_X36_Y23_N14 ; 3       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[0]~13                                 ; LCCOMB_X34_Y23_N0  ; 5       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_np_trans_reset:np_translation_reset|counter_state[0]~14                                 ; LCCOMB_X34_Y23_N26 ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_score_trans:score_translation|counter_state[0]~15                                       ; LCCOMB_X41_Y18_N2  ; 5       ; Sync. clear                             ; no     ; --                   ; --               ; --                        ;
+; vga:inst3|vga_score_trans:score_translation|counter_state[0]~16                                       ; LCCOMB_X41_Y18_N4  ; 5       ; Clock enable                            ; no     ; --                   ; --               ; --                        ;
++-------------------------------------------------------------------------------------------------------+--------------------+---------+-----------------------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -1644,8 +1970,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                   ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 ; clock_50mhz            ; PIN_N2          ; 2       ; Global Clock         ; GCLK2            ; --                        ;
-; gen6mhz:inst1|count[2] ; LCFF_X3_Y29_N17 ; 381     ; Global Clock         ; GCLK11           ; --                        ;
-; rst                    ; PIN_N25         ; 39      ; Global Clock         ; GCLK6            ; --                        ;
+; gen6mhz:inst1|count[2] ; LCFF_X2_Y18_N13 ; 385     ; Global Clock         ; GCLK0            ; --                        ;
 +------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1654,14 +1979,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                               ; Fan-Out ;
 +----------------------------------------------------------------------------------------------------+---------+
-; rst                                                                                                ; 261     ;
+; rst                                                                                                ; 304     ;
 ; addr1~1                                                                                            ; 77      ;
 ; addr1~0                                                                                            ; 66      ;
 ; sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13|Y~0 ; 64      ;
 ; de_piece:inst6|state.reset                                                                         ; 41      ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_12|Y~2 ; 40      ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_12|Y~1 ; 40      ;
-; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:2:bit4_mod|mu210:mu210_12|Y~0 ; 40      ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i|Mux1~2                 ; 40      ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i|Mux1~1                 ; 40      ;
+; sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|demux4_inv:demux4_inv_we_i|Mux1~0                 ; 40      ;
 ; sr_if:inst2|sr_tower:\generate_tower:3:tower_mod|bit4:\generate_bit4:7:bit4_mod|mu210:mu210_12|Y~0 ; 40      ;
 ; piece_lut:inst7|mask[4]                                                                            ; 34      ;
 ; addr1~4                                                                                            ; 32      ;
@@ -1712,37 +2037,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 1,252 / 94,460 ( 1 % ) ;
-; C16 interconnects          ; 7 / 3,315 ( < 1 % )    ;
-; C4 interconnects           ; 567 / 60,840 ( < 1 % ) ;
-; Direct links               ; 220 / 94,460 ( < 1 % ) ;
-; Global clocks              ; 3 / 16 ( 19 % )        ;
-; Local interconnects        ; 516 / 33,216 ( 2 % )   ;
-; R24 interconnects          ; 16 / 3,091 ( < 1 % )   ;
-; R4 interconnects           ; 583 / 81,294 ( < 1 % ) ;
+; Block interconnects        ; 1,259 / 94,460 ( 1 % ) ;
+; C16 interconnects          ; 9 / 3,315 ( < 1 % )    ;
+; C4 interconnects           ; 534 / 60,840 ( < 1 % ) ;
+; Direct links               ; 227 / 94,460 ( < 1 % ) ;
+; Global clocks              ; 2 / 16 ( 13 % )        ;
+; Local interconnects        ; 517 / 33,216 ( 2 % )   ;
+; R24 interconnects          ; 21 / 3,091 ( < 1 % )   ;
+; R4 interconnects           ; 691 / 81,294 ( < 1 % ) ;
 +----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 11.05) ; Number of LABs  (Total = 77) ;
+; Number of Logic Elements  (Average = 11.14) ; Number of LABs  (Total = 77) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 2                            ;
-; 3                                           ; 1                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 3                            ;
 ; 4                                           ; 2                            ;
-; 5                                           ; 3                            ;
+; 5                                           ; 2                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 25                           ;
+; 8                                           ; 28                           ;
 ; 9                                           ; 1                            ;
 ; 10                                          ; 0                            ;
 ; 11                                          ; 1                            ;
 ; 12                                          ; 5                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 0                            ;
 ; 16                                          ; 31                           ;
 +---------------------------------------------+------------------------------+
 
@@ -1750,11 +2075,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.71) ; Number of LABs  (Total = 77) ;
+; LAB-wide Signals  (Average = 1.62) ; Number of LABs  (Total = 77) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 11                           ;
+; 1 Async. clear                     ; 7                            ;
 ; 1 Clock                            ; 64                           ;
-; 1 Clock enable                     ; 14                           ;
+; 1 Clock enable                     ; 11                           ;
 ; 1 Sync. clear                      ; 38                           ;
 ; 1 Sync. load                       ; 3                            ;
 ; 2 Clock enables                    ; 1                            ;
@@ -1765,63 +2090,63 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.00) ; Number of LABs  (Total = 77) ;
+; Number of Signals Sourced  (Average = 16.18) ; Number of LABs  (Total = 77) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 3                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 2                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 0                            ;
 ; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 6                                            ; 3                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 3                            ;
+; 10                                           ; 2                            ;
 ; 11                                           ; 0                            ;
-; 12                                           ; 24                           ;
-; 13                                           ; 1                            ;
+; 12                                           ; 26                           ;
+; 13                                           ; 2                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 12                           ;
-; 17                                           ; 2                            ;
-; 18                                           ; 2                            ;
+; 16                                           ; 13                           ;
+; 17                                           ; 1                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 1                            ;
-; 20                                           ; 2                            ;
-; 21                                           ; 3                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 4                            ;
-; 24                                           ; 2                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 2                            ;
-; 27                                           ; 4                            ;
+; 20                                           ; 3                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 5                            ;
+; 24                                           ; 0                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 3                            ;
+; 27                                           ; 3                            ;
 ; 28                                           ; 1                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 3                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.92) ; Number of LABs  (Total = 77) ;
+; Number of Signals Sourced Out  (Average = 5.84) ; Number of LABs  (Total = 77) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 6                            ;
+; 1                                               ; 5                            ;
 ; 2                                               ; 3                            ;
-; 3                                               ; 26                           ;
-; 4                                               ; 5                            ;
-; 5                                               ; 5                            ;
+; 3                                               ; 30                           ;
+; 4                                               ; 4                            ;
+; 5                                               ; 2                            ;
 ; 6                                               ; 1                            ;
 ; 7                                               ; 5                            ;
-; 8                                               ; 9                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 2                            ;
+; 8                                               ; 7                            ;
+; 9                                               ; 4                            ;
+; 10                                              ; 5                            ;
 ; 11                                              ; 4                            ;
-; 12                                              ; 0                            ;
-; 13                                              ; 4                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 2                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 3                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 1                            ;
 ; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
@@ -1829,38 +2154,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.38) ; Number of LABs  (Total = 77) ;
+; Number of Distinct Inputs  (Average = 14.44) ; Number of LABs  (Total = 77) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 2                            ;
-; 3                                            ; 2                            ;
-; 4                                            ; 7                            ;
+; 3                                            ; 3                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 1                            ;
 ; 6                                            ; 1                            ;
-; 7                                            ; 3                            ;
+; 7                                            ; 5                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 2                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 4                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 6                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 5                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 1                            ;
-; 16                                           ; 4                            ;
-; 17                                           ; 27                           ;
-; 18                                           ; 3                            ;
+; 13                                           ; 4                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 28                           ;
+; 18                                           ; 2                            ;
 ; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 1                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 3                            ;
+; 22                                           ; 5                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 1                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 2                            ;
+; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1913,7 +2238,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec  6 09:53:35 2013
+    Info: Processing started: Fri Dec  6 10:50:37 2013
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Selected device EP2C35F672C6 for design "top_de2"
@@ -1927,6 +2252,11 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location E3
     Info: Pin ~nCSO~ is reserved at location D3
     Info: Pin ~LVDS150p/nCEO~ is reserved at location AE24
+Critical Warning: No exact pin location assignment(s) for 4 pins of 58 total pins
+    Info: Pin dbg_inputs[7] not assigned to an exact location on the device
+    Info: Pin dbg_inputs[6] not assigned to an exact location on the device
+    Info: Pin dbg_inputs[5] not assigned to an exact location on the device
+    Info: Pin dbg_inputs[4] not assigned to an exact location on the device
 Info: Timing-driven compilation is using the Classic Timing Analyzer
 Warning: Classic Timing Analyzer will not be available in a future release of the Quartus II software. Use the TimeQuest Timing Analyzer to run timing analysis on your design. Convert all the project settings and the timing constraints to TimeQuest Timing Analyzer equivalents.
 Info: Timing requirements not specified -- quality metrics such as performance and power consumption may be sacrificed to reduce compilation time.
@@ -1940,49 +2270,48 @@ Info: Automatically promoted node gen6mhz:inst1|count[2]
         Info: Destination node gen6mhz:inst1|count[2]~0
         Info: Destination node vga_clk
         Info: Destination node 6mhz_clk
-Info: Automatically promoted node rst (placed in PIN N25 (CLK4, LVDSCLK2p, Input))
-    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G6
-    Info: Following destination nodes may be non-global or may not use global or regional clocks
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_0|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_8|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_7|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|dfr11:dfr11_6|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_0|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_8|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_7|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:1:bit4_mod|dfr11:dfr11_6|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_0|Q_INT
-        Info: Destination node sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:4:bit4_mod|dfr11:dfr11_8|Q_INT
-        Info: Non-global destination nodes limited to 10 nodes
 Info: Starting register packing
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
+Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info: Number of I/O pins in group: 4 (unused VREF, 3.3V VCCIO, 4 input, 0 output, 0 bidirectional)
+        Info: I/O standards used: 3.3-V LVTTL.
+Info: I/O bank details before I/O pin placement
+    Info: Statistics of I/O banks
+        Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 2 total pin(s) used --  62 pins available
+        Info: I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  56 pins available
+        Info: I/O bank number 3 does not use VREF pins and has 3.3V VCCIO pins. 35 total pin(s) used --  21 pins available
+        Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
+        Info: I/O bank number 5 does not use VREF pins and has 3.3V VCCIO pins. 3 total pin(s) used --  62 pins available
+        Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 3 total pin(s) used --  56 pins available
+        Info: I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 11 total pin(s) used --  47 pins available
+        Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
 Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
-Info: Estimated most critical path is register to register delay of 8.175 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X35_Y19; Fanout = 22; REG Node = 'vga:inst3|vga_np_check:np_check|in_np_state'
-    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X35_Y19; Fanout = 1; COMB Node = 'vga:inst3|vga_demux:mem_addr_demux|do[1]~1'
-    Info: 3: + IC(0.127 ns) + CELL(0.438 ns) = 1.188 ns; Loc. = LAB_X35_Y19; Fanout = 32; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13|Y~1'
-    Info: 4: + IC(0.891 ns) + CELL(0.150 ns) = 2.229 ns; Loc. = LAB_X34_Y20; Fanout = 1; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13|Y~0'
-    Info: 5: + IC(0.415 ns) + CELL(0.150 ns) = 2.794 ns; Loc. = LAB_X34_Y20; Fanout = 2; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13|Y~1'
-    Info: 6: + IC(0.927 ns) + CELL(0.420 ns) = 4.141 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|do2~5'
-    Info: 7: + IC(0.145 ns) + CELL(0.420 ns) = 4.706 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~12'
-    Info: 8: + IC(0.415 ns) + CELL(0.150 ns) = 5.271 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~13'
-    Info: 9: + IC(0.415 ns) + CELL(0.150 ns) = 5.836 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~14'
-    Info: 10: + IC(0.415 ns) + CELL(0.150 ns) = 6.401 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~15'
-    Info: 11: + IC(0.415 ns) + CELL(0.150 ns) = 6.966 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~16'
-    Info: 12: + IC(0.290 ns) + CELL(0.271 ns) = 7.527 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~21'
-    Info: 13: + IC(0.127 ns) + CELL(0.437 ns) = 8.091 ns; Loc. = LAB_X34_Y15; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~23'
-    Info: 14: + IC(0.000 ns) + CELL(0.084 ns) = 8.175 ns; Loc. = LAB_X34_Y15; Fanout = 1; REG Node = 'sr_if:inst2|do2'
-    Info: Total cell delay = 3.120 ns ( 38.17 % )
-    Info: Total interconnect delay = 5.055 ns ( 61.83 % )
+Info: Estimated most critical path is register to register delay of 8.435 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X41_Y21; Fanout = 22; REG Node = 'vga:inst3|vga_np_check:np_check|in_np_state'
+    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X41_Y21; Fanout = 1; COMB Node = 'vga:inst3|vga_demux:mem_addr_demux|do[1]~1'
+    Info: 3: + IC(0.127 ns) + CELL(0.438 ns) = 1.188 ns; Loc. = LAB_X41_Y21; Fanout = 32; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:2:tower_mod|bit4:\generate_bit4:5:bit4_mod|mu210:mu210_13|Y~1'
+    Info: 4: + IC(0.902 ns) + CELL(0.150 ns) = 2.240 ns; Loc. = LAB_X42_Y19; Fanout = 1; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13|Y~0'
+    Info: 5: + IC(0.415 ns) + CELL(0.150 ns) = 2.805 ns; Loc. = LAB_X42_Y19; Fanout = 2; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|bit4:\generate_bit4:0:bit4_mod|mu210:mu210_13|Y~1'
+    Info: 6: + IC(1.176 ns) + CELL(0.420 ns) = 4.401 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|sr_tower:\generate_tower:0:tower_mod|do2~5'
+    Info: 7: + IC(0.145 ns) + CELL(0.420 ns) = 4.966 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~12'
+    Info: 8: + IC(0.415 ns) + CELL(0.150 ns) = 5.531 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~13'
+    Info: 9: + IC(0.415 ns) + CELL(0.150 ns) = 6.096 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~14'
+    Info: 10: + IC(0.415 ns) + CELL(0.150 ns) = 6.661 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~15'
+    Info: 11: + IC(0.415 ns) + CELL(0.150 ns) = 7.226 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~16'
+    Info: 12: + IC(0.290 ns) + CELL(0.271 ns) = 7.787 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~21'
+    Info: 13: + IC(0.127 ns) + CELL(0.437 ns) = 8.351 ns; Loc. = LAB_X35_Y21; Fanout = 1; COMB Node = 'sr_if:inst2|mux5:mux5_do2|Mux0~23'
+    Info: 14: + IC(0.000 ns) + CELL(0.084 ns) = 8.435 ns; Loc. = LAB_X35_Y21; Fanout = 1; REG Node = 'sr_if:inst2|do2'
+    Info: Total cell delay = 3.120 ns ( 36.99 % )
+    Info: Total interconnect delay = 5.315 ns ( 63.01 % )
 Info: Fitter routing operations beginning
 Info: Router estimated average interconnect usage is 0% of the available device resources
-    Info: Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
+    Info: Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
 Info: Fitter routing operations ending: elapsed time is 00:00:01
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -2039,10 +2368,10 @@ Warning: Found 47 output pins without output pin load capacitance assignment
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Generated suppressed messages file /home/epo3-user/Desktop/git/epo3/master/quartus_DE2/top_de2.fit.smsg
-Info: Quartus II Fitter was successful. 0 errors, 3 warnings
+Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 371 megabytes
-    Info: Processing ended: Fri Dec  6 09:53:42 2013
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Fri Dec  6 10:50:43 2013
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:08
 
 

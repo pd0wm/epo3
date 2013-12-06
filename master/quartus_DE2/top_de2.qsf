@@ -82,7 +82,7 @@ set_location_assignment PIN_D6 -to vga_blank
 set_location_assignment PIN_B8 -to vga_clk
 set_location_assignment PIN_B7 -to vga_sync
 
-set_location_assignment PIN_N25 -to rst
+set_location_assignment PIN_V2 -to rst
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -91,10 +91,7 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name SEARCH_PATH /data/public/common/software/opprog/sim_libs/CellsLib
-set_location_assignment PIN_V2 -to piece_input[2]
-set_location_assignment PIN_V1 -to piece_input[1]
-set_location_assignment PIN_U4 -to piece_input[0]
-set_location_assignment PIN_T7 -to timer_2_debug
+set_location_assignment PIN_V1 -to timer_2_debug
 set_global_assignment -name ENABLE_SIGNALTAP OFF
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
 set_location_assignment PIN_D25 -to 6mhz_clk
@@ -111,6 +108,12 @@ set_location_assignment PIN_AC21 -to led_8b[4]
 set_location_assignment PIN_AA14 -to led_8b[5]
 set_location_assignment PIN_Y13 -to led_8b[6]
 set_location_assignment PIN_AA13 -to led_8b[7]
+set_global_assignment -name VHDL_FILE ../VHDL/npg_mux2_1.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/npg_mux2_1-behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/npg_ff.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/npg_ff-behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/npg.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/npg-structural.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_triggers.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/vga_tb.vhd
@@ -204,4 +207,8 @@ set_global_assignment -name BDF_FILE top_de2.bdf
 set_global_assignment -name VHDL_FILE pre_vga_dac.vhd
 set_global_assignment -name VHDL_FILE gen6mhz.vhd
 set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_location_assignment PIN_W26 -to dbg_inputs[0]
+set_location_assignment PIN_G26 -to dbg_inputs[1]
+set_location_assignment PIN_N23 -to dbg_inputs[2]
+set_location_assignment PIN_P23 -to dbg_inputs[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

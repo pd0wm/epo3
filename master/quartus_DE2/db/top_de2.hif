@@ -111432,26 +111432,6 @@ USR
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-1a8051934dd741f5aba7d75079add4
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 sld_signaltap
 # storage
 db|top_de2.(530).cnf
@@ -113076,6 +113056,142 @@ controller:inst4
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+npg
+# storage
+db|top_de2.(546).cnf
+db|top_de2.(546).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg.vhd
+bda532a981da1c1e95c712bed7fbe84
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg-structural.vhd
+b8c35743e05aec80d24a8f2b48fa364
+}
+# hierarchies {
+npg:inst10
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+npg_ff
+# storage
+db|top_de2.(547).cnf
+db|top_de2.(547).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg_ff.vhd
+992699e3ea8c9811cac0b46bb2c24691
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg_ff-behaviour.vhd
+524d3715d783106f7f596f78c39cac72
+}
+# hierarchies {
+npg:inst10|npg_ff:Button
+npg:inst10|npg_ff:L1
+npg:inst10|npg_ff:L2
+npg:inst10|npg_ff:L3
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+npg_mux2_1
+# storage
+db|top_de2.(548).cnf
+db|top_de2.(548).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg_mux2_1.vhd
+7d1b76d15ce4aaa0c0c229bc6557b8ee
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|npg_mux2_1-behaviour.vhd
+935d8fa4f384ce3615daa167e7e7a
+}
+# hierarchies {
+npg:inst10|npg_mux2_1:M1
+npg:inst10|npg_mux2_1:M2
+npg:inst10|npg_mux2_1:M3
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+905d4ff3c7db71a218aae11a332f1d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end
