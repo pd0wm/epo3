@@ -60,6 +60,5 @@ begin
 			     pos_y_enable => pos_y_enable,
 			     pos_x        => pos_x,
 			     pos_y        => pos_y);
+	end process;
 end;
-
-
