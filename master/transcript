@@ -7,18 +7,21 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work timer_tb_behaviour_cfg 
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work npg_tb_behaviour_cfg 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.std_logic_unsigned(body)
-# Loading ieee.numeric_std(body)
-# Loading work.timer_tb_behaviour_cfg#1
-# Loading work.timer_tb(behaviour)#1
-# Loading work.timer_behaviour_cfg#1
-# Loading work.timer(behaviour)#1
+# Loading work.npg_tb_behaviour_cfg#1
+# Loading work.npg_tb(behaviour)#1
+# Loading work.npg_structural_cfg#1
+# Loading work.npg(structural)#1
+# Loading work.npg_ff_behaviour_cfg#1
+# Loading work.npg_ff(behaviour)#1
+# Loading work.npg_mux2_1_behaviour_cfg#1
+# Loading work.npg_mux2_1(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 1000 ns
-run 10000 ns
+run 1000ns
+run 10000ns
+run 1ms
+# Causality operation skipped due to absense of debug database file

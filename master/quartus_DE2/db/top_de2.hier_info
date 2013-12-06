@@ -9,10 +9,16 @@ rst => check_mask:inst5.rst
 rst => piece_lut:inst7.rst
 rst => timer:inst9.rst
 rst => timer:inst12.rst
+rst => npg:inst10.rst
 timer_2_debug => controller:inst4.clear_shift_ready
-piece_input[0] => controller:inst4.next_piece[0]
-piece_input[1] => controller:inst4.next_piece[1]
-piece_input[2] => controller:inst4.next_piece[2]
+dbg_inputs[0] => controller:inst4.inputs[0]
+dbg_inputs[1] => controller:inst4.inputs[1]
+dbg_inputs[2] => controller:inst4.inputs[2]
+dbg_inputs[3] => controller:inst4.inputs[3]
+dbg_inputs[4] => controller:inst4.inputs[4]
+dbg_inputs[5] => controller:inst4.inputs[5]
+dbg_inputs[6] => controller:inst4.inputs[6]
+dbg_inputs[7] => controller:inst4.inputs[7]
 vga_clk <= pre_vga_dac:inst.vga_clk
 vga_blank <= pre_vga_dac:inst.vga_blank
 vga_hsync <= vga:inst3.h_sync
@@ -160,14 +166,14 @@ rst => vga_np_trans_reset:np_translation_reset.rst
 rst => vga_np_check:np_check.rst
 rst => vga_score_trans:score_translation.rst
 rst => vga_score_check:score_check.rst
-mem_addr[0] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[1] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[2] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[3] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[4] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[5] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[6] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
-mem_addr[7] <= mem_addr.DB_MAX_OUTPUT_PORT_TYPE
+mem_addr[0] <= vga_demux:mem_addr_demux.do[0]
+mem_addr[1] <= vga_demux:mem_addr_demux.do[1]
+mem_addr[2] <= vga_demux:mem_addr_demux.do[2]
+mem_addr[3] <= vga_demux:mem_addr_demux.do[3]
+mem_addr[4] <= vga_demux:mem_addr_demux.do[4]
+mem_addr[5] <= vga_demux:mem_addr_demux.do[5]
+mem_addr[6] <= vga_demux:mem_addr_demux.do[6]
+mem_addr[7] <= vga_demux:mem_addr_demux.do[7]
 data => vga_read:read_and_output.data_in
 h_sync <= vga_read:read_and_output.h_sync_out
 v_sync <= vga_read:read_and_output.v_sync_out
@@ -177,67 +183,123 @@ blue <= vga_read:read_and_output.blue_out
 
 
 |top_de2|vga:inst3|vga_counter:counter
-clk => pos_y[0].CLK
-clk => pos_y[1].CLK
-clk => pos_y[2].CLK
-clk => pos_y[3].CLK
-clk => pos_y[4].CLK
-clk => pos_y[5].CLK
-clk => pos_y[6].CLK
-clk => pos_y[7].CLK
-clk => pos_y[8].CLK
-clk => pos_y[9].CLK
-clk => pos_x[0].CLK
-clk => pos_x[1].CLK
-clk => pos_x[2].CLK
-clk => pos_x[3].CLK
-clk => pos_x[4].CLK
-clk => pos_x[5].CLK
-clk => pos_x[6].CLK
-clk => pos_x[7].CLK
-rst => pos_y[0].ACLR
-rst => pos_y[1].ACLR
-rst => pos_y[2].ACLR
-rst => pos_y[3].ACLR
-rst => pos_y[4].ACLR
-rst => pos_y[5].ACLR
-rst => pos_y[6].ACLR
-rst => pos_y[7].ACLR
-rst => pos_y[8].ACLR
-rst => pos_y[9].ACLR
-rst => pos_x[0].ACLR
-rst => pos_x[1].ACLR
-rst => pos_x[2].ACLR
-rst => pos_x[3].ACLR
-rst => pos_x[4].ACLR
-rst => pos_x[5].ACLR
-rst => pos_x[6].ACLR
-rst => pos_x[7].ACLR
-pos_x_out[0] <= pos_x[0].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[1] <= pos_x[1].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[2] <= pos_x[2].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[3] <= pos_x[3].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[4] <= pos_x[4].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[5] <= pos_x[5].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[6] <= pos_x[6].DB_MAX_OUTPUT_PORT_TYPE
-pos_x_out[7] <= pos_x[7].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[0] <= pos_y[0].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[1] <= pos_y[1].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[2] <= pos_y[2].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[3] <= pos_y[3].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[4] <= pos_y[4].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[5] <= pos_y[5].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[6] <= pos_y[6].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[7] <= pos_y[7].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[8] <= pos_y[8].DB_MAX_OUTPUT_PORT_TYPE
-pos_y_out[9] <= pos_y[9].DB_MAX_OUTPUT_PORT_TYPE
+clk => vga_counter_8bit:pos_x_counter.clk
+clk => vga_counter_10bit:pos_y_counter.clk
+rst => vga_counter_8bit:pos_x_counter.rst
+rst => vga_counter_10bit:pos_y_counter.rst
+pos_x_out[0] <= vga_counter_8bit:pos_x_counter.val[0]
+pos_x_out[1] <= vga_counter_8bit:pos_x_counter.val[1]
+pos_x_out[2] <= vga_counter_8bit:pos_x_counter.val[2]
+pos_x_out[3] <= vga_counter_8bit:pos_x_counter.val[3]
+pos_x_out[4] <= vga_counter_8bit:pos_x_counter.val[4]
+pos_x_out[5] <= vga_counter_8bit:pos_x_counter.val[5]
+pos_x_out[6] <= vga_counter_8bit:pos_x_counter.val[6]
+pos_x_out[7] <= vga_counter_8bit:pos_x_counter.val[7]
+pos_y_out[0] <= vga_counter_10bit:pos_y_counter.val[0]
+pos_y_out[1] <= vga_counter_10bit:pos_y_counter.val[1]
+pos_y_out[2] <= vga_counter_10bit:pos_y_counter.val[2]
+pos_y_out[3] <= vga_counter_10bit:pos_y_counter.val[3]
+pos_y_out[4] <= vga_counter_10bit:pos_y_counter.val[4]
+pos_y_out[5] <= vga_counter_10bit:pos_y_counter.val[5]
+pos_y_out[6] <= vga_counter_10bit:pos_y_counter.val[6]
+pos_y_out[7] <= vga_counter_10bit:pos_y_counter.val[7]
+pos_y_out[8] <= vga_counter_10bit:pos_y_counter.val[8]
+pos_y_out[9] <= vga_counter_10bit:pos_y_counter.val[9]
+
+
+|top_de2|vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+clk => state[7].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+val[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+val[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+val[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+val[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+val[7] <= state[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|vga:inst3|vga_counter:counter|vga_counter_10bit:pos_y_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+clk => state[7].CLK
+clk => state[8].CLK
+clk => state[9].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+val[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+val[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+val[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+val[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+val[7] <= state[7].DB_MAX_OUTPUT_PORT_TYPE
+val[8] <= state[8].DB_MAX_OUTPUT_PORT_TYPE
+val[9] <= state[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|vga:inst3|vga_counter:counter|vga_counter_resets:resets
+pos_x_reset <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+pos_y_reset <= pos_y_reset.DB_MAX_OUTPUT_PORT_TYPE
+pos_y_enable <= pos_y_enable.DB_MAX_OUTPUT_PORT_TYPE
+pos_x[0] => Equal0.IN15
+pos_x[1] => Equal0.IN14
+pos_x[2] => Equal0.IN13
+pos_x[3] => Equal0.IN12
+pos_x[4] => Equal0.IN11
+pos_x[5] => Equal0.IN10
+pos_x[6] => Equal0.IN9
+pos_x[7] => Equal0.IN8
+pos_y[0] => Equal1.IN19
+pos_y[1] => Equal1.IN18
+pos_y[2] => Equal1.IN17
+pos_y[3] => Equal1.IN16
+pos_y[4] => Equal1.IN15
+pos_y[5] => Equal1.IN14
+pos_y[6] => Equal1.IN13
+pos_y[7] => Equal1.IN12
+pos_y[8] => Equal1.IN11
+pos_y[9] => Equal1.IN10
 
 
 |top_de2|vga:inst3|vga_sync:sync
 clk => v_sync_state.CLK
 clk => h_sync_state.CLK
-rst => v_sync_state.ACLR
-rst => h_sync_state.ACLR
+rst => h_sync_state.OUTPUTSELECT
+rst => v_sync_state.OUTPUTSELECT
 pos_x_in[0] => LessThan0.IN16
 pos_x_in[0] => LessThan1.IN16
 pos_x_in[1] => LessThan0.IN15
@@ -362,124 +424,132 @@ blue_out <= blue_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_field_trans:field_translation
-clk => mem_addr_state[0].CLK
-clk => mem_addr_state[1].CLK
-clk => mem_addr_state[2].CLK
-clk => mem_addr_state[3].CLK
-clk => mem_addr_state[4].CLK
-clk => mem_addr_state[5].CLK
-clk => mem_addr_state[6].CLK
-clk => mem_addr_state[7].CLK
+clk => vga_counter_8bitset:mem_addr_counter.clk
 clk => counter_state[0].CLK
 clk => counter_state[1].CLK
 clk => counter_state[2].CLK
-rst => mem_addr_state[0].ACLR
-rst => mem_addr_state[1].ACLR
-rst => mem_addr_state[2].ACLR
-rst => mem_addr_state[3].ACLR
-rst => mem_addr_state[4].ACLR
-rst => mem_addr_state[5].ACLR
-rst => mem_addr_state[6].ACLR
-rst => mem_addr_state[7].ACLR
+rst => vga_counter_8bitset:mem_addr_counter.rst
 rst => counter_state[0].ACLR
 rst => counter_state[1].ACLR
 rst => counter_state[2].ACLR
-mem_addr_reset_in[0] => mem_addr_new[0].DATAB
-mem_addr_reset_in[1] => mem_addr_new[1].DATAB
-mem_addr_reset_in[2] => mem_addr_new[2].DATAB
-mem_addr_reset_in[3] => mem_addr_new[3].DATAB
-mem_addr_reset_in[4] => mem_addr_new[4].DATAB
-mem_addr_reset_in[5] => mem_addr_new[5].DATAB
-mem_addr_reset_in[6] => mem_addr_new[6].DATAB
-mem_addr_reset_in[7] => mem_addr_new[7].DATAB
-mem_addr_out[0] <= mem_addr_state[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[1] <= mem_addr_state[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[2] <= mem_addr_state[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[3] <= mem_addr_state[3].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[4] <= mem_addr_state[4].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[5] <= mem_addr_state[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[6] <= mem_addr_state[6].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[7] <= mem_addr_state[7].DB_MAX_OUTPUT_PORT_TYPE
+mem_addr_reset_in[0] => vga_counter_8bitset:mem_addr_counter.di[3]
+mem_addr_reset_in[1] => vga_counter_8bitset:mem_addr_counter.di[4]
+mem_addr_reset_in[2] => vga_counter_8bitset:mem_addr_counter.di[5]
+mem_addr_reset_in[3] => vga_counter_8bitset:mem_addr_counter.di[6]
+mem_addr_out[0] <= vga_counter_8bitset:mem_addr_counter.val[0]
+mem_addr_out[1] <= vga_counter_8bitset:mem_addr_counter.val[1]
+mem_addr_out[2] <= vga_counter_8bitset:mem_addr_counter.val[2]
+mem_addr_out[3] <= vga_counter_8bitset:mem_addr_counter.val[3]
+mem_addr_out[4] <= vga_counter_8bitset:mem_addr_counter.val[4]
+mem_addr_out[5] <= vga_counter_8bitset:mem_addr_counter.val[5]
+mem_addr_out[6] <= vga_counter_8bitset:mem_addr_counter.val[6]
+mem_addr_out[7] <= vga_counter_8bitset:mem_addr_counter.val[7]
 in_field_in => counter_new.OUTPUTSELECT
 in_field_in => counter_new.OUTPUTSELECT
 in_field_in => counter_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-in_field_in => mem_addr_new.OUTPUTSELECT
-new_line_in => process_0.IN0
-new_frame_in => process_0.IN1
+in_field_in => mem_addr_enable.OUTPUTSELECT
+new_line_in => mem_addr_reset.IN0
+new_frame_in => mem_addr_reset.IN1
+
+
+|top_de2|vga:inst3|vga_field_trans:field_translation|vga_counter_8bitset:mem_addr_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+clk => state[7].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+di[0] => state.DATAB
+di[1] => state.DATAB
+di[2] => state.DATAB
+di[3] => state.DATAB
+di[4] => state.DATAB
+di[5] => state.DATAB
+di[6] => state.DATAB
+di[7] => state.DATAB
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+val[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+val[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+val[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+val[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+val[7] <= state[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset
-clk => mem_addr_state[0].CLK
-clk => mem_addr_state[1].CLK
-clk => mem_addr_state[2].CLK
-clk => mem_addr_state[3].CLK
-clk => mem_addr_state[4].CLK
-clk => mem_addr_state[5].CLK
-clk => mem_addr_state[6].CLK
-clk => mem_addr_state[7].CLK
+clk => vga_counter_4bit:mem_addr_counter.clk
 clk => counter_state[0].CLK
 clk => counter_state[1].CLK
 clk => counter_state[2].CLK
 clk => counter_state[3].CLK
 clk => counter_state[4].CLK
-rst => mem_addr_state[0].ACLR
-rst => mem_addr_state[1].ACLR
-rst => mem_addr_state[2].ACLR
-rst => mem_addr_state[3].ACLR
-rst => mem_addr_state[4].ACLR
-rst => mem_addr_state[5].ACLR
-rst => mem_addr_state[6].ACLR
-rst => mem_addr_state[7].ACLR
+rst => vga_counter_4bit:mem_addr_counter.rst
 rst => counter_state[0].ACLR
 rst => counter_state[1].ACLR
 rst => counter_state[2].ACLR
 rst => counter_state[3].ACLR
 rst => counter_state[4].ACLR
-mem_addr_reset_out[0] <= mem_addr_state[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[1] <= mem_addr_state[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[2] <= mem_addr_state[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[3] <= mem_addr_state[3].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[4] <= mem_addr_state[4].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[5] <= mem_addr_state[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[6] <= mem_addr_state[6].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[7] <= mem_addr_state[7].DB_MAX_OUTPUT_PORT_TYPE
+mem_addr_reset_out[0] <= vga_counter_4bit:mem_addr_counter.val[0]
+mem_addr_reset_out[1] <= vga_counter_4bit:mem_addr_counter.val[1]
+mem_addr_reset_out[2] <= vga_counter_4bit:mem_addr_counter.val[2]
+mem_addr_reset_out[3] <= vga_counter_4bit:mem_addr_counter.val[3]
 end_field_line_in => counter_new.OUTPUTSELECT
 end_field_line_in => counter_new.OUTPUTSELECT
 end_field_line_in => counter_new.OUTPUTSELECT
 end_field_line_in => counter_new.OUTPUTSELECT
 end_field_line_in => counter_new.OUTPUTSELECT
-end_field_line_in => mem_addr_new.OUTPUTSELECT
-end_field_line_in => mem_addr_new.OUTPUTSELECT
-end_field_line_in => mem_addr_new.OUTPUTSELECT
-end_field_line_in => mem_addr_new.OUTPUTSELECT
-end_field_line_in => mem_addr_new.OUTPUTSELECT
+end_field_line_in => mem_addr_enable.OUTPUTSELECT
 end_frame_in => counter_new[4].OUTPUTSELECT
 end_frame_in => counter_new[3].OUTPUTSELECT
 end_frame_in => counter_new[2].OUTPUTSELECT
 end_frame_in => counter_new[1].OUTPUTSELECT
 end_frame_in => counter_new[0].OUTPUTSELECT
-end_frame_in => mem_addr_new[7].OUTPUTSELECT
-end_frame_in => mem_addr_new[6].OUTPUTSELECT
-end_frame_in => mem_addr_new[5].OUTPUTSELECT
-end_frame_in => mem_addr_new[4].OUTPUTSELECT
-end_frame_in => mem_addr_new[3].OUTPUTSELECT
-end_frame_in => mem_addr_state[0].ENA
-end_frame_in => mem_addr_state[2].ENA
-end_frame_in => mem_addr_state[1].ENA
+end_frame_in => vga_counter_4bit:mem_addr_counter.rst_ext
+
+
+|top_de2|vga:inst3|vga_field_trans_reset:field_translation_reset|vga_counter_4bit:mem_addr_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+val[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_field_check:field_check
 clk => end_field_line_state.CLK
 clk => in_field_state.CLK
-rst => end_field_line_state.ACLR
-rst => in_field_state.ACLR
+rst => in_field_state.OUTPUTSELECT
+rst => end_field_line_state.OUTPUTSELECT
 pos_x_in[0] => Equal0.IN15
 pos_x_in[0] => LessThan0.IN16
 pos_x_in[0] => LessThan1.IN16
@@ -529,118 +599,115 @@ end_field_line_out <= end_field_line_state.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_np_trans:np_translation
-clk => mem_addr_state[0].CLK
-clk => mem_addr_state[1].CLK
-clk => mem_addr_state[2].CLK
-clk => mem_addr_state[3].CLK
-clk => mem_addr_state[4].CLK
-clk => mem_addr_state[5].CLK
-clk => mem_addr_state[6].CLK
-clk => mem_addr_state[7].CLK
+clk => vga_counter_8bitset:mem_addr_counter.clk
 clk => counter_state[0].CLK
 clk => counter_state[1].CLK
 clk => counter_state[2].CLK
-rst => mem_addr_state[0].ACLR
-rst => mem_addr_state[1].ACLR
-rst => mem_addr_state[2].ACLR
-rst => mem_addr_state[3].ACLR
-rst => mem_addr_state[4].ACLR
-rst => mem_addr_state[5].ACLR
-rst => mem_addr_state[6].ACLR
-rst => mem_addr_state[7].ACLR
+rst => vga_counter_8bitset:mem_addr_counter.rst
 rst => counter_state[0].ACLR
 rst => counter_state[1].ACLR
 rst => counter_state[2].ACLR
-mem_addr_reset_in[0] => mem_addr_new[0].DATAB
-mem_addr_reset_in[1] => mem_addr_new[1].DATAB
-mem_addr_reset_in[2] => mem_addr_new[2].DATAB
-mem_addr_reset_in[3] => mem_addr_new[3].DATAB
-mem_addr_reset_in[4] => mem_addr_new[4].DATAB
-mem_addr_reset_in[5] => mem_addr_new[5].DATAB
-mem_addr_reset_in[6] => mem_addr_new[6].DATAB
-mem_addr_reset_in[7] => mem_addr_new[7].DATAB
-mem_addr_out[0] <= mem_addr_state[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[1] <= mem_addr_state[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[2] <= mem_addr_state[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[3] <= mem_addr_state[3].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[4] <= mem_addr_state[4].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[5] <= mem_addr_state[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[6] <= mem_addr_state[6].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[7] <= <VCC>
+mem_addr_reset_in[0] => vga_counter_8bitset:mem_addr_counter.di[2]
+mem_addr_reset_in[1] => vga_counter_8bitset:mem_addr_counter.di[3]
+mem_addr_out[0] <= vga_counter_8bitset:mem_addr_counter.val[0]
+mem_addr_out[1] <= vga_counter_8bitset:mem_addr_counter.val[1]
+mem_addr_out[2] <= vga_counter_8bitset:mem_addr_counter.val[2]
+mem_addr_out[3] <= vga_counter_8bitset:mem_addr_counter.val[3]
+mem_addr_out[4] <= vga_counter_8bitset:mem_addr_counter.val[4]
+mem_addr_out[5] <= vga_counter_8bitset:mem_addr_counter.val[5]
+mem_addr_out[6] <= vga_counter_8bitset:mem_addr_counter.val[6]
+mem_addr_out[7] <= vga_counter_8bitset:mem_addr_counter.val[7]
 in_np_in => counter_new.OUTPUTSELECT
 in_np_in => counter_new.OUTPUTSELECT
 in_np_in => counter_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-in_np_in => mem_addr_new.OUTPUTSELECT
-new_line_in => process_0.IN0
-new_frame_in => process_0.IN1
+in_np_in => mem_addr_enable.OUTPUTSELECT
+new_line_in => mem_addr_reset.IN0
+new_frame_in => mem_addr_reset.IN1
+
+
+|top_de2|vga:inst3|vga_np_trans:np_translation|vga_counter_8bitset:mem_addr_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+clk => state[5].CLK
+clk => state[6].CLK
+clk => state[7].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+set => state.OUTPUTSELECT
+di[0] => state.DATAB
+di[1] => state.DATAB
+di[2] => state.DATAB
+di[3] => state.DATAB
+di[4] => state.DATAB
+di[5] => state.DATAB
+di[6] => state.DATAB
+di[7] => state.DATAB
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+val[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+val[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+val[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
+val[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
+val[7] <= state[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset
-clk => mem_addr_state[0].CLK
-clk => mem_addr_state[1].CLK
-clk => mem_addr_state[2].CLK
-clk => mem_addr_state[3].CLK
-clk => mem_addr_state[4].CLK
-clk => mem_addr_state[5].CLK
-clk => mem_addr_state[6].CLK
-clk => mem_addr_state[7].CLK
+clk => vga_counter_2bit:mem_addr_counter.clk
 clk => counter_state[0].CLK
 clk => counter_state[1].CLK
 clk => counter_state[2].CLK
 clk => counter_state[3].CLK
 clk => counter_state[4].CLK
-rst => mem_addr_state[0].ACLR
-rst => mem_addr_state[1].ACLR
-rst => mem_addr_state[2].ACLR
-rst => mem_addr_state[3].ACLR
-rst => mem_addr_state[4].ACLR
-rst => mem_addr_state[5].ACLR
-rst => mem_addr_state[6].ACLR
-rst => mem_addr_state[7].ACLR
+rst => vga_counter_2bit:mem_addr_counter.rst
 rst => counter_state[0].ACLR
 rst => counter_state[1].ACLR
 rst => counter_state[2].ACLR
 rst => counter_state[3].ACLR
 rst => counter_state[4].ACLR
-mem_addr_reset_out[0] <= mem_addr_state[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[1] <= mem_addr_state[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[2] <= mem_addr_state[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[3] <= mem_addr_state[3].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[4] <= mem_addr_state[4].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[5] <= mem_addr_state[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[6] <= mem_addr_state[6].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_reset_out[7] <= mem_addr_state[7].DB_MAX_OUTPUT_PORT_TYPE
+mem_addr_reset_out[0] <= vga_counter_2bit:mem_addr_counter.val[0]
+mem_addr_reset_out[1] <= vga_counter_2bit:mem_addr_counter.val[1]
 end_np_line_in => counter_new.OUTPUTSELECT
 end_np_line_in => counter_new.OUTPUTSELECT
 end_np_line_in => counter_new.OUTPUTSELECT
 end_np_line_in => counter_new.OUTPUTSELECT
 end_np_line_in => counter_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
-end_np_line_in => mem_addr_new.OUTPUTSELECT
+end_np_line_in => mem_addr_enable.OUTPUTSELECT
 end_frame_in => counter_new[4].OUTPUTSELECT
 end_frame_in => counter_new[3].OUTPUTSELECT
 end_frame_in => counter_new[2].OUTPUTSELECT
 end_frame_in => counter_new[1].OUTPUTSELECT
 end_frame_in => counter_new[0].OUTPUTSELECT
-end_frame_in => mem_addr_new[7].OUTPUTSELECT
-end_frame_in => mem_addr_new[6].OUTPUTSELECT
-end_frame_in => mem_addr_new[5].OUTPUTSELECT
-end_frame_in => mem_addr_new[4].OUTPUTSELECT
-end_frame_in => mem_addr_new[3].OUTPUTSELECT
-end_frame_in => mem_addr_new[2].OUTPUTSELECT
-end_frame_in => mem_addr_state[0].ENA
-end_frame_in => mem_addr_state[1].ENA
+end_frame_in => vga_counter_2bit:mem_addr_counter.rst_ext
+
+
+|top_de2|vga:inst3|vga_np_trans_reset:np_translation_reset|vga_counter_2bit:mem_addr_counter
+clk => state[0].CLK
+clk => state[1].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_np_check:np_check
@@ -697,66 +764,52 @@ end_np_line_out <= end_np_line_state.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_score_trans:score_translation
-clk => mem_addr_state[0].CLK
-clk => mem_addr_state[1].CLK
-clk => mem_addr_state[2].CLK
-clk => mem_addr_state[3].CLK
-clk => mem_addr_state[4].CLK
-clk => mem_addr_state[5].CLK
-clk => mem_addr_state[6].CLK
-clk => mem_addr_state[7].CLK
+clk => vga_counter_3bit:mem_addr_counter.clk
 clk => counter_state[0].CLK
 clk => counter_state[1].CLK
 clk => counter_state[2].CLK
 clk => counter_state[3].CLK
 clk => counter_state[4].CLK
-rst => mem_addr_state[0].ACLR
-rst => mem_addr_state[1].ACLR
-rst => mem_addr_state[2].ACLR
-rst => mem_addr_state[3].ACLR
-rst => mem_addr_state[4].ACLR
-rst => mem_addr_state[5].ACLR
-rst => mem_addr_state[6].ACLR
-rst => mem_addr_state[7].ACLR
+rst => vga_counter_3bit:mem_addr_counter.rst
 rst => counter_state[0].ACLR
 rst => counter_state[1].ACLR
 rst => counter_state[2].ACLR
 rst => counter_state[3].ACLR
 rst => counter_state[4].ACLR
-mem_addr_out[0] <= mem_addr_state[0].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[1] <= mem_addr_state[1].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[2] <= mem_addr_state[2].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[3] <= mem_addr_state[3].DB_MAX_OUTPUT_PORT_TYPE
+mem_addr_out[0] <= vga_counter_3bit:mem_addr_counter.val[0]
+mem_addr_out[1] <= vga_counter_3bit:mem_addr_counter.val[1]
+mem_addr_out[2] <= vga_counter_3bit:mem_addr_counter.val[2]
+mem_addr_out[3] <= <GND>
 mem_addr_out[4] <= <VCC>
-mem_addr_out[5] <= mem_addr_state[5].DB_MAX_OUTPUT_PORT_TYPE
-mem_addr_out[6] <= mem_addr_state[6].DB_MAX_OUTPUT_PORT_TYPE
+mem_addr_out[5] <= <GND>
+mem_addr_out[6] <= <GND>
 mem_addr_out[7] <= <VCC>
 end_score_line_in => counter_new.OUTPUTSELECT
 end_score_line_in => counter_new.OUTPUTSELECT
 end_score_line_in => counter_new.OUTPUTSELECT
 end_score_line_in => counter_new.OUTPUTSELECT
 end_score_line_in => counter_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
-end_score_line_in => mem_addr_new.OUTPUTSELECT
+end_score_line_in => mem_addr_enable.OUTPUTSELECT
 end_frame_in => counter_new[4].OUTPUTSELECT
 end_frame_in => counter_new[3].OUTPUTSELECT
 end_frame_in => counter_new[2].OUTPUTSELECT
 end_frame_in => counter_new[1].OUTPUTSELECT
 end_frame_in => counter_new[0].OUTPUTSELECT
-end_frame_in => mem_addr_new[7].OUTPUTSELECT
-end_frame_in => mem_addr_new[6].OUTPUTSELECT
-end_frame_in => mem_addr_new[5].OUTPUTSELECT
-end_frame_in => mem_addr_new[4].OUTPUTSELECT
-end_frame_in => mem_addr_new[3].OUTPUTSELECT
-end_frame_in => mem_addr_new[2].OUTPUTSELECT
-end_frame_in => mem_addr_new[1].OUTPUTSELECT
-end_frame_in => mem_addr_new[0].OUTPUTSELECT
+end_frame_in => vga_counter_3bit:mem_addr_counter.rst_ext
+
+
+|top_de2|vga:inst3|vga_score_trans:score_translation|vga_counter_3bit:mem_addr_counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+rst => process_0.IN0
+rst_ext => process_0.IN1
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+val[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+val[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+val[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|vga:inst3|vga_score_check:score_check
@@ -810,6 +863,57 @@ pos_y_in[9] => LessThan2.IN11
 pos_y_in[9] => LessThan3.IN11
 in_score_out <= in_score_state.DB_MAX_OUTPUT_PORT_TYPE
 end_score_line_out <= end_score_line_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|vga:inst3|vga_demux:mem_addr_demux
+def[0] => do.DATAA
+def[1] => do.DATAA
+def[2] => do.DATAA
+def[3] => do.DATAA
+def[4] => do.DATAA
+def[5] => do.DATAA
+def[6] => do.DATAA
+def[7] => do.DATAA
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+s1 => do.OUTPUTSELECT
+di1[0] => do.DATAB
+di1[1] => do.DATAB
+di1[2] => do.DATAB
+di1[3] => do.DATAB
+di1[4] => do.DATAB
+di1[5] => do.DATAB
+di1[6] => do.DATAB
+di1[7] => do.DATAB
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+s2 => do.OUTPUTSELECT
+di2[0] => do.DATAB
+di2[1] => do.DATAB
+di2[2] => do.DATAB
+di2[3] => do.DATAB
+di2[4] => do.DATAB
+di2[5] => do.DATAB
+di2[6] => do.DATAB
+di2[7] => do.DATAB
+do[0] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[1] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[2] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[3] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[4] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[5] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[6] <= do.DB_MAX_OUTPUT_PORT_TYPE
+do[7] <= do.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|sr_if:inst2
@@ -11334,5 +11438,70 @@ start => Selector1.IN4
 start => Selector2.IN3
 start => Selector0.IN1
 ready <= cur_ready.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10
+clk => npg_ff:Button.clk
+clk => npg_ff:L1.clk
+clk => npg_ff:L2.clk
+clk => npg_ff:L3.clk
+rst => reset_or_new.IN0
+rst => npg_ff:L1.rst
+rst => npg_ff:L2.rst
+rst => npg_ff:L3.rst
+button_seed => button_xor_self.IN1
+new_number => reset_or_new.IN1
+output[0] <= npg_ff:L3.q
+output[1] <= npg_ff:L2.q
+output[2] <= npg_ff:L1.q
+
+
+|top_de2|npg:inst10|npg_ff:Button
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M1
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L1
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M2
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L2
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|npg:inst10|npg_mux2_1:M3
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+sel => out1.OUTPUTSELECT
+in1 => out1.DATAB
+in2 => out1.DATAA
+
+
+|top_de2|npg:inst10|npg_ff:L3
+clk => q~reg0.CLK
+rst => q.OUTPUTSELECT
+d => q.DATAA
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

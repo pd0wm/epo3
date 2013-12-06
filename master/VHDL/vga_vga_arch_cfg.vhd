@@ -24,6 +24,8 @@ configuration vga_vga_arch_cfg of vga is
       end for;
       for all: vga_score_check use configuration work.vga_score_check_vga_score_check_arch_cfg;
       end for;
+      for all: vga_demux use configuration work.vga_demux_vga_demux_behav_cfg;
+      end for;
    end for;
 end vga_vga_arch_cfg;
 

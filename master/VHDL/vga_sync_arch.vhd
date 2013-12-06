@@ -20,7 +20,7 @@ begin
 			h_sync_new <= '1';
 		end if;
 	end process;
-	
+
 	process(pos_x_in, pos_y_in)
 	begin
 		if (unsigned(pos_y_in) >= height + frame_fp and unsigned(pos_y_in) < height + frame_fp + frame_pw) then
@@ -30,14 +30,16 @@ begin
 		end if;
 	end process;
 
-	process(clk, rst)
+	process(clk)
 	begin
-		if (rst = '1') then
-			h_sync_state <= '0';
-			v_sync_state <= '0';
-		elsif (clk'event and clk = '1') then
-			h_sync_state <= h_sync_new;
-			v_sync_state <= v_sync_new;
+		if (clk'event and clk = '1') then
+			if (rst = '1') then
+				h_sync_state <= '0';
+				v_sync_state <= '0';
+			else
+				h_sync_state <= h_sync_new;
+				v_sync_state <= v_sync_new;
+			end if;
 		end if;
 	end process;
 end;

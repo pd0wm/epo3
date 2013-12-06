@@ -4,17 +4,17 @@ K3
 cModel Technology
 Z0 dmaster
 T_opt
-V44J5o;TlZl>mFBUg:G]m^0
-04 22 0 work timer_tb_behaviour_cfg 1
-=1-00505622dd1e-529f3158-89a05-13ed
+Vz1bdhP;DVQozM>AN[0PX:1
+04 3 0 work sim 1
+=1-00505622dd1e-52a18c42-459e9-cab
 Z1 o-quiet -auto_acc_if_foreign -work work
 n@_opt
 Z2 OE;O;10.1b;51
 Z3 dmaster
 T_opt1
-VnKgWje5W@CJcgocI@Mik40
-04 40 0 work checkmask_tb_check_mask_tb_behaviour_cfg 1
-=1-00505622dd1e-529f0b19-38420-bbe
+VLBi_93cF0@;V6?b=_Tekj2
+04 9 0 work extracted 1
+=1-00505622dd1e-52a18c33-75333-c8c
 R1
 n@_opt1
 R2
@@ -319,9 +319,9 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/controller.vhd|-quiet|-nologo|
 !s107 VHDL/controller.vhd|
 Acontroller_arch
-R25
-Z29 DEx4 work 10 controller 0 22 Z4Pg`z=5?:?geXVE0RV2>2
-Z30 DPx4 work 10 vga_params 0 22 k9F]S[jE>zJo[VY[Bzio<1
+Z29 w1386318415
+Z30 DEx4 work 10 controller 0 22 Z4Pg`z=5?:?geXVE0RV2>2
+Z31 DPx4 work 10 vga_params 0 22 k9F]S[jE>zJo[VY[Bzio<1
 R27
 R5
 R6
@@ -329,40 +329,40 @@ R6
 FVHDL/controller-controller_arch.vhd
 l54
 L6
-V@hn>o7gD5Z6C0Ld?ZoTdH1
+VRCJT25NDg5jZ>2Xd;oQ123
 R7
 32
-R8
+Z32 o-2002 -lower -explicit -work work -quiet -nologo
 R9
-!s100 gT`MHJ26z:_F0^;S3YoZ`2
+!s100 Rm5[MgJ<E?[<;PRRY?COE1
 !i10b 1
-!s108 1386101161.516329
-!s90 -lower|-explicit|-work|work|VHDL/controller-controller_arch.vhd|-quiet|-nologo|
+!s108 1386318659.445279
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/controller-controller_arch.vhd|
 !s107 VHDL/controller-controller_arch.vhd|
 Ccontroller_controller_arch_cfg
 acontroller_arch
 econtroller
-R30
+R31
 R27
-DAx4 work 10 controller 15 controller_arch 22 @hn>o7gD5Z6C0Ld?ZoTdH1
+DAx4 work 10 controller 15 controller_arch 22 RCJT25NDg5jZ>2Xd;oQ123
 R5
 R6
+R30
 R29
-w1386101209
-R3
+R12
 8VHDL/controller_controller_arch_cfg.vhd
 FVHDL/controller_controller_arch_cfg.vhd
 l0
 L1
-VAK:PTiQLzHN][=WhNQhC82
+V:2A_T8Ba7NgSc=N_HVH6H3
 R7
 32
-R8
+R32
 R9
 !s100 YDkcn`X:G]F@Ml7ce;<0b0
 !i10b 0
-!s108 1386101209.144599
-!s90 -lower|-explicit|-work|work|VHDL/controller_controller_arch_cfg.vhd|-quiet|-nologo|
+!s108 1386318659.501283
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/controller_controller_arch_cfg.vhd|
 !s107 VHDL/controller_controller_arch_cfg.vhd|
 Econtroller_tb
 w1385718779
@@ -385,7 +385,7 @@ R9
 !s107 VHDL/controller_tb.vhd|
 Acontroller_tb_arch
 w1386012232
-Z31 DEx4 work 13 controller_tb 0 22 ab591K;5n32gi;zbb@6d<2
+Z33 DEx4 work 13 controller_tb 0 22 ab591K;5n32gi;zbb@6d<2
 R5
 R6
 8VHDL/controller_tb-controller_tb_arch.vhd
@@ -405,27 +405,27 @@ R9
 Ccontroller_tb_controller_tb_arch_cfg
 acontroller_tb_arch
 econtroller_tb
-R29
-DCx4 work 30 controller_controller_arch_cfg 0 22 AK:PTiQLzHN][=WhNQhC82
+R30
+DCx4 work 30 controller_controller_arch_cfg 0 22 :2A_T8Ba7NgSc=N_HVH6H3
 DAx4 work 13 controller_tb 18 controller_tb_arch 22 :gT;FOHOTUB]BbgZVJ<BW1
 R5
 R6
-R31
-w1386101214
-R3
+R33
+R29
+R12
 8VHDL/controller_tb_controller_tb_arch_cfg.vhd
 FVHDL/controller_tb_controller_tb_arch_cfg.vhd
 l0
 L1
-VV?cjISM1EPaZA:5A6[5B43
+V1[]m:Lgan4WSf^fllB^1m3
 R7
 32
-R8
+R32
 R9
 !s100 @cUDR>^bZm3giBO_kk@Um3
 !i10b 0
-!s108 1386101214.230778
-!s90 -lower|-explicit|-work|work|VHDL/controller_tb_controller_tb_arch_cfg.vhd|-quiet|-nologo|
+!s108 1386318659.549634
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/controller_tb_controller_tb_arch_cfg.vhd|
 !s107 VHDL/controller_tb_controller_tb_arch_cfg.vhd|
 Ede_piece
 w1386115038
@@ -469,13 +469,13 @@ R9
 !s108 1386163897.184877
 !s107 VHDL/de_piece-behaviour.vhd|
 Cde_piece_behaviour_cfg
-Z32 abehaviour
+Z34 abehaviour
 ede_piece
 DAx4 work 8 de_piece 9 behaviour 22 Pm<@FQ<@MOGPWAzalR9Em3
 R27
 R5
 R6
-Z33 DEx4 work 8 de_piece 0 22 zYRW:VU^?HZ>jkc_@O5<;3
+Z35 DEx4 work 8 de_piece 0 22 zYRW:VU^?HZ>jkc_@O5<;3
 w1386101192
 R3
 8VHDL/de_piece_behaviour_cfg.vhd
@@ -493,20 +493,20 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/de_piece_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/de_piece_behaviour_cfg.vhd|
 Ede_piece_testbench
-Z34 w1386115201
+Z36 w1386115201
 R5
 R6
 R12
-Z35 8VHDL/de_piece_tb-behaviour.vhd
-Z36 FVHDL/de_piece_tb-behaviour.vhd
+Z37 8VHDL/de_piece_tb-behaviour.vhd
+Z38 FVHDL/de_piece_tb-behaviour.vhd
 l0
 L3
 VIINHn`jX>Yc6^6V8V_A8F2
 R7
 32
-Z37 !s108 1386115201.338324
-Z38 !s90 -lower|-explicit|-work|work|VHDL/de_piece_tb-behaviour.vhd|-quiet|-nologo|
-Z39 !s107 VHDL/de_piece_tb-behaviour.vhd|
+Z39 !s108 1386115201.338324
+Z40 !s90 -lower|-explicit|-work|work|VHDL/de_piece_tb-behaviour.vhd|-quiet|-nologo|
+Z41 !s107 VHDL/de_piece_tb-behaviour.vhd|
 R8
 R9
 !s100 GKhWTE3l1h>5]4U>T`0[P2
@@ -514,29 +514,29 @@ R9
 Abehaviour
 R5
 R6
-Z40 DEx4 work 18 de_piece_testbench 0 22 IINHn`jX>Yc6^6V8V_A8F2
+Z42 DEx4 work 18 de_piece_testbench 0 22 IINHn`jX>Yc6^6V8V_A8F2
 l31
 L6
 VmXHhc_1OJ`bB4`Ta_EZ1;3
 R7
 32
-R37
-R38
 R39
+R40
+R41
 R8
 R9
 !s100 8Gc0@9IW5[b>@3P;PEbFX0
 !i10b 1
 Cde_piece_testbench_behaviour_cfg
-R32
+R34
 ede_piece_testbench
-R33
+R35
 R27
 DCx4 work 22 de_piece_behaviour_cfg 0 22 kCRQdnJfQ[z6=241b5A8O1
 DAx4 work 18 de_piece_testbench 9 behaviour 22 R:=>4PJC<?0ki324Y:ajA2
 R5
 R6
-R40
+R42
 w1386101197
 R3
 8VHDL/de_piece_testbench_behaviour_cfg.vhd
@@ -554,7 +554,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/de_piece_testbench_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/de_piece_testbench_behaviour_cfg.vhd|
 Edec8
-Z41 w1385551505
+Z43 w1385551505
 R5
 R6
 R3
@@ -573,7 +573,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd|
 Adec8_behav
-Z42 DEx4 work 4 dec8 0 22 TNli=K?B;PIiCTVEe=2=i1
+Z44 DEx4 work 4 dec8 0 22 TNli=K?B;PIiCTVEe=2=i1
 R27
 R5
 R6
@@ -593,7 +593,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_arch.vhd|
 Asynthesised
 w1385579419
-R42
+R44
 R11
 R5
 R6
@@ -619,7 +619,7 @@ R27
 DAx4 work 4 dec8 10 dec8_behav 22 @86V^I9^?YP>ffCRo41OZ2
 R5
 R6
-R42
+R44
 w1385577096
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd
@@ -637,7 +637,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8_dec8_behav_cfg.vhd|
 Edemux4_inv
-Z43 w1385575662
+Z45 w1385575662
 R5
 R6
 R3
@@ -656,7 +656,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv.vhd|
 Ademux4_inv_behav
-Z44 DEx4 work 10 demux4_inv 0 22 kPZi0>9G;nkOJ5j``MBem2
+Z46 DEx4 work 10 demux4_inv 0 22 kPZi0>9G;nkOJ5j``MBem2
 R27
 R5
 R6
@@ -676,7 +676,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_arch.vhd|
 Asynthesised
 w1385579118
-R44
+R46
 R11
 R5
 R6
@@ -702,7 +702,7 @@ R27
 DAx4 work 10 demux4_inv 16 demux4_inv_behav 22 Za3MG^l[8Q[c9hGa]FJWK0
 R5
 R6
-R44
+R46
 w1385577107
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd
@@ -720,7 +720,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux4_inv_demux4_inv_behav_cfg.vhd|
 Edemux5
-R43
+R45
 R5
 R6
 R3
@@ -739,7 +739,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5.vhd|
 Ademux5_behav
-Z45 DEx4 work 6 demux5 0 22 iC:5o@^>BU><B?FLXHekW3
+Z47 DEx4 work 6 demux5 0 22 iC:5o@^>BU><B?FLXHekW3
 R27
 R5
 R6
@@ -759,7 +759,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_arch.vhd|
 Asynthesised
 w1385579770
-R45
+R47
 R11
 R5
 R6
@@ -785,7 +785,7 @@ R27
 DAx4 work 6 demux5 12 demux5_behav 22 OM<;FQBGLk5093]I@FhbY3
 R5
 R6
-R45
+R47
 w1385577118
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd
@@ -803,7 +803,7 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux5_demux5_behav_cfg.vhd|
 Edemux8_inv
-R43
+R45
 R5
 R6
 R3
@@ -823,7 +823,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv.vhd|
 Ademux8_inv_behav
 w1385585130
-Z46 DEx4 work 10 demux8_inv 0 22 eDe^OVzXRI4ei9eMg8FZJ0
+Z48 DEx4 work 10 demux8_inv 0 22 eDe^OVzXRI4ei9eMg8FZJ0
 R27
 R5
 R6
@@ -843,7 +843,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_arch.vhd|
 Asynthesised
 w1385585185
-R46
+R48
 R11
 R5
 R6
@@ -869,7 +869,7 @@ R27
 DAx4 work 10 demux8_inv 16 demux8_inv_behav 22 XEM;IXLJLn[I]a8nWHf4L2
 R5
 R6
-R46
+R48
 w1385577132
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
@@ -887,16 +887,16 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd|
 Cextracted
-Z47 asr_if_tb_behav
-Z48 esr_if_tb
-Z49 DEx4 work 5 sr_if 0 22 zbBEO9B7W93z[[<nO^54S2
+Z49 asr_if_tb_behav
+Z50 esr_if_tb
+Z51 DEx4 work 5 sr_if 0 22 zbBEO9B7W93z[[<nO^54S2
 R27
 DCx4 work 19 sr_if_extracted_cfg 0 22 NUR<>l<g]_VPFU=B2^mTH1
-Z50 DAx4 work 8 sr_if_tb 14 sr_if_tb_behav 22 bKKnQ?oh721^k95TXZ@Z91
+Z52 DAx4 work 8 sr_if_tb 14 sr_if_tb_behav 22 bKKnQ?oh721^k95TXZ@Z91
 R5
 R6
-Z51 DEx4 work 8 sr_if_tb 0 22 Y:5fJzOzCFf][?925Eo8G0
-Z52 w1385736444
+Z53 DEx4 work 8 sr_if_tb 0 22 Y:5fJzOzCFf][?925Eo8G0
+Z54 w1385736444
 R12
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/extracted.vhd
 F/home/epo3-user/Desktop/git/epo3/master/VHDL/extracted.vhd
@@ -905,7 +905,7 @@ L1
 VIf0;@;:<hjRmdLoa3aS873
 R7
 32
-Z53 o-2002 -lower -explicit -work work -quiet -nologo
+R32
 R9
 !s100 CC`IK_IFUdS=W_mfa3H@>0
 !i10b 0
@@ -932,7 +932,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log.vhd|-quiet|-nologo|
 !s107 VHDL/log.vhd|
 Abehaviour
-Z54 DEx4 work 3 log 0 22 Ki`KASEjB]Y`a1Hf<9UV63
+Z55 DEx4 work 3 log 0 22 Ki`KASEjB]Y`a1Hf<9UV63
 R5
 R6
 R3
@@ -951,12 +951,12 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/log-behaviour.vhd|
 Clog_behaviour_cfg
-R32
+R34
 elog
 DAx4 work 3 log 9 behaviour 22 eYXeAZgGdOIG>LGUf]>TD0
 R5
 R6
-R54
+R55
 w1386279875
 R3
 8VHDL/log_behaviour_cfg.vhd
@@ -993,7 +993,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log_score.vhd|-quiet|-nologo|
 !s107 VHDL/log_score.vhd|
 Abehaviour
-Z55 DEx4 work 9 log_score 0 22 ]RHTdZ0YC;z^[Sb6@;`l>0
+Z56 DEx4 work 9 log_score 0 22 ]RHTdZ0YC;z^[Sb6@;`l>0
 R5
 R6
 R3
@@ -1012,31 +1012,31 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log_score-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/log_score-behaviour.vhd|
 Clog_score_behaviour_cfg
-R32
+R34
 elog_score
-R54
-Z56 DEx4 work 5 score 0 22 ZU^z?1gMQSSY:IF@;D=<70
+R55
+Z57 DEx4 work 5 score 0 22 ZU^z?1gMQSSY:IF@;D=<70
 DCx4 work 17 log_behaviour_cfg 0 22 NmRnba_ajQ>TY8fOjFf8K1
-Z57 DCx4 work 19 score_behaviour_cfg 0 22 NC^i?lAGbWH]a>9d;R[:c3
+Z58 DCx4 work 19 score_behaviour_cfg 0 22 NC^i?lAGbWH]a>9d;R[:c3
 DAx4 work 9 log_score 9 behaviour 22 EUc=A:a7mbRd5MU3J3_Ed0
 R5
 R6
-R55
-w1386279885
-R3
+R56
+R29
+R12
 8VHDL/log_score_behaviour_cfg.vhd
 FVHDL/log_score_behaviour_cfg.vhd
 l0
 L1
-VhGSQCBzbEVdAK2MI9cV3X3
+VB;kkEN7cePBaHedVmREfi3
 R7
 32
-R8
+R32
 R9
 !s100 nViL5[lWW<M]dL5O@YGSa1
 !i10b 0
-!s108 1386279885.466989
-!s90 -lower|-explicit|-work|work|VHDL/log_score_behaviour_cfg.vhd|-quiet|-nologo|
+!s108 1386318659.359264
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/log_score_behaviour_cfg.vhd|
 !s107 VHDL/log_score_behaviour_cfg.vhd|
 Elog_score_tb
 R25
@@ -1058,7 +1058,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log_score_tb.vhd|-quiet|-nologo|
 !s107 VHDL/log_score_tb.vhd|
 Abehaviour
-Z58 DEx4 work 12 log_score_tb 0 22 jT=D83[bo7ZX1=UCDdajV2
+Z59 DEx4 work 12 log_score_tb 0 22 jT=D83[bo7ZX1=UCDdajV2
 R5
 R6
 8VHDL/log_score_tb-behaviour.vhd
@@ -1076,32 +1076,32 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/log_score_tb-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/log_score_tb-behaviour.vhd|
 Clog_score_tb_behaviour_cfg
-R32
+R34
 elog_score_tb
-R55
-DCx4 work 23 log_score_behaviour_cfg 0 22 hGSQCBzbEVdAK2MI9cV3X3
+R56
+DCx4 work 23 log_score_behaviour_cfg 0 22 B;kkEN7cePBaHedVmREfi3
 DAx4 work 12 log_score_tb 9 behaviour 22 YQiI`J[IJb^[mTKMF2V^G2
 R5
 R6
-R58
-w1386279890
-dmaster
+R59
+R29
+R12
 8VHDL/log_score_tb_behaviour_cfg.vhd
 FVHDL/log_score_tb_behaviour_cfg.vhd
 l0
 L1
-VaRSc0hLUTR:?JS`_Q2;8J2
-!s100 ah`fi@TT2^hZRm;a@HVSL1
+V7GddgW4aOLazRczQ6mnK]2
 R7
 32
-!i10b 0
-!s108 1386279890.505175
-!s90 -lower|-explicit|-work|work|VHDL/log_score_tb_behaviour_cfg.vhd|-quiet|-nologo|
-!s107 VHDL/log_score_tb_behaviour_cfg.vhd|
-R8
+R32
 R9
+!s100 ah`fi@TT2^hZRm;a@HVSL1
+!i10b 0
+!s108 1386318659.401655
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/log_score_tb_behaviour_cfg.vhd|
+!s107 VHDL/log_score_tb_behaviour_cfg.vhd|
 Emux5
-R43
+R45
 R5
 R6
 R3
@@ -1121,7 +1121,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5.vhd|
 Asynthesised
 w1385579724
-Z59 DEx4 work 4 mux5 0 22 jz1h3Z?[0e]V=ID0HDNaM3
+Z60 DEx4 work 4 mux5 0 22 jz1h3Z?[0e]V=ID0HDNaM3
 R11
 R5
 R6
@@ -1133,7 +1133,7 @@ L7
 VRh[VTe2DcQaPFZFeFmE:`3
 R7
 32
-R53
+R32
 R9
 !s100 egzm<Ko=9oemKiQM<7oZC0
 !i10b 1
@@ -1141,7 +1141,7 @@ R9
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/mux5_SYNTH.vhd|
 !s107 VHDL/mux5_SYNTH.vhd|
 Amux5_behav
-R59
+R60
 R27
 R5
 R6
@@ -1166,7 +1166,7 @@ R27
 DAx4 work 4 mux5 10 mux5_behav 22 UD5=J9Rb>2mk]5^X^3SR`2
 R5
 R6
-R59
+R60
 w1385577138
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_mux5_behav_cfg.vhd
@@ -1204,7 +1204,7 @@ R9
 !s107 VHDL/piece_lut.vhd|
 Apiece_lut_behaviour
 w1386114043
-Z60 DEx4 work 9 piece_lut 0 22 K0e6`R4?MCiiDhDAKhCN:0
+Z61 DEx4 work 9 piece_lut 0 22 K0e6`R4?MCiiDhDAKhCN:0
 R27
 R5
 R6
@@ -1230,8 +1230,8 @@ R27
 DAx4 work 9 piece_lut 19 piece_lut_behaviour 22 2Amf>ZLNl1FUL1zLVN<iQ3
 R5
 R6
-R60
-Z61 w1385731913
+R61
+Z62 w1385731913
 R12
 8VHDL/piece_lut_behaviour_cfg.vhd
 FVHDL/piece_lut_behaviour_cfg.vhd
@@ -1248,7 +1248,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_behaviour_cfg.vhd|
 Epiece_lut_tb
-R61
+R62
 R5
 R6
 R12
@@ -1268,7 +1268,7 @@ R9
 !s107 VHDL/piece_lut_tb.vhd|
 Apiece_lut_tb_behaviour
 R25
-Z62 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
+Z63 DEx4 work 12 piece_lut_tb 0 22 IA`UY244LV[TZYMJOhCJC2
 R5
 R6
 8VHDL/piece_lut_tb-behaviour.vhd
@@ -1288,13 +1288,13 @@ R9
 Cpiece_lut_tb_behaviour_cfg
 apiece_lut_tb_behaviour
 epiece_lut_tb
-R60
+R61
 DCx4 work 23 piece_lut_behaviour_cfg 0 22 bN8jTV^3VH_PXSMl6OHMj0
 DAx4 work 12 piece_lut_tb 22 piece_lut_tb_behaviour 22 7Cim;_cOIlY:K5mF[WQ611
 R5
 R6
+R63
 R62
-R61
 R12
 8VHDL/piece_lut_tb_behaviour_cfg.vhd
 FVHDL/piece_lut_tb_behaviour_cfg.vhd
@@ -1311,7 +1311,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/piece_lut_tb_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/piece_lut_tb_behaviour_cfg.vhd|
 Erom
-Z63 w1386012227
+Z64 w1386012227
 R5
 R6
 R12
@@ -1330,7 +1330,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom.vhd|-quiet|-nologo|
 !s107 VHDL/rom.vhd|
 Arom_behaviour
-Z64 DEx4 work 3 rom 0 22 G:P^8MkHJQb69H[7ZhcUf1
+Z65 DEx4 work 3 rom 0 22 G:P^8MkHJQb69H[7ZhcUf1
 R5
 R6
 8VHDL/rom-rom_behaviour.vhd
@@ -1350,32 +1350,32 @@ R9
 Crom_behaviour_cfg
 arom_behaviour
 erom
-Z65 DEx4 work 9 rom_mux24 0 22 3:34_^EPT4[f]g8<o>0;G3
-Z66 DEx4 work 9 rom_mux44 0 22 <F5n@bRRIm?F0SUZY0;iI0
+Z66 DEx4 work 9 rom_mux24 0 22 3:34_^EPT4[f]g8<o>0;G3
+Z67 DEx4 work 9 rom_mux44 0 22 <F5n@bRRIm?F0SUZY0;iI0
 DCx4 work 23 rom_mux24_behaviour_cfg 0 22 Fn9n0LaY?3XPhff>?HeG_1
 DCx4 work 23 rom_mux44_behaviour_cfg 0 22 `anjh9k3UnC6<VF=MSI]J3
 DAx4 work 3 rom 13 rom_behaviour 22 [e64;1DCDdn_Pfo:ILM9h1
 R5
 R6
-R64
-R63
-R3
+R65
+R29
+R12
 8VHDL/rom_behaviour_cfg.vhd
 FVHDL/rom_behaviour_cfg.vhd
 l0
 L1
-VD3TW4]gHD^WZBj;R_MUb13
+V=cQ@;c9[:z^e=Fffjf<[I3
 R7
 32
-R8
+R32
 R9
 !s100 mKbbdB[N9f6F3E6Bae2mP2
 !i10b 0
-!s108 1386096890.032017
-!s90 -lower|-explicit|-work|work|VHDL/rom_behaviour_cfg.vhd|-quiet|-nologo|
+!s108 1386318659.272075
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/rom_behaviour_cfg.vhd|
 !s107 VHDL/rom_behaviour_cfg.vhd|
 Erom_mux2
-R63
+R64
 R5
 R6
 R12
@@ -1394,7 +1394,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux2.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux2.vhd|
 Arom_mux2_behaviour
-Z67 DEx4 work 8 rom_mux2 0 22 `OcbH>Um;O[<i7loK?ieZ2
+Z68 DEx4 work 8 rom_mux2 0 22 `OcbH>Um;O[<i7loK?ieZ2
 R5
 R6
 8VHDL/rom_mux2-rom_mux2_behaviour.vhd
@@ -1412,7 +1412,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux2-rom_mux2_behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux2-rom_mux2_behaviour.vhd|
 Erom_mux24
-R63
+R64
 R5
 R6
 R12
@@ -1431,7 +1431,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux24.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux24.vhd|
 Arom_mux24_behaviour
-R65
+R66
 R5
 R6
 8VHDL/rom_mux24-rom_mux24_behaviour.vhd
@@ -1451,13 +1451,13 @@ R9
 Crom_mux24_behaviour_cfg
 arom_mux24_behaviour
 erom_mux24
-R67
+R68
 DCx4 work 22 rom_mux2_behaviour_cfg 0 22 hlThM7IFaGb>@32iBjV_n3
 DAx4 work 9 rom_mux24 19 rom_mux24_behaviour 22 me;bo>1:e_L[2HmcX=;^71
 R5
 R6
-R65
-R63
+R66
+R64
 R3
 8VHDL/rom_mux24_behaviour_cfg.vhd
 FVHDL/rom_mux24_behaviour_cfg.vhd
@@ -1479,8 +1479,8 @@ erom_mux2
 DAx4 work 8 rom_mux2 18 rom_mux2_behaviour 22 aln=dS^BdKkQm8g9cEFYo3
 R5
 R6
-R67
-R63
+R68
+R64
 R3
 8VHDL/rom_mux2_behaviour_cfg.vhd
 FVHDL/rom_mux2_behaviour_cfg.vhd
@@ -1497,7 +1497,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux2_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux2_behaviour_cfg.vhd|
 Erom_mux4
-R63
+R64
 R5
 R6
 R12
@@ -1516,7 +1516,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux4.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux4.vhd|
 Arom_mux4_behaviour
-Z68 DEx4 work 8 rom_mux4 0 22 EgRCHJ]jk<ih`M[oQ587[0
+Z69 DEx4 work 8 rom_mux4 0 22 EgRCHJ]jk<ih`M[oQ587[0
 R5
 R6
 8VHDL/rom_mux4-rom_mux4_behaviour.vhd
@@ -1534,7 +1534,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux4-rom_mux4_behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux4-rom_mux4_behaviour.vhd|
 Erom_mux44
-R63
+R64
 R5
 R6
 R12
@@ -1553,7 +1553,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux44.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux44.vhd|
 Arom_mux44_behaviour
-R66
+R67
 R5
 R6
 8VHDL/rom_mux44-rom_mux44_behaviour.vhd
@@ -1573,13 +1573,13 @@ R9
 Crom_mux44_behaviour_cfg
 arom_mux44_behaviour
 erom_mux44
-R68
+R69
 DCx4 work 22 rom_mux4_behaviour_cfg 0 22 FF>P>66`>=Q=R5ajhhX3<3
 DAx4 work 9 rom_mux44 19 rom_mux44_behaviour 22 E;<<alFEBLg^I41GIf18]0
 R5
 R6
-R66
-R63
+R67
+R64
 R3
 8VHDL/rom_mux44_behaviour_cfg.vhd
 FVHDL/rom_mux44_behaviour_cfg.vhd
@@ -1601,8 +1601,8 @@ erom_mux4
 DAx4 work 8 rom_mux4 18 rom_mux4_behaviour 22 Xj`bz;CS4GJ5oPa5GE1e51
 R5
 R6
-R68
-R63
+R69
+R64
 R3
 8VHDL/rom_mux4_behaviour_cfg.vhd
 FVHDL/rom_mux4_behaviour_cfg.vhd
@@ -1619,7 +1619,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_mux4_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/rom_mux4_behaviour_cfg.vhd|
 Erom_tb
-R63
+R64
 R5
 R6
 R12
@@ -1638,7 +1638,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/rom_tb.vhd|-quiet|-nologo|
 !s107 VHDL/rom_tb.vhd|
 Arom_tb_behaviour
-Z69 DEx4 work 6 rom_tb 0 22 4];4f;c8<iCR_zK;A=;4X0
+Z70 DEx4 work 6 rom_tb 0 22 4];4f;c8<iCR_zK;A=;4X0
 R5
 R6
 8VHDL/rom_tb-rom_tb_behaviour.vhd
@@ -1658,27 +1658,27 @@ R9
 Crom_tb_behaviour_cfg
 arom_tb_behaviour
 erom_tb
-R64
-DCx4 work 17 rom_behaviour_cfg 0 22 D3TW4]gHD^WZBj;R_MUb13
+R65
+DCx4 work 17 rom_behaviour_cfg 0 22 =cQ@;c9[:z^e=Fffjf<[I3
 DAx4 work 6 rom_tb 16 rom_tb_behaviour 22 T[G7L18;MQ2MXS22c26i80
 R5
 R6
-R69
-R63
-R3
+R70
+R29
+R12
 8VHDL/rom_tb_behaviour_cfg.vhd
 FVHDL/rom_tb_behaviour_cfg.vhd
 l0
 L1
-VH2FF>E9aQo0:ICdAOeO4b0
+VJ7d[=ME]AB^iKQc=;cmQE0
 R7
 32
-R8
+R32
 R9
 !s100 ?Q7l`Oo_XjKoi?HmblH0m3
 !i10b 0
-!s108 1386096890.180112
-!s90 -lower|-explicit|-work|work|VHDL/rom_tb_behaviour_cfg.vhd|-quiet|-nologo|
+!s108 1386318659.313283
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/rom_tb_behaviour_cfg.vhd|
 !s107 VHDL/rom_tb_behaviour_cfg.vhd|
 Escore
 R25
@@ -1700,7 +1700,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/score.vhd|-quiet|-nologo|
 !s107 VHDL/score.vhd|
 Abehaviour
-R56
+R57
 R27
 R5
 R6
@@ -1719,13 +1719,13 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/score-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/score-behaviour.vhd|
 Cscore_behaviour_cfg
-R32
+R34
 escore
 R27
 DAx4 work 5 score 9 behaviour 22 J`<iok8hji>]UdKWUNKMg2
 R5
 R6
-R56
+R57
 w1386279824
 R3
 8VHDL/score_behaviour_cfg.vhd
@@ -1762,7 +1762,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/score_tb.vhd|-quiet|-nologo|
 !s107 VHDL/score_tb.vhd|
 Abehaviour
-Z70 DEx4 work 8 score_tb 0 22 @Yb;;GX28dES`CWlDRo^h2
+Z71 DEx4 work 8 score_tb 0 22 @Yb;;GX28dES`CWlDRo^h2
 R5
 R6
 8VHDL/score_tb-behaviour.vhd
@@ -1780,14 +1780,14 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/score_tb-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/score_tb-behaviour.vhd|
 Cscore_tb_behaviour_cfg
-R32
+R34
 escore_tb
-R56
 R57
+R58
 DAx4 work 8 score_tb 9 behaviour 22 GPm3lh?5M3Ub8oTM`Of^m3
 R5
 R6
-R70
+R71
 w1386279831
 R3
 8VHDL/score_tb_behaviour_cfg.vhd
@@ -1805,16 +1805,16 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/score_tb_behaviour_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/score_tb_behaviour_cfg.vhd|
 Csim
-R47
-R48
 R49
+R50
+R51
 R27
 DCx4 work 21 sr_if_sr_if_behav_cfg 0 22 _V6CVee2i>NeXQWMzkY]11
-R50
+R52
 R5
 R6
-R51
-R52
+R53
+R54
 R12
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/sim.vhd
 F/home/epo3-user/Desktop/git/epo3/master/VHDL/sim.vhd
@@ -1823,7 +1823,7 @@ L1
 V;Zk]5Oi1_jWbe0??dK=n13
 R7
 32
-R53
+R32
 R9
 !s100 >PQ3gz:K1o?3IRYM1DS6O1
 !i10b 0
@@ -1853,7 +1853,7 @@ R9
 Asynthesised
 w1385716746
 R27
-R49
+R51
 R11
 R5
 R6
@@ -1865,7 +1865,7 @@ L7
 V]7?dRK8@Hk5io[Ozc0Rm83
 R7
 32
-R53
+R32
 R9
 !s100 5[9RLEbm9b6z8Q35f0ngg1
 !i10b 1
@@ -1874,7 +1874,7 @@ R9
 !s107 VHDL/sr_if_SYNTH.vhd|
 Asr_if_behav
 w1385716449
-R49
+R51
 R27
 R5
 R6
@@ -1895,7 +1895,7 @@ R9
 Aextracted
 w1385719995
 R27
-R49
+R51
 R11
 R5
 R6
@@ -1915,7 +1915,7 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_EXTR.vhd|
 Csr_if_extracted_cfg
 aextracted
-Z71 esr_if
+Z72 esr_if
 DEx8 cellslib 5 na310 0 22 z]klTlH8iZ77=SW_]c<[_0
 DEx8 cellslib 5 iv110 0 22 Bdg]QV`zZkg7kCgfbQ_;e3
 DEx8 cellslib 5 na210 0 22 Q7aJ;UTN[fYM;jh8iJg^41
@@ -1933,7 +1933,7 @@ DAx4 work 5 sr_if 9 extracted 22 BZOAJD;GRbo6HW3z4@SBK2
 R27
 R5
 R6
-R49
+R51
 w1385580614
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_extracted_cfg.vhd
@@ -1952,17 +1952,17 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_extracted_cfg.vhd|
 Csr_if_sr_if_behav_cfg
 asr_if_behav
-R71
-R45
-R59
-Z72 DEx4 work 8 sr_tower 0 22 TFM`Fio;Uk4JKH^lSXkhX2
+R72
+R47
+R60
+Z73 DEx4 work 8 sr_tower 0 22 TFM`Fio;Uk4JKH^lSXkhX2
 DCx4 work 23 demux5_demux5_behav_cfg 0 22 2B8;<ch>6M0jBNV];GNbR2
 DCx4 work 19 mux5_mux5_behav_cfg 0 22 UgR^Fm]eSTY`z3X1@Q81;2
 DAx4 work 5 sr_if 11 sr_if_behav 22 S]^Jk3B^c_Rd?518c_o`c0
 R27
 R5
 R6
-R49
+R51
 w1385577220
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_sr_if_behav_cfg.vhd
@@ -1980,20 +1980,20 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_sr_if_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_if_sr_if_behav_cfg.vhd|
 Esr_if_tb
-Z73 w1385818092
+Z74 w1385818092
 R5
 R6
 R12
-Z74 8VHDL/interface_tb.vhd
-Z75 FVHDL/interface_tb.vhd
+Z75 8VHDL/interface_tb.vhd
+Z76 FVHDL/interface_tb.vhd
 l0
 L4
 VY:5fJzOzCFf][?925Eo8G0
 R7
 32
-Z76 !s108 1385818092.194202
-Z77 !s90 -lower|-explicit|-work|work|VHDL/interface_tb.vhd|-quiet|-nologo|
-Z78 !s107 VHDL/interface_tb.vhd|
+Z77 !s108 1385818092.194202
+Z78 !s90 -lower|-explicit|-work|work|VHDL/interface_tb.vhd|-quiet|-nologo|
+Z79 !s107 VHDL/interface_tb.vhd|
 R8
 R9
 !s100 g8<kUC3PZ=o5F9^Ll=Nc=2
@@ -2001,21 +2001,21 @@ R9
 Asr_if_tb_behav
 R5
 R6
-R51
+R53
 l21
 L9
 VbKKnQ?oh721^k95TXZ@Z91
 R7
 32
-R76
 R77
 R78
+R79
 R8
 R9
 !s100 WdMj?Zd]4Bfa;5m?VRTA[2
 !i10b 1
 Esr_tower
-R41
+R43
 R27
 R5
 R6
@@ -2037,7 +2037,7 @@ R9
 Asynthesised
 w1385579505
 R27
-R72
+R73
 R11
 R5
 R6
@@ -2057,8 +2057,8 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/sr_tower_SYNTH.vhd|-quiet|-nologo|
 !s107 VHDL/sr_tower_SYNTH.vhd|
 Asr_tower_behav
-R43
-R72
+R45
+R73
 R27
 R5
 R6
@@ -2079,9 +2079,9 @@ R9
 Csr_tower_sr_tower_behav_cfg
 asr_tower_behav
 esr_tower
-R44
-R42
 R46
+R44
+R48
 R10
 DCx4 work 31 demux4_inv_demux4_inv_behav_cfg 0 22 P@abi_@KTAhef:m8]MQX40
 DCx4 work 19 dec8_dec8_behav_cfg 0 22 l^Gm2PYlNLgBSTa5Q5kAz3
@@ -2090,7 +2090,7 @@ DAx4 work 8 sr_tower 14 sr_tower_behav 22 QnD1A[]20]>_KMb:bV2e`0
 R27
 R5
 R6
-R72
+R73
 w1385577162
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd
@@ -2108,20 +2108,20 @@ R9
 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd|-quiet|-nologo|
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_sr_tower_behav_cfg.vhd|
 Esr_tower_tb
-Z79 w1385582428
+Z80 w1385582428
 R5
 R6
 R12
-Z80 8/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
-Z81 F/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
+Z81 8/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
+Z82 F/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd
 l0
 L4
 V7ccmiz>Z2>ZhbCIe6VZz;3
 R7
 32
-Z82 !s108 1385720984.344777
-Z83 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd|-quiet|-nologo|
-Z84 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd|
+Z83 !s108 1385720984.344777
+Z84 !s90 -lower|-explicit|-work|work|/home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd|-quiet|-nologo|
+Z85 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/tower_tb.vhd|
 R8
 R9
 !s100 OPkJ?F<?z<CT]i0Uo_J4X1
@@ -2129,15 +2129,15 @@ R9
 Asr_tower_tb_behav
 R5
 R6
-Z85 DEx4 work 11 sr_tower_tb 0 22 7ccmiz>Z2>ZhbCIe6VZz;3
+Z86 DEx4 work 11 sr_tower_tb 0 22 7ccmiz>Z2>ZhbCIe6VZz;3
 l21
 L9
 VeUO37WJLT0bLD<j9S0;6S2
 R7
 32
-R82
 R83
 R84
+R85
 R8
 R9
 !s100 UPPzjk2ffaNcZK]h0`MBD2
@@ -2145,13 +2145,13 @@ R9
 Csr_tower_tb_sr_tower_tb_behav_cfg
 asr_tower_tb_behav
 esr_tower_tb
-R72
+R73
 R27
 DCx4 work 27 sr_tower_sr_tower_behav_cfg 0 22 4JYhf=lHB>1z[9:B8V]DO2
 DAx4 work 11 sr_tower_tb 17 sr_tower_tb_behav 22 eUO37WJLT0bLD<j9S0;6S2
 R5
 R6
-R85
+R86
 w1385577168
 R3
 8/home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd
@@ -2170,8 +2170,8 @@ R9
 !s107 /home/epo3-user/Desktop/git/epo3/master/VHDL/sr_tower_tb_sr_tower_tb_behav_cfg.vhd|
 Etimer
 w1386271501
-Z86 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z87 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z87 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z88 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R5
 R6
 R3
@@ -2191,8 +2191,8 @@ R9
 !s107 VHDL/timer.vhd|
 Abehaviour
 w1386271540
-R86
 R87
+R88
 DEx4 work 5 timer 0 22 eP6Do@ZcEFH3HDJVK_<cR2
 R27
 R5
@@ -2212,15 +2212,15 @@ R9
 !s108 1386271540.497252
 !s107 VHDL/timer-behaviour.vhd|
 Ctimer_behaviour_cfg
-R32
+R34
 etimer
 R27
 DAx4 work 5 timer 9 behaviour 22 9`90N036J_<22YYBljz>70
-R86
 R87
+R88
 R5
 R6
-Z88 DEx4 work 5 timer 0 22 j0ZUBB06<HX5KF31Z0=0g2
+Z89 DEx4 work 5 timer 0 22 j0ZUBB06<HX5KF31Z0=0g2
 w1386164538
 R3
 8VHDL/timer_behaviour_cfg.vhd
@@ -2257,7 +2257,7 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/timer_tb.vhd|-quiet|-nologo|
 !s107 VHDL/timer_tb.vhd|
 Abehaviour
-Z89 DEx4 work 8 timer_tb 0 22 OYm7PB@Z?<BDd<jl;R`KC1
+Z90 DEx4 work 8 timer_tb 0 22 OYm7PB@Z?<BDd<jl;R`KC1
 R5
 R6
 8VHDL/timer_tb-behaviour.vhd
@@ -2275,16 +2275,16 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/timer_tb-behaviour.vhd|-quiet|-nologo|
 !s107 VHDL/timer_tb-behaviour.vhd|
 Ctimer_tb_behaviour_cfg
-R32
+R34
 etimer_tb
-R88
-R86
+R89
 R87
+R88
 DCx4 work 19 timer_behaviour_cfg 0 22 HfV8ng1TIkbmh?OL@RJaX3
 DAx4 work 8 timer_tb 9 behaviour 22 Kbk0KcGOEN^F__88bA_iH3
 R5
 R6
-R89
+R90
 w1386164544
 R3
 8VHDL/timer_tb_behaviour_cfg.vhd
@@ -2303,7 +2303,7 @@ R9
 !s107 VHDL/timer_tb_behaviour_cfg.vhd|
 Evga
 w1385458109
-R30
+R31
 R27
 R5
 R6
@@ -2312,40 +2312,40 @@ R12
 FVHDL/vga.vhd
 l0
 L6
-VLK8T0U5X@UlUIeJ^XQm>L1
+V0n[;dZh27<D;d:Y8HPol^3
 R7
 32
-R8
+R32
 R9
 !s100 dFbYL=OG;H;LKk9R?:JAa0
 !i10b 1
-!s108 1386101438.906006
-!s90 -lower|-explicit|-work|work|VHDL/vga.vhd|-quiet|-nologo|
+!s108 1386318659.010244
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga.vhd|
 !s107 VHDL/vga.vhd|
 Avga_arch
-R25
-Z90 DEx4 work 3 vga 0 22 LK8T0U5X@UlUIeJ^XQm>L1
-R30
+Z91 w1386318631
+Z92 DEx4 work 3 vga 0 22 0n[;dZh27<D;d:Y8HPol^3
+R31
 R27
 R5
 R6
 8VHDL/vga_arch.vhd
 FVHDL/vga_arch.vhd
-l144
+l157
 L6
-V7HDe0O`[I;XfAHZU9@THe2
+Vz=e=UA>C__W6h:2;aVfCc3
 R7
 32
-R8
+R32
 R9
-!s100 gmK7iMH3gR77iQHc>20?h3
+!s100 7DRh38lO^0Ol0d20CF_5C2
 !i10b 1
-!s108 1386101439.856033
-!s90 -lower|-explicit|-work|work|VHDL/vga_arch.vhd|-quiet|-nologo|
+!s108 1386318659.053854
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_arch.vhd|
 !s107 VHDL/vga_arch.vhd|
 Evga_counter
-R52
-R30
+Z93 w1385458071
+R31
 R27
 R5
 R6
@@ -2357,61 +2357,575 @@ L6
 VnRP5LXX1?4F?jC_a[1jH>0
 R7
 32
-R53
+R32
 R9
 !s100 `PJ3Aol_?fBS?;Nn4U;@33
 !i10b 1
-!s108 1385829943.881214
+!s108 1386318658.226032
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_counter.vhd|
 !s107 VHDL/vga_counter.vhd|
 Avga_counter_behav
-Z91 DEx4 work 11 vga_counter 0 22 nRP5LXX1?4F?jC_a[1jH>0
-R30
+R91
+Z94 DEx4 work 11 vga_counter 0 22 nRP5LXX1?4F?jC_a[1jH>0
+R31
 R27
 R5
 R6
 8VHDL/vga_counter_arch.vhd
 FVHDL/vga_counter_arch.vhd
-l10
+l36
 L6
-V76]c[@<PFBeZIC;95d:=13
+Vzf^_gHE84_G6H^SdYPcog2
 R7
 32
-R53
+R32
 R9
-!s100 ^=>cGQk3Gm=kzz7[CO6fn2
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_counter_arch.vhd|
+!s100 KmR0Q5bcAegeH09ETOkU]0
 !i10b 1
-!s108 1385829943.948187
+!s108 1386318658.920115
 !s107 VHDL/vga_counter_arch.vhd|
-Cvga_counter_vga_counter_behav_cfg
-avga_counter_behav
-evga_counter
-DAx4 work 11 vga_counter 17 vga_counter_behav 22 76]c[@<PFBeZIC;95d:=13
-R30
+Evga_counter_10bit
+R91
 R27
 R5
 R6
+R12
+8VHDL/vga_counter_10bit.vhd
+FVHDL/vga_counter_10bit.vhd
+l0
+L5
+VW@zX]z0W@eA6FMlL`K5A12
+R7
+32
+R8
+R9
+!s100 a80WM`PH]mHd0gbA9cTUA2
+!i10b 1
+!s108 1386318653.013822
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_10bit.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_10bit.vhd|
+Avga_counter_10bit_behav
+Z95 DEx4 work 17 vga_counter_10bit 0 22 W@zX]z0W@eA6FMlL`K5A12
+R27
+R5
+R6
+8VHDL/vga_counter_10bit_arch.vhd
+FVHDL/vga_counter_10bit_arch.vhd
+l7
+L5
+VFBmQM4PANLik`W7^nO?oX1
+R7
+32
+R8
+R9
+!s100 ONj<m;]B3;0;QlJRXmYRQ1
+!i10b 1
+!s108 1386318653.247150
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_10bit_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_10bit_arch.vhd|
+Cvga_counter_10bit_vga_counter_10bit_behav_cfg
+avga_counter_10bit_behav
+evga_counter_10bit
+DAx4 work 17 vga_counter_10bit 23 vga_counter_10bit_behav 22 FBmQM4PANLik`W7^nO?oX1
+R27
+R5
+R6
+R95
+w1386319140
+R12
+8VHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd
+FVHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd
+l0
+L1
+VYIWh8kQVd`e?;_Jdh7X=d2
+R7
+32
+R8
+R9
+!s100 oTHBJS?M_[e[c63lD4bRf2
+!i10b 0
+!s108 1386319140.484919
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_10bit_vga_counter_10bit_behav_cfg.vhd|
+Evga_counter_2bit
 R91
-w1386101311
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_2bit.vhd
+FVHDL/vga_counter_2bit.vhd
+l0
+L5
+Vdo>PS9TbO0@UPmm4Wg^BC2
+R7
+32
+R8
+R9
+!s100 C]5OP:NikgDUi_@D@_Wi?3
+!i10b 1
+!s108 1386318652.792597
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_2bit.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_2bit.vhd|
+Avga_counter_2bit_behav
+Z96 DEx4 work 16 vga_counter_2bit 0 22 do>PS9TbO0@UPmm4Wg^BC2
+R27
+R5
+R6
+8VHDL/vga_counter_2bit_arch.vhd
+FVHDL/vga_counter_2bit_arch.vhd
+l7
+L5
+VFl<4mVN=Qb[=<5j[giICM0
+R7
+32
+R8
+R9
+!s100 =`=f<8Ak>>:WBB>4Bb6o<3
+!i10b 1
+!s108 1386318653.533251
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_2bit_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_2bit_arch.vhd|
+Cvga_counter_2bit_vga_counter_2bit_behav_cfg
+avga_counter_2bit_behav
+evga_counter_2bit
+DAx4 work 16 vga_counter_2bit 22 vga_counter_2bit_behav 22 Fl<4mVN=Qb[=<5j[giICM0
+R27
+R5
+R6
+R96
+w1386319144
+R3
+8VHDL/vga_counter_2bit_vga_counter_2bit_behav_cfg.vhd
+FVHDL/vga_counter_2bit_vga_counter_2bit_behav_cfg.vhd
+l0
+L1
+VS<_k2=AW@V9OJBGd=_N`]3
+R7
+32
+R8
+R9
+!s100 ^S:>`hzJbE1Q8dBG5loWM1
+!i10b 0
+!s108 1386319144.663497
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_2bit_vga_counter_2bit_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_2bit_vga_counter_2bit_behav_cfg.vhd|
+Evga_counter_3bit
+R91
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_3bit.vhd
+FVHDL/vga_counter_3bit.vhd
+l0
+L5
+V3m2akn;]n6Y_PZFk<U]lc2
+R7
+32
+R8
+R9
+!s100 dC94aJA32L8>JaJ3YCLm@0
+!i10b 1
+!s108 1386318652.837533
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_3bit.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_3bit.vhd|
+Avga_counter_3bit_behav
+Z97 DEx4 work 16 vga_counter_3bit 0 22 3m2akn;]n6Y_PZFk<U]lc2
+R27
+R5
+R6
+8VHDL/vga_counter_3bit_arch.vhd
+FVHDL/vga_counter_3bit_arch.vhd
+l7
+L5
+VXda`b7Ni_cBz:c8hH`SQ81
+R7
+32
+R8
+R9
+!s100 Q^FQOI84F]P4@eC@?dVNE2
+!i10b 1
+!s108 1386318653.486584
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_3bit_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_3bit_arch.vhd|
+Cvga_counter_3bit_vga_counter_3bit_behav_cfg
+avga_counter_3bit_behav
+evga_counter_3bit
+DAx4 work 16 vga_counter_3bit 22 vga_counter_3bit_behav 22 Xda`b7Ni_cBz:c8hH`SQ81
+R27
+R5
+R6
+R97
+w1386319149
+R3
+8VHDL/vga_counter_3bit_vga_counter_3bit_behav_cfg.vhd
+FVHDL/vga_counter_3bit_vga_counter_3bit_behav_cfg.vhd
+l0
+L1
+VDlnn9Ten^TUeQQ1Y^5LS_3
+R7
+32
+R8
+R9
+!s100 >jNTh=7eY3=6`SVL4gnS:3
+!i10b 0
+!s108 1386319149.126023
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_3bit_vga_counter_3bit_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_3bit_vga_counter_3bit_behav_cfg.vhd|
+Evga_counter_4bit
+R91
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_4bit.vhd
+FVHDL/vga_counter_4bit.vhd
+l0
+L5
+V3PUO5bUE=jTVCXK7F51YL2
+R7
+32
+R8
+R9
+!s100 i;USbRcC=7i8E=l0f>9Ln3
+!i10b 1
+!s108 1386318652.735878
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_4bit.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_4bit.vhd|
+Avga_counter_4bit_behav
+Z98 DEx4 work 16 vga_counter_4bit 0 22 3PUO5bUE=jTVCXK7F51YL2
+R27
+R5
+R6
+8VHDL/vga_counter_4bit_arch.vhd
+FVHDL/vga_counter_4bit_arch.vhd
+l7
+L5
+Vfozh1`^<]TPFa6z5EHXmE2
+R7
+32
+R8
+R9
+!s100 o78o4iaCPIbV1Y^5@O:P[1
+!i10b 1
+!s108 1386318653.294058
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_4bit_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_4bit_arch.vhd|
+Cvga_counter_4bit_vga_counter_4bit_behav_cfg
+avga_counter_4bit_behav
+evga_counter_4bit
+DAx4 work 16 vga_counter_4bit 22 vga_counter_4bit_behav 22 fozh1`^<]TPFa6z5EHXmE2
+R27
+R5
+R6
+R98
+w1386319154
+R3
+8VHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd
+FVHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd
+l0
+L1
+VG3Q7]dDD8=]UDFdfQUzV02
+R7
+32
+R8
+R9
+!s100 B;D@Q5BH<;HG=FM?8[9UK0
+!i10b 0
+!s108 1386319154.495919
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd|
+Evga_counter_8bit
+R91
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_8bit.vhd
+FVHDL/vga_counter_8bit.vhd
+l0
+L5
+V4[XWi`<KdX2jco2<H^m>^2
+R7
+32
+R8
+R9
+!s100 XNDKBmG1Z;nLz[^DZLCUI0
+!i10b 1
+!s108 1386318652.970380
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bit.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bit.vhd|
+Avga_counter_8bit_behav
+Z99 DEx4 work 16 vga_counter_8bit 0 22 4[XWi`<KdX2jco2<H^m>^2
+R27
+R5
+R6
+8VHDL/vga_counter_8bit_arch.vhd
+FVHDL/vga_counter_8bit_arch.vhd
+l7
+L5
+VVR?F^lHS;Df?JHOzj`o:n2
+R7
+32
+R8
+R9
+!s100 JX;745WBI_E7>dX5OWi]z2
+!i10b 1
+!s108 1386318653.340105
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bit_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bit_arch.vhd|
+Cvga_counter_8bit_vga_counter_8bit_behav_cfg
+avga_counter_8bit_behav
+evga_counter_8bit
+DAx4 work 16 vga_counter_8bit 22 vga_counter_8bit_behav 22 VR?F^lHS;Df?JHOzj`o:n2
+R27
+R5
+R6
+R99
+w1386319164
+R3
+8VHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd
+FVHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd
+l0
+L1
+V:i<b355Fg2]ME:l02I2@N1
+R7
+32
+R8
+R9
+!s100 11[Rm2jU2hCH62c]N1ejG2
+!i10b 0
+!s108 1386319164.165867
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bit_vga_counter_8bit_behav_cfg.vhd|
+Evga_counter_8bitset
+R91
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_8bitset.vhd
+FVHDL/vga_counter_8bitset.vhd
+l0
+L5
+VZIl:L3RJ?VB[cf_RaJWm;3
+R7
+32
+R8
+R9
+!s100 BGWJInRH7l;TV^MKPXkKb3
+!i10b 1
+!s108 1386318652.925052
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bitset.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bitset.vhd|
+Avga_counter_8bitset_behav
+Z100 DEx4 work 19 vga_counter_8bitset 0 22 ZIl:L3RJ?VB[cf_RaJWm;3
+R27
+R5
+R6
+8VHDL/vga_counter_8bitset_arch.vhd
+FVHDL/vga_counter_8bitset_arch.vhd
+l7
+L5
+V8^MCGC2`AfFT2OY[6ezDa1
+R7
+32
+R8
+R9
+!s100 791F=d^[BQj:P7z=K_c4D0
+!i10b 1
+!s108 1386318653.385447
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bitset_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bitset_arch.vhd|
+Cvga_counter_8bitset_vga_counter_8bitset_behav_cfg
+avga_counter_8bitset_behav
+evga_counter_8bitset
+DAx4 work 19 vga_counter_8bitset 25 vga_counter_8bitset_behav 22 8^MCGC2`AfFT2OY[6ezDa1
+R27
+R5
+R6
+R100
+w1386319185
+R3
+8VHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd
+FVHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd
+l0
+L1
+Vb_LoY8<CDB]FbH8CN9Yj_1
+R7
+32
+R8
+R9
+!s100 m9Y[M0QIL4]HKG4mTMDo80
+!i10b 0
+!s108 1386319185.923613
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_8bitset_vga_counter_8bitset_behav_cfg.vhd|
+Evga_counter_resets
+R91
+R31
+R27
+R5
+R6
+R12
+8VHDL/vga_counter_resets.vhd
+FVHDL/vga_counter_resets.vhd
+l0
+L6
+V:P2U7zeP=9SZMHBkh3ZzN0
+R7
+32
+R8
+R9
+!s100 `R;zo^T^iGH>5PHglZA@:1
+!i10b 1
+!s108 1386318653.106379
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_resets.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_resets.vhd|
+Avga_counter_resets_behav
+Z101 DEx4 work 18 vga_counter_resets 0 22 :P2U7zeP=9SZMHBkh3ZzN0
+R31
+R27
+R5
+R6
+8VHDL/vga_counter_resets_arch.vhd
+FVHDL/vga_counter_resets_arch.vhd
+l7
+L6
+VHXPHJ5UK<<=6jHmV]PS@C2
+R7
+32
+R8
+R9
+!s100 Qkikeoj<3UUN?0oC`5JJR2
+!i10b 1
+!s108 1386318653.155447
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_resets_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_resets_arch.vhd|
+Cvga_counter_resets_vga_counter_resets_behav_cfg
+avga_counter_resets_behav
+evga_counter_resets
+DAx4 work 18 vga_counter_resets 24 vga_counter_resets_behav 22 HXPHJ5UK<<=6jHmV]PS@C2
+R31
+R27
+R5
+R6
+R101
+w1386319194
+R3
+8VHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd
+FVHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd
+l0
+L1
+VY]f1mfKV00JKgH2zEA[Y51
+R7
+32
+R8
+R9
+!s100 ;V=fPL>^6dZ^<IL<UH0=j0
+!i10b 0
+!s108 1386319194.358405
+!s90 -lower|-explicit|-work|work|VHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_counter_resets_vga_counter_resets_behav_cfg.vhd|
+Cvga_counter_vga_counter_behav_cfg
+avga_counter_behav
+evga_counter
+R101
+R95
+R99
+DCx4 work 47 vga_counter_resets_vga_counter_resets_behav_cfg 0 22 Y]f1mfKV00JKgH2zEA[Y51
+DCx4 work 45 vga_counter_10bit_vga_counter_10bit_behav_cfg 0 22 YIWh8kQVd`e?;_Jdh7X=d2
+DCx4 work 43 vga_counter_8bit_vga_counter_8bit_behav_cfg 0 22 :i<b355Fg2]ME:l02I2@N1
+DAx4 work 11 vga_counter 17 vga_counter_behav 22 zf^_gHE84_G6H^SdYPcog2
+R31
+R27
+R5
+R6
+R94
+w1386319210
 R3
 8VHDL/vga_counter_vga_counter_behav_cfg.vhd
 FVHDL/vga_counter_vga_counter_behav_cfg.vhd
 l0
 L1
-V:g=<F=2X5^do[HAKeBW:71
+VP`giCi4e`8adZ`F^@fS[n1
 R7
 32
 R8
 R9
-!s100 Eh`]@PUjga^B`:AS6Ba<A1
+!s100 nQzH;RF93A[6h@G;BizNi1
 !i10b 0
-!s108 1386101311.261970
+!s108 1386319210.768582
 !s90 -lower|-explicit|-work|work|VHDL/vga_counter_vga_counter_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_counter_vga_counter_behav_cfg.vhd|
+Evga_demux
+R91
+R31
+R5
+R6
+R12
+8VHDL/vga_demux.vhd
+FVHDL/vga_demux.vhd
+l0
+L5
+V30fd2OfgD?BN1Ih[XVaC[3
+R7
+32
+R8
+R9
+!s100 QBnmiChgP<hS9kAzG5M4=1
+!i10b 1
+!s108 1386318652.883676
+!s90 -lower|-explicit|-work|work|VHDL/vga_demux.vhd|-quiet|-nologo|
+!s107 VHDL/vga_demux.vhd|
+Avga_demux_behav
+R31
+Z102 DEx4 work 9 vga_demux 0 22 30fd2OfgD?BN1Ih[XVaC[3
+R5
+R6
+8VHDL/vga_demux_arch.vhd
+FVHDL/vga_demux_arch.vhd
+l5
+L4
+VFRULiak3Q0M9eBM8<FdIe2
+R7
+32
+R8
+R9
+!s100 cd7@JbPbG5FQl@HWBNSmL0
+!i10b 1
+!s108 1386318653.205033
+!s90 -lower|-explicit|-work|work|VHDL/vga_demux_arch.vhd|-quiet|-nologo|
+!s107 VHDL/vga_demux_arch.vhd|
+Cvga_demux_vga_demux_behav_cfg
+avga_demux_behav
+evga_demux
+DAx4 work 9 vga_demux 15 vga_demux_behav 22 FRULiak3Q0M9eBM8<FdIe2
+R31
+R5
+R6
+R102
+w1386319198
+R3
+8VHDL/vga_demux_vga_demux_behav_cfg.vhd
+FVHDL/vga_demux_vga_demux_behav_cfg.vhd
+l0
+L1
+VXcC<bE>:L[oImjK`2c4Tk3
+R7
+32
+R8
+R9
+!s100 `ISIM3:^IDP1I]8jBd=B:2
+!i10b 0
+!s108 1386319198.140072
+!s90 -lower|-explicit|-work|work|VHDL/vga_demux_vga_demux_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/vga_demux_vga_demux_behav_cfg.vhd|
 Evga_field_check
-R52
-R30
+R93
+R31
 R27
 R5
 R6
@@ -2423,16 +2937,17 @@ L6
 VPGQCOdbnhY:BEdhO^N:cO3
 R7
 32
-R53
+R32
 R9
 !s100 :k75gol;mV@`CgB?4RkOC3
 !i10b 1
-!s108 1385829943.748779
+!s108 1386318658.078094
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_check.vhd|
 !s107 VHDL/vga_field_check.vhd|
 Avga_field_check_arch
-Z92 DEx4 work 15 vga_field_check 0 22 PGQCOdbnhY:BEdhO^N:cO3
-R30
+R91
+Z103 DEx4 work 15 vga_field_check 0 22 PGQCOdbnhY:BEdhO^N:cO3
+R31
 R27
 R5
 R6
@@ -2440,26 +2955,26 @@ R6
 FVHDL/vga_field_check_arch.vhd
 l9
 L6
-VW8j>jSQFNFz]HLNPHkCe:1
+VVl1H]Y:RU@ff36[ZgYEzg1
 R7
 32
-R53
+R32
 R9
-!s100 [8nEWeHCQ=AIMIibBe5:S1
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_check_arch.vhd|
+!s100 C:9aLC^Y>8@XH51o?^:;B2
 !i10b 1
-!s108 1385829943.807565
+!s108 1386318658.540077
 !s107 VHDL/vga_field_check_arch.vhd|
 Cvga_field_check_vga_field_check_arch_cfg
 avga_field_check_arch
 evga_field_check
-DAx4 work 15 vga_field_check 20 vga_field_check_arch 22 W8j>jSQFNFz]HLNPHkCe:1
-R30
+DAx4 work 15 vga_field_check 20 vga_field_check_arch 22 Vl1H]Y:RU@ff36[ZgYEzg1
+R31
 R27
 R5
 R6
-R92
-w1386101304
+R103
+w1386319202
 R3
 8VHDL/vga_field_check_vga_field_check_arch_cfg.vhd
 FVHDL/vga_field_check_vga_field_check_arch_cfg.vhd
@@ -2472,12 +2987,12 @@ R8
 R9
 !s100 zdgSkj[AoJ:36>[6ad@]`2
 !i10b 0
-!s108 1386101304.871760
+!s108 1386319202.744205
 !s90 -lower|-explicit|-work|work|VHDL/vga_field_check_vga_field_check_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_field_check_vga_field_check_arch_cfg.vhd|
 Evga_field_trans
-Z93 w1385809905
-R30
+R91
+R31
 R27
 R5
 R6
@@ -2486,39 +3001,39 @@ R12
 FVHDL/vga_field_trans.vhd
 l0
 L6
-VcEKWWd[L?OIEN4A^0E[YG0
+VKa<NzzB<`2dQ:T0G^cFU[0
 R7
 32
-R53
+R32
 R9
-!s100 bDH=EiSfmocKkC:C>3=3A0
+!s100 0XZZYzcAf<j0]`di?3TJb3
 !i10b 1
-!s108 1385829943.600514
+!s108 1386318658.181827
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_trans.vhd|
 !s107 VHDL/vga_field_trans.vhd|
 Avga_field_trans_arch
-Z94 DEx4 work 15 vga_field_trans 0 22 cEKWWd[L?OIEN4A^0E[YG0
-R30
+Z104 DEx4 work 15 vga_field_trans 0 22 Ka<NzzB<`2dQ:T0G^cFU[0
+R31
 R27
 R5
 R6
 8VHDL/vga_field_trans_arch.vhd
 FVHDL/vga_field_trans_arch.vhd
-l9
+l21
 L6
-V^QeNY:=<E0SELO>WSnn3N1
+V?iB4TG@6XI:6WikMCJBid0
 R7
 32
-R53
+R32
 R9
-!s100 Vk[d2=gmmMa9JV;eQETcd3
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_trans_arch.vhd|
+!s100 iX[C83LRDV:FFgQ^dKE<13
 !i10b 1
-!s108 1385829943.675214
+!s108 1386318658.735484
 !s107 VHDL/vga_field_trans_arch.vhd|
 Evga_field_trans_reset
-R93
-R30
+R91
+R31
 R27
 R5
 R6
@@ -2527,89 +3042,93 @@ R12
 FVHDL/vga_field_trans_reset.vhd
 l0
 L6
-Ve]3KBK4c4ggWKCGead5Ui2
+Vol4>=X<lUCFG0=UPZYild0
 R7
 32
-R53
+R32
 R9
-!s100 o@n^4:FS`aO`DFH?f1L<K2
+!s100 :=U8>0YaKXL`14iAX<zhZ0
 !i10b 1
-!s108 1385829943.451966
+!s108 1386318658.138053
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_trans_reset.vhd|
 !s107 VHDL/vga_field_trans_reset.vhd|
 Avga_field_trans_reset_arch
-Z95 DEx4 work 21 vga_field_trans_reset 0 22 e]3KBK4c4ggWKCGead5Ui2
-R30
+Z105 DEx4 work 21 vga_field_trans_reset 0 22 ol4>=X<lUCFG0=UPZYild0
+R31
 R27
 R5
 R6
 8VHDL/vga_field_trans_reset_arch.vhd
 FVHDL/vga_field_trans_reset_arch.vhd
-l9
-L6
-V:IR:TA1>?BeMYilN6MKfj2
+l21
+L9
+Vl0dNoRdFg0o^RP3R=BKKo3
 R7
 32
-R53
+R32
 R9
-!s100 <8PnWmTz>EChFY;S7[C8N3
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_field_trans_reset_arch.vhd|
+!s100 kNK24UX;`6eSbe36^]=`g3
 !i10b 1
-!s108 1385829943.521581
+!s108 1386318658.632897
 !s107 VHDL/vga_field_trans_reset_arch.vhd|
 Cvga_field_trans_reset_vga_field_trans_reset_arch_cfg
 avga_field_trans_reset_arch
 evga_field_trans_reset
-DAx4 work 21 vga_field_trans_reset 26 vga_field_trans_reset_arch 22 :IR:TA1>?BeMYilN6MKfj2
-R30
+R98
+DCx4 work 43 vga_counter_4bit_vga_counter_4bit_behav_cfg 0 22 G3Q7]dDD8=]UDFdfQUzV02
+DAx4 work 21 vga_field_trans_reset 26 vga_field_trans_reset_arch 22 l0dNoRdFg0o^RP3R=BKKo3
+R31
 R27
 R5
 R6
-R95
-w1386101296
+R105
+w1386319223
 R3
 8VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd
 FVHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd
 l0
 L1
-VJoUZC>::0@3oEzCR^U1oT1
+VdH4XP^G31_0==1SKzV7Bi1
 R7
 32
 R8
 R9
-!s100 NHeoN@24BMQnDcdD2hGOR3
+!s100 QFhROEjMjF<6<okLeQj:T0
 !i10b 0
-!s108 1386101296.461177
+!s108 1386319223.327942
 !s90 -lower|-explicit|-work|work|VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_field_trans_reset_vga_field_trans_reset_arch_cfg.vhd|
 Cvga_field_trans_vga_field_trans_arch_cfg
 avga_field_trans_arch
 evga_field_trans
-DAx4 work 15 vga_field_trans 20 vga_field_trans_arch 22 ^QeNY:=<E0SELO>WSnn3N1
-R30
+R100
+Z106 DCx4 work 49 vga_counter_8bitset_vga_counter_8bitset_behav_cfg 0 22 b_LoY8<CDB]FbH8CN9Yj_1
+DAx4 work 15 vga_field_trans 20 vga_field_trans_arch 22 ?iB4TG@6XI:6WikMCJBid0
+R31
 R27
 R5
 R6
-R94
-w1386101300
+R104
+w1386319217
 R3
 8VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd
 FVHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd
 l0
 L1
-Vb2lVCm73XH44LR=8FldH73
+VQ_>akH?eGc47P5@035]@P2
 R7
 32
 R8
 R9
-!s100 ETCbjJU`F;6]PDM>IkGVg1
+!s100 z7M@I8om1Vd7Na1hY@ML_1
 !i10b 0
-!s108 1386101300.604180
+!s108 1386319217.185835
 !s90 -lower|-explicit|-work|work|VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_field_trans_vga_field_trans_arch_cfg.vhd|
 Evga_np_check
-Z96 w1385815115
-R30
+Z107 w1385815115
+R31
 R27
 R5
 R6
@@ -2618,19 +3137,19 @@ R12
 FVHDL/vga_np_check.vhd
 l0
 L6
-V=zOJe`5gGoal5F;eT^c8L3
+V9`GmKYR[T6dE5UiY7XzCR2
 R7
 32
-R53
+R8
 R9
 !s100 QK45DLCd=LPBVV9I^?gH>3
 !i10b 1
-!s108 1385829943.310503
-!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_check.vhd|
+!s108 1386319126.271378
+!s90 -lower|-explicit|-work|work|VHDL/vga_np_check.vhd|-quiet|-nologo|
 !s107 VHDL/vga_np_check.vhd|
 Avga_np_check_arch
-Z97 DEx4 work 12 vga_np_check 0 22 =zOJe`5gGoal5F;eT^c8L3
-R30
+Z108 DEx4 work 12 vga_np_check 0 22 9`GmKYR[T6dE5UiY7XzCR2
+R31
 R27
 R5
 R6
@@ -2641,23 +3160,23 @@ L6
 VV`B]7a8EFLXG^1NZg[o>;3
 R7
 32
-R53
+R32
 R9
 !s100 l6NA2hmQnmhE3QUNf[V[V0
-!i10b 1
-!s108 1385829943.379417
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_check_arch.vhd|
+!i10b 1
+!s108 1386319128.386674
 !s107 VHDL/vga_np_check_arch.vhd|
 Cvga_np_check_vga_np_check_arch_cfg
 avga_np_check_arch
 evga_np_check
 DAx4 work 12 vga_np_check 17 vga_np_check_arch 22 V`B]7a8EFLXG^1NZg[o>;3
-R30
+R31
 R27
 R5
 R6
-R97
-w1386101290
+R108
+w1386319235
 R3
 8VHDL/vga_np_check_vga_np_check_arch_cfg.vhd
 FVHDL/vga_np_check_vga_np_check_arch_cfg.vhd
@@ -2670,12 +3189,12 @@ R8
 R9
 !s100 7cEeG2hDkXHh7;n7BU6Uj2
 !i10b 0
-!s108 1386101290.537787
+!s108 1386319235.164926
 !s90 -lower|-explicit|-work|work|VHDL/vga_np_check_vga_np_check_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_np_check_vga_np_check_arch_cfg.vhd|
 Evga_np_trans
-w1385820700
-R30
+R91
+R31
 R27
 R5
 R6
@@ -2684,40 +3203,39 @@ R12
 FVHDL/vga_np_trans.vhd
 l0
 L6
-V<cYNRb7IC0fW5JRmGbFM[1
+V:k]`NFFm9i1hFhf;:z>H_1
 R7
 32
-R53
+R32
 R9
-!s100 37>em7H32d0JlDYR7ZG6V1
+!s100 YV1O<LM1DQM>X>QT_30Rn1
 !i10b 1
-!s108 1385829943.175170
+!s108 1386318658.034909
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_trans.vhd|
 !s107 VHDL/vga_np_trans.vhd|
 Avga_np_trans_arch
-w1385823567
-Z98 DEx4 work 12 vga_np_trans 0 22 <cYNRb7IC0fW5JRmGbFM[1
-R30
+Z109 DEx4 work 12 vga_np_trans 0 22 :k]`NFFm9i1hFhf;:z>H_1
+R31
 R27
 R5
 R6
 8VHDL/vga_np_trans_arch.vhd
 FVHDL/vga_np_trans_arch.vhd
-l9
+l21
 L6
-VMgdP>QnOMSHP`iXKd5O773
+V>JzN[GH=F=@^1IeoZlAS:3
 R7
 32
-R53
+R32
 R9
-!s100 igP[Y73F78CBdH[l>?Slf2
-!i10b 1
-!s108 1385829943.247312
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_trans_arch.vhd|
+!s100 7bC=Un;2[Ej76Kf`a<C<m3
+!i10b 1
+!s108 1386318658.449948
 !s107 VHDL/vga_np_trans_arch.vhd|
 Evga_np_trans_reset
-R96
-R30
+R91
+R31
 R27
 R5
 R6
@@ -2726,107 +3244,111 @@ R12
 FVHDL/vga_np_trans_reset.vhd
 l0
 L6
-VZVJ6j<VakUPCK7:amzR:o3
+VkNI_D;]QzeE8WYPl3@9@42
 R7
 32
-R53
+R32
 R9
-!s100 z_:TdzHl[_Gzj;D@]^Lkl2
+!s100 BlDD>cE^6bAH<aYfXaD`d1
 !i10b 1
-!s108 1385829943.028503
+!s108 1386318657.987847
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_trans_reset.vhd|
 !s107 VHDL/vga_np_trans_reset.vhd|
 Avga_np_trans_reset_arch
-Z99 DEx4 work 18 vga_np_trans_reset 0 22 ZVJ6j<VakUPCK7:amzR:o3
-R30
+Z110 DEx4 work 18 vga_np_trans_reset 0 22 kNI_D;]QzeE8WYPl3@9@42
+R31
 R27
 R5
 R6
 8VHDL/vga_np_trans_reset_arch.vhd
 FVHDL/vga_np_trans_reset_arch.vhd
-l9
-L6
-V2NPY`D<_VN>V?oCg7JKUY2
+l21
+L9
+Vf87h0Cg=7]V0QgbXQD:4X1
 R7
 32
-R53
+R32
 R9
-!s100 FcEa=`62:HL<9S<f6:36i2
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_np_trans_reset_arch.vhd|
+!s100 D?dH48Nj4819Q_fD1Q;l50
 !i10b 1
-!s108 1385829943.097730
+!s108 1386318658.359741
 !s107 VHDL/vga_np_trans_reset_arch.vhd|
 Cvga_np_trans_reset_vga_np_trans_reset_arch_cfg
 avga_np_trans_reset_arch
 evga_np_trans_reset
-DAx4 work 18 vga_np_trans_reset 23 vga_np_trans_reset_arch 22 2NPY`D<_VN>V?oCg7JKUY2
-R30
+R96
+DCx4 work 43 vga_counter_2bit_vga_counter_2bit_behav_cfg 0 22 S<_k2=AW@V9OJBGd=_N`]3
+DAx4 work 18 vga_np_trans_reset 23 vga_np_trans_reset_arch 22 f87h0Cg=7]V0QgbXQD:4X1
+R31
 R27
 R5
 R6
-R99
-w1386101280
+R110
+w1386319257
 R3
 8VHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd
 FVHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd
 l0
 L1
-VH0DlR[`TI478OTjCf3`zF0
+VjBl9f=2WP[Ud_Y54U6;NR3
 R7
 32
 R8
 R9
-!s100 e3=?ZXz<=Io]>>1EZDLQB2
+!s100 e43TG>:XaPdcjZW36dzQn1
 !i10b 0
-!s108 1386101280.592550
+!s108 1386319257.432349
 !s90 -lower|-explicit|-work|work|VHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_np_trans_reset_vga_np_trans_reset_arch_cfg.vhd|
 Cvga_np_trans_vga_np_trans_arch_cfg
 avga_np_trans_arch
 evga_np_trans
-DAx4 work 12 vga_np_trans 17 vga_np_trans_arch 22 MgdP>QnOMSHP`iXKd5O773
-R30
+R100
+R106
+DAx4 work 12 vga_np_trans 17 vga_np_trans_arch 22 >JzN[GH=F=@^1IeoZlAS:3
+R31
 R27
 R5
 R6
-R98
-w1386101285
+R109
+w1386319244
 R3
 8VHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd
 FVHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd
 l0
 L1
-VnD?0eh`;BHo_f<[J<G3`X0
+V7E4NC9OO=PSK1Xzhb@1873
 R7
 32
 R8
 R9
-!s100 8M3<LF5QSRG];OH9j<09S2
+!s100 `]YfzAa@>9HA;29SJO9Sn1
 !i10b 0
-!s108 1386101285.539412
+!s108 1386319244.326999
 !s90 -lower|-explicit|-work|work|VHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_np_trans_vga_np_trans_arch_cfg.vhd|
 Pvga_params
 R5
 R6
-Z100 w1385829568
+Z111 w1385829568
 R12
-Z101 8VHDL/params.vhd
-Z102 FVHDL/params.vhd
+Z112 8VHDL/params.vhd
+Z113 FVHDL/params.vhd
 l0
 L4
 Vk9F]S[jE>zJo[VY[Bzio<1
 R7
 32
-Z103 !s108 1385829853.561402
-Z104 !s90 -lower|-explicit|-work|work|VHDL/params.vhd|-quiet|-nologo|
-Z105 !s107 VHDL/params.vhd|
+Z114 !s108 1385829853.561402
+Z115 !s90 -lower|-explicit|-work|work|VHDL/params.vhd|-quiet|-nologo|
+Z116 !s107 VHDL/params.vhd|
 R8
 R9
 !s100 O0KAUMKDNFiXSL79iHKAQ0
 !i10b 1
 Bbody
-R30
+R31
 R5
 R6
 l0
@@ -2834,17 +3356,17 @@ L63
 V<ml_:;<e4J1>nKJ@U[AX41
 R7
 32
-R103
-R104
-R105
+R114
+R115
+R116
 R8
 R9
 nbody
 !s100 z8j7W@fO72d^o4V@LmNJF2
 !i10b 1
 Evga_read
-R63
-R30
+R64
+R31
 R27
 R5
 R6
@@ -2864,8 +3386,8 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/vga_read.vhd|-quiet|-nologo|
 !s107 VHDL/vga_read.vhd|
 Avga_read_behav
-Z106 DEx4 work 8 vga_read 0 22 ^b`HFNMWNHfo9iOz?e=4f3
-R30
+Z117 DEx4 work 8 vga_read 0 22 ^b`HFNMWNHfo9iOz?e=4f3
+R31
 R27
 R5
 R6
@@ -2887,13 +3409,13 @@ Cvga_read_vga_read_behav_cfg
 avga_read_behav
 evga_read
 DAx4 work 8 vga_read 14 vga_read_behav 22 eR?Q750TO^bkoD4zB]Vaf1
-R30
+R31
 R27
 R5
 R6
-R106
-w1386101269
-R12
+R117
+w1386319262
+R3
 8VHDL/vga_read_vga_read_behav_cfg.vhd
 FVHDL/vga_read_vga_read_behav_cfg.vhd
 l0
@@ -2905,12 +3427,12 @@ R8
 R9
 !s100 :l^[DbTm]0>WU63<=Xl813
 !i10b 0
-!s108 1386101434.317181
+!s108 1386319262.317186
 !s90 -lower|-explicit|-work|work|VHDL/vga_read_vga_read_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_read_vga_read_behav_cfg.vhd|
 Evga_score_check
-R100
-R30
+R111
+R31
 R27
 R5
 R6
@@ -2930,8 +3452,8 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/vga_score_check.vhd|-quiet|-nologo|
 !s107 VHDL/vga_score_check.vhd|
 Avga_score_check_arch
-Z107 DEx4 work 15 vga_score_check 0 22 ;U<VcKbRJkSg0AdnLh_KL1
-R30
+Z118 DEx4 work 15 vga_score_check 0 22 ;U<VcKbRJkSg0AdnLh_KL1
+R31
 R27
 R5
 R6
@@ -2953,12 +3475,12 @@ Cvga_score_check_vga_score_check_arch_cfg
 avga_score_check_arch
 evga_score_check
 DAx4 work 15 vga_score_check 20 vga_score_check_arch 22 gkoBNfU>G6;W769N4H;Vc1
-R30
+R31
 R27
 R5
 R6
-R107
-w1386101248
+R118
+w1386319267
 R3
 8VHDL/vga_score_check_vga_score_check_arch_cfg.vhd
 FVHDL/vga_score_check_vga_score_check_arch_cfg.vhd
@@ -2971,12 +3493,12 @@ R8
 R9
 !s100 EMhH^G@IXeYXoCXB5UT<;1
 !i10b 0
-!s108 1386101248.338566
+!s108 1386319267.686543
 !s90 -lower|-explicit|-work|work|VHDL/vga_score_check_vga_score_check_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_score_check_vga_score_check_arch_cfg.vhd|
 Evga_score_trans
-R100
-R30
+R111
+R31
 R27
 R5
 R6
@@ -2996,53 +3518,56 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/vga_score_trans.vhd|-quiet|-nologo|
 !s107 VHDL/vga_score_trans.vhd|
 Avga_score_trans_arch
-Z108 DEx4 work 15 vga_score_trans 0 22 PjUZS=o_l[D>kZE9FkjV`1
-R30
+R91
+Z119 DEx4 work 15 vga_score_trans 0 22 PjUZS=o_l[D>kZE9FkjV`1
+R31
 R27
 R5
 R6
 8VHDL/vga_score_trans_arch.vhd
 FVHDL/vga_score_trans_arch.vhd
-l9
-L6
-V>Ue=AMO^g50`1LbTSC2hX2
+l22
+L9
+V7b;3l71IgABD10kWS`^DN0
 R7
 32
-R8
+R32
 R9
-!s100 id7HF1jXe3c64jl`733jM2
+!s100 k7jHGoVjnU?KSBO;cEf^82
 !i10b 1
-!s108 1385829855.517454
-!s90 -lower|-explicit|-work|work|VHDL/vga_score_trans_arch.vhd|-quiet|-nologo|
+!s108 1386318658.269834
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_score_trans_arch.vhd|
 !s107 VHDL/vga_score_trans_arch.vhd|
 Cvga_score_trans_vga_score_trans_arch_cfg
 avga_score_trans_arch
 evga_score_trans
-DAx4 work 15 vga_score_trans 20 vga_score_trans_arch 22 >Ue=AMO^g50`1LbTSC2hX2
-R30
+R97
+DCx4 work 43 vga_counter_3bit_vga_counter_3bit_behav_cfg 0 22 Dlnn9Ten^TUeQQ1Y^5LS_3
+DAx4 work 15 vga_score_trans 20 vga_score_trans_arch 22 7b;3l71IgABD10kWS`^DN0
+R31
 R27
 R5
 R6
-R108
-w1386101243
+R119
+w1386319282
 R3
 8VHDL/vga_score_trans_vga_score_trans_arch_cfg.vhd
 FVHDL/vga_score_trans_vga_score_trans_arch_cfg.vhd
 l0
 L1
-V[KkbDIK8d1W<S;A1JkTJA2
+Vh630onaGZAf;^3]7_b6Bg3
 R7
 32
 R8
 R9
-!s100 P?U=^@ECbR3R03F=ZLmb03
+!s100 laT7N7<MfCfM2nYR7Um<U0
 !i10b 0
-!s108 1386101243.577548
+!s108 1386319282.301472
 !s90 -lower|-explicit|-work|work|VHDL/vga_score_trans_vga_score_trans_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_score_trans_vga_score_trans_arch_cfg.vhd|
 Evga_sync
-R52
-R30
+R54
+R31
 R27
 R5
 R6
@@ -3054,7 +3579,7 @@ L6
 VYOTf@:>a=V0S]IHdbANS42
 R7
 32
-R53
+R32
 R9
 !s100 aHWGM>BWPY61Y]F4QGg4I2
 !i10b 1
@@ -3062,8 +3587,9 @@ R9
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_sync.vhd|
 !s107 VHDL/vga_sync.vhd|
 Avga_sync_arch
-Z109 DEx4 work 8 vga_sync 0 22 YOTf@:>a=V0S]IHdbANS42
-R30
+R91
+Z120 DEx4 work 8 vga_sync 0 22 YOTf@:>a=V0S]IHdbANS42
+R31
 R27
 R5
 R6
@@ -3071,26 +3597,26 @@ R6
 FVHDL/vga_sync_arch.vhd
 l9
 L6
-VkB92zP3<C@C]f`>oTY2?S0
+VbKo>6=L?1oddM6e9KB4z`2
 R7
 32
-R53
+R32
 R9
-!s100 :[z=nQngZZ?1Y9b8H708Y2
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_sync_arch.vhd|
+!s100 8a?V0S^Fld3oSFSGd@ng61
 !i10b 1
-!s108 1385829942.797705
+!s108 1386318658.827650
 !s107 VHDL/vga_sync_arch.vhd|
 Cvga_sync_vga_sync_arch_cfg
 avga_sync_arch
 evga_sync
-DAx4 work 8 vga_sync 13 vga_sync_arch 22 kB92zP3<C@C]f`>oTY2?S0
-R30
+DAx4 work 8 vga_sync 13 vga_sync_arch 22 bKo>6=L?1oddM6e9KB4z`2
+R31
 R27
 R5
 R6
-R109
-w1386101238
+R120
+w1386319301
 R3
 8VHDL/vga_sync_vga_sync_arch_cfg.vhd
 FVHDL/vga_sync_vga_sync_arch_cfg.vhd
@@ -3103,78 +3629,78 @@ R8
 R9
 !s100 MYkoV6z5078:`G8?7kD[n3
 !i10b 0
-!s108 1386101238.968071
+!s108 1386319301.685628
 !s90 -lower|-explicit|-work|work|VHDL/vga_sync_vga_sync_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_sync_vga_sync_arch_cfg.vhd|
 Evga_tb
-R96
-R30
+R91
+R31
 R27
 R5
 R6
 R12
-Z110 8VHDL/vga_tb.vhd
-Z111 FVHDL/vga_tb.vhd
+Z121 8VHDL/vga_tb.vhd
+Z122 FVHDL/vga_tb.vhd
 l0
 L6
-VhcI[ND1]5OoVzlQccToXC3
+VAAE6l<l?Q3:`X`>=0VXWE1
 R7
 32
-Z112 !s108 1385829942.645295
-Z113 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_tb.vhd|
-Z114 !s107 VHDL/vga_tb.vhd|
-R53
+Z123 !s108 1386318659.149880
+Z124 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_tb.vhd|
+Z125 !s107 VHDL/vga_tb.vhd|
+R32
 R9
-!s100 ]J8YXFILR9N;CPc>DSV1Y0
+!s100 ^o:J5ajjaD2]Fi_Jfa7]P3
 !i10b 1
 Avga_tb_arch
-R30
+R31
 R27
 R5
 R6
-Z115 DEx4 work 6 vga_tb 0 22 hcI[ND1]5OoVzlQccToXC3
-l29
-L10
-V9eckKd`@APZD:2=eDjN4]1
+Z126 DEx4 work 6 vga_tb 0 22 AAE6l<l?Q3:`X`>=0VXWE1
+l30
+L11
+VZTY5W<dI>CXm^0kVf5lni2
 R7
 32
-R112
-R113
-R114
-R53
+R123
+R124
+R125
+R32
 R9
-!s100 nkNd`X8Kii<gIJh3g`Zh21
+!s100 b:Y=U6ANIj_68bZ=YDO;L2
 !i10b 1
 Cvga_tb_vga_tb_arch_cfg
 avga_tb_arch
 evga_tb
-R90
-DCx4 work 16 vga_vga_arch_cfg 0 22 d>Mj5@Dlemd`2M<ChT^9:3
-DAx4 work 6 vga_tb 11 vga_tb_arch 22 9eckKd`@APZD:2=eDjN4]1
-R30
+R92
+DCx4 work 16 vga_vga_arch_cfg 0 22 zFI=OM`PQNYUbN8LG`IJB0
+DAx4 work 6 vga_tb 11 vga_tb_arch 22 ZTY5W<dI>CXm^0kVf5lni2
+R31
 R27
 R5
 R6
-R115
-w1386101455
+R126
+w1386319324
 R3
 8VHDL/vga_tb_vga_tb_arch_cfg.vhd
 FVHDL/vga_tb_vga_tb_arch_cfg.vhd
 l0
 L1
-V:=j=jY`F^Dz]R_?adbW[=0
+V8_9>gj`AOaUi3JJ^k0Nk62
 R7
 32
-R53
+R8
 R9
 !s100 >EYCa1IKojdf9i>ck5QUM0
 !i10b 0
-!s108 1386101461.109834
-!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_tb_vga_tb_arch_cfg.vhd|
+!s108 1386319324.138254
+!s90 -lower|-explicit|-work|work|VHDL/vga_tb_vga_tb_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_tb_vga_tb_arch_cfg.vhd|
 Evga_triggers
-R96
-R30
+R107
+R31
 R27
 R5
 R6
@@ -3194,8 +3720,8 @@ R9
 !s90 -lower|-explicit|-work|work|VHDL/vga_triggers.vhd|-quiet|-nologo|
 !s107 VHDL/vga_triggers.vhd|
 Avga_triggers_arch
-Z116 DEx4 work 12 vga_triggers 0 22 QS[=CnZ>_U=ER8_R7z:2P1
-R30
+Z127 DEx4 work 12 vga_triggers 0 22 QS[=CnZ>_U=ER8_R7z:2P1
+R31
 R27
 R5
 R6
@@ -3206,7 +3732,7 @@ L6
 ViO=l6U<nO0l=[S1HKhG8V1
 R7
 32
-R53
+R32
 R9
 !s100 fAgLK9?dh5SXUz3=CDNjS3
 !s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/vga_triggers_arch.vhd|
@@ -3217,12 +3743,12 @@ Cvga_triggers_vga_triggers_arch_cfg
 avga_triggers_arch
 evga_triggers
 DAx4 work 12 vga_triggers 17 vga_triggers_arch 22 iO=l6U<nO0l=[S1HKhG8V1
-R30
+R31
 R27
 R5
 R6
-R116
-w1386101253
+R127
+w1386319307
 R3
 8VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
 FVHDL/vga_triggers_vga_triggers_arch_cfg.vhd
@@ -3235,55 +3761,57 @@ R8
 R9
 !s100 HF5QU>AgV3IHSEYW_PO0>2
 !i10b 0
-!s108 1386101253.489233
+!s108 1386319307.763412
 !s90 -lower|-explicit|-work|work|VHDL/vga_triggers_vga_triggers_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_triggers_vga_triggers_arch_cfg.vhd|
 Cvga_vga_arch_cfg
 avga_arch
 evga
-R107
+R102
+R118
+R119
 R108
-R97
-R99
-R98
-R92
-R95
-R94
-R106
-R116
+R110
 R109
-R91
+R103
+R105
+R104
+R117
+R127
+R120
+R94
+DCx4 work 29 vga_demux_vga_demux_behav_cfg 0 22 XcC<bE>:L[oImjK`2c4Tk3
 DCx4 work 40 vga_score_check_vga_score_check_arch_cfg 0 22 Qoc6V5MVPSBRX<WPG5McM2
-DCx4 work 40 vga_score_trans_vga_score_trans_arch_cfg 0 22 [KkbDIK8d1W<S;A1JkTJA2
+DCx4 work 40 vga_score_trans_vga_score_trans_arch_cfg 0 22 h630onaGZAf;^3]7_b6Bg3
 DCx4 work 34 vga_np_check_vga_np_check_arch_cfg 0 22 D@]_4N<9>T<U?zGT764Ib2
-DCx4 work 46 vga_np_trans_reset_vga_np_trans_reset_arch_cfg 0 22 H0DlR[`TI478OTjCf3`zF0
-DCx4 work 34 vga_np_trans_vga_np_trans_arch_cfg 0 22 nD?0eh`;BHo_f<[J<G3`X0
+DCx4 work 46 vga_np_trans_reset_vga_np_trans_reset_arch_cfg 0 22 jBl9f=2WP[Ud_Y54U6;NR3
+DCx4 work 34 vga_np_trans_vga_np_trans_arch_cfg 0 22 7E4NC9OO=PSK1Xzhb@1873
 DCx4 work 40 vga_field_check_vga_field_check_arch_cfg 0 22 Y[WmzlAMdD>`3m0ZN^S9m3
-DCx4 work 52 vga_field_trans_reset_vga_field_trans_reset_arch_cfg 0 22 JoUZC>::0@3oEzCR^U1oT1
-DCx4 work 40 vga_field_trans_vga_field_trans_arch_cfg 0 22 b2lVCm73XH44LR=8FldH73
+DCx4 work 52 vga_field_trans_reset_vga_field_trans_reset_arch_cfg 0 22 dH4XP^G31_0==1SKzV7Bi1
+DCx4 work 40 vga_field_trans_vga_field_trans_arch_cfg 0 22 Q_>akH?eGc47P5@035]@P2
 DCx4 work 27 vga_read_vga_read_behav_cfg 0 22 bj3hkb;SfC=HcfFZcimJT0
 DCx4 work 34 vga_triggers_vga_triggers_arch_cfg 0 22 266c=H8<F8718J1cl3Yml3
 DCx4 work 26 vga_sync_vga_sync_arch_cfg 0 22 kZ[oN:dbQo:Ca]2TM]^?M3
-DCx4 work 33 vga_counter_vga_counter_behav_cfg 0 22 :g=<F=2X5^do[HAKeBW:71
-DAx4 work 3 vga 8 vga_arch 22 7HDe0O`[I;XfAHZU9@THe2
-R30
+DCx4 work 33 vga_counter_vga_counter_behav_cfg 0 22 P`giCi4e`8adZ`F^@fS[n1
+DAx4 work 3 vga 8 vga_arch 22 z=e=UA>C__W6h:2;aVfCc3
+R31
 R27
 R5
 R6
-R90
-w1386101449
-R12
+R92
+w1386319313
+R3
 8VHDL/vga_vga_arch_cfg.vhd
 FVHDL/vga_vga_arch_cfg.vhd
 l0
 L1
-Vd>Mj5@Dlemd`2M<ChT^9:3
+VzFI=OM`PQNYUbN8LG`IJB0
 R7
 32
 R8
 R9
-!s100 `OmFWRVcZh;eEW^0G5A>I0
+!s100 3a9Y8DPX[K7C@460T<BW22
 !i10b 0
-!s108 1386101458.351030
+!s108 1386319313.524163
 !s90 -lower|-explicit|-work|work|VHDL/vga_vga_arch_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/vga_vga_arch_cfg.vhd|
