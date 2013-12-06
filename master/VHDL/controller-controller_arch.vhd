@@ -532,7 +532,7 @@ begin
 
 			when move_right_1 =>
 				if (inv_inputs(1) = '1') then
-					next_state <= move_left_2;
+					next_state <= move_right_2;
 				else
 					next_state <= draw;
 				end if;
