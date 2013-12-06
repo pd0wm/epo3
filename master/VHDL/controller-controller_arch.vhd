@@ -50,6 +50,7 @@ architecture controller_arch of controller is
 	signal cur_timer_2_time      : std_logic_vector(7 downto 0);
 	signal cur_timer_2_start     : std_logic;
 	signal cur_timer_2_reset     : std_logic;
+	signal inv_inputs : std_logic_vector(7 downto 0);
 
 begin
 	process(clk, rst)
@@ -87,6 +88,7 @@ begin
 				cur_timer_2_time      <= new_timer_2_time;
 				cur_timer_2_start     <= new_timer_2_start;
 				cur_timer_2_reset     <= new_timer_2_reset;
+				inv_inputs <= not inputs;
 			end if;
 		end if;
 
@@ -412,7 +414,7 @@ begin
 				next_state <= draw;
 
 			when key =>
-				if (inputs = "00000000") then
+				if (inv_inputs = "00000000") then
 					-- no input
 					next_state <= drop_timer_reset;
 				else
@@ -432,7 +434,7 @@ begin
 				
 			when move_left_1 =>
 			
-				if (inputs(0) = '1') then
+				if (inv_inputs(0) = '1') then
 					next_state <= move_left_2;
 				else
 					next_state <= move_right_1;
@@ -458,7 +460,7 @@ begin
 			when move_left_4 => 
 				-- calculate new position				
 				new_draw_erase_start <= '0';
-				new_cur_x_new        <= std_logic_vector(unsigned(new_cur_y) - 1);
+				new_cur_x_new        <= std_logic_vector(unsigned(new_cur_x) - 1);
 				
 				next_state <= move_left_5;
 			when move_left_5 => 
@@ -518,16 +520,13 @@ begin
 			when move_left_11 => 
 				new_draw_erase_start <= '0';
 				
-				next_state <= draw;	
+				if (inv_inputs = "00000000") then
+					next_state <= draw;
+				else
+					next_state <= move_left_11;	
+				end if;
 				
-				
-				
-				
-			
 
-				
-				
-				
 				
 			when move_right_1 => 
 				next_state <= draw;

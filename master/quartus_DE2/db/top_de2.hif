@@ -111960,42 +111960,6 @@ USR
 
 # end
 # entity
-controller
-# storage
-db|top_de2.(38).cnf
-db|top_de2.(38).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
-8f3d8971872e46c79566adecd4d8238
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
-4f288a679ea8b4c92461f565b8642cfd
-|home|epo3-user|Desktop|git|epo3|master|VHDL|params.vhd
-a3e1c226bf8bc866459f1057d37de2db
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 vga
 # storage
 db|top_de2.(3).cnf
@@ -113021,45 +112985,6 @@ sr_if:inst2|sr_tower:\generate_tower:4:tower_mod
 
 # end
 # entity
-controller
-# storage
-db|top_de2.(545).cnf
-db|top_de2.(545).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
-8f3d8971872e46c79566adecd4d8238
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
-6d5a896bf01d8af13087ffc91dc157f4
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
-4f288a679ea8b4c92461f565b8642cfd
-}
-# hierarchies {
-controller:inst4
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 npg
 # storage
 db|top_de2.(546).cnf
@@ -113176,6 +113101,45 @@ npg:inst10|npg_mux2_1:M3
 
 # end
 # entity
+controller
+# storage
+db|top_de2.(38).cnf
+db|top_de2.(38).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
+8f3d8971872e46c79566adecd4d8238
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
+3e99bf895d8ba5f8d6887a86b1f51c2f
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
+}
+# hierarchies {
+controller:inst4
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 top_de2
 # storage
 db|top_de2.(0).cnf
@@ -113183,7 +113147,7 @@ db|top_de2.(0).cnf
 # case_insensitive
 # source_file
 top_de2.bdf
-905d4ff3c7db71a218aae11a332f1d
+35bb628ac39296b934477728c8c74d3
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

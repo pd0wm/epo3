@@ -74,7 +74,7 @@ applicable agreement for further details.
 	(input)
 	(rect -512 984 -344 1000)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
-	(text "dbg_inputs[7..0]" (rect 5 0 85 11)(font "Arial" ))
+	(text "dbg_inputs[7..0]" (rect 5 0 84 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -85,6 +85,7 @@ applicable agreement for further details.
 		(line (pt 117 12)(pt 121 8))
 	)
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -576 1000 -512 1016))
 )
 (pin
 	(output)
@@ -292,7 +293,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 208 1400 384 1416)
+	(rect -496 1080 -320 1096)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "led_8b[7..0]" (rect 90 0 147 11)(font "Arial" ))
 	(pt 0 8)
@@ -305,7 +306,7 @@ applicable agreement for further details.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-	(annotation_block (location)(rect 384 1416 456 1432))
+	(annotation_block (location)(rect -320 1096 -248 1112))
 )
 (symbol
 	(rect 512 -48 672 48)
@@ -1230,7 +1231,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -232 680 -200 712)
+	(rect -232 664 -200 696)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst11" (rect 3 21 32 32)(font "Arial" )(invisible))
 	(port
@@ -2224,14 +2225,6 @@ applicable agreement for further details.
 	(pt -344 928)
 )
 (connector
-	(pt -176 640)
-	(pt -216 640)
-)
-(connector
-	(pt -216 640)
-	(pt -216 680)
-)
-(connector
 	(pt -176 608)
 	(pt -256 608)
 )
@@ -2306,14 +2299,22 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
+	(pt -328 992)
+	(pt -344 992)
+	(bus)
+)
+(connector
 	(pt -328 944)
 	(pt -328 992)
 	(bus)
 )
 (connector
-	(pt -328 992)
-	(pt -344 992)
-	(bus)
+	(pt -176 640)
+	(pt -216 640)
+)
+(connector
+	(pt -216 640)
+	(pt -216 664)
 )
 (junction (pt 464 240))
 (junction (pt 480 224))
