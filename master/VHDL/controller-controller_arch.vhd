@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, draw_next_piece_1, draw_next_piece_2, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, move_left_1, soft_drop_1, soft_drop_2, soft_drop_3, move_left_2, move_left_3, move_left_4, move_left_5, move_left_6, move_left_7, move_left_8, move_left_9, move_left_10, move_left_11, move_right_1, move_right_2, move_right_3, move_right_4, first_draw_1, first_draw_2, first_draw_3, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
+	is (reset, init, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, move_left_1, soft_drop_1, soft_drop_2, soft_drop_3, move_left_2, move_left_3, move_left_4, move_left_5, move_left_6, move_left_7, move_left_8, move_left_9, move_left_10, move_left_11, move_right_1, move_right_2, move_right_3, move_right_4, first_draw_1, first_draw_2, first_draw_3, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
@@ -194,8 +194,31 @@ begin
 			when gen_piece_2 =>
 				new_new_piece <= '0';
 				next_state    <= draw_next_piece_1;
-
+				
 			when draw_next_piece_1 =>
+				new_lut_rot        <= (others => '0');
+				new_lut_x          <= (others => '0');
+				new_lut_y          <= (others => '0');
+				
+				new_lut_piece_type <= cur_piece;
+				new_lut_next_piece <= '1';
+				
+				new_draw_erase_draw  <= '0';
+				new_draw_erase_start  <= '1';
+				
+				next_state <= draw_next_piece_2;
+
+			when draw_next_piece_2 =>
+				if (draw_erase_ready = '1') then
+					new_draw_erase_start <= '0';
+					next_state           <= draw_next_piece_3;
+				else
+					new_draw_erase_start <= '1';
+					next_state           <= draw_next_piece_2;
+				end if;				
+				
+
+			when draw_next_piece_3 =>
 				new_lut_rot        <= (others => '0');
 				new_lut_x          <= (others => '0');
 				new_lut_y          <= (others => '0');
@@ -205,9 +228,9 @@ begin
 				new_draw_erase_draw  <= '1';
 				new_draw_erase_start <= '1';
 
-				next_state <= draw_next_piece_2;
+				next_state <= draw_next_piece_4;
 
-			when draw_next_piece_2 =>
+			when draw_next_piece_4 =>
 				if (draw_erase_ready = '1') then
 					new_draw_erase_start <= '0';
 					new_lut_next_piece   <= '0';
@@ -215,15 +238,15 @@ begin
 				else
 					new_draw_erase_start <= '1';
 					new_lut_next_piece   <= '1';
-					next_state           <= draw_next_piece_2;
+					next_state           <= draw_next_piece_4;
 				end if;
 
 			when collision_1 =>
 				-- Generate mask for cur_piece
-				new_lut_rot        <= new_cur_rot;
-				new_lut_x          <= new_cur_x;
-				new_lut_y          <= new_cur_y;
-				new_lut_piece_type <= new_cur_piece;
+				new_lut_rot        <= cur_rot;
+				new_lut_x          <= cur_x;
+				new_lut_y          <= cur_y;
+				new_lut_piece_type <= cur_piece;
 
 				next_state <= collision_3;
 
@@ -308,9 +331,22 @@ begin
 
 			when clear_shift_2 =>
 				if (clear_shift_ready = '1') then
-					next_state <= gen_piece_1;
+					next_state <= clear_shift_3;
+					new_draw_score_draw <= '1';
+					new_clear_shift_start <= '0';
 				else
 					next_state <= clear_shift_2;
+					new_draw_score_draw <= '0';
+					new_clear_shift_start <= '1';
+				end if;
+				
+			when clear_shift_3 =>
+				if (draw_score_ready = '1') then
+					new_draw_score_draw <= '0';
+					next_state <= gen_piece_1;
+				else
+					new_draw_score_draw <= '1';
+					next_state <= clear_shift_3;
 				end if;
 
 			when drop_overflow =>
@@ -384,8 +420,10 @@ begin
 
 			when put_back_4 =>
 				if (draw_erase_ready = '1') then
+					new_draw_erase_start <= '0';
 					next_state <= reset_timers_a_1;
 				else
+					new_draw_erase_start <= '1';
 					next_state <= put_back_4;
 				end if;
 
