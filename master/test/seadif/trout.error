@@ -1,0 +1,68 @@
+This is the file 'seadif/trout.error' which was created by
+the program 'trout' on Tue Dec 10 09:47:22 2013
+Trout was verifying the netlist description of
+your circuit circuit 'vga' with the current layout in seadali.
+The following nets in the layout are not according to
+the netlist description of circuit 'vga'. They are also
+marked in the layout.
+------------------------- list of errors -------------------------
+##### suspected short-circuit no. 1:
+  > net 'mem_addr_score_6_port' (1 terms, e.g. terminal  'di2_7_0_6')
+  > net 'mem_addr_score_3_port' (2 terms, e.g. terminal 'mem_addr_out_7_0_3')
+  > net 'mem_addr_score_5_port' (2 terms, e.g. terminal 'mem_addr_out_7_0_5')
+  > net 'vss' (16 terms, e.g. terminal 'vss')
+##### suspected short-circuit no. 2:
+  > net 'mem_addr_score_4_port' (1 terms, e.g. terminal  'di2_7_0_4')
+  > net 'mem_addr_score_7_port' (2 terms, e.g. terminal 'mem_addr_out_7_0_7')
+  > net 'vdd' (16 terms, e.g. terminal 'vdd')
+@@@@@ entirely unconnected net:  'v_sync_buf' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_reset_field_0_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_reset_field_2_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_np_7_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_np_6_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_y_3_port' (1 unconnects among 2)
+@@@@@ entirely unconnected net:  'mem_addr_np_1_port' (2 terminals)
+@@@@@ partially unconnected net: 'end_frame' (1 unconnects among 3)
+@@@@@ entirely unconnected net:  'in_field' (4 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_field_2_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_y_6_port' (3 unconnects among 7)
+@@@@@ entirely unconnected net:  'mem_addr_field_6_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_np_0_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_y_7_port' (3 unconnects among 7)
+@@@@@ entirely unconnected net:  'pos_y_0_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_field_7_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_field_1_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_np_5_port' (2 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_field_0_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_y_1_port' (1 unconnects among 2)
+@@@@@ partially unconnected net: 'pos_x_5_port' (2 unconnects among 6)
+@@@@@ entirely unconnected net:  'pos_y_5_port' (16 terminals)
+@@@@@ entirely unconnected net:  'mem_addr_field_4_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_x_4_port' (1 unconnects among 5)
+@@@@@ entirely unconnected net:  'mem_addr_field_3_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_x_7_port' (2 unconnects among 6)
+@@@@@ entirely unconnected net:  'mem_addr_np_4_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_y_4_port' (6 unconnects among 8)
+@@@@@ entirely unconnected net:  'new_line' (4 terminals)
+@@@@@ partially unconnected net: 'pos_x_1_port' (1 unconnects among 4)
+@@@@@ entirely unconnected net:  'pos_y_2_port' (4 terminals)
+@@@@@ entirely unconnected net:  'new_frame' (4 terminals)
+@@@@@ partially unconnected net: 'pos_x_2_port' (12 unconnects among 14)
+@@@@@ partially unconnected net: 'pos_y_8_port' (10 unconnects among 11)
+@@@@@ entirely unconnected net:  'mem_addr_np_3_port' (2 terminals)
+@@@@@ partially unconnected net: 'pos_x_0_port' (7 unconnects among 9)
+@@@@@ partially unconnected net: 'pos_x_3_port' (11 unconnects among 12)
+@@@@@ partially unconnected net: 'in_np' (4 unconnects among 5)
+
+WARNING: 38 out of the 79 nets are not properly connected.
+         In the layout each of the unconnects is marked by
+         an arrow followed by the name of the net: <=-<net_name>
+WARNING: 2 short-circuit(s) were detected among the 79 nets.
+         These nets were separatedly specified in the circuit
+         but are connected in the layout.  This may occur because of
+         feed-throughs in sub-cells and it doesn't necessarily
+         imply an error.
+         In the layout each short-circuit is indicated by a marker
+         which indicates a position on the pattern: <=-SHORT_<no>
+------------------------------------------------------------------
+lock

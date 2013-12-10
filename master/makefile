@@ -77,9 +77,6 @@ WORK__vga_counter_8bitset = $(LIB_WORK)/vga_counter_8bitset/_primary.dat
 WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg = $(LIB_WORK)/vga_counter_8bit_vga_counter_8bit_behav_cfg/_primary.dat
 WORK__vga_counter_8bit__vga_counter_8bit_behav = $(LIB_WORK)/vga_counter_8bit/vga_counter_8bit_behav.dat
 WORK__vga_counter_8bit = $(LIB_WORK)/vga_counter_8bit/_primary.dat
-WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg = $(LIB_WORK)/vga_counter_5bit_vga_counter_5bit_behav_cfg/_primary.dat
-WORK__vga_counter_5bit__vga_counter_5bit_behav = $(LIB_WORK)/vga_counter_5bit/vga_counter_5bit_behav.dat
-WORK__vga_counter_5bit = $(LIB_WORK)/vga_counter_5bit/_primary.dat
 WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg = $(LIB_WORK)/vga_counter_4bit_vga_counter_4bit_behav_cfg/_primary.dat
 WORK__vga_counter_4bit__vga_counter_4bit_behav = $(LIB_WORK)/vga_counter_4bit/vga_counter_4bit_behav.dat
 WORK__vga_counter_4bit = $(LIB_WORK)/vga_counter_4bit/_primary.dat
@@ -260,9 +257,6 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg) \
     $(WORK__vga_counter_8bit__vga_counter_8bit_behav) \
     $(WORK__vga_counter_8bit) \
-    $(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) \
-    $(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
-    $(WORK__vga_counter_5bit) \
     $(WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg) \
     $(WORK__vga_counter_4bit__vga_counter_4bit_behav) \
     $(WORK__vga_counter_4bit) \
@@ -1365,30 +1359,6 @@ $(WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg) : VHDL/vga_counter_4bit_vga
 		$(WORK__vga_counter_4bit)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd
-
-$(WORK__vga_counter_5bit) : VHDL/vga_counter_5bit.vhd \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit.vhd
-
-$(WORK__vga_counter_5bit__vga_counter_5bit_behav) : VHDL/vga_counter_5bit_arch.vhd \
-		$(WORK__vga_counter_5bit) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit_arch.vhd
-
-$(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) : VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd \
-		$(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga_counter_5bit)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd
 
 $(WORK__vga_counter_8bit) : VHDL/vga_counter_8bit.vhd \
 		$(IEEE__numeric_std) \

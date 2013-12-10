@@ -7,346 +7,79 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work sim 
-# ** Note: (vsim-3812) Design is being optimized...
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work vga_tb_vga_tb_arch_cfg 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.sim#1
-# Loading work.sr_if_tb(sr_if_tb_behav)#1
-# Loading work.sr_if_sr_if_behav_cfg#1
-# Loading work.sr_if(sr_if_behav)#1
-# Loading cellslib.cellslib_decl_pack
-# Loading work.sr_tower(synthesised)#1
-# Loading work.bit4(bit4_behav)#1
-# Loading work.demux8_inv(demux8_inv_behav)#1
-# Loading work.dec8(dec8_behav)#1
-# Loading work.demux4_inv(demux4_inv_behav)#1
-# Loading work.mux5_mux5_behav_cfg#1
-# Loading work.mux5(mux5_behav)#1
-# Loading work.demux5_demux5_behav_cfg#1
-# Loading work.demux5(demux5_behav)#1
+# Loading work.vga_params(body)
+# Loading work.vga_tb_vga_tb_arch_cfg#1
+# Loading work.vga_tb(vga_tb_arch)#1
+# Loading work.vga_vga_arch_cfg#1
+# Loading work.vga(vga_arch)#1
+# Loading work.vga_counter_vga_counter_behav_cfg#1
+# Loading work.vga_counter(vga_counter_behav)#1
+# Loading work.vga_counter_8bit_vga_counter_8bit_behav_cfg#1
+# Loading work.vga_counter_8bit(vga_counter_8bit_behav)#1
+# Loading work.vga_counter_10bit_vga_counter_10bit_behav_cfg#1
+# Loading work.vga_counter_10bit(vga_counter_10bit_behav)#1
+# Loading work.vga_counter_resets_vga_counter_resets_behav_cfg#1
+# Loading work.vga_counter_resets(vga_counter_resets_behav)#1
+# Loading work.vga_sync_vga_sync_arch_cfg#1
+# Loading work.vga_sync(vga_sync_arch)#1
+# Loading work.vga_triggers_vga_triggers_arch_cfg#1
+# Loading work.vga_triggers(vga_triggers_arch)#1
+# Loading work.vga_read_vga_read_behav_cfg#1
+# Loading work.vga_read(vga_read_behav)#1
+# Loading work.vga_field_trans_vga_field_trans_arch_cfg#1
+# Loading work.vga_field_trans(vga_field_trans_arch)#1
+# Loading work.vga_counter_8bitset_vga_counter_8bitset_behav_cfg#1
+# Loading work.vga_counter_8bitset(vga_counter_8bitset_behav)#1
+# Loading work.vga_field_trans_reset_vga_field_trans_reset_arch_cfg#1
+# Loading work.vga_field_trans_reset(vga_field_trans_reset_arch)#1
+# Loading work.vga_counter_4bit_vga_counter_4bit_behav_cfg#1
+# Loading work.vga_counter_4bit(vga_counter_4bit_behav)#1
+# Loading work.vga_field_check_vga_field_check_arch_cfg#1
+# Loading work.vga_field_check(vga_field_check_arch)#1
+# Loading work.vga_np_trans_vga_np_trans_arch_cfg#1
+# Loading work.vga_np_trans(vga_np_trans_arch)#1
+# Loading work.vga_np_trans_reset_vga_np_trans_reset_arch_cfg#1
+# Loading work.vga_np_trans_reset(vga_np_trans_reset_arch)#1
+# Loading work.vga_counter_2bit_vga_counter_2bit_behav_cfg#1
+# Loading work.vga_counter_2bit(vga_counter_2bit_behav)#1
+# Loading work.vga_np_check_vga_np_check_arch_cfg#1
+# Loading work.vga_np_check(vga_np_check_arch)#1
+# Loading work.vga_score_trans_vga_score_trans_arch_cfg#1
+# Loading work.vga_score_trans(vga_score_trans_arch)#1
+# Loading work.vga_counter_3bit_vga_counter_3bit_behav_cfg#1
+# Loading work.vga_counter_3bit(vga_counter_3bit_behav)#1
+# Loading work.vga_score_check_vga_score_check_arch_cfg#1
+# Loading work.vga_score_check(vga_score_check_arch)#1
+# Loading work.vga_demux_vga_demux_behav_cfg#1
+# Loading work.vga_demux(vga_demux_behav)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 20us
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_8
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_0
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_6
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_7
-# ** Warning: setup_violation of R
-#    Time: 0 ns  Iteration: 1  Instance: /sr_if_tb/uut/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_8
+run 2ms
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/score_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/score_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/np_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/np_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/field_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/field_check
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/triggers
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/triggers
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/sync
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/sync
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/counter/resets
+run 2ms
 quit

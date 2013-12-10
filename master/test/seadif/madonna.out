@@ -1,0 +1,102 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "vga(vga(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 79):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    51     4     2     0    18     0     0     4     0
+
+------ partitioning 15 cells into (hor x vert) = (2 x 3) partitions
+
+------ requested grid points = (250, 252)
+
+------ cost@start = 363, cost@end = 301, moves = 17
+------ s, w, b = 174, 248, 174; perm = 5 1 2 3 4 6 
+------ cost@start = 349, cost@end = 295, moves = 4
+------ cost@start = 295, cost@end = 295, moves = 2
+------ s, w, b = 185, 226, 163; perm = 3 5 1 2 4 6 
+------ 44 nets have to be routed on a 3 x 5 global grid
+     + routing net clk (6 terminals):  weight = 1000
+     + routing net rst (6 terminals):  weight = 1000
+     + routing net pos_x_7_port (2 terminals):  weight = 204
+     + routing net pos_x_6_port (2 terminals):  weight = 204
+     + routing net pos_x_5_port (2 terminals):  weight = 204
+     + routing net pos_x_4_port (2 terminals):  weight = 204
+     + routing net pos_x_3_port (2 terminals):  weight = 204
+     + routing net pos_x_2_port (2 terminals):  weight = 204
+     + routing net pos_x_1_port (2 terminals):  weight = 204
+     + routing net pos_x_0_port (2 terminals):  weight = 204
+     + routing net pos_y_9_port (2 terminals):  weight = 204
+     + routing net pos_y_8_port (2 terminals):  weight = 204
+     + routing net pos_y_7_port (2 terminals):  weight = 204
+     + routing net pos_y_6_port (2 terminals):  weight = 204
+     + routing net pos_y_5_port (2 terminals):  weight = 204
+     + routing net pos_y_4_port (2 terminals):  weight = 204
+     + routing net pos_y_3_port (2 terminals):  weight = 204
+     + routing net pos_y_2_port (2 terminals):  weight = 204
+     + routing net pos_y_1_port (2 terminals):  weight = 204
+     + routing net pos_y_0_port (2 terminals):  weight = 204
+     + routing net new_line (3 terminals):  weight = 400
+     + routing net new_frame (3 terminals):  weight = 400
+     + routing net end_frame (3 terminals):  weight = 400
+     + routing net in_field (3 terminals):  weight = 402
+     + routing net in_np (3 terminals):  weight = 400
+     + routing net in_score (2 terminals):  weight = 202
+     + routing net mem_addr_reset_field_3_port (2 terminals):  weight = 200
+     + routing net mem_addr_reset_field_2_port (2 terminals):  weight = 200
+     + routing net mem_addr_reset_field_1_port (2 terminals):  weight = 200
+     + routing net mem_addr_reset_field_0_port (2 terminals):  weight = 200
+     + routing net end_field_line (2 terminals):  weight = 204
+     + routing net n2 (2 terminals):  weight = 204
+     + routing net mem_addr_reset_np_1_port (2 terminals):  weight = 200
+     + routing net mem_addr_reset_np_0_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_7_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_6_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_5_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_4_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_3_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_2_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_1_port (2 terminals):  weight = 200
+     + routing net mem_addr_np_0_port (2 terminals):  weight = 200
+     + routing net end_np_line (2 terminals):  weight = 204
+     + routing net end_score_line (2 terminals):  weight = 202
+
+------ Routed 44 nets, total weight = 11490
+
+
+
+------ Detailed placement of (Tmp_Cell_(vga(vga(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [250:252]
+------ Doing placement 
+ Can't place cell :np_translation  in window at (125,3)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [325:252]
+------ Doing placement 
+ Can't place cell :np_translation  in window at (162,3)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [422:252]
+------ Doing placement 
+------ Compacting  
+
+         28  column[s] deleted.
+
+         Magnification coefficient obtained :1.08406
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.1 seconds of your cpu
+terminate

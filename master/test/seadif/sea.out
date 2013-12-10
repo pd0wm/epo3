@@ -2,14 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'sr_if' ------
------- circuit 'sr_if' is still up-to-date ------
------- checking match with placement layout 'Tmpsr_if3371' ------
------- reading nelsis layout-cell 'Tmpsr_if3371' ------
------- writing nelsis 'Tmpsr_if3371' as sdflay 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ checking your circuit 'vga' ------
+------ circuit 'vga' is still up-to-date ------
+------ checking match with placement layout 'Tmpvga3983' ------
+------ reading nelsis layout-cell 'Tmpvga3983' ------
+------ writing nelsis 'Tmpvga3983' as sdflay 'Tmp_Cell_(vga(vga(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f sr_if -c sr_if -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmpsr_if3371' ------
-calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if3371 
+calling program: trout -l test -f vga -c vga -o Tmp_Cell_ -d Tmp_Cell_ 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmpvga3983' ------
+calling program: nelsea -rLH -f vga -c vga -l Tmp_Cell_ Tmpvga3983 
 ------ sea: task completed ------
