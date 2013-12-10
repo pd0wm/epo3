@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.ALL;
 
 architecture piece_lut_tb_behaviour of piece_lut_tb is
-	signal clk, rst, start_control, check_start, draw_start, ready, overflow, next_piece : std_logic;
+	signal clk, rst, start_control, check_start, draw_start, ready, error, next_piece : std_logic;
 	signal rot, mask_select                                                      : std_logic_vector(1 downto 0);
 	signal y                                                                     : std_logic_vector(3 downto 0);
 	signal x                                                                     : std_logic_vector(2 downto 0);
@@ -29,7 +29,7 @@ architecture piece_lut_tb_behaviour of piece_lut_tb is
 			 rom_data    : in  std_logic_vector(3 downto 0));
 	end component;
 begin
-	piece_lut_port : piece_lut port map(clk, rst, mask, mask_select, x, y, rot, piece_type, next_piece, ready, overflow, check_start, draw_start, rom_addr, rom_data);
+	piece_lut_port : piece_lut port map(clk, rst, mask, mask_select, x, y, rot, piece_type, next_piece, ready, error, check_start, draw_start, rom_addr, rom_data);
 
 	clk           <= '1' after 0 ns, '0' after 10 ns when clk /= '0' else '1' after 10 ns;
 	rst           <= '1' after 0 ns, '0' after 30 ns;
@@ -63,9 +63,6 @@ begin
 					"00" after 1510 ns;
 	piece_type  <= "011" after 0 ns;
 end piece_lut_tb_behaviour;
-
-
-
 
 
 
