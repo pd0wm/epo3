@@ -9,7 +9,7 @@ architecture cs_compare_behav of cs_compare is
 
 	signal cnt_en       : std_logic;
 	signal cnt_ram_addr : std_logic_vector(6 downto 0);
-	signal ram_addr_out : std_logic_vector(6 downto 0);
+
 	signal tri_en : std_logic;
 
 	component cs_7bc
@@ -23,7 +23,7 @@ architecture cs_compare_behav of cs_compare is
 			 o : out std_logic_vector(6 downto 0);
 			 e : in  std_logic);
 	end component cs_tri7;
-	
+
 	component cs_shift
 		port(clk, rst     : in  std_logic;
 			 start_in     : in  std_logic;
@@ -34,15 +34,16 @@ architecture cs_compare_behav of cs_compare is
 			 ram_data_in  : in  std_logic;
 			 ram_data_out : out std_logic);
 	end component cs_shift;
-	
+
 	signal shift_start, shift_ready : std_logic;
 	
-	signal ram_prefix : std_logic;
+	signal ram_addr_out : std_logic_vector(6 downto 0);
+	signal ram_prefix: std_logic;
 begin
+	ram_addr_out2 <= ram_prefix & ram_addr_out;
 
-	ram_addr_out_2 <= ram_prefix & ram_addr_out;
-	
-	process(tri_en)
+
+	process (tri_en)
 	begin
 		if (tri_en = '1') then
 			ram_prefix <= '0';
@@ -51,6 +52,7 @@ begin
 		end if;
 	end process;
 	
+
 	counter_7_bit : cs_7bc port map(
 			clk   => clk,
 			rst   => rst,
@@ -63,8 +65,8 @@ begin
 			o => ram_addr_out,
 			e => tri_en
 		);
-		
-	shift: cs_shift
+
+	shift : cs_shift
 		port map(clk          => clk,
 			     rst          => rst,
 			     start_in     => shift_start,
@@ -77,11 +79,15 @@ begin
 
 	process(state, row_full, start_in, cnt_ram_addr, ram_data_in, shift_ready)
 	begin
-		tri_en    <= '0';
-		cnt_en    <= '0';
-		ready_out <= '0';
+		tri_en      <= '0';
+		cnt_en      <= '0';
+		ready_out   <= '0';
 		shift_start <= '0';
-		score_out <= '0';
+		score_out   <= '0';
+
+		-- Fix
+		ram_we       <= 'Z';
+		ram_data_out <= 'Z';
 
 		state_next    <= state;
 		row_full_next <= row_full;
@@ -93,12 +99,21 @@ begin
 				end if;
 
 			when init =>
+				-- Fix
+				tri_en       <= '1';
+				ram_we       <= '0';
+				ram_data_out <= '0';
+
 				row_full_next <= '1';
 				tri_en        <= '1';
 
 				state_next <= check_row;
 
 			when check_row =>
+				-- Fix
+				ram_we       <= '0';
+				ram_data_out <= '0';
+			
 				cnt_en        <= '1';
 				tri_en        <= '1';
 				row_full_next <= row_full AND ram_data_in;
@@ -108,6 +123,11 @@ begin
 				end if;
 
 			when check_row_process =>
+				-- Fix
+				tri_en <= '1';
+				ram_we       <= '0';
+				ram_data_out <= '0';
+
 				if (row_full = '1') then
 					state_next <= trigger;
 				else
@@ -116,16 +136,24 @@ begin
 
 			when trigger =>
 				shift_start <= '1';
-				
+
 				if (shift_ready = '1') then
 					state_next <= notify_score;
 				end if;
-				
+
 			when notify_score =>
-				score_out <= '1';
+				-- Fix
+				tri_en <= '1';
+				ram_we       <= '0';
+				ram_data_out <= '0';
+
+				score_out  <= '1';
 				state_next <= check_row_done;
 
 			when check_row_done =>
+				-- Fix
+				tri_en <= '1';
+
 				if (cnt_ram_addr = "0000000") then
 					state_next <= ready;
 				else
@@ -133,6 +161,9 @@ begin
 				end if;
 
 			when ready =>
+				-- Fix
+				tri_en <= '1';
+
 				ready_out  <= '1';
 				state_next <= lock;
 		end case;

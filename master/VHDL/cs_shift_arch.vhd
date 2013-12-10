@@ -70,13 +70,27 @@ begin
 					state_next <= init;
 				end if;
 			when init =>
+				-- Fix
+				ram_data_out <= '0';
+				ram_we <= '0';
+				tri_en <= '1';
+			
 				cnt_set    <= '1';
 				state_next <= init_decrease;
 			when init_decrease =>
+				-- Fix
+				ram_data_out <= '0';
+				ram_we <= '0';
+				tri_en <= '1';
+				
 				cnt_en <= '1';
 				state_next <= read;
 
 			when read =>
+				-- Fix
+				ram_data_out <= '0';
+				ram_we <= '0';
+				
 				tri_en_substr <= '1';
 				state_next    <= write;
 			when write =>
@@ -92,13 +106,23 @@ begin
 				state_next   <= check;
 				
 			when check =>
+				-- Fix
+				ram_data_out <= '0';
+				ram_we <= '0';
+				tri_en <= '1';
+								
 				if (cnt_ram_addr = "1111111") then
 					state_next <= ready;
 				else
 					state_next <= read;
 				end if;
 
-			when ready =>
+			when ready =>			
+				-- Fix
+				ram_data_out <= '0';
+				ram_we <= '0';
+				tri_en <= '1';
+				
 				ready_out <= '1';
 				state_next <= lock;
 		end case;
