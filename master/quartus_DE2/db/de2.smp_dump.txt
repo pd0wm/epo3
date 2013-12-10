@@ -7,6 +7,15 @@ state.vga_high 0 0 1 0 1
 state.check 0 1 0 0 1 
 state.done 1 0 0 0 1 
 
+State Machine - |top_de2|de_piece:inst6|state
+Name state.lut_lookup state.done state.waiting_2 state.writing state.waiting_1 state.reset 
+state.reset 0 0 0 0 0 0 
+state.waiting_1 0 0 0 0 1 1 
+state.writing 0 0 0 1 0 1 
+state.waiting_2 0 0 1 0 0 1 
+state.done 0 1 0 0 0 1 
+state.lut_lookup 1 0 0 0 0 1 
+
 State Machine - |top_de2|piece_lut:inst7|state
 Name state.output state.cord_overflow state.cord_calc state.wait_for_rom state.calc_rom_addr_2 state.calc_rom_addr_1 state.reset 
 state.reset 0 0 0 0 0 0 0 
@@ -92,11 +101,8 @@ cur_state.drop_overflow 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 cur_state.key 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 cur_state.game_over 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |top_de2|de_piece:inst6|state
-Name state.lut_lookup state.done state.waiting_2 state.writing state.waiting_1 state.reset 
-state.reset 0 0 0 0 0 0 
-state.waiting_1 0 0 0 0 1 1 
-state.writing 0 0 0 1 0 1 
-state.waiting_2 0 0 1 0 0 1 
-state.done 0 1 0 0 0 1 
-state.lut_lookup 1 0 0 0 0 1 
+State Machine - |top_de2|draw_score:inst13|state
+Name state.done state.writing state.reset 
+state.reset 0 0 0 
+state.writing 0 1 1 
+state.done 1 0 1 
