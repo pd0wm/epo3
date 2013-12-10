@@ -19,8 +19,11 @@ begin
 			"0101101" after 400 ns, -- 0101 SIM KLOPT
 			"0010011" after 500 ns, -- 0111 SIM KLOPT
 			"1000111" after 600 ns, -- 1001 SIM: 0101
-			"0010111" after 700 ns, -- 1110 SIM KLOPT
+			"0010111" after 700 ns, -- 1100 SIM KLOPT
 			"1000000" after 800 ns, -- 0000 SIM KLOPT
 			"1001111" after 900 ns; -- 0000 SIM: 0101
 end rom_tb_behaviour;
+
+
+
 
