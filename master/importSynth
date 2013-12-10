@@ -1,0 +1,5 @@
+rm -rf /home/tqiu/Desktop/epo3/master/syn_work_bak
+mv -f /home/tqiu/Desktop/epo3/master/syn_work /home/tqiu/Desktop/epo3/master/syn_work_bak
+cp -r /tmp/tqiu/Desktop/epo3/master/syn_work /home/tqiu/Desktop/epo3/master
+cp /tmp/tqiu/Desktop/epo3/master/ADB/piece_lut.ddc /home/tqiu/Desktop/epo3/master/ADB/piece_lut.ddc
+cp /tmp/tqiu/Desktop/epo3/master/VHDL/piece_lut_SYNTH.vhd /home/tqiu/Desktop/epo3/master/VHDL/piece_lut_SYNTH.vhd
