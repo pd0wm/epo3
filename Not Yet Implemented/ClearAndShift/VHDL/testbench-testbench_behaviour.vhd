@@ -22,10 +22,13 @@ begin
 
 	clk <= '1' after 0 ns,
 		   '0' after 160 ns when clk /= '0' else '1' after 160 ns;
-	reset <= '1' after 0 ns, '0' after 300 ns;
+	reset <= '1' after 0 ns, '0' after 400 ns;
 	start <= '0' after 0 ns, '1' after 1000 ns;
 	ram_in <= '1' after 0 ns;
 end testbench_behaviour;
+
+
+
 
 
 

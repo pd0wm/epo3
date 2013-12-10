@@ -18,7 +18,7 @@ architecture testbench_behaviour of testbench is
          ready      :out   std_logic);
 	end component;
 begin
-	clearshift_port : clearandshift port map(clk, reset, start, ram_in, ram_out, ram_addr, ram_write, score, score_value, ready);
+	clearshift_port : clearandshift port map(clk, reset, start, ram_in, ram_out, ram_addr, ram_write, score, ready);
 
 	clk <= '1' after 0 ns,
 		   '0' after 160 ns when clk /= '0' else '1' after 160 ns;

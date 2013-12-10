@@ -12,20 +12,20 @@ WARNING: Imported nelsis cell 'dfr11' is younger than its corresponding
 WARNING: Imported nelsis cell 'tinv10' is younger than its corresponding
          seadif cell $dummy(tinv10(tinv10(g_digilib5_99))) (circuit-view). The seadif
          library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na210' is younger than its corresponding
+         seadif cell $dummy(na210(na210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
 WARNING: Imported nelsis cell 'iv110' is younger than its corresponding
          seadif cell $dummy(iv110(iv110(g_digilib5_99))) (circuit-view). The seadif
-         library 'g_digilib5_99' doesn't seem to be up to date.
-WARNING: Imported nelsis cell 'no210' is younger than its corresponding
-         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
          library 'g_digilib5_99' doesn't seem to be up to date.
 WARNING: Imported nelsis cell 'na310' is younger than its corresponding
          seadif cell $dummy(na310(na310(g_digilib5_99))) (circuit-view). The seadif
          library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no210' is younger than its corresponding
+         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
 WARNING: Imported nelsis cell 'no310' is younger than its corresponding
          seadif cell $dummy(no310(no310(g_digilib5_99))) (circuit-view). The seadif
-         library 'g_digilib5_99' doesn't seem to be up to date.
-WARNING: Imported nelsis cell 'na210' is younger than its corresponding
-         seadif cell $dummy(na210(na210(g_digilib5_99))) (circuit-view). The seadif
          library 'g_digilib5_99' doesn't seem to be up to date.
 WARNING: Imported nelsis cell 'mu111' is younger than its corresponding
          seadif cell $dummy(mu111(mu111(g_digilib5_99))) (circuit-view). The seadif
@@ -34,13 +34,12 @@ WARNING: Imported nelsis cell 'ex210' is younger than its corresponding
          seadif cell $dummy(ex210(ex210(g_digilib5_99))) (circuit-view). The seadif
          library 'g_digilib5_99' doesn't seem to be up to date.
 ------ reading nelsis circuit-cell 'clearandshift' ------
------- checking match with placement layout 'Tmpclearandshift28857' ------
------- reading nelsis layout-cell 'Tmpclearandshift28857' ------
------- writing nelsis 'Tmpclearandshift28857' as sdflay 'Tmp_Cell_(clearandshift(clearandshift(test)))' ------
------- writing nelsis 'clearandshift' as sdfcir 'clearandshift(clearandshift(test)) ------
+------ checking match with placement layout 'Tmpclearandshift16459' ------
+------ reading nelsis layout-cell 'Tmpclearandshift16459' ------
+------ writing nelsis 'Tmpclearandshift16459' as sdflay 'Tmp_Cell_(clearandshift(clearandshift(test)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f clearandshift -c clearandshift -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpclearandshift28857' ------
-calling program: nelsea -rLH -f clearandshift -c clearandshift -l Tmp_Cell_ Tmpclearandshift28857 
+------ converting result back into nelsis as cell 'Tmpclearandshift16459' ------
+calling program: nelsea -rLH -f clearandshift -c clearandshift -l Tmp_Cell_ Tmpclearandshift16459 
 ------ sea: task completed ------
