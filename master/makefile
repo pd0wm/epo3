@@ -7,6 +7,8 @@ LIB_IEEE = /data/public/common/software/modeltech/10.1b/modeltech/linux/../ieee
 LIB_WORK = work
 
 # Define path to each design unit
+CELLSLIB__dfn10 = $(LIB_CELLSLIB)/dfn10/_primary.dat
+CELLSLIB__tinv10 = $(LIB_CELLSLIB)/tinv10/_primary.dat
 CELLSLIB__buf40 = $(LIB_CELLSLIB)/buf40/_primary.dat
 CELLSLIB__dfa11 = $(LIB_CELLSLIB)/dfa11/_primary.dat
 CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
@@ -77,9 +79,6 @@ WORK__vga_counter_8bitset = $(LIB_WORK)/vga_counter_8bitset/_primary.dat
 WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg = $(LIB_WORK)/vga_counter_8bit_vga_counter_8bit_behav_cfg/_primary.dat
 WORK__vga_counter_8bit__vga_counter_8bit_behav = $(LIB_WORK)/vga_counter_8bit/vga_counter_8bit_behav.dat
 WORK__vga_counter_8bit = $(LIB_WORK)/vga_counter_8bit/_primary.dat
-WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg = $(LIB_WORK)/vga_counter_5bit_vga_counter_5bit_behav_cfg/_primary.dat
-WORK__vga_counter_5bit__vga_counter_5bit_behav = $(LIB_WORK)/vga_counter_5bit/vga_counter_5bit_behav.dat
-WORK__vga_counter_5bit = $(LIB_WORK)/vga_counter_5bit/_primary.dat
 WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg = $(LIB_WORK)/vga_counter_4bit_vga_counter_4bit_behav_cfg/_primary.dat
 WORK__vga_counter_4bit__vga_counter_4bit_behav = $(LIB_WORK)/vga_counter_4bit/vga_counter_4bit_behav.dat
 WORK__vga_counter_4bit = $(LIB_WORK)/vga_counter_4bit/_primary.dat
@@ -147,7 +146,20 @@ WORK__piece_lut_tb__piece_lut_tb_behaviour = $(LIB_WORK)/piece_lut_tb/piece_lut_
 WORK__piece_lut_tb = $(LIB_WORK)/piece_lut_tb/_primary.dat
 WORK__piece_lut_behaviour_cfg = $(LIB_WORK)/piece_lut_behaviour_cfg/_primary.dat
 WORK__piece_lut__piece_lut_behaviour = $(LIB_WORK)/piece_lut/piece_lut_behaviour.dat
+WORK__piece_lut__synthesised = $(LIB_WORK)/piece_lut/synthesised.dat
 WORK__piece_lut = $(LIB_WORK)/piece_lut/_primary.dat
+WORK__npg_tb_behaviour_cfg = $(LIB_WORK)/npg_tb_behaviour_cfg/_primary.dat
+WORK__npg_tb__behaviour = $(LIB_WORK)/npg_tb/behaviour.dat
+WORK__npg_tb = $(LIB_WORK)/npg_tb/_primary.dat
+WORK__npg_structural_cfg = $(LIB_WORK)/npg_structural_cfg/_primary.dat
+WORK__npg_mux2_1_behaviour_cfg = $(LIB_WORK)/npg_mux2_1_behaviour_cfg/_primary.dat
+WORK__npg_mux2_1__behaviour = $(LIB_WORK)/npg_mux2_1/behaviour.dat
+WORK__npg_mux2_1 = $(LIB_WORK)/npg_mux2_1/_primary.dat
+WORK__npg_ff_behaviour_cfg = $(LIB_WORK)/npg_ff_behaviour_cfg/_primary.dat
+WORK__npg_ff__behaviour = $(LIB_WORK)/npg_ff/behaviour.dat
+WORK__npg_ff = $(LIB_WORK)/npg_ff/_primary.dat
+WORK__npg__structural = $(LIB_WORK)/npg/structural.dat
+WORK__npg = $(LIB_WORK)/npg/_primary.dat
 WORK__mux5_mux5_behav_cfg = $(LIB_WORK)/mux5_mux5_behav_cfg/_primary.dat
 WORK__mux5__mux5_behav = $(LIB_WORK)/mux5/mux5_behav.dat
 WORK__mux5__synthesised = $(LIB_WORK)/mux5/synthesised.dat
@@ -190,6 +202,15 @@ WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
 WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
+WORK__clearshift_tb__testbench_behaviour = $(LIB_WORK)/clearshift_tb/testbench_behaviour.dat
+WORK__clearshift_tb = $(LIB_WORK)/clearshift_tb/_primary.dat
+WORK__clearandshift_synthesised_cfg = $(LIB_WORK)/clearandshift_synthesised_cfg/_primary.dat
+WORK__clearandshift_extracted_cfg = $(LIB_WORK)/clearandshift_extracted_cfg/_primary.dat
+WORK__clearandshift_behaviour_cfg = $(LIB_WORK)/clearandshift_behaviour_cfg/_primary.dat
+WORK__clearandshift__synthesised = $(LIB_WORK)/clearandshift/synthesised.dat
+WORK__clearandshift__extracted = $(LIB_WORK)/clearandshift/extracted.dat
+WORK__clearandshift__clearandshift_behaviour = $(LIB_WORK)/clearandshift/clearandshift_behaviour.dat
+WORK__clearandshift = $(LIB_WORK)/clearandshift/_primary.dat
 WORK__checkmask_tb_check_mask_tb_behaviour_cfg = $(LIB_WORK)/checkmask_tb_check_mask_tb_behaviour_cfg/_primary.dat
 WORK__checkmask_tb__check_mask_tb_behaviour = $(LIB_WORK)/checkmask_tb/check_mask_tb_behaviour.dat
 WORK__checkmask_tb = $(LIB_WORK)/checkmask_tb/_primary.dat
@@ -260,9 +281,6 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_counter_8bit_vga_counter_8bit_behav_cfg) \
     $(WORK__vga_counter_8bit__vga_counter_8bit_behav) \
     $(WORK__vga_counter_8bit) \
-    $(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) \
-    $(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
-    $(WORK__vga_counter_5bit) \
     $(WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg) \
     $(WORK__vga_counter_4bit__vga_counter_4bit_behav) \
     $(WORK__vga_counter_4bit) \
@@ -330,7 +348,20 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__piece_lut_tb) \
     $(WORK__piece_lut_behaviour_cfg) \
     $(WORK__piece_lut__piece_lut_behaviour) \
+    $(WORK__piece_lut__synthesised) \
     $(WORK__piece_lut) \
+    $(WORK__npg_tb_behaviour_cfg) \
+    $(WORK__npg_tb__behaviour) \
+    $(WORK__npg_tb) \
+    $(WORK__npg_structural_cfg) \
+    $(WORK__npg_mux2_1_behaviour_cfg) \
+    $(WORK__npg_mux2_1__behaviour) \
+    $(WORK__npg_mux2_1) \
+    $(WORK__npg_ff_behaviour_cfg) \
+    $(WORK__npg_ff__behaviour) \
+    $(WORK__npg_ff) \
+    $(WORK__npg__structural) \
+    $(WORK__npg) \
     $(WORK__mux5_mux5_behav_cfg) \
     $(WORK__mux5__mux5_behav) \
     $(WORK__mux5__synthesised) \
@@ -373,6 +404,15 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__controller_controller_arch_cfg) \
     $(WORK__controller__controller_arch) \
     $(WORK__controller) \
+    $(WORK__clearshift_tb__testbench_behaviour) \
+    $(WORK__clearshift_tb) \
+    $(WORK__clearandshift_synthesised_cfg) \
+    $(WORK__clearandshift_extracted_cfg) \
+    $(WORK__clearandshift_behaviour_cfg) \
+    $(WORK__clearandshift__synthesised) \
+    $(WORK__clearandshift__extracted) \
+    $(WORK__clearandshift__clearandshift_behaviour) \
+    $(WORK__clearandshift) \
     $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) \
     $(WORK__checkmask_tb__check_mask_tb_behaviour) \
     $(WORK__checkmask_tb) \
@@ -483,6 +523,96 @@ $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) : VHDL/checkmask_tb_check_mask
 		$(WORK__checkmask_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/checkmask_tb_check_mask_tb_behaviour_cfg.vhd
+
+$(WORK__clearandshift) : VHDL/clearandshift.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift.vhd
+
+$(WORK__clearandshift__clearandshift_behaviour) : VHDL/clearandshift-clearandshift_behaviour.vhd \
+		$(WORK__clearandshift) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift-clearandshift_behaviour.vhd
+
+$(WORK__clearandshift__extracted) : VHDL/clearandshift_EXTR.vhd \
+		$(WORK__clearandshift) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift_EXTR.vhd
+
+$(WORK__clearandshift__synthesised) : VHDL/clearandshift_SYNTH.vhd \
+		$(WORK__clearandshift) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift_SYNTH.vhd
+
+$(WORK__clearandshift_behaviour_cfg) : VHDL/clearandshift_behaviour_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__clearandshift__clearandshift_behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__clearandshift)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift_behaviour_cfg.vhd
+
+$(WORK__clearandshift_extracted_cfg) : VHDL/clearandshift_extracted_cfg.vhd \
+		$(CELLSLIB__ex210) \
+		$(CELLSLIB__dfn10) \
+		$(CELLSLIB__tinv10) \
+		$(CELLSLIB__no310) \
+		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__no210) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__mu111) \
+		$(CELLSLIB__na210) \
+		$(CELLSLIB__na310) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__clearandshift__extracted) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__clearandshift)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift_extracted_cfg.vhd
+
+$(WORK__clearandshift_synthesised_cfg) : VHDL/clearandshift_synthesised_cfg.vhd \
+		$(CELLSLIB__ex210) \
+		$(CELLSLIB__mu111) \
+		$(CELLSLIB__no310) \
+		$(CELLSLIB__no210) \
+		$(CELLSLIB__na310) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__na210) \
+		$(CELLSLIB__tinv10) \
+		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__dfn10) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__clearandshift__synthesised) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__clearandshift)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearandshift_synthesised_cfg.vhd
+
+$(WORK__clearshift_tb) : VHDL/clearshift_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/clearshift_tb.vhd
+
+$(WORK__clearshift_tb__testbench_behaviour) : VHDL/testbench-testbench_behaviour.vhd \
+		$(WORK__clearshift_tb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/testbench-testbench_behaviour.vhd
 
 $(WORK__controller) : VHDL/controller.vhd \
 		$(STD__textio) \
@@ -809,11 +939,109 @@ $(WORK__mux5_mux5_behav_cfg) : /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/mux5_mux5_behav_cfg.vhd
 
+$(WORK__npg) : VHDL/npg.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg.vhd
+
+$(WORK__npg__structural) : VHDL/npg-structural.vhd \
+		$(WORK__npg) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg-structural.vhd
+
+$(WORK__npg_ff) : VHDL/npg_ff.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_ff.vhd
+
+$(WORK__npg_ff__behaviour) : VHDL/npg_ff-behaviour.vhd \
+		$(WORK__npg_ff) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_ff-behaviour.vhd
+
+$(WORK__npg_ff_behaviour_cfg) : VHDL/npg_ff_behaviour_cfg.vhd \
+		$(WORK__npg_ff__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__npg_ff)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_ff_behaviour_cfg.vhd
+
+$(WORK__npg_mux2_1) : VHDL/npg_mux2_1.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_mux2_1.vhd
+
+$(WORK__npg_mux2_1__behaviour) : VHDL/npg_mux2_1-behaviour.vhd \
+		$(WORK__npg_mux2_1) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_mux2_1-behaviour.vhd
+
+$(WORK__npg_mux2_1_behaviour_cfg) : VHDL/npg_mux2_1_behaviour_cfg.vhd \
+		$(WORK__npg_mux2_1__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__npg_mux2_1)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_mux2_1_behaviour_cfg.vhd
+
+$(WORK__npg_structural_cfg) : VHDL/npg_structural_cfg.vhd \
+		$(WORK__npg_mux2_1) \
+		$(WORK__npg_ff) \
+		$(WORK__npg_mux2_1_behaviour_cfg) \
+		$(WORK__npg_ff_behaviour_cfg) \
+		$(WORK__npg__structural) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__npg)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_structural_cfg.vhd
+
+$(WORK__npg_tb) : VHDL/npg_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_tb.vhd
+
+$(WORK__npg_tb__behaviour) : VHDL/npg_tb-behaviour.vhd \
+		$(WORK__npg_tb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_tb-behaviour.vhd
+
+$(WORK__npg_tb_behaviour_cfg) : VHDL/npg_tb_behaviour_cfg.vhd \
+		$(WORK__npg) \
+		$(WORK__npg_structural_cfg) \
+		$(WORK__npg_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__npg_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/npg_tb_behaviour_cfg.vhd
+
 $(WORK__piece_lut) : VHDL/piece_lut.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/piece_lut.vhd
+
+$(WORK__piece_lut__synthesised) : VHDL/piece_lut_SYNTH.vhd \
+		$(WORK__piece_lut) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/piece_lut_SYNTH.vhd
 
 $(WORK__piece_lut__piece_lut_behaviour) : VHDL/piece_lut-behaviour.vhd \
 		$(WORK__piece_lut) \
@@ -1365,30 +1593,6 @@ $(WORK__vga_counter_4bit_vga_counter_4bit_behav_cfg) : VHDL/vga_counter_4bit_vga
 		$(WORK__vga_counter_4bit)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_counter_4bit_vga_counter_4bit_behav_cfg.vhd
-
-$(WORK__vga_counter_5bit) : VHDL/vga_counter_5bit.vhd \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit.vhd
-
-$(WORK__vga_counter_5bit__vga_counter_5bit_behav) : VHDL/vga_counter_5bit_arch.vhd \
-		$(WORK__vga_counter_5bit) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit_arch.vhd
-
-$(WORK__vga_counter_5bit_vga_counter_5bit_behav_cfg) : VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd \
-		$(WORK__vga_counter_5bit__vga_counter_5bit_behav) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga_counter_5bit)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_counter_5bit_vga_counter_5bit_behav_cfg.vhd
 
 $(WORK__vga_counter_8bit) : VHDL/vga_counter_8bit.vhd \
 		$(IEEE__numeric_std) \

@@ -28,10 +28,6 @@ architecture controller_tb_arch of controller_tb is
 			 timer_1_start     : out std_logic;
 			 timer_1_done      : in  std_logic;
 			 timer_1_reset     : out std_logic;
-			 timer_2_time      : out std_logic_vector(7 downto 0);
-			 timer_2_start     : out std_logic;
-			 timer_2_done      : in  std_logic;
-			 timer_2_reset     : out std_logic;
 			 inputs            : in  std_logic_vector(7 downto 0));
 	end component controller;
 
@@ -89,10 +85,6 @@ begin
 			timer_1_start     => timer_1_start,
 			timer_1_done      => timer_1_done,
 			timer_1_reset     => timer_1_reset,
-			timer_2_time      => timer_2_time,
-			timer_2_start     => timer_2_start,
-			timer_2_done      => timer_2_done,
-			timer_2_reset     => timer_2_reset,
 			inputs            => inputs
 		);
 
@@ -145,15 +137,6 @@ begin
 		wait for 20 ns;	
 	end process;
 	
-	lbl_tmr2 : process
-	begin
-		timer_2_done <= '0';
-		wait until (timer_2_start = '1');
-		wait for 1000 ns;
-		timer_2_done <= '1';		
-		wait until (timer_2_start = '0');
-		wait for 20 ns;	
-	end process;
 	
 	lbl_inpts : process
 	begin
@@ -178,6 +161,9 @@ begin
 
 	rst <= '1', '0' after clk_period;
 end;
+
+
+
 
 
 

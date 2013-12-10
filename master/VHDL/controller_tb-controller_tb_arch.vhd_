@@ -28,10 +28,6 @@ architecture controller_tb_arch of controller_tb is
 			 timer_1_start     : out std_logic;
 			 timer_1_done      : in  std_logic;
 			 timer_1_reset     : out std_logic;
-			 timer_2_time      : out std_logic_vector(7 downto 0);
-			 timer_2_start     : out std_logic;
-			 timer_2_done      : in  std_logic;
-			 timer_2_reset     : out std_logic;
 			 inputs            : in  std_logic_vector(7 downto 0));
 	end component controller;
 
@@ -111,6 +107,7 @@ begin
 		check_ready <= '1';
 		check_empty <= '1';
 		wait until (check_start = '0');
+		wait for 20 ns;
 	end process;
 	
 	lbl_clear_shift : process
@@ -120,6 +117,7 @@ begin
 		wait for 50 ns;
 		clear_shift_ready <= '1';
 		wait until (clear_shift_start = '0');
+		wait for 20 ns;
 	end process;
 	
 	
@@ -129,7 +127,8 @@ begin
 		wait until (draw_erase_start = '1');
 		wait for 50 ns;
 		draw_erase_ready <= '1';
-		wait until (draw_erase_start = '0');	
+		wait until (draw_erase_start = '0');
+		wait for 20 ns;
 	end process;
 	
 	lbl_tmr1 : process
@@ -138,7 +137,8 @@ begin
 		wait until (timer_1_start = '1');
 		wait for 1000 ns;
 		timer_1_done <= '1';		
-		wait until (timer_1_start = '0');	
+		wait until (timer_1_start = '0');
+		wait for 20 ns;	
 	end process;
 	
 	lbl_tmr2 : process
@@ -147,12 +147,13 @@ begin
 		wait until (timer_2_start = '1');
 		wait for 1000 ns;
 		timer_2_done <= '1';		
-		wait until (timer_2_start = '0');	
+		wait until (timer_2_start = '0');
+		wait for 20 ns;	
 	end process;
 	
 	lbl_inpts : process
 	begin
-		inputs <= "0000000";
+		inputs <= "00000001";
 		wait;
 	end process;
 
@@ -173,6 +174,9 @@ begin
 
 	rst <= '1', '0' after clk_period;
 end;
+
+
+
 
 
 
