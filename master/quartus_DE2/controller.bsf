@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 328 336)
+	(rect 16 16 328 304)
 	(text "controller" (rect 5 0 75 12)(font "Arial" ))
-	(text "inst" (rect 8 304 36 316)(font "Arial" ))
+	(text "inst" (rect 8 272 36 284)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -89,16 +89,9 @@ applicable agreement for further details.
 	(port
 		(pt 0 176)
 		(input)
-		(text "timer_2_done" (rect 0 0 84 12)(font "Arial" ))
-		(text "timer_2_done" (rect 21 171 105 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 1))
-	)
-	(port
-		(pt 0 192)
-		(input)
 		(text "inputs[7..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "inputs[7..0]" (rect 21 187 105 199)(font "Arial" ))
-		(line (pt 0 192)(pt 16 192)(line_width 3))
+		(text "inputs[7..0]" (rect 21 171 105 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
 	)
 	(port
 		(pt 312 32)
@@ -198,28 +191,7 @@ applicable agreement for further details.
 		(text "timer_1_reset" (rect 199 235 291 247)(font "Arial" ))
 		(line (pt 312 240)(pt 296 240)(line_width 1))
 	)
-	(port
-		(pt 312 256)
-		(output)
-		(text "timer_2_time[7..0]" (rect 0 0 127 12)(font "Arial" ))
-		(text "timer_2_time[7..0]" (rect 164 251 291 263)(font "Arial" ))
-		(line (pt 312 256)(pt 296 256)(line_width 3))
-	)
-	(port
-		(pt 312 272)
-		(output)
-		(text "timer_2_start" (rect 0 0 92 12)(font "Arial" ))
-		(text "timer_2_start" (rect 199 267 291 279)(font "Arial" ))
-		(line (pt 312 272)(pt 296 272)(line_width 1))
-	)
-	(port
-		(pt 312 288)
-		(output)
-		(text "timer_2_reset" (rect 0 0 92 12)(font "Arial" ))
-		(text "timer_2_reset" (rect 199 283 291 295)(font "Arial" ))
-		(line (pt 312 288)(pt 296 288)(line_width 1))
-	)
 	(drawing
-		(rectangle (rect 16 16 296 304)(line_width 1))
+		(rectangle (rect 16 16 296 272)(line_width 1))
 	)
 )

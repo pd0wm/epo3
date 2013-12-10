@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.644 ns
+Actual Time    : 6.321 ns
 From           : rst
-To             : timer:inst9|cur_count[5]
+To             : vga:inst3|vga_score_trans:score_translation|vga_counter_3bit:mem_addr_counter|state[2]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.885 ns
-From           : vga:inst3|vga_read:read_and_output|h_sync_out
-To             : vga_hsync
+Actual Time    : 10.435 ns
+From           : vga:inst3|vga_read:read_and_output|v_sync_out
+To             : vga_vsync
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -35,31 +35,31 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.817 ns
-From           : dbg_inputs[0]
-To             : controller:inst4|inv_inputs[0]
+Actual Time    : 1.919 ns
+From           : dbg_inputs[4]
+To             : controller:inst4|inv_inputs[4]
 From Clock     : --
-To Clock       : clock_50mhz
-Failed Paths   : 0
-
-Type           : Clock Setup: 'clock_50mhz'
-Slack          : N/A
-Required Time  : None
-Actual Time    : 122.32 MHz ( period = 8.175 ns )
-From           : de_piece:inst6|state.reset
-To             : sr_if:inst2|do1
-From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
 
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 137.74 MHz ( period = 7.260 ns )
-From           : sld_hub:auto_hub|irf_reg[1][4]
+Actual Time    : 131.68 MHz ( period = 7.594 ns )
+From           : sld_hub:auto_hub|irf_reg[1][5]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock_50mhz'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 133.62 MHz ( period = 7.484 ns )
+From           : vga:inst3|vga_score_check:score_check|in_score_state
+To             : sr_if:inst2|do2
+From Clock     : clock_50mhz
+To Clock       : clock_50mhz
 Failed Paths   : 0
 
 Type           : Total number of failed paths

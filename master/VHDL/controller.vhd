@@ -40,11 +40,6 @@ entity controller is
         timer_1_done      : in  std_logic;
         timer_1_reset     : out std_logic;
 
-        timer_2_time      : out std_logic_vector(7 downto 0);
-        timer_2_start     : out std_logic;
-        timer_2_done      : in  std_logic;
-        timer_2_reset     : out std_logic;
-
         --inputs
         inputs            : in  std_logic_vector(7 downto 0)
 
