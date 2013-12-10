@@ -107,6 +107,7 @@ begin
 
 	end process;
 
+
 	process(cur_state)
 	begin
 		-- Keep signals
