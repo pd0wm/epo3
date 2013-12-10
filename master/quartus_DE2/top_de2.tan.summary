@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 4.695 ns
+Actual Time    : 5.644 ns
 From           : rst
-To             : timer:inst9|state.vga_high
+To             : timer:inst9|cur_count[5]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.524 ns
-From           : vga:inst3|vga_read:read_and_output|v_sync_out
-To             : vga_vsync
+Actual Time    : 10.885 ns
+From           : vga:inst3|vga_read:read_and_output|h_sync_out
+To             : vga_hsync
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.326 ns
-From           : dbg_inputs[7]
-To             : controller:inst4|cur_state.drop_timer_reset
+Actual Time    : 1.817 ns
+From           : dbg_inputs[0]
+To             : controller:inst4|inv_inputs[0]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -45,8 +45,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 127.75 MHz ( period = 7.828 ns )
-From           : piece_lut:inst7|mask[0]
+Actual Time    : 122.32 MHz ( period = 8.175 ns )
+From           : de_piece:inst6|state.reset
 To             : sr_if:inst2|do1
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
@@ -55,8 +55,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 141.00 MHz ( period = 7.092 ns )
-From           : sld_hub:auto_hub|irf_reg[1][5]
+Actual Time    : 137.74 MHz ( period = 7.260 ns )
+From           : sld_hub:auto_hub|irf_reg[1][4]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
