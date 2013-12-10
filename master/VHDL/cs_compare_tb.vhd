@@ -11,14 +11,14 @@ architecture cs_compare_tb_behav of cs_compare_tb is
 			 start_in     : in  std_logic;
 			 ready_out    : out std_logic;
 			 score_out    : out std_logic;
-			 ram_addr_out : out std_logic_vector(6 downto 0);
+			 ram_addr_out_2 : out std_logic_vector(7 downto 0);
 			 ram_we       : out std_logic;
 			 ram_data_in  : in  std_logic;
 			 ram_data_out : out std_logic);
 	end component cs_compare;
 
 	signal clk, rst, start, ready, data_in, data_out, we, score : std_logic;
-	signal ram_addr                                             : std_logic_vector(6 downto 0);
+	signal ram_addr                                             : std_logic_vector(7 downto 0);
 
 	signal ram_mem : std_logic_vector(127 downto 0);
 begin
@@ -36,7 +36,7 @@ begin
 			     start_in     => start,
 			     ready_out    => ready,
 			     score_out    => score,
-			     ram_addr_out => ram_addr,
+			     ram_addr_out_2 => ram_addr,
 			     ram_we       => we,
 			     ram_data_in  => data_out,
 			     ram_data_out => data_in);
@@ -77,3 +77,5 @@ begin
 	end process;
 
 end architecture;
+
+

@@ -46,7 +46,7 @@ architecture controller_arch of controller is
 	signal cur_timer_1_time      : std_logic_vector(7 downto 0);
 	signal cur_timer_1_start     : std_logic;
 	signal cur_timer_1_reset     : std_logic;
-	signal inv_inputs            : std_logic_vector(7 downto 0);
+	signal inv_inputs            : std_logic_vector(5 downto 0);
 
 	signal cur_future_piece, new_future_piece : std_logic_vector(2 downto 0);
 
@@ -85,7 +85,7 @@ begin
 				cur_timer_1_time      <= new_timer_1_time;
 				cur_timer_1_start     <= new_timer_1_start;
 				cur_timer_1_reset     <= new_timer_1_reset;
-				inv_inputs            <= not inputs;
+				inv_inputs            <= inputs;
 			end if;
 		end if;
 
@@ -316,7 +316,7 @@ begin
 				next_state <= reset_timers_a_2;
 
 			when reset_timers_a_2 =>
-				if (inv_inputs = "00000000" or inv_inputs = "00010000") then
+				if (inv_inputs = "000000" or inv_inputs = "010000") then
 					next_state <= clear_shift_1;
 				else
 					next_state <= reset_timers_a_2;
@@ -457,7 +457,7 @@ begin
 				next_state <= draw;
 
 			when key =>
-				if (inv_inputs = "00000000") then
+				if (inv_inputs = "000000") then
 					-- no input
 					next_state <= drop_timer_reset;
 				else
@@ -561,7 +561,7 @@ begin
 			when move_left_11 =>
 				new_draw_erase_start <= '0';
 
-				if (inv_inputs = "00000000" or inv_inputs = "00010000") then
+				if (inv_inputs = "000000" or inv_inputs = "010000") then
 					next_state <= draw;
 				else
 					next_state <= move_left_11;

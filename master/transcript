@@ -7,21 +7,17 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work npg_tb_behaviour_cfg 
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work de_piece_testbench_behaviour_cfg 
 # ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-13) Recompile work.de_piece_testbench_behaviour_cfg because work.de_piece_testbench(behaviour) has changed.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.npg_tb_behaviour_cfg#1
-# Loading work.npg_tb(behaviour)#1
-# Loading work.npg_structural_cfg#1
-# Loading work.npg(structural)#1
-# Loading work.npg_ff_behaviour_cfg#1
-# Loading work.npg_ff(behaviour)#1
-# Loading work.npg_mux2_1_behaviour_cfg#1
-# Loading work.npg_mux2_1(behaviour)#1
+# Loading ieee.numeric_std(body)
+# Loading work.de_piece_testbench_behaviour_cfg#1
+# Loading work.de_piece_testbench(behaviour)#1
+# Loading work.de_piece_behaviour_cfg#1
+# Loading work.de_piece(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 1000ns
-run 10000ns
-run 1ms
-# Causality operation skipped due to absense of debug database file
+run 2000 ns
+run 20us

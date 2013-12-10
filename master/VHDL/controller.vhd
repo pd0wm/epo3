@@ -41,7 +41,7 @@ entity controller is
 		timer_1_reset     : out std_logic;
 
 		--inputs
-		inputs            : in  std_logic_vector(7 downto 0)
+		inputs            : in  std_logic_vector(5 downto 0)
 	);
 end controller;
 
