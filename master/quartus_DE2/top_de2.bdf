@@ -953,7 +953,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -232 664 -200 696)
+	(rect -232 680 -200 712)
 	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
 	(text "inst11" (rect 3 21 32 32)(font "Arial" )(invisible))
 	(port
@@ -2151,14 +2151,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -176 640)
-	(pt -216 640)
-)
-(connector
-	(pt -216 640)
-	(pt -216 664)
-)
-(connector
 	(pt -256 784)
 	(pt -256 1144)
 )
@@ -2332,6 +2324,14 @@ applicable agreement for further details.
 (connector
 	(pt 128 928)
 	(pt 128 1904)
+)
+(connector
+	(pt -176 640)
+	(pt -216 640)
+)
+(connector
+	(pt -216 640)
+	(pt -216 680)
 )
 (junction (pt 464 240))
 (junction (pt 480 224))
