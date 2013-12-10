@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.492 ns
-From           : rst
-To             : vga:inst3|vga_counter:counter|vga_counter_8bit:pos_x_counter|state[7]
+Actual Time    : 3.284 ns
+From           : dbg_inputs[3]
+To             : npg:inst10|npg_ff:Button|q
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.488 ns
-From           : vga:inst3|vga_read:read_and_output|red_out
-To             : vga_r[0]
+Actual Time    : 14.436 ns
+From           : de_piece:inst6|state.reset
+To             : pre_syn.bp.inst15_ram_addr_out_2_6_
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 2.387 ns
+Actual Time    : 5.068 ns
 From           : dbg_inputs[5]
-To             : controller:inst4|inv_inputs[5]
+To             : debounce:inst19|output[5]
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 119.33 MHz ( period = 8.380 ns )
-From           : controller:inst4|cur_state.move_left_3
-To             : piece_lut:inst7|cur_y_out[4]
+Actual Time    : 112.66 MHz ( period = 8.876 ns )
+From           : vga:inst3|vga_score_trans:score_translation|vga_counter_3bit:mem_addr_counter|state[1]
+To             : sr_if:inst2|do2
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -55,7 +55,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 135.57 MHz ( period = 7.376 ns )
+Actual Time    : 141.64 MHz ( period = 7.060 ns )
 From           : sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[0]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP

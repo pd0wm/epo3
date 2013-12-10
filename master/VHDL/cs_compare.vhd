@@ -8,7 +8,7 @@ entity cs_compare is
 		ready_out    : out std_logic;
 		score_out    : out std_logic;
 
-		ram_addr_out2 : out std_logic_vector(7 downto 0);
+		ram_addr_out_2 : out std_logic_vector(7 downto 0);
 		ram_we       : out std_logic;
 		ram_data_in  : in  std_logic;
 		ram_data_out : out std_logic

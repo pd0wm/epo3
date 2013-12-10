@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 architecture cs_compare_behav of cs_compare is
-	type state_type is (lock, init, check_row, check_row_process, check_row_done, trigger, notify_score, ready);
+	type state_type is (lock, init, check_row, check_row_process, check_row_done, trigger, notify_score, ready, check_row_last);
 
 	signal state, state_next       : state_type;
 	signal row_full, row_full_next : std_logic;
@@ -40,7 +40,7 @@ architecture cs_compare_behav of cs_compare is
 	signal ram_addr_out : std_logic_vector(6 downto 0);
 	signal ram_prefix: std_logic;
 begin
-	ram_addr_out2 <= ram_prefix & ram_addr_out;
+	ram_addr_out_2 <= ram_prefix & ram_addr_out;
 
 
 	process (tri_en)
@@ -119,8 +119,18 @@ begin
 				row_full_next <= row_full AND ram_data_in;
 
 				if (cnt_ram_addr(2 downto 0) = "111") then
-					state_next <= check_row_process;
+					state_next <= check_row_last;
 				end if;
+				
+				
+			when check_row_last =>
+				tri_en <= '1';
+				ram_we <= '0';
+				ram_data_out <= '0';
+				
+				row_full_next <= row_full AND ram_data_in;
+				
+				state_next <= check_row_process;
 
 			when check_row_process =>
 				-- Fix
@@ -134,6 +144,9 @@ begin
 					state_next <= check_row_done;
 				end if;
 
+			
+			
+				
 			when trigger =>
 				shift_start <= '1';
 

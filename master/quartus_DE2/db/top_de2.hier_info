@@ -11289,9 +11289,11 @@ rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
 rst => row_full.OUTPUTSELECT
 rst => cs_7bc:counter_7_bit.rst
 rst => cs_shift:shift.rst
+start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
@@ -11310,10 +11312,10 @@ ram_addr_out_2[4] <= ram_addr_out[4].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out_2[5] <= ram_addr_out[5].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out_2[6] <= ram_addr_out[6].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out_2[7] <= ram_prefix.DB_MAX_OUTPUT_PORT_TYPE
-ram_we <= cs_shift:shift.ram_we
+ram_we <= ram_we.DB_MAX_OUTPUT_PORT_TYPE
 ram_data_in => row_full_next.IN1
 ram_data_in => cs_shift:shift.ram_data_in
-ram_data_out <= cs_shift:shift.ram_data_out
+ram_data_out <= ram_data_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|cs_compare:inst15|cs_7bc:counter_7_bit
