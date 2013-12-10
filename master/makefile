@@ -8,7 +8,6 @@ LIB_WORK = work
 
 # Define path to each design unit
 CELLSLIB__dfn10 = $(LIB_CELLSLIB)/dfn10/_primary.dat
-CELLSLIB__tinv10 = $(LIB_CELLSLIB)/tinv10/_primary.dat
 CELLSLIB__buf40 = $(LIB_CELLSLIB)/buf40/_primary.dat
 CELLSLIB__dfa11 = $(LIB_CELLSLIB)/dfa11/_primary.dat
 CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
@@ -19,11 +18,12 @@ CELLSLIB__mu111 = $(LIB_CELLSLIB)/mu111/_primary.dat
 CELLSLIB__no310 = $(LIB_CELLSLIB)/no310/_primary.dat
 CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
 CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
-CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
 CELLSLIB__na310 = $(LIB_CELLSLIB)/na310/_primary.dat
-CELLSLIB__cellslib_decl_pack = $(LIB_CELLSLIB)/cellslib_decl_pack/_primary.dat
 IEEE__std_logic_unsigned = $(LIB_IEEE)/std_logic_unsigned/_primary.dat
 IEEE__std_logic_arith = $(LIB_IEEE)/std_logic_arith/_primary.dat
+CELLSLIB__cellslib_decl_pack = $(LIB_CELLSLIB)/cellslib_decl_pack/_primary.dat
+CELLSLIB__tinv10 = $(LIB_CELLSLIB)/tinv10/_primary.dat
+CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
 IEEE__std_logic_1164 = $(LIB_IEEE)/std_logic_1164/_primary.dat
 STD__textio = $(LIB_STD)/textio/_primary.dat
 IEEE__numeric_std = $(LIB_IEEE)/numeric_std/_primary.dat
@@ -95,6 +95,13 @@ WORK__vga_counter__vga_counter_behav = $(LIB_WORK)/vga_counter/vga_counter_behav
 WORK__vga_counter = $(LIB_WORK)/vga_counter/_primary.dat
 WORK__vga__vga_arch = $(LIB_WORK)/vga/vga_arch.dat
 WORK__vga = $(LIB_WORK)/vga/_primary.dat
+WORK__tri_buff_synthesised_cfg = $(LIB_WORK)/tri_buff_synthesised_cfg/_primary.dat
+WORK__tri_buff_extracted_cfg = $(LIB_WORK)/tri_buff_extracted_cfg/_primary.dat
+WORK__tri_buff_behaviour_cfg = $(LIB_WORK)/tri_buff_behaviour_cfg/_primary.dat
+WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
+WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
+WORK__tri_buff__synthesised = $(LIB_WORK)/tri_buff/synthesised.dat
+WORK__tri_buff = $(LIB_WORK)/tri_buff/_primary.dat
 WORK__timer_tb_behaviour_cfg = $(LIB_WORK)/timer_tb_behaviour_cfg/_primary.dat
 WORK__timer_tb__behaviour = $(LIB_WORK)/timer_tb/behaviour.dat
 WORK__timer_tb = $(LIB_WORK)/timer_tb/_primary.dat
@@ -174,6 +181,12 @@ WORK__log_behaviour_cfg = $(LIB_WORK)/log_behaviour_cfg/_primary.dat
 WORK__log__behaviour = $(LIB_WORK)/log/behaviour.dat
 WORK__log = $(LIB_WORK)/log/_primary.dat
 WORK__extracted = $(LIB_WORK)/extracted/_primary.dat
+WORK__draw_score_tb_behaviour_cfg = $(LIB_WORK)/draw_score_tb_behaviour_cfg/_primary.dat
+WORK__draw_score_tb__behaviour = $(LIB_WORK)/draw_score_tb/behaviour.dat
+WORK__draw_score_tb = $(LIB_WORK)/draw_score_tb/_primary.dat
+WORK__draw_score_behaviour_cfg = $(LIB_WORK)/draw_score_behaviour_cfg/_primary.dat
+WORK__draw_score__behaviour = $(LIB_WORK)/draw_score/behaviour.dat
+WORK__draw_score = $(LIB_WORK)/draw_score/_primary.dat
 WORK__demux8_inv_demux8_inv_behav_cfg = $(LIB_WORK)/demux8_inv_demux8_inv_behav_cfg/_primary.dat
 WORK__demux8_inv__synthesised = $(LIB_WORK)/demux8_inv/synthesised.dat
 WORK__demux8_inv__demux8_inv_behav = $(LIB_WORK)/demux8_inv/demux8_inv_behav.dat
@@ -202,8 +215,6 @@ WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
 WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
-WORK__clearshift_tb__testbench_behaviour = $(LIB_WORK)/clearshift_tb/testbench_behaviour.dat
-WORK__clearshift_tb = $(LIB_WORK)/clearshift_tb/_primary.dat
 WORK__clearandshift_synthesised_cfg = $(LIB_WORK)/clearandshift_synthesised_cfg/_primary.dat
 WORK__clearandshift_extracted_cfg = $(LIB_WORK)/clearandshift_extracted_cfg/_primary.dat
 WORK__clearandshift_behaviour_cfg = $(LIB_WORK)/clearandshift_behaviour_cfg/_primary.dat
@@ -297,6 +308,13 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_counter) \
     $(WORK__vga__vga_arch) \
     $(WORK__vga) \
+    $(WORK__tri_buff_synthesised_cfg) \
+    $(WORK__tri_buff_extracted_cfg) \
+    $(WORK__tri_buff_behaviour_cfg) \
+    $(WORK__tri_buff__behaviour) \
+    $(WORK__tri_buff__extracted) \
+    $(WORK__tri_buff__synthesised) \
+    $(WORK__tri_buff) \
     $(WORK__timer_tb_behaviour_cfg) \
     $(WORK__timer_tb__behaviour) \
     $(WORK__timer_tb) \
@@ -376,6 +394,12 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__log__behaviour) \
     $(WORK__log) \
     $(WORK__extracted) \
+    $(WORK__draw_score_tb_behaviour_cfg) \
+    $(WORK__draw_score_tb__behaviour) \
+    $(WORK__draw_score_tb) \
+    $(WORK__draw_score_behaviour_cfg) \
+    $(WORK__draw_score__behaviour) \
+    $(WORK__draw_score) \
     $(WORK__demux8_inv_demux8_inv_behav_cfg) \
     $(WORK__demux8_inv__synthesised) \
     $(WORK__demux8_inv__demux8_inv_behav) \
@@ -404,8 +428,6 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__controller_controller_arch_cfg) \
     $(WORK__controller__controller_arch) \
     $(WORK__controller) \
-    $(WORK__clearshift_tb__testbench_behaviour) \
-    $(WORK__clearshift_tb) \
     $(WORK__clearandshift_synthesised_cfg) \
     $(WORK__clearandshift_extracted_cfg) \
     $(WORK__clearandshift_behaviour_cfg) \
@@ -600,19 +622,6 @@ $(WORK__clearandshift_synthesised_cfg) : VHDL/clearandshift_synthesised_cfg.vhd 
 		$(WORK__clearandshift)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/clearandshift_synthesised_cfg.vhd
-
-$(WORK__clearshift_tb) : VHDL/clearshift_tb.vhd \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/clearshift_tb.vhd
-
-$(WORK__clearshift_tb__testbench_behaviour) : VHDL/testbench-testbench_behaviour.vhd \
-		$(WORK__clearshift_tb) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/testbench-testbench_behaviour.vhd
 
 $(WORK__controller) : VHDL/controller.vhd \
 		$(STD__textio) \
@@ -827,6 +836,52 @@ $(WORK__demux8_inv_demux8_inv_behav_cfg) : /home/epo3-user/Desktop/git/epo3/mast
 		$(WORK__demux8_inv)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo /home/epo3-user/Desktop/git/epo3/master/VHDL/demux8_inv_demux8_inv_behav_cfg.vhd
+
+$(WORK__draw_score) : VHDL/draw_score.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score.vhd
+
+$(WORK__draw_score__behaviour) : VHDL/draw_score-behaviour.vhd \
+		$(WORK__draw_score) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score-behaviour.vhd
+
+$(WORK__draw_score_behaviour_cfg) : VHDL/draw_score_behaviour_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__draw_score__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__draw_score)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score_behaviour_cfg.vhd
+
+$(WORK__draw_score_tb) : VHDL/draw_score_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score_tb.vhd
+
+$(WORK__draw_score_tb__behaviour) : VHDL/draw_score_tb-behaviour.vhd \
+		$(WORK__draw_score_tb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score_tb-behaviour.vhd
+
+$(WORK__draw_score_tb_behaviour_cfg) : VHDL/draw_score_tb_behaviour_cfg.vhd \
+		$(WORK__draw_score) \
+		$(WORK__draw_score_behaviour_cfg) \
+		$(WORK__draw_score_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__draw_score_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score_tb_behaviour_cfg.vhd
 
 $(WORK__extracted) : /home/epo3-user/Desktop/git/epo3/master/VHDL/extracted.vhd \
 		$(WORK__sr_if) \
@@ -1463,6 +1518,65 @@ $(WORK__timer_tb_behaviour_cfg) : VHDL/timer_tb_behaviour_cfg.vhd \
 		$(WORK__timer_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer_tb_behaviour_cfg.vhd
+
+$(WORK__tri_buff) : VHDL/tri_buff.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff.vhd
+
+$(WORK__tri_buff__synthesised) : VHDL/tri_buff_SYNTH.vhd \
+		$(WORK__tri_buff) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff_SYNTH.vhd
+
+$(WORK__tri_buff__extracted) : VHDL/tri_buff_EXTR.vhd \
+		$(WORK__tri_buff) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff_EXTR.vhd
+
+$(WORK__tri_buff__behaviour) : VHDL/tri_buff-behaviour.vhd \
+		$(WORK__tri_buff) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff-behaviour.vhd
+
+$(WORK__tri_buff_behaviour_cfg) : VHDL/tri_buff_behaviour_cfg.vhd \
+		$(WORK__tri_buff__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__tri_buff)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff_behaviour_cfg.vhd
+
+$(WORK__tri_buff_extracted_cfg) : VHDL/tri_buff_extracted_cfg.vhd \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__tinv10) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__tri_buff__extracted) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__tri_buff)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff_extracted_cfg.vhd
+
+$(WORK__tri_buff_synthesised_cfg) : VHDL/tri_buff_synthesised_cfg.vhd \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__tinv10) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__tri_buff__synthesised) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__tri_buff)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/tri_buff_synthesised_cfg.vhd
 
 $(WORK__vga) : VHDL/vga.vhd \
 		$(WORK__vga_params) \

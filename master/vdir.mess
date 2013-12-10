@@ -368,35 +368,6 @@ VHDL CONFIGURATION clearandshift_synthesised_cfg
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-ENTITY clearshift_tb
-    Source modified time: Tue Dec 10 09:10:33 2013
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: /master
-    HDL source file: VHDL/clearshift_tb.vhd
-    Source file: VHDL/clearshift_tb.vhd
-    Start location: VHDL/clearshift_tb.vhd:4
-    Version string: R6S0zefIJ:mnL5T;OEheA1
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Debug Symbol file exists
-  ARCHITECTURE BODY testbench_behaviour
-    Source modified time: Tue Dec 10 11:00:44 2013
-    Depends on: E work clearshift_tb R6S0zefIJ:mnL5T;OEheA1
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/testbench-testbench_behaviour.vhd
-    Source file: VHDL/testbench-testbench_behaviour.vhd
-    Start location: VHDL/testbench-testbench_behaviour.vhd:4
-    Version string: mf<5kDjAo:XkYDzo0k_B80
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
 ENTITY controller
     Source modified time: Tue Dec 10 10:49:57 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -848,6 +819,102 @@ VHDL CONFIGURATION demux8_inv_demux8_inv_behav_cfg
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY draw_score
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/draw_score.vhd
+    Source file: VHDL/draw_score.vhd
+    Start location: VHDL/draw_score.vhd:3
+    Version string: GmESYGPn6_B2d7k^HmE`e1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/draw_score-behaviour.vhd
+    Source file: VHDL/draw_score-behaviour.vhd
+    Start location: VHDL/draw_score-behaviour.vhd:5
+    Version string: >nRJ1:[0X04DbkNAWDnn71
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION draw_score_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: draw_score
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work draw_score behaviour >nRJ1:[0X04DbkNAWDnn71
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Source directory: /master
+    HDL source file: VHDL/draw_score_behaviour_cfg.vhd
+    Source file: VHDL/draw_score_behaviour_cfg.vhd
+    Start location: VHDL/draw_score_behaviour_cfg.vhd:1
+    Version string: JA;YV0@_[YAHPo[BNZYWC0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY draw_score_tb
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/draw_score_tb.vhd
+    Source file: VHDL/draw_score_tb.vhd
+    Start location: VHDL/draw_score_tb.vhd:4
+    Version string: R3AkJk85j`cimd:nD1Cma3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work draw_score_tb R3AkJk85j`cimd:nD1Cma3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/draw_score_tb-behaviour.vhd
+    Source file: VHDL/draw_score_tb-behaviour.vhd
+    Start location: VHDL/draw_score_tb-behaviour.vhd:4
+    Version string: HdnJ>;G=BF=3iJ=4EQc<91
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION draw_score_tb_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: draw_score_tb
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Depends on: C work draw_score_behaviour_cfg JA;YV0@_[YAHPo[BNZYWC0
+    Depends on: A work draw_score_tb behaviour HdnJ>;G=BF=3iJ=4EQc<91
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work draw_score_tb R3AkJk85j`cimd:nD1Cma3
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Source directory: /master
+    HDL source file: VHDL/draw_score_tb_behaviour_cfg.vhd
+    Source file: VHDL/draw_score_tb_behaviour_cfg.vhd
+    Start location: VHDL/draw_score_tb_behaviour_cfg.vhd:1
+    Version string: JnE[^BYSnOCCPM0<O^JDh0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 VHDL CONFIGURATION extracted
     Configuration for architecture: sr_if_tb_behav
@@ -2151,6 +2218,124 @@ VHDL CONFIGURATION timer_tb_behaviour_cfg
     Source file: VHDL/timer_tb_behaviour_cfg.vhd
     Start location: VHDL/timer_tb_behaviour_cfg.vhd:1
     Version string: 8^QRXDOfi`dXJ9k]_WaMF0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY tri_buff
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/tri_buff.vhd
+    Source file: VHDL/tri_buff.vhd
+    Start location: VHDL/tri_buff.vhd:4
+    Version string: C9Yfb5<@_JHNVNhEkQo2I3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/tri_buff_SYNTH.vhd
+    Source file: VHDL/tri_buff_SYNTH.vhd
+    Start location: VHDL/tri_buff_SYNTH.vhd:7
+    Version string: UDK6l5ZGD]i]<b2aW?Nd>3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Debug Symbol file exists
+  ARCHITECTURE BODY extracted
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/tri_buff_EXTR.vhd
+    Source file: VHDL/tri_buff_EXTR.vhd
+    Start location: VHDL/tri_buff_EXTR.vhd:13
+    Version string: =UXVaoTYzhTdY41dT8eLE3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/tri_buff-behaviour.vhd
+    Source file: VHDL/tri_buff-behaviour.vhd
+    Start location: VHDL/tri_buff-behaviour.vhd:4
+    Version string: W1gaXKBlAYTGF`FFBlGR<0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION tri_buff_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: tri_buff
+    Depends on: A work tri_buff behaviour W1gaXKBlAYTGF`FFBlGR<0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Source directory: master
+    HDL source file: VHDL/tri_buff_behaviour_cfg.vhd
+    Source file: VHDL/tri_buff_behaviour_cfg.vhd
+    Start location: VHDL/tri_buff_behaviour_cfg.vhd:1
+    Version string: eUS=JoQoMMZjS=C=9zOHM3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION tri_buff_extracted_cfg
+    Configuration for architecture: extracted
+    Configuration for entity: tri_buff
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib tinv10 LKW?@Sej^lT[<SF9KMaR>2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work tri_buff extracted =UXVaoTYzhTdY41dT8eLE3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Source directory: master
+    HDL source file: VHDL/tri_buff_extracted_cfg.vhd
+    Source file: VHDL/tri_buff_extracted_cfg.vhd
+    Start location: VHDL/tri_buff_extracted_cfg.vhd:1
+    Version string: Xj^hoViS77OA;7zKz7>IK0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION tri_buff_synthesised_cfg
+    Configuration for architecture: synthesised
+    Configuration for entity: tri_buff
+    Depends on: E cellslib iv110 Bdg]QV`zZkg7kCgfbQ_;e3
+    Depends on: E cellslib tinv10 LKW?@Sej^lT[<SF9KMaR>2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: A work tri_buff synthesised UDK6l5ZGD]i]<b2aW?Nd>3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work tri_buff C9Yfb5<@_JHNVNhEkQo2I3
+    Source modified time: Fri Dec  6 09:26:55 2013
+    Source directory: master
+    HDL source file: VHDL/tri_buff_synthesised_cfg.vhd
+    Source file: VHDL/tri_buff_synthesised_cfg.vhd
+    Start location: VHDL/tri_buff_synthesised_cfg.vhd:1
+    Version string: hW@c?9`MznDfFZMZS;[1L0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
