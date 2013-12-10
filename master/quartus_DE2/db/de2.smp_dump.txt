@@ -7,6 +7,27 @@ state.vga_high 0 0 1 0 1
 state.check 0 1 0 0 1 
 state.done 1 0 0 0 1 
 
+State Machine - |top_de2|cs_compare:inst15|state
+Name state.ready state.notify_score state.trigger state.check_row_done state.check_row_process state.check_row state.init state.lock 
+state.lock 0 0 0 0 0 0 0 0 
+state.init 0 0 0 0 0 0 1 1 
+state.check_row 0 0 0 0 0 1 0 1 
+state.check_row_process 0 0 0 0 1 0 0 1 
+state.check_row_done 0 0 0 1 0 0 0 1 
+state.trigger 0 0 1 0 0 0 0 1 
+state.notify_score 0 1 0 0 0 0 0 1 
+state.ready 1 0 0 0 0 0 0 1 
+
+State Machine - |top_de2|cs_compare:inst15|cs_shift:shift|state
+Name state.check state.ready state.write state.read state.init_decrease state.init state.lock 
+state.lock 0 0 0 0 0 0 0 
+state.init 0 0 0 0 0 1 1 
+state.init_decrease 0 0 0 0 1 0 1 
+state.read 0 0 0 1 0 0 1 
+state.write 0 0 1 0 0 0 1 
+state.ready 0 1 0 0 0 0 1 
+state.check 1 0 0 0 0 0 1 
+
 State Machine - |top_de2|de_piece:inst6|state
 Name state.lut_lookup state.done state.waiting_2 state.writing state.waiting_1 state.reset 
 state.reset 0 0 0 0 0 0 
