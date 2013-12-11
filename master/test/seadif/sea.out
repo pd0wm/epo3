@@ -8,12 +8,12 @@ Warning: A new sealib will be generated: 'test3'
          This indicates most likeley that the project was renamed.
 ------ checking your circuit 'piece_lut' ------
 ------ circuit 'piece_lut' is still up-to-date ------
------- checking match with placement layout 'Tmppiece_lut28361' ------
------- reading nelsis layout-cell 'Tmppiece_lut28361' ------
------- writing nelsis 'Tmppiece_lut28361' as sdflay 'Tmp_Cell_(piece_lut(piece_lut(test3)))' ------
+------ checking match with placement layout 'Tmppiece_lut9233' ------
+------ reading nelsis layout-cell 'Tmppiece_lut9233' ------
+------ writing nelsis 'Tmppiece_lut9233' as sdflay 'Tmp_Cell_(piece_lut(piece_lut(test3)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test3 -f piece_lut -c piece_lut -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmppiece_lut28361' ------
-calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut28361 
+------ converting result back into nelsis as cell 'Tmppiece_lut9233' ------
+calling program: nelsea -rLH -f piece_lut -c piece_lut -l Tmp_Cell_ Tmppiece_lut9233 
 ------ sea: task completed ------
