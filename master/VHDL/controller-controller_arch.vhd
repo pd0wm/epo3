@@ -27,7 +27,7 @@ architecture controller_arch of controller is
 	signal new_draw_erase_start  : std_logic;
 	signal new_clear_shift_start : std_logic;
 	signal new_draw_score_draw   : std_logic;
-	signal new_timer_1_time      : std_logic_vector(7 downto 0);
+	signal new_timer_1_time      : std_logic;
 	signal new_timer_1_start     : std_logic;
 	signal new_timer_1_reset     : std_logic;
 	signal new_lut_next_piece    : std_logic;
@@ -43,7 +43,7 @@ architecture controller_arch of controller is
 	signal cur_draw_erase_start  : std_logic;
 	signal cur_clear_shift_start : std_logic;
 	signal cur_draw_score_draw   : std_logic;
-	signal cur_timer_1_time      : std_logic_vector(7 downto 0);
+	signal cur_timer_1_time      : std_logic;
 	signal cur_timer_1_start     : std_logic;
 	signal cur_timer_1_reset     : std_logic;
 	signal inv_inputs            : std_logic_vector(5 downto 0);
@@ -158,7 +158,7 @@ begin
 				-- draw_score
 				new_draw_score_draw   <= '0';
 				-- timers
-				new_timer_1_time      <= (others => '0');
+				new_timer_1_time      <= '0';
 				new_timer_1_start     <= '0';
 				new_timer_1_reset     <= '0';
 
@@ -175,7 +175,7 @@ begin
 				next_state <= init;
 
 			when init =>
-				new_timer_1_time <= "00011110"; -- 30, .5 second
+				new_timer_1_time <= '1'; -- 30, .5 second
 				new_future_piece <= next_piece;
 				new_new_piece    <= '1';
 
@@ -310,7 +310,7 @@ begin
 			when reset_timers_a_1 =>
 				new_timer_1_start <= '0';
 				new_timer_1_reset <= '1';
-				new_timer_1_time  <= "00011110"; -- 30, .5 second
+				new_timer_1_time  <= '1'; -- 30, .5 second
 
 
 				next_state <= reset_timers_a_2;
@@ -446,7 +446,7 @@ begin
 			when reset_timers_b_1 =>
 				new_draw_erase_start <= '0';
 				new_timer_1_start    <= '0';
-				new_timer_1_time     <= "00011110"; -- 30, .5 second
+				new_timer_1_time     <= '1'; -- 30, .5 second
 
 
 				next_state <= reset_timers_b_2;
@@ -465,7 +465,7 @@ begin
 				end if;
 
 			when drop_timer_reset =>
-				new_timer_1_time <= "00011110"; -- 30, .5 second
+				new_timer_1_time <= '1'; -- 30, .5 second
 
 				next_state <= draw;
 
@@ -667,7 +667,7 @@ begin
 				next_state <= move_left_5;
 
 			when soft_drop_1 =>
-				if (inv_inputs(4) = '1' and cur_timer_1_time = "00011110") then
+				if (inv_inputs(4) = '1' and cur_timer_1_time = '1') then
 					next_state <= soft_drop_2;
 				else
 					next_state <= hard_drop_1;
@@ -676,7 +676,7 @@ begin
 			when soft_drop_2 =>
 				new_timer_1_reset <= '1';
 				new_timer_1_start <= '0';
-				new_timer_1_time  <= "00000011";
+				new_timer_1_time  <= '0';
 
 				next_state <= soft_drop_3;
 
@@ -687,7 +687,7 @@ begin
 				next_state <= draw;
 
 			when hard_drop_1 =>
-				if (inv_inputs(5) = '1' and cur_timer_1_time = "00011110") then
+				if (inv_inputs(5) = '1' and cur_timer_1_time = '1') then
 					next_state <= space_1;
 				else
 					next_state <= draw;

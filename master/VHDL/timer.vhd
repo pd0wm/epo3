@@ -10,7 +10,7 @@ entity timer is
 		rst     : in  std_logic;
 		ctr_rst : in  std_logic;
 
-		time    : in  std_logic_vector(7 downto 0);
+		time    : in  std_logic;
 		start   : in  std_logic;
 		ready   : out std_logic);
 end timer;

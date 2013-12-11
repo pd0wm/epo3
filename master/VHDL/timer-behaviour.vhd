@@ -58,7 +58,7 @@ begin
 				new_ready <= cur_ready;
 
 			when check =>
-				if (cur_count = unsigned(time)) then
+				if ( (time = '1' and cur_count = 30) or (time = '0' and cur_count = 3)) then
 					next_state <= done;
 				else
 					next_state <= vga_low;

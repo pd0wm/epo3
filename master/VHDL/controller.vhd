@@ -35,7 +35,7 @@ entity controller is
 		draw_score_ready  : in  std_logic;
 
 		--timers
-		timer_1_time      : out std_logic_vector(7 downto 0);
+		timer_1_time      : out std_logic;
 		timer_1_start     : out std_logic;
 		timer_1_done      : in  std_logic;
 		timer_1_reset     : out std_logic;
