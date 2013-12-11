@@ -21,20 +21,14 @@ architecture controller_arch of controller is
 	signal new_lut_y             : std_logic_vector(3 downto 0);
 	signal new_lut_rot           : std_logic_vector(1 downto 0);
 	signal new_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal new_clear_shift_start : std_logic;
-	signal new_draw_score_draw   : std_logic;
 	signal new_timer_1_time      : std_logic;
 	signal new_timer_1_start     : std_logic;
 	signal new_timer_1_reset     : std_logic;
-	signal new_lut_next_piece    : std_logic;
 
 	signal cur_lut_x             : std_logic_vector(2 downto 0);
 	signal cur_lut_y             : std_logic_vector(3 downto 0);
 	signal cur_lut_rot           : std_logic_vector(1 downto 0);
-	signal cur_lut_next_piece    : std_logic;
 	signal cur_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal cur_clear_shift_start : std_logic;
-	signal cur_draw_score_draw   : std_logic;
 	signal cur_timer_1_time      : std_logic;
 	signal cur_timer_1_start     : std_logic;
 	signal cur_timer_1_reset     : std_logic;
@@ -62,14 +56,11 @@ begin
 				cur_rot_new <= new_cur_rot_new;
 				cur_state   <= next_state;
 
-				cur_lut_next_piece <= new_lut_next_piece;
 				cur_lut_x          <= new_lut_x;
 				cur_lut_y          <= new_lut_y;
 				cur_lut_rot        <= new_lut_rot;
 				cur_lut_piece_type <= new_lut_piece_type;
 
-				cur_clear_shift_start <= new_clear_shift_start;
-				cur_draw_score_draw   <= new_draw_score_draw;
 				cur_timer_1_time      <= new_timer_1_time;
 				cur_timer_1_start     <= new_timer_1_start;
 				cur_timer_1_reset     <= new_timer_1_reset;
@@ -83,12 +74,9 @@ begin
 		lut_rot           <= new_lut_rot;
 		lut_piece_type    <= new_lut_piece_type;
 		
-		clear_shift_start <= new_clear_shift_start;
-		draw_score_draw   <= new_draw_score_draw;
 		timer_1_time      <= new_timer_1_time;
 		timer_1_start     <= new_timer_1_start;
 		timer_1_reset     <= new_timer_1_reset;
-		lut_next_piece    <= cur_lut_next_piece;
 
 	end process;
 
@@ -110,10 +98,7 @@ begin
 		new_lut_y          <= cur_lut_y;
 		new_lut_rot        <= cur_lut_rot;
 		new_lut_piece_type <= cur_lut_piece_type;
-		new_lut_next_piece <= cur_lut_next_piece;
 
-		new_clear_shift_start <= cur_clear_shift_start;
-		new_draw_score_draw   <= cur_draw_score_draw;
 		new_timer_1_time      <= cur_timer_1_time;
 		new_timer_1_start     <= cur_timer_1_start;
 		new_timer_1_reset     <= cur_timer_1_reset;
@@ -123,8 +108,11 @@ begin
 		check_start       <= '0';
 		draw_erase_draw   <= '0';
 		draw_erase_start  <= '0';
+		lut_next_piece    <= '0';
+		clear_shift_start <= '0';
+		draw_score_draw   <= '0';
 		
-
+		
 		case cur_state is
 			when reset =>
 				-- LUT
@@ -133,14 +121,6 @@ begin
 				new_lut_rot           <= (others => '0');
 				new_lut_piece_type    <= (others => '0');
 				new_future_piece      <= (others => '0');
-				new_lut_next_piece    <= '0';
-				-- draw erase
-				draw_erase_draw   <= '0';
-				draw_erase_start  <= '0';
-				-- clear shift
-				new_clear_shift_start <= '0';
-				-- draw_score
-				new_draw_score_draw   <= '0';
 				-- timers
 				new_timer_1_time      <= '0';
 				new_timer_1_start     <= '0';
@@ -183,7 +163,7 @@ begin
 				new_lut_y          <= (others => '0');
 				
 				new_lut_piece_type <= cur_piece;
-				new_lut_next_piece <= '1';
+				lut_next_piece <= '1';
 				
 				draw_erase_draw  <= '0';
 				draw_erase_start  <= '1';
@@ -191,12 +171,13 @@ begin
 				next_state <= draw_next_piece_2;
 
 			when draw_next_piece_2 =>
+				lut_next_piece <= '1';
 				draw_erase_draw  <= '0';
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
-					draw_erase_start <= '0';
 					next_state           <= draw_next_piece_3;
 				else
-					draw_erase_start <= '1';
 					next_state           <= draw_next_piece_2;
 				end if;				
 				
@@ -206,7 +187,7 @@ begin
 				new_lut_x          <= (others => '0');
 				new_lut_y          <= (others => '0');
 				new_lut_piece_type <= cur_future_piece;
-				new_lut_next_piece <= '1';
+				lut_next_piece <= '1';
 
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
@@ -215,13 +196,13 @@ begin
 
 			when draw_next_piece_4 =>
 				draw_erase_draw  <= '1';
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
-					draw_erase_start <= '0';
-					new_lut_next_piece   <= '0';
+					lut_next_piece   <= '0';
 					next_state           <= collision_1;
 				else
-					draw_erase_start <= '1';
-					new_lut_next_piece   <= '1';
+					lut_next_piece   <= '1';
 					next_state           <= draw_next_piece_4;
 				end if;
 
@@ -277,11 +258,11 @@ begin
 
 			when first_draw_4 =>
 				draw_erase_draw  <= '1';
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
-					draw_erase_start <= '0';
 					next_state           <= draw;
 				else
-					draw_erase_start <= '1';
 					next_state           <= first_draw_4;
 				end if;
 
@@ -308,27 +289,26 @@ begin
 				new_timer_1_reset <= '0';
 
 			when clear_shift_1 =>
-				new_clear_shift_start <= '1';
+				clear_shift_start <= '1';
 
 				next_state <= clear_shift_2;
 
 			when clear_shift_2 =>
+				clear_shift_start <= '1';
+				draw_score_draw <= '1';
+				
 				if (clear_shift_ready = '1') then
 					next_state <= clear_shift_3;
-					new_draw_score_draw <= '1';
-					new_clear_shift_start <= '0';
 				else
 					next_state <= clear_shift_2;
-					new_draw_score_draw <= '0';
-					new_clear_shift_start <= '1';
 				end if;
 				
 			when clear_shift_3 =>
+				draw_score_draw <= '1';
+				
 				if (draw_score_ready = '1') then
-					new_draw_score_draw <= '0';
 					next_state <= gen_piece_1;
 				else
-					new_draw_score_draw <= '1';
 					next_state <= clear_shift_3;
 				end if;
 
@@ -403,11 +383,12 @@ begin
 
 			when put_back_4 =>
 				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
 					draw_erase_start <= '0';
 					next_state <= reset_timers_a_1;
 				else
-					draw_erase_start <= '1';
 					next_state <= put_back_4;
 				end if;
 
@@ -445,7 +426,6 @@ begin
 
 			when key =>
 				if (inv_inputs = "000000") then
-					-- no input
 					next_state <= drop_timer_reset;
 				else
 					next_state <= move_left_1;
