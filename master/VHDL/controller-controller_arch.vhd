@@ -55,11 +55,6 @@ begin
 		timer_1_start <= new_timer_1_start;
 		timer_1_reset <= new_timer_1_reset;
 
-		x       <= '0';
-		y       <= '0';
-		rot     <= '0';
-		add_sub <= '0';
-
 		lut_x          <= cur_x;
 		lut_y          <= cur_y;
 		lut_rot        <= cur_rot;
@@ -164,7 +159,7 @@ begin
 				new_cur_piece    <= cur_future_piece;
 				new_future_piece <= cur_piece;
 
-				cur_x <= "011";
+				new_cur_x <= "011";
 
 				next_state <= collision_3;
 
@@ -448,7 +443,7 @@ begin
 
 			when move_left_5 =>
 				x     <= '1';
-				cur_x <= calc_x;
+				new_cur_x <= calc_x;
 
 				next_state <= move_4;
 
@@ -492,7 +487,7 @@ begin
 				x       <= '1';
 				add_sub <= '1';
 
-				cur_x <= calc_x;
+				new_cur_x <= calc_x;
 
 				next_state <= move_4;
 
@@ -536,7 +531,7 @@ begin
 				rot     <= '1';
 				add_sub <= '1';
 
-				cur_rot <= calc_rot;
+				new_cur_rot <= calc_rot;
 
 				next_state <= move_4;
 
@@ -579,7 +574,7 @@ begin
 				rot     <= '1';
 				add_sub <= '1';
 
-				cur_rot <= calc_rot;
+				new_cur_rot <= calc_rot;
 
 				next_state <= move_4;				
 			
