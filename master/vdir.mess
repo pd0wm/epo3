@@ -279,6 +279,37 @@ ENTITY controller
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
+ENTITY controller_calc
+    Source modified time: Wed Dec 11 21:30:45 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/controller_calc.vhd
+    Source file: VHDL/controller_calc.vhd
+    Start location: VHDL/controller_calc.vhd:3
+    Version string: 2PSVhof;OFT9?U_ljzh8m1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY controller_calc_arch
+    Depends on: E work controller_calc 2PSVhof;OFT9?U_ljzh8m1
+    Depends on: P work vga_params k9F]S[jE>zJo[VY[Bzio<1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/controller_calc_arch.vhd
+    Source file: VHDL/controller_calc_arch.vhd
+    Start location: VHDL/controller_calc_arch.vhd:6
+    Version string: :6aa8CzmYPR^CQoXL0kOn2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Wed Dec 11 21:30:45 2013
+    Debug Symbol file exists
 VHDL CONFIGURATION controller_controller_arch_cfg
     Configuration for architecture: controller_arch
     Configuration for entity: controller
