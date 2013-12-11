@@ -114,12 +114,12 @@ set_location_assignment PIN_N23 -to dbg_inputs[2]
 set_location_assignment PIN_P23 -to dbg_inputs[3]
 set_location_assignment PIN_N25 -to dbg_inputs[4]
 set_location_assignment PIN_N26 -to dbg_inputs[5]
-set_global_assignment -name VHDL_FILE ../VHDL/debounce_behav.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/debounce.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/cs_tri7_arch.vhd
-set_global_assignment -name VHDL_FILE ../VHDL/cs_tri7.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/cs_tri8_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/cs_tri8.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_shift_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_shift.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/cs_defset2_arch.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/cs_defset2.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_compare_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_compare.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_adder7_arch.vhd
@@ -128,6 +128,8 @@ set_global_assignment -name VHDL_FILE ../VHDL/cs_7bcws_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_7bcws.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_7bc_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_7bc.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/debounce_behav.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/debounce.vhd
 set_global_assignment -name VHDL_FILE "../VHDL/draw_score-behaviour.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/draw_score.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/npg_mux2_1.vhd

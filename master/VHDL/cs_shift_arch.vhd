@@ -9,14 +9,15 @@ architecture cs_shift_behav of cs_shift is
 			 data     : in  std_logic_vector(6 downto 0));
 	end component cs_7bcws;
 
+	signal cnt_ram_addr_uncompressed, cnt_ram_addr_substr_uncompressed : std_logic_vector(7 downto 0);
 	signal cnt_ram_addr, cnt_ram_addr_substr : std_logic_vector(6 downto 0);
 	signal cnt_set, cnt_en                   : std_logic;
 
-	component cs_tri7
-		port(i : in  std_logic_vector(6 downto 0);
-			 o : out std_logic_vector(6 downto 0);
+	component cs_tri8
+		port(i : in  std_logic_vector(7 downto 0);
+			 o : out std_logic_vector(7 downto 0);
 			 e : in  std_logic);
-	end component cs_tri7;
+	end component cs_tri8;
 
 	signal tri_en, tri_en_substr : std_logic;
 
@@ -28,8 +29,9 @@ architecture cs_shift_behav of cs_shift is
 			 o : out std_logic_vector(6 downto 0));
 	end component cs_adder7;
 begin
-	tristate_7_bit_normal : cs_tri7
-		port map(i => cnt_ram_addr,
+	cnt_ram_addr_uncompressed <= '0' & cnt_ram_addr;
+	tristate_8_bit_normal : cs_tri8
+		port map(i => cnt_ram_addr_uncompressed,
 			     o => ram_addr_out,
 			     e => tri_en);
 
@@ -45,8 +47,9 @@ begin
 		port map(i => cnt_ram_addr,
 			     o => cnt_ram_addr_substr);
 
-	tristate_7_bit_substr : cs_tri7
-		port map(i => cnt_ram_addr_substr,
+	cnt_ram_addr_substr_uncompressed <= '0' & cnt_ram_addr_substr;
+	tristate_8_bit_substr : cs_tri8
+		port map(i => cnt_ram_addr_substr_uncompressed,
 			     o => ram_addr_out,
 			     e => tri_en_substr);
 
@@ -57,40 +60,33 @@ begin
 		cnt_set <= '0';
 		cnt_en  <= '0';
 
-		tri_en        <= '0';
+		tri_en        <= '1';
 		tri_en_substr <= '0';
 
-		ram_we <= 'Z';
+		ram_we <= '0';
 		ready_out <= '0';
-		ram_data_out <= 'Z';
+		ram_data_out <= '0';
 
 		case state is
 			when lock =>
+				-- High Z
+				ram_we <= 'Z';
+				ram_data_out <= 'Z';
+				tri_en <= '0';
+			
 				if (start_in = '1') then
 					state_next <= init;
 				end if;
 			when init =>
-				-- Fix
-				ram_data_out <= '0';
-				ram_we <= '0';
-				tri_en <= '1';
-			
 				cnt_set    <= '1';
 				state_next <= init_decrease;
-			when init_decrease =>
-				-- Fix
-				ram_data_out <= '0';
-				ram_we <= '0';
-				tri_en <= '1';
 				
+			when init_decrease =>
 				cnt_en <= '1';
 				state_next <= read;
 
 			when read =>
-				-- Fix
-				ram_data_out <= '0';
-				ram_we <= '0';
-				
+				tri_en <= '0';
 				tri_en_substr <= '1';
 				state_next    <= write;
 			when write =>
@@ -100,17 +96,11 @@ begin
 					ram_data_out <= ram_data_in;
 				end if;
 				
-				tri_en       <= '1';
 				ram_we       <= '1';
 				cnt_en       <= '1';
 				state_next   <= check;
 				
-			when check =>
-				-- Fix
-				ram_data_out <= '0';
-				ram_we <= '0';
-				tri_en <= '1';
-								
+			when check =>			
 				if (cnt_ram_addr = "1111111") then
 					state_next <= ready;
 				else
@@ -118,11 +108,6 @@ begin
 				end if;
 
 			when ready =>			
-				-- Fix
-				ram_data_out <= '0';
-				ram_we <= '0';
-				tri_en <= '1';
-				
 				ready_out <= '1';
 				state_next <= lock;
 		end case;

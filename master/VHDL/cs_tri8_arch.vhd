@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-architecture cs_tri7_behav of cs_tri7 is
+architecture cs_tri8_behav of cs_tri8 is
 begin
 	process (e, i)
 	begin

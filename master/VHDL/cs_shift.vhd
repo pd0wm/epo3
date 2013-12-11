@@ -8,7 +8,7 @@ entity cs_shift is
 		ready_out    : out std_logic;
 
 		ram_addr_in  : in  std_logic_vector(6 downto 0);
-		ram_addr_out : out std_logic_vector(6 downto 0);
+		ram_addr_out : out std_logic_vector(7 downto 0);
 		ram_we       : out std_logic;
 		ram_data_in  : in  std_logic;
 		ram_data_out : out std_logic

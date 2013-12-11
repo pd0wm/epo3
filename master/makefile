@@ -214,34 +214,27 @@ WORK__de_piece_testbench = $(LIB_WORK)/de_piece_testbench/_primary.dat
 WORK__de_piece_behaviour_cfg = $(LIB_WORK)/de_piece_behaviour_cfg/_primary.dat
 WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
 WORK__de_piece = $(LIB_WORK)/de_piece/_primary.dat
-WORK__cs_tri7_cs_tri7_behav_cfg = $(LIB_WORK)/cs_tri7_cs_tri7_behav_cfg/_primary.dat
-WORK__cs_tri7__cs_tri7_behav = $(LIB_WORK)/cs_tri7/cs_tri7_behav.dat
-WORK__cs_tri7 = $(LIB_WORK)/cs_tri7/_primary.dat
-WORK__cs_shift_tb_cs_shift_tb_behav_cfg = $(LIB_WORK)/cs_shift_tb_cs_shift_tb_behav_cfg/_primary.dat
+WORK__cs_tri8__cs_tri8_behav = $(LIB_WORK)/cs_tri8/cs_tri8_behav.dat
+WORK__cs_tri8 = $(LIB_WORK)/cs_tri8/_primary.dat
 WORK__cs_shift_tb__cs_shift_tb_behav = $(LIB_WORK)/cs_shift_tb/cs_shift_tb_behav.dat
 WORK__cs_shift_tb = $(LIB_WORK)/cs_shift_tb/_primary.dat
-WORK__cs_shift_cs_shift_behav_cfg = $(LIB_WORK)/cs_shift_cs_shift_behav_cfg/_primary.dat
 WORK__cs_shift__cs_shift_behav = $(LIB_WORK)/cs_shift/cs_shift_behav.dat
 WORK__cs_shift = $(LIB_WORK)/cs_shift/_primary.dat
-WORK__cs_compare_tb_cs_compare_tb_behav_cfg = $(LIB_WORK)/cs_compare_tb_cs_compare_tb_behav_cfg/_primary.dat
+WORK__cs_defset2__cs_defset2_behav = $(LIB_WORK)/cs_defset2/cs_defset2_behav.dat
+WORK__cs_defset2 = $(LIB_WORK)/cs_defset2/_primary.dat
 WORK__cs_compare_tb__cs_compare_tb_behav = $(LIB_WORK)/cs_compare_tb/cs_compare_tb_behav.dat
 WORK__cs_compare_tb = $(LIB_WORK)/cs_compare_tb/_primary.dat
-WORK__cs_compare_cs_compare_behav_cfg = $(LIB_WORK)/cs_compare_cs_compare_behav_cfg/_primary.dat
 WORK__cs_compare__cs_compare_behav = $(LIB_WORK)/cs_compare/cs_compare_behav.dat
 WORK__cs_compare = $(LIB_WORK)/cs_compare/_primary.dat
-WORK__cs_adder7_cs_addr7_behav_cfg = $(LIB_WORK)/cs_adder7_cs_addr7_behav_cfg/_primary.dat
 WORK__cs_adder7__cs_addr7_behav = $(LIB_WORK)/cs_adder7/cs_addr7_behav.dat
 WORK__cs_adder7 = $(LIB_WORK)/cs_adder7/_primary.dat
-WORK__cs_7bcws_cs_7bcws_behav_cfg = $(LIB_WORK)/cs_7bcws_cs_7bcws_behav_cfg/_primary.dat
 WORK__cs_7bcws__cs_7bcws_behav = $(LIB_WORK)/cs_7bcws/cs_7bcws_behav.dat
 WORK__cs_7bcws = $(LIB_WORK)/cs_7bcws/_primary.dat
-WORK__cs_7bc_cs_7bc_behav_cfg = $(LIB_WORK)/cs_7bc_cs_7bc_behav_cfg/_primary.dat
 WORK__cs_7bc__cs_7bc_behav = $(LIB_WORK)/cs_7bc/cs_7bc_behav.dat
 WORK__cs_7bc = $(LIB_WORK)/cs_7bc/_primary.dat
-WORK__controller_tb_controller_tb_arch_cfg = $(LIB_WORK)/controller_tb_controller_tb_arch_cfg/_primary.dat
-WORK__controller_tb__controller_tb_arch = $(LIB_WORK)/controller_tb/controller_tb_arch.dat
-WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
+WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
+WORK__controller_calc = $(LIB_WORK)/controller_calc/_primary.dat
 WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
 WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
@@ -451,34 +444,27 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__de_piece_behaviour_cfg) \
     $(WORK__de_piece__behaviour) \
     $(WORK__de_piece) \
-    $(WORK__cs_tri7_cs_tri7_behav_cfg) \
-    $(WORK__cs_tri7__cs_tri7_behav) \
-    $(WORK__cs_tri7) \
-    $(WORK__cs_shift_tb_cs_shift_tb_behav_cfg) \
+    $(WORK__cs_tri8__cs_tri8_behav) \
+    $(WORK__cs_tri8) \
     $(WORK__cs_shift_tb__cs_shift_tb_behav) \
     $(WORK__cs_shift_tb) \
-    $(WORK__cs_shift_cs_shift_behav_cfg) \
     $(WORK__cs_shift__cs_shift_behav) \
     $(WORK__cs_shift) \
-    $(WORK__cs_compare_tb_cs_compare_tb_behav_cfg) \
+    $(WORK__cs_defset2__cs_defset2_behav) \
+    $(WORK__cs_defset2) \
     $(WORK__cs_compare_tb__cs_compare_tb_behav) \
     $(WORK__cs_compare_tb) \
-    $(WORK__cs_compare_cs_compare_behav_cfg) \
     $(WORK__cs_compare__cs_compare_behav) \
     $(WORK__cs_compare) \
-    $(WORK__cs_adder7_cs_addr7_behav_cfg) \
     $(WORK__cs_adder7__cs_addr7_behav) \
     $(WORK__cs_adder7) \
-    $(WORK__cs_7bcws_cs_7bcws_behav_cfg) \
     $(WORK__cs_7bcws__cs_7bcws_behav) \
     $(WORK__cs_7bcws) \
-    $(WORK__cs_7bc_cs_7bc_behav_cfg) \
     $(WORK__cs_7bc__cs_7bc_behav) \
     $(WORK__cs_7bc) \
-    $(WORK__controller_tb_controller_tb_arch_cfg) \
-    $(WORK__controller_tb__controller_tb_arch) \
-    $(WORK__controller_tb) \
     $(WORK__controller_controller_arch_cfg) \
+    $(WORK__controller_calc__controller_calc_arch) \
+    $(WORK__controller_calc) \
     $(WORK__controller__synthesised) \
     $(WORK__controller__controller_arch) \
     $(WORK__controller) \
@@ -616,6 +602,21 @@ $(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_SYNTH.vhd
 
+$(WORK__controller_calc) : VHDL/controller_calc.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_calc.vhd
+
+$(WORK__controller_calc__controller_calc_arch) : VHDL/controller_calc_arch.vhd \
+		$(WORK__controller_calc) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_calc_arch.vhd
+
 $(WORK__controller_controller_arch_cfg) : VHDL/controller_controller_arch_cfg.vhd \
 		$(WORK__vga_params) \
 		$(IEEE__numeric_std) \
@@ -625,29 +626,6 @@ $(WORK__controller_controller_arch_cfg) : VHDL/controller_controller_arch_cfg.vh
 		$(WORK__controller)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_controller_arch_cfg.vhd
-
-$(WORK__controller_tb) : VHDL/controller_tb.vhd \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_tb.vhd
-
-$(WORK__controller_tb__controller_tb_arch) : VHDL/controller_tb-controller_tb_arch.vhd \
-		$(WORK__controller_tb) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_tb-controller_tb_arch.vhd
-
-$(WORK__controller_tb_controller_tb_arch_cfg) : VHDL/controller_tb_controller_tb_arch_cfg.vhd \
-		$(WORK__controller) \
-		$(WORK__controller_controller_arch_cfg) \
-		$(WORK__controller_tb__controller_tb_arch) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__controller_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_tb_controller_tb_arch_cfg.vhd
 
 $(WORK__cs_7bc) : VHDL/cs_7bc.vhd \
 		$(STD__textio) \
@@ -663,15 +641,6 @@ $(WORK__cs_7bc__cs_7bc_behav) : VHDL/cs_7bc_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bc_arch.vhd
 
-$(WORK__cs_7bc_cs_7bc_behav_cfg) : VHDL/cs_7bc_cs_7bc_behav_cfg.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__cs_7bc__cs_7bc_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_7bc)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_7bc_cs_7bc_behav_cfg.vhd
-
 $(WORK__cs_7bcws) : VHDL/cs_7bcws.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
@@ -685,15 +654,6 @@ $(WORK__cs_7bcws__cs_7bcws_behav) : VHDL/cs_7bcws_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bcws_arch.vhd
-
-$(WORK__cs_7bcws_cs_7bcws_behav_cfg) : VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__cs_7bcws__cs_7bcws_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_7bcws)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
 
 $(WORK__cs_adder7) : VHDL/cs_adder7.vhd \
 		$(STD__textio) \
@@ -709,15 +669,6 @@ $(WORK__cs_adder7__cs_addr7_behav) : VHDL/cs_adder7_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_adder7_arch.vhd
 
-$(WORK__cs_adder7_cs_addr7_behav_cfg) : VHDL/cs_adder7_cs_addr7_behav_cfg.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__cs_adder7__cs_addr7_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_adder7)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_adder7_cs_addr7_behav_cfg.vhd
-
 $(WORK__cs_compare) : VHDL/cs_compare.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
@@ -731,20 +682,6 @@ $(WORK__cs_compare__cs_compare_behav) : VHDL/cs_compare_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_compare_arch.vhd
 
-$(WORK__cs_compare_cs_compare_behav_cfg) : VHDL/cs_compare_cs_compare_behav_cfg.vhd \
-		$(WORK__cs_shift) \
-		$(WORK__cs_tri7) \
-		$(WORK__cs_7bc) \
-		$(WORK__cs_shift_cs_shift_behav_cfg) \
-		$(WORK__cs_tri7_cs_tri7_behav_cfg) \
-		$(WORK__cs_7bc_cs_7bc_behav_cfg) \
-		$(WORK__cs_compare__cs_compare_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_compare)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_compare_cs_compare_behav_cfg.vhd
-
 $(WORK__cs_compare_tb) \
 $(WORK__cs_compare_tb__cs_compare_tb_behav) : VHDL/cs_compare_tb.vhd \
 		$(IEEE__numeric_std) \
@@ -753,16 +690,19 @@ $(WORK__cs_compare_tb__cs_compare_tb_behav) : VHDL/cs_compare_tb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_compare_tb.vhd
 
-$(WORK__cs_compare_tb_cs_compare_tb_behav_cfg) : VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd \
-		$(WORK__cs_compare) \
-		$(WORK__cs_compare_cs_compare_behav_cfg) \
-		$(WORK__cs_compare_tb__cs_compare_tb_behav) \
+$(WORK__cs_defset2) : VHDL/cs_defset2.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_defset2.vhd
+
+$(WORK__cs_defset2__cs_defset2_behav) : VHDL/cs_defset2_arch.vhd \
+		$(WORK__cs_defset2) \
 		$(IEEE__numeric_std) \
 		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_compare_tb)
+		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd
+		 work -quiet -nologo VHDL/cs_defset2_arch.vhd
 
 $(WORK__cs_shift) : VHDL/cs_shift.vhd \
 		$(STD__textio) \
@@ -777,20 +717,6 @@ $(WORK__cs_shift__cs_shift_behav) : VHDL/cs_shift_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_arch.vhd
 
-$(WORK__cs_shift_cs_shift_behav_cfg) : VHDL/cs_shift_cs_shift_behav_cfg.vhd \
-		$(WORK__cs_adder7) \
-		$(WORK__cs_7bcws) \
-		$(WORK__cs_tri7) \
-		$(WORK__cs_adder7_cs_addr7_behav_cfg) \
-		$(WORK__cs_7bcws_cs_7bcws_behav_cfg) \
-		$(WORK__cs_tri7_cs_tri7_behav_cfg) \
-		$(WORK__cs_shift__cs_shift_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_shift)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_shift_cs_shift_behav_cfg.vhd
-
 $(WORK__cs_shift_tb) \
 $(WORK__cs_shift_tb__cs_shift_tb_behav) : VHDL/cs_shift_tb.vhd \
 		$(IEEE__numeric_std) \
@@ -799,39 +725,19 @@ $(WORK__cs_shift_tb__cs_shift_tb_behav) : VHDL/cs_shift_tb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_tb.vhd
 
-$(WORK__cs_shift_tb_cs_shift_tb_behav_cfg) : VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd \
-		$(WORK__cs_shift) \
-		$(WORK__cs_shift_cs_shift_behav_cfg) \
-		$(WORK__cs_shift_tb__cs_shift_tb_behav) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_shift_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd
-
-$(WORK__cs_tri7) : VHDL/cs_tri7.vhd \
+$(WORK__cs_tri8) : VHDL/cs_tri8.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_tri7.vhd
+		 work -quiet -nologo VHDL/cs_tri8.vhd
 
-$(WORK__cs_tri7__cs_tri7_behav) : VHDL/cs_tri7_arch.vhd \
-		$(WORK__cs_tri7) \
+$(WORK__cs_tri8__cs_tri8_behav) : VHDL/cs_tri8_arch.vhd \
+		$(WORK__cs_tri8) \
 		$(IEEE__numeric_std) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_tri7_arch.vhd
-
-$(WORK__cs_tri7_cs_tri7_behav_cfg) : VHDL/cs_tri7_cs_tri7_behav_cfg.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__cs_tri7__cs_tri7_behav) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__cs_tri7)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_tri7_cs_tri7_behav_cfg.vhd
+		 work -quiet -nologo VHDL/cs_tri8_arch.vhd
 
 $(WORK__de_piece) : VHDL/de_piece.vhd \
 		$(IEEE__numeric_std) \

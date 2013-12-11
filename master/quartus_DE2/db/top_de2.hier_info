@@ -8,7 +8,7 @@ rst => controller:inst9.rst
 rst => check_mask:inst5.rst
 rst => piece_lut:inst7.rst
 rst => de_piece:inst6.rst
-rst => cs_compare:inst15.rst
+rst => cs_compare:inst11.rst
 rst => timer:inst4.rst
 rst => debounce:inst19.rst
 rst => npg:inst10.rst
@@ -8484,12 +8484,6 @@ clk => inv_inputs[5].CLK
 clk => cur_timer_1_reset.CLK
 clk => cur_timer_1_start.CLK
 clk => cur_timer_1_time.CLK
-clk => cur_draw_score_draw.CLK
-clk => cur_clear_shift_start.CLK
-clk => cur_draw_erase_start.CLK
-clk => cur_draw_erase_draw.CLK
-clk => cur_check_start.CLK
-clk => cur_new_piece.CLK
 clk => cur_lut_piece_type[0].CLK
 clk => cur_lut_piece_type[1].CLK
 clk => cur_lut_piece_type[2].CLK
@@ -8502,7 +8496,6 @@ clk => cur_lut_y[3].CLK
 clk => cur_lut_x[0].CLK
 clk => cur_lut_x[1].CLK
 clk => cur_lut_x[2].CLK
-clk => cur_lut_next_piece.CLK
 clk => cur_rot_new[0].CLK
 clk => cur_rot_new[1].CLK
 clk => cur_rot[0].CLK
@@ -8596,6 +8589,15 @@ rst => cur_state.OUTPUTSELECT
 rst => cur_state.OUTPUTSELECT
 rst => cur_state.OUTPUTSELECT
 rst => cur_state.OUTPUTSELECT
+rst => cur_state.OUTPUTSELECT
+rst => cur_y_new[0].ENA
+rst => cur_rot[1].ENA
+rst => cur_rot[0].ENA
+rst => cur_rot_new[1].ENA
+rst => cur_rot_new[0].ENA
+rst => cur_lut_x[2].ENA
+rst => cur_lut_x[1].ENA
+rst => cur_lut_x[0].ENA
 rst => cur_lut_y[3].ENA
 rst => cur_lut_y[2].ENA
 rst => cur_lut_y[1].ENA
@@ -8605,12 +8607,6 @@ rst => cur_lut_rot[0].ENA
 rst => cur_lut_piece_type[2].ENA
 rst => cur_lut_piece_type[1].ENA
 rst => cur_lut_piece_type[0].ENA
-rst => cur_new_piece.ENA
-rst => cur_check_start.ENA
-rst => cur_draw_erase_draw.ENA
-rst => cur_draw_erase_start.ENA
-rst => cur_clear_shift_start.ENA
-rst => cur_draw_score_draw.ENA
 rst => cur_timer_1_time.ENA
 rst => cur_timer_1_start.ENA
 rst => cur_timer_1_reset.ENA
@@ -8620,15 +8616,6 @@ rst => inv_inputs[3].ENA
 rst => inv_inputs[2].ENA
 rst => inv_inputs[1].ENA
 rst => inv_inputs[0].ENA
-rst => cur_lut_x[0].ENA
-rst => cur_lut_x[1].ENA
-rst => cur_lut_x[2].ENA
-rst => cur_lut_next_piece.ENA
-rst => cur_rot_new[0].ENA
-rst => cur_rot_new[1].ENA
-rst => cur_rot[0].ENA
-rst => cur_rot[1].ENA
-rst => cur_y_new[0].ENA
 rst => cur_y_new[1].ENA
 rst => cur_y_new[2].ENA
 rst => cur_y_new[3].ENA
@@ -8660,8 +8647,8 @@ lut_rot[1] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
 lut_piece_type[0] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
 lut_piece_type[1] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
 lut_piece_type[2] <= Selector9.DB_MAX_OUTPUT_PORT_TYPE
-lut_next_piece <= cur_lut_next_piece.DB_MAX_OUTPUT_PORT_TYPE
-new_piece <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+lut_next_piece <= WideOr43.DB_MAX_OUTPUT_PORT_TYPE
+new_piece <= new_piece.DB_MAX_OUTPUT_PORT_TYPE
 next_piece[0] => Selector14.IN3
 next_piece[1] => Selector13.IN3
 next_piece[2] => Selector12.IN3
@@ -8672,59 +8659,52 @@ check_empty => new_cur_y.OUTPUTSELECT
 check_empty => next_state.move_left_8.DATAB
 check_empty => next_state.first_draw_1.DATAB
 check_empty => next_state.move_down_1.DATAB
-check_empty => Selector68.IN2
+check_empty => Selector61.IN2
 check_empty => next_state.put_back_1.DATAB
-check_empty => Selector53.IN2
-check_start <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
+check_empty => Selector46.IN2
+check_start <= WideOr47.DB_MAX_OUTPUT_PORT_TYPE
 check_ready => next_state.move_left_7.DATAB
 check_ready => next_state.collision_5.DATAB
 check_ready => next_state.space_6.DATAB
-check_ready => Selector65.IN2
-check_ready => Selector59.IN2
+check_ready => Selector58.IN2
 check_ready => Selector52.IN2
-draw_erase_draw <= Selector18.DB_MAX_OUTPUT_PORT_TYPE
-draw_erase_start <= Selector19.DB_MAX_OUTPUT_PORT_TYPE
+check_ready => Selector45.IN2
+draw_erase_draw <= WideOr44.DB_MAX_OUTPUT_PORT_TYPE
+draw_erase_start <= Selector62.DB_MAX_OUTPUT_PORT_TYPE
 draw_erase_ready => next_state.draw_next_piece_3.DATAB
 draw_erase_ready => next_state.rotate_cw_4.DATAB
 draw_erase_ready => next_state.rotate_ccw_4.DATAB
 draw_erase_ready => next_state.move_left_4.DATAB
-draw_erase_ready => Selector55.IN3
+draw_erase_ready => Selector48.IN3
 draw_erase_ready => next_state.move_right_4.DATAB
-draw_erase_ready => next_state.first_draw_3.DATAB
+draw_erase_ready => next_state.first_draw_4.DATAB
 draw_erase_ready => next_state.collision_1.DATAB
 draw_erase_ready => next_state.reset_timers_a_1.DATAB
 draw_erase_ready => next_state.space_3.DATAB
 draw_erase_ready => next_state.reset_timers_b_1.DATAB
-draw_erase_ready => Selector15.IN2
-draw_erase_ready => Selector19.IN2
-draw_erase_ready => Selector19.IN3
-draw_erase_ready => Selector19.IN4
-draw_erase_ready => Selector19.IN5
-draw_erase_ready => Selector67.IN2
-draw_erase_ready => Selector66.IN2
-draw_erase_ready => Selector64.IN2
+draw_erase_ready => Selector62.IN2
+draw_erase_ready => Selector60.IN2
+draw_erase_ready => Selector59.IN2
 draw_erase_ready => Selector57.IN2
-draw_erase_ready => Selector56.IN2
-draw_erase_ready => Selector54.IN2
-draw_erase_ready => Selector51.IN2
 draw_erase_ready => Selector50.IN2
 draw_erase_ready => Selector49.IN2
-draw_erase_ready => Selector48.IN2
 draw_erase_ready => Selector47.IN2
-clear_shift_start <= Selector20.DB_MAX_OUTPUT_PORT_TYPE
-clear_shift_ready => Selector21.IN3
-clear_shift_ready => Selector46.IN3
-clear_shift_ready => Selector20.IN2
-clear_shift_ready => Selector62.IN2
-draw_score_draw <= Selector21.DB_MAX_OUTPUT_PORT_TYPE
-draw_score_ready => Selector58.IN3
-draw_score_ready => Selector21.IN1
-draw_score_ready => Selector46.IN1
-timer_1_time <= Selector22.DB_MAX_OUTPUT_PORT_TYPE
-timer_1_start <= Selector23.DB_MAX_OUTPUT_PORT_TYPE
-timer_1_done => Selector63.IN3
+draw_erase_ready => Selector44.IN2
+draw_erase_ready => Selector43.IN2
+draw_erase_ready => Selector42.IN2
+draw_erase_ready => Selector41.IN2
+draw_erase_ready => Selector40.IN2
+clear_shift_start <= clear_shift_start.DB_MAX_OUTPUT_PORT_TYPE
+clear_shift_ready => Selector39.IN3
+clear_shift_ready => Selector55.IN2
+draw_score_draw <= draw_score_draw.DB_MAX_OUTPUT_PORT_TYPE
+draw_score_ready => Selector51.IN3
+draw_score_ready => Selector39.IN1
+timer_1_time <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+timer_1_start <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+timer_1_done => Selector56.IN3
 timer_1_done => next_state.key.DATAB
-timer_1_reset <= Selector24.DB_MAX_OUTPUT_PORT_TYPE
+timer_1_reset <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
 inputs[0] => inv_inputs[0].DATAIN
 inputs[1] => inv_inputs[1].DATAIN
 inputs[2] => inv_inputs[2].DATAIN
@@ -11255,11 +11235,12 @@ selector => output.OUTPUTSELECT
 output <= output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_de2|cs_compare:inst15
+|top_de2|cs_compare:inst11
 clk => cs_7bc:counter_7_bit.clk
 clk => row_full.CLK
 clk => cs_shift:shift.clk
 clk => state~1.DATAIN
+rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
@@ -11281,23 +11262,24 @@ start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
 start_in => state_next.OUTPUTSELECT
+start_in => state_next.OUTPUTSELECT
 ready_out <= ready_out.DB_MAX_OUTPUT_PORT_TYPE
 score_out <= score_out.DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[0] <= ram_addr_out[0].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[1] <= ram_addr_out[1].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[2] <= ram_addr_out[2].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[3] <= ram_addr_out[3].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[4] <= ram_addr_out[4].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[5] <= ram_addr_out[5].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[6] <= ram_addr_out[6].DB_MAX_OUTPUT_PORT_TYPE
-ram_addr_out_2[7] <= ram_prefix.DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[0] <= ram_addr_out[0].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[1] <= ram_addr_out[1].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[2] <= ram_addr_out[2].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[3] <= ram_addr_out[3].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[4] <= ram_addr_out[4].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[5] <= ram_addr_out[5].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[6] <= ram_addr_out[6].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[7] <= ram_addr_out[7].DB_MAX_OUTPUT_PORT_TYPE
 ram_we <= ram_we.DB_MAX_OUTPUT_PORT_TYPE
 ram_data_in => row_full_next.IN1
 ram_data_in => cs_shift:shift.ram_data_in
 ram_data_out <= ram_data_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_de2|cs_compare:inst15|cs_7bc:counter_7_bit
+|top_de2|cs_compare:inst11|cs_7bc:counter_7_bit
 clk => state[0].CLK
 clk => state[1].CLK
 clk => state[2].CLK
@@ -11328,7 +11310,7 @@ value[5] <= state[5].DB_MAX_OUTPUT_PORT_TYPE
 value[6] <= state[6].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_de2|cs_compare:inst15|cs_tri7:tristate_7_bit
+|top_de2|cs_compare:inst11|cs_tri8:tristate_8_bit
 i[0] => o[0].DATAIN
 i[1] => o[1].DATAIN
 i[2] => o[2].DATAIN
@@ -11336,6 +11318,7 @@ i[3] => o[3].DATAIN
 i[4] => o[4].DATAIN
 i[5] => o[5].DATAIN
 i[6] => o[6].DATAIN
+i[7] => o[7].DATAIN
 o[0] <= o[0].DB_MAX_OUTPUT_PORT_TYPE
 o[1] <= o[1].DB_MAX_OUTPUT_PORT_TYPE
 o[2] <= o[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -11343,6 +11326,7 @@ o[3] <= o[3].DB_MAX_OUTPUT_PORT_TYPE
 o[4] <= o[4].DB_MAX_OUTPUT_PORT_TYPE
 o[5] <= o[5].DB_MAX_OUTPUT_PORT_TYPE
 o[6] <= o[6].DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o[7].DB_MAX_OUTPUT_PORT_TYPE
 e => o[0].OE
 e => o[1].OE
 e => o[2].OE
@@ -11350,9 +11334,10 @@ e => o[3].OE
 e => o[4].OE
 e => o[5].OE
 e => o[6].OE
+e => o[7].OE
 
 
-|top_de2|cs_compare:inst15|cs_shift:shift
+|top_de2|cs_compare:inst11|cs_shift:shift
 clk => cs_7bcws:counter_7_bit.clk
 clk => state~1.DATAIN
 rst => state.OUTPUTSELECT
@@ -11385,12 +11370,13 @@ ram_addr_out[3] <= ram_addr_out[3].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out[4] <= ram_addr_out[4].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out[5] <= ram_addr_out[5].DB_MAX_OUTPUT_PORT_TYPE
 ram_addr_out[6] <= ram_addr_out[6].DB_MAX_OUTPUT_PORT_TYPE
+ram_addr_out[7] <= ram_addr_out[7].DB_MAX_OUTPUT_PORT_TYPE
 ram_we <= ram_we.DB_MAX_OUTPUT_PORT_TYPE
 ram_data_in => ram_data_out.DATAA
 ram_data_out <= ram_data_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_de2|cs_compare:inst15|cs_shift:shift|cs_tri7:tristate_7_bit_normal
+|top_de2|cs_compare:inst11|cs_shift:shift|cs_tri8:tristate_8_bit_normal
 i[0] => o[0].DATAIN
 i[1] => o[1].DATAIN
 i[2] => o[2].DATAIN
@@ -11398,6 +11384,7 @@ i[3] => o[3].DATAIN
 i[4] => o[4].DATAIN
 i[5] => o[5].DATAIN
 i[6] => o[6].DATAIN
+i[7] => o[7].DATAIN
 o[0] <= o[0].DB_MAX_OUTPUT_PORT_TYPE
 o[1] <= o[1].DB_MAX_OUTPUT_PORT_TYPE
 o[2] <= o[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -11405,6 +11392,7 @@ o[3] <= o[3].DB_MAX_OUTPUT_PORT_TYPE
 o[4] <= o[4].DB_MAX_OUTPUT_PORT_TYPE
 o[5] <= o[5].DB_MAX_OUTPUT_PORT_TYPE
 o[6] <= o[6].DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o[7].DB_MAX_OUTPUT_PORT_TYPE
 e => o[0].OE
 e => o[1].OE
 e => o[2].OE
@@ -11412,9 +11400,10 @@ e => o[3].OE
 e => o[4].OE
 e => o[5].OE
 e => o[6].OE
+e => o[7].OE
 
 
-|top_de2|cs_compare:inst15|cs_shift:shift|cs_7bcws:counter_7_bit
+|top_de2|cs_compare:inst11|cs_shift:shift|cs_7bcws:counter_7_bit
 clk => state[0].CLK
 clk => state[1].CLK
 clk => state[2].CLK
@@ -11459,7 +11448,7 @@ data[5] => state.DATAB
 data[6] => state.DATAB
 
 
-|top_de2|cs_compare:inst15|cs_shift:shift|cs_adder7:adder_7_bit
+|top_de2|cs_compare:inst11|cs_shift:shift|cs_adder7:adder_7_bit
 i[0] => o[0].DATAIN
 i[1] => o[1].DATAIN
 i[2] => o[2].DATAIN
@@ -11476,7 +11465,7 @@ o[5] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 o[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_de2|cs_compare:inst15|cs_shift:shift|cs_tri7:tristate_7_bit_substr
+|top_de2|cs_compare:inst11|cs_shift:shift|cs_tri8:tristate_8_bit_substr
 i[0] => o[0].DATAIN
 i[1] => o[1].DATAIN
 i[2] => o[2].DATAIN
@@ -11484,6 +11473,7 @@ i[3] => o[3].DATAIN
 i[4] => o[4].DATAIN
 i[5] => o[5].DATAIN
 i[6] => o[6].DATAIN
+i[7] => o[7].DATAIN
 o[0] <= o[0].DB_MAX_OUTPUT_PORT_TYPE
 o[1] <= o[1].DB_MAX_OUTPUT_PORT_TYPE
 o[2] <= o[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -11491,6 +11481,7 @@ o[3] <= o[3].DB_MAX_OUTPUT_PORT_TYPE
 o[4] <= o[4].DB_MAX_OUTPUT_PORT_TYPE
 o[5] <= o[5].DB_MAX_OUTPUT_PORT_TYPE
 o[6] <= o[6].DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o[7].DB_MAX_OUTPUT_PORT_TYPE
 e => o[0].OE
 e => o[1].OE
 e => o[2].OE
@@ -11498,6 +11489,14 @@ e => o[3].OE
 e => o[4].OE
 e => o[5].OE
 e => o[6].OE
+e => o[7].OE
+
+
+|top_de2|cs_compare:inst11|cs_defset2:defset
+en => out2.OE
+en => out1.OE
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= out2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|timer:inst4

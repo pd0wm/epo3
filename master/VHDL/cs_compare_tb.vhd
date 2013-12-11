@@ -11,7 +11,7 @@ architecture cs_compare_tb_behav of cs_compare_tb is
 			 start_in     : in  std_logic;
 			 ready_out    : out std_logic;
 			 score_out    : out std_logic;
-			 ram_addr_out_2 : out std_logic_vector(7 downto 0);
+			 ram_addr_out : out std_logic_vector(7 downto 0);
 			 ram_we       : out std_logic;
 			 ram_data_in  : in  std_logic;
 			 ram_data_out : out std_logic);
@@ -20,7 +20,7 @@ architecture cs_compare_tb_behav of cs_compare_tb is
 	signal clk, rst, start, ready, data_in, data_out, we, score : std_logic;
 	signal ram_addr                                             : std_logic_vector(7 downto 0);
 
-	signal ram_mem : std_logic_vector(127 downto 0);
+	signal ram_mem : std_logic_vector(159 downto 0);
 begin
 	clock : process
 	begin
@@ -36,7 +36,7 @@ begin
 			     start_in     => start,
 			     ready_out    => ready,
 			     score_out    => score,
-			     ram_addr_out_2 => ram_addr,
+			     ram_addr_out => ram_addr,
 			     ram_we       => we,
 			     ram_data_in  => data_out,
 			     ram_data_out => data_in);
@@ -66,6 +66,13 @@ begin
 				ram_mem(7 downto 0)   <= (others => '1');
 				ram_mem(14)           <= '1';
 				ram_mem(23 downto 16) <= (others => '1');
+				
+				ram_mem(43 downto 33) <= (others => '1');
+				
+				ram_mem(127 downto 120) <= (others => '1');
+				
+				ram_mem(55) <= '1';
+				ram_mem(56) <= '1';
 			else
 				if (we = '1') then
 					ram_mem(to_integer(unsigned(ram_addr))) <= data_in;
@@ -77,5 +84,3 @@ begin
 	end process;
 
 end architecture;
-
-
