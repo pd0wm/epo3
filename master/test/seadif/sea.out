@@ -4,12 +4,12 @@ six
 ------ opening seadif ------
 ------ checking your circuit 'sr_if' ------
 ------ circuit 'sr_if' is still up-to-date ------
------- checking match with placement layout 'Tmpsr_if3371' ------
------- reading nelsis layout-cell 'Tmpsr_if3371' ------
------- writing nelsis 'Tmpsr_if3371' as sdflay 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ checking match with placement layout 'Tmpsr_if5641' ------
+------ reading nelsis layout-cell 'Tmpsr_if5641' ------
+------ writing nelsis 'Tmpsr_if5641' as sdflay 'Tmp_Cell_(sr_if(sr_if(test)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f sr_if -c sr_if -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpsr_if3371' ------
-calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if3371 
+------ converting result back into nelsis as cell 'Tmpsr_if5641' ------
+calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if5641 
 ------ sea: task completed ------
