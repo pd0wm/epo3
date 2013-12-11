@@ -4,13 +4,15 @@ use IEEE.numeric_std.ALL;
 
 architecture piece_lut_behaviour of piece_lut is
 component adder_x is
-   port(x_in  :in    std_logic_vector(2 downto 0);
-        rom_in:in    std_logic_vector(1 downto 0);
+   port(x  :in    std_logic_vector(2 downto 0);
+        rom_data:in    std_logic_vector(1 downto 0);
+	next_piece:in std_logic;
         x_out :out   std_logic_vector(3 downto 0));
 end component;
 component adder_y is
-   port(y_in  :in    std_logic_vector(3 downto 0);
-        rom_in:in    std_logic_vector(1 downto 0);
+   port(y  :in    std_logic_vector(3 downto 0);
+        rom_data:in    std_logic_vector(1 downto 0);
+	next_piece:in std_logic;
         y_out :out   std_logic_vector(4 downto 0));
 end component;
 
@@ -30,8 +32,8 @@ end component;
 
 begin
 
-	lbl_adder_x: adder_x port map(x, rom_data(1 downto 0), x_out);
-	lbl_adder_y: adder_y port map(y, rom_data(3 downto 2), y_out);
+	lbl_adder_x: adder_x port map(x, rom_data(1 downto 0), next_piece, x_out);
+	lbl_adder_y: adder_y port map(y, rom_data(3 downto 2), next_piece, y_out);
 
 	--overflow <= cur_overflow;
 	mask     <= cur_mask;
@@ -213,21 +215,6 @@ begin
 		end case;
 	end process;
 end piece_lut_behaviour;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

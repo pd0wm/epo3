@@ -1,5 +1,5 @@
 # This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
-# Written on: Fri Dec  6 09:37:01 2013
+# Written on: Wed Dec 11 20:18:40 2013
 # You can edit this file to control the mapping process
 # Each line contains the name of a nelsis cell and its corresponding seadif cell
 # The status field may contain the following values:
@@ -10,12 +10,16 @@
 #    N E L S I S     |                   S E A D I F                     | nelsis->sdf sdf->nelsis
 # view    cellname   | library      function     circuit      layout     |   status      status
 #--------------------+---------------------------------------------------+------------------------
- layout   sr_tower     test         sr_tower     sr_tower     sr_tower     not_written not_written
- layout   dfa11        g_digilib5_99 dfa11        dfa11        dfa11        not_written not_written
- layout   mux5         test         mux5         mux5         mux5         not_written not_written
- layout   demux5       test         demux5       demux5       demux5       not_written not_written
- layout   buf40        g_digilib5_99 buf40        buf40        buf40        not_written not_written
- layout   Tmpsr_if3371 test         sr_if        sr_if        Tmp_Cell_    not_written written
+ layout   adder_x      test3        adder_x      adder_x      adder_x      not_written not_written
+ layout   adder_y      test3        adder_y      adder_y      adder_y      not_written not_written
+ layout   na310        g_digilib5_99 na310        na310        na310        not_written not_written
+ layout   mu111        g_digilib5_99 mu111        mu111        mu111        not_written not_written
+ layout   no210        g_digilib5_99 no210        no210        no210        not_written not_written
+ layout   no310        g_digilib5_99 no310        no310        no310        not_written not_written
+ layout   iv110        g_digilib5_99 iv110        iv110        iv110        not_written not_written
+ layout   dfr11        g_digilib5_99 dfr11        dfr11        dfr11        not_written not_written
+ layout   na210        g_digilib5_99 na210        na210        na210        not_written not_written
+ layout   Tmppiece_lut28361 test3        piece_lut    piece_lut    Tmp_Cell_    not_written written
  circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
  circuit  res          primitives   res          res          $dummy       primitive   primitive
  circuit  penh         primitives   penh         penh         $dummy       primitive   primitive

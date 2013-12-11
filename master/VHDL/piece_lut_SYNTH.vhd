@@ -35,15 +35,15 @@ architecture synthesised of piece_lut is
    end component;
    
    component adder_y
-      port( y_in : in std_logic_vector (3 downto 0);  rom_in : in 
-            std_logic_vector (1 downto 0);  y_out : out std_logic_vector (4 
-            downto 0));
+      port( y : in std_logic_vector (3 downto 0);  rom_data : in 
+            std_logic_vector (1 downto 0);  next_piece : in std_logic;  y_out :
+            out std_logic_vector (4 downto 0));
    end component;
    
    component adder_x
-      port( x_in : in std_logic_vector (2 downto 0);  rom_in : in 
-            std_logic_vector (1 downto 0);  x_out : out std_logic_vector (3 
-            downto 0));
+      port( x : in std_logic_vector (2 downto 0);  rom_data : in 
+            std_logic_vector (1 downto 0);  next_piece : in std_logic;  x_out :
+            out std_logic_vector (3 downto 0));
    end component;
    
    signal mask_7_port, mask_6_port, mask_5_port, mask_4_port, mask_3_port, 
@@ -69,16 +69,17 @@ begin
    rom_addr <= ( rom_addr_6_port, rom_addr_5_port, rom_addr_4_port, 
       rom_addr_3_port, rom_addr_2_port, rom_addr_1_port, rom_addr_0_port );
    
-   lbl_adder_x : adder_x port map( x_in(2) => x(2), x_in(1) => x(1), x_in(0) =>
-                           x(0), rom_in(1) => rom_data(1), rom_in(0) => 
-                           rom_data(0), x_out(3) => x_out_3_port, x_out(2) => 
-                           x_out_2_port, x_out(1) => x_out_1_port, x_out(0) => 
-                           x_out_0_port);
-   lbl_adder_y : adder_y port map( y_in(3) => y(3), y_in(2) => y(2), y_in(1) =>
-                           y(1), y_in(0) => y(0), rom_in(1) => rom_data(3), 
-                           rom_in(0) => rom_data(2), y_out(4) => y_out_4_port, 
-                           y_out(3) => y_out_3_port, y_out(2) => y_out_2_port, 
-                           y_out(1) => y_out_1_port, y_out(0) => y_out_0_port);
+   lbl_adder_x : adder_x port map( x(2) => x(2), x(1) => x(1), x(0) => x(0), 
+                           rom_data(1) => rom_data(1), rom_data(0) => 
+                           rom_data(0), next_piece => next_piece, x_out(3) => 
+                           x_out_3_port, x_out(2) => x_out_2_port, x_out(1) => 
+                           x_out_1_port, x_out(0) => x_out_0_port);
+   lbl_adder_y : adder_y port map( y(3) => y(3), y(2) => y(2), y(1) => y(1), 
+                           y(0) => y(0), rom_data(1) => rom_data(3), 
+                           rom_data(0) => rom_data(2), next_piece => next_piece
+                           , y_out(4) => y_out_4_port, y_out(3) => y_out_3_port
+                           , y_out(2) => y_out_2_port, y_out(1) => y_out_1_port
+                           , y_out(0) => y_out_0_port);
    state_reg_0_inst : dfr11 port map( D => next_state_0_port, R => rst, CK => 
                            clk, Q => state_0_port);
    state_reg_2_inst : dfr11 port map( D => next_state_2_port, R => rst, CK => 

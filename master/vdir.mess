@@ -21,6 +21,134 @@ OPTIMIZED DESIGN _opt2
     Short name: @_opt2
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: master
+ENTITY adder_x
+    Source modified time: Wed Dec 11 19:21:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/adder_x.vhd
+    Source file: VHDL/adder_x.vhd
+    Start location: VHDL/adder_x.vhd:4
+    Version string: FR?VBz4ai7>5Gh@;FR]PO3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Wed Dec 11 19:29:30 2013
+    Depends on: E work adder_x FR?VBz4ai7>5Gh@;FR]PO3
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_x-behaviour.vhd
+    Source file: VHDL/adder_x-behaviour.vhd
+    Start location: VHDL/adder_x-behaviour.vhd:5
+    Version string: zjgXigI@RkBNRbE1?Qcmj2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Wed Dec 11 19:30:41 2013
+    Depends on: E work adder_x FR?VBz4ai7>5Gh@;FR]PO3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_x_SYNTH.vhd
+    Source file: VHDL/adder_x_SYNTH.vhd
+    Start location: VHDL/adder_x_SYNTH.vhd:7
+    Version string: cama5CSZC<MF>Mkig0;Va0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+VHDL CONFIGURATION adder_x_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: adder_x
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work adder_x behaviour zjgXigI@RkBNRbE1?Qcmj2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work adder_x FR?VBz4ai7>5Gh@;FR]PO3
+    Source modified time: Wed Dec 11 19:03:48 2013
+    Source directory: /master
+    HDL source file: VHDL/adder_x_behaviour_cfg.vhd
+    Source file: VHDL/adder_x_behaviour_cfg.vhd
+    Start location: VHDL/adder_x_behaviour_cfg.vhd:1
+    Version string: 3_8GiEH0?H3NfH@:>DQ153
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY adder_y
+    Source modified time: Wed Dec 11 19:26:50 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/adder_y.vhd
+    Source file: VHDL/adder_y.vhd
+    Start location: VHDL/adder_y.vhd:4
+    Version string: b=?MG7bJCeEEmZ]^^;:1@1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Source modified time: Wed Dec 11 19:29:14 2013
+    Depends on: E work adder_y b=?MG7bJCeEEmZ]^^;:1@1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_y-behaviour.vhd
+    Source file: VHDL/adder_y-behaviour.vhd
+    Start location: VHDL/adder_y-behaviour.vhd:5
+    Version string: 98ho^]cM7aRhKJc0SNPHL1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Wed Dec 11 19:33:45 2013
+    Depends on: E work adder_y b=?MG7bJCeEEmZ]^^;:1@1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_y_SYNTH.vhd
+    Source file: VHDL/adder_y_SYNTH.vhd
+    Start location: VHDL/adder_y_SYNTH.vhd:7
+    Version string: 8QIb@f7>GdMKLgWIOiH<T3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: master
+    Debug Symbol file exists
+VHDL CONFIGURATION adder_y_behaviour_cfg
+    Configuration for architecture: behaviour
+    Configuration for entity: adder_y
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work adder_y behaviour 98ho^]cM7aRhKJc0SNPHL1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work adder_y b=?MG7bJCeEEmZ]^^;:1@1
+    Source modified time: Wed Dec 11 19:03:48 2013
+    Source directory: /master
+    HDL source file: VHDL/adder_y_behaviour_cfg.vhd
+    Source file: VHDL/adder_y_behaviour_cfg.vhd
+    Start location: VHDL/adder_y_behaviour_cfg.vhd:1
+    Version string: MJ]c[2dQ=e;5:h`ekcK9A2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 ENTITY bit4
     Source modified time: Wed Nov 27 19:28:43 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -912,11 +1040,82 @@ VHDL CONFIGURATION mux5_mux5_behav_cfg
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+ENTITY npg
+    Source modified time: Wed Dec 11 19:01:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/npg.vhd
+    Source file: VHDL/npg.vhd
+    Start location: VHDL/npg.vhd:4
+    Version string: ;BNL?Uezzb;K54g@KIX<D3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+ENTITY npg_ff
+    Source modified time: Wed Dec 11 19:01:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/npg_ff.vhd
+    Source file: VHDL/npg_ff.vhd
+    Start location: VHDL/npg_ff.vhd:4
+    Version string: 6hUidMEA;UY_<N34Kc2Je0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+ENTITY npg_mux2_1
+    Source modified time: Wed Dec 11 19:01:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/npg_mux2_1.vhd
+    Source file: VHDL/npg_mux2_1.vhd
+    Start location: VHDL/npg_mux2_1.vhd:4
+    Version string: =<IPkHcoUDzBP=Hiz2L1o2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+ENTITY npg_tb
+    Source modified time: Wed Dec 11 19:01:56 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/npg_tb.vhd
+    Source file: VHDL/npg_tb.vhd
+    Start location: VHDL/npg_tb.vhd:4
+    Version string: ]Az2geOzZl9IhU57]bzKn0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work npg_tb ]Az2geOzZl9IhU57]bzKn0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/npg_tb-behaviour.vhd
+    Source file: VHDL/npg_tb-behaviour.vhd
+    Start location: VHDL/npg_tb-behaviour.vhd:4
+    Version string: oI4lJINClR7lk7g]=>lf;3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Wed Dec 11 19:01:56 2013
+    Debug Symbol file exists
 ENTITY piece_lut
     Source modified time: Wed Dec 11 19:01:56 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
+    Source directory: /master
     HDL source file: VHDL/piece_lut.vhd
     Source file: VHDL/piece_lut.vhd
     Start location: VHDL/piece_lut.vhd:3
@@ -926,8 +1125,24 @@ ENTITY piece_lut
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Wed Dec 11 19:57:26 2013
+    Depends on: E work piece_lut K0e6`R4?MCiiDhDAKhCN:0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/piece_lut_SYNTH.vhd
+    Source file: VHDL/piece_lut_SYNTH.vhd
+    Start location: VHDL/piece_lut_SYNTH.vhd:7
+    Version string: 0H>kdg_Q>102=]P2NkmOT3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
   ARCHITECTURE BODY piece_lut_behaviour
-    Source modified time: Wed Dec 11 19:03:48 2013
+    Source modified time: Wed Dec 11 19:52:05 2013
     Depends on: E work piece_lut K0e6`R4?MCiiDhDAKhCN:0
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -935,18 +1150,20 @@ ENTITY piece_lut
     HDL source file: VHDL/piece_lut-behaviour.vhd
     Source file: VHDL/piece_lut-behaviour.vhd
     Start location: VHDL/piece_lut-behaviour.vhd:5
-    Version string: OW`]JK5IhN@DodZ7>_F401
+    Version string: b>Z<lG9EVHl[ZJ=>:GM5W1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-    Source directory: master
+    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION piece_lut_behaviour_cfg
     Configuration for architecture: piece_lut_behaviour
     Configuration for entity: piece_lut
+    Depends on: E work adder_y b=?MG7bJCeEEmZ]^^;:1@1
+    Depends on: E work adder_x FR?VBz4ai7>5Gh@;FR]PO3
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work piece_lut piece_lut_behaviour OW`]JK5IhN@DodZ7>_F401
+    Depends on: A work piece_lut piece_lut_behaviour b>Z<lG9EVHl[ZJ=>:GM5W1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work piece_lut K0e6`R4?MCiiDhDAKhCN:0
@@ -961,7 +1178,7 @@ VHDL CONFIGURATION piece_lut_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY piece_lut_tb
-    Source modified time: Fri Nov 29 14:31:53 2013
+    Source modified time: Wed Dec 11 19:01:56 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -979,7 +1196,6 @@ ENTITY piece_lut_tb
     Depends on: E work piece_lut_tb IA`UY244LV[TZYMJOhCJC2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: /master
     HDL source file: VHDL/piece_lut_tb-behaviour.vhd
     Source file: VHDL/piece_lut_tb-behaviour.vhd
     Start location: VHDL/piece_lut_tb-behaviour.vhd:4
@@ -988,13 +1204,14 @@ ENTITY piece_lut_tb
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION piece_lut_tb_behaviour_cfg
     Configuration for architecture: piece_lut_tb_behaviour
     Configuration for entity: piece_lut_tb
     Depends on: E work piece_lut K0e6`R4?MCiiDhDAKhCN:0
     Depends on: C work piece_lut_behaviour_cfg bN8jTV^3VH_PXSMl6OHMj0
-    Depends on: A work piece_lut_tb piece_lut_tb_behaviour 7Cim;_cOIlY:K5mF[WQ611
+    Depends on: A work piece_lut_tb piece_lut_tb_behaviour _gg2m9mdC[474FPaSLYIX0
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work piece_lut_tb IA`UY244LV[TZYMJOhCJC2
