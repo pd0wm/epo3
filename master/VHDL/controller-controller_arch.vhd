@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, move_left_1, soft_drop_1, soft_drop_2, soft_drop_3, move_left_2, move_left_3, move_left_4, move_left_5, move_left_6, move_left_7, move_left_8, move_left_9, move_left_10, move_left_11, move_right_1, move_right_2, move_right_3, move_right_4, first_draw_1, first_draw_2, first_draw_3, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
+	is (reset, init, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, move_left_1, soft_drop_1, soft_drop_2, soft_drop_3, move_left_2, move_left_3, move_left_4, move_left_5, move_left_6, move_left_7, move_left_8, move_left_9, move_left_10, move_left_11, move_right_1, move_right_2, move_right_3, move_right_4, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
@@ -21,8 +21,6 @@ architecture controller_arch of controller is
 	signal new_lut_y             : std_logic_vector(3 downto 0);
 	signal new_lut_rot           : std_logic_vector(1 downto 0);
 	signal new_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal new_draw_erase_draw   : std_logic;
-	signal new_draw_erase_start  : std_logic;
 	signal new_clear_shift_start : std_logic;
 	signal new_draw_score_draw   : std_logic;
 	signal new_timer_1_time      : std_logic;
@@ -35,8 +33,6 @@ architecture controller_arch of controller is
 	signal cur_lut_rot           : std_logic_vector(1 downto 0);
 	signal cur_lut_next_piece    : std_logic;
 	signal cur_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal cur_draw_erase_draw   : std_logic;
-	signal cur_draw_erase_start  : std_logic;
 	signal cur_clear_shift_start : std_logic;
 	signal cur_draw_score_draw   : std_logic;
 	signal cur_timer_1_time      : std_logic;
@@ -72,8 +68,6 @@ begin
 				cur_lut_rot        <= new_lut_rot;
 				cur_lut_piece_type <= new_lut_piece_type;
 
-				cur_draw_erase_draw   <= new_draw_erase_draw;
-				cur_draw_erase_start  <= new_draw_erase_start;
 				cur_clear_shift_start <= new_clear_shift_start;
 				cur_draw_score_draw   <= new_draw_score_draw;
 				cur_timer_1_time      <= new_timer_1_time;
@@ -89,8 +83,6 @@ begin
 		lut_rot           <= new_lut_rot;
 		lut_piece_type    <= new_lut_piece_type;
 		
-		draw_erase_draw   <= new_draw_erase_draw;
-		draw_erase_start  <= new_draw_erase_start;
 		clear_shift_start <= new_clear_shift_start;
 		draw_score_draw   <= new_draw_score_draw;
 		timer_1_time      <= new_timer_1_time;
@@ -120,8 +112,6 @@ begin
 		new_lut_piece_type <= cur_lut_piece_type;
 		new_lut_next_piece <= cur_lut_next_piece;
 
-		new_draw_erase_draw   <= cur_draw_erase_draw;
-		new_draw_erase_start  <= cur_draw_erase_start;
 		new_clear_shift_start <= cur_clear_shift_start;
 		new_draw_score_draw   <= cur_draw_score_draw;
 		new_timer_1_time      <= cur_timer_1_time;
@@ -131,6 +121,9 @@ begin
 		
 		new_piece         <= '0';
 		check_start       <= '0';
+		draw_erase_draw   <= '0';
+		draw_erase_start  <= '0';
+		
 
 		case cur_state is
 			when reset =>
@@ -142,8 +135,8 @@ begin
 				new_future_piece      <= (others => '0');
 				new_lut_next_piece    <= '0';
 				-- draw erase
-				new_draw_erase_draw   <= '0';
-				new_draw_erase_start  <= '0';
+				draw_erase_draw   <= '0';
+				draw_erase_start  <= '0';
 				-- clear shift
 				new_clear_shift_start <= '0';
 				-- draw_score
@@ -192,17 +185,18 @@ begin
 				new_lut_piece_type <= cur_piece;
 				new_lut_next_piece <= '1';
 				
-				new_draw_erase_draw  <= '0';
-				new_draw_erase_start  <= '1';
+				draw_erase_draw  <= '0';
+				draw_erase_start  <= '1';
 				
 				next_state <= draw_next_piece_2;
 
 			when draw_next_piece_2 =>
+				draw_erase_draw  <= '0';
 				if (draw_erase_ready = '1') then
-					new_draw_erase_start <= '0';
+					draw_erase_start <= '0';
 					next_state           <= draw_next_piece_3;
 				else
-					new_draw_erase_start <= '1';
+					draw_erase_start <= '1';
 					next_state           <= draw_next_piece_2;
 				end if;				
 				
@@ -214,18 +208,19 @@ begin
 				new_lut_piece_type <= cur_future_piece;
 				new_lut_next_piece <= '1';
 
-				new_draw_erase_draw  <= '1';
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '1';
+				draw_erase_start <= '1';
 
 				next_state <= draw_next_piece_4;
 
 			when draw_next_piece_4 =>
+				draw_erase_draw  <= '1';
 				if (draw_erase_ready = '1') then
-					new_draw_erase_start <= '0';
+					draw_erase_start <= '0';
 					new_lut_next_piece   <= '0';
 					next_state           <= collision_1;
 				else
-					new_draw_erase_start <= '1';
+					draw_erase_start <= '1';
 					new_lut_next_piece   <= '1';
 					next_state           <= draw_next_piece_4;
 				end if;
@@ -264,29 +259,29 @@ begin
 			when first_draw_1 =>
 				new_timer_1_start <= '1';
 
-				new_draw_erase_draw  <= '1';
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '1';
+				draw_erase_start <= '1';
 
 				next_state <= first_draw_2;
 
 			when first_draw_2 =>
+				draw_erase_draw  <= '1';
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
-					next_state <= first_draw_3;
+					next_state <= first_draw_4;
 				else
 					next_state <= first_draw_2;
 				end if;
 
-			when first_draw_3 =>
-				new_draw_erase_start <= '1';
-
-				next_state <= first_draw_4;
 
 			when first_draw_4 =>
+				draw_erase_draw  <= '1';
 				if (draw_erase_ready = '1') then
-					new_draw_erase_start <= '0';
+					draw_erase_start <= '0';
 					next_state           <= draw;
 				else
-					new_draw_erase_start <= '1';
+					draw_erase_start <= '1';
 					next_state           <= first_draw_4;
 				end if;
 
@@ -346,12 +341,13 @@ begin
 
 			when space_1 =>
 				-- First remove current piece
-				new_draw_erase_draw  <= '0'; -- erase
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1';
 
 				next_state <= space_2;
 
 			when space_2 =>
+				draw_erase_start <= '1';
 				if (draw_erase_ready = '1') then
 					next_state <= space_3;
 				else
@@ -359,7 +355,7 @@ begin
 				end if;
 
 			when space_3 =>
-				new_draw_erase_start <= '0';
+				draw_erase_start <= '0';
 				new_cur_y_new        <= std_logic_vector(unsigned(cur_y) + 1);
 
 				next_state <= space_4;
@@ -400,17 +396,18 @@ begin
 				next_state <= put_back_3;
 
 			when put_back_3 =>
-				new_draw_erase_draw  <= '1'; --draw
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
 
 				next_state <= put_back_4;
 
 			when put_back_4 =>
+				draw_erase_draw  <= '1'; --draw
 				if (draw_erase_ready = '1') then
-					new_draw_erase_start <= '0';
+					draw_erase_start <= '0';
 					next_state <= reset_timers_a_1;
 				else
-					new_draw_erase_start <= '1';
+					draw_erase_start <= '1';
 					next_state <= put_back_4;
 				end if;
 
@@ -418,12 +415,15 @@ begin
 				next_state <= move_down_3;
 
 			when move_down_3 =>
-				new_draw_erase_draw  <= '1'; --draw
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
 
 				next_state <= move_down_4;
 
 			when move_down_4 =>
+				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
 					next_state <= reset_timers_b_1;
 				else
@@ -431,7 +431,7 @@ begin
 				end if;
 
 			when reset_timers_b_1 =>
-				new_draw_erase_start <= '0';
+				draw_erase_start <= '0';
 				new_timer_1_start    <= '0';
 				new_timer_1_time     <= '1'; -- 30, .5 second
 
@@ -466,13 +466,17 @@ begin
 			when move_left_2 =>
 				-- first erase current piece
 
-				new_draw_erase_draw  <= '0'; -- erase
-				new_draw_erase_start <= '1'; --start
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
 
 
 				next_state <= move_left_3;
 
 			when move_left_3 =>
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+				
+				
 				-- wait for erasse ready 
 				if (draw_erase_ready = '1') then
 					next_state <= move_left_4;
@@ -481,8 +485,8 @@ begin
 				end if;
 
 			when move_left_4 =>
+				
 				-- calculate new position				
-				new_draw_erase_start <= '0';
 				new_cur_x_new        <= std_logic_vector(unsigned(cur_x) - 1);
 				new_cur_y_new        <= cur_y;
 				new_cur_rot_new      <= cur_rot;
@@ -533,12 +537,15 @@ begin
 				new_lut_y          <= new_cur_y;
 				new_lut_piece_type <= new_cur_piece;
 
-				new_draw_erase_draw  <= '1'; --draw
-				new_draw_erase_start <= '1';
+				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
 
 				next_state <= move_left_10;
 
 			when move_left_10 =>
+				draw_erase_draw  <= '1'; --draw
+				draw_erase_start <= '1';
+				
 				if (draw_erase_ready = '1') then
 					next_state <= move_left_11;
 				else
@@ -546,7 +553,6 @@ begin
 				end if;
 
 			when move_left_11 =>
-				new_draw_erase_start <= '0';
 
 				if (inv_inputs = "000000" or inv_inputs = "010000") then
 					next_state <= draw;
@@ -563,14 +569,16 @@ begin
 
 			when move_right_2 =>
 				-- first erase current piece
-
-				new_draw_erase_draw  <= '0'; -- erase
-				new_draw_erase_start <= '1'; --start
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
 
 
 				next_state <= move_right_3;
 
-			when move_right_3 =>
+			when move_right_3 =>			
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+				
 				-- wait for erasse ready 
 				if (draw_erase_ready = '1') then
 					next_state <= move_right_4;
@@ -580,7 +588,6 @@ begin
 
 			when move_right_4 =>
 				-- calculate new position				
-				new_draw_erase_start <= '0';
 				new_cur_x_new        <= std_logic_vector(unsigned(cur_x) + 1);
 				new_cur_y_new        <= cur_y;
 				new_cur_rot_new      <= cur_rot;
@@ -597,13 +604,17 @@ begin
 			when rotate_cw_2 =>
 				-- first erase current piece
 
-				new_draw_erase_draw  <= '0'; -- erase
-				new_draw_erase_start <= '1'; --start
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
 
 
 				next_state <= rotate_cw_3;
 
 			when rotate_cw_3 =>
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+				
+				
 				-- wait for erasse ready 
 				if (draw_erase_ready = '1') then
 					next_state <= rotate_cw_4;
@@ -613,7 +624,6 @@ begin
 
 			when rotate_cw_4 =>
 				-- calculate new position				
-				new_draw_erase_start <= '0';
 				new_cur_x_new        <= cur_x;
 				new_cur_y_new        <= cur_y;
 				new_cur_rot_new      <= std_logic_vector(unsigned(cur_rot) + 1);
@@ -630,14 +640,18 @@ begin
 			when rotate_ccw_2 =>
 				-- first erase current piece
 
-				new_draw_erase_draw  <= '0'; -- erase
-				new_draw_erase_start <= '1'; --start
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
 
 
 				next_state <= rotate_ccw_3;
 
 			when rotate_ccw_3 =>
-				-- wait for erasse ready 
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+				
+				
+				-- wait for erase ready 
 				if (draw_erase_ready = '1') then
 					next_state <= rotate_ccw_4;
 				else
@@ -646,7 +660,6 @@ begin
 
 			when rotate_ccw_4 =>
 				-- calculate new position				
-				new_draw_erase_start <= '0';
 				new_cur_x_new        <= cur_x;
 				new_cur_y_new        <= cur_y;
 				new_cur_rot_new      <= std_logic_vector(unsigned(cur_rot) - 1);
