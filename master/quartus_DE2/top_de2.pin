@@ -80,7 +80,7 @@ vga_g[5]                     : A10       : output : 3.3-V LVTTL       :         
 VCCIO3                       : A11       : power  :                   : 3.3V    : 3         :                
 GND                          : A12       : gnd    :                   :         :           :                
 GND+                         : A13       :        :                   :         : 4         :                
-pre_syn.bp.inst15_ram_addr_out_2_2_ : A14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : A14       :        :                   :         : 4         :                
 GND                          : A15       : gnd    :                   :         :           :                
 VCCIO4                       : A16       : power  :                   : 3.3V    : 4         :                
 GND*                         : A17       :        :                   :         : 4         :                
@@ -259,8 +259,8 @@ vga_g[4]                     : B10       : output : 3.3-V LVTTL       :         
 vga_b[7]                     : B11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_b[9]                     : B12       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : B13       :        :                   :         : 4         :                
-pre_syn.bp.inst15_ram_addr_out_2_0_ : B14       : output : 3.3-V LVTTL       :         : 4         : N              
-pre_syn.bp.inst15_ram_addr_out_2_5_ : B15       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : B14       :        :                   :         : 4         :                
+GND*                         : B15       :        :                   :         : 4         :                
 GND*                         : B16       :        :                   :         : 4         :                
 GND*                         : B17       :        :                   :         : 4         :                
 GND*                         : B18       :        :                   :         : 4         :                
@@ -278,7 +278,7 @@ GND*                         : C3        :        :                   :         
 GND*                         : C4        :        :                   :         : 3         :                
 GND*                         : C5        :        :                   :         : 3         :                
 GND*                         : C6        :        :                   :         : 3         :                
-pre_syn.bp.inst15_ram_addr_out_2_3_ : C7        : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : C7        :        :                   :         : 3         :                
 vga_r[0]                     : C8        : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_r[4]                     : C9        : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_g[2]                     : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
@@ -311,7 +311,7 @@ vga_g[3]                     : D10       : output : 3.3-V LVTTL       :         
 vga_g[7]                     : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_g[9]                     : D12       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND+                         : D13       :        :                   :         : 3         :                
-pre_syn.bp.inst15_ram_addr_out_2_4_ : D14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                
 GND*                         : D17       :        :                   :         : 4         :                
@@ -363,7 +363,7 @@ vga_r[1]                     : F10       : output : 3.3-V LVTTL       :         
 vga_r[8]                     : F11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_b[2]                     : F12       : output : 3.3-V LVTTL       :         : 3         : Y              
 GND*                         : F13       :        :                   :         : 4         :                
-pre_syn.bp.inst15_ram_addr_out_2_1_ : F14       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : F14       :        :                   :         : 4         :                
 GND*                         : F15       :        :                   :         : 4         :                
 GND*                         : F16       :        :                   :         : 4         :                
 GND*                         : F17       :        :                   :         : 4         :                
@@ -388,7 +388,7 @@ GND*                         : G9        :        :                   :         
 vga_r[2]                     : G10       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_g[6]                     : G11       : output : 3.3-V LVTTL       :         : 3         : Y              
 vga_b[3]                     : G12       : output : 3.3-V LVTTL       :         : 3         : Y              
-pre_syn.bp.inst15_ram_addr_out_2_6_ : G13       : output : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : G13       :        :                   :         : 4         :                
 GND*                         : G14       :        :                   :         : 4         :                
 GND*                         : G15       :        :                   :         : 4         :                
 GND*                         : G16       :        :                   :         : 4         :                
@@ -429,7 +429,7 @@ GND*                         : H24       :        :                   :         
 GND*                         : H25       :        :                   :         : 5         :                
 GND*                         : H26       :        :                   :         : 5         :                
 GND*                         : J1        :        :                   :         : 2         :                
-pre_syn.bp.inst15_ram_addr_out_2_7_ : J2        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : J2        :        :                   :         : 2         :                
 GND*                         : J3        :        :                   :         : 2         :                
 GND*                         : J4        :        :                   :         : 2         :                
 GND*                         : J5        :        :                   :         : 2         :                
@@ -487,7 +487,7 @@ GND*                         : L4        :        :                   :         
 GND                          : L5        : gnd    :                   :         :           :                
 GND*                         : L6        :        :                   :         : 2         :                
 GND*                         : L7        :        :                   :         : 2         :                
-altera_reserved_tms          : L8        : input  : 3.3-V LVTTL       :         : 2         : N              
+TMS                          : L8        : input  :                   :         : 2         :                
 GND*                         : L9        :        :                   :         : 2         :                
 GND*                         : L10       :        :                   :         : 2         :                
 VCCINT                       : L11       : power  :                   : 1.2V    :           :                
@@ -511,9 +511,9 @@ GND*                         : M2        :        :                   :         
 GND*                         : M3        :        :                   :         : 2         :                
 GND*                         : M4        :        :                   :         : 2         :                
 GND*                         : M5        :        :                   :         : 2         :                
-altera_reserved_tck          : M6        : input  : 3.3-V LVTTL       :         : 2         : N              
-altera_reserved_tdo          : M7        : output : 3.3-V LVTTL       :         : 2         : N              
-altera_reserved_tdi          : M8        : input  : 3.3-V LVTTL       :         : 2         : N              
+TCK                          : M6        : input  :                   :         : 2         :                
+TDO                          : M7        : output :                   :         : 2         :                
+TDI                          : M8        : input  :                   :         : 2         :                
 VCCIO2                       : M9        : power  :                   : 3.3V    : 2         :                
 VCCINT                       : M10       : power  :                   : 1.2V    :           :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                

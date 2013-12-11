@@ -233,22 +233,21 @@ VHDL CONFIGURATION checkmask_tb_check_mask_tb_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY controller
-    Source modified time: Tue Dec 10 10:49:57 2013
+    Source modified time: Wed Dec 11 15:38:43 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
     HDL source file: VHDL/controller.vhd
     Source file: VHDL/controller.vhd
     Start location: VHDL/controller.vhd:3
-    Version string: m9KNO<M^[kQk2LgW@S8T=0
+    Version string: DX`=?meIX7KU2^i:F>HfL3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY controller_arch
-    Source modified time: Tue Dec 10 17:13:46 2013
-    Depends on: E work controller m9KNO<M^[kQk2LgW@S8T=0
+    Depends on: E work controller DX`=?meIX7KU2^i:F>HfL3
     Depends on: P work vga_params k9F]S[jE>zJo[VY[Bzio<1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -256,12 +255,13 @@ ENTITY controller
     HDL source file: VHDL/controller-controller_arch.vhd
     Source file: VHDL/controller-controller_arch.vhd
     Start location: VHDL/controller-controller_arch.vhd:6
-    Version string: oKzgdGfNcCQOLL7gFYGAM3
+    Version string: W?J7:VTkBdN2CY`^KU4i?1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
+    Source modified time: Wed Dec 11 15:38:43 2013
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
     Source modified time: Tue Dec 10 17:13:46 2013
@@ -2493,51 +2493,51 @@ VHDL CONFIGURATION sr_tower_tb_sr_tower_tb_behav_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY timer
-    Source modified time: Thu Dec  5 20:25:01 2013
+    Source modified time: Wed Dec 11 15:38:43 2013
     Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
     Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
+    Source directory: /master
     HDL source file: VHDL/timer.vhd
     Source file: VHDL/timer.vhd
     Start location: VHDL/timer.vhd:5
-    Version string: eP6Do@ZcEFH3HDJVK_<cR2
+    Version string: OTDF^mG:IV0D7S0KQBemT2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY behaviour
-    Source modified time: Thu Dec  5 20:25:40 2013
     Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
     Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
-    Depends on: E work timer eP6Do@ZcEFH3HDJVK_<cR2
+    Depends on: E work timer OTDF^mG:IV0D7S0KQBemT2
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/timer-behaviour.vhd
     Source file: VHDL/timer-behaviour.vhd
     Start location: VHDL/timer-behaviour.vhd:5
-    Version string: 1<U5CO^SFFU>EW^A]4m8;0
+    Version string: [U^DRZ:GYACGN[iLk6ohX3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-    Source directory: master
+    Source directory: /master
+    Source modified time: Wed Dec 11 15:38:43 2013
     Debug Symbol file exists
 VHDL CONFIGURATION timer_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: timer
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work timer behaviour 9`90N036J_<22YYBljz>70
+    Depends on: A work timer behaviour [U^DRZ:GYACGN[iLk6ohX3
     Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
     Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work timer j0ZUBB06<HX5KF31Z0=0g2
-    Source modified time: Wed Dec  4 14:42:18 2013
-    Source directory: master
+    Depends on: E work timer OTDF^mG:IV0D7S0KQBemT2
+    Source modified time: Tue Dec 10 17:13:46 2013
+    Source directory: /master
     HDL source file: VHDL/timer_behaviour_cfg.vhd
     Source file: VHDL/timer_behaviour_cfg.vhd
     Start location: VHDL/timer_behaviour_cfg.vhd:1
@@ -2547,7 +2547,7 @@ VHDL CONFIGURATION timer_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY timer_tb
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Tue Dec 10 17:13:46 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -2564,6 +2564,7 @@ ENTITY timer_tb
     Depends on: E work timer_tb OYm7PB@Z?<BDd<jl;R`KC1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
     HDL source file: VHDL/timer_tb-behaviour.vhd
     Source file: VHDL/timer_tb-behaviour.vhd
     Start location: VHDL/timer_tb-behaviour.vhd:4
@@ -2572,8 +2573,7 @@ ENTITY timer_tb
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-    Source directory: /master
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Tue Dec 10 17:13:46 2013
     Debug Symbol file exists
 VHDL CONFIGURATION timer_tb_behaviour_cfg
     Configuration for architecture: behaviour

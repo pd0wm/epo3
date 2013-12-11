@@ -202,8 +202,10 @@ WORK__dec8_dec8_behav_cfg = $(LIB_WORK)/dec8_dec8_behav_cfg/_primary.dat
 WORK__dec8__synthesised = $(LIB_WORK)/dec8/synthesised.dat
 WORK__dec8__dec8_behav = $(LIB_WORK)/dec8/dec8_behav.dat
 WORK__dec8 = $(LIB_WORK)/dec8/_primary.dat
+WORK__debounce_tb_behaviour_cfg = $(LIB_WORK)/debounce_tb_behaviour_cfg/_primary.dat
 WORK__debounce_tb__behaviour = $(LIB_WORK)/debounce_tb/behaviour.dat
 WORK__debounce_tb = $(LIB_WORK)/debounce_tb/_primary.dat
+WORK__debounce_behaviour_cfg = $(LIB_WORK)/debounce_behaviour_cfg/_primary.dat
 WORK__debounce__behaviour = $(LIB_WORK)/debounce/behaviour.dat
 WORK__debounce = $(LIB_WORK)/debounce/_primary.dat
 WORK__de_piece_testbench_behaviour_cfg = $(LIB_WORK)/de_piece_testbench_behaviour_cfg/_primary.dat
@@ -437,8 +439,10 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__dec8__synthesised) \
     $(WORK__dec8__dec8_behav) \
     $(WORK__dec8) \
+    $(WORK__debounce_tb_behaviour_cfg) \
     $(WORK__debounce_tb__behaviour) \
     $(WORK__debounce_tb) \
+    $(WORK__debounce_behaviour_cfg) \
     $(WORK__debounce__behaviour) \
     $(WORK__debounce) \
     $(WORK__de_piece_testbench_behaviour_cfg) \
@@ -885,12 +889,31 @@ $(WORK__debounce__behaviour) : VHDL/debounce_behav.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/debounce_behav.vhd
 
+$(WORK__debounce_behaviour_cfg) : VHDL/debounce_behaviour_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__debounce__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__debounce)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/debounce_behaviour_cfg.vhd
+
 $(WORK__debounce_tb) \
 $(WORK__debounce_tb__behaviour) : VHDL/debounce_tb.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/debounce_tb.vhd
+
+$(WORK__debounce_tb_behaviour_cfg) : VHDL/debounce_tb_behaviour_cfg.vhd \
+		$(WORK__debounce) \
+		$(WORK__debounce_behaviour_cfg) \
+		$(WORK__debounce_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__debounce_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/debounce_tb_behaviour_cfg.vhd
 
 $(WORK__dec8) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd \
 		$(STD__textio) \
