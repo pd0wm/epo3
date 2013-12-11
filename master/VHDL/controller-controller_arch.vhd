@@ -21,8 +21,6 @@ architecture controller_arch of controller is
 	signal new_lut_y             : std_logic_vector(3 downto 0);
 	signal new_lut_rot           : std_logic_vector(1 downto 0);
 	signal new_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal new_new_piece         : std_logic;
-	signal new_check_start       : std_logic;
 	signal new_draw_erase_draw   : std_logic;
 	signal new_draw_erase_start  : std_logic;
 	signal new_clear_shift_start : std_logic;
@@ -37,8 +35,6 @@ architecture controller_arch of controller is
 	signal cur_lut_rot           : std_logic_vector(1 downto 0);
 	signal cur_lut_next_piece    : std_logic;
 	signal cur_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal cur_new_piece         : std_logic;
-	signal cur_check_start       : std_logic;
 	signal cur_draw_erase_draw   : std_logic;
 	signal cur_draw_erase_start  : std_logic;
 	signal cur_clear_shift_start : std_logic;
@@ -76,8 +72,6 @@ begin
 				cur_lut_rot        <= new_lut_rot;
 				cur_lut_piece_type <= new_lut_piece_type;
 
-				cur_new_piece         <= new_new_piece;
-				cur_check_start       <= new_check_start;
 				cur_draw_erase_draw   <= new_draw_erase_draw;
 				cur_draw_erase_start  <= new_draw_erase_start;
 				cur_clear_shift_start <= new_clear_shift_start;
@@ -94,8 +88,7 @@ begin
 		lut_y             <= new_lut_y;
 		lut_rot           <= new_lut_rot;
 		lut_piece_type    <= new_lut_piece_type;
-		new_piece         <= new_new_piece;
-		check_start       <= new_check_start;
+		
 		draw_erase_draw   <= new_draw_erase_draw;
 		draw_erase_start  <= new_draw_erase_start;
 		clear_shift_start <= new_clear_shift_start;
@@ -127,8 +120,6 @@ begin
 		new_lut_piece_type <= cur_lut_piece_type;
 		new_lut_next_piece <= cur_lut_next_piece;
 
-		new_new_piece         <= cur_new_piece;
-		new_check_start       <= cur_check_start;
 		new_draw_erase_draw   <= cur_draw_erase_draw;
 		new_draw_erase_start  <= cur_draw_erase_start;
 		new_clear_shift_start <= cur_clear_shift_start;
@@ -136,6 +127,10 @@ begin
 		new_timer_1_time      <= cur_timer_1_time;
 		new_timer_1_start     <= cur_timer_1_start;
 		new_timer_1_reset     <= cur_timer_1_reset;
+		
+		
+		new_piece         <= '0';
+		check_start       <= '0';
 
 		case cur_state is
 			when reset =>
@@ -146,10 +141,6 @@ begin
 				new_lut_piece_type    <= (others => '0');
 				new_future_piece      <= (others => '0');
 				new_lut_next_piece    <= '0';
-				-- next piece
-				new_new_piece         <= '0';
-				--check mask
-				new_check_start       <= '0';
 				-- draw erase
 				new_draw_erase_draw   <= '0';
 				new_draw_erase_start  <= '0';
@@ -167,7 +158,6 @@ begin
 				new_cur_x       <= (others => '0');
 				new_cur_y       <= (others => '0');
 				new_cur_rot     <= (others => '0');
-				new_new_piece   <= '0';
 				new_cur_x_new   <= (others => '0');
 				new_cur_y_new   <= (others => '0');
 				new_cur_rot_new <= (others => '0');
@@ -177,14 +167,14 @@ begin
 			when init =>
 				new_timer_1_time <= '1'; -- 30, .5 second
 				new_future_piece <= next_piece;
-				new_new_piece    <= '1';
+				new_piece    <= '1';
 
 				next_state <= gen_piece_1;
 
 			when gen_piece_1 =>
 				new_cur_piece    <= cur_future_piece;
 				new_future_piece <= next_piece;
-				new_new_piece    <= '1';
+				new_piece    <= '1';
 
 				new_cur_x <= "011";
 				new_cur_y <= "0000";
@@ -192,7 +182,6 @@ begin
 				next_state <= gen_piece_2;
 
 			when gen_piece_2 =>
-				new_new_piece <= '0';
 				next_state    <= draw_next_piece_1;
 				
 			when draw_next_piece_1 =>
@@ -252,11 +241,12 @@ begin
 
 			when collision_3 =>
 				-- Check mask
-				new_check_start <= '1';
+				check_start <= '1';
 
 				next_state <= collision_4;
 
 			when collision_4 =>
+				check_start <= '1';
 				-- Wait for check mask ready, about ?
 				if (check_ready = '1') then
 					next_state <= collision_5;
@@ -265,8 +255,6 @@ begin
 				end if;
 
 			when collision_5 =>
-				new_check_start <= '0';
-
 				if (check_empty = '0') then
 					next_state <= game_over;
 				else
@@ -382,11 +370,12 @@ begin
 				new_lut_y          <= new_cur_y_new;
 				new_lut_piece_type <= new_cur_piece;
 
-				new_check_start <= '1';
+				check_start <= '1';
 
 				next_state <= space_5;
 
 			when space_5 =>
+				check_start <= '1';
 				if (check_ready = '1') then
 					next_state <= space_6;
 				else
@@ -394,8 +383,6 @@ begin
 				end if;
 
 			when space_6 =>
-				new_check_start <= '0';
-
 				if (check_empty = '1') then
 					new_cur_y  <= cur_y_new;
 					next_state <= move_down_1;
@@ -511,11 +498,12 @@ begin
 				new_lut_y          <= new_cur_y_new;
 				new_lut_piece_type <= new_cur_piece;
 
-				new_check_start <= '1';
+				check_start <= '1';
 
 				next_state <= move_left_6;
 
 			when move_left_6 =>
+				check_start <= '1';
 				-- Wait for check
 				if (check_ready = '1') then
 					next_state <= move_left_7;
@@ -524,7 +512,6 @@ begin
 				end if;
 
 			when move_left_7 =>
-				new_check_start <= '0';
 				if (check_empty = '1') then
 					next_state <= move_left_8;
 				else
