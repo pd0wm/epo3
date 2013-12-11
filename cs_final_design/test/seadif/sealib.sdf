@@ -1,0 +1,295 @@
+(Seadif "Doktor Fremdenliebe"
+   (Library "test"
+      (Alias "EPO-3:/home/epo3-user/Desktop/git/epo3/cs_final_design/test")
+      (Technology "fishbone")
+      (Status
+	 (Written
+	    (TimeStamp 113 12 11 21 26 13)
+	    (Author "by user; cpu EPO-3; disk EPO-3:/home/epo3-user/Desktop/git/epo3/cs_final_design/test")
+	    (Program "nelsea")))
+      (Function "cs_adder7"
+	 (Status
+	    (Written
+	       (TimeStamp 113 12 11 21 23 32)
+	       (Author "by user; cpu EPO-3; disk EPO-3:/home/epo3-user/Desktop/git/epo3/cs_final_design/test")
+	       (Program "nelsea")))
+	 (FunType "no type")
+	 (Circuit "cs_adder7"
+	    (Status
+	       (Written
+		  (TimeStamp 113 12 11 21 23 32)
+		  (Author "by user; cpu EPO-3; disk EPO-3:/home/epo3-user/Desktop/git/epo3/cs_final_design/test")
+		  (Program "sea; checked and OK")))
+	    (CirPortList
+	       (CirPort "i_6_0_6")
+	       (CirPort "i_6_0_5")
+	       (CirPort "i_6_0_4")
+	       (CirPort "i_6_0_3")
+	       (CirPort "i_6_0_2")
+	       (CirPort "i_6_0_1")
+	       (CirPort "i_6_0_0")
+	       (CirPort "o_6_0_6")
+	       (CirPort "o_6_0_5")
+	       (CirPort "o_6_0_4")
+	       (CirPort "o_6_0_3")
+	       (CirPort "o_6_0_2")
+	       (CirPort "o_6_0_1")
+	       (CirPort "o_6_0_0")
+	       (CirPort "vss")
+	       (CirPort "vdd"))
+	    (CirInstList
+	       (CirInst "U7" (CirCellRef "ex210" (CirFunRef "ex210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U8" (CirCellRef "no210" (CirFunRef "no210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U9" (CirCellRef "ex210" (CirFunRef "ex210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U10" (CirCellRef "na210" (CirFunRef "na210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U11" (CirCellRef "na210" (CirFunRef "na210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U12" (CirCellRef "iv110" (CirFunRef "iv110" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U13" (CirCellRef "no210" (CirFunRef "no210" (CirLibRef "g_digilib5_99"))) "")
+	       (CirInst "U14" (CirCellRef "iv110" (CirFunRef "iv110" (CirLibRef "g_digilib5_99"))) ""))
+	    (NetList
+	       (Net "o_6_0_6"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U7"))
+		     (NetPortRef "o_6_0_6")))
+	       (Net "o_6_0_5"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U9"))
+		     (NetPortRef "o_6_0_5")))
+	       (Net "o_6_0_4"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U10"))
+		     (NetPortRef "o_6_0_4")))
+	       (Net "o_6_0_3"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U14"))
+		     (NetPortRef "o_6_0_3")))
+	       (Net "o_6_0_2"
+		  (Joined
+		     (NetPortRef "i_6_0_2")
+		     (NetPortRef "o_6_0_2")))
+	       (Net "o_6_0_1"
+		  (Joined
+		     (NetPortRef "i_6_0_1")
+		     (NetPortRef "o_6_0_1")))
+	       (Net "o_6_0_0"
+		  (Joined
+		     (NetPortRef "i_6_0_0")
+		     (NetPortRef "o_6_0_0")))
+	       (Net "i_6_0_6"
+		  (Joined
+		     (NetPortRef "A" (NetInstRef "U7"))
+		     (NetPortRef "i_6_0_6")))
+	       (Net "n5"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U8"))
+		     (NetPortRef "B" (NetInstRef "U7"))))
+	       (Net "vss"
+		  (Joined
+		     (NetPortRef "vss" (NetInstRef "U14"))
+		     (NetPortRef "vss" (NetInstRef "U13"))
+		     (NetPortRef "vss" (NetInstRef "U12"))
+		     (NetPortRef "vss" (NetInstRef "U11"))
+		     (NetPortRef "vss" (NetInstRef "U10"))
+		     (NetPortRef "vss" (NetInstRef "U9"))
+		     (NetPortRef "vss" (NetInstRef "U8"))
+		     (NetPortRef "vss" (NetInstRef "U7"))
+		     (NetPortRef "vss")))
+	       (Net "vdd"
+		  (Joined
+		     (NetPortRef "vdd" (NetInstRef "U14"))
+		     (NetPortRef "vdd" (NetInstRef "U13"))
+		     (NetPortRef "vdd" (NetInstRef "U12"))
+		     (NetPortRef "vdd" (NetInstRef "U11"))
+		     (NetPortRef "vdd" (NetInstRef "U10"))
+		     (NetPortRef "vdd" (NetInstRef "U9"))
+		     (NetPortRef "vdd" (NetInstRef "U8"))
+		     (NetPortRef "vdd" (NetInstRef "U7"))
+		     (NetPortRef "vdd")))
+	       (Net "i_6_0_5"
+		  (Joined
+		     (NetPortRef "A" (NetInstRef "U9"))
+		     (NetPortRef "A" (NetInstRef "U8"))
+		     (NetPortRef "i_6_0_5")))
+	       (Net "n6"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U12"))
+		     (NetPortRef "A" (NetInstRef "U10"))
+		     (NetPortRef "B" (NetInstRef "U8"))))
+	       (Net "n7"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U13"))
+		     (NetPortRef "A" (NetInstRef "U12"))
+		     (NetPortRef "B" (NetInstRef "U9"))))
+	       (Net "n8"
+		  (Joined
+		     (NetPortRef "Y" (NetInstRef "U11"))
+		     (NetPortRef "B" (NetInstRef "U10"))))
+	       (Net "i_6_0_4"
+		  (Joined
+		     (NetPortRef "A" (NetInstRef "U13"))
+		     (NetPortRef "A" (NetInstRef "U11"))
+		     (NetPortRef "i_6_0_4")))
+	       (Net "i_6_0_3"
+		  (Joined
+		     (NetPortRef "A" (NetInstRef "U14"))
+		     (NetPortRef "B" (NetInstRef "U13"))
+		     (NetPortRef "B" (NetInstRef "U11"))
+		     (NetPortRef "i_6_0_3"))))
+	    (Layout "Tmp_Cell_"
+	       (Status
+		  (Written
+		     (TimeStamp 113 12 11 21 26 13)
+		     (Author "by user; EPO-3:/home/epo3-user/Desktop/git/epo3/cs_final_design/test")
+		     (Program "trout")))
+	       (LayBbx 15 28)
+	       (LayPortList
+		  (LayPort "o_6_0_6" (PortPos 10 1) (PortLayer 1))
+		  (LayPort "o_6_0_5" (PortPos 10 27) (PortLayer 1))
+		  (LayPort "o_6_0_4" (PortPos 0 9) (PortLayer 0))
+		  (LayPort "o_6_0_3" (PortPos 0 4) (PortLayer 0))
+		  (LayPort "i_6_0_2" (PortPos 14 27) (PortLayer 1))
+		  (LayPort "o_6_0_2" (PortPos 14 26) (PortLayer 1))
+		  (LayPort "i_6_0_1" (PortPos 14 25) (PortLayer 1))
+		  (LayPort "o_6_0_1" (PortPos 14 24) (PortLayer 1))
+		  (LayPort "i_6_0_0" (PortPos 14 23) (PortLayer 1))
+		  (LayPort "o_6_0_0" (PortPos 14 22) (PortLayer 1))
+		  (LayPort "i_6_0_6" (PortPos 8 1) (PortLayer 0))
+		  (LayPort "vss" (PortPos 8 0) (PortLayer 0))
+		  (LayPort "vdd" (PortPos 8 14) (PortLayer 0))
+		  (LayPort "i_6_0_5" (PortPos 0 24) (PortLayer 0))
+		  (LayPort "i_6_0_4" (PortPos 0 6) (PortLayer 0))
+		  (LayPort "i_6_0_3" (PortPos 1 1) (PortLayer 1)))
+	       (LayLabelList
+		  (LayLabel "n5" (LabelPos 7 21) (LabelLayer 0))
+		  (LayLabel "n6" (LabelPos 4 22) (LabelLayer 0))
+		  (LayLabel "n7" (LabelPos 2 21) (LabelLayer 0))
+		  (LayLabel "n8" (LabelPos 2 6) (LabelLayer 0)))
+	       (LayInstList
+		  (LayInst "U14"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 3 0 1 0))
+		  (LayInst "U13"
+		     (LayCellRef "no210" (LayCirRef "no210" (LayFunRef "no210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 -1 28))
+		  (LayInst "U11"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 0 0 1 0))
+		  (LayInst "U8"
+		     (LayCellRef "no210" (LayCirRef "no210" (LayFunRef "no210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 5 0 -1 28))
+		  (LayInst "U12"
+		     (LayCellRef "iv110" (LayCirRef "iv110" (LayFunRef "iv110" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 3 0 -1 28))
+		  (LayInst "U10"
+		     (LayCellRef "na210" (LayCirRef "na210" (LayFunRef "na210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 5 0 1 0))
+		  (LayInst "U9"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 8 0 -1 28))
+		  (LayInst "U7"
+		     (LayCellRef "ex210" (LayCirRef "ex210" (LayFunRef "ex210" (LayLibRef "g_digilib5_99"))))
+		     (Orient 1 0 8 0 1 0)))
+	       (WireList
+		  (Wire 2 1 2 4 5)
+		  (Wire 2 1 2 3 4)
+		  (Wire 2 1 2 2 3)
+		  (Wire 100 1 1 1 1)
+		  (Wire 101 9 9 28 28)
+		  (Wire 101 7 7 23 23)
+		  (Wire 101 5 5 20 20)
+		  (Wire 101 1 1 20 20)
+		  (Wire 101 0 0 20 20)
+		  (Wire 101 12 12 19 19)
+		  (Wire 101 12 12 16 16)
+		  (Wire 101 7 7 11 11)
+		  (Wire 101 5 5 8 8)
+		  (Wire 101 2 2 8 8)
+		  (Wire 101 0 0 8 8)
+		  (Wire 101 6 6 5 5)
+		  (Wire 101 3 3 5 5)
+		  (Wire 101 8 8 2 2)
+		  (Wire 101 2 2 2 2)
+		  (Wire 101 1 1 2 2)
+		  (Wire 101 9 9 0 0)
+		  (Wire 1 12 12 15 16)
+		  (Wire 1 12 12 11 13)
+		  (Wire 1 8 8 25 27)
+		  (Wire 1 8 8 1 2)
+		  (Wire 1 6 6 20 21)
+		  (Wire 1 6 6 8 9)
+		  (Wire 1 6 6 5 6)
+		  (Wire 1 5 5 22 25)
+		  (Wire 1 5 5 7 8)
+		  (Wire 1 4 4 4 5)
+		  (Wire 1 3 3 19 21)
+		  (Wire 1 3 3 5 6)
+		  (Wire 1 1 1 20 21)
+		  (Wire 1 1 1 1 2)
+		  (Wire 1 0 0 20 21)
+		  (Wire 1 0 0 7 8)
+		  (Wire 2 14 14 26 27)
+		  (Wire 2 14 14 24 25)
+		  (Wire 2 14 14 22 23)
+		  (Wire 2 12 12 16 19)
+		  (Wire 2 10 10 23 27)
+		  (Wire 2 10 10 1 5)
+		  (Wire 2 9 9 0 28)
+		  (Wire 2 8 8 1 2)
+		  (Wire 2 7 7 11 23)
+		  (Wire 2 6 6 5 6)
+		  (Wire 2 5 5 8 20)
+		  (Wire 2 3 3 6 7)
+		  (Wire 2 2 2 7 8)
+		  (Wire 2 2 2 2 5)
+		  (Wire 2 1 1 1 20)
+		  (Wire 2 0 0 8 20)
+		  (Wire 1 12 14 27 27)
+		  (Wire 1 4 5 27 27)
+		  (Wire 1 12 13 26 26)
+		  (Wire 1 4 5 26 26)
+		  (Wire 1 2 3 26 26)
+		  (Wire 1 5 8 25 25)
+		  (Wire 1 0 5 24 24)
+		  (Wire 1 2 3 22 22)
+		  (Wire 1 2 3 21 21)
+		  (Wire 1 4 6 20 20)
+		  (Wire 1 2 3 20 20)
+		  (Wire 1 3 12 19 19)
+		  (Wire 1 4 5 16 16)
+		  (Wire 1 4 5 15 15)
+		  (Wire 1 4 5 13 13)
+		  (Wire 1 4 5 12 12)
+		  (Wire 1 2 3 12 12)
+		  (Wire 1 7 12 11 11)
+		  (Wire 1 0 6 9 9)
+		  (Wire 1 0 4 4 4)
+		  (Wire 1 12 13 2 2)
+		  (Wire 1 4 5 2 2)
+		  (Wire 1 1 2 2 2)
+		  (Wire 1 12 14 1 1)
+		  (Wire 1 4 5 1 1)
+		  (Wire 2 2 3 7 7)
+		  (Wire 2 3 6 6 6)
+		  (Wire 2 1 3 5 5)
+		  (Wire 2 1 2 4 4)
+		  (Wire 2 1 2 3 3)
+		  (Wire 2 1 2 2 2)))))
+      (Function "Error_Marker_"
+	 (Status
+	    (Written
+	       (TimeStamp 113 12 11 21 23 50)
+	       (Author "me")
+	       (Program "trout")))
+	 (FunType "no type")
+	 (Circuit "Error_Marker_"
+	    (Status
+	       (Written
+		  (TimeStamp 113 12 11 21 23 50)
+		  (Author "me")
+		  (Program "trout")))
+	    (Layout "Error_Marker_"
+	       (Status
+		  (Written
+		     (TimeStamp 113 12 11 21 26 13)))
+	       (WireList
+		  (Wire 200 0 0 0 0)))))))

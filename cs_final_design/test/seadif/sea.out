@@ -1,0 +1,15 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'cs_adder7' ------
+------ circuit 'cs_adder7' is still up-to-date ------
+------ checking match with placement layout 'Tmpcs_adder72632' ------
+------ reading nelsis layout-cell 'Tmpcs_adder72632' ------
+------ writing nelsis 'Tmpcs_adder72632' as sdflay 'Tmp_Cell_(cs_adder7(cs_adder7(test)))' ------
+------ input seems good enough: calling router ------
+calling program: trout -l test -f cs_adder7 -c cs_adder7 -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmpcs_adder72632' ------
+calling program: nelsea -rLH -f cs_adder7 -c cs_adder7 -l Tmp_Cell_ Tmpcs_adder72632 
+------ sea: task completed ------

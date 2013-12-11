@@ -14,7 +14,8 @@ ENTITY cs_7bc
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY cs_7bc_arch
+  ARCHITECTURE BODY cs_7bc_behav
+    Source modified time: Tue Dec 10 16:41:58 2013
     Depends on: E work cs_7bc S:0Ci2?=cl2BkCIOijP6M1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -22,84 +23,197 @@ ENTITY cs_7bc
     HDL source file: VHDL/cs_7bc_arch.vhd
     Source file: VHDL/cs_7bc_arch.vhd
     Start location: VHDL/cs_7bc_arch.vhd:5
-    Version string: SB=3l[0Bm^BR]fM8M>lbm2
+    Version string: o;jT;8AK_4LMhagI]iKh>2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /cs_redesign
-    Source modified time: Tue Dec 10 13:55:58 2013
     Debug Symbol file exists
-VHDL CONFIGURATION cs_7bc_cs_7bc_arch_cfg
-    Configuration for architecture: cs_7bc_arch
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Dec 10 13:58:03 2013
+    Depends on: E work cs_7bc S:0Ci2?=cl2BkCIOijP6M1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/cs_7bc_SYNTH.vhd
+    Source file: VHDL/cs_7bc_SYNTH.vhd
+    Start location: VHDL/cs_7bc_SYNTH.vhd:7
+    Version string: M3Jc?n]0XhA<;8jPZ;naP1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Debug Symbol file exists
+VHDL CONFIGURATION cs_7bc_cs_7bc_behav_cfg
+    Configuration for architecture: cs_7bc_behav
     Configuration for entity: cs_7bc
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work cs_7bc cs_7bc_arch SB=3l[0Bm^BR]fM8M>lbm2
+    Depends on: A work cs_7bc cs_7bc_behav o;jT;8AK_4LMhagI]iKh>2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_7bc S:0Ci2?=cl2BkCIOijP6M1
-    Source modified time: Tue Dec 10 13:57:38 2013
+    Source modified time: Tue Dec 10 17:09:45 2013
     Source directory: cs_redesign
-    HDL source file: VHDL/cs_7bc_cs_7bc_arch_cfg.vhd
-    Source file: VHDL/cs_7bc_cs_7bc_arch_cfg.vhd
-    Start location: VHDL/cs_7bc_cs_7bc_arch_cfg.vhd:1
-    Version string: T<GjRISTWInaWZAKSHD_z0
+    HDL source file: VHDL/cs_7bc_cs_7bc_behav_cfg.vhd
+    Source file: VHDL/cs_7bc_cs_7bc_behav_cfg.vhd
+    Start location: VHDL/cs_7bc_cs_7bc_behav_cfg.vhd:1
+    Version string: n39VYQJ>?A7?:FW;G^IE;3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY cs_7bcws
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /cs_redesign
+    HDL source file: VHDL/cs_7bcws.vhd
+    Source file: VHDL/cs_7bcws.vhd
+    Start location: VHDL/cs_7bcws.vhd:4
+    Version string: :cAV[zQSQ;XBMf4Gk]6f80
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY cs_7bcws_behav
+    Depends on: E work cs_7bcws :cAV[zQSQ;XBMf4Gk]6f80
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/cs_7bcws_arch.vhd
+    Source file: VHDL/cs_7bcws_arch.vhd
+    Start location: VHDL/cs_7bcws_arch.vhd:5
+    Version string: a4UkfQ95<e<o:aLcz_m5`1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION cs_7bcws_cs_7bcws_behav_cfg
+    Configuration for architecture: cs_7bcws_behav
+    Configuration for entity: cs_7bcws
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work cs_7bcws cs_7bcws_behav a4UkfQ95<e<o:aLcz_m5`1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work cs_7bcws :cAV[zQSQ;XBMf4Gk]6f80
+    Source modified time: Tue Dec 10 16:44:47 2013
+    Source directory: cs_redesign
+    HDL source file: VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
+    Source file: VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
+    Start location: VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd:1
+    Version string: adKaDEAd:5[RF1PQncaIL0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY cs_adder7
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /cs_redesign
+    HDL source file: VHDL/cs_adder7.vhd
+    Source file: VHDL/cs_adder7.vhd
+    Start location: VHDL/cs_adder7.vhd:4
+    Version string: Zj_=5XULUhVRZM=JU_<W?1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY cs_addr7_behav
+    Depends on: E work cs_adder7 Zj_=5XULUhVRZM=JU_<W?1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/cs_adder7_arch.vhd
+    Source file: VHDL/cs_adder7_arch.vhd
+    Start location: VHDL/cs_adder7_arch.vhd:5
+    Version string: ^@T=ZJ:UPJTVYa;iDPQcf0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION cs_adder7_cs_addr7_behav_cfg
+    Configuration for architecture: cs_addr7_behav
+    Configuration for entity: cs_adder7
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: A work cs_adder7 cs_addr7_behav ^@T=ZJ:UPJTVYa;iDPQcf0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work cs_adder7 Zj_=5XULUhVRZM=JU_<W?1
+    Source modified time: Tue Dec 10 16:52:26 2013
+    Source directory: cs_redesign
+    HDL source file: VHDL/cs_adder7_cs_addr7_behav_cfg.vhd
+    Source file: VHDL/cs_adder7_cs_addr7_behav_cfg.vhd
+    Start location: VHDL/cs_adder7_cs_addr7_behav_cfg.vhd:1
+    Version string: zL6Q35X4O8NP5^T0:oMk?3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY cs_compare
-    Source modified time: Tue Dec 10 13:55:58 2013
+    Source modified time: Tue Dec 10 16:41:58 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /cs_redesign
     HDL source file: VHDL/cs_compare.vhd
     Source file: VHDL/cs_compare.vhd
     Start location: VHDL/cs_compare.vhd:4
-    Version string: 6j`g=?d>AKXh>XGNS<A2n1
+    Version string: QFhdl>0WWak1Xd5P8NO]o2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY cs_compare_behav
-    Depends on: E work cs_compare 6j`g=?d>AKXh>XGNS<A2n1
+    Depends on: E work cs_compare QFhdl>0WWak1Xd5P8NO]o2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/cs_compare_arch.vhd
     Source file: VHDL/cs_compare_arch.vhd
     Start location: VHDL/cs_compare_arch.vhd:4
-    Version string: ;D<Q^HA^7;ndOljF9Cl?]0
+    Version string: h[Pg]?_5CUnQMmd7A<94Z2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /cs_redesign
-    Source modified time: Tue Dec 10 13:55:58 2013
+    Source modified time: Tue Dec 10 16:41:58 2013
     Debug Symbol file exists
 VHDL CONFIGURATION cs_compare_cs_compare_behav_cfg
     Configuration for architecture: cs_compare_behav
     Configuration for entity: cs_compare
+    Depends on: E work cs_shift m?Gcfz2jT2NeWJP>O49oI1
     Depends on: E work cs_tri7 XV]Nd`kn=mzK`W9BGla121
     Depends on: E work cs_7bc S:0Ci2?=cl2BkCIOijP6M1
+    Depends on: C work cs_shift_cs_shift_behav_cfg 68oe3]:IeSaEkhi@LE_KP0
     Depends on: C work cs_tri7_cs_tri7_behav_cfg UNI2PNEOCJFbgPCUNW2QY3
-    Depends on: C work cs_7bc_cs_7bc_arch_cfg T<GjRISTWInaWZAKSHD_z0
-    Depends on: A work cs_compare cs_compare_behav ;D<Q^HA^7;ndOljF9Cl?]0
+    Depends on: C work cs_7bc_cs_7bc_behav_cfg n39VYQJ>?A7?:FW;G^IE;3
+    Depends on: A work cs_compare cs_compare_behav h[Pg]?_5CUnQMmd7A<94Z2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work cs_compare 6j`g=?d>AKXh>XGNS<A2n1
-    Source modified time: Tue Dec 10 13:57:54 2013
+    Depends on: E work cs_compare QFhdl>0WWak1Xd5P8NO]o2
+    Source modified time: Tue Dec 10 17:09:53 2013
     Source directory: cs_redesign
     HDL source file: VHDL/cs_compare_cs_compare_behav_cfg.vhd
     Source file: VHDL/cs_compare_cs_compare_behav_cfg.vhd
     Start location: VHDL/cs_compare_cs_compare_behav_cfg.vhd:1
-    Version string: 0z>Ih89VhRV:8^3Vi4`0;3
+    Version string: z^Lf@>KB[Xo;>>IM`>VC<2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY cs_compare_tb
-    Source modified time: Tue Dec 10 13:55:58 2013
+    Source modified time: Tue Dec 10 16:41:58 2013
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
@@ -119,15 +233,129 @@ ENTITY cs_compare_tb
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_compare_tb XEP5OC>92<OYKN<OU:SlS1
     Start location: VHDL/cs_compare_tb.vhd:8
-    Version string: 440H1_3;Vm[`0>=hne_Zf1
+    Version string: Qc2Q5BFEZ=D<mnmoW1za_3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /cs_redesign
     Source file: VHDL/cs_compare_tb.vhd
-    Source modified time: Tue Dec 10 13:55:58 2013
+    Source modified time: Tue Dec 10 16:41:58 2013
     HDL source file: VHDL/cs_compare_tb.vhd
+    Debug Symbol file exists
+ENTITY cs_compare_tb_old
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /cs_redesign
+    HDL source file: VHDL/cs_compare_tb_old.vhd
+    Source file: VHDL/cs_compare_tb_old.vhd
+    Start location: VHDL/cs_compare_tb_old.vhd:5
+    Version string: lTcQQ?:nODP0ehHD;<RPk0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY cs_compare_tb_behav
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work cs_compare_tb_old lTcQQ?:nODP0ehHD;<RPk0
+    Start location: VHDL/cs_compare_tb_old.vhd:8
+    Version string: L=ZO5Pe7@RQYFO6:Z6OF?3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Source file: VHDL/cs_compare_tb_old.vhd
+    Source modified time: Tue Dec 10 16:41:58 2013
+    HDL source file: VHDL/cs_compare_tb_old.vhd
+    Debug Symbol file exists
+ENTITY cs_shift
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /cs_redesign
+    HDL source file: VHDL/cs_shift.vhd
+    Source file: VHDL/cs_shift.vhd
+    Start location: VHDL/cs_shift.vhd:4
+    Version string: m?Gcfz2jT2NeWJP>O49oI1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY cs_shift_behav
+    Depends on: E work cs_shift m?Gcfz2jT2NeWJP>O49oI1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/cs_shift_arch.vhd
+    Source file: VHDL/cs_shift_arch.vhd
+    Start location: VHDL/cs_shift_arch.vhd:4
+    Version string: nBI19V]h4<KTQFb@Bzi=?3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Debug Symbol file exists
+VHDL CONFIGURATION cs_shift_cs_shift_behav_cfg
+    Configuration for architecture: cs_shift_behav
+    Configuration for entity: cs_shift
+    Depends on: E work cs_adder7 Zj_=5XULUhVRZM=JU_<W?1
+    Depends on: E work cs_7bcws :cAV[zQSQ;XBMf4Gk]6f80
+    Depends on: E work cs_tri7 XV]Nd`kn=mzK`W9BGla121
+    Depends on: C work cs_adder7_cs_addr7_behav_cfg zL6Q35X4O8NP5^T0:oMk?3
+    Depends on: C work cs_7bcws_cs_7bcws_behav_cfg adKaDEAd:5[RF1PQncaIL0
+    Depends on: C work cs_tri7_cs_tri7_behav_cfg UNI2PNEOCJFbgPCUNW2QY3
+    Depends on: A work cs_shift cs_shift_behav nBI19V]h4<KTQFb@Bzi=?3
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work cs_shift m?Gcfz2jT2NeWJP>O49oI1
+    Source modified time: Tue Dec 10 16:53:44 2013
+    Source directory: cs_redesign
+    HDL source file: VHDL/cs_shift_cs_shift_behav_cfg.vhd
+    Source file: VHDL/cs_shift_cs_shift_behav_cfg.vhd
+    Start location: VHDL/cs_shift_cs_shift_behav_cfg.vhd:1
+    Version string: 68oe3]:IeSaEkhi@LE_KP0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY cs_shift_tb
+    Source modified time: Tue Dec 10 16:41:58 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /cs_redesign
+    HDL source file: VHDL/cs_shift_tb.vhd
+    Source file: VHDL/cs_shift_tb.vhd
+    Start location: VHDL/cs_shift_tb.vhd:5
+    Version string: 7kXoahege:fJlI;@m=Q^^2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY cs_shift_tb_behav
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work cs_shift_tb 7kXoahege:fJlI;@m=Q^^2
+    Start location: VHDL/cs_shift_tb.vhd:8
+    Version string: PWUO=kJ6ol6g8LKPBcBOA3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
+    Source file: VHDL/cs_shift_tb.vhd
+    Source modified time: Tue Dec 10 16:41:58 2013
+    HDL source file: VHDL/cs_shift_tb.vhd
     Debug Symbol file exists
 ENTITY cs_tri7
     Source modified time: Tue Dec 10 13:55:58 2013
@@ -142,6 +370,22 @@ ENTITY cs_tri7
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Tue Dec 10 14:00:58 2013
+    Depends on: E work cs_tri7 XV]Nd`kn=mzK`W9BGla121
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/cs_tri7_SYNTH.vhd
+    Source file: VHDL/cs_tri7_SYNTH.vhd
+    Start location: VHDL/cs_tri7_SYNTH.vhd:7
+    Version string: z[cFhAABB9g<OIA4fc=`91
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /cs_redesign
     Debug Symbol file exists
   ARCHITECTURE BODY cs_tri7_behav
     Depends on: E work cs_tri7 XV]Nd`kn=mzK`W9BGla121
@@ -167,7 +411,7 @@ VHDL CONFIGURATION cs_tri7_cs_tri7_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_tri7 XV]Nd`kn=mzK`W9BGla121
-    Source modified time: Tue Dec 10 13:57:48 2013
+    Source modified time: Tue Dec 10 16:53:39 2013
     Source directory: cs_redesign
     HDL source file: VHDL/cs_tri7_cs_tri7_behav_cfg.vhd
     Source file: VHDL/cs_tri7_cs_tri7_behav_cfg.vhd

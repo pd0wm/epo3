@@ -9,11 +9,11 @@ set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
 set company "ontwerp_practicum"
 set designer "epo3-user"
 set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
-set link_library [list "*" "./ADB/cs_tri7.ddc" "./ADB/cs_7bc.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+set link_library [list "*" "./ADB/cs_shift.ddc" "./ADB/cs_adder7.ddc" "./ADB/cs_7bcws.ddc" "./ADB/cs_tri7.ddc" "./ADB/cs_tri7.ddc" "./ADB/cs_7bc.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
 define_design_lib MY_LIB -path ./syn_work
 define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
 read_file -format vhdl -work MY_LIB {VHDL/cs_compare.vhd VHDL/cs_compare_arch.vhd}
-set_dont_touch {cs_tri7 cs_7bc}
+set_dont_touch {cs_shift cs_tri7 cs_7bc}
 set_dont_touch {g_analib8_00/*}
 # set_max_fanout 1.8 all_inputs() 
 # set_max_area 1000 

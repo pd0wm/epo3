@@ -22,51 +22,196 @@ Z7 tExplicit 1
 !s108 1386680248.771326
 !s90 -lower|-explicit|-work|work|VHDL/cs_7bc.vhd|-quiet|-nologo|
 !s107 VHDL/cs_7bc.vhd|
-Acs_7bc_arch
-Z8 DEx4 work 6 cs_7bc 0 22 S:0Ci2?=cl2BkCIOijP6M1
-Z9 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Acs_7bc_behav
+Z8 w1386690118
+Z9 DEx4 work 6 cs_7bc 0 22 S:0Ci2?=cl2BkCIOijP6M1
+Z10 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 R2
 R3
 8VHDL/cs_7bc_arch.vhd
 FVHDL/cs_7bc_arch.vhd
 l7
 L5
-VSB=3l[0Bm^BR]fM8M>lbm2
+Vo;jT;8AK_4LMhagI]iKh>2
 R5
 32
 R6
 R7
-!s100 WVlKOZ?neIZLRA=SfV6Vi0
-!i10b 1
-!s108 1386680249.009663
 !s90 -lower|-explicit|-work|work|VHDL/cs_7bc_arch.vhd|-quiet|-nologo|
 !s107 VHDL/cs_7bc_arch.vhd|
-Ccs_7bc_cs_7bc_arch_cfg
-acs_7bc_arch
-ecs_7bc
+!s100 I8cZml8@zGD0BUiNBoGO03
+!i10b 1
+!s108 1386690164.288917
+Asynthesised
+w1386680283
 R9
-DAx4 work 6 cs_7bc 11 cs_7bc_arch 22 SB=3l[0Bm^BR]fM8M>lbm2
+Z11 DPx8 cellslib 18 cellslib_decl_pack 0 22 QXc5jY9ngocCTOzQ`UlIE2
 R2
 R3
-R8
-w1386680258
-Z10 dcs_redesign
-8VHDL/cs_7bc_cs_7bc_arch_cfg.vhd
-FVHDL/cs_7bc_cs_7bc_arch_cfg.vhd
-l0
-L1
-VT<GjRISTWInaWZAKSHD_z0
+8VHDL/cs_7bc_SYNTH.vhd
+FVHDL/cs_7bc_SYNTH.vhd
+l37
+L7
+VM3Jc?n]0XhA<;8jPZ;naP1
 R5
 32
 R6
 R7
-!s100 ao@?4fbIjJB`:[2[4DikQ3
+!s100 oaFRgT1BS`AUUzb1nTzHV0
+!i10b 1
+!s108 1386690164.208312
+!s90 -lower|-explicit|-work|work|VHDL/cs_7bc_SYNTH.vhd|-quiet|-nologo|
+!s107 VHDL/cs_7bc_SYNTH.vhd|
+Ccs_7bc_cs_7bc_behav_cfg
+acs_7bc_behav
+ecs_7bc
+R10
+DAx4 work 6 cs_7bc 12 cs_7bc_behav 22 o;jT;8AK_4LMhagI]iKh>2
+R2
+R3
+R9
+w1386691785
+Z12 dcs_redesign
+8VHDL/cs_7bc_cs_7bc_behav_cfg.vhd
+FVHDL/cs_7bc_cs_7bc_behav_cfg.vhd
+l0
+L1
+Vn39VYQJ>?A7?:FW;G^IE;3
+R5
+32
+R6
+R7
+!s100 GaPaF=M@C[>iCiagKi^6P3
 !i10b 0
-!s108 1386680258.753266
-!s90 -lower|-explicit|-work|work|VHDL/cs_7bc_cs_7bc_arch_cfg.vhd|-quiet|-nologo|
-!s107 VHDL/cs_7bc_cs_7bc_arch_cfg.vhd|
+!s108 1386691785.451168
+!s90 -lower|-explicit|-work|work|VHDL/cs_7bc_cs_7bc_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/cs_7bc_cs_7bc_behav_cfg.vhd|
+Ecs_7bcws
+R8
+R2
+R3
+R4
+8VHDL/cs_7bcws.vhd
+FVHDL/cs_7bcws.vhd
+l0
+L4
+V:cAV[zQSQ;XBMf4Gk]6f80
+R5
+32
+R6
+R7
+!s100 2>]H]DeZoF`iHk@VWNK^P0
+!i10b 1
+!s108 1386690164.046929
+!s90 -lower|-explicit|-work|work|VHDL/cs_7bcws.vhd|-quiet|-nologo|
+!s107 VHDL/cs_7bcws.vhd|
+Acs_7bcws_behav
+Z13 DEx4 work 8 cs_7bcws 0 22 :cAV[zQSQ;XBMf4Gk]6f80
+R10
+R2
+R3
+8VHDL/cs_7bcws_arch.vhd
+FVHDL/cs_7bcws_arch.vhd
+l7
+L5
+Va4UkfQ95<e<o:aLcz_m5`1
+R5
+32
+R6
+R7
+!s100 U?;R[o8g@2IzMAU`WKRUb1
+!i10b 1
+!s108 1386690164.247056
+!s90 -lower|-explicit|-work|work|VHDL/cs_7bcws_arch.vhd|-quiet|-nologo|
+!s107 VHDL/cs_7bcws_arch.vhd|
+Ccs_7bcws_cs_7bcws_behav_cfg
+acs_7bcws_behav
+ecs_7bcws
+R10
+DAx4 work 8 cs_7bcws 14 cs_7bcws_behav 22 a4UkfQ95<e<o:aLcz_m5`1
+R2
+R3
+R13
+w1386690287
+R12
+8VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
+FVHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
+l0
+L1
+VadKaDEAd:5[RF1PQncaIL0
+R5
+32
+R6
+R7
+!s100 ^oYbf5gD@7?EmYDeaW]XQ0
+!i10b 0
+!s108 1386690287.765873
+!s90 -lower|-explicit|-work|work|VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd|
+Ecs_adder7
+R8
+R2
+R3
+R4
+8VHDL/cs_adder7.vhd
+FVHDL/cs_adder7.vhd
+l0
+L4
+VZj_=5XULUhVRZM=JU_<W?1
+R5
+32
+R6
+R7
+!s100 7YiozX9zDDjOkiOzSGNg42
+!i10b 1
+!s108 1386690163.971917
+!s90 -lower|-explicit|-work|work|VHDL/cs_adder7.vhd|-quiet|-nologo|
+!s107 VHDL/cs_adder7.vhd|
+Acs_addr7_behav
+Z14 DEx4 work 9 cs_adder7 0 22 Zj_=5XULUhVRZM=JU_<W?1
+R10
+R2
+R3
+8VHDL/cs_adder7_arch.vhd
+FVHDL/cs_adder7_arch.vhd
+l6
+L5
+V^@T=ZJ:UPJTVYa;iDPQcf0
+R5
+32
+R6
+R7
+!s100 =VO:cWcj;^[^iWmODdnD:1
+!i10b 1
+!s108 1386690164.122628
+!s90 -lower|-explicit|-work|work|VHDL/cs_adder7_arch.vhd|-quiet|-nologo|
+!s107 VHDL/cs_adder7_arch.vhd|
+Ccs_adder7_cs_addr7_behav_cfg
+acs_addr7_behav
+ecs_adder7
+R10
+DAx4 work 9 cs_adder7 14 cs_addr7_behav 22 ^@T=ZJ:UPJTVYa;iDPQcf0
+R2
+R3
+R14
+w1386690746
+R12
+8VHDL/cs_adder7_cs_addr7_behav_cfg.vhd
+FVHDL/cs_adder7_cs_addr7_behav_cfg.vhd
+l0
+L1
+VzL6Q35X4O8NP5^T0:oMk?3
+R5
+32
+R6
+R7
+!s100 mJ4Re9LM[TUJh5LT`U<Qf0
+!i10b 0
+!s108 1386690746.485593
+!s90 -lower|-explicit|-work|work|VHDL/cs_adder7_cs_addr7_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/cs_adder7_cs_addr7_behav_cfg.vhd|
 Ecs_compare
-R1
+R8
 R2
 R3
 R4
@@ -74,97 +219,239 @@ R4
 FVHDL/cs_compare.vhd
 l0
 L4
-V6j`g=?d>AKXh>XGNS<A2n1
+VQFhdl>0WWak1Xd5P8NO]o2
 R5
 32
-R6
+Z15 o-2002 -lower -explicit -work work -quiet -nologo
 R7
-!s100 jN>[Xc][ITX>WOVDMhDWd1
+!s100 K[_hGRR:A6SO]C4@DfWQz0
 !i10b 1
-!s108 1386680248.814099
-!s90 -lower|-explicit|-work|work|VHDL/cs_compare.vhd|-quiet|-nologo|
+!s108 1386690839.542765
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/cs_compare.vhd|
 !s107 VHDL/cs_compare.vhd|
 Acs_compare_behav
-Z11 DEx4 work 10 cs_compare 0 22 6j`g=?d>AKXh>XGNS<A2n1
+Z16 DEx4 work 10 cs_compare 0 22 QFhdl>0WWak1Xd5P8NO]o2
 R2
 R3
 8VHDL/cs_compare_arch.vhd
 FVHDL/cs_compare_arch.vhd
-l26
+l39
 L4
-V;D<Q^HA^7;ndOljF9Cl?]0
+Vh[Pg]?_5CUnQMmd7A<94Z2
 R5
 32
-R6
+R15
 R7
-!s100 <ik9Eg_@;d`6[NZaVH6j_0
+!s100 f4<MzjmAG0DKnR4lZ`SIk0
 !i10b 1
-!s108 1386680248.932070
-!s90 -lower|-explicit|-work|work|VHDL/cs_compare_arch.vhd|-quiet|-nologo|
+!s108 1386690839.579264
+!s90 -2002|-lower|-explicit|-work|work|-quiet|-nologo|VHDL/cs_compare_arch.vhd|
 !s107 VHDL/cs_compare_arch.vhd|
 Ccs_compare_cs_compare_behav_cfg
 acs_compare_behav
 ecs_compare
-Z12 DEx4 work 7 cs_tri7 0 22 XV]Nd`kn=mzK`W9BGla121
-R8
-DCx4 work 25 cs_tri7_cs_tri7_behav_cfg 0 22 UNI2PNEOCJFbgPCUNW2QY3
-DCx4 work 22 cs_7bc_cs_7bc_arch_cfg 0 22 T<GjRISTWInaWZAKSHD_z0
-DAx4 work 10 cs_compare 16 cs_compare_behav 22 ;D<Q^HA^7;ndOljF9Cl?]0
+Z17 DEx4 work 8 cs_shift 0 22 m?Gcfz2jT2NeWJP>O49oI1
+Z18 DEx4 work 7 cs_tri7 0 22 XV]Nd`kn=mzK`W9BGla121
+R9
+DCx4 work 27 cs_shift_cs_shift_behav_cfg 0 22 68oe3]:IeSaEkhi@LE_KP0
+Z19 DCx4 work 25 cs_tri7_cs_tri7_behav_cfg 0 22 UNI2PNEOCJFbgPCUNW2QY3
+DCx4 work 23 cs_7bc_cs_7bc_behav_cfg 0 22 n39VYQJ>?A7?:FW;G^IE;3
+DAx4 work 10 cs_compare 16 cs_compare_behav 22 h[Pg]?_5CUnQMmd7A<94Z2
 R2
 R3
-R11
-w1386680274
+R16
+w1386691793
 dcs_redesign
 8VHDL/cs_compare_cs_compare_behav_cfg.vhd
 FVHDL/cs_compare_cs_compare_behav_cfg.vhd
 l0
 L1
-V0z>Ih89VhRV:8^3Vi4`0;3
-!s100 >dzC_5VzJ`hLPbJF<Z1SH0
+Vz^Lf@>KB[Xo;>>IM`>VC<2
+!s100 1h^=kRFmmojFTOMDijMi?2
 R5
 32
 !i10b 0
-!s108 1386680274.699282
+!s108 1386691794.006277
 !s90 -lower|-explicit|-work|work|VHDL/cs_compare_cs_compare_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/cs_compare_cs_compare_behav_cfg.vhd|
 R6
 R7
 Ecs_compare_tb
-R1
-R9
+R8
+R10
 R2
 R3
 R4
-Z13 8VHDL/cs_compare_tb.vhd
-Z14 FVHDL/cs_compare_tb.vhd
+Z20 8VHDL/cs_compare_tb.vhd
+Z21 FVHDL/cs_compare_tb.vhd
 l0
 L5
 VXEP5OC>92<OYKN<OU:SlS1
 R5
 32
-Z15 !s108 1386680248.850694
-Z16 !s90 -lower|-explicit|-work|work|VHDL/cs_compare_tb.vhd|-quiet|-nologo|
-Z17 !s107 VHDL/cs_compare_tb.vhd|
+Z22 !s108 1386690844.418699
+Z23 !s90 -lower|-explicit|-work|work|VHDL/cs_compare_tb.vhd|-quiet|-nologo|
+Z24 !s107 VHDL/cs_compare_tb.vhd|
 R6
 R7
 !s100 3]FPNDlCU`6HY@PPB8H2=3
 !i10b 1
 Acs_compare_tb_behav
-R9
+R10
 R2
 R3
 DEx4 work 13 cs_compare_tb 0 22 XEP5OC>92<OYKN<OU:SlS1
-l19
+l24
 L8
-V440H1_3;Vm[`0>=hne_Zf1
+VQc2Q5BFEZ=D<mnmoW1za_3
 R5
 32
-R15
-R16
-R17
+R22
+R23
+R24
 R6
 R7
-!s100 J2n=5TiT5bLgGNeb]74Xf0
+!s100 @NNPj`hPfo>ZUHLk23HS02
+!i10b 1
+Ecs_compare_tb_old
+R8
+R10
+R2
+R3
+R4
+Z25 8VHDL/cs_compare_tb_old.vhd
+Z26 FVHDL/cs_compare_tb_old.vhd
+l0
+L5
+VlTcQQ?:nODP0ehHD;<RPk0
+R5
+32
+Z27 !s108 1386690163.930042
+Z28 !s90 -lower|-explicit|-work|work|VHDL/cs_compare_tb_old.vhd|-quiet|-nologo|
+Z29 !s107 VHDL/cs_compare_tb_old.vhd|
+R6
+R7
+!s100 =YLQCPkS2ZjdLg^n4g>_M3
+!i10b 1
+Acs_compare_tb_behav
+R10
+R2
+R3
+DEx4 work 17 cs_compare_tb_old 0 22 lTcQQ?:nODP0ehHD;<RPk0
+l19
+L8
+VL=ZO5Pe7@RQYFO6:Z6OF?3
+R5
+32
+R27
+R28
+R29
+R6
+R7
+!s100 fCZLYzX3;`P6SA1DlThBS0
+!i10b 1
+Ecs_shift
+R8
+R2
+R3
+R4
+8VHDL/cs_shift.vhd
+FVHDL/cs_shift.vhd
+l0
+L4
+Vm?Gcfz2jT2NeWJP>O49oI1
+R5
+32
+R6
+R7
+!s100 WSlR2GSVi_[T8@G1@e=Z93
+!i10b 1
+!s108 1386690164.009742
+!s90 -lower|-explicit|-work|work|VHDL/cs_shift.vhd|-quiet|-nologo|
+!s107 VHDL/cs_shift.vhd|
+Acs_shift_behav
+R17
+R2
+R3
+8VHDL/cs_shift_arch.vhd
+FVHDL/cs_shift_arch.vhd
+l30
+L4
+VnBI19V]h4<KTQFb@Bzi=?3
+R5
+32
+R6
+R7
+!s100 U5j?F8`Gib:Pj;jMUFzi42
+!i10b 1
+!s108 1386690164.084318
+!s90 -lower|-explicit|-work|work|VHDL/cs_shift_arch.vhd|-quiet|-nologo|
+!s107 VHDL/cs_shift_arch.vhd|
+Ccs_shift_cs_shift_behav_cfg
+acs_shift_behav
+ecs_shift
+R14
+R13
+R18
+DCx4 work 28 cs_adder7_cs_addr7_behav_cfg 0 22 zL6Q35X4O8NP5^T0:oMk?3
+DCx4 work 27 cs_7bcws_cs_7bcws_behav_cfg 0 22 adKaDEAd:5[RF1PQncaIL0
+R19
+DAx4 work 8 cs_shift 14 cs_shift_behav 22 nBI19V]h4<KTQFb@Bzi=?3
+R2
+R3
+R17
+w1386690824
+R12
+8VHDL/cs_shift_cs_shift_behav_cfg.vhd
+FVHDL/cs_shift_cs_shift_behav_cfg.vhd
+l0
+L1
+V68oe3]:IeSaEkhi@LE_KP0
+R5
+32
+R6
+R7
+!s100 L;?;lbGgYAIH_z2UdCbDR2
+!i10b 0
+!s108 1386690824.483752
+!s90 -lower|-explicit|-work|work|VHDL/cs_shift_cs_shift_behav_cfg.vhd|-quiet|-nologo|
+!s107 VHDL/cs_shift_cs_shift_behav_cfg.vhd|
+Ecs_shift_tb
+R8
+R10
+R2
+R3
+R4
+Z30 8VHDL/cs_shift_tb.vhd
+Z31 FVHDL/cs_shift_tb.vhd
+l0
+L5
+V7kXoahege:fJlI;@m=Q^^2
+R5
+32
+Z32 !s108 1386690163.879472
+Z33 !s90 -lower|-explicit|-work|work|VHDL/cs_shift_tb.vhd|-quiet|-nologo|
+Z34 !s107 VHDL/cs_shift_tb.vhd|
+R6
+R7
+!s100 1ObPJZ`UDc6NG?L7Te1=43
+!i10b 1
+Acs_shift_tb_behav
+R10
+R2
+R3
+DEx4 work 11 cs_shift_tb 0 22 7kXoahege:fJlI;@m=Q^^2
+l24
+L8
+VPWUO=kJ6ol6g8LKPBcBOA3
+R5
+32
+R32
+R33
+R34
+R6
+R7
+!s100 [OiLe<0S:64@cJJ>FIRJ>1
 !i10b 1
 Ecs_tri7
 R1
@@ -185,9 +472,29 @@ R7
 !s108 1386680248.893844
 !s90 -lower|-explicit|-work|work|VHDL/cs_tri7.vhd|-quiet|-nologo|
 !s107 VHDL/cs_tri7.vhd|
+Asynthesised
+w1386680458
+R18
+R11
+R2
+R3
+8VHDL/cs_tri7_SYNTH.vhd
+FVHDL/cs_tri7_SYNTH.vhd
+l19
+L7
+Vz[cFhAABB9g<OIA4fc=`91
+R5
+32
+R6
+R7
+!s100 mH0eBbb]?gaVjYgB<=THN0
+!i10b 1
+!s108 1386690164.330750
+!s90 -lower|-explicit|-work|work|VHDL/cs_tri7_SYNTH.vhd|-quiet|-nologo|
+!s107 VHDL/cs_tri7_SYNTH.vhd|
 Acs_tri7_behav
-R12
-R9
+R18
+R10
 R2
 R3
 8VHDL/cs_tri7_arch.vhd
@@ -207,13 +514,13 @@ R7
 Ccs_tri7_cs_tri7_behav_cfg
 acs_tri7_behav
 ecs_tri7
-R9
+R10
 DAx4 work 7 cs_tri7 13 cs_tri7_behav 22 5T87IfMAmd`IHHgR_3dSU0
 R2
 R3
+R18
+w1386690819
 R12
-w1386680268
-R10
 8VHDL/cs_tri7_cs_tri7_behav_cfg.vhd
 FVHDL/cs_tri7_cs_tri7_behav_cfg.vhd
 l0
@@ -225,6 +532,6 @@ R6
 R7
 !s100 bJXC=ZP35TQmCL[GD:=SX3
 !i10b 0
-!s108 1386680268.916719
+!s108 1386690819.608508
 !s90 -lower|-explicit|-work|work|VHDL/cs_tri7_cs_tri7_behav_cfg.vhd|-quiet|-nologo|
 !s107 VHDL/cs_tri7_cs_tri7_behav_cfg.vhd|

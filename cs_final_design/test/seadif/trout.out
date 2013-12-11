@@ -1,0 +1,37 @@
+>>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
+>>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ reading placement 'Tmp_Cell_(cs_adder7(cs_adder7(test)))' ------
+------ building data structure  ------
+------ making grid  ------
+------ routing started Wed Dec 11 21:26:13 2013
+ 17 nets have to be routed.
+Routing net 'n8' (2/2): . OK!
+Routing net 'o_6_0_6' (2/2): .b OK!
+Routing net 'o_6_0_5' (2/2): .b OK!
+Routing net 'o_6_0_3' (2/2): .b OK!
+Routing net 'o_6_0_4' (2/2): .b OK!
+Routing net 'i_6_0_6' (2/2): .b OK!
+Routing net 'i_6_0_5' (3/3): ..b OK!
+Routing net 'n7' (3/3): .. OK!
+Routing net 'vdd' :  (Power special)
+Routing net 'n6' (3/3): .. OK!
+Routing net 'n5' (2/2): . OK!
+Routing net 'i_6_0_4' (3/3): ..b OK!
+Routing net 'i_6_0_3' (4/4): ...b OK!
+Routing net 'vss' :  (Power special)
+Routing net 'o_6_0_2' (2/2): . OK!
+Routing net 'o_6_0_1' (2/2): . OK!
+Routing net 'o_6_0_0' (2/2): . OK!
+READY
+----- Some interesting statistics ------
+Total number of nets:                 17 (100% completion)
+Total length of routed wires:         193 grids = 1.698 mm
+No. of transistors (total / used):    60/60 = 100.00 %
+CPU-time consumption:                 0.00 sec.
+Elapsed time during routing:          0.00 sec. (100.00 % of cpu)
+------ Verifying Connectivity ------
+------ No unconnect nor short-circuits ------
+------ Writing 'Tmp_Cell_(cs_adder7(cs_adder7(test)))' ------
+------ Trout: task completed on Wed Dec 11 21:26:13 2013
+ terminate

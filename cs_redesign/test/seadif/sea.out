@@ -4,12 +4,12 @@ six
 ------ opening seadif ------
 ------ checking your circuit 'cs_compare' ------
 ------ circuit 'cs_compare' is still up-to-date ------
------- checking match with placement layout 'Tmpcs_compare3349' ------
------- reading nelsis layout-cell 'Tmpcs_compare3349' ------
------- writing nelsis 'Tmpcs_compare3349' as sdflay 'Tmp_Cell_(cs_compare(cs_compare(test)))' ------
+------ checking match with placement layout 'Tmpcs_compare4135' ------
+------ reading nelsis layout-cell 'Tmpcs_compare4135' ------
+------ writing nelsis 'Tmpcs_compare4135' as sdflay 'Tmp_Cell_(cs_compare(cs_compare(test)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f cs_compare -c cs_compare -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpcs_compare3349' ------
-calling program: nelsea -rLH -f cs_compare -c cs_compare -l Tmp_Cell_ Tmpcs_compare3349 
+------ converting result back into nelsis as cell 'Tmpcs_compare4135' ------
+calling program: nelsea -rLH -f cs_compare -c cs_compare -l Tmp_Cell_ Tmpcs_compare4135 
 ------ sea: task completed ------
