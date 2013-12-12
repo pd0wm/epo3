@@ -101,9 +101,6 @@ WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
 WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
 WORK__tri_buff__synthesised = $(LIB_WORK)/tri_buff/synthesised.dat
 WORK__tri_buff = $(LIB_WORK)/tri_buff/_primary.dat
-WORK__timer_tb_behaviour_cfg = $(LIB_WORK)/timer_tb_behaviour_cfg/_primary.dat
-WORK__timer_tb__behaviour = $(LIB_WORK)/timer_tb/behaviour.dat
-WORK__timer_tb = $(LIB_WORK)/timer_tb/_primary.dat
 WORK__timer_behaviour_cfg = $(LIB_WORK)/timer_behaviour_cfg/_primary.dat
 WORK__timer__behaviour = $(LIB_WORK)/timer/behaviour.dat
 WORK__timer = $(LIB_WORK)/timer/_primary.dat
@@ -227,8 +224,8 @@ WORK__cs_shift_statetype = $(LIB_WORK)/cs_shift_statetype/_primary.dat
 WORK__cs_shift_extracted_cfg = $(LIB_WORK)/cs_shift_extracted_cfg/_primary.dat
 WORK__cs_shift_cs_shift_behav_cfg = $(LIB_WORK)/cs_shift_cs_shift_behav_cfg/_primary.dat
 WORK__cs_shift_comb_cs_shift_comb_behav_cfg = $(LIB_WORK)/cs_shift_comb_cs_shift_comb_behav_cfg/_primary.dat
-WORK__cs_shift_comb__cs_shift_comb_behav = $(LIB_WORK)/cs_shift_comb/cs_shift_comb_behav.dat
 WORK__cs_shift_comb__synthesised = $(LIB_WORK)/cs_shift_comb/synthesised.dat
+WORK__cs_shift_comb__cs_shift_comb_behav = $(LIB_WORK)/cs_shift_comb/cs_shift_comb_behav.dat
 WORK__cs_shift_comb = $(LIB_WORK)/cs_shift_comb/_primary.dat
 WORK__cs_shift__cs_shift_behav = $(LIB_WORK)/cs_shift/cs_shift_behav.dat
 WORK__cs_shift__synthesised = $(LIB_WORK)/cs_shift/synthesised.dat
@@ -263,11 +260,11 @@ WORK__cs_7bc__synthesised = $(LIB_WORK)/cs_7bc/synthesised.dat
 WORK__cs_7bc = $(LIB_WORK)/cs_7bc/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
 WORK__controller_calc_controller_calc_arch_cfg = $(LIB_WORK)/controller_calc_controller_calc_arch_cfg/_primary.dat
-WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
 WORK__controller_calc__synthesised = $(LIB_WORK)/controller_calc/synthesised.dat
+WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
 WORK__controller_calc = $(LIB_WORK)/controller_calc/_primary.dat
-WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
+WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
 WORK__checkmask_tb_check_mask_tb_behaviour_cfg = $(LIB_WORK)/checkmask_tb_check_mask_tb_behaviour_cfg/_primary.dat
 WORK__checkmask_tb__check_mask_tb_behaviour = $(LIB_WORK)/checkmask_tb/check_mask_tb_behaviour.dat
@@ -362,9 +359,6 @@ whole_library :     $(WORK__vga_triggers_vga_triggers_arch_cfg) \
     $(WORK__tri_buff__extracted) \
     $(WORK__tri_buff__synthesised) \
     $(WORK__tri_buff) \
-    $(WORK__timer_tb_behaviour_cfg) \
-    $(WORK__timer_tb__behaviour) \
-    $(WORK__timer_tb) \
     $(WORK__timer_behaviour_cfg) \
     $(WORK__timer__behaviour) \
     $(WORK__timer) \
@@ -488,8 +482,8 @@ whole_library :     $(WORK__vga_triggers_vga_triggers_arch_cfg) \
     $(WORK__cs_shift_extracted_cfg) \
     $(WORK__cs_shift_cs_shift_behav_cfg) \
     $(WORK__cs_shift_comb_cs_shift_comb_behav_cfg) \
-    $(WORK__cs_shift_comb__cs_shift_comb_behav) \
     $(WORK__cs_shift_comb__synthesised) \
+    $(WORK__cs_shift_comb__cs_shift_comb_behav) \
     $(WORK__cs_shift_comb) \
     $(WORK__cs_shift__cs_shift_behav) \
     $(WORK__cs_shift__synthesised) \
@@ -524,11 +518,11 @@ whole_library :     $(WORK__vga_triggers_vga_triggers_arch_cfg) \
     $(WORK__cs_7bc) \
     $(WORK__controller_controller_arch_cfg) \
     $(WORK__controller_calc_controller_calc_arch_cfg) \
-    $(WORK__controller_calc__controller_calc_arch) \
     $(WORK__controller_calc__synthesised) \
+    $(WORK__controller_calc__controller_calc_arch) \
     $(WORK__controller_calc) \
-    $(WORK__controller__controller_arch) \
     $(WORK__controller__synthesised) \
+    $(WORK__controller__controller_arch) \
     $(WORK__controller) \
     $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) \
     $(WORK__checkmask_tb__check_mask_tb_behaviour) \
@@ -647,14 +641,6 @@ $(WORK__controller) : VHDL/controller.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller.vhd
 
-$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
-		$(WORK__controller) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_SYNTH.vhd
-
 $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 		$(WORK__controller) \
 		$(WORK__vga_params) \
@@ -664,19 +650,19 @@ $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller-controller_arch.vhd
 
+$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
+		$(WORK__controller) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_SYNTH.vhd
+
 $(WORK__controller_calc) : VHDL/controller_calc.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_calc.vhd
-
-$(WORK__controller_calc__synthesised) : VHDL/controller_calc_SYNTH.vhd \
-		$(WORK__controller_calc) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_calc_SYNTH.vhd
 
 $(WORK__controller_calc__controller_calc_arch) : VHDL/controller_calc_arch.vhd \
 		$(WORK__controller_calc) \
@@ -686,6 +672,14 @@ $(WORK__controller_calc__controller_calc_arch) : VHDL/controller_calc_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_calc_arch.vhd
+
+$(WORK__controller_calc__synthesised) : VHDL/controller_calc_SYNTH.vhd \
+		$(WORK__controller_calc) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_calc_SYNTH.vhd
 
 $(WORK__controller_calc_controller_calc_arch_cfg) : VHDL/controller_calc_controller_calc_arch_cfg.vhd \
 		$(WORK__vga_params) \
@@ -953,6 +947,13 @@ $(WORK__cs_shift_comb) : VHDL/cs_shift_comb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_comb.vhd
 
+$(WORK__cs_shift_comb__cs_shift_comb_behav) : VHDL/cs_shift_comb_arch.vhd \
+		$(WORK__cs_shift_comb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_comb_arch.vhd
+
 $(WORK__cs_shift_comb__synthesised) : VHDL/cs_shift_comb_SYNTH.vhd \
 		$(WORK__cs_shift_comb) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -960,13 +961,6 @@ $(WORK__cs_shift_comb__synthesised) : VHDL/cs_shift_comb_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_comb_SYNTH.vhd
-
-$(WORK__cs_shift_comb__cs_shift_comb_behav) : VHDL/cs_shift_comb_arch.vhd \
-		$(WORK__cs_shift_comb) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/cs_shift_comb_arch.vhd
 
 $(WORK__cs_shift_comb_cs_shift_comb_behav_cfg) : VHDL/cs_shift_comb_cs_shift_comb_behav_cfg.vhd \
 		$(WORK__cs_shift_comb__cs_shift_comb_behav) \
@@ -1940,31 +1934,6 @@ $(WORK__timer_behaviour_cfg) : VHDL/timer_behaviour_cfg.vhd \
 		$(WORK__timer)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer_behaviour_cfg.vhd
-
-$(WORK__timer_tb) : VHDL/timer_tb.vhd \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_tb.vhd
-
-$(WORK__timer_tb__behaviour) : VHDL/timer_tb-behaviour.vhd \
-		$(WORK__timer_tb) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_tb-behaviour.vhd
-
-$(WORK__timer_tb_behaviour_cfg) : VHDL/timer_tb_behaviour_cfg.vhd \
-		$(WORK__timer) \
-		$(IEEE__std_logic_arith) \
-		$(IEEE__std_logic_unsigned) \
-		$(WORK__timer_behaviour_cfg) \
-		$(WORK__timer_tb__behaviour) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__timer_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_tb_behaviour_cfg.vhd
 
 $(WORK__tri_buff) : VHDL/tri_buff.vhd \
 		$(STD__textio) \

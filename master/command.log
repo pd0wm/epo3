@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version G-2012.06 for linux -- May 30, 2012
-#@ # Date:   Thu Dec 12 14:45:13 2013
+#@ # Date:   Thu Dec 12 15:16:37 2013
 #@ # Run by: epo3-use@EPO-3
 #@ 
 
@@ -4758,7 +4758,7 @@ source /data/public/common/software/synopsys/G-2012.06/admin/setup/.synopsys_dc.
 source -echo -verbose /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 #@ # -- Starting source /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 
-#@ read_file -f ddc ./ADB/controller.ddc
+#@ read_file -f ddc ./ADB/vga.ddc
 #@ set designer epo3-user
 #@ set company TU-Delft
 #@ start_gui
@@ -4769,3 +4769,5 @@ source -echo -verbose /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 #@ # or type quit in dc_shell window
 #@ # -- End source /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 
+change_selection [get_s field_translation_reset]
+quit
