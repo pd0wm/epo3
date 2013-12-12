@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
+	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, first_draw_2, drop_timer_reset, gen_piece_1, collision_4, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece           : std_logic_vector(2 downto 0);
@@ -33,6 +33,13 @@ architecture controller_arch of controller is
 	signal move_ready            : std_logic;
 	signal move_check_start      : std_logic;
 	signal move_drop             : std_logic;
+	
+	signal calc_x             : std_logic_vector(2 downto 0);
+	signal calc_y             : std_logic_vector(3 downto 0);
+	signal calc_rot           : std_logic_vector(1 downto 0);
+	
+	signal add_sub, x, y, rot : std_logic;
+
 
 	component controller_move
 		port(clk              : in  std_logic;
@@ -52,8 +59,30 @@ architecture controller_arch of controller is
 			 check_start      : out std_logic;
 			 check_empty      : in  std_logic);
 	end component controller_move;
+	
+	component controller_calc
+		port(old_x              : in  std_logic_vector(2 downto 0);
+			 old_y              : in  std_logic_vector(3 downto 0);
+			 old_rot            : in  std_logic_vector(1 downto 0);
+			 new_x              : out std_logic_vector(2 downto 0);
+			 new_y              : out std_logic_vector(3 downto 0);
+			 new_rot            : out std_logic_vector(1 downto 0);
+			 add_sub, rot, x, y : in  std_logic);
+	end component controller_calc;
 
 begin
+	calc_pm : controller_calc
+		port map(old_x   => cur_x,
+			     old_y   => cur_y,
+			     old_rot => cur_rot,
+			     new_x   => calc_x,
+			     new_y   => calc_y,
+			     new_rot => calc_rot,
+			     add_sub => add_sub,
+			     rot     => rot,
+			     x       => x,
+			     y       => y);
+			     
 	move_pm : controller_move
 		port map(clk              => clk,
 			     rst              => rst,
@@ -182,9 +211,6 @@ begin
 				new_cur_x   <= (others => '0');
 				new_cur_y   <= (others => '0');
 
-				next_state <= draw_next_piece_2;
-
-			when draw_next_piece_2 =>
 				lut_next_piece   <= '1';
 				draw_erase_draw  <= '0';
 				draw_erase_start <= '1';
@@ -192,7 +218,9 @@ begin
 				if (draw_erase_ready = '1') then
 					next_state    <= draw_next_piece_5;
 					new_cur_piece <= next_piece;
+					draw_erase_start <= '0';
 				end if;
+
 
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
@@ -200,29 +228,22 @@ begin
 				lut_next_piece   <= '1';
 
 				if (draw_erase_ready = '1') then
-					next_state <= collision_1;
+					next_state       <= collision_4;
+					new_cur_x        <= "011";
+					new_cur_piece    <= cur_future_piece;
+					new_future_piece <= cur_piece;
 				end if;
-
-			when collision_1 =>
-				new_cur_piece    <= cur_future_piece;
-				new_future_piece <= cur_piece;
-
-				new_cur_x <= "011";
-
-				next_state <= collision_4;
 
 			when collision_4 =>
 				check_start <= '1';
 				-- Wait for check mask ready, about ?
 				if (check_ready = '1') then
-					next_state <= collision_5;
-				end if;
+					if (check_empty = '0') then
+						next_state <= collision_4; -- GAME OVER :(
+					else
+						next_state <= first_draw_2;
+					end if;
 
-			when collision_5 =>
-				if (check_empty = '0') then
-					next_state <= game_over;
-				else
-					next_state <= first_draw_2;
 				end if;
 
 			when first_draw_2 =>
@@ -264,8 +285,12 @@ begin
 				end if;
 
 			when drop_overflow =>
+				new_timer_1_reset <= '0';
+				new_timer_1_start <= '1';
+
 				if (timer_1_done = '1') then
-					next_state <= space_2;
+					next_state        <= space_2;
+					new_timer_1_start <= '0';
 				else
 					next_state <= key;
 				end if;
@@ -292,6 +317,7 @@ begin
 			when reset_timers_b_1 =>
 				new_timer_1_start <= '1';
 				new_timer_1_time  <= '1'; -- 30, .5 second
+
 
 				next_state <= drop_overflow;
 
@@ -323,12 +349,6 @@ begin
 				new_timer_1_start <= '0';
 				new_timer_1_time  <= '0';
 
-				next_state <= soft_drop_3;
-
-			when soft_drop_3 =>
-				new_timer_1_reset <= '0';
-				new_timer_1_start <= '1';
-
 				next_state <= drop_overflow;
 
 			when hard_drop_1 =>
@@ -358,9 +378,6 @@ begin
 					next_state <= drop_overflow;
 				end if;
 
-			when game_over =>
-				-- Kill it!
-				next_state <= game_over;
 
 		end case;
 	end process;
