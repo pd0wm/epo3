@@ -33,6 +33,13 @@ architecture controller_arch of controller is
 	signal move_ready            : std_logic;
 	signal move_check_start      : std_logic;
 	signal move_drop             : std_logic;
+	
+	signal calc_x             : std_logic_vector(2 downto 0);
+	signal calc_y             : std_logic_vector(3 downto 0);
+	signal calc_rot           : std_logic_vector(1 downto 0);
+	
+	signal add_sub, x, y, rot : std_logic;
+
 
 	component controller_move
 		port(clk              : in  std_logic;
@@ -53,8 +60,29 @@ architecture controller_arch of controller is
 			 check_empty      : in  std_logic);
 	end component controller_move;
 	
+	component controller_calc
+		port(old_x              : in  std_logic_vector(2 downto 0);
+			 old_y              : in  std_logic_vector(3 downto 0);
+			 old_rot            : in  std_logic_vector(1 downto 0);
+			 new_x              : out std_logic_vector(2 downto 0);
+			 new_y              : out std_logic_vector(3 downto 0);
+			 new_rot            : out std_logic_vector(1 downto 0);
+			 add_sub, rot, x, y : in  std_logic);
+	end component controller_calc;
 
 begin
+	calc_pm : controller_calc
+		port map(old_x   => cur_x,
+			     old_y   => cur_y,
+			     old_rot => cur_rot,
+			     new_x   => calc_x,
+			     new_y   => calc_y,
+			     new_rot => calc_rot,
+			     add_sub => add_sub,
+			     rot     => rot,
+			     x       => x,
+			     y       => y);
+			     
 	move_pm : controller_move
 		port map(clk              => clk,
 			     rst              => rst,

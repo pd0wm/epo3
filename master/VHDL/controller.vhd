@@ -14,10 +14,6 @@ entity controller is
 		lut_y              : out std_logic_vector(3 downto 0);
 		lut_rot            : out std_logic_vector(1 downto 0);
 
-		calc_x             : in  std_logic_vector(2 downto 0);
-		calc_y             : in  std_logic_vector(3 downto 0);
-		calc_rot           : in  std_logic_vector(1 downto 0);
-
 		add_sub, x, y, rot : out std_logic;
 
 		--next piece
