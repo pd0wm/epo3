@@ -84,11 +84,11 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
-		
-		x <= '0';
-		y <= '0';
+
+		x       <= '0';
+		y       <= '0';
 		add_sub <= '0';
-		rot <= '0';
+		rot     <= '0';
 
 		case cur_state is
 			when reset =>
@@ -116,7 +116,6 @@ begin
 
 			when gen_piece_1 =>
 				new_cur_piece <= cur_future_piece;
-				
 
 				next_state <= draw_next_piece_1;
 
@@ -141,12 +140,12 @@ begin
 				else
 					next_state <= draw_next_piece_2;
 				end if;
-				
+
 			when draw_next_piece_3 =>
-				lut_next_piece   <= '1';
-				new_piece     <= '1';
-				new_cur_piece <= next_piece;
-				
+				lut_next_piece <= '1';
+				new_piece      <= '1';
+				new_cur_piece  <= next_piece;
+
 				next_state <= draw_next_piece_4;
 
 			when draw_next_piece_4 =>
@@ -398,7 +397,7 @@ begin
 
 				-- wait for erase ready 
 				if (draw_erase_ready = '1') then
-					next_state <= move_left_1;
+					next_state <= move_left_2;
 				else
 					next_state <= move_3;
 				end if;
@@ -428,13 +427,19 @@ begin
 				end if;
 
 			when move_left_2 =>
-				x           <= '1';
+				x       <= inputs(0) or inputs(1);
+				rot     <= inputs(2) or inputs(3);
+				add_sub <= inputs(1) or inputs(3);
+
 				check_start <= '1';
 
 				next_state <= move_left_3;
 
 			when move_left_3 =>
-				x           <= '1';
+				x       <= inputs(0) or inputs(1);
+				rot     <= inputs(2) or inputs(3);
+				add_sub <= inputs(1) or inputs(3);
+				
 				check_start <= '1';
 
 				-- Wait for check
@@ -445,7 +450,9 @@ begin
 				end if;
 
 			when move_left_4 =>
-				x <= '1';
+				x       <= inputs(0) or inputs(1);
+				rot     <= inputs(2) or inputs(3);
+				add_sub <= inputs(1) or inputs(3);
 
 				if (check_empty = '1') then
 					next_state <= move_left_5;
@@ -454,8 +461,12 @@ begin
 				end if;
 
 			when move_left_5 =>
-				x     <= '1';
+				x       <= inputs(0) or inputs(1);
+				rot     <= inputs(2) or inputs(3);
+				add_sub <= inputs(1) or inputs(3);
+				
 				new_cur_x <= calc_x;
+				new_cur_rot <= calc_rot;
 
 				next_state <= move_4;
 
@@ -557,11 +568,11 @@ begin
 			when rotate_ccw_2 =>
 				rot         <= '1';
 				check_start <= '1';
-				
+
 				check_start <= '1';
 
 				next_state <= rotate_ccw_3;
-				
+
 			when rotate_ccw_3 =>
 				rot         <= '1';
 				check_start <= '1';
@@ -572,26 +583,25 @@ begin
 				else
 					next_state <= rotate_ccw_3;
 				end if;
-				
+
 			when rotate_ccw_4 =>
-				rot     <= '1';
+				rot <= '1';
 
 				if (check_empty = '1') then
 					next_state <= rotate_ccw_5;
 				else
 					next_state <= move_4;
-				end if;			
-				
+				end if;
+
 			when rotate_ccw_5 =>
 				rot     <= '1';
 				add_sub <= '1';
 
 				new_cur_rot <= calc_rot;
 
-				next_state <= move_4;				
-			
-			
-			when soft_drop_1  =>
+				next_state <= move_4;
+
+			when soft_drop_1 =>
 				if (inv_inputs(4) = '1' and cur_timer_1_time = '1') then
 					next_state <= soft_drop_2;
 				else
