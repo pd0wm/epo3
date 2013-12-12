@@ -1,5 +1,5 @@
 # This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
-# Written on: Wed Dec 11 22:02:41 2013
+# Written on: Thu Dec 12 11:54:01 2013
 # You can edit this file to control the mapping process
 # Each line contains the name of a nelsis cell and its corresponding seadif cell
 # The status field may contain the following values:
@@ -10,12 +10,14 @@
 #    N E L S I S     |                   S E A D I F                     | nelsis->sdf sdf->nelsis
 # view    cellname   | library      function     circuit      layout     |   status      status
 #--------------------+---------------------------------------------------+------------------------
- layout   sr_tower     test         sr_tower     sr_tower     sr_tower     not_written not_written
- layout   dfa11        g_digilib5_99 dfa11        dfa11        dfa11        not_written not_written
- layout   mux5         test         mux5         mux5         mux5         not_written not_written
- layout   demux5       test         demux5       demux5       demux5       not_written not_written
- layout   buf40        g_digilib5_99 buf40        buf40        buf40        not_written not_written
- layout   Tmpsr_if5641 test         sr_if        sr_if        Tmp_Cell_    not_written written
+ layout   Error_Marker_ test         Error_Marker_ Error_Marker_ Error_Marker_ not_written not_written
+ layout   cs_tri8      test         cs_tri8      cs_tri8      cs_tri8      not_written not_written
+ layout   cs_shift     test         cs_shift     cs_shift     cs_shift     not_written not_written
+ layout   cs_compare_comb test         cs_compare_comb cs_compare_comb cs_compare_comb not_written not_written
+ layout   cs_7bc       test         cs_7bc       cs_7bc       cs_7bc       not_written not_written
+ layout   cs_defset2   test         cs_defset2   cs_defset2   cs_defset2   not_written not_written
+ layout   dfr11        g_digilib5_99 dfr11        dfr11        dfr11        not_written not_written
+ layout   Tmpcs_compare29373 test         cs_compare   cs_compare   Tmp_Cell_    not_written written
  circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
  circuit  res          primitives   res          res          $dummy       primitive   primitive
  circuit  penh         primitives   penh         penh         $dummy       primitive   primitive

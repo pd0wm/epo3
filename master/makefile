@@ -26,11 +26,9 @@ CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
 IEEE__std_logic_1164 = $(LIB_IEEE)/std_logic_1164/_primary.dat
 STD__textio = $(LIB_STD)/textio/_primary.dat
 IEEE__numeric_std = $(LIB_IEEE)/numeric_std/_primary.dat
-WORK__vga_vga_arch_cfg = $(LIB_WORK)/vga_vga_arch_cfg/_primary.dat
 WORK__vga_triggers_vga_triggers_arch_cfg = $(LIB_WORK)/vga_triggers_vga_triggers_arch_cfg/_primary.dat
 WORK__vga_triggers__vga_triggers_arch = $(LIB_WORK)/vga_triggers/vga_triggers_arch.dat
 WORK__vga_triggers = $(LIB_WORK)/vga_triggers/_primary.dat
-WORK__vga_tb_vga_tb_arch_cfg = $(LIB_WORK)/vga_tb_vga_tb_arch_cfg/_primary.dat
 WORK__vga_tb__vga_tb_arch = $(LIB_WORK)/vga_tb/vga_tb_arch.dat
 WORK__vga_tb = $(LIB_WORK)/vga_tb/_primary.dat
 WORK__vga_sync_vga_sync_arch_cfg = $(LIB_WORK)/vga_sync_vga_sync_arch_cfg/_primary.dat
@@ -45,6 +43,8 @@ WORK__vga_score_check = $(LIB_WORK)/vga_score_check/_primary.dat
 WORK__vga_read_vga_read_behav_cfg = $(LIB_WORK)/vga_read_vga_read_behav_cfg/_primary.dat
 WORK__vga_read__vga_read_behav = $(LIB_WORK)/vga_read/vga_read_behav.dat
 WORK__vga_read = $(LIB_WORK)/vga_read/_primary.dat
+WORK__vga_params2__body = $(LIB_WORK)/vga_params2/body.dat
+WORK__vga_params2 = $(LIB_WORK)/vga_params2/_primary.dat
 WORK__vga_params__body = $(LIB_WORK)/vga_params/body.dat
 WORK__vga_params = $(LIB_WORK)/vga_params/_primary.dat
 WORK__vga_np_trans_vga_np_trans_arch_cfg = $(LIB_WORK)/vga_np_trans_vga_np_trans_arch_cfg/_primary.dat
@@ -214,29 +214,60 @@ WORK__de_piece_testbench = $(LIB_WORK)/de_piece_testbench/_primary.dat
 WORK__de_piece_behaviour_cfg = $(LIB_WORK)/de_piece_behaviour_cfg/_primary.dat
 WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
 WORK__de_piece = $(LIB_WORK)/de_piece/_primary.dat
+WORK__cs_tri8_cs_tri8_behav_cfg = $(LIB_WORK)/cs_tri8_cs_tri8_behav_cfg/_primary.dat
 WORK__cs_tri8__cs_tri8_behav = $(LIB_WORK)/cs_tri8/cs_tri8_behav.dat
+WORK__cs_tri8__synthesised = $(LIB_WORK)/cs_tri8/synthesised.dat
 WORK__cs_tri8 = $(LIB_WORK)/cs_tri8/_primary.dat
+WORK__cs_shift_tb_cs_shift_tb_behav_cfg_extracted = $(LIB_WORK)/cs_shift_tb_cs_shift_tb_behav_cfg_extracted/_primary.dat
+WORK__cs_shift_tb_cs_shift_tb_behav_cfg = $(LIB_WORK)/cs_shift_tb_cs_shift_tb_behav_cfg/_primary.dat
 WORK__cs_shift_tb__cs_shift_tb_behav = $(LIB_WORK)/cs_shift_tb/cs_shift_tb_behav.dat
 WORK__cs_shift_tb = $(LIB_WORK)/cs_shift_tb/_primary.dat
+WORK__cs_shift_statetype__body = $(LIB_WORK)/cs_shift_statetype/body.dat
+WORK__cs_shift_statetype = $(LIB_WORK)/cs_shift_statetype/_primary.dat
+WORK__cs_shift_extracted_cfg = $(LIB_WORK)/cs_shift_extracted_cfg/_primary.dat
+WORK__cs_shift_cs_shift_behav_cfg = $(LIB_WORK)/cs_shift_cs_shift_behav_cfg/_primary.dat
+WORK__cs_shift_comb_cs_shift_comb_behav_cfg = $(LIB_WORK)/cs_shift_comb_cs_shift_comb_behav_cfg/_primary.dat
+WORK__cs_shift_comb__cs_shift_comb_behav = $(LIB_WORK)/cs_shift_comb/cs_shift_comb_behav.dat
+WORK__cs_shift_comb__synthesised = $(LIB_WORK)/cs_shift_comb/synthesised.dat
+WORK__cs_shift_comb = $(LIB_WORK)/cs_shift_comb/_primary.dat
 WORK__cs_shift__cs_shift_behav = $(LIB_WORK)/cs_shift/cs_shift_behav.dat
+WORK__cs_shift__synthesised = $(LIB_WORK)/cs_shift/synthesised.dat
+WORK__cs_shift__extracted = $(LIB_WORK)/cs_shift/extracted.dat
 WORK__cs_shift = $(LIB_WORK)/cs_shift/_primary.dat
+WORK__cs_defset2_cs_defset2_behav_cfg = $(LIB_WORK)/cs_defset2_cs_defset2_behav_cfg/_primary.dat
 WORK__cs_defset2__cs_defset2_behav = $(LIB_WORK)/cs_defset2/cs_defset2_behav.dat
+WORK__cs_defset2__synthesised = $(LIB_WORK)/cs_defset2/synthesised.dat
 WORK__cs_defset2 = $(LIB_WORK)/cs_defset2/_primary.dat
+WORK__cs_compare_tb_cs_compare_tb_behav_cfg = $(LIB_WORK)/cs_compare_tb_cs_compare_tb_behav_cfg/_primary.dat
 WORK__cs_compare_tb__cs_compare_tb_behav = $(LIB_WORK)/cs_compare_tb/cs_compare_tb_behav.dat
 WORK__cs_compare_tb = $(LIB_WORK)/cs_compare_tb/_primary.dat
+WORK__cs_compare_cs_compare_behav_cfg = $(LIB_WORK)/cs_compare_cs_compare_behav_cfg/_primary.dat
+WORK__cs_compare_comb_cs_compare_comb_behav_cfg = $(LIB_WORK)/cs_compare_comb_cs_compare_comb_behav_cfg/_primary.dat
+WORK__cs_compare_comb__cs_compare_comb_behav = $(LIB_WORK)/cs_compare_comb/cs_compare_comb_behav.dat
+WORK__cs_compare_comb__synthesised = $(LIB_WORK)/cs_compare_comb/synthesised.dat
+WORK__cs_compare_comb = $(LIB_WORK)/cs_compare_comb/_primary.dat
 WORK__cs_compare__cs_compare_behav = $(LIB_WORK)/cs_compare/cs_compare_behav.dat
+WORK__cs_compare__synthesised = $(LIB_WORK)/cs_compare/synthesised.dat
 WORK__cs_compare = $(LIB_WORK)/cs_compare/_primary.dat
+WORK__cs_adder7_cs_addr7_behav_cfg = $(LIB_WORK)/cs_adder7_cs_addr7_behav_cfg/_primary.dat
 WORK__cs_adder7__cs_addr7_behav = $(LIB_WORK)/cs_adder7/cs_addr7_behav.dat
+WORK__cs_adder7__synthesised = $(LIB_WORK)/cs_adder7/synthesised.dat
 WORK__cs_adder7 = $(LIB_WORK)/cs_adder7/_primary.dat
+WORK__cs_7bcws_cs_7bcws_behav_cfg = $(LIB_WORK)/cs_7bcws_cs_7bcws_behav_cfg/_primary.dat
 WORK__cs_7bcws__cs_7bcws_behav = $(LIB_WORK)/cs_7bcws/cs_7bcws_behav.dat
+WORK__cs_7bcws__synthesised = $(LIB_WORK)/cs_7bcws/synthesised.dat
 WORK__cs_7bcws = $(LIB_WORK)/cs_7bcws/_primary.dat
+WORK__cs_7bc_cs_7bc_behav_cfg = $(LIB_WORK)/cs_7bc_cs_7bc_behav_cfg/_primary.dat
 WORK__cs_7bc__cs_7bc_behav = $(LIB_WORK)/cs_7bc/cs_7bc_behav.dat
+WORK__cs_7bc__synthesised = $(LIB_WORK)/cs_7bc/synthesised.dat
 WORK__cs_7bc = $(LIB_WORK)/cs_7bc/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
+WORK__controller_calc_controller_calc_arch_cfg = $(LIB_WORK)/controller_calc_controller_calc_arch_cfg/_primary.dat
 WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
+WORK__controller_calc__synthesised = $(LIB_WORK)/controller_calc/synthesised.dat
 WORK__controller_calc = $(LIB_WORK)/controller_calc/_primary.dat
-WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
 WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
+WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
 WORK__checkmask_tb_check_mask_tb_behaviour_cfg = $(LIB_WORK)/checkmask_tb_check_mask_tb_behaviour_cfg/_primary.dat
 WORK__checkmask_tb__check_mask_tb_behaviour = $(LIB_WORK)/checkmask_tb/check_mask_tb_behaviour.dat
@@ -256,11 +287,9 @@ VLOG = vlog
 VOPT = vopt
 SCCOM = sccom
 
-whole_library :     $(WORK__vga_vga_arch_cfg) \
-    $(WORK__vga_triggers_vga_triggers_arch_cfg) \
+whole_library :     $(WORK__vga_triggers_vga_triggers_arch_cfg) \
     $(WORK__vga_triggers__vga_triggers_arch) \
     $(WORK__vga_triggers) \
-    $(WORK__vga_tb_vga_tb_arch_cfg) \
     $(WORK__vga_tb__vga_tb_arch) \
     $(WORK__vga_tb) \
     $(WORK__vga_sync_vga_sync_arch_cfg) \
@@ -275,6 +304,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__vga_read_vga_read_behav_cfg) \
     $(WORK__vga_read__vga_read_behav) \
     $(WORK__vga_read) \
+    $(WORK__vga_params2__body) \
+    $(WORK__vga_params2) \
     $(WORK__vga_params__body) \
     $(WORK__vga_params) \
     $(WORK__vga_np_trans_vga_np_trans_arch_cfg) \
@@ -444,29 +475,60 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__de_piece_behaviour_cfg) \
     $(WORK__de_piece__behaviour) \
     $(WORK__de_piece) \
+    $(WORK__cs_tri8_cs_tri8_behav_cfg) \
     $(WORK__cs_tri8__cs_tri8_behav) \
+    $(WORK__cs_tri8__synthesised) \
     $(WORK__cs_tri8) \
+    $(WORK__cs_shift_tb_cs_shift_tb_behav_cfg_extracted) \
+    $(WORK__cs_shift_tb_cs_shift_tb_behav_cfg) \
     $(WORK__cs_shift_tb__cs_shift_tb_behav) \
     $(WORK__cs_shift_tb) \
+    $(WORK__cs_shift_statetype__body) \
+    $(WORK__cs_shift_statetype) \
+    $(WORK__cs_shift_extracted_cfg) \
+    $(WORK__cs_shift_cs_shift_behav_cfg) \
+    $(WORK__cs_shift_comb_cs_shift_comb_behav_cfg) \
+    $(WORK__cs_shift_comb__cs_shift_comb_behav) \
+    $(WORK__cs_shift_comb__synthesised) \
+    $(WORK__cs_shift_comb) \
     $(WORK__cs_shift__cs_shift_behav) \
+    $(WORK__cs_shift__synthesised) \
+    $(WORK__cs_shift__extracted) \
     $(WORK__cs_shift) \
+    $(WORK__cs_defset2_cs_defset2_behav_cfg) \
     $(WORK__cs_defset2__cs_defset2_behav) \
+    $(WORK__cs_defset2__synthesised) \
     $(WORK__cs_defset2) \
+    $(WORK__cs_compare_tb_cs_compare_tb_behav_cfg) \
     $(WORK__cs_compare_tb__cs_compare_tb_behav) \
     $(WORK__cs_compare_tb) \
+    $(WORK__cs_compare_cs_compare_behav_cfg) \
+    $(WORK__cs_compare_comb_cs_compare_comb_behav_cfg) \
+    $(WORK__cs_compare_comb__cs_compare_comb_behav) \
+    $(WORK__cs_compare_comb__synthesised) \
+    $(WORK__cs_compare_comb) \
     $(WORK__cs_compare__cs_compare_behav) \
+    $(WORK__cs_compare__synthesised) \
     $(WORK__cs_compare) \
+    $(WORK__cs_adder7_cs_addr7_behav_cfg) \
     $(WORK__cs_adder7__cs_addr7_behav) \
+    $(WORK__cs_adder7__synthesised) \
     $(WORK__cs_adder7) \
+    $(WORK__cs_7bcws_cs_7bcws_behav_cfg) \
     $(WORK__cs_7bcws__cs_7bcws_behav) \
+    $(WORK__cs_7bcws__synthesised) \
     $(WORK__cs_7bcws) \
+    $(WORK__cs_7bc_cs_7bc_behav_cfg) \
     $(WORK__cs_7bc__cs_7bc_behav) \
+    $(WORK__cs_7bc__synthesised) \
     $(WORK__cs_7bc) \
     $(WORK__controller_controller_arch_cfg) \
+    $(WORK__controller_calc_controller_calc_arch_cfg) \
     $(WORK__controller_calc__controller_calc_arch) \
+    $(WORK__controller_calc__synthesised) \
     $(WORK__controller_calc) \
-    $(WORK__controller__synthesised) \
     $(WORK__controller__controller_arch) \
+    $(WORK__controller__synthesised) \
     $(WORK__controller) \
     $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) \
     $(WORK__checkmask_tb__check_mask_tb_behaviour) \
@@ -585,6 +647,14 @@ $(WORK__controller) : VHDL/controller.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller.vhd
 
+$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
+		$(WORK__controller) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_SYNTH.vhd
+
 $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 		$(WORK__controller) \
 		$(WORK__vga_params) \
@@ -594,19 +664,19 @@ $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller-controller_arch.vhd
 
-$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
-		$(WORK__controller) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_SYNTH.vhd
-
 $(WORK__controller_calc) : VHDL/controller_calc.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_calc.vhd
+
+$(WORK__controller_calc__synthesised) : VHDL/controller_calc_SYNTH.vhd \
+		$(WORK__controller_calc) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_calc_SYNTH.vhd
 
 $(WORK__controller_calc__controller_calc_arch) : VHDL/controller_calc_arch.vhd \
 		$(WORK__controller_calc) \
@@ -616,6 +686,16 @@ $(WORK__controller_calc__controller_calc_arch) : VHDL/controller_calc_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_calc_arch.vhd
+
+$(WORK__controller_calc_controller_calc_arch_cfg) : VHDL/controller_calc_controller_calc_arch_cfg.vhd \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(WORK__controller_calc__controller_calc_arch) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__controller_calc)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_calc_controller_calc_arch_cfg.vhd
 
 $(WORK__controller_controller_arch_cfg) : VHDL/controller_controller_arch_cfg.vhd \
 		$(WORK__vga_params) \
@@ -633,6 +713,14 @@ $(WORK__cs_7bc) : VHDL/cs_7bc.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bc.vhd
 
+$(WORK__cs_7bc__synthesised) : VHDL/cs_7bc_SYNTH.vhd \
+		$(WORK__cs_7bc) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_7bc_SYNTH.vhd
+
 $(WORK__cs_7bc__cs_7bc_behav) : VHDL/cs_7bc_arch.vhd \
 		$(WORK__cs_7bc) \
 		$(IEEE__numeric_std) \
@@ -641,11 +729,28 @@ $(WORK__cs_7bc__cs_7bc_behav) : VHDL/cs_7bc_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bc_arch.vhd
 
+$(WORK__cs_7bc_cs_7bc_behav_cfg) : VHDL/cs_7bc_cs_7bc_behav_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__cs_7bc__cs_7bc_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_7bc)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_7bc_cs_7bc_behav_cfg.vhd
+
 $(WORK__cs_7bcws) : VHDL/cs_7bcws.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bcws.vhd
+
+$(WORK__cs_7bcws__synthesised) : VHDL/cs_7bcws_SYNTH.vhd \
+		$(WORK__cs_7bcws) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_7bcws_SYNTH.vhd
 
 $(WORK__cs_7bcws__cs_7bcws_behav) : VHDL/cs_7bcws_arch.vhd \
 		$(WORK__cs_7bcws) \
@@ -655,11 +760,28 @@ $(WORK__cs_7bcws__cs_7bcws_behav) : VHDL/cs_7bcws_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_7bcws_arch.vhd
 
+$(WORK__cs_7bcws_cs_7bcws_behav_cfg) : VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__cs_7bcws__cs_7bcws_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_7bcws)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_7bcws_cs_7bcws_behav_cfg.vhd
+
 $(WORK__cs_adder7) : VHDL/cs_adder7.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_adder7.vhd
+
+$(WORK__cs_adder7__synthesised) : VHDL/cs_adder7_SYNTH.vhd \
+		$(WORK__cs_adder7) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_adder7_SYNTH.vhd
 
 $(WORK__cs_adder7__cs_addr7_behav) : VHDL/cs_adder7_arch.vhd \
 		$(WORK__cs_adder7) \
@@ -669,11 +791,28 @@ $(WORK__cs_adder7__cs_addr7_behav) : VHDL/cs_adder7_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_adder7_arch.vhd
 
+$(WORK__cs_adder7_cs_addr7_behav_cfg) : VHDL/cs_adder7_cs_addr7_behav_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__cs_adder7__cs_addr7_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_adder7)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_adder7_cs_addr7_behav_cfg.vhd
+
 $(WORK__cs_compare) : VHDL/cs_compare.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_compare.vhd
+
+$(WORK__cs_compare__synthesised) : VHDL/cs_compare_SYNTH.vhd \
+		$(WORK__cs_compare) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_SYNTH.vhd
 
 $(WORK__cs_compare__cs_compare_behav) : VHDL/cs_compare_arch.vhd \
 		$(WORK__cs_compare) \
@@ -681,6 +820,53 @@ $(WORK__cs_compare__cs_compare_behav) : VHDL/cs_compare_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_compare_arch.vhd
+
+$(WORK__cs_compare_comb) : VHDL/cs_compare_comb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_comb.vhd
+
+$(WORK__cs_compare_comb__synthesised) : VHDL/cs_compare_comb_SYNTH.vhd \
+		$(WORK__cs_compare_comb) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_comb_SYNTH.vhd
+
+$(WORK__cs_compare_comb__cs_compare_comb_behav) : VHDL/cs_compare_comb_arch.vhd \
+		$(WORK__cs_compare_comb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_comb_arch.vhd
+
+$(WORK__cs_compare_comb_cs_compare_comb_behav_cfg) : VHDL/cs_compare_comb_cs_compare_comb_behav_cfg.vhd \
+		$(WORK__cs_compare_comb__cs_compare_comb_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_compare_comb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_comb_cs_compare_comb_behav_cfg.vhd
+
+$(WORK__cs_compare_cs_compare_behav_cfg) : VHDL/cs_compare_cs_compare_behav_cfg.vhd \
+		$(WORK__cs_compare_comb) \
+		$(WORK__cs_defset2) \
+		$(WORK__cs_shift) \
+		$(WORK__cs_tri8) \
+		$(WORK__cs_7bc) \
+		$(WORK__cs_compare_comb_cs_compare_comb_behav_cfg) \
+		$(WORK__cs_defset2_cs_defset2_behav_cfg) \
+		$(WORK__cs_shift_cs_shift_behav_cfg) \
+		$(WORK__cs_tri8_cs_tri8_behav_cfg) \
+		$(WORK__cs_7bc_cs_7bc_behav_cfg) \
+		$(WORK__cs_compare__cs_compare_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_compare)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_cs_compare_behav_cfg.vhd
 
 $(WORK__cs_compare_tb) \
 $(WORK__cs_compare_tb__cs_compare_tb_behav) : VHDL/cs_compare_tb.vhd \
@@ -690,11 +876,30 @@ $(WORK__cs_compare_tb__cs_compare_tb_behav) : VHDL/cs_compare_tb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_compare_tb.vhd
 
+$(WORK__cs_compare_tb_cs_compare_tb_behav_cfg) : VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd \
+		$(WORK__cs_compare) \
+		$(WORK__cs_compare_cs_compare_behav_cfg) \
+		$(WORK__cs_compare_tb__cs_compare_tb_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_compare_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd
+
 $(WORK__cs_defset2) : VHDL/cs_defset2.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_defset2.vhd
+
+$(WORK__cs_defset2__synthesised) : VHDL/cs_defset2_SYNTH.vhd \
+		$(WORK__cs_defset2) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_defset2_SYNTH.vhd
 
 $(WORK__cs_defset2__cs_defset2_behav) : VHDL/cs_defset2_arch.vhd \
 		$(WORK__cs_defset2) \
@@ -704,11 +909,36 @@ $(WORK__cs_defset2__cs_defset2_behav) : VHDL/cs_defset2_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_defset2_arch.vhd
 
+$(WORK__cs_defset2_cs_defset2_behav_cfg) : VHDL/cs_defset2_cs_defset2_behav_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__cs_defset2__cs_defset2_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_defset2)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_defset2_cs_defset2_behav_cfg.vhd
+
 $(WORK__cs_shift) : VHDL/cs_shift.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift.vhd
+
+$(WORK__cs_shift__extracted) : VHDL/cs_shift_EXTR.vhd \
+		$(WORK__cs_shift) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_EXTR.vhd
+
+$(WORK__cs_shift__synthesised) : VHDL/cs_shift_SYNTH.vhd \
+		$(WORK__cs_shift) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_SYNTH.vhd
 
 $(WORK__cs_shift__cs_shift_behav) : VHDL/cs_shift_arch.vhd \
 		$(WORK__cs_shift) \
@@ -716,6 +946,76 @@ $(WORK__cs_shift__cs_shift_behav) : VHDL/cs_shift_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_arch.vhd
+
+$(WORK__cs_shift_comb) : VHDL/cs_shift_comb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_comb.vhd
+
+$(WORK__cs_shift_comb__synthesised) : VHDL/cs_shift_comb_SYNTH.vhd \
+		$(WORK__cs_shift_comb) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_comb_SYNTH.vhd
+
+$(WORK__cs_shift_comb__cs_shift_comb_behav) : VHDL/cs_shift_comb_arch.vhd \
+		$(WORK__cs_shift_comb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_comb_arch.vhd
+
+$(WORK__cs_shift_comb_cs_shift_comb_behav_cfg) : VHDL/cs_shift_comb_cs_shift_comb_behav_cfg.vhd \
+		$(WORK__cs_shift_comb__cs_shift_comb_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_shift_comb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_comb_cs_shift_comb_behav_cfg.vhd
+
+$(WORK__cs_shift_cs_shift_behav_cfg) : VHDL/cs_shift_cs_shift_behav_cfg.vhd \
+		$(WORK__cs_shift_comb) \
+		$(WORK__cs_adder7) \
+		$(WORK__cs_7bcws) \
+		$(WORK__cs_tri8) \
+		$(WORK__cs_shift_comb_cs_shift_comb_behav_cfg) \
+		$(WORK__cs_adder7_cs_addr7_behav_cfg) \
+		$(WORK__cs_7bcws_cs_7bcws_behav_cfg) \
+		$(WORK__cs_tri8_cs_tri8_behav_cfg) \
+		$(WORK__cs_shift__cs_shift_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_shift)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_cs_shift_behav_cfg.vhd
+
+$(WORK__cs_shift_extracted_cfg) : VHDL/cs_shift_extracted_cfg.vhd \
+		$(CELLSLIB__dfr11) \
+		$(CELLSLIB__tinv10) \
+		$(CELLSLIB__no210) \
+		$(CELLSLIB__no310) \
+		$(CELLSLIB__na310) \
+		$(CELLSLIB__na210) \
+		$(CELLSLIB__ex210) \
+		$(CELLSLIB__iv110) \
+		$(CELLSLIB__mu111) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(WORK__cs_shift__extracted) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_shift)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_extracted_cfg.vhd
+
+$(WORK__cs_shift_statetype) \
+$(WORK__cs_shift_statetype__body) : VHDL/cs_shift_statetype.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_statetype.vhd
 
 $(WORK__cs_shift_tb) \
 $(WORK__cs_shift_tb__cs_shift_tb_behav) : VHDL/cs_shift_tb.vhd \
@@ -725,11 +1025,41 @@ $(WORK__cs_shift_tb__cs_shift_tb_behav) : VHDL/cs_shift_tb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_shift_tb.vhd
 
+$(WORK__cs_shift_tb_cs_shift_tb_behav_cfg) : VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd \
+		$(WORK__cs_shift) \
+		$(WORK__cs_shift_cs_shift_behav_cfg) \
+		$(WORK__cs_shift_tb__cs_shift_tb_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_shift_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd
+
+$(WORK__cs_shift_tb_cs_shift_tb_behav_cfg_extracted) : VHDL/cs_shift_tb_cs_shift_tb_behav_cfg_extracted.vhd \
+		$(WORK__cs_shift) \
+		$(WORK__cs_shift_extracted_cfg) \
+		$(WORK__cs_shift_tb__cs_shift_tb_behav) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_shift_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_tb_cs_shift_tb_behav_cfg_extracted.vhd
+
 $(WORK__cs_tri8) : VHDL/cs_tri8.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_tri8.vhd
+
+$(WORK__cs_tri8__synthesised) : VHDL/cs_tri8_SYNTH.vhd \
+		$(WORK__cs_tri8) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_tri8_SYNTH.vhd
 
 $(WORK__cs_tri8__cs_tri8_behav) : VHDL/cs_tri8_arch.vhd \
 		$(WORK__cs_tri8) \
@@ -738,6 +1068,15 @@ $(WORK__cs_tri8__cs_tri8_behav) : VHDL/cs_tri8_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/cs_tri8_arch.vhd
+
+$(WORK__cs_tri8_cs_tri8_behav_cfg) : VHDL/cs_tri8_cs_tri8_behav_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__cs_tri8__cs_tri8_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__cs_tri8)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_tri8_cs_tri8_behav_cfg.vhd
 
 $(WORK__de_piece) : VHDL/de_piece.vhd \
 		$(IEEE__numeric_std) \
@@ -2108,6 +2447,13 @@ $(WORK__vga_params__body) : VHDL/params.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/params.vhd
 
+$(WORK__vga_params2) \
+$(WORK__vga_params2__body) : VHDL/cs_shift_statetype.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/cs_shift_statetype.vhd
+
 $(WORK__vga_read) : VHDL/vga_read.vhd \
 		$(WORK__vga_params) \
 		$(IEEE__numeric_std) \
@@ -2227,18 +2573,6 @@ $(WORK__vga_tb__vga_tb_arch) : VHDL/vga_tb.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_tb.vhd
 
-$(WORK__vga_tb_vga_tb_arch_cfg) : VHDL/vga_tb_vga_tb_arch_cfg.vhd \
-		$(WORK__vga) \
-		$(WORK__vga_vga_arch_cfg) \
-		$(WORK__vga_tb__vga_tb_arch) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_tb_vga_tb_arch_cfg.vhd
-
 $(WORK__vga_triggers) : VHDL/vga_triggers.vhd \
 		$(WORK__vga_params) \
 		$(IEEE__numeric_std) \
@@ -2265,40 +2599,4 @@ $(WORK__vga_triggers_vga_triggers_arch_cfg) : VHDL/vga_triggers_vga_triggers_arc
 		$(WORK__vga_triggers)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/vga_triggers_vga_triggers_arch_cfg.vhd
-
-$(WORK__vga_vga_arch_cfg) : VHDL/vga_vga_arch_cfg.vhd \
-		$(WORK__vga_demux) \
-		$(WORK__vga_score_check) \
-		$(WORK__vga_score_trans) \
-		$(WORK__vga_np_check) \
-		$(WORK__vga_np_trans_reset) \
-		$(WORK__vga_np_trans) \
-		$(WORK__vga_field_check) \
-		$(WORK__vga_field_trans_reset) \
-		$(WORK__vga_field_trans) \
-		$(WORK__vga_read) \
-		$(WORK__vga_triggers) \
-		$(WORK__vga_sync) \
-		$(WORK__vga_counter) \
-		$(WORK__vga_demux_vga_demux_behav_cfg) \
-		$(WORK__vga_score_check_vga_score_check_arch_cfg) \
-		$(WORK__vga_score_trans_vga_score_trans_arch_cfg) \
-		$(WORK__vga_np_check_vga_np_check_arch_cfg) \
-		$(WORK__vga_np_trans_reset_vga_np_trans_reset_arch_cfg) \
-		$(WORK__vga_np_trans_vga_np_trans_arch_cfg) \
-		$(WORK__vga_field_check_vga_field_check_arch_cfg) \
-		$(WORK__vga_field_trans_reset_vga_field_trans_reset_arch_cfg) \
-		$(WORK__vga_field_trans_vga_field_trans_arch_cfg) \
-		$(WORK__vga_read_vga_read_behav_cfg) \
-		$(WORK__vga_triggers_vga_triggers_arch_cfg) \
-		$(WORK__vga_sync_vga_sync_arch_cfg) \
-		$(WORK__vga_counter_vga_counter_behav_cfg) \
-		$(WORK__vga__vga_arch) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__vga)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/vga_vga_arch_cfg.vhd
 

@@ -44,7 +44,7 @@ begin
 	stimulus : process
 	begin
 		rst <= '1';
-		wait for 123 ns;
+		wait for 287 ns;
 		rst <= '0';
 
 		start <= '0';

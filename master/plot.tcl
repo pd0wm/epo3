@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/sr_tower.ddc
+read_file -f ddc ./ADB/cs_shift.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui
