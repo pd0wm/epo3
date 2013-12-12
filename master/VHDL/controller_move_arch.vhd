@@ -28,16 +28,16 @@ begin
 		draw_erase_draw  <= '0';
 		draw_erase_start <= '0';
 		check_start      <= '0';
-		ready <= '0';
+		ready            <= '0';
 
 		next_state <= cur_state;
 
 		case cur_state is
-			when reset  =>
+			when reset =>
 				if (start = '1') then
 					next_state <= move_2;
-				end if;	
-				
+				end if;
+
 			when move_2 =>
 				-- first erase current piece
 				draw_erase_draw  <= '0'; -- erase
@@ -65,6 +65,7 @@ begin
 
 			when move_6 =>
 				x       <= inputs(0) or inputs(1);
+				y       <= drop;
 				rot     <= inputs(2) or inputs(3);
 				add_sub <= inputs(1) or inputs(2);
 
@@ -78,6 +79,7 @@ begin
 
 			when do_move_1 =>
 				x       <= inputs(0) or inputs(1);
+				y       <= drop;
 				rot     <= inputs(2) or inputs(3);
 				add_sub <= inputs(1) or inputs(2);
 
@@ -87,6 +89,7 @@ begin
 
 			when do_move_2 =>
 				x       <= inputs(0) or inputs(1);
+				y       <= drop;
 				rot     <= inputs(2) or inputs(3);
 				add_sub <= inputs(1) or inputs(2);
 
@@ -99,6 +102,7 @@ begin
 
 			when do_move_3 =>
 				x       <= inputs(0) or inputs(1);
+				y       <= drop;
 				rot     <= inputs(2) or inputs(3);
 				add_sub <= inputs(1) or inputs(2);
 
@@ -110,22 +114,23 @@ begin
 
 			when done_fit =>
 				ready <= '1';
-				
+
 				x       <= inputs(0) or inputs(1);
+				y       <= drop;
 				rot     <= inputs(2) or inputs(3);
 				add_sub <= inputs(1) or inputs(2);
-				
+
 				if (start = '0') then
 					next_state <= reset;
 				end if;
 
 			when done_error =>
 				ready <= '1';
-				
+
 				if (start = '0') then
 					next_state <= reset;
 				end if;
-				
+
 		end case;
 	end process;
 end;
