@@ -1,191 +1,458 @@
 
 Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
 
-reading circuit "piece_lut(piece_lut(test2))" ...done
+reading circuit "controller(controller(test))" ...done
 
 Kissing madonna hello...
 
 Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
 
 
------- net distribution (total #nets = 208):
+------ net distribution (total #nets = 447):
         0..1     2     3     4     5     6     7 8..10 11..20  >20
 
-           0   132    50    11     3     2     0     6     1     3
+           0   243   103    46    22    16     8     4     2     3
 
------- partitioning 183 cells into (hor x vert) = (12 x 5) partitions
+------ partitioning 419 cells into (hor x vert) = (23 x 6) partitions
 
------- requested grid points = (144, 140)
+------ requested grid points = (184, 168)
 
------- cost@start = 3346, cost@end = 2017, moves = 219
------- cost@start = 2017, cost@end = 1698, moves = 222
------- cost@start = 1698, cost@end = 1443, moves = 183
------- cost@start = 1443, cost@end = 1330, moves = 163
------- cost@start = 1330, cost@end = 1219, moves = 134
------- cost@start = 1219, cost@end = 1195, moves = 111
------- cost@start = 1195, cost@end = 1195, moves = 101
------- 130 nets have to be routed on a 23 x 9 global grid
-     + routing net clk (39 terminals):  weight = 7604
-     + routing net new_change (2 terminals):  weight = 204
-     + routing net cur_change (2 terminals):  weight = 200
-     + routing net rst (5 terminals):  weight = 812
-     + routing net state_0_port (2 terminals):  weight = 204
-     + routing net next_state_1_port (2 terminals):  weight = 200
-     + routing net state_1_port (2 terminals):  weight = 204
-     + routing net next_state_2_port (2 terminals):  weight = 204
-     + routing net state_2_port (2 terminals):  weight = 200
-     + routing net n116 (2 terminals):  weight = 204
-     + routing net cur_mask_7_port (3 terminals):  weight = 400
-     + routing net cur_y_out_4_port (2 terminals):  weight = 208
-     + routing net n124 (2 terminals):  weight = 200
-     + routing net cur_y_out_3_port (2 terminals):  weight = 200
-     + routing net cur_y_out_2_port (2 terminals):  weight = 204
-     + routing net cur_mask_5_port (2 terminals):  weight = 200
-     + routing net n126 (2 terminals):  weight = 202
-     + routing net cur_y_out_1_port (2 terminals):  weight = 204
-     + routing net n119 (2 terminals):  weight = 204
-     + routing net cur_mask_4_port (2 terminals):  weight = 204
-     + routing net n127 (2 terminals):  weight = 202
-     + routing net cur_y_out_0_port (2 terminals):  weight = 206
-     + routing net n120 (2 terminals):  weight = 202
-     + routing net n128 (2 terminals):  weight = 200
-     + routing net cur_x_out_3_port (3 terminals):  weight = 308
-     + routing net cur_overflow (2 terminals):  weight = 200
-     + routing net n129 (2 terminals):  weight = 200
-     + routing net cur_x_out_2_port (2 terminals):  weight = 200
-     + routing net n121 (2 terminals):  weight = 200
-     + routing net n122 (2 terminals):  weight = 206
-     + routing net cur_mask_1_port (2 terminals):  weight = 206
-     + routing net n131 (2 terminals):  weight = 204
-     + routing net cur_x_out_0_port (2 terminals):  weight = 204
-     + routing net n132 (2 terminals):  weight = 200
-     + routing net cur_ready (2 terminals):  weight = 200
-     + routing net n113 (2 terminals):  weight = 204
-     + routing net cur_rom_addr_6_port (3 terminals):  weight = 400
-     + routing net n112 (2 terminals):  weight = 204
-     + routing net cur_rom_addr_5_port (2 terminals):  weight = 202
-     + routing net cur_rom_addr_4_port (2 terminals):  weight = 200
-     + routing net n110 (2 terminals):  weight = 200
-     + routing net cur_rom_addr_3_port (2 terminals):  weight = 200
-     + routing net n109 (2 terminals):  weight = 200
-     + routing net cur_rom_addr_2_port (2 terminals):  weight = 204
-     + routing net n108 (2 terminals):  weight = 206
-     + routing net cur_rom_addr_1_port (3 terminals):  weight = 406
-     + routing net cur_rom_addr_0_port (2 terminals):  weight = 200
-     + routing net n133 (3 terminals):  weight = 400
-     + routing net n135 (3 terminals):  weight = 406
-     + routing net n136 (3 terminals):  weight = 400
-     + routing net n137 (4 terminals):  weight = 600
-     + routing net n138 (4 terminals):  weight = 602
-     + routing net n139 (3 terminals):  weight = 404
-     + routing net n140 (2 terminals):  weight = 204
-     + routing net n141 (2 terminals):  weight = 206
-     + routing net n142 (2 terminals):  weight = 200
-     + routing net n143 (3 terminals):  weight = 400
-     + routing net n144 (4 terminals):  weight = 602
-     + routing net n145 (2 terminals):  weight = 206
-     + routing net n146 (3 terminals):  weight = 406
-     + routing net n147 (2 terminals):  weight = 200
-     + routing net n148 (2 terminals):  weight = 200
-     + routing net n149 (2 terminals):  weight = 200
-     + routing net n150 (3 terminals):  weight = 404
-     + routing net n151 (2 terminals):  weight = 202
-     + routing net n153 (7 terminals):  weight = 1210
-     + routing net n154 (2 terminals):  weight = 206
-     + routing net x_2_0_0 (3 terminals):  weight = 402
-     + routing net rom_data_3_0_0 (3 terminals):  weight = 402
-     + routing net n155 (8 terminals):  weight = 1406
-     + routing net n157 (2 terminals):  weight = 204
-     + routing net n158 (2 terminals):  weight = 220
-     + routing net n159 (2 terminals):  weight = 200
-     + routing net n160 (2 terminals):  weight = 206
-     + routing net n161 (2 terminals):  weight = 200
-     + routing net n162 (2 terminals):  weight = 202
-     + routing net n165 (2 terminals):  weight = 206
-     + routing net n166 (2 terminals):  weight = 202
-     + routing net n167 (2 terminals):  weight = 206
-     + routing net n169 (2 terminals):  weight = 206
-     + routing net n170 (2 terminals):  weight = 204
-     + routing net n172 (2 terminals):  weight = 200
-     + routing net n173 (2 terminals):  weight = 200
-     + routing net n174 (2 terminals):  weight = 200
-     + routing net n175 (2 terminals):  weight = 202
-     + routing net n176 (2 terminals):  weight = 200
-     + routing net n177 (2 terminals):  weight = 200
-     + routing net n180 (2 terminals):  weight = 210
-     + routing net n181 (2 terminals):  weight = 204
-     + routing net y_3_0_2 (2 terminals):  weight = 204
-     + routing net n183 (2 terminals):  weight = 202
-     + routing net n184 (2 terminals):  weight = 200
-     + routing net n185 (2 terminals):  weight = 206
-     + routing net n187 (2 terminals):  weight = 204
-     + routing net n188 (6 terminals):  weight = 1008
-     + routing net n189 (8 terminals):  weight = 1418
-     + routing net n190 (2 terminals):  weight = 206
-     + routing net n191 (2 terminals):  weight = 202
-     + routing net n192 (2 terminals):  weight = 200
-     + routing net n193 (2 terminals):  weight = 202
-     + routing net n194 (2 terminals):  weight = 202
-     + routing net n195 (2 terminals):  weight = 200
-     + routing net n196 (2 terminals):  weight = 200
-     + routing net n197 (2 terminals):  weight = 202
-     + routing net n199 (2 terminals):  weight = 200
-     + routing net n201 (2 terminals):  weight = 204
-     + routing net n202 (2 terminals):  weight = 202
-     + routing net n203 (2 terminals):  weight = 210
-     + routing net n204 (3 terminals):  weight = 402
-     + routing net n205 (3 terminals):  weight = 404
-     + routing net n207 (2 terminals):  weight = 200
-     + routing net n208 (2 terminals):  weight = 204
-     + routing net n211 (2 terminals):  weight = 200
-     + routing net n212 (2 terminals):  weight = 202
-     + routing net n213 (2 terminals):  weight = 200
-     + routing net n214 (2 terminals):  weight = 200
-     + routing net n215 (2 terminals):  weight = 200
-     + routing net n217 (2 terminals):  weight = 200
-     + routing net n218 (2 terminals):  weight = 200
-     + routing net n219 (7 terminals):  weight = 1212
-     + routing net n220 (6 terminals):  weight = 1012
-     + routing net n221 (2 terminals):  weight = 202
-     + routing net n223 (2 terminals):  weight = 200
-     + routing net n227 (2 terminals):  weight = 202
-     + routing net n229 (2 terminals):  weight = 206
-     + routing net n230 (2 terminals):  weight = 204
-     + routing net n231 (2 terminals):  weight = 200
-     + routing net n232 (2 terminals):  weight = 200
-     + routing net n233 (2 terminals):  weight = 200
-     + routing net n235 (2 terminals):  weight = 200
+------ cost@start = 16618, cost@end = 10098, moves = 566
+------ cost@start = 10098, cost@end = 7797, moves = 520
+------ cost@start = 7797, cost@end = 7036, moves = 505
+------ cost@start = 7036, cost@end = 7036, moves = 179
+------ 407 nets have to be routed on a 45 x 11 global grid
+     + routing net lut_piece_type_2_0_2 (2 terminals):  weight = 226
+     + routing net lut_piece_type_2_0_1 (3 terminals):  weight = 420
+     + routing net lut_piece_type_2_0_0 (2 terminals):  weight = 200
+     + routing net lut_next_piece (3 terminals):  weight = 400
+     + routing net lut_x_2_0_2 (2 terminals):  weight = 206
+     + routing net lut_x_2_0_1 (2 terminals):  weight = 206
+     + routing net lut_x_2_0_0 (2 terminals):  weight = 208
+     + routing net lut_y_3_0_2 (2 terminals):  weight = 200
+     + routing net lut_y_3_0_1 (2 terminals):  weight = 202
+     + routing net lut_y_3_0_0 (2 terminals):  weight = 204
+     + routing net lut_rot_1_0_0 (2 terminals):  weight = 200
+     + routing net y (2 terminals):  weight = 206
+     + routing net check_start (2 terminals):  weight = 202
+     + routing net draw_score_draw (3 terminals):  weight = 414
+     + routing net n381 (2 terminals):  weight = 204
+     + routing net clk (30 terminals):  weight = 5552
+     + routing net inv_inputs_5_port (5 terminals):  weight = 708
+     + routing net inv_inputs_4_port (2 terminals):  weight = 200
+     + routing net n379 (2 terminals):  weight = 200
+     + routing net inv_inputs_3_port (3 terminals):  weight = 404
+     + routing net inv_inputs_2_port (2 terminals):  weight = 204
+     + routing net n377 (2 terminals):  weight = 202
+     + routing net inv_inputs_1_port (3 terminals):  weight = 404
+     + routing net n376 (2 terminals):  weight = 206
+     + routing net inv_inputs_0_port (3 terminals):  weight = 404
+     + routing net n375 (2 terminals):  weight = 204
+     + routing net cur_timer_1_time (6 terminals):  weight = 828
+     + routing net next_state_2_port (2 terminals):  weight = 238
+     + routing net rst (13 terminals):  weight = 2240
+     + routing net cur_state_2_port (4 terminals):  weight = 606
+     + routing net next_state_1_port (2 terminals):  weight = 204
+     + routing net cur_state_1_port (7 terminals):  weight = 1210
+     + routing net next_state_0_port (2 terminals):  weight = 200
+     + routing net cur_state_0_port (6 terminals):  weight = 1014
+     + routing net next_state_3_port (2 terminals):  weight = 208
+     + routing net cur_state_3_port (3 terminals):  weight = 408
+     + routing net next_state_5_port (2 terminals):  weight = 208
+     + routing net cur_state_5_port (4 terminals):  weight = 610
+     + routing net next_state_4_port (2 terminals):  weight = 210
+     + routing net cur_state_4_port (5 terminals):  weight = 812
+     + routing net n398 (2 terminals):  weight = 204
+     + routing net n399 (2 terminals):  weight = 218
+     + routing net n400 (2 terminals):  weight = 210
+     + routing net n389 (2 terminals):  weight = 206
+     + routing net n386 (2 terminals):  weight = 200
+     + routing net cur_future_piece_2_port (3 terminals):  weight = 430
+     + routing net n390 (2 terminals):  weight = 202
+     + routing net n387 (2 terminals):  weight = 200
+     + routing net cur_future_piece_1_port (2 terminals):  weight = 226
+     + routing net n391 (2 terminals):  weight = 200
+     + routing net n388 (2 terminals):  weight = 206
+     + routing net cur_future_piece_0_port (3 terminals):  weight = 400
+     + routing net n397 (2 terminals):  weight = 200
+     + routing net n395 (2 terminals):  weight = 208
+     + routing net n392 (2 terminals):  weight = 200
+     + routing net n374 (2 terminals):  weight = 200
+     + routing net cur_timer_1_start (3 terminals):  weight = 406
+     + routing net n373 (2 terminals):  weight = 204
+     + routing net cur_timer_1_reset (2 terminals):  weight = 200
+     + routing net n401 (4 terminals):  weight = 624
+     + routing net n402 (2 terminals):  weight = 202
+     + routing net inputs_5_0_0 (2 terminals):  weight = 204
+     + routing net inputs_5_0_1 (3 terminals):  weight = 408
+     + routing net n403 (2 terminals):  weight = 208
+     + routing net n404 (2 terminals):  weight = 210
+     + routing net n405 (2 terminals):  weight = 204
+     + routing net n406 (2 terminals):  weight = 200
+     + routing net n407 (3 terminals):  weight = 400
+     + routing net n408 (2 terminals):  weight = 204
+     + routing net n410 (3 terminals):  weight = 410
+     + routing net n411 (2 terminals):  weight = 228
+     + routing net n412 (2 terminals):  weight = 204
+     + routing net n413 (2 terminals):  weight = 220
+     + routing net n414 (2 terminals):  weight = 226
+     + routing net n415 (4 terminals):  weight = 604
+     + routing net n416 (2 terminals):  weight = 202
+     + routing net inputs_5_0_2 (2 terminals):  weight = 200
+     + routing net inputs_5_0_3 (2 terminals):  weight = 200
+     + routing net n417 (2 terminals):  weight = 202
+     + routing net n418 (3 terminals):  weight = 400
+     + routing net n419 (2 terminals):  weight = 224
+     + routing net n420 (3 terminals):  weight = 408
+     + routing net n421 (3 terminals):  weight = 313
+     + routing net n422 (2 terminals):  weight = 204
+     + routing net n423 (2 terminals):  weight = 206
+     + routing net n424 (4 terminals):  weight = 606
+     + routing net n425 (3 terminals):  weight = 412
+     + routing net n426 (3 terminals):  weight = 430
+     + routing net n427 (2 terminals):  weight = 200
+     + routing net n428 (2 terminals):  weight = 208
+     + routing net n429 (2 terminals):  weight = 234
+     + routing net n430 (2 terminals):  weight = 206
+     + routing net n431 (2 terminals):  weight = 210
+     + routing net n432 (2 terminals):  weight = 224
+     + routing net n433 (4 terminals):  weight = 610
+     + routing net n434 (2 terminals):  weight = 204
+     + routing net n435 (5 terminals):  weight = 806
+     + routing net timer_1_done (2 terminals):  weight = 204
+     + routing net n436 (3 terminals):  weight = 406
+     + routing net n437 (7 terminals):  weight = 1130
+     + routing net n438 (3 terminals):  weight = 306
+     + routing net n439 (2 terminals):  weight = 210
+     + routing net n440 (5 terminals):  weight = 824
+     + routing net n441 (3 terminals):  weight = 408
+     + routing net n442 (3 terminals):  weight = 410
+     + routing net n443 (3 terminals):  weight = 408
+     + routing net n444 (3 terminals):  weight = 404
+     + routing net n445 (2 terminals):  weight = 218
+     + routing net n447 (2 terminals):  weight = 208
+     + routing net n448 (2 terminals):  weight = 210
+     + routing net n449 (2 terminals):  weight = 206
+     + routing net n450 (2 terminals):  weight = 206
+     + routing net n451 (6 terminals):  weight = 829
+     + routing net n452 (3 terminals):  weight = 313
+     + routing net draw_erase_ready (5 terminals):  weight = 728
+     + routing net n453 (2 terminals):  weight = 218
+     + routing net n454 (3 terminals):  weight = 424
+     + routing net n455 (3 terminals):  weight = 410
+     + routing net n456 (2 terminals):  weight = 206
+     + routing net n457 (3 terminals):  weight = 420
+     + routing net n458 (2 terminals):  weight = 208
+     + routing net n459 (2 terminals):  weight = 208
+     + routing net n460 (2 terminals):  weight = 210
+     + routing net n461 (2 terminals):  weight = 234
+     + routing net n462 (3 terminals):  weight = 308
+     + routing net n463 (3 terminals):  weight = 306
+     + routing net n464 (5 terminals):  weight = 712
+     + routing net n465 (2 terminals):  weight = 204
+     + routing net n466 (2 terminals):  weight = 202
+     + routing net n467 (2 terminals):  weight = 206
+     + routing net n468 (2 terminals):  weight = 202
+     + routing net n469 (2 terminals):  weight = 212
+     + routing net n470 (2 terminals):  weight = 222
+     + routing net n471 (4 terminals):  weight = 616
+     + routing net n472 (3 terminals):  weight = 406
+     + routing net n473 (2 terminals):  weight = 200
+     + routing net clear_shift_ready (2 terminals):  weight = 200
+     + routing net n474 (10 terminals):  weight = 1628
+     + routing net n475 (5 terminals):  weight = 820
+     + routing net n476 (2 terminals):  weight = 200
+     + routing net n477 (5 terminals):  weight = 824
+     + routing net n478 (2 terminals):  weight = 200
+     + routing net n479 (3 terminals):  weight = 408
+     + routing net n480 (2 terminals):  weight = 204
+     + routing net n481 (3 terminals):  weight = 412
+     + routing net n482 (3 terminals):  weight = 408
+     + routing net n483 (2 terminals):  weight = 220
+     + routing net n484 (4 terminals):  weight = 512
+     + routing net n485 (6 terminals):  weight = 815
+     + routing net n486 (5 terminals):  weight = 816
+     + routing net n487 (2 terminals):  weight = 208
+     + routing net n488 (2 terminals):  weight = 210
+     + routing net n489 (2 terminals):  weight = 200
+     + routing net n490 (2 terminals):  weight = 210
+     + routing net n491 (2 terminals):  weight = 202
+     + routing net n492 (2 terminals):  weight = 210
+     + routing net n493 (2 terminals):  weight = 204
+     + routing net n494 (2 terminals):  weight = 206
+     + routing net n495 (4 terminals):  weight = 614
+     + routing net n496 (2 terminals):  weight = 204
+     + routing net n497 (2 terminals):  weight = 200
+     + routing net n498 (4 terminals):  weight = 616
+     + routing net n499 (3 terminals):  weight = 422
+     + routing net n500 (3 terminals):  weight = 400
+     + routing net n501 (3 terminals):  weight = 408
+     + routing net n502 (5 terminals):  weight = 814
+     + routing net n503 (2 terminals):  weight = 206
+     + routing net n505 (2 terminals):  weight = 220
+     + routing net n506 (3 terminals):  weight = 426
+     + routing net n507 (2 terminals):  weight = 210
+     + routing net n508 (2 terminals):  weight = 208
+     + routing net check_empty (5 terminals):  weight = 822
+     + routing net n509 (2 terminals):  weight = 202
+     + routing net n510 (2 terminals):  weight = 202
+     + routing net n511 (2 terminals):  weight = 228
+     + routing net n512 (2 terminals):  weight = 206
+     + routing net n513 (5 terminals):  weight = 826
+     + routing net n514 (4 terminals):  weight = 618
+     + routing net n515 (3 terminals):  weight = 430
+     + routing net n516 (2 terminals):  weight = 206
+     + routing net n517 (4 terminals):  weight = 616
+     + routing net n518 (2 terminals):  weight = 208
+     + routing net n519 (3 terminals):  weight = 410
+     + routing net n520 (2 terminals):  weight = 222
+     + routing net n521 (4 terminals):  weight = 511
+     + routing net n522 (4 terminals):  weight = 606
+     + routing net n524 (2 terminals):  weight = 204
+     + routing net n525 (2 terminals):  weight = 208
+     + routing net n526 (2 terminals):  weight = 206
+     + routing net n527 (3 terminals):  weight = 414
+     + routing net n528 (4 terminals):  weight = 417
+     + routing net n529 (2 terminals):  weight = 222
+     + routing net n530 (4 terminals):  weight = 512
+     + routing net n531 (3 terminals):  weight = 414
+     + routing net n532 (2 terminals):  weight = 210
+     + routing net n533 (4 terminals):  weight = 610
+     + routing net n534 (2 terminals):  weight = 210
+     + routing net n535 (2 terminals):  weight = 208
+     + routing net n536 (2 terminals):  weight = 210
+     + routing net n537 (2 terminals):  weight = 206
+     + routing net n538 (2 terminals):  weight = 202
+     + routing net n539 (2 terminals):  weight = 224
+     + routing net n540 (2 terminals):  weight = 212
+     + routing net n541 (4 terminals):  weight = 614
+     + routing net n542 (4 terminals):  weight = 612
+     + routing net n543 (2 terminals):  weight = 208
+     + routing net n544 (2 terminals):  weight = 204
+     + routing net n545 (2 terminals):  weight = 210
+     + routing net n546 (2 terminals):  weight = 200
+     + routing net n547 (2 terminals):  weight = 200
+     + routing net n548 (3 terminals):  weight = 310
+     + routing net n549 (3 terminals):  weight = 408
+     + routing net n550 (4 terminals):  weight = 630
+     + routing net n551 (2 terminals):  weight = 230
+     + routing net n552 (2 terminals):  weight = 210
+     + routing net n553 (2 terminals):  weight = 206
+     + routing net n554 (3 terminals):  weight = 408
+     + routing net n555 (3 terminals):  weight = 404
+     + routing net n556 (3 terminals):  weight = 418
+     + routing net n557 (3 terminals):  weight = 432
+     + routing net n558 (4 terminals):  weight = 632
+     + routing net n559 (2 terminals):  weight = 200
+     + routing net n560 (2 terminals):  weight = 208
+     + routing net n561 (3 terminals):  weight = 432
+     + routing net n562 (2 terminals):  weight = 214
+     + routing net n563 (2 terminals):  weight = 206
+     + routing net n564 (2 terminals):  weight = 206
+     + routing net n565 (3 terminals):  weight = 412
+     + routing net n566 (5 terminals):  weight = 734
+     + routing net n567 (2 terminals):  weight = 200
+     + routing net n568 (2 terminals):  weight = 216
+     + routing net n569 (2 terminals):  weight = 200
+     + routing net n570 (3 terminals):  weight = 424
+     + routing net n571 (5 terminals):  weight = 844
+     + routing net n572 (2 terminals):  weight = 222
+     + routing net n573 (2 terminals):  weight = 206
+     + routing net n574 (2 terminals):  weight = 204
+     + routing net n575 (2 terminals):  weight = 212
+     + routing net n576 (2 terminals):  weight = 214
+     + routing net n577 (4 terminals):  weight = 606
+     + routing net n578 (2 terminals):  weight = 200
+     + routing net n579 (2 terminals):  weight = 202
+     + routing net n580 (2 terminals):  weight = 200
+     + routing net n581 (2 terminals):  weight = 208
+     + routing net n582 (3 terminals):  weight = 420
+     + routing net n583 (3 terminals):  weight = 406
+     + routing net n584 (4 terminals):  weight = 630
+     + routing net n585 (2 terminals):  weight = 204
+     + routing net n586 (2 terminals):  weight = 214
+     + routing net n587 (4 terminals):  weight = 622
+     + routing net n588 (5 terminals):  weight = 729
+     + routing net n589 (2 terminals):  weight = 206
+     + routing net n590 (2 terminals):  weight = 222
+     + routing net n591 (2 terminals):  weight = 214
+     + routing net n592 (2 terminals):  weight = 200
+     + routing net n593 (2 terminals):  weight = 210
+     + routing net n594 (2 terminals):  weight = 204
+     + routing net n595 (2 terminals):  weight = 200
+     + routing net n596 (2 terminals):  weight = 212
+     + routing net n597 (5 terminals):  weight = 629
+     + routing net n598 (5 terminals):  weight = 842
+     + routing net n599 (2 terminals):  weight = 200
+     + routing net n600 (2 terminals):  weight = 204
+     + routing net n601 (2 terminals):  weight = 204
+     + routing net n602 (2 terminals):  weight = 218
+     + routing net n603 (2 terminals):  weight = 204
+     + routing net n604 (2 terminals):  weight = 204
+     + routing net n605 (2 terminals):  weight = 204
+     + routing net n606 (2 terminals):  weight = 216
+     + routing net n607 (3 terminals):  weight = 406
+     + routing net n608 (3 terminals):  weight = 404
+     + routing net n609 (5 terminals):  weight = 810
+     + routing net n610 (2 terminals):  weight = 200
+     + routing net n611 (2 terminals):  weight = 210
+     + routing net n612 (2 terminals):  weight = 210
+     + routing net n613 (2 terminals):  weight = 204
+     + routing net n614 (3 terminals):  weight = 420
+     + routing net n615 (3 terminals):  weight = 426
+     + routing net n616 (2 terminals):  weight = 224
+     + routing net n617 (2 terminals):  weight = 206
+     + routing net n618 (2 terminals):  weight = 200
+     + routing net n619 (2 terminals):  weight = 212
+     + routing net n620 (2 terminals):  weight = 200
+     + routing net n621 (2 terminals):  weight = 202
+     + routing net n622 (5 terminals):  weight = 810
+     + routing net n623 (4 terminals):  weight = 508
+     + routing net next_piece_2_0_0 (2 terminals):  weight = 212
+     + routing net n624 (3 terminals):  weight = 420
+     + routing net n625 (2 terminals):  weight = 228
+     + routing net n626 (2 terminals):  weight = 208
+     + routing net n627 (2 terminals):  weight = 208
+     + routing net next_piece_2_0_1 (2 terminals):  weight = 206
+     + routing net n628 (2 terminals):  weight = 222
+     + routing net n629 (2 terminals):  weight = 210
+     + routing net n630 (2 terminals):  weight = 206
+     + routing net next_piece_2_0_2 (2 terminals):  weight = 212
+     + routing net n631 (2 terminals):  weight = 204
+     + routing net n632 (4 terminals):  weight = 630
+     + routing net n633 (2 terminals):  weight = 200
+     + routing net n634 (2 terminals):  weight = 224
+     + routing net n635 (2 terminals):  weight = 214
+     + routing net n636 (2 terminals):  weight = 206
+     + routing net n637 (2 terminals):  weight = 206
+     + routing net n638 (5 terminals):  weight = 826
+     + routing net n639 (4 terminals):  weight = 614
+     + routing net n640 (4 terminals):  weight = 606
+     + routing net n641 (2 terminals):  weight = 206
+     + routing net n642 (2 terminals):  weight = 210
+     + routing net n643 (2 terminals):  weight = 200
+     + routing net n644 (2 terminals):  weight = 204
+     + routing net n645 (2 terminals):  weight = 204
+     + routing net n646 (2 terminals):  weight = 202
+     + routing net n647 (4 terminals):  weight = 628
+     + routing net n648 (2 terminals):  weight = 200
+     + routing net n649 (2 terminals):  weight = 218
+     + routing net n650 (2 terminals):  weight = 208
+     + routing net n651 (2 terminals):  weight = 222
+     + routing net n652 (2 terminals):  weight = 204
+     + routing net n653 (4 terminals):  weight = 510
+     + routing net n654 (3 terminals):  weight = 410
+     + routing net n655 (3 terminals):  weight = 412
+     + routing net n656 (4 terminals):  weight = 612
+     + routing net n657 (2 terminals):  weight = 204
+     + routing net n658 (2 terminals):  weight = 200
+     + routing net n659 (2 terminals):  weight = 200
+     + routing net n660 (6 terminals):  weight = 914
+     + routing net n661 (3 terminals):  weight = 408
+     + routing net n662 (2 terminals):  weight = 210
+     + routing net n663 (3 terminals):  weight = 406
+     + routing net n664 (2 terminals):  weight = 204
+     + routing net n665 (2 terminals):  weight = 204
+     + routing net n667 (2 terminals):  weight = 204
+     + routing net n668 (3 terminals):  weight = 323
+     + routing net n669 (5 terminals):  weight = 802
+     + routing net n670 (3 terminals):  weight = 406
+     + routing net n671 (6 terminals):  weight = 1018
+     + routing net n672 (2 terminals):  weight = 224
+     + routing net n673 (2 terminals):  weight = 204
+     + routing net n674 (2 terminals):  weight = 222
+     + routing net n676 (2 terminals):  weight = 200
+     + routing net n677 (2 terminals):  weight = 200
+     + routing net n678 (3 terminals):  weight = 414
+     + routing net n679 (3 terminals):  weight = 406
+     + routing net n680 (2 terminals):  weight = 220
+     + routing net n681 (2 terminals):  weight = 212
+     + routing net n682 (2 terminals):  weight = 222
+     + routing net n683 (2 terminals):  weight = 230
+     + routing net n684 (2 terminals):  weight = 236
+     + routing net n685 (3 terminals):  weight = 404
+     + routing net n686 (4 terminals):  weight = 604
+     + routing net n687 (2 terminals):  weight = 214
+     + routing net n688 (3 terminals):  weight = 406
+     + routing net n689 (6 terminals):  weight = 916
+     + routing net n690 (2 terminals):  weight = 224
+     + routing net n691 (2 terminals):  weight = 204
+     + routing net n692 (3 terminals):  weight = 400
+     + routing net n693 (4 terminals):  weight = 508
+     + routing net n694 (3 terminals):  weight = 410
+     + routing net n695 (2 terminals):  weight = 204
+     + routing net n696 (5 terminals):  weight = 800
+     + routing net n697 (9 terminals):  weight = 1525
+     + routing net n698 (3 terminals):  weight = 410
+     + routing net n699 (2 terminals):  weight = 204
+     + routing net n700 (2 terminals):  weight = 210
+     + routing net n701 (2 terminals):  weight = 210
+     + routing net n702 (4 terminals):  weight = 636
+     + routing net n703 (2 terminals):  weight = 222
+     + routing net n704 (2 terminals):  weight = 206
+     + routing net n705 (2 terminals):  weight = 212
+     + routing net n706 (5 terminals):  weight = 814
+     + routing net n707 (8 terminals):  weight = 1325
+     + routing net n708 (9 terminals):  weight = 1512
+     + routing net n709 (4 terminals):  weight = 618
+     + routing net n710 (4 terminals):  weight = 618
+     + routing net n711 (2 terminals):  weight = 204
+     + routing net n712 (4 terminals):  weight = 521
+     + routing net n713 (2 terminals):  weight = 208
+     + routing net n714 (2 terminals):  weight = 214
+     + routing net n715 (2 terminals):  weight = 208
+     + routing net n716 (3 terminals):  weight = 410
+     + routing net n717 (2 terminals):  weight = 226
+     + routing net n718 (2 terminals):  weight = 202
+     + routing net n719 (2 terminals):  weight = 214
+     + routing net n720 (2 terminals):  weight = 204
+     + routing net n721 (4 terminals):  weight = 610
+     + routing net n722 (6 terminals):  weight = 1006
+     + routing net n723 (4 terminals):  weight = 606
+     + routing net n724 (2 terminals):  weight = 206
+     + routing net n725 (4 terminals):  weight = 612
+     + routing net n726 (4 terminals):  weight = 604
+     + routing net n727 (2 terminals):  weight = 206
+     + routing net n729 (2 terminals):  weight = 206
+     + routing net n730 (2 terminals):  weight = 200
+     + routing net n732 (2 terminals):  weight = 208
+     + routing net n733 (3 terminals):  weight = 430
+     + routing net n734 (2 terminals):  weight = 208
+     + routing net n735 (3 terminals):  weight = 414
+     + routing net n736 (3 terminals):  weight = 410
+     + routing net n737 (2 terminals):  weight = 206
+     + routing net n738 (2 terminals):  weight = 200
+     + routing net n739 (3 terminals):  weight = 306
+     + routing net n740 (2 terminals):  weight = 210
+     + routing net n741 (2 terminals):  weight = 208
+     + routing net n742 (2 terminals):  weight = 200
+     + routing net n743 (2 terminals):  weight = 204
+     + routing net n744 (2 terminals):  weight = 232
+     + routing net n745 (2 terminals):  weight = 206
 
------- Routed 130 nets, total weight = 44488
+------ Routed 407 nets, total weight = 148702
 
 
 
------- Detailed placement of (Tmp_Cell_(piece_lut(piece_lut(test2))))...
+------ Detailed placement of (Tmp_Cell_(controller(controller(test))))...
 ------ Reading input data
 ------ Creating temporary data structures
------- Placement plane size : [144:140]
+------ Placement plane size : [184:168]
 ------ Doing placement 
- Can't place cell :mask_reg_6_inst  in window at (36,1)
- Can't place cell :cur_mask_reg_6_inst  in window at (36,1)
+ Can't place cell :cur_piece_reg_0_inst  in window at (88,0)
 
  Apparently the magnification coefficient is too small. 
  Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [187:140]
------- Doing placement 
- Can't place cell :rom_addr_reg_2_inst  in window at (60,0)
-
- Apparently the magnification coefficient is too small. 
- Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [243:140]
+------ Placement plane size : [239:168]
 ------ Doing placement 
 ------ Compacting  
 
-         15  column[s] deleted.
+         14  column[s] deleted.
 
-         Magnification coefficient obtained :0.867957
+         Magnification coefficient obtained :0.772929
 
 ------ Writing created layout to database
 Kissing madonna good bye...
 
-Madonna took 0.1 seconds of your cpu
+Madonna took 0.5 seconds of your cpu
 terminate

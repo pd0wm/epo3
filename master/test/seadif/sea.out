@@ -2,14 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'sr_if' ------
------- circuit 'sr_if' is still up-to-date ------
------- checking match with placement layout 'Tmpsr_if5641' ------
------- reading nelsis layout-cell 'Tmpsr_if5641' ------
------- writing nelsis 'Tmpsr_if5641' as sdflay 'Tmp_Cell_(sr_if(sr_if(test)))' ------
+------ checking your circuit 'controller' ------
+------ circuit 'controller' is still up-to-date ------
+------ checking match with placement layout 'Tmpcontroller7744' ------
+------ reading nelsis layout-cell 'Tmpcontroller7744' ------
+------ writing nelsis 'Tmpcontroller7744' as sdflay 'Tmp_Cell_(controller(controller(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f sr_if -c sr_if -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmpsr_if5641' ------
-calling program: nelsea -rLH -f sr_if -c sr_if -l Tmp_Cell_ Tmpsr_if5641 
+calling program: trout -l test -f controller -c controller -o Tmp_Cell_ -d Tmp_Cell_ 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmpcontroller7744' ------
+calling program: nelsea -rLH -f controller -c controller -l Tmp_Cell_ Tmpcontroller7744 
 ------ sea: task completed ------
