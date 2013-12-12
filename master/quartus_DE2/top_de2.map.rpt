@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Thu Dec 12 11:49:16 2013
+Thu Dec 12 12:05:42 2013
 Quartus II Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
 
 
@@ -79,7 +79,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 12 11:49:16 2013          ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 12 12:05:42 2013          ;
 ; Quartus II Version                 ; 10.0 Build 262 08/18/2010 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_de2                                        ;
 ; Top-level Entity Name              ; top_de2                                        ;
@@ -1571,7 +1571,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 10.0 Build 262 08/18/2010 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Dec 12 11:49:07 2013
+    Info: Processing started: Thu Dec 12 12:05:33 2013
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de2 -c top_de2
 Info: Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info: Found 1 design units, including 0 entities, in source file /home/epo3-user/Desktop/git/epo3/master/VHDL/cs_shift_comb_arch.vhd
@@ -1974,8 +1974,8 @@ Info: Implemented 1158 device resources after synthesis - the final resource cou
     Info: Implemented 36 output pins
     Info: Implemented 1114 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 276 megabytes
-    Info: Processing ended: Thu Dec 12 11:49:16 2013
+    Info: Peak virtual memory: 275 megabytes
+    Info: Processing ended: Thu Dec 12 12:05:42 2013
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 

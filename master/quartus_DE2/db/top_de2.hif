@@ -211841,57 +211841,6 @@ de_piece:inst6
 
 # end
 # entity
-cs_shift_comb
-# storage
-db|top_de2.(845).cnf
-db|top_de2.(845).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb.vhd
-11190616d2648e2ae1762ad2bef169
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(state)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(state_next)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(cnt_ram_addr)
-6 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb_arch.vhd
-a952ebec1eb9b2d0f9cd0df443b5cf4
-}
-# hierarchies {
-cs_compare:inst11|cs_shift:shift|cs_shift_comb:comb
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 timer
 # storage
 db|top_de2.(318).cnf
@@ -211997,6 +211946,57 @@ bde492c0ae6efc5bc9ad686c08aa66e
 }
 # hierarchies {
 controller:inst14
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+cs_shift_comb
+# storage
+db|top_de2.(845).cnf
+db|top_de2.(845).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb.vhd
+11190616d2648e2ae1762ad2bef169
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(state)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(state_next)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(cnt_ram_addr)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb_arch.vhd
+79826db7632e8bb6f5a86a61cab938d
+}
+# hierarchies {
+cs_compare:inst11|cs_shift:shift|cs_shift_comb:comb
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
