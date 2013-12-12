@@ -1,149 +1,50 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(piece_lut(piece_lut(test)))' ------
+------ reading placement 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
 ------ building data structure  ------
-WARNING/ERROR: cannot find equiv. layoutport of cirport 'rom_data_3_0_0'
-         (circell 'adder_y') on layout cell 'adder_y'.
-WARNING/ERROR: cannot find equiv. layoutport of cirport 'rom_data_3_0_1'
-         (circell 'adder_y') on layout cell 'adder_y'.
 ------ making grid  ------
------- routing started Thu Dec 12 21:10:02 2013
- 125 nets have to be routed.
-Routing net 'n85' (2/2): . OK!
-Routing net 'n105' (2/2): . OK!
-Routing net 'n87' (2/2): . OK!
-Routing net 'new_rom_addr_1_port' (2/2): . OK!
-Routing net 'n99' (2/2): . OK!
-Routing net 'check_start' (2/2): . OK!
-Routing net 'piece_type_2_0_1' (2/2): . OK!
-Routing net 'draw_start' (2/2): . OK!
-Routing net 'n107' (2/2): . OK!
-Routing net 'n86' (2/2): . OK!
-Routing net 'overflow' (2/2): . OK!
-Routing net 'n82' (2/2): . OK!
-Routing net 'n103' (2/2): . OK!
-Routing net 'new_rom_addr_6_port' (2/2): . OK!
-Routing net 'n88' (2/2): . OK!
-Routing net 'clk' (19/19): .................. OK!
-Routing net 'new_mask_7_port' (2/2): . OK!
-Routing net 'new_mask_5_port' (2/2): . OK!
-Routing net 'n79' (2/2): . OK!
-Routing net 'n83' (2/2): . OK!
-Routing net 'n68' (2/2): . OK!
-Routing net 'n76' (2/2): . OK!
-Routing net 'new_rom_addr_2_port' (2/2): . OK!
-Routing net 'n91' (3/3): .. OK!
-Routing net 'rom_addr_6_0_3' (3/3): .. OK!
-Routing net 'x_2_0_1' (2/2): . OK!
-Routing net 'rot_1_0_1' (2/2): . OK!
-Routing net 'x_2_0_2' (2/2): . OK!
-Routing net 'new_mask_0_port' (2/2): . OK!
-Routing net 'mask_select_1_0_0' (2/2): . OK!
-Routing net 'new_rom_addr_3_port' (2/2): . OK!
-Routing net 'n74' (2/2): . OK!
-Routing net 'rom_addr_6_0_5' (3/3): .. OK!
-Routing net 'new_mask_1_port' (2/2): . OK!
-Routing net 'x_out_2_port' (2/2): . OK!
-Routing net 'y_3_0_2' (2/2): . OK!
-Routing net 'new_rom_addr_5_port' (2/2): . OK!
-Routing net 'n66' (2/2): . OK!
-Routing net 'n72' (2/2): . OK!
-Routing net 'n100' (2/2): . OK!
-Routing net 'rom_data_3_0_1' (2/2): . OK!
-Routing net 'new_mask_6_port' (2/2): . OK!
-Routing net 'mask_7_0_0' (3/3): .. OK!
-Routing net 'y_out_2_port' (2/2): . OK!
-Routing net 'n97' (2/2): . OK!
-Routing net 'mask_7_0_6' (3/3): .. OK!
-Routing net 'next_state_1_port' (2/2): . OK!
-Routing net 'mask_select_1_0_1' (2/2): . OK!
-Routing net 'new_rom_addr_0_port' (2/2): . OK!
-Routing net 'n71' (2/2): . OK!
-Routing net 'mask_7_0_1' (3/3): .. OK!
-Routing net 'piece_type_2_0_0' (2/2): . OK!
-Routing net 'mask_7_0_5' (3/3): .. OK!
-Routing net 'mask_7_0_4' (3/3): .. OK!
-Routing net 'n59' (2/2): . OK!
-Routing net 'n80' (2/2): . OK!
-Routing net 'rom_addr_6_0_1' (3/3): .. OK!
-Routing net 'next_state_0_port' (2/2): . OK!
-Routing net 'rom_addr_6_0_2' (3/3): .. OK!
-Routing net 'rom_data_3_0_0' (2/2): . OK!
-Routing net 'n78' (2/2): . OK!
-Routing net 'n89' (2/2): . OK!
-Routing net 'y_out_4_port' (2/2): . OK!
-Routing net 'n93' (2/2): . OK!
-Routing net 'n92' (2/2): . OK!
-Routing net 'new_mask_2_port' (2/2): . OK!
-Routing net 'n60' (2/2): . OK!
-Routing net 'n58' (5/5): .... OK!
-Routing net 'piece_type_2_0_2' (2/2): . OK!
-Routing net 'rot_1_0_0' (2/2): . OK!
-Routing net 'y_3_0_0' (2/2): . OK!
-Routing net 'n96' (2/2): . OK!
-Routing net 'n108' (2/2): . OK!
-Routing net 'x_out_3_port' (2/2): . OK!
-Routing net 'y_3_0_3' (2/2): . OK!
-Routing net 'new_mask_4_port' (2/2): . OK!
-Routing net 'n70' (2/2): . OK!
-Routing net 'n106' (2/2): . OK!
-Routing net 'x_2_0_0' (2/2): . OK!
-Routing net 'n69' (2/2): . OK!
-Routing net 'n101' (2/2): . OK!
-Routing net 'n109' (2/2): . OK!
-Routing net 'rom_addr_6_0_6' (3/3): .. OK!
-Routing net 'x_out_0_port' (2/2): . OK!
-Routing net 'n102' (2/2): . OK!
-Routing net 'n73' (2/2): . OK!
-Routing net 'n98' (2/2): . OK!
-Routing net 'next_state_2_port' (2/2): . OK!
-Routing net 'n62' (4/4): ... OK!
-Routing net 'n57' (6/6): ..... OK!
-Routing net 'y_3_0_1' (2/2): . OK!
-Routing net 'new_rom_addr_4_port' (2/2): . OK!
-Routing net 'n84' (2/2): . OK!
-Routing net 'new_mask_3_port' (2/2): . OK!
-Routing net 'rom_data_3_0_3' (3/3): .. OK!
-Routing net 'rom_addr_6_0_0' (3/3): .. OK!
-Routing net 'mask_7_0_2' (3/3): .. OK!
-Routing net 'x_out_1_port' (2/2): . OK!
-Routing net 'n90' (3/3): .. OK!
-Routing net 'n75' (2/2): . OK!
-Routing net 'n104' (2/2): . OK!
-Routing net 'state_0_port' (6/6): ..... OK!
-Routing net 'y_out_0_port' (2/2): . OK!
-Routing net 'y_out_3_port' (2/2): . OK!
-Routing net 'n63' (2/2): . OK!
-Routing net 'mask_7_0_7' (3/3): .. OK!
-Routing net 'mask_7_0_3' (3/3): .. OK!
-Routing net 'n61' (5/5): .... OK!
-Routing net 'y_out_1_port' (2/2): . OK!
-Routing net 'n81' (2/2): . OK!
-Routing net 'n67' (3/3): .. OK!
-Routing net 'rom_addr_6_0_4' (3/3): .. OK!
-Routing net 'n65' (4/4): ... OK!
-Routing net 'state_1_port' (5/5): .... OK!
-Routing net 'rom_data_3_0_2' (3/3): .. OK!
-Routing net 'ready' (4/4): ... OK!
-Routing net 'next_piece' (4/4): ... OK!
-Routing net 'state_2_port' (4/4): ... OK!
-Routing net 'n95' (9/9): ........ OK!
-Routing net 'n64' (10/10): ......... OK!
-Routing net 'n94' (9/9): ........ OK!
-Routing net 'rst' (19/19): .................. OK!
-Routing net 'n77' (8/8): ....... OK!
+------ routing started Thu Dec 12 21:59:47 2013
+ 30 nets have to be routed.
+Routing net 'clk' (8/8): ....... OK!
+Routing net 'n31' (2/2): . OK!
+Routing net 'n28' (2/2): . OK!
+Routing net 'n27' (2/2): . OK!
+Routing net 'n32' (2/2): . OK!
+Routing net 'n21' (2/2): . OK!
+Routing net 'n24' (3/3): .. OK!
+Routing net 'n25' (2/2): . OK!
+Routing net 'n33' (2/2): . OK!
+Routing net 'n20' (2/2): . OK!
+Routing net 'n18' (2/2): . OK!
+Routing net 'value_6_0_4' (4/4): ... OK!
+Routing net 'n16' (2/2): . OK!
+Routing net 'n29' (3/3): .. OK!
+Routing net 'n23' (3/3): .. OK!
+Routing net 'en' (4/4): ... OK!
+Routing net 'value_6_0_5' (3/3): .. OK!
+Routing net 'n30' (3/3): .. OK!
+Routing net 'n22' (2/2): . OK!
+Routing net 'value_6_0_0' (5/5): .... OK!
+Routing net 'n26' (4/4): ... OK!
+Routing net 'value_6_0_2' (4/4): ... OK!
+Routing net 'value_6_0_1' (4/4): ... OK!
+Routing net 'n17' (2/2): . OK!
+Routing net 'value_6_0_6' (3/3): .. OK!
+Routing net 'value_6_0_3' (5/5): .... OK!
+Routing net 'rst' (8/8): ....... OK!
+Routing net 'n19' (2/2): . OK!
 Routing net 'vdd' :  (Power special)
 Routing net 'vss' :  (Power special)
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 125 (100% completion)
+Total number of nets:                 30 (100% completion)
 Total length of routed wires:         0 (No new wires created)
-No. of transistors (total / used):    2624/1557 = 59.34 %
-CPU-time consumption:                 0.01 sec.
-Elapsed time during routing:          0.01 sec. (100.00 % of cpu)
+No. of transistors (total / used):    504/454 = 90.08 %
+CPU-time consumption:                 0.00 sec.
+Elapsed time during routing:          0.00 sec. (100.00 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(piece_lut(piece_lut(test)))' ------
------- Trout: task completed on Thu Dec 12 21:10:02 2013
+------ Writing 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
+------ Trout: task completed on Thu Dec 12 21:59:47 2013
  terminate
