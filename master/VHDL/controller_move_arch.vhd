@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 use work.vga_params.all;
 
 architecture controller_move_arch of controller_move is
-	type state_type is (reset, move_2, move_3, move_5, move_6, do_move_1, do_move_2, do_move_3, done_fit, done_error);
+	type state_type is (reset, move_2, move_3, move_5, move_6, do_move_2, do_move_3, done_fit, done_error);
 
 	signal next_state, cur_state : state_type;
 begin
@@ -52,7 +52,7 @@ begin
 
 				-- wait for erase ready 
 				if (draw_erase_ready = '1') then
-					next_state <= do_move_1;
+					next_state <= do_move_2;
 				end if;
 
 			when move_5 =>
@@ -78,15 +78,6 @@ begin
 					next_state <= done_fit;
 				end if;
 
-			when do_move_1 =>
-				x       <= inputs(0) or inputs(1);
-				y       <= drop;
-				rot     <= inputs(2) or inputs(3);
-				add_sub <= inputs(1) or inputs(2);
-
-				check_start <= '1';
-
-				next_state <= do_move_2;
 
 			when do_move_2 =>
 				x       <= inputs(0) or inputs(1);

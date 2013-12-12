@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
+	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece           : std_logic_vector(2 downto 0);
@@ -129,10 +129,9 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
-		move_drop <= '0';
+		move_drop         <= '0';
 
 		move_start <= '0';
-		
 
 		next_state <= cur_state;
 
@@ -191,8 +190,8 @@ begin
 				draw_erase_start <= '1';
 
 				if (draw_erase_ready = '1') then
-					next_state <= draw_next_piece_5;
-					new_cur_piece  <= next_piece;
+					next_state    <= draw_next_piece_5;
+					new_cur_piece <= next_piece;
 				end if;
 
 			when draw_next_piece_5 =>
@@ -228,23 +227,13 @@ begin
 
 			when first_draw_2 =>
 				new_timer_1_start <= '1';
-				
-				draw_erase_draw  <= '1';
-				draw_erase_start <= '1';
 
-				if (draw_erase_ready = '1') then
-					next_state <= first_draw_4;
-				end if;
-
-			when first_draw_4 =>
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
 
 				if (draw_erase_ready = '1') then
 					next_state <= drop_overflow;
 				end if;
-
-				next_state <= drop_overflow;
 
 			when reset_timers_a_1 =>
 				new_timer_1_start <= '0';
@@ -259,7 +248,6 @@ begin
 				end if;
 
 				new_timer_1_reset <= '0';
-
 
 			when clear_shift_2 =>
 				clear_shift_start <= '1';
@@ -282,7 +270,6 @@ begin
 					next_state <= key;
 				end if;
 
-
 			when space_2 =>
 				move_start       <= '1';
 				move_drop        <= '1';
@@ -295,10 +282,10 @@ begin
 
 				if (move_ready = '1') then
 					if (cur_y = calc_y) then -- not ok
-						next_state <= reset_timers_a_1;					
-					else -- ok
+						next_state <= reset_timers_a_1;
+					else                -- ok
 						next_state <= reset_timers_b_1;
-						new_cur_y   <= calc_y;
+						new_cur_y  <= calc_y;
 					end if;
 				end if;
 
@@ -307,7 +294,7 @@ begin
 				new_timer_1_time  <= '1'; -- 30, .5 second
 
 				next_state <= drop_overflow;
-				
+
 			when key =>
 				if (inputs = "000000") then
 					next_state <= drop_timer_reset;
@@ -351,7 +338,6 @@ begin
 					next_state <= move_3;
 				end if;
 
-
 			when move_3 =>
 				move_start       <= '1';
 				x                <= move_x;
@@ -372,10 +358,6 @@ begin
 					next_state <= drop_overflow;
 				end if;
 
-			when kernel_panic =>
-				-- Kill it!
-				next_state <= game_over;
-
 			when game_over =>
 				-- Kill it!
 				next_state <= game_over;
@@ -383,9 +365,4 @@ begin
 		end case;
 	end process;
 end;
-
-
-
-
-
 
