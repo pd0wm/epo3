@@ -1,8 +1,0 @@
-configuration draw_score_synthesised_cfg of draw_score is
-   for synthesised
-      for all: tri_buff use configuration work.tri_buff_synthesised_cfg;
-      end for;
-   end for;
-end draw_score_synthesised_cfg;
-
-
