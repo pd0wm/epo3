@@ -105,14 +105,22 @@ begin
 				new_cur_y     <= (others => '0');
 				new_cur_rot   <= (others => '0');
 
-				next_state <= init;
+				if (inv_inputs = "000000") then
+					next_state <= reset;
+				else
+					next_state <= init;
+				end if;
 
 			when init =>
 				new_timer_1_time <= '1'; -- 30, .5 second
 				new_future_piece <= next_piece;
 				new_piece        <= '1';
 
-				next_state <= gen_piece_1;
+				if (inv_inputs = "000000") then
+					next_state <= gen_piece_1;
+				else				
+					next_state <= init;
+				end if;
 
 			when gen_piece_1 =>
 				new_cur_piece <= cur_future_piece;
