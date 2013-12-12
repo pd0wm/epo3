@@ -1,0 +1,17 @@
+           0 
+clk
+rst
+mem_addr_7_0_7
+mem_addr_7_0_6
+mem_addr_7_0_5
+mem_addr_7_0_4
+mem_addr_7_0_3
+mem_addr_7_0_2
+mem_addr_7_0_1
+mem_addr_7_0_0
+data
+h_sync
+v_sync
+red
+green
+blue
