@@ -35,6 +35,22 @@ ENTITY adder_x
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:43:18 2013
+    Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_x_SYNTH.vhd
+    Source file: VHDL/adder_x_SYNTH.vhd
+    Start location: VHDL/adder_x_SYNTH.vhd:7
+    Version string: A:P5hm0eGSNQ4KAzl4O@32
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -82,6 +98,22 @@ ENTITY adder_y
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:43:18 2013
+    Depends on: E work adder_y Y^U8J[f[m;PNMF0WF7GH?2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_y_SYNTH.vhd
+    Source file: VHDL/adder_y_SYNTH.vhd
+    Start location: VHDL/adder_y_SYNTH.vhd:7
+    Version string: YoNFn0bzJmi;V^fn4T1571
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Depends on: E work adder_y Y^U8J[f[m;PNMF0WF7GH?2
@@ -1454,6 +1486,22 @@ ENTITY debounce
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:43:18 2013
+    Depends on: E work debounce 0@_=9VD5@Mm:2F8ZTGBM13
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/debounce_SYNTH.vhd
+    Source file: VHDL/debounce_SYNTH.vhd
+    Start location: VHDL/debounce_SYNTH.vhd:7
+    Version string: 5]<`ImPkA6@<LIlf04GVL0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Source modified time: Thu Dec 12 19:06:37 2013
     Depends on: E work debounce 0@_=9VD5@Mm:2F8ZTGBM13
@@ -2532,6 +2580,22 @@ ENTITY rom
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:07:11 2013
+    Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/rom_SYNTH.vhd
+    Source file: VHDL/rom_SYNTH.vhd
+    Start location: VHDL/rom_SYNTH.vhd:7
+    Version string: a0nmLQWKLz>7@6lMc:oAC2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY rom_behaviour
     Source modified time: Tue Dec 10 10:39:40 2013
     Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
@@ -2582,6 +2646,22 @@ ENTITY rom_mux2
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:07:11 2013
+    Depends on: E work rom_mux2 `OcbH>Um;O[<i7loK?ieZ2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/rom_mux2_SYNTH.vhd
+    Source file: VHDL/rom_mux2_SYNTH.vhd
+    Start location: VHDL/rom_mux2_SYNTH.vhd:7
+    Version string: QiP`bRXzVj@U[Z?lGOHNN2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY rom_mux2_behaviour
     Depends on: E work rom_mux2 `OcbH>Um;O[<i7loK?ieZ2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2610,6 +2690,22 @@ ENTITY rom_mux24
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:07:11 2013
+    Depends on: E work rom_mux24 3:34_^EPT4[f]g8<o>0;G3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/rom_mux24_SYNTH.vhd
+    Source file: VHDL/rom_mux24_SYNTH.vhd
+    Start location: VHDL/rom_mux24_SYNTH.vhd:7
+    Version string: <j<cXoEXVR4o_Q4YdAd2H1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY rom_mux24_behaviour
     Depends on: E work rom_mux24 3:34_^EPT4[f]g8<o>0;G3
@@ -2676,6 +2772,22 @@ ENTITY rom_mux4
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:07:11 2013
+    Depends on: E work rom_mux4 EgRCHJ]jk<ih`M[oQ587[0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/rom_mux4_SYNTH.vhd
+    Source file: VHDL/rom_mux4_SYNTH.vhd
+    Start location: VHDL/rom_mux4_SYNTH.vhd:7
+    Version string: C`Ge@ZXIGBXK9N4C54nLS3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY rom_mux4_behaviour
     Depends on: E work rom_mux4 EgRCHJ]jk<ih`M[oQ587[0
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2704,6 +2816,22 @@ ENTITY rom_mux44
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:07:11 2013
+    Depends on: E work rom_mux44 <F5n@bRRIm?F0SUZY0;iI0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/rom_mux44_SYNTH.vhd
+    Source file: VHDL/rom_mux44_SYNTH.vhd
+    Start location: VHDL/rom_mux44_SYNTH.vhd:7
+    Version string: UV=:B8F1IEZKJeTN>ILTE1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY rom_mux44_behaviour
     Depends on: E work rom_mux44 <F5n@bRRIm?F0SUZY0;iI0
@@ -3278,6 +3406,35 @@ VHDL CONFIGURATION timer_behaviour_cfg
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+ENTITY timer_tb
+    Source modified time: Thu Dec 12 21:59:27 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/timer_tb.vhd
+    Source file: VHDL/timer_tb.vhd
+    Start location: VHDL/timer_tb.vhd:4
+    Version string: OYm7PB@Z?<BDd<jl;R`KC1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work timer_tb OYm7PB@Z?<BDd<jl;R`KC1
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: master
+    HDL source file: VHDL/timer_tb-behaviour.vhd
+    Source file: VHDL/timer_tb-behaviour.vhd
+    Start location: VHDL/timer_tb-behaviour.vhd:4
+    Version string: Xn@`>TSMZ><Q<ITHc=22O0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source modified time: Thu Dec 12 21:59:27 2013
+    Debug Symbol file exists
 ENTITY tri_buff
     Source modified time: Fri Dec  6 09:26:55 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0

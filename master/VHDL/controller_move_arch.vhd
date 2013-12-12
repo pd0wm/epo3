@@ -23,6 +23,7 @@ begin
 	process(cur_state)
 	begin
 		x                <= '0';
+		y <= '0';
 		add_sub          <= '0';
 		rot              <= '0';
 		draw_erase_draw  <= '0';

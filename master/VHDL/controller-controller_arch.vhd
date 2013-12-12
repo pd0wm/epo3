@@ -129,8 +129,10 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
+		move_drop <= '0';
 
 		move_start <= '0';
+		
 
 		next_state <= cur_state;
 
@@ -279,7 +281,7 @@ begin
 				next_state <= reset_timers_a_2;
 
 			when reset_timers_a_2 =>
-				if (inputs(3 downto 0) = "0000") then
+				if (inputs(3 downto 0) = "0000" and inputs(5) = '0') then
 					next_state <= clear_shift_1;
 				end if;
 
@@ -345,7 +347,6 @@ begin
 				end if;
 
 			when reset_timers_b_1 =>
-				draw_erase_start  <= '0';
 				new_timer_1_start <= '0';
 				new_timer_1_time  <= '1'; -- 30, .5 second
 
