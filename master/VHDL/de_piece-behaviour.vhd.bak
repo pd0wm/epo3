@@ -33,7 +33,7 @@ begin
 		end if;
 	end process;
 
-	lbl2 : process(state, start, lut_ready, mask, draw_erase, clk, cur_block, new_block, cur_ready, new_ready, cur_addr, new_addr, cur_mask_select, new_mask_select, cur_lut_start, new_lut_start, cur_data, new_data, cur_write, new_write)
+	lbl2 : process(state, clk, cur_block, new_block, cur_ready, new_ready, cur_addr, new_addr, cur_mask_select, new_mask_select, cur_lut_start, new_lut_start, cur_data, new_data, cur_write, new_write)
 	begin
 		ready       <= cur_ready;
 		mask_select <= cur_mask_select;

@@ -3,11 +3,7 @@ use ieee.std_logic_1164.all;
 
 architecture cs_shift_comb_behav of cs_shift_comb is
 begin
-<<<<<<< HEAD
-	process(state, start_in, cnt_ram_addr, ram_data_in)
-=======
-	process(state, start_in, cnt_ram_addr,ram_data_in)
->>>>>>> ae8340aee88ebb74325929617a0647eaa28eea25
+	process(state, start_in, cnt_ram_addr)
 	begin
 		state_next <= state;
 

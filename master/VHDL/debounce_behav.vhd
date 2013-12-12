@@ -47,7 +47,7 @@ if (rst_sig = '1') then
         end if;
         end process;
 
-lbl3: process(state,clk, inputs )
+lbl3: process(state,clk, inputs, rst, count)
  begin
  case state is
         when uit =>
