@@ -7,11 +7,9 @@ architecture controller_calc_arch of controller_calc is
 begin
 	process(old_x, old_y, old_rot, add_sub, rot, x, y)
 	begin
-		if (rot = '0' and x = '0' and y = '1') then
 			new_x   <= old_x;
 			new_y   <= old_y;
 			new_rot <= old_rot;
-		else
 			if (rot = '1') then
 				if (add_sub = '1') then
 					new_rot <= std_logic_vector(unsigned(old_rot) + 1);
@@ -31,7 +29,6 @@ begin
 					new_y <= std_logic_vector(unsigned(old_y) - 1);
 				end if;
 			end if;
-		end if;
 
 	end process;
 

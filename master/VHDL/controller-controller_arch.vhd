@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_1, move_2, move_3, move_4, move_5, clear_shift_3, clear_shift_4, draw_next_piece_1, draw_next_piece_2, draw_next_piece_4, draw_next_piece_5, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_5, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, rotate_ccw_5, move_left_1, move_left_2, move_left_3, move_left_4, move_left_5, soft_drop_1, soft_drop_2, soft_drop_3, move_right_1, move_right_2, move_right_3, move_right_4, move_right_5, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_4, space_5, space_6, put_back_4, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
+	is (reset, init, move_1, move_2, move_3, move_4, move_5, clear_shift_3, clear_shift_4, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, draw_next_piece_5, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_5, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, rotate_ccw_5, move_left_1, move_left_2, move_left_3, move_left_4, move_left_5, soft_drop_1, soft_drop_2, soft_drop_3, move_right_1, move_right_2, move_right_3, move_right_4, move_right_5, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_4, space_5, space_6, put_back_4, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece : std_logic_vector(2 downto 0);
@@ -84,6 +84,11 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
+		
+		x <= '0';
+		y <= '0';
+		add_sub <= '0';
+		rot <= '0';
 
 		case cur_state is
 			when reset =>
@@ -110,8 +115,8 @@ begin
 				next_state <= gen_piece_1;
 
 			when gen_piece_1 =>
-				new_cur_piece <= next_piece;
-				new_piece     <= '1';
+				new_cur_piece <= cur_future_piece;
+				
 
 				next_state <= draw_next_piece_1;
 
@@ -132,10 +137,17 @@ begin
 				draw_erase_start <= '1';
 
 				if (draw_erase_ready = '1') then
-					next_state <= draw_next_piece_4;
+					next_state <= draw_next_piece_3;
 				else
 					next_state <= draw_next_piece_2;
 				end if;
+				
+			when draw_next_piece_3 =>
+				lut_next_piece   <= '1';
+				new_piece     <= '1';
+				new_cur_piece <= next_piece;
+				
+				next_state <= draw_next_piece_4;
 
 			when draw_next_piece_4 =>
 				lut_next_piece   <= '1';
@@ -147,7 +159,7 @@ begin
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
-				lut_next_piece   <= '0';
+				lut_next_piece   <= '1';
 
 				if (draw_erase_ready = '1') then
 					next_state <= collision_1;
@@ -359,7 +371,7 @@ begin
 				if (inv_inputs = "000000") then
 					next_state <= drop_timer_reset;
 				else
-					next_state <= move_left_1;
+					next_state <= move_1;
 				end if;
 
 			when drop_timer_reset =>
@@ -392,20 +404,20 @@ begin
 				end if;
 
 			when move_4 =>
-				draw_erase_draw  <= '1'; -- erase
+				draw_erase_draw  <= '1'; -- draw
 				draw_erase_start <= '1'; --start
 
 				next_state <= move_5;
 
 			when move_5 =>
-				draw_erase_draw  <= '1'; -- erase
+				draw_erase_draw  <= '1'; -- draw
 				draw_erase_start <= '1'; --start
 
 				-- wait for draw ready 
 				if (draw_erase_ready = '1' and (inv_inputs = "000000" or inv_inputs = "010000")) then
-					next_state <= move_left_1;
-				else
 					next_state <= draw;
+				else
+					next_state <= move_5;
 				end if;
 
 			when move_left_1 =>
@@ -468,9 +480,9 @@ begin
 
 				-- Wait for check
 				if (check_ready = '1') then
-					next_state <= move_left_4;
+					next_state <= move_right_4;
 				else
-					next_state <= move_left_3;
+					next_state <= move_right_3;
 				end if;
 
 			when move_right_4 =>
