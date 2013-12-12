@@ -22,7 +22,7 @@ begin
 		end if;
 	end process;
 
-	lbl2 : process(state, cur_ready, start, vga_clk, cur_count, time)
+	lbl2 : process(state)
 	begin
 		ready <= cur_ready;
 		case state is

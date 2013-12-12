@@ -61477,43 +61477,6 @@ ENABLE
 
 # end
 # entity
-de_piece
-# storage
-db|top_de2.(37).cnf
-db|top_de2.(37).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
-ce5230727a809b9bd8e1ea9a842ee30
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
-54f445296a2483c4b4766da379ed235b
-}
-# hierarchies {
-de_piece:inst6
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 sld_signaltap
 # storage
 db|top_de2.(319).cnf
@@ -137411,43 +137374,6 @@ log_score:inst12|log:L2
 
 # end
 # entity
-piece_lut
-# storage
-db|top_de2.(40).cnf
-db|top_de2.(40).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut.vhd
-3d4faeaba6fe2dd814e4738da9d4ff52
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut-behaviour.vhd
-1b854d994c6dc4bcfabdbaefa3a7f96
-}
-# hierarchies {
-piece_lut:inst7
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 cs_7bc
 # storage
 db|top_de2.(633).cnf
@@ -142118,43 +142044,6 @@ ENABLE
 -1
 2
 }
-# macro_sequence
-
-# end
-# entity
-debounce
-# storage
-db|top_de2.(652).cnf
-db|top_de2.(652).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce.vhd
-f9869ff422e964ae2a8f943be8e23dd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce_behav.vhd
-f751e5e6dc13996711c41c44facdc8a
-}
-# hierarchies {
-debounce:inst19
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 
 # end
@@ -147488,43 +147377,6 @@ USR
 
 # end
 # entity
-timer
-# storage
-db|top_de2.(318).cnf
-db|top_de2.(318).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|timer.vhd
-7a3a639c9298d79e1e2bd62b21a155
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|timer-behaviour.vhd
-c83a6c861f9a75791583b5da3cdb0d2
-}
-# hierarchies {
-timer:inst4
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 cs_tri8
 # storage
 db|top_de2.(634).cnf
@@ -147607,26 +147459,6 @@ cs_compare:inst11|cs_defset2:defset
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-4085bfbcebff802e54fd3c57527bf230
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end
@@ -208263,57 +208095,6 @@ cs_compare:inst11|cs_shift:shift
 
 # end
 # entity
-cs_shift_comb
-# storage
-db|top_de2.(845).cnf
-db|top_de2.(845).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb.vhd
-11190616d2648e2ae1762ad2bef169
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(state)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(state_next)
-2 downto 0
-PARAMETER_STRING
-USR
- constraint(cnt_ram_addr)
-6 downto 0
-PARAMETER_STRING
-USR
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb_arch.vhd
-9aad407b8cdbc8f8554387c3687bede
-}
-# hierarchies {
-cs_compare:inst11|cs_shift:shift|cs_shift_comb:comb
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 cs_compare_comb
 # storage
 db|top_de2.(846).cnf
@@ -211966,6 +211747,225 @@ ENABLE
 
 # end
 # entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+ec42d42c11942583ed2e4e16743d577
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+piece_lut
+# storage
+db|top_de2.(40).cnf
+db|top_de2.(40).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut.vhd
+3d4faeaba6fe2dd814e4738da9d4ff52
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|piece_lut-behaviour.vhd
+5bacc201ae4e3e3359e2adcbd6c353e
+}
+# hierarchies {
+piece_lut:inst7
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+de_piece
+# storage
+db|top_de2.(37).cnf
+db|top_de2.(37).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
+ce5230727a809b9bd8e1ea9a842ee30
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
+2ce13960a2fa7e50eb3eeff41dc22a6a
+}
+# hierarchies {
+de_piece:inst6
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+cs_shift_comb
+# storage
+db|top_de2.(845).cnf
+db|top_de2.(845).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb.vhd
+11190616d2648e2ae1762ad2bef169
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(state)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(state_next)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(cnt_ram_addr)
+6 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|cs_shift_comb_arch.vhd
+a952ebec1eb9b2d0f9cd0df443b5cf4
+}
+# hierarchies {
+cs_compare:inst11|cs_shift:shift|cs_shift_comb:comb
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+timer
+# storage
+db|top_de2.(318).cnf
+db|top_de2.(318).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|timer.vhd
+7a3a639c9298d79e1e2bd62b21a155
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|timer-behaviour.vhd
+c490816b3f815838622a527fc85867e4
+}
+# hierarchies {
+timer:inst4
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+debounce
+# storage
+db|top_de2.(652).cnf
+db|top_de2.(652).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce.vhd
+f9869ff422e964ae2a8f943be8e23dd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce_behav.vhd
+90164d826772556217a7caa2fdc3a1
+}
+# hierarchies {
+debounce:inst19
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
 controller
 # storage
 db|top_de2.(38).cnf
@@ -211990,10 +211990,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
+bde492c0ae6efc5bc9ad686c08aa66e
 |home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
 6d5a896bf01d8af13087ffc91dc157f4
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
-edfc1a0e26c63967da8f5ede12f97b
 }
 # hierarchies {
 controller:inst14

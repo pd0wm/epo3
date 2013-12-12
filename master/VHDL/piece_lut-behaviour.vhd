@@ -42,7 +42,7 @@ begin
 		end if;
 	end process;
 
-	process(state, rst, cur_x_out, new_x_out, cur_y_out, new_y_out, prev_start, new_overflow, cur_overflow, new_ready, cur_ready, cur_mask, new_mask, cur_rom_addr, new_rom_addr, new_change, cur_change)
+	process(state, rst, check_start, draw_start, piece_type, rot, mask_select, next_piece, rom_data, x, y, cur_x_out, new_x_out, cur_y_out, new_y_out, prev_start, new_overflow, cur_overflow, new_ready, cur_ready, cur_mask, new_mask, cur_rom_addr, new_rom_addr, new_change, cur_change)
 	begin
 		case state is
 			when reset =>
