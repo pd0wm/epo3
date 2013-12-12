@@ -1,93 +1,81 @@
 
 Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
 
-reading circuit "check_mask(check_mask(test))" ...done
+reading circuit "controller_calc(controller_calc(test))" ...done
 
 Kissing madonna hello...
 
 Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
 
 
------- net distribution (total #nets = 92):
+------ net distribution (total #nets = 65):
         0..1     2     3     4     5     6     7 8..10 11..20  >20
 
-           0    59    12     9     5     2     2     1     0     2
+           0    44     8     6     2     1     1     1     0     2
 
------- partitioning 76 cells into (hor x vert) = (9 x 3) partitions
+------ partitioning 50 cells into (hor x vert) = (9 x 2) partitions
 
------- requested grid points = (99, 84)
+------ requested grid points = (63, 56)
 
------- cost@start = 989, cost@end = 652, moves = 96
------- cost@start = 652, cost@end = 588, moves = 77
------- cost@start = 588, cost@end = 527, moves = 49
------- cost@start = 527, cost@end = 470, moves = 45
------- cost@start = 470, cost@end = 470, moves = 48
------- 50 nets have to be routed on a 17 x 5 global grid
-     + routing net n58 (2 terminals):  weight = 200
-     + routing net clk (6 terminals):  weight = 910
-     + routing net pixel_0_port (2 terminals):  weight = 200
-     + routing net next_state_2_port (2 terminals):  weight = 200
-     + routing net rst (3 terminals):  weight = 400
-     + routing net state_2_port (3 terminals):  weight = 406
-     + routing net next_state_0_port (2 terminals):  weight = 206
-     + routing net state_0_port (2 terminals):  weight = 202
-     + routing net next_state_1_port (2 terminals):  weight = 204
-     + routing net state_1_port (4 terminals):  weight = 600
-     + routing net n57 (2 terminals):  weight = 200
-     + routing net pixel_1_port (4 terminals):  weight = 600
-     + routing net n48 (6 terminals):  weight = 1004
-     + routing net n46 (3 terminals):  weight = 400
-     + routing net n44 (4 terminals):  weight = 616
-     + routing net n1 (24 terminals):  weight = 4600
-     + routing net n59 (2 terminals):  weight = 202
-     + routing net n60 (2 terminals):  weight = 206
-     + routing net data_in (2 terminals):  weight = 204
-     + routing net n61 (4 terminals):  weight = 506
-     + routing net n62 (2 terminals):  weight = 204
-     + routing net n63 (2 terminals):  weight = 200
-     + routing net n64 (2 terminals):  weight = 210
+------ cost@start = 527, cost@end = 379, moves = 57
+------ cost@start = 379, cost@end = 324, moves = 47
+------ cost@start = 324, cost@end = 290, moves = 40
+------ cost@start = 290, cost@end = 281, moves = 26
+------ cost@start = 281, cost@end = 281, moves = 24
+------ 38 nets have to be routed on a 17 x 3 global grid
+     + routing net n61 (2 terminals):  weight = 200
+     + routing net n62 (3 terminals):  weight = 406
+     + routing net n63 (2 terminals):  weight = 204
+     + routing net n64 (5 terminals):  weight = 806
      + routing net n65 (2 terminals):  weight = 200
-     + routing net n67 (2 terminals):  weight = 200
-     + routing net n69 (2 terminals):  weight = 210
-     + routing net n70 (3 terminals):  weight = 304
-     + routing net n71 (3 terminals):  weight = 400
-     + routing net n72 (2 terminals):  weight = 200
-     + routing net start (2 terminals):  weight = 200
-     + routing net n73 (3 terminals):  weight = 400
-     + routing net n75 (2 terminals):  weight = 202
+     + routing net n66 (2 terminals):  weight = 200
+     + routing net old_y_3_0_2 (2 terminals):  weight = 200
+     + routing net n70 (3 terminals):  weight = 404
+     + routing net add_sub (4 terminals):  weight = 602
+     + routing net n72 (2 terminals):  weight = 204
+     + routing net n73 (2 terminals):  weight = 202
+     + routing net n74 (2 terminals):  weight = 202
+     + routing net old_y_3_0_1 (2 terminals):  weight = 202
      + routing net n76 (2 terminals):  weight = 200
-     + routing net n77 (2 terminals):  weight = 216
-     + routing net n78 (4 terminals):  weight = 616
-     + routing net n80 (2 terminals):  weight = 200
-     + routing net lut_ready (2 terminals):  weight = 200
-     + routing net n81 (2 terminals):  weight = 206
-     + routing net n82 (2 terminals):  weight = 208
-     + routing net n83 (2 terminals):  weight = 202
-     + routing net n84 (4 terminals):  weight = 600
-     + routing net n85 (3 terminals):  weight = 404
+     + routing net n77 (3 terminals):  weight = 404
+     + routing net old_y_3_0_0 (2 terminals):  weight = 200
+     + routing net n78 (2 terminals):  weight = 200
+     + routing net n80 (2 terminals):  weight = 210
+     + routing net n81 (2 terminals):  weight = 200
+     + routing net n82 (2 terminals):  weight = 200
+     + routing net n84 (4 terminals):  weight = 602
+     + routing net n85 (2 terminals):  weight = 204
+     + routing net n86 (3 terminals):  weight = 406
      + routing net n87 (2 terminals):  weight = 200
-     + routing net n88 (2 terminals):  weight = 200
-     + routing net n91 (3 terminals):  weight = 404
-     + routing net n93 (3 terminals):  weight = 408
-     + routing net n94 (2 terminals):  weight = 200
-     + routing net n95 (2 terminals):  weight = 200
-     + routing net n96 (3 terminals):  weight = 402
-     + routing net n97 (3 terminals):  weight = 304
+     + routing net n88 (2 terminals):  weight = 206
+     + routing net n89 (2 terminals):  weight = 200
+     + routing net n90 (2 terminals):  weight = 204
+     + routing net n91 (2 terminals):  weight = 200
+     + routing net n93 (2 terminals):  weight = 214
+     + routing net n94 (2 terminals):  weight = 204
+     + routing net old_x_2_0_0 (3 terminals):  weight = 408
+     + routing net n96 (2 terminals):  weight = 200
+     + routing net n97 (2 terminals):  weight = 204
+     + routing net old_x_2_0_1 (3 terminals):  weight = 404
+     + routing net n99 (2 terminals):  weight = 206
+     + routing net rot (2 terminals):  weight = 204
+     + routing net n101 (2 terminals):  weight = 200
+     + routing net old_rot_1_0_0 (2 terminals):  weight = 204
 
------- Routed 50 nets, total weight = 20366
+------ Routed 38 nets, total weight = 10316
 
 
 
------- Detailed placement of (Tmp_Cell_(check_mask(check_mask(test))))...
+------ Detailed placement of (Tmp_Cell_(controller_calc(controller_calc(test))))...
 ------ Reading input data
 ------ Creating temporary data structures
------- Placement plane size : [99:84]
+------ Placement plane size : [63:56]
 ------ Doing placement 
 ------ Compacting  
 
-         12  column[s] deleted.
+         1  column[s] deleted.
 
-         Magnification coefficient obtained :0.719898
+         Magnification coefficient obtained :0.613783
 
 ------ Writing created layout to database
 Kissing madonna good bye...

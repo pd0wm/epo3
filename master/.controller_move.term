@@ -1,0 +1,17 @@
+I clk clk
+I rst rst
+O x x
+O rot rot
+O add_sub add_sub
+O draw_erase_draw draw_erase_draw
+O draw_erase_start draw_erase_start
+I draw_erase_ready draw_erase_ready
+I start start
+O ready ready
+I inputs_3_0_3 inputs(3)
+I inputs_3_0_2 inputs(2)
+I inputs_3_0_1 inputs(1)
+I inputs_3_0_0 inputs(0)
+I check_ready check_ready
+O check_start check_start
+I check_empty check_empty

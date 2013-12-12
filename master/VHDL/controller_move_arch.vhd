@@ -30,6 +30,8 @@ begin
 		check_start      <= '1';
 		ready <= '1';
 
+		next_state <= cur_state;
+
 		case cur_state is
 			when reset  =>
 				if (start = '1') then
@@ -127,3 +129,6 @@ begin
 		end case;
 	end process;
 end;
+
+
+

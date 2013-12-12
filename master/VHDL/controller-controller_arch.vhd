@@ -103,7 +103,7 @@ begin
 
 	end process;
 
-	process(cur_state, cur_piece, cur_x, cur_y, cur_rot, cur_future_piece, cur_timer_1_time, cur_timer_1_start, cur_timer_1_reset, next_piece, draw_erase_ready, check_ready, check_empty, clear_shift_ready, draw_score_ready, timer_1_done, calc_y, inputs, calc_x, calc_rot, inputs)
+	process(cur_state, cur_piece, cur_x, cur_y, cur_rot, cur_future_piece, cur_timer_1_time, cur_timer_1_start, cur_timer_1_reset, next_piece, draw_erase_ready, check_ready, check_empty, clear_shift_ready, draw_score_ready, timer_1_done, calc_y, inputs, calc_x, calc_rot)
 	begin
 		-- Keep signals
 		new_cur_x        <= cur_x;
@@ -125,6 +125,12 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
+
+		move_start <= '0';
+		
+		next_state <= cur_state;
+		
+
 
 		x       <= '0';
 		y       <= '0';
@@ -475,3 +481,9 @@ begin
 		end case;
 	end process;
 end;
+
+
+
+
+
+
