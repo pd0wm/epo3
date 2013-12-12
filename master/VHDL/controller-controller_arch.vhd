@@ -52,6 +52,7 @@ architecture controller_arch of controller is
 			 check_start      : out std_logic;
 			 check_empty      : in  std_logic);
 	end component controller_move;
+	
 
 begin
 	move_pm : controller_move
