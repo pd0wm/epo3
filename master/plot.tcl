@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/vga.ddc
+read_file -f ddc ./ADB/rom.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui

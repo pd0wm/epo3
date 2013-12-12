@@ -2335,45 +2335,6 @@ draw_score:inst13
 
 # end
 # entity
-controller
-# storage
-db|top_de2.(38).cnf
-db|top_de2.(38).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
-caa67bd26efda9240b502efa13c9d2
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
-6d5a896bf01d8af13087ffc91dc157f4
-|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
-a7b3eaa09facee8683b7baa0f5a5c51c
-}
-# hierarchies {
-controller:inst14
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 check_mask
 # storage
 db|top_de2.(39).cnf
@@ -2542,43 +2503,6 @@ e5638ce375886afd92fd063bd34a435
 }
 # hierarchies {
 piece_lut:inst7|adder_y:lbl_adder_y
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-de_piece
-# storage
-db|top_de2.(43).cnf
-db|top_de2.(43).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
-ce5230727a809b9bd8e1ea9a842ee30
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
-2ce13960a2fa7e50eb3eeff41dc22a6a
-}
-# hierarchies {
-de_piece:inst6
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
@@ -3422,43 +3346,6 @@ timer:inst4
 
 # end
 # entity
-debounce
-# storage
-db|top_de2.(60).cnf
-db|top_de2.(60).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce.vhd
-f9869ff422e964ae2a8f943be8e23dd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# include_file {
-|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce_behav.vhd
-90164d826772556217a7caa2fdc3a1
-}
-# hierarchies {
-debounce:inst19
-}
-# lmf
-|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 npg
 # storage
 db|top_de2.(61).cnf
@@ -3731,6 +3618,164 @@ f7661359cf8d6a4efda6a3eddae9
 }
 # hierarchies {
 rom:inst8
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+debounce
+# storage
+db|top_de2.(60).cnf
+db|top_de2.(60).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce.vhd
+f9869ff422e964ae2a8f943be8e23dd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|debounce_behav.vhd
+ccd7e7d0c9bbc344b535d021d2454cb6
+}
+# hierarchies {
+debounce:inst19
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+controller
+# storage
+db|top_de2.(38).cnf
+db|top_de2.(38).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller.vhd
+caa67bd26efda9240b502efa13c9d2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller-controller_arch.vhd
+203fee5119e44c3cc2c422044c8d08e
+}
+# hierarchies {
+controller:inst14
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+controller_move
+# storage
+db|top_de2.(43).cnf
+db|top_de2.(43).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller_move.vhd
+f7af57af17757f133c99e9f5ecd898
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(inputs)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|vga_params.vhd
+6d5a896bf01d8af13087ffc91dc157f4
+|home|epo3-user|Desktop|git|epo3|master|VHDL|controller_move_arch.vhd
+0909dca40e8e764586b7331826768
+}
+# hierarchies {
+controller:inst14|controller_move:move_pm
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+de_piece
+# storage
+db|top_de2.(67).cnf
+db|top_de2.(67).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece.vhd
+ce5230727a809b9bd8e1ea9a842ee30
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|de_piece-behaviour.vhd
+fe994356933dcea94881c67815604c19
+}
+# hierarchies {
+de_piece:inst6
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
