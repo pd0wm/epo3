@@ -181,18 +181,21 @@ begin
 				new_cur_rot <= (others => '0');
 				new_cur_x   <= (others => '0');
 				new_cur_y   <= (others => '0');
-
-				next_state <= draw_next_piece_2;
-
-			when draw_next_piece_2 =>
+				
 				lut_next_piece   <= '1';
 				draw_erase_draw  <= '0';
 				draw_erase_start <= '1';
-
+				
 				if (draw_erase_ready = '1') then
-					next_state    <= draw_next_piece_5;
+					next_state    <= draw_next_piece_2;
 					new_cur_piece <= next_piece;
 				end if;
+
+
+			when draw_next_piece_2 =>			
+				draw_erase_start <= '0';
+				
+				next_state <= draw_next_piece_5;			
 
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
@@ -266,6 +269,7 @@ begin
 			when drop_overflow =>
 				if (timer_1_done = '1') then
 					next_state <= space_2;
+					new_timer_1_start <= '0';
 				else
 					next_state <= key;
 				end if;
@@ -292,6 +296,7 @@ begin
 			when reset_timers_b_1 =>
 				new_timer_1_start <= '1';
 				new_timer_1_time  <= '1'; -- 30, .5 second
+				
 
 				next_state <= drop_overflow;
 
