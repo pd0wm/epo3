@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version G-2012.06 for linux -- May 30, 2012
-#@ # Date:   Thu Dec 12 19:18:16 2013
+#@ # Date:   Thu Dec 12 20:46:15 2013
 #@ # Run by: epo3-use@EPO-3
 #@ 
 
@@ -4755,28 +4755,36 @@ source /data/public/common/software/synopsys/G-2012.06/admin/setup/.synopsys_dc.
 #@ 
 #@ # -- End source /data/public/common/software/synopsys/G-2012.06/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /home/epo3-user/Desktop/git/epo3/master/plot.tcl
-#@ # -- Starting source /home/epo3-user/Desktop/git/epo3/master/plot.tcl
+source -echo -verbose /home/epo3-user/Desktop/git/epo3/master/synthesize.tcl
+#@ # -- Starting source /home/epo3-user/Desktop/git/epo3/master/synthesize.tcl
 
-#@ read_file -f ddc ./ADB/rom.ddc
-#@ set designer epo3-user
-#@ set company TU-Delft
-#@ start_gui
-#@ gui_create_schematic
-#@ tcl::source /data/public/common/software/synopsys/G-2012.06/auxx/gui/common/misc/GuiMenuEnable.tcl
-
-#@ # To quit: click File -> Exit in Design Vision window
-#@ # or type quit in dc_shell window
-#@ # -- End source /home/epo3-user/Desktop/git/epo3/master/plot.tcl
-
-change_selection [get_s {{ptype5/data_1[3:0]} {ptype5/data_1[3]} {ptype5/data_1[2]} {ptype5/data_1[1]} {ptype5/data_1[0]} {ptype5/data_2[3:0]}}]
-change_selection -add [get_s {{ptype5/data_2[3]} {ptype5/data_2[2]} {ptype5/data_2[1]} {ptype5/data_2[0]} {ptype5/data_3[3:0]} {ptype5/data_3[3]}}]
-change_selection -add [get_s {{ptype5/data_3[2]} {ptype5/data_3[1]} {ptype5/data_3[0]} {ptype5/data_4[3:0]} {ptype5/data_4[3]} {ptype5/data_4[2]}}]
-change_selection -add [get_s {{ptype5/data_4[1]} {ptype5/data_4[0]} {ptype5east/output[3:0]} {ptype5east/output[3]} {ptype5east/output[2]} {ptype5east/output[1]}}]
-change_selection -add [get_s {{ptype5east/output[0]} ptype5east ptype5south *Logic0*,*Logic1*,*Logic0*,*Logic1* *Logic0* *Logic1* *Logic0*}]
-change_selection -add [get_s {*Logic1* *Logic0*^4 *Logic0* *Logic0* *Logic0* *Logic0* {addr[3:2]} {addr[3]} {addr[2]} {type5east[3:0]} {type5east[3]}}]
-change_selection -add [get_s {{type5east[2]} {type5east[1]} {type5east[0]} {type5north[3:0]} {type5north[3]} {type5north[2]} {type5north[1]} {type5north[0]}}]
-change_selection -add [get_s {{type5south[3:0]} {type5south[3]} {type5south[2]} {type5south[1]} {type5south[0]} {type5west[3:0]} {type5west[3]}}]
-change_selection -add [get_s {{type5west[2]} {type5west[1]} {type5west[0]}}]
-change_selection 
-quit
+#@ #*********************************************************
+#@ #  synthesize script for cell: piece_lut                  *
+#@ #*********************************************************
+#@ set hdlin_vhdl_93 false
+#@ set hdlin_ff_always_async_set_reset true
+#@ set hdlin_ff_always_sync_set_reset true
+#@ set vhdlout_architecture_name "synthesised"
+#@ set vhdlout_use_packages {"ieee.std_logic_1164" "CellsLib.CellsLib_DECL_PACK"}
+#@ set company "ontwerp_practicum"
+#@ set designer "epo3-user"
+#@ set target_library  {"/data/public/common/software/opprog/synth_libs/g_digilib5_99.db"}
+#@ set link_library [list "*" "./ADB/adder_y.ddc" "./ADB/adder_x.ddc" "/data/public/common/software/opprog/synth_libs/g_digilib5_99.db" "/data/public/common/software/opprog/synth_libs/g_analib8_00.db" "/data/public/common/software/opprog/synth_libs/buffers.db"]
+#@ define_design_lib MY_LIB -path ./syn_work
+#@ define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/CellsLib
+#@ read_file -format vhdl -work MY_LIB VHDL/params.vhd
+#@ read_file -format vhdl -work MY_LIB VHDL/cs_shift_statetype.vhd
+#@ read_file -format vhdl -work MY_LIB VHDL/cs_shift_statetype.vhd
+#@ read_file -format vhdl -work MY_LIB {VHDL/piece_lut.vhd VHDL/piece_lut-behaviour.vhd}
+#@ set_dont_touch {adder_y adder_x}
+#@ set_dont_touch {g_analib8_00/*}
+#@ # set_max_fanout 1.8 all_inputs() 
+#@ # set_max_area 1000 
+#@ set compile_preserve_subdesign_interfaces true
+#@ compile
+#@ ungroup -all -flat
+#@ report_area
+#@ report_fsm
+#@ write_file -f ddc piece_lut -output ./ADB/piece_lut.ddc
+#@ write_file -f vhdl piece_lut -output ./VHDL/piece_lut_SYNTH.vhd
+#@ quit
