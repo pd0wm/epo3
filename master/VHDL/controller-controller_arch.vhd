@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_2, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_4, space_5, space_6, put_back_4, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
+	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece           : std_logic_vector(2 downto 0);
@@ -24,19 +24,21 @@ architecture controller_arch of controller is
 	signal cur_timer_1_reset : std_logic;
 
 	signal move_x                : std_logic;
+	signal move_y                : std_logic;
 	signal move_rot              : std_logic;
 	signal move_add_sub          : std_logic;
 	signal move_draw_erase_draw  : std_logic;
 	signal move_draw_erase_start : std_logic;
 	signal move_start            : std_logic;
 	signal move_ready            : std_logic;
-	signal move_check_ready      : std_logic;
 	signal move_check_start      : std_logic;
+	signal move_drop             : std_logic;
 
 	component controller_move
 		port(clk              : in  std_logic;
 			 rst              : in  std_logic;
 			 x                : out std_logic;
+			 y                : out std_logic;
 			 rot              : out std_logic;
 			 add_sub          : out std_logic;
 			 draw_erase_draw  : out std_logic;
@@ -45,6 +47,7 @@ architecture controller_arch of controller is
 			 start            : in  std_logic;
 			 ready            : out std_logic;
 			 inputs           : in  std_logic_vector(3 downto 0);
+			 drop             : in  std_logic;
 			 check_ready      : in  std_logic;
 			 check_start      : out std_logic;
 			 check_empty      : in  std_logic);
@@ -55,6 +58,7 @@ begin
 		port map(clk              => clk,
 			     rst              => rst,
 			     x                => move_x,
+			     y                => move_y,
 			     rot              => move_rot,
 			     add_sub          => move_add_sub,
 			     draw_erase_draw  => move_draw_erase_draw,
@@ -63,6 +67,7 @@ begin
 			     start            => move_start,
 			     ready            => move_ready,
 			     inputs           => inputs(3 downto 0),
+			     drop             => move_drop,
 			     check_ready      => check_ready,
 			     check_start      => move_check_start,
 			     check_empty      => check_empty);
@@ -124,12 +129,11 @@ begin
 		lut_next_piece    <= '0';
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
+		move_drop         <= '0';
 
 		move_start <= '0';
-		
-		next_state <= cur_state;
-		
 
+		next_state <= cur_state;
 
 		x       <= '0';
 		y       <= '0';
@@ -178,10 +182,6 @@ begin
 				new_cur_x   <= (others => '0');
 				new_cur_y   <= (others => '0');
 
-				lut_next_piece   <= '1';
-				draw_erase_draw  <= '0';
-				draw_erase_start <= '1';
-
 				next_state <= draw_next_piece_2;
 
 			when draw_next_piece_2 =>
@@ -190,22 +190,9 @@ begin
 				draw_erase_start <= '1';
 
 				if (draw_erase_ready = '1') then
-					next_state <= draw_next_piece_3;
+					next_state    <= draw_next_piece_5;
+					new_cur_piece <= next_piece;
 				end if;
-
-			when draw_next_piece_3 =>
-				lut_next_piece <= '1';
-				new_piece      <= '1';
-				new_cur_piece  <= next_piece;
-
-				next_state <= draw_next_piece_4;
-
-			when draw_next_piece_4 =>
-				lut_next_piece   <= '1';
-				draw_erase_draw  <= '1';
-				draw_erase_start <= '1';
-
-				next_state <= draw_next_piece_5;
 
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
@@ -235,57 +222,32 @@ begin
 				if (check_empty = '0') then
 					next_state <= game_over;
 				else
-					next_state <= first_draw_1;
+					next_state <= first_draw_2;
 				end if;
 
-			when first_draw_1 =>
+			when first_draw_2 =>
 				new_timer_1_start <= '1';
 
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
 
-				next_state <= first_draw_2;
-
-			when first_draw_2 =>
-				draw_erase_draw  <= '1';
-				draw_erase_start <= '1';
-
 				if (draw_erase_ready = '1') then
-					next_state <= first_draw_4;
+					next_state <= drop_overflow;
 				end if;
-
-			when first_draw_4 =>
-				draw_erase_draw  <= '1';
-				draw_erase_start <= '1';
-
-				if (draw_erase_ready = '1') then
-					next_state <= draw;
-				end if;
-
-				next_state <= draw;
-
-			when draw =>
-				next_state <= drop_overflow;
 
 			when reset_timers_a_1 =>
 				new_timer_1_start <= '0';
 				new_timer_1_reset <= '1';
 				new_timer_1_time  <= '1'; -- 30, .5 second
 
-
 				next_state <= reset_timers_a_2;
 
 			when reset_timers_a_2 =>
-				if (inputs = "000000" or inputs = "010000") then
-					next_state <= clear_shift_1;
+				if (inputs(3 downto 0) = "0000" and inputs(5) = '0') then
+					next_state <= clear_shift_2;
 				end if;
 
 				new_timer_1_reset <= '0';
-
-			when clear_shift_1 =>
-				clear_shift_start <= '1';
-
-				next_state <= clear_shift_2;
 
 			when clear_shift_2 =>
 				clear_shift_start <= '1';
@@ -303,89 +265,35 @@ begin
 
 			when drop_overflow =>
 				if (timer_1_done = '1') then
-					next_state <= space_1;
+					next_state <= space_2;
 				else
 					next_state <= key;
 				end if;
 
-			when space_1 =>
-				-- First remove current piece
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1';
-
-				next_state <= space_2;
-
 			when space_2 =>
-				draw_erase_start <= '1';
-				if (draw_erase_ready = '1') then
-					next_state <= space_4;
-				end if;
+				move_start       <= '1';
+				move_drop        <= '1';
+				add_sub          <= '1';
+				x                <= '0';
+				y                <= move_y;
+				draw_erase_draw  <= move_draw_erase_draw;
+				draw_erase_start <= move_draw_erase_start;
+				check_start      <= move_check_start;
 
-			when space_4 =>
-				add_sub <= '1';
-				y       <= '1';
-
-				check_start <= '1';
-
-				next_state <= space_5;
-
-			when space_5 =>
-				check_start <= '1';
-				add_sub     <= '1';
-				y           <= '1';
-
-				if (check_ready = '1') then
-					next_state <= space_6;
-				end if;
-
-			when space_6 =>
-				add_sub <= '1';
-				y       <= '1';
-
-				if (check_empty = '1') then
-					new_cur_y  <= calc_y;
-					next_state <= move_down_4;
-				else
-					new_cur_y  <= cur_y;
-					next_state <= put_back_4;
-				end if;
-
-			when put_back_4 =>
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-
-				if (draw_erase_ready = '1') then
-					next_state <= reset_timers_a_1;
-				end if;
-
-			when move_down_3 =>
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-
-				next_state <= move_down_4;
-
-			when move_down_4 =>
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-
-				if (draw_erase_ready = '1') then
-					next_state <= reset_timers_b_1;
-				else
-					next_state <= move_down_4;
+				if (move_ready = '1') then
+					if (cur_y = calc_y) then -- not ok
+						next_state <= reset_timers_a_1;
+					else                -- ok
+						next_state <= reset_timers_b_1;
+						new_cur_y  <= calc_y;
+					end if;
 				end if;
 
 			when reset_timers_b_1 =>
-				draw_erase_start  <= '0';
-				new_timer_1_start <= '0';
+				new_timer_1_start <= '1';
 				new_timer_1_time  <= '1'; -- 30, .5 second
 
-
-				next_state <= reset_timers_b_2;
-
-			when reset_timers_b_2 =>
-				new_timer_1_start <= '1';
-
-				next_state <= draw;
+				next_state <= drop_overflow;
 
 			when key =>
 				if (inputs = "000000") then
@@ -397,14 +305,14 @@ begin
 			when drop_timer_reset =>
 				new_timer_1_time <= '1'; -- 30, .5 second
 
-				next_state <= draw;
+				next_state <= drop_overflow;
 
 			when soft_drop_1 =>
 				if (inputs(4) = '1') then
 					if (cur_timer_1_time = '1') then
 						next_state <= soft_drop_2;
 					else
-						next_state <= draw;
+						next_state <= drop_overflow;
 					end if;
 				else
 					next_state <= hard_drop_1;
@@ -421,16 +329,16 @@ begin
 				new_timer_1_reset <= '0';
 				new_timer_1_start <= '1';
 
-				next_state <= draw;
+				next_state <= drop_overflow;
 
 			when hard_drop_1 =>
 				if (inputs(5) = '1' and cur_timer_1_time = '1') then
-					next_state <= space_1;
+					next_state <= space_2;
 				else
-					next_state <= move_2;
+					next_state <= move_3;
 				end if;
 
-			when move_2 =>
+			when move_3 =>
 				move_start       <= '1';
 				x                <= move_x;
 				rot              <= move_rot;
@@ -439,32 +347,16 @@ begin
 				draw_erase_start <= move_draw_erase_start;
 				check_start      <= move_check_start;
 
-				next_state <= move_3;
-
-			when move_3       =>			
-				move_start       <= '1';
-				x                <= move_x;
-				rot              <= move_rot;
-				add_sub          <= move_add_sub;
-				draw_erase_draw  <= move_draw_erase_draw;
-				draw_erase_start <= move_draw_erase_start;
-				check_start      <= move_check_start;
-				
 				if (move_ready = '1') then
-					new_cur_x <= calc_x;
+					new_cur_x   <= calc_x;
 					new_cur_rot <= calc_rot;
-					next_state <= move_4;
+					next_state  <= move_4;
 				end if;
-				
+
 			when move_4 =>
-				if (inputs(3 downto 0) = "0000") then 
-					next_state <= draw;
+				if (inputs(3 downto 0) = "0000") then
+					next_state <= drop_overflow;
 				end if;
-				
-				
-			when kernel_panic =>
-				-- Kill it!
-				next_state <= game_over;
 
 			when game_over =>
 				-- Kill it!
@@ -473,9 +365,4 @@ begin
 		end case;
 	end process;
 end;
-
-
-
-
-
 

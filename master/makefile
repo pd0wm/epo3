@@ -124,6 +124,8 @@ WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
 WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
 WORK__tri_buff__synthesised = $(LIB_WORK)/tri_buff/synthesised.dat
 WORK__tri_buff = $(LIB_WORK)/tri_buff/_primary.dat
+WORK__timer_tb__behaviour = $(LIB_WORK)/timer_tb/behaviour.dat
+WORK__timer_tb = $(LIB_WORK)/timer_tb/_primary.dat
 WORK__timer_behaviour_cfg = $(LIB_WORK)/timer_behaviour_cfg/_primary.dat
 WORK__timer__behaviour = $(LIB_WORK)/timer/behaviour.dat
 WORK__timer__synthesised = $(LIB_WORK)/timer/synthesised.dat
@@ -157,17 +159,22 @@ WORK__rom_tb = $(LIB_WORK)/rom_tb/_primary.dat
 WORK__rom_mux4_behaviour_cfg = $(LIB_WORK)/rom_mux4_behaviour_cfg/_primary.dat
 WORK__rom_mux44_behaviour_cfg = $(LIB_WORK)/rom_mux44_behaviour_cfg/_primary.dat
 WORK__rom_mux44__rom_mux44_behaviour = $(LIB_WORK)/rom_mux44/rom_mux44_behaviour.dat
+WORK__rom_mux44__synthesised = $(LIB_WORK)/rom_mux44/synthesised.dat
 WORK__rom_mux44 = $(LIB_WORK)/rom_mux44/_primary.dat
 WORK__rom_mux4__rom_mux4_behaviour = $(LIB_WORK)/rom_mux4/rom_mux4_behaviour.dat
+WORK__rom_mux4__synthesised = $(LIB_WORK)/rom_mux4/synthesised.dat
 WORK__rom_mux4 = $(LIB_WORK)/rom_mux4/_primary.dat
 WORK__rom_mux2_behaviour_cfg = $(LIB_WORK)/rom_mux2_behaviour_cfg/_primary.dat
 WORK__rom_mux24_behaviour_cfg = $(LIB_WORK)/rom_mux24_behaviour_cfg/_primary.dat
 WORK__rom_mux24__rom_mux24_behaviour = $(LIB_WORK)/rom_mux24/rom_mux24_behaviour.dat
+WORK__rom_mux24__synthesised = $(LIB_WORK)/rom_mux24/synthesised.dat
 WORK__rom_mux24 = $(LIB_WORK)/rom_mux24/_primary.dat
 WORK__rom_mux2__rom_mux2_behaviour = $(LIB_WORK)/rom_mux2/rom_mux2_behaviour.dat
+WORK__rom_mux2__synthesised = $(LIB_WORK)/rom_mux2/synthesised.dat
 WORK__rom_mux2 = $(LIB_WORK)/rom_mux2/_primary.dat
 WORK__rom_behaviour_cfg = $(LIB_WORK)/rom_behaviour_cfg/_primary.dat
 WORK__rom__rom_behaviour = $(LIB_WORK)/rom/rom_behaviour.dat
+WORK__rom__synthesised = $(LIB_WORK)/rom/synthesised.dat
 WORK__rom = $(LIB_WORK)/rom/_primary.dat
 WORK__piece_lut_tb_piece_lut_tb_behaviour_cfg = $(LIB_WORK)/piece_lut_tb_piece_lut_tb_behaviour_cfg/_primary.dat
 WORK__piece_lut_tb__piece_lut_tb_behaviour = $(LIB_WORK)/piece_lut_tb/piece_lut_tb_behaviour.dat
@@ -235,6 +242,7 @@ WORK__debounce_tb__behaviour = $(LIB_WORK)/debounce_tb/behaviour.dat
 WORK__debounce_tb = $(LIB_WORK)/debounce_tb/_primary.dat
 WORK__debounce_behaviour_cfg = $(LIB_WORK)/debounce_behaviour_cfg/_primary.dat
 WORK__debounce__behaviour = $(LIB_WORK)/debounce/behaviour.dat
+WORK__debounce__synthesised = $(LIB_WORK)/debounce/synthesised.dat
 WORK__debounce = $(LIB_WORK)/debounce/_primary.dat
 WORK__de_piece_testbench_behaviour_cfg = $(LIB_WORK)/de_piece_testbench_behaviour_cfg/_primary.dat
 WORK__de_piece_testbench__behaviour = $(LIB_WORK)/de_piece_testbench/behaviour.dat
@@ -318,9 +326,11 @@ WORK__bit4__bit4_behav = $(LIB_WORK)/bit4/bit4_behav.dat
 WORK__bit4 = $(LIB_WORK)/bit4/_primary.dat
 WORK__adder_y_behaviour_cfg = $(LIB_WORK)/adder_y_behaviour_cfg/_primary.dat
 WORK__adder_y__behaviour = $(LIB_WORK)/adder_y/behaviour.dat
+WORK__adder_y__synthesised = $(LIB_WORK)/adder_y/synthesised.dat
 WORK__adder_y = $(LIB_WORK)/adder_y/_primary.dat
 WORK__adder_x_behaviour_cfg = $(LIB_WORK)/adder_x_behaviour_cfg/_primary.dat
 WORK__adder_x__behaviour = $(LIB_WORK)/adder_x/behaviour.dat
+WORK__adder_x__synthesised = $(LIB_WORK)/adder_x/synthesised.dat
 WORK__adder_x = $(LIB_WORK)/adder_x/_primary.dat
 VCOM = vcom
 VLOG = vlog
@@ -425,6 +435,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__tri_buff__extracted) \
     $(WORK__tri_buff__synthesised) \
     $(WORK__tri_buff) \
+    $(WORK__timer_tb__behaviour) \
+    $(WORK__timer_tb) \
     $(WORK__timer_behaviour_cfg) \
     $(WORK__timer__behaviour) \
     $(WORK__timer__synthesised) \
@@ -458,17 +470,22 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__rom_mux4_behaviour_cfg) \
     $(WORK__rom_mux44_behaviour_cfg) \
     $(WORK__rom_mux44__rom_mux44_behaviour) \
+    $(WORK__rom_mux44__synthesised) \
     $(WORK__rom_mux44) \
     $(WORK__rom_mux4__rom_mux4_behaviour) \
+    $(WORK__rom_mux4__synthesised) \
     $(WORK__rom_mux4) \
     $(WORK__rom_mux2_behaviour_cfg) \
     $(WORK__rom_mux24_behaviour_cfg) \
     $(WORK__rom_mux24__rom_mux24_behaviour) \
+    $(WORK__rom_mux24__synthesised) \
     $(WORK__rom_mux24) \
     $(WORK__rom_mux2__rom_mux2_behaviour) \
+    $(WORK__rom_mux2__synthesised) \
     $(WORK__rom_mux2) \
     $(WORK__rom_behaviour_cfg) \
     $(WORK__rom__rom_behaviour) \
+    $(WORK__rom__synthesised) \
     $(WORK__rom) \
     $(WORK__piece_lut_tb_piece_lut_tb_behaviour_cfg) \
     $(WORK__piece_lut_tb__piece_lut_tb_behaviour) \
@@ -536,6 +553,7 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__debounce_tb) \
     $(WORK__debounce_behaviour_cfg) \
     $(WORK__debounce__behaviour) \
+    $(WORK__debounce__synthesised) \
     $(WORK__debounce) \
     $(WORK__de_piece_testbench_behaviour_cfg) \
     $(WORK__de_piece_testbench__behaviour) \
@@ -619,9 +637,11 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__bit4) \
     $(WORK__adder_y_behaviour_cfg) \
     $(WORK__adder_y__behaviour) \
+    $(WORK__adder_y__synthesised) \
     $(WORK__adder_y) \
     $(WORK__adder_x_behaviour_cfg) \
     $(WORK__adder_x__behaviour) \
+    $(WORK__adder_x__synthesised) \
     $(WORK__adder_x)
 
 $(WORK__adder_x) : VHDL/adder_x.vhd \
@@ -629,6 +649,14 @@ $(WORK__adder_x) : VHDL/adder_x.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/adder_x.vhd
+
+$(WORK__adder_x__synthesised) : VHDL/adder_x_SYNTH.vhd \
+		$(WORK__adder_x) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/adder_x_SYNTH.vhd
 
 $(WORK__adder_x__behaviour) : VHDL/adder_x-behaviour.vhd \
 		$(WORK__adder_x) \
@@ -652,6 +680,14 @@ $(WORK__adder_y) : VHDL/adder_y.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/adder_y.vhd
+
+$(WORK__adder_y__synthesised) : VHDL/adder_y_SYNTH.vhd \
+		$(WORK__adder_y) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/adder_y_SYNTH.vhd
 
 $(WORK__adder_y__behaviour) : VHDL/adder_y-behaviour.vhd \
 		$(WORK__adder_y) \
@@ -1304,6 +1340,14 @@ $(WORK__debounce) : VHDL/debounce.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/debounce.vhd
 
+$(WORK__debounce__synthesised) : VHDL/debounce_SYNTH.vhd \
+		$(WORK__debounce) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/debounce_SYNTH.vhd
+
 $(WORK__debounce__behaviour) : VHDL/debounce_behav.vhd \
 		$(WORK__debounce) \
 		$(IEEE__numeric_std) \
@@ -1821,6 +1865,14 @@ $(WORK__rom) : VHDL/rom.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/rom.vhd
 
+$(WORK__rom__synthesised) : VHDL/rom_SYNTH.vhd \
+		$(WORK__rom) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/rom_SYNTH.vhd
+
 $(WORK__rom__rom_behaviour) : VHDL/rom-rom_behaviour.vhd \
 		$(WORK__rom) \
 		$(STD__textio) \
@@ -1846,6 +1898,14 @@ $(WORK__rom_mux2) : VHDL/rom_mux2.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/rom_mux2.vhd
 
+$(WORK__rom_mux2__synthesised) : VHDL/rom_mux2_SYNTH.vhd \
+		$(WORK__rom_mux2) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/rom_mux2_SYNTH.vhd
+
 $(WORK__rom_mux2__rom_mux2_behaviour) : VHDL/rom_mux2-rom_mux2_behaviour.vhd \
 		$(WORK__rom_mux2) \
 		$(STD__textio) \
@@ -1858,6 +1918,14 @@ $(WORK__rom_mux24) : VHDL/rom_mux24.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/rom_mux24.vhd
+
+$(WORK__rom_mux24__synthesised) : VHDL/rom_mux24_SYNTH.vhd \
+		$(WORK__rom_mux24) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/rom_mux24_SYNTH.vhd
 
 $(WORK__rom_mux24__rom_mux24_behaviour) : VHDL/rom_mux24-rom_mux24_behaviour.vhd \
 		$(WORK__rom_mux24) \
@@ -1890,6 +1958,14 @@ $(WORK__rom_mux4) : VHDL/rom_mux4.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/rom_mux4.vhd
 
+$(WORK__rom_mux4__synthesised) : VHDL/rom_mux4_SYNTH.vhd \
+		$(WORK__rom_mux4) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/rom_mux4_SYNTH.vhd
+
 $(WORK__rom_mux4__rom_mux4_behaviour) : VHDL/rom_mux4-rom_mux4_behaviour.vhd \
 		$(WORK__rom_mux4) \
 		$(STD__textio) \
@@ -1902,6 +1978,14 @@ $(WORK__rom_mux44) : VHDL/rom_mux44.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/rom_mux44.vhd
+
+$(WORK__rom_mux44__synthesised) : VHDL/rom_mux44_SYNTH.vhd \
+		$(WORK__rom_mux44) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/rom_mux44_SYNTH.vhd
 
 $(WORK__rom_mux44__rom_mux44_behaviour) : VHDL/rom_mux44-rom_mux44_behaviour.vhd \
 		$(WORK__rom_mux44) \
@@ -2188,6 +2272,19 @@ $(WORK__timer_behaviour_cfg) : VHDL/timer_behaviour_cfg.vhd \
 		$(WORK__timer)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer_behaviour_cfg.vhd
+
+$(WORK__timer_tb) : VHDL/timer_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/timer_tb.vhd
+
+$(WORK__timer_tb__behaviour) : VHDL/timer_tb-behaviour.vhd \
+		$(WORK__timer_tb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/timer_tb-behaviour.vhd
 
 $(WORK__tri_buff) : VHDL/tri_buff.vhd \
 		$(STD__textio) \

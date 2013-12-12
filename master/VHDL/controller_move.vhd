@@ -6,6 +6,7 @@ entity controller_move is
 		rst              : in  std_logic;
 
 		x                : out std_logic;
+		y                : out std_logic;
 		rot              : out std_logic;
 		add_sub          : out std_logic;
 
@@ -17,6 +18,7 @@ entity controller_move is
 		ready            : out std_logic;
 
 		inputs           : in  std_logic_vector(3 downto 0);
+		drop             : in  std_logic;
 		check_ready      : in  std_logic;
 
 		check_start      : out std_logic;
