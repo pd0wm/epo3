@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, soft_drop_3, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
+	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece           : std_logic_vector(2 downto 0);
@@ -267,6 +267,10 @@ begin
 				end if;
 
 			when drop_overflow =>
+			
+				new_timer_1_reset <= '0';
+				new_timer_1_start <= '1';
+				
 				if (timer_1_done = '1') then
 					next_state <= space_2;
 					new_timer_1_start <= '0';
@@ -328,13 +332,8 @@ begin
 				new_timer_1_start <= '0';
 				new_timer_1_time  <= '0';
 
-				next_state <= soft_drop_3;
-
-			when soft_drop_3 =>
-				new_timer_1_reset <= '0';
-				new_timer_1_start <= '1';
-
 				next_state <= drop_overflow;
+
 
 			when hard_drop_1 =>
 				if (inputs(5) = '1' and cur_timer_1_time = '1') then
