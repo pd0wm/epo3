@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.520 ns
+Actual Time    : 2.931 ns
 From           : rst
-To             : controller:inst14|cur_future_piece[1]
+To             : controller:inst14|controller_move:move_pm|cur_state.move_6
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.616 ns
-From           : vga:inst3|vga_read:read_and_output|red_out
-To             : vga_r[0]
+Actual Time    : 13.405 ns
+From           : vga:inst3|vga_read:read_and_output|v_sync_out
+To             : vga_vsync
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.056 ns
+Actual Time    : 5.591 ns
 From           : dbg_inputs[5]
 To             : debounce:inst19|output[5]
 From Clock     : --
@@ -45,8 +45,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 124.89 MHz ( period = 8.007 ns )
-From           : piece_lut:inst7|cur_mask[1]
+Actual Time    : 121.68 MHz ( period = 8.218 ns )
+From           : cs_compare:inst11|state[2]
 To             : sr_if:inst2|do1
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
@@ -55,22 +55,12 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 134.08 MHz ( period = 7.458 ns )
+Actual Time    : 141.92 MHz ( period = 7.046 ns )
 From           : sld_hub:auto_hub|irf_reg[1][5]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
-
-Type           : Clock Hold: 'clock_50mhz'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : gen6mhz:inst1|count[1]
-To             : gen6mhz:inst1|count[2]
-From Clock     : clock_50mhz
-To Clock       : clock_50mhz
-Failed Paths   : 1
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +70,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 1
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 
