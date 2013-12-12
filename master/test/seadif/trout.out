@@ -34,8 +34,9 @@ WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_x_in_7_0_0'
 WARNING/ERROR: cannot find equiv. layoutport of cirport 'pos_x_in_7_0_1'
          (circell 'vga_sync') on layout cell 'vga_sync'.
 ------ making grid  ------
------- routing started Thu Dec 12 14:20:11 2013
+------ routing started Thu Dec 12 15:17:47 2013
  79 nets have to be routed.
+Routing net 'n1' (2/2): . OK!
 Routing net 'data' (2/2): .b OK!
 Routing net 'h_sync' (2/2): .b OK!
 Routing net 'v_sync' (2/2): .b OK!
@@ -50,121 +51,73 @@ Routing net 'mem_addr_7_0_3' (2/2): .b OK!
 Routing net 'mem_addr_7_0_2' (2/2): .b OK!
 Routing net 'mem_addr_7_0_1' (2/2): .b OK!
 Routing net 'mem_addr_7_0_0' (2/2): .b OK!
-Routing net 'n1' (2/2): . OK!
-Routing net 'clk' (13/12): ...........b OK!
---> 20.25 % elapsed:   6.0 sec. expect another  47.7 sec. <--
-Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
-Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
-Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'clk' (13/13): ............b OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'end_score_line' (2/2): . OK!
 Routing net 'mem_addr_field_5_port' (2/2): . OK!
-Routing net 'end_score_line' (2/1):  entirely outside box
-Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
-Routing net 'end_np_line' (2/2): . OK!
-Routing net 'mem_addr_score_3_port' (2/2): . OK!
-Routing net 'mem_addr_field_4_port' (2/2): . OK!
-Routing net 'mem_addr_score_4_port' (2/2): . OK!
-Routing net 'mem_addr_score_7_port' (2/2): . OK!
-Routing net 'mem_addr_score_1_port' (2/2): . OK!
-Routing net 'mem_addr_field_1_port' (2/2): . OK!
-Routing net 'mem_addr_score_0_port' (2/2): . OK!
-Routing net 'mem_addr_score_5_port' (2/2): . OK!
-Routing net 'mem_addr_field_3_port' (2/2): . OK!
-Routing net 'mem_addr_score_6_port' (2/2): . OK!
-Routing net 'mem_addr_field_7_port' (2/2): . OK!
-Routing net 'end_field_line' (2/2): x FAILED
-Routing net 'mem_addr_score_2_port' (2/2): . OK!
-Routing net 'mem_addr_np_2_port' (2/2): . OK!
-Routing net 'n2' (2/2): x FAILED
 Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
-Routing net 'mem_addr_np_5_port' (2/2): . OK!
-Routing net 'v_sync_buf' (2/2): . OK!
-Routing net 'mem_addr_np_1_port' (2/2): . OK!
-Routing net 'h_sync_buf' (2/2): . OK!
-Routing net 'mem_addr_field_0_port' (2/2): . OK!
-Routing net 'in_score' (3/3): .. OK!
-Routing net 'pos_y_0_port' (2/1):  entirely outside box
---> 58.23 % elapsed:  12.7 sec. expect another  18.9 sec. <--
-Routing net 'mem_addr_np_7_port' (2/2): . OK!
 Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
-Routing net 'in_field' (3/3): .. OK!
 Routing net 'mem_addr_field_6_port' (2/2): . OK!
-Routing net 'pos_y_3_port' (3/3): .. OK!
-Routing net 'mem_addr_field_2_port' (2/2): . OK!
-Routing net 'mem_addr_np_4_port' (2/2): . OK!
-Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_field_4_port' (2/2): . OK!
+Routing net 'mem_addr_score_2_port' (2/2): . OK!
+Routing net 'mem_addr_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'pos_y_0_port' (2/2): . OK!
 Routing net 'mem_addr_np_3_port' (2/2): . OK!
-Routing net 'pos_y_1_port' (3/2): . OK!
-Routing net 'mem_addr_np_0_port' (2/2): . OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'mem_addr_score_4_port' (2/2): . OK!
+Routing net 'mem_addr_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_score_1_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_field_7_port' (2/2): . OK!
+Routing net 'mem_addr_score_0_port' (2/2): x FAILED
+Routing net 'mem_addr_score_6_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'mem_addr_np_4_port' (2/2): . OK!
 Routing net 'pos_y_8_port' (6/6): ..... OK!
-Routing net 'pos_y_2_port' (3/1):  entirely outside box
-Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'mem_addr_field_2_port' (2/2): x FAILED
+Routing net 'mem_addr_score_7_port' (2/2): . OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_y_4_port' (6/6): ..... OK!
 Routing net 'in_np' (4/4): ... OK!
+Routing net 'mem_addr_score_3_port' (2/2): . OK!
+Routing net 'mem_addr_np_5_port' (2/2): . OK!
+Routing net 'pos_x_6_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_0_port' (2/2): x FAILED
+Routing net 'mem_addr_score_5_port' (2/2): . OK!
+Routing net 'pos_x_2_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'mem_addr_np_7_port' (2/2): . OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'new_frame' (3/3): .. OK!
+Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'end_np_line' (2/2): . OK!
 Routing net 'new_line' (3/3): .. OK!
---> 78.48 % elapsed:  19.4 sec. expect another  11.0 sec. <--
-Routing net 'pos_y_9_port' (6/5): .... OK!
-Routing net 'pos_y_4_port' (6/5): .... OK!
-Routing net 'new_frame' (3/2): . OK!
-Routing net 'pos_y_5_port' (6/6): ..... OK!
-Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_2_port' (2/2): . OK!
 Routing net 'pos_y_6_port' (6/6): ..... OK!
---> 86.08 % elapsed:  27.7 sec. expect another   9.6 sec. <--
-Routing net 'pos_x_5_port' (6/5): .... OK!
-Routing net 'pos_x_1_port' (5/4): ... OK!
-Routing net 'pos_x_3_port' (6/5): .... OK!
-Routing net 'pos_x_7_port' (6/4): ... OK!
---> 91.14 % elapsed:  34.0 sec. expect another   6.6 sec. <--
-Routing net 'pos_x_0_port' (5/4): ... OK!
-Routing net 'pos_x_2_port' (6/5): .... OK!
-Routing net 'pos_x_6_port' (6/4): ... OK!
-Routing net 'end_frame' (4/3): .. OK!
---> 96.20 % elapsed:  40.5 sec. expect another   3.7 sec. <--
+Routing net 'pos_x_1_port' (5/5): .... OK!
+Routing net 'in_score' (3/3): .. OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'pos_y_9_port' (6/6): ..... OK!
+Routing net 'pos_x_3_port' (6/6): ..... OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'pos_x_5_port' (6/6): ..... OK!
+Routing net 'pos_y_5_port' (6/6): ..... OK!
+Routing net 'pos_x_0_port' (5/5): .... OK!
+Routing net 'pos_x_7_port' (6/6): ..... OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'end_frame' (4/4): ... OK!
 Routing net 'vss' : ... (Power special)
-Routing net 'rst' (13/12): ...........b OK!
---> 98.73 % elapsed:  47.8 sec. expect another   2.0 sec. <--
-Routing net 'vdd' :  (Power special)
+Routing net 'vdd' : . (Power special)
 ----- Don't worry, I'm trying again -----
-WARNING (internal): terminal ouside routing area:
-        (162, 228, 0)
-WARNING (internal): terminal ouside routing area:
-        (248, 235, 0)
-WARNING (internal): terminal ouside routing area:
-        (32, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (20, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (22, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (217, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (216, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (218, 251, 0)
-WARNING (internal): terminal ouside routing area:
-        (181, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (3, 227, 0)
-WARNING (internal): terminal ouside routing area:
-        (194, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (204, 251, 0)
-WARNING (internal): terminal ouside routing area:
-        (209, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (3, 243, 0)
-WARNING (internal): terminal ouside routing area:
-        (195, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (186, 251, 1)
-WARNING (internal): terminal ouside routing area:
-        (233, 248, 0)
-WARNING (internal): terminal ouside routing area:
-        (3, 247, 0)
-WARNING (internal): terminal ouside routing area:
-        (248, 242, 0)
-WARNING (internal): terminal ouside routing area:
-        (248, 230, 0)
-Routing net 'end_field_line' (2/2): x FAILED
-Routing net 'n2' (2/2): x FAILED
+Routing net 'n1' (2/2): . OK!
+Routing net 'mem_addr_score_0_port' (2/2): . OK!
 Routing net 'mem_addr_7_0_0' (2/2): .b OK!
 Routing net 'mem_addr_7_0_1' (2/2): .b OK!
 Routing net 'mem_addr_7_0_2' (2/2): .b OK!
@@ -179,73 +132,319 @@ Routing net 'red' (2/2): .b OK!
 Routing net 'v_sync' (2/2): .b OK!
 Routing net 'h_sync' (2/2): .b OK!
 Routing net 'data' (2/2): .b OK!
-Routing net 'n1' (2/2): . OK!
-Routing net 'clk' (13/12): ...........b OK!
---> 22.78 % elapsed:   9.1 sec. expect another  62.0 sec. <--
-Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
-Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
-Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
-Routing net 'end_score_line' (2/1):  entirely outside box
-Routing net 'mem_addr_field_5_port' (2/2): . OK!
-Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
-Routing net 'end_np_line' (2/2): . OK!
-Routing net 'mem_addr_score_3_port' (2/2): . OK!
-Routing net 'mem_addr_field_4_port' (2/2): . OK!
-Routing net 'mem_addr_score_4_port' (2/2): . OK!
-Routing net 'mem_addr_score_1_port' (2/2): . OK!
-Routing net 'mem_addr_score_7_port' (2/2): . OK!
-Routing net 'mem_addr_field_1_port' (2/2): . OK!
-Routing net 'mem_addr_score_0_port' (2/2): . OK!
-Routing net 'mem_addr_score_5_port' (2/2): . OK!
-Routing net 'mem_addr_field_3_port' (2/2): . OK!
-Routing net 'mem_addr_score_6_port' (2/2): . OK!
-Routing net 'mem_addr_field_7_port' (2/2): . OK!
-Routing net 'mem_addr_score_2_port' (2/2): . OK!
-Routing net 'mem_addr_np_2_port' (2/2): . OK!
---> 48.10 % elapsed:  15.8 sec. expect another  34.8 sec. <--
-Routing net 'mem_addr_np_5_port' (2/2): . OK!
-Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
-Routing net 'v_sync_buf' (2/2): . OK!
-Routing net 'mem_addr_np_1_port' (2/2): . OK!
-Routing net 'h_sync_buf' (2/2): . OK!
-Routing net 'mem_addr_field_0_port' (2/2): . OK!
-Routing net 'in_score' (3/3): .. OK!
-Routing net 'mem_addr_np_7_port' (2/2): . OK!
-Routing net 'pos_y_0_port' (2/1):  entirely outside box
-Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
-Routing net 'in_field' (3/3): .. OK!
-Routing net 'mem_addr_field_6_port' (2/2): . OK!
-Routing net 'pos_y_3_port' (3/3): .. OK!
 Routing net 'mem_addr_field_2_port' (2/2): . OK!
-Routing net 'mem_addr_np_4_port' (2/2): . OK!
-Routing net 'mem_addr_np_6_port' (2/2): . OK!
-Routing net 'mem_addr_np_3_port' (2/2): . OK!
-Routing net 'pos_y_1_port' (3/2): . OK!
---> 70.89 % elapsed:  21.9 sec. expect another  18.9 sec. <--
 Routing net 'mem_addr_np_0_port' (2/2): . OK!
+Routing net 'clk' (13/13): ............b OK!
+Routing net 'end_score_line' (2/2): . OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'mem_addr_field_5_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_6_port' (2/2): . OK!
+Routing net 'mem_addr_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_field_4_port' (2/2): . OK!
+Routing net 'mem_addr_score_2_port' (2/2): . OK!
+Routing net 'mem_addr_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'mem_addr_np_3_port' (2/2): . OK!
+Routing net 'pos_y_0_port' (2/2): . OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'mem_addr_score_4_port' (2/2): . OK!
+Routing net 'mem_addr_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_score_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_7_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_score_6_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'mem_addr_np_4_port' (2/2): . OK!
 Routing net 'pos_y_8_port' (6/6): ..... OK!
-Routing net 'pos_y_2_port' (3/1):  entirely outside box
-Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_7_port' (2/2): . OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_y_4_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_3_port' (2/2): x FAILED
 Routing net 'in_np' (4/4): ... OK!
+Routing net 'mem_addr_np_5_port' (2/2): . OK!
+Routing net 'pos_x_6_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_5_port' (2/2): . OK!
+Routing net 'pos_x_2_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'mem_addr_np_7_port' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'new_frame' (3/3): .. OK!
+Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'end_np_line' (2/2): . OK!
+Routing net 'mem_addr_np_2_port' (2/2): . OK!
 Routing net 'new_line' (3/3): .. OK!
-Routing net 'pos_y_9_port' (6/5): .... OK!
-Routing net 'pos_y_4_port' (6/5): .... OK!
---> 81.01 % elapsed:  31.6 sec. expect another  15.4 sec. <--
-Routing net 'new_frame' (3/2): . OK!
-Routing net 'pos_y_5_port' (6/6): ..... OK!
-Routing net 'pos_x_4_port' (6/6): ..... OK!
 Routing net 'pos_y_6_port' (6/6): ..... OK!
---> 86.08 % elapsed:  39.9 sec. expect another  13.8 sec. <--
-Routing net 'pos_x_5_port' (6/5): .... OK!
-Routing net 'pos_x_1_port' (5/4): ... OK!
-Routing net 'pos_x_3_port' (6/5): .... OK!
-Routing net 'pos_x_7_port' (6/4): ... OK!
---> 91.14 % elapsed:  49.8 sec. expect another  10.4 sec. <--
-Routing net 'pos_x_0_port' (5/4): ... OK!
-Routing net 'pos_x_2_port' (6/5): .... OK!
---> 93.67 % elapsed:  56.0 sec. expect another   7.6 sec. <--
-Routing net 'end_frame' (4/3): .. OK!
-Routing net 'pos_x_6_port' (6/4): ... OK!
+Routing net 'pos_x_1_port' (5/5): .... OK!
+Routing net 'in_score' (3/3): .. OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'pos_y_9_port' (6/6): ..x.. FAILED
+Routing net 'pos_x_3_port' (6/6): ..... OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'pos_x_5_port' (6/6): ..... OK!
+Routing net 'pos_y_5_port' (6/6): ..... OK!
+Routing net 'pos_x_0_port' (5/5): xxxxR> FAILED
+Routing net 'pos_x_7_port' (6/6): ..... OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'end_frame' (4/4): ... OK!
 Routing net 'vss' : ... (Power special)
-Routing net 'rst' (13/12): .
-/\/\/\/\/\ caught signal 15, remove lock files and terminate.
+Routing net 'vdd' : . (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n1' (2/2): . OK!
+Routing net 'mem_addr_score_0_port' (2/2): . OK!
+Routing net 'data' (2/2): .b OK!
+Routing net 'h_sync' (2/2): .b OK!
+Routing net 'v_sync' (2/2): .b OK!
+Routing net 'red' (2/2): .b OK!
+Routing net 'green' (2/2): .b OK!
+Routing net 'blue' (2/2): .b OK!
+Routing net 'mem_addr_7_0_7' (2/2): .b OK!
+Routing net 'mem_addr_7_0_6' (2/2): .b OK!
+Routing net 'mem_addr_7_0_5' (2/2): .b OK!
+Routing net 'mem_addr_7_0_4' (2/2): .b OK!
+Routing net 'mem_addr_7_0_3' (2/2): .b OK!
+Routing net 'mem_addr_7_0_2' (2/2): .b OK!
+Routing net 'mem_addr_7_0_1' (2/2): .b OK!
+Routing net 'mem_addr_7_0_0' (2/2): .b OK!
+Routing net 'mem_addr_field_2_port' (2/2): . OK!
+Routing net 'mem_addr_score_3_port' (2/2): . OK!
+Routing net 'mem_addr_np_0_port' (2/2): x FAILED
+Routing net 'pos_y_9_port' (6/6): ..... OK!
+Routing net 'pos_x_0_port' (5/5): .... OK!
+Routing net 'clk' (13/13): ............b OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'end_score_line' (2/2): . OK!
+Routing net 'mem_addr_field_5_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_6_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_field_4_port' (2/2): . OK!
+Routing net 'mem_addr_score_2_port' (2/2): . OK!
+Routing net 'mem_addr_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'pos_y_0_port' (2/2): . OK!
+Routing net 'mem_addr_np_3_port' (2/2): . OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'mem_addr_score_4_port' (2/2): . OK!
+Routing net 'mem_addr_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_score_1_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_field_7_port' (2/2): . OK!
+Routing net 'mem_addr_score_6_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'mem_addr_np_4_port' (2/2): . OK!
+Routing net 'pos_y_8_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_7_port' (2/2): . OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_y_4_port' (6/6): ..... OK!
+Routing net 'in_np' (4/4): ... OK!
+Routing net 'mem_addr_np_5_port' (2/2): . OK!
+Routing net 'pos_x_6_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_5_port' (2/2): . OK!
+Routing net 'pos_x_2_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_1_port' (2/2): x FAILED
+Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'mem_addr_np_7_port' (2/2): . OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'new_frame' (3/3): .. OK!
+Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'end_np_line' (2/2): . OK!
+Routing net 'new_line' (3/3): .. OK!
+Routing net 'mem_addr_np_2_port' (2/2): . OK!
+Routing net 'pos_y_6_port' (6/6): ..... OK!
+Routing net 'pos_x_1_port' (5/5): .... OK!
+Routing net 'in_score' (3/3): .. OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'pos_x_3_port' (6/6): ..... OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'pos_x_5_port' (6/6): ..... OK!
+Routing net 'pos_y_5_port' (6/6): ..... OK!
+Routing net 'pos_x_7_port' (6/6): ..... OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'end_frame' (4/4): ... OK!
+Routing net 'vss' : ... (Power special)
+Routing net 'vdd' : . (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n1' (2/2): . OK!
+Routing net 'mem_addr_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_score_0_port' (2/2): . OK!
+Routing net 'mem_addr_7_0_0' (2/2): .b OK!
+Routing net 'mem_addr_7_0_1' (2/2): .b OK!
+Routing net 'mem_addr_7_0_2' (2/2): .b OK!
+Routing net 'mem_addr_7_0_3' (2/2): .b OK!
+Routing net 'mem_addr_7_0_4' (2/2): .b OK!
+Routing net 'mem_addr_7_0_5' (2/2): .b OK!
+Routing net 'mem_addr_7_0_6' (2/2): .b OK!
+Routing net 'mem_addr_7_0_7' (2/2): .b OK!
+Routing net 'blue' (2/2): .b OK!
+Routing net 'green' (2/2): .b OK!
+Routing net 'red' (2/2): .b OK!
+Routing net 'v_sync' (2/2): .b OK!
+Routing net 'h_sync' (2/2): .b OK!
+Routing net 'data' (2/2): .b OK!
+Routing net 'mem_addr_field_2_port' (2/2): . OK!
+Routing net 'mem_addr_score_3_port' (2/2): . OK!
+Routing net 'mem_addr_np_1_port' (2/2): . OK!
+Routing net 'pos_y_9_port' (6/6): ..... OK!
+Routing net 'pos_x_0_port' (5/5): .... OK!
+Routing net 'clk' (13/13): ............b OK!
+Routing net 'end_score_line' (2/2): . OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'mem_addr_field_5_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_6_port' (2/2): . OK!
+Routing net 'mem_addr_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_field_4_port' (2/2): . OK!
+Routing net 'mem_addr_score_2_port' (2/2): . OK!
+Routing net 'mem_addr_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'mem_addr_np_3_port' (2/2): x FAILED
+Routing net 'pos_y_0_port' (2/2): . OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'mem_addr_score_4_port' (2/2): . OK!
+Routing net 'mem_addr_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_score_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_7_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_score_6_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'mem_addr_np_4_port' (2/2): . OK!
+Routing net 'pos_y_8_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_7_port' (2/2): . OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_y_4_port' (6/6): ..... OK!
+Routing net 'in_np' (4/4): ... OK!
+Routing net 'mem_addr_np_5_port' (2/2): . OK!
+Routing net 'pos_x_6_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_5_port' (2/2): . OK!
+Routing net 'pos_x_2_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'mem_addr_np_7_port' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'new_frame' (3/3): .. OK!
+Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'end_np_line' (2/2): . OK!
+Routing net 'mem_addr_np_2_port' (2/2): . OK!
+Routing net 'new_line' (3/3): .. OK!
+Routing net 'pos_y_6_port' (6/6): ..... OK!
+Routing net 'pos_x_1_port' (5/5): .... OK!
+Routing net 'in_score' (3/3): .. OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'pos_x_3_port' (6/6): ..... OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'pos_x_5_port' (6/6): ..... OK!
+Routing net 'pos_y_5_port' (6/6): ..... OK!
+Routing net 'pos_x_7_port' (6/6): ..... OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'end_frame' (4/4): ... OK!
+Routing net 'vss' : ... (Power special)
+Routing net 'vdd' : . (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n1' (2/2): . OK!
+Routing net 'mem_addr_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_np_3_port' (2/2): . OK!
+Routing net 'mem_addr_score_0_port' (2/2): . OK!
+Routing net 'data' (2/2): .b OK!
+Routing net 'h_sync' (2/2): .b OK!
+Routing net 'v_sync' (2/2): .b OK!
+Routing net 'red' (2/2): .b OK!
+Routing net 'green' (2/2): .b OK!
+Routing net 'blue' (2/2): .b OK!
+Routing net 'mem_addr_7_0_7' (2/2): .b OK!
+Routing net 'mem_addr_7_0_6' (2/2): .b OK!
+Routing net 'mem_addr_7_0_5' (2/2): .b OK!
+Routing net 'mem_addr_7_0_4' (2/2): .b OK!
+Routing net 'mem_addr_7_0_3' (2/2): .b OK!
+Routing net 'mem_addr_7_0_2' (2/2): .b OK!
+Routing net 'mem_addr_7_0_1' (2/2): .b OK!
+Routing net 'mem_addr_7_0_0' (2/2): .b OK!
+Routing net 'mem_addr_field_2_port' (2/2): . OK!
+Routing net 'mem_addr_score_3_port' (2/2): . OK!
+Routing net 'mem_addr_np_1_port' (2/2): . OK!
+Routing net 'pos_y_9_port' (6/6): ..... OK!
+Routing net 'pos_x_0_port' (5/5): .... OK!
+Routing net 'clk' (13/13): ............b OK!
+Routing net 'n2' (2/2): . OK!
+Routing net 'end_score_line' (2/2): . OK!
+Routing net 'mem_addr_field_5_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_6_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_field_0_port' (2/2): . OK!
+Routing net 'mem_addr_reset_np_0_port' (2/2): . OK!
+Routing net 'mem_addr_field_4_port' (2/2): . OK!
+Routing net 'mem_addr_score_2_port' (2/2): . OK!
+Routing net 'mem_addr_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_2_port' (2/2): . OK!
+Routing net 'pos_y_0_port' (2/2): . OK!
+Routing net 'end_field_line' (2/2): . OK!
+Routing net 'mem_addr_score_4_port' (2/2): . OK!
+Routing net 'mem_addr_field_1_port' (2/2): . OK!
+Routing net 'mem_addr_score_1_port' (2/2): . OK!
+Routing net 'mem_addr_reset_field_3_port' (2/2): . OK!
+Routing net 'mem_addr_field_7_port' (2/2): . OK!
+Routing net 'mem_addr_score_6_port' (2/2): . OK!
+Routing net 'in_field' (3/3): .. OK!
+Routing net 'mem_addr_np_4_port' (2/2): . OK!
+Routing net 'pos_y_8_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_7_port' (2/2): . OK!
+Routing net 'pos_y_2_port' (3/3): .. OK!
+Routing net 'pos_y_4_port' (6/6): ..... OK!
+Routing net 'in_np' (4/4): ... OK!
+Routing net 'mem_addr_np_5_port' (2/2): . OK!
+Routing net 'pos_x_6_port' (6/6): ..... OK!
+Routing net 'mem_addr_score_5_port' (2/2): . OK!
+Routing net 'pos_x_2_port' (6/6): ..... OK!
+Routing net 'mem_addr_np_6_port' (2/2): . OK!
+Routing net 'h_sync_buf' (2/2): . OK!
+Routing net 'mem_addr_np_7_port' (2/2): . OK!
+Routing net 'pos_y_3_port' (3/3): .. OK!
+Routing net 'new_frame' (3/3): .. OK!
+Routing net 'pos_y_7_port' (6/6): ..... OK!
+Routing net 'end_np_line' (2/2): . OK!
+Routing net 'new_line' (3/3): .. OK!
+Routing net 'mem_addr_np_2_port' (2/2): . OK!
+Routing net 'pos_y_6_port' (6/6): ..... OK!
+Routing net 'pos_x_1_port' (5/5): .... OK!
+Routing net 'in_score' (3/3): .. OK!
+Routing net 'pos_y_1_port' (3/3): .. OK!
+Routing net 'pos_x_4_port' (6/6): ..... OK!
+Routing net 'pos_x_3_port' (6/6): ..... OK!
+Routing net 'v_sync_buf' (2/2): . OK!
+Routing net 'pos_x_5_port' (6/6): ..... OK!
+Routing net 'pos_y_5_port' (6/6): ..... OK!
+Routing net 'pos_x_7_port' (6/6): ..... OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'end_frame' (4/4): ... OK!
+Routing net 'vss' : ... (Power special)
+Routing net 'vdd' : . (Power special)
+READY
+----- Some interesting statistics ------
+Total number of nets:                 79 (100% completion)
+Total length of routed wires:         16220 grids = 142.736 mm
+No. of transistors (total / used):    11648/6812 = 58.48 %
+No. of poly feeds used by router:     1
+CPU-time consumption:                 1.97 sec.
+Elapsed time during routing:          2.32 sec. (100.00 % of cpu)
+------ Verifying Connectivity ------
+WARNING: 2 short-circuit(s) were detected among the 79 nets.
+------ Writing 'Tmp_Cell_(vga(vga(test)))' ------
+------ Trout: task completed on Thu Dec 12 15:17:49 2013
+ 
