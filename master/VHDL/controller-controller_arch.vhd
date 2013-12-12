@@ -5,7 +5,7 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_2, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, first_draw_2, drop_timer_reset, gen_piece_1, collision_1, collision_4, collision_5, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
+	is (reset, init, move_3, move_4, clear_shift_3, draw_next_piece_1, draw_next_piece_5, hard_drop_1, soft_drop_1, soft_drop_2, first_draw_2, drop_timer_reset, gen_piece_1, collision_4, reset_timers_a_1, reset_timers_a_2, clear_shift_2, space_2, reset_timers_b_1, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
 	signal cur_piece, new_cur_piece           : std_logic_vector(2 downto 0);
@@ -181,21 +181,17 @@ begin
 				new_cur_rot <= (others => '0');
 				new_cur_x   <= (others => '0');
 				new_cur_y   <= (others => '0');
-				
+
 				lut_next_piece   <= '1';
 				draw_erase_draw  <= '0';
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
-					next_state    <= draw_next_piece_2;
+					next_state    <= draw_next_piece_5;
 					new_cur_piece <= next_piece;
+					draw_erase_start <= '0';
 				end if;
 
-
-			when draw_next_piece_2 =>			
-				draw_erase_start <= '0';
-				
-				next_state <= draw_next_piece_5;			
 
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
@@ -203,29 +199,22 @@ begin
 				lut_next_piece   <= '1';
 
 				if (draw_erase_ready = '1') then
-					next_state <= collision_1;
+					next_state       <= collision_4;
+					new_cur_x        <= "011";
+					new_cur_piece    <= cur_future_piece;
+					new_future_piece <= cur_piece;
 				end if;
-
-			when collision_1 =>
-				new_cur_piece    <= cur_future_piece;
-				new_future_piece <= cur_piece;
-
-				new_cur_x <= "011";
-
-				next_state <= collision_4;
 
 			when collision_4 =>
 				check_start <= '1';
 				-- Wait for check mask ready, about ?
 				if (check_ready = '1') then
-					next_state <= collision_5;
-				end if;
+					if (check_empty = '0') then
+						next_state <= game_over;
+					else
+						next_state <= first_draw_2;
+					end if;
 
-			when collision_5 =>
-				if (check_empty = '0') then
-					next_state <= game_over;
-				else
-					next_state <= first_draw_2;
 				end if;
 
 			when first_draw_2 =>
@@ -267,12 +256,11 @@ begin
 				end if;
 
 			when drop_overflow =>
-			
 				new_timer_1_reset <= '0';
 				new_timer_1_start <= '1';
-				
+
 				if (timer_1_done = '1') then
-					next_state <= space_2;
+					next_state        <= space_2;
 					new_timer_1_start <= '0';
 				else
 					next_state <= key;
@@ -300,7 +288,7 @@ begin
 			when reset_timers_b_1 =>
 				new_timer_1_start <= '1';
 				new_timer_1_time  <= '1'; -- 30, .5 second
-				
+
 
 				next_state <= drop_overflow;
 
@@ -333,7 +321,6 @@ begin
 				new_timer_1_time  <= '0';
 
 				next_state <= drop_overflow;
-
 
 			when hard_drop_1 =>
 				if (inputs(5) = '1' and cur_timer_1_time = '1') then
