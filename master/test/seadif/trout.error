@@ -1,27 +1,23 @@
 This is the file 'seadif/trout.error' which was created by
-the program 'trout' on Thu Dec 12 15:17:49 2013
+the program 'trout' on Thu Dec 12 17:02:16 2013
 Trout was verifying the netlist description of
-your circuit circuit 'vga' with the current layout in seadali.
+your circuit circuit 'check_mask' with the current layout in seadali.
 The following nets in the layout are not according to
-the netlist description of circuit 'vga'. They are also
+the netlist description of circuit 'check_mask'. They are also
 marked in the layout.
 ------------------------- list of errors -------------------------
-##### suspected short-circuit no. 1:
-  > net 'mem_addr_score_3_port' (1 terms, e.g. terminal  'mem_addr_out_7_0_3')
-  > net 'mem_addr_score_6_port' (2 terms, e.g. terminal 'di2_7_0_6')
-  > net 'mem_addr_score_5_port' (2 terms, e.g. terminal 'di2_7_0_5')
-  > net 'vss' (16 terms, e.g. terminal 'vss')
-##### suspected short-circuit no. 2:
-  > net 'mem_addr_score_4_port' (1 terms, e.g. terminal  'di2_7_0_4')
-  > net 'mem_addr_score_7_port' (2 terms, e.g. terminal 'mem_addr_out_7_0_7')
-  > net 'vdd' (16 terms, e.g. terminal 'vdd')
+WARNING: Net has no connection to the border: 'write'
+@@@@@ entirely unconnected net:  'n95' (2 terminals)
+@@@@@ partially unconnected net: 'state_0_port' (1 unconnects among 3)
+@@@@@ entirely unconnected net:  'n64' (2 terminals)
+WARNING: Net has no connection to the border: 'start'
+@@@@@ partially unconnected net: 'start' (1 unconnects among 2)
 
-WARNING: 2 short-circuit(s) were detected among the 79 nets.
-         These nets were separatedly specified in the circuit
-         but are connected in the layout.  This may occur because of
-         feed-throughs in sub-cells and it doesn't necessarily
-         imply an error.
-         In the layout each short-circuit is indicated by a marker
-         which indicates a position on the pattern: <=-SHORT_<no>
+WARNING: 4 out of the 92 nets are not properly connected.
+         In the layout each of the unconnects is marked by
+         an arrow followed by the name of the net: <=-<net_name>
+WARNING: 2 net(s) are not connected to the border.
+         In the layout these nets are indicated by a marker
+         which indicates a position on the pattern: <=-NotToBorder
 ------------------------------------------------------------------
 lock

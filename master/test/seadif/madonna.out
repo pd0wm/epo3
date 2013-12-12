@@ -1,96 +1,93 @@
 
 Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
 
-reading circuit "vga(vga(test))" ...done
+reading circuit "check_mask(check_mask(test))" ...done
 
 Kissing madonna hello...
 
 Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
 
 
------- net distribution (total #nets = 79):
+------ net distribution (total #nets = 92):
         0..1     2     3     4     5     6     7 8..10 11..20  >20
 
-           0    51     4     2     0    18     0     0     4     0
+           0    59    12     9     5     2     2     1     0     2
 
------- partitioning 15 cells into (hor x vert) = (2 x 3) partitions
+------ partitioning 76 cells into (hor x vert) = (9 x 3) partitions
 
------- requested grid points = (256, 336)
+------ requested grid points = (99, 84)
 
------- cost@start = 362, cost@end = 277, moves = 11
------- s, w, b = 141, 215, 134; perm = 6 1 4 2 5 3 
------- cost@start = 333, cost@end = 291, moves = 6
------- cost@start = 291, cost@end = 291, moves = 5
------- s, w, b = 140, 203, 123; perm = 1 2 3 4 6 5 
------- 49 nets have to be routed on a 3 x 5 global grid
-     + routing net clk (5 terminals):  weight = 800
-     + routing net rst (5 terminals):  weight = 800
-     + routing net pos_x_7_port (2 terminals):  weight = 200
-     + routing net pos_x_6_port (2 terminals):  weight = 200
-     + routing net pos_x_5_port (2 terminals):  weight = 200
-     + routing net pos_x_4_port (2 terminals):  weight = 200
-     + routing net pos_x_3_port (2 terminals):  weight = 200
-     + routing net pos_x_2_port (2 terminals):  weight = 200
-     + routing net pos_x_1_port (2 terminals):  weight = 200
-     + routing net pos_x_0_port (2 terminals):  weight = 200
-     + routing net pos_y_9_port (2 terminals):  weight = 200
-     + routing net pos_y_8_port (2 terminals):  weight = 200
-     + routing net pos_y_7_port (2 terminals):  weight = 200
-     + routing net pos_y_6_port (2 terminals):  weight = 200
-     + routing net pos_y_5_port (2 terminals):  weight = 200
-     + routing net pos_y_4_port (2 terminals):  weight = 200
-     + routing net pos_y_3_port (2 terminals):  weight = 200
-     + routing net pos_y_2_port (2 terminals):  weight = 200
-     + routing net pos_y_1_port (2 terminals):  weight = 200
-     + routing net pos_y_0_port (2 terminals):  weight = 200
-     + routing net new_line (3 terminals):  weight = 400
-     + routing net new_frame (3 terminals):  weight = 400
-     + routing net end_frame (2 terminals):  weight = 200
-     + routing net in_field (3 terminals):  weight = 402
-     + routing net in_np (2 terminals):  weight = 200
-     + routing net in_score (2 terminals):  weight = 200
-     + routing net mem_addr_reset_field_3_port (2 terminals):  weight = 200
-     + routing net mem_addr_reset_field_2_port (2 terminals):  weight = 200
-     + routing net mem_addr_reset_field_1_port (2 terminals):  weight = 200
-     + routing net mem_addr_reset_field_0_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_7_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_6_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_5_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_4_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_3_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_2_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_1_port (2 terminals):  weight = 200
-     + routing net mem_addr_field_0_port (2 terminals):  weight = 200
-     + routing net end_field_line (2 terminals):  weight = 202
-     + routing net n2 (2 terminals):  weight = 200
-     + routing net end_np_line (2 terminals):  weight = 200
-     + routing net mem_addr_score_7_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_6_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_5_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_4_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_3_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_2_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_1_port (2 terminals):  weight = 200
-     + routing net mem_addr_score_0_port (2 terminals):  weight = 200
+------ cost@start = 989, cost@end = 652, moves = 96
+------ cost@start = 652, cost@end = 588, moves = 77
+------ cost@start = 588, cost@end = 527, moves = 49
+------ cost@start = 527, cost@end = 470, moves = 45
+------ cost@start = 470, cost@end = 470, moves = 48
+------ 50 nets have to be routed on a 17 x 5 global grid
+     + routing net n58 (2 terminals):  weight = 200
+     + routing net clk (6 terminals):  weight = 910
+     + routing net pixel_0_port (2 terminals):  weight = 200
+     + routing net next_state_2_port (2 terminals):  weight = 200
+     + routing net rst (3 terminals):  weight = 400
+     + routing net state_2_port (3 terminals):  weight = 406
+     + routing net next_state_0_port (2 terminals):  weight = 206
+     + routing net state_0_port (2 terminals):  weight = 202
+     + routing net next_state_1_port (2 terminals):  weight = 204
+     + routing net state_1_port (4 terminals):  weight = 600
+     + routing net n57 (2 terminals):  weight = 200
+     + routing net pixel_1_port (4 terminals):  weight = 600
+     + routing net n48 (6 terminals):  weight = 1004
+     + routing net n46 (3 terminals):  weight = 400
+     + routing net n44 (4 terminals):  weight = 616
+     + routing net n1 (24 terminals):  weight = 4600
+     + routing net n59 (2 terminals):  weight = 202
+     + routing net n60 (2 terminals):  weight = 206
+     + routing net data_in (2 terminals):  weight = 204
+     + routing net n61 (4 terminals):  weight = 506
+     + routing net n62 (2 terminals):  weight = 204
+     + routing net n63 (2 terminals):  weight = 200
+     + routing net n64 (2 terminals):  weight = 210
+     + routing net n65 (2 terminals):  weight = 200
+     + routing net n67 (2 terminals):  weight = 200
+     + routing net n69 (2 terminals):  weight = 210
+     + routing net n70 (3 terminals):  weight = 304
+     + routing net n71 (3 terminals):  weight = 400
+     + routing net n72 (2 terminals):  weight = 200
+     + routing net start (2 terminals):  weight = 200
+     + routing net n73 (3 terminals):  weight = 400
+     + routing net n75 (2 terminals):  weight = 202
+     + routing net n76 (2 terminals):  weight = 200
+     + routing net n77 (2 terminals):  weight = 216
+     + routing net n78 (4 terminals):  weight = 616
+     + routing net n80 (2 terminals):  weight = 200
+     + routing net lut_ready (2 terminals):  weight = 200
+     + routing net n81 (2 terminals):  weight = 206
+     + routing net n82 (2 terminals):  weight = 208
+     + routing net n83 (2 terminals):  weight = 202
+     + routing net n84 (4 terminals):  weight = 600
+     + routing net n85 (3 terminals):  weight = 404
+     + routing net n87 (2 terminals):  weight = 200
+     + routing net n88 (2 terminals):  weight = 200
+     + routing net n91 (3 terminals):  weight = 404
+     + routing net n93 (3 terminals):  weight = 408
+     + routing net n94 (2 terminals):  weight = 200
+     + routing net n95 (2 terminals):  weight = 200
+     + routing net n96 (3 terminals):  weight = 402
+     + routing net n97 (3 terminals):  weight = 304
 
------- Routed 49 nets, total weight = 11604
+------ Routed 50 nets, total weight = 20366
 
 
 
------- Detailed placement of (Tmp_Cell_(vga(vga(test))))...
+------ Detailed placement of (Tmp_Cell_(check_mask(check_mask(test))))...
 ------ Reading input data
 ------ Creating temporary data structures
------- Placement plane size : [256:336]
------- Doing placement 
- Can't place cell :np_translation_reset  in window at (0,0)
-
- Apparently the magnification coefficient is too small. 
- Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [332:336]
+------ Placement plane size : [99:84]
 ------ Doing placement 
 ------ Compacting  
 
-         Magnification coefficient obtained :0.997172
+         12  column[s] deleted.
+
+         Magnification coefficient obtained :0.719898
 
 ------ Writing created layout to database
 Kissing madonna good bye...
