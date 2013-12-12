@@ -64,7 +64,7 @@ lbl3: process(state,clk, inputs, rst, count)
         rst_sig <= '0';
         new_out <= (others => '0');
         
-        if (rst = '1') then
+        if ((rst = '1') or (inputs = "000000")) then
 		new_state <= uit;
 	elsif (count = 127) then
 		new_state <= finish_count;
