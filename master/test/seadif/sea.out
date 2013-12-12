@@ -2,12 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'controller_calc' ------
------- reading nelsis circuit-cell 'controller_calc' ------
------- writing nelsis 'controller_calc' as sdfcir 'controller_calc(controller_calc(test)) ------
------- input check seems good enough: calling placer ------
-calling program: madonna -l test -f controller_calc -c controller_calc -o Tmp_Cell_ -ex controller_calc 
------- madonna successful ------
------- converting result back into nelsis as cell 'Tmpnoname6031' ------
-calling program: nelsea -rLH -f controller_calc -c controller_calc -l Tmp_Cell_ Tmpnoname6031 
+------ checking your circuit 'rom' ------
+------ circuit 'rom' is still up-to-date ------
+------ checking match with placement layout 'Tmprom9675' ------
+------ reading nelsis layout-cell 'Tmprom9675' ------
+------ writing nelsis 'Tmprom9675' as sdflay 'Tmp_Cell_(rom(rom(test)))' ------
+------ input seems good enough: calling router ------
+calling program: trout -l test -f rom -c rom -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmprom9675' ------
+calling program: nelsea -rLH -f rom -c rom -l Tmp_Cell_ Tmprom9675 
 ------ sea: task completed ------

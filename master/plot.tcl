@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/controller_move.ddc
+read_file -f ddc ./ADB/rom.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui
