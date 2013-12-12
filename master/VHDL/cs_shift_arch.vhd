@@ -21,13 +21,20 @@ architecture cs_shift_behav of cs_shift is
 
 	signal tri_en, tri_en_substr : std_logic;
 
-	type statetype is (lock, init, init_decrease, read, write, ready, check);
-	signal state, state_next : statetype;
+	signal state, state_next : std_logic_vector(2 downto 0);
 
 	component cs_adder7
 		port(i : in  std_logic_vector(6 downto 0);
 			 o : out std_logic_vector(6 downto 0));
 	end component cs_adder7;
+	
+	component cs_shift_comb
+		port(state                                                                   : in  std_logic_vector(2 downto 0);
+			 state_next                                                              : out std_logic_vector(2 downto 0);
+			 start_in, ram_data_in                                                   : in  std_logic;
+			 cnt_ram_addr                                                            : in  std_logic_vector(6 downto 0);
+			 cnt_set, cnt_en, tri_en, tri_en_substr, ram_we, ready_out, ram_data_out : out std_logic);
+	end component cs_shift_comb;
 begin
 	cnt_ram_addr_uncompressed <= '0' & cnt_ram_addr;
 	tristate_8_bit_normal : cs_tri8
@@ -53,71 +60,25 @@ begin
 			     o => ram_addr_out,
 			     e => tri_en_substr);
 
-	process(state, start_in, cnt_ram_addr)
-	begin
-		state_next <= state;
-
-		cnt_set <= '0';
-		cnt_en  <= '0';
-
-		tri_en        <= '1';
-		tri_en_substr <= '0';
-
-		ram_we <= '0';
-		ready_out <= '0';
-		ram_data_out <= '0';
-
-		case state is
-			when lock =>
-				-- High Z
-				ram_we <= 'Z';
-				ram_data_out <= 'Z';
-				tri_en <= '0';
-			
-				if (start_in = '1') then
-					state_next <= init;
-				end if;
-			when init =>
-				cnt_set    <= '1';
-				state_next <= init_decrease;
-				
-			when init_decrease =>
-				cnt_en <= '1';
-				state_next <= read;
-
-			when read =>
-				tri_en <= '0';
-				tri_en_substr <= '1';
-				state_next    <= write;
-			when write =>
-				if (cnt_ram_addr(6 downto 3) = "0000") then
-					ram_data_out <= '0';
-				else
-					ram_data_out <= ram_data_in;
-				end if;
-				
-				ram_we       <= '1';
-				cnt_en       <= '1';
-				state_next   <= check;
-				
-			when check =>			
-				if (cnt_ram_addr = "1111111") then
-					state_next <= ready;
-				else
-					state_next <= read;
-				end if;
-
-			when ready =>			
-				ready_out <= '1';
-				state_next <= lock;
-		end case;
-	end process;
+	comb : cs_shift_comb
+		port map(state         => state,
+			     state_next    => state_next,
+			     start_in      => start_in,
+			     ram_data_in   => ram_data_in,
+			     cnt_ram_addr  => cnt_ram_addr,
+			     cnt_set       => cnt_set,
+			     cnt_en        => cnt_en,
+			     tri_en        => tri_en,
+			     tri_en_substr => tri_en_substr,
+			     ram_we        => ram_we,
+			     ready_out     => ready_out,
+			     ram_data_out  => ram_data_out);
 
 	process(clk)
 	begin
 		if (clk'event and clk = '1') then
 			if (rst = '1') then
-				state <= lock;
+				state <= "000";
 			else
 				state <= state_next;
 			end if;

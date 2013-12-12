@@ -8,6 +8,8 @@ configuration cs_compare_cs_compare_behav_cfg of cs_compare is
       end for;
       for all: cs_defset2 use configuration work.cs_defset2_cs_defset2_behav_cfg;
       end for;
+      for all: cs_compare_comb use configuration work.cs_compare_comb_cs_compare_comb_behav_cfg;
+      end for;
    end for;
 end cs_compare_cs_compare_behav_cfg;
 
