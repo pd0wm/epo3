@@ -5,34 +5,23 @@ use work.vga_params.all;
 
 architecture controller_arch of controller is
 	type state_type
-	is (reset, init, clear_shift_3, clear_shift_4, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, draw_next_piece_5, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, move_left_1, soft_drop_1, soft_drop_2, soft_drop_3, move_left_2, move_left_3, move_left_4, move_left_5, move_left_6, move_left_7, move_left_8, move_left_9, move_left_10, move_left_11, move_right_1, move_right_2, move_right_3, move_right_4, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, gen_piece_2, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_3, space_4, space_5, space_6, put_back_1, put_back_3, put_back_4, move_down_1, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
+	is (reset, init, move_1, move_2, move_3, move_4, move_5, clear_shift_3, clear_shift_4, draw_next_piece_1, draw_next_piece_2, draw_next_piece_3, draw_next_piece_4, draw_next_piece_5, hard_drop_1, rotate_cw_1, rotate_cw_3, rotate_cw_4, rotate_cw_5, rotate_cw_2, rotate_ccw_1, rotate_ccw_2, rotate_ccw_3, rotate_ccw_4, rotate_ccw_5, move_left_1, move_left_2, move_left_3, move_left_4, move_left_5, soft_drop_1, soft_drop_2, soft_drop_3, move_right_1, move_right_2, move_right_3, move_right_4, move_right_5, first_draw_1, first_draw_2, first_draw_4, drop_timer_reset, gen_piece_1, collision_1, collision_3, collision_4, collision_5, draw, kernel_panic, reset_timers_a_1, reset_timers_a_2, clear_shift_1, clear_shift_2, space_1, space_2, space_4, space_5, space_6, put_back_4, move_down_3, move_down_4, reset_timers_b_1, reset_timers_b_2, drop_overflow, key, game_over);
 	signal cur_state, next_state : state_type;
 
-	signal cur_piece, new_cur_piece     : std_logic_vector(2 downto 0);
-	signal cur_x, new_cur_x             : std_logic_vector(2 downto 0);
-	signal cur_x_new, new_cur_x_new     : std_logic_vector(2 downto 0);
-	signal cur_y, new_cur_y             : std_logic_vector(3 downto 0);
-	signal cur_y_new, new_cur_y_new     : std_logic_vector(3 downto 0);
-	signal cur_rot, new_cur_rot         : std_logic_vector(1 downto 0);
-	signal cur_rot_new, new_cur_rot_new : std_logic_vector(1 downto 0);
+	signal cur_piece, new_cur_piece : std_logic_vector(2 downto 0);
+	signal cur_x, new_cur_x         : std_logic_vector(2 downto 0);
+	signal cur_y, new_cur_y         : std_logic_vector(3 downto 0);
+	signal cur_rot, new_cur_rot     : std_logic_vector(1 downto 0);
 
 	-- Output buffers
-	signal new_lut_x             : std_logic_vector(2 downto 0);
-	signal new_lut_y             : std_logic_vector(3 downto 0);
-	signal new_lut_rot           : std_logic_vector(1 downto 0);
-	signal new_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal new_timer_1_time      : std_logic;
-	signal new_timer_1_start     : std_logic;
-	signal new_timer_1_reset     : std_logic;
+	signal new_timer_1_time  : std_logic;
+	signal new_timer_1_start : std_logic;
+	signal new_timer_1_reset : std_logic;
 
-	signal cur_lut_x             : std_logic_vector(2 downto 0);
-	signal cur_lut_y             : std_logic_vector(3 downto 0);
-	signal cur_lut_rot           : std_logic_vector(1 downto 0);
-	signal cur_lut_piece_type    : std_logic_vector(2 downto 0);
-	signal cur_timer_1_time      : std_logic;
-	signal cur_timer_1_start     : std_logic;
-	signal cur_timer_1_reset     : std_logic;
-	signal inv_inputs            : std_logic_vector(5 downto 0);
+	signal cur_timer_1_time  : std_logic;
+	signal cur_timer_1_start : std_logic;
+	signal cur_timer_1_reset : std_logic;
+	signal inv_inputs        : std_logic_vector(5 downto 0);
 
 	signal cur_future_piece, new_future_piece : std_logic_vector(2 downto 0);
 
@@ -47,39 +36,31 @@ begin
 				cur_future_piece <= new_future_piece;
 
 				-- Signals
-				cur_piece   <= new_cur_piece;
-				cur_x       <= new_cur_x;
-				cur_x_new   <= new_cur_x_new;
-				cur_y       <= new_cur_y;
-				cur_y_new   <= new_cur_y_new;
-				cur_rot     <= new_cur_rot;
-				cur_rot_new <= new_cur_rot_new;
-				cur_state   <= next_state;
+				cur_piece <= new_cur_piece;
+				cur_x     <= new_cur_x;
+				cur_y     <= new_cur_y;
+				cur_rot   <= new_cur_rot;
+				cur_state <= next_state;
 
-				cur_lut_x          <= new_lut_x;
-				cur_lut_y          <= new_lut_y;
-				cur_lut_rot        <= new_lut_rot;
-				cur_lut_piece_type <= new_lut_piece_type;
-
-				cur_timer_1_time      <= new_timer_1_time;
-				cur_timer_1_start     <= new_timer_1_start;
-				cur_timer_1_reset     <= new_timer_1_reset;
-				inv_inputs            <= inputs;
+				cur_timer_1_time  <= new_timer_1_time;
+				cur_timer_1_start <= new_timer_1_start;
+				cur_timer_1_reset <= new_timer_1_reset;
+				inv_inputs        <= inputs;
 			end if;
 		end if;
 
 		-- Outputs
-		lut_x             <= new_lut_x;
-		lut_y             <= new_lut_y;
-		lut_rot           <= new_lut_rot;
-		lut_piece_type    <= new_lut_piece_type;
-		
-		timer_1_time      <= new_timer_1_time;
-		timer_1_start     <= new_timer_1_start;
-		timer_1_reset     <= new_timer_1_reset;
+
+		timer_1_time  <= new_timer_1_time;
+		timer_1_start <= new_timer_1_start;
+		timer_1_reset <= new_timer_1_reset;
+
+		lut_x          <= cur_x;
+		lut_y          <= cur_y;
+		lut_rot        <= cur_rot;
+		lut_piece_type <= cur_piece;
 
 	end process;
-
 
 	process(cur_state)
 	begin
@@ -87,23 +68,15 @@ begin
 		new_cur_x        <= cur_x;
 		new_cur_y        <= cur_y;
 		new_cur_piece    <= cur_piece;
-		new_cur_x_new    <= cur_x_new;
-		new_cur_y_new    <= cur_y_new;
 		new_cur_rot      <= cur_rot;
-		new_cur_rot_new  <= cur_rot_new;
 		new_future_piece <= cur_future_piece;
 
 		-- Keep outputs
-		new_lut_x          <= cur_lut_x;
-		new_lut_y          <= cur_lut_y;
-		new_lut_rot        <= cur_lut_rot;
-		new_lut_piece_type <= cur_lut_piece_type;
 
-		new_timer_1_time      <= cur_timer_1_time;
-		new_timer_1_start     <= cur_timer_1_start;
-		new_timer_1_reset     <= cur_timer_1_reset;
-		
-		
+		new_timer_1_time  <= cur_timer_1_time;
+		new_timer_1_start <= cur_timer_1_start;
+		new_timer_1_reset <= cur_timer_1_reset;
+
 		new_piece         <= '0';
 		check_start       <= '0';
 		draw_erase_draw   <= '0';
@@ -112,86 +85,72 @@ begin
 		clear_shift_start <= '0';
 		draw_score_draw   <= '0';
 		
-		
+		x <= '0';
+		y <= '0';
+		add_sub <= '0';
+		rot <= '0';
+
 		case cur_state is
 			when reset =>
 				-- LUT
-				new_lut_x             <= (others => '0');
-				new_lut_y             <= (others => '0');
-				new_lut_rot           <= (others => '0');
-				new_lut_piece_type    <= (others => '0');
-				new_future_piece      <= (others => '0');
+				new_future_piece  <= (others => '0');
 				-- timers
-				new_timer_1_time      <= '0';
-				new_timer_1_start     <= '0';
-				new_timer_1_reset     <= '0';
+				new_timer_1_time  <= '0';
+				new_timer_1_start <= '0';
+				new_timer_1_reset <= '0';
 
 				-- local signals
-				new_cur_piece   <= (others => '0');
-				new_cur_x       <= (others => '0');
-				new_cur_y       <= (others => '0');
-				new_cur_rot     <= (others => '0');
-				new_cur_x_new   <= (others => '0');
-				new_cur_y_new   <= (others => '0');
-				new_cur_rot_new <= (others => '0');
+				new_cur_piece <= (others => '0');
+				new_cur_x     <= (others => '0');
+				new_cur_y     <= (others => '0');
+				new_cur_rot   <= (others => '0');
 
 				next_state <= init;
 
 			when init =>
 				new_timer_1_time <= '1'; -- 30, .5 second
 				new_future_piece <= next_piece;
-				new_piece    <= '1';
+				new_piece        <= '1';
 
 				next_state <= gen_piece_1;
 
 			when gen_piece_1 =>
-				new_cur_piece    <= cur_future_piece;
-				new_future_piece <= next_piece;
-				new_piece    <= '1';
-
-				new_cur_x <= "011";
-				new_cur_y <= "0000";
-
-				next_state <= gen_piece_2;
-
-			when gen_piece_2 =>
-				next_state    <= draw_next_piece_1;
+				new_cur_piece <= cur_future_piece;
 				
+
+				next_state <= draw_next_piece_1;
+
 			when draw_next_piece_1 =>
-				new_lut_rot        <= (others => '0');
-				new_lut_x          <= (others => '0');
-				new_lut_y          <= (others => '0');
-				
-				new_lut_piece_type <= cur_piece;
-				
-				lut_next_piece <= '1';				
+				new_cur_rot <= (others => '0');
+				new_cur_x   <= (others => '0');
+				new_cur_y   <= (others => '0');
+
+				lut_next_piece   <= '1';
 				draw_erase_draw  <= '0';
-				draw_erase_start  <= '1';
-				
+				draw_erase_start <= '1';
+
 				next_state <= draw_next_piece_2;
 
 			when draw_next_piece_2 =>
-				lut_next_piece <= '1';
+				lut_next_piece   <= '1';
 				draw_erase_draw  <= '0';
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
-					next_state           <= draw_next_piece_3;
+					next_state <= draw_next_piece_3;
 				else
-					next_state           <= draw_next_piece_2;
+					next_state <= draw_next_piece_2;
 				end if;
 				
 			when draw_next_piece_3 =>
-				next_state <= draw_next_piece_4;		
+				lut_next_piece   <= '1';
+				new_piece     <= '1';
+				new_cur_piece <= next_piece;
 				
+				next_state <= draw_next_piece_4;
 
 			when draw_next_piece_4 =>
-				new_lut_rot        <= (others => '0');
-				new_lut_x          <= (others => '0');
-				new_lut_y          <= (others => '0');
-				new_lut_piece_type <= cur_future_piece;
-				
-				lut_next_piece <= '1';
+				lut_next_piece   <= '1';
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
 
@@ -200,20 +159,19 @@ begin
 			when draw_next_piece_5 =>
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
-				lut_next_piece <= '1';
-				
+				lut_next_piece   <= '1';
+
 				if (draw_erase_ready = '1') then
-					next_state           <= collision_1;
+					next_state <= collision_1;
 				else
-					next_state           <= draw_next_piece_5;
+					next_state <= draw_next_piece_5;
 				end if;
 
 			when collision_1 =>
-				-- Generate mask for cur_piece
-				new_lut_rot        <= cur_rot;
-				new_lut_x          <= cur_x;
-				new_lut_y          <= cur_y;
-				new_lut_piece_type <= cur_piece;
+				new_cur_piece    <= cur_future_piece;
+				new_future_piece <= cur_piece;
+
+				new_cur_x <= "011";
 
 				next_state <= collision_3;
 
@@ -250,22 +208,21 @@ begin
 			when first_draw_2 =>
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
 					next_state <= first_draw_4;
 				else
 					next_state <= first_draw_2;
 				end if;
 
-
 			when first_draw_4 =>
 				draw_erase_draw  <= '1';
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
-					next_state           <= draw;
+					next_state <= draw;
 				else
-					next_state           <= first_draw_4;
+					next_state <= first_draw_4;
 				end if;
 
 				next_state <= draw;
@@ -297,21 +254,21 @@ begin
 
 			when clear_shift_2 =>
 				clear_shift_start <= '1';
-				
+
 				if (clear_shift_ready = '1') then
 					next_state <= clear_shift_3;
 				else
 					next_state <= clear_shift_2;
 				end if;
-				
+
 			when clear_shift_3 =>
 				draw_score_draw <= '1';
-				
+
 				next_state <= clear_shift_4;
-				
+
 			when clear_shift_4 =>
 				draw_score_draw <= '1';
-				
+
 				if (draw_score_ready = '1') then
 					next_state <= gen_piece_1;
 				else
@@ -335,22 +292,14 @@ begin
 			when space_2 =>
 				draw_erase_start <= '1';
 				if (draw_erase_ready = '1') then
-					next_state <= space_3;
+					next_state <= space_4;
 				else
 					next_state <= space_2;
 				end if;
 
-			when space_3 =>
-				draw_erase_start <= '0';
-				new_cur_y_new        <= std_logic_vector(unsigned(cur_y) + 1);
-
-				next_state <= space_4;
-
 			when space_4 =>
-				new_lut_rot        <= new_cur_rot;
-				new_lut_x          <= new_cur_x;
-				new_lut_y          <= new_cur_y_new;
-				new_lut_piece_type <= new_cur_piece;
+				add_sub <= '1';
+				y       <= '1';
 
 				check_start <= '1';
 
@@ -358,6 +307,9 @@ begin
 
 			when space_5 =>
 				check_start <= '1';
+				add_sub     <= '1';
+				y           <= '1';
+
 				if (check_ready = '1') then
 					next_state <= space_6;
 				else
@@ -365,41 +317,26 @@ begin
 				end if;
 
 			when space_6 =>
+				add_sub <= '1';
+				y       <= '1';
+
 				if (check_empty = '1') then
-					new_cur_y  <= cur_y_new;
-					next_state <= move_down_1;
+					new_cur_y  <= calc_y;
+					next_state <= move_down_4;
 				else
 					new_cur_y  <= cur_y;
-					next_state <= put_back_1;
+					next_state <= put_back_4;
 				end if;
-
-			when put_back_1 =>
-				new_lut_rot        <= new_cur_rot;
-				new_lut_x          <= new_cur_x;
-				new_lut_y          <= new_cur_y;
-				new_lut_piece_type <= new_cur_piece;
-
-				next_state <= put_back_3;
-
-			when put_back_3 =>
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-
-				next_state <= put_back_4;
 
 			when put_back_4 =>
 				draw_erase_draw  <= '1'; --draw
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
-					draw_erase_start <= '0';
 					next_state <= reset_timers_a_1;
 				else
 					next_state <= put_back_4;
 				end if;
-
-			when move_down_1 =>
-				next_state <= move_down_3;
 
 			when move_down_3 =>
 				draw_erase_draw  <= '1'; --draw
@@ -410,7 +347,7 @@ begin
 			when move_down_4 =>
 				draw_erase_draw  <= '1'; --draw
 				draw_erase_start <= '1';
-				
+
 				if (draw_erase_ready = '1') then
 					next_state <= reset_timers_b_1;
 				else
@@ -418,9 +355,9 @@ begin
 				end if;
 
 			when reset_timers_b_1 =>
-				draw_erase_start <= '0';
-				new_timer_1_start    <= '0';
-				new_timer_1_time     <= '1'; -- 30, .5 second
+				draw_erase_start  <= '0';
+				new_timer_1_start <= '0';
+				new_timer_1_time  <= '1'; -- 30, .5 second
 
 
 				next_state <= reset_timers_b_2;
@@ -434,13 +371,54 @@ begin
 				if (inv_inputs = "000000") then
 					next_state <= drop_timer_reset;
 				else
-					next_state <= move_left_1;
+					next_state <= move_1;
 				end if;
 
 			when drop_timer_reset =>
 				new_timer_1_time <= '1'; -- 30, .5 second
 
 				next_state <= draw;
+			when move_1 =>
+				if ((inv_inputs and "001111") = "000000") then
+					next_state <= soft_drop_1;
+				else
+					next_state <= move_2;
+				end if;
+
+			when move_2 =>
+				-- first erase current piece
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+
+				next_state <= move_3;
+
+			when move_3 =>
+				draw_erase_draw  <= '0'; -- erase
+				draw_erase_start <= '1'; --start
+
+				-- wait for erase ready 
+				if (draw_erase_ready = '1') then
+					next_state <= move_left_1;
+				else
+					next_state <= move_3;
+				end if;
+
+			when move_4 =>
+				draw_erase_draw  <= '1'; -- draw
+				draw_erase_start <= '1'; --start
+
+				next_state <= move_5;
+
+			when move_5 =>
+				draw_erase_draw  <= '1'; -- draw
+				draw_erase_start <= '1'; --start
+
+				-- wait for draw ready 
+				if (draw_erase_ready = '1' and (inv_inputs = "000000" or inv_inputs = "010000")) then
+					next_state <= draw;
+				else
+					next_state <= move_5;
+				end if;
 
 			when move_left_1 =>
 				if (inv_inputs(0) = '1') then
@@ -450,101 +428,36 @@ begin
 				end if;
 
 			when move_left_2 =>
-				-- first erase current piece
-
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-
+				x           <= '1';
+				check_start <= '1';
 
 				next_state <= move_left_3;
 
 			when move_left_3 =>
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-				
-				
-				-- wait for erasse ready 
-				if (draw_erase_ready = '1') then
+				x           <= '1';
+				check_start <= '1';
+
+				-- Wait for check
+				if (check_ready = '1') then
 					next_state <= move_left_4;
 				else
 					next_state <= move_left_3;
 				end if;
 
 			when move_left_4 =>
-				
-				-- calculate new position				
-				new_cur_x_new        <= std_logic_vector(unsigned(cur_x) - 1);
-				new_cur_y_new        <= cur_y;
-				new_cur_rot_new      <= cur_rot;
+				x <= '1';
 
-				next_state <= move_left_5;
+				if (check_empty = '1') then
+					next_state <= move_left_5;
+				else
+					next_state <= move_4;
+				end if;
 
 			when move_left_5 =>
-				-- create mask for new position
+				x     <= '1';
+				new_cur_x <= calc_x;
 
-				-- Generate mask for cur_piece
-				new_lut_rot        <= new_cur_rot_new;
-				new_lut_x          <= new_cur_x_new;
-				new_lut_y          <= new_cur_y_new;
-				new_lut_piece_type <= new_cur_piece;
-
-				check_start <= '1';
-
-				next_state <= move_left_6;
-
-			when move_left_6 =>
-				check_start <= '1';
-				-- Wait for check
-				if (check_ready = '1') then
-					next_state <= move_left_7;
-				else
-					next_state <= move_left_6;
-				end if;
-
-			when move_left_7 =>
-				if (check_empty = '1') then
-					next_state <= move_left_8;
-				else
-					next_state <= move_left_9;
-				end if;
-
-			when move_left_8 =>
-				-- Save new coordinates
-				new_cur_x   <= new_cur_x_new;
-				new_cur_y   <= new_cur_y_new;
-				new_cur_rot <= new_cur_rot_new;
-
-				next_state <= move_left_9;
-
-			when move_left_9 =>
-				-- Generate mask for cur_piece
-				new_lut_rot        <= new_cur_rot;
-				new_lut_x          <= new_cur_x;
-				new_lut_y          <= new_cur_y;
-				new_lut_piece_type <= new_cur_piece;
-
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-
-				next_state <= move_left_10;
-
-			when move_left_10 =>
-				draw_erase_draw  <= '1'; --draw
-				draw_erase_start <= '1';
-				
-				if (draw_erase_ready = '1') then
-					next_state <= move_left_11;
-				else
-					next_state <= move_left_10;
-				end if;
-
-			when move_left_11 =>
-
-				if (inv_inputs = "000000" or inv_inputs = "010000") then
-					next_state <= draw;
-				else
-					next_state <= move_left_11;
-				end if;
+				next_state <= move_4;
 
 			when move_right_1 =>
 				if (inv_inputs(1) = '1') then
@@ -554,31 +467,41 @@ begin
 				end if;
 
 			when move_right_2 =>
-				-- first erase current piece
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-
+				x           <= '1';
+				add_sub     <= '1';
+				check_start <= '1';
 
 				next_state <= move_right_3;
 
-			when move_right_3 =>			
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-				
-				-- wait for erasse ready 
-				if (draw_erase_ready = '1') then
+			when move_right_3 =>
+				x           <= '1';
+				add_sub     <= '1';
+				check_start <= '1';
+
+				-- Wait for check
+				if (check_ready = '1') then
 					next_state <= move_right_4;
 				else
 					next_state <= move_right_3;
 				end if;
 
 			when move_right_4 =>
-				-- calculate new position				
-				new_cur_x_new        <= std_logic_vector(unsigned(cur_x) + 1);
-				new_cur_y_new        <= cur_y;
-				new_cur_rot_new      <= cur_rot;
+				x       <= '1';
+				add_sub <= '1';
 
-				next_state <= move_left_5;
+				if (check_empty = '1') then
+					next_state <= move_right_5;
+				else
+					next_state <= move_4;
+				end if;
+
+			when move_right_5 =>
+				x       <= '1';
+				add_sub <= '1';
+
+				new_cur_x <= calc_x;
+
+				next_state <= move_4;
 
 			when rotate_cw_1 =>
 				if (inv_inputs(2) = '1') then
@@ -588,33 +511,41 @@ begin
 				end if;
 
 			when rotate_cw_2 =>
-				-- first erase current piece
-
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-
+				rot         <= '1';
+				add_sub     <= '1';
+				check_start <= '1';
 
 				next_state <= rotate_cw_3;
 
 			when rotate_cw_3 =>
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-				
-				
-				-- wait for erasse ready 
-				if (draw_erase_ready = '1') then
+				rot         <= '1';
+				add_sub     <= '1';
+				check_start <= '1';
+
+				-- Wait for check
+				if (check_ready = '1') then
 					next_state <= rotate_cw_4;
 				else
 					next_state <= rotate_cw_3;
 				end if;
 
 			when rotate_cw_4 =>
-				-- calculate new position				
-				new_cur_x_new        <= cur_x;
-				new_cur_y_new        <= cur_y;
-				new_cur_rot_new      <= std_logic_vector(unsigned(cur_rot) + 1);
+				rot     <= '1';
+				add_sub <= '1';
 
-				next_state <= move_left_5;
+				if (check_empty = '1') then
+					next_state <= rotate_cw_5;
+				else
+					next_state <= move_4;
+				end if;
+
+			when rotate_cw_5 =>
+				rot     <= '1';
+				add_sub <= '1';
+
+				new_cur_rot <= calc_rot;
+
+				next_state <= move_4;
 
 			when rotate_ccw_1 =>
 				if (inv_inputs(3) = '1') then
@@ -624,35 +555,43 @@ begin
 				end if;
 
 			when rotate_ccw_2 =>
-				-- first erase current piece
-
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-
+				rot         <= '1';
+				check_start <= '1';
+				
+				check_start <= '1';
 
 				next_state <= rotate_ccw_3;
-
+				
 			when rotate_ccw_3 =>
-				draw_erase_draw  <= '0'; -- erase
-				draw_erase_start <= '1'; --start
-				
-				
-				-- wait for erase ready 
-				if (draw_erase_ready = '1') then
+				rot         <= '1';
+				check_start <= '1';
+
+				-- Wait for check
+				if (check_ready = '1') then
 					next_state <= rotate_ccw_4;
 				else
 					next_state <= rotate_ccw_3;
 				end if;
-
+				
 			when rotate_ccw_4 =>
-				-- calculate new position				
-				new_cur_x_new        <= cur_x;
-				new_cur_y_new        <= cur_y;
-				new_cur_rot_new      <= std_logic_vector(unsigned(cur_rot) - 1);
+				rot     <= '1';
 
-				next_state <= move_left_5;
+				if (check_empty = '1') then
+					next_state <= rotate_ccw_5;
+				else
+					next_state <= move_4;
+				end if;			
+				
+			when rotate_ccw_5 =>
+				rot     <= '1';
+				add_sub <= '1';
 
-			when soft_drop_1 =>
+				new_cur_rot <= calc_rot;
+
+				next_state <= move_4;				
+			
+			
+			when soft_drop_1  =>
 				if (inv_inputs(4) = '1' and cur_timer_1_time = '1') then
 					next_state <= soft_drop_2;
 				else

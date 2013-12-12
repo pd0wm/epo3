@@ -2,46 +2,54 @@ library ieee;
 use ieee.std_logic_1164.all;
 entity controller is
 	port(
-		clk               : in  std_logic;
-		rst               : in  std_logic;
+		clk                : in  std_logic;
+		rst                : in  std_logic;
 
 		-- piece lut
-		lut_x             : out std_logic_vector(2 downto 0);
-		lut_y             : out std_logic_vector(3 downto 0);
-		lut_rot           : out std_logic_vector(1 downto 0);
-		lut_piece_type    : out std_logic_vector(2 downto 0);
-		lut_next_piece    : out std_logic;
+		lut_piece_type     : out std_logic_vector(2 downto 0);
+		lut_next_piece     : out std_logic;
+
+		-- calc
+		lut_x              : out std_logic_vector(2 downto 0);
+		lut_y              : out std_logic_vector(3 downto 0);
+		lut_rot            : out std_logic_vector(1 downto 0);
+
+		calc_x             : in  std_logic_vector(2 downto 0);
+		calc_y             : in  std_logic_vector(3 downto 0);
+		calc_rot           : in  std_logic_vector(1 downto 0);
+
+		add_sub, x, y, rot : out std_logic;
 
 		--next piece
-		new_piece         : out std_logic;
-		next_piece        : in  std_logic_vector(2 downto 0);
+		new_piece          : out std_logic;
+		next_piece         : in  std_logic_vector(2 downto 0);
 
 		--check mask
-		check_empty       : in  std_logic;
-		check_start       : out std_logic;
-		check_ready       : in  std_logic;
+		check_empty        : in  std_logic;
+		check_start        : out std_logic;
+		check_ready        : in  std_logic;
 
 		--draw erase piece
-		draw_erase_draw   : out std_logic;
-		draw_erase_start  : out std_logic;
-		draw_erase_ready  : in  std_logic;
+		draw_erase_draw    : out std_logic;
+		draw_erase_start   : out std_logic;
+		draw_erase_ready   : in  std_logic;
 
 		--clear shift
-		clear_shift_start : out std_logic;
-		clear_shift_ready : in  std_logic;
+		clear_shift_start  : out std_logic;
+		clear_shift_ready  : in  std_logic;
 
 		--draw score
-		draw_score_draw   : out std_logic;
-		draw_score_ready  : in  std_logic;
+		draw_score_draw    : out std_logic;
+		draw_score_ready   : in  std_logic;
 
 		--timers
-		timer_1_time      : out std_logic;
-		timer_1_start     : out std_logic;
-		timer_1_done      : in  std_logic;
-		timer_1_reset     : out std_logic;
+		timer_1_time       : out std_logic;
+		timer_1_start      : out std_logic;
+		timer_1_done       : in  std_logic;
+		timer_1_reset      : out std_logic;
 
 		--inputs
-		inputs            : in  std_logic_vector(5 downto 0)
+		inputs             : in  std_logic_vector(5 downto 0)
 	);
 end controller;
 

@@ -18,24 +18,16 @@ architecture synthesised of controller is
       port( A, B : in std_logic;  Y : out std_logic);
    end component;
    
-   component no310
+   component na310
       port( A, B, C : in std_logic;  Y : out std_logic);
    end component;
    
-   component na310
+   component no310
       port( A, B, C : in std_logic;  Y : out std_logic);
    end component;
    
    component mu111
       port( A, B, S : in std_logic;  Y : out std_logic);
-   end component;
-   
-   component ex210
-      port( A, B : in std_logic;  Y : out std_logic);
-   end component;
-   
-   component buf40
-      port( A : in std_logic;  Y : out std_logic);
    end component;
    
    component dfn10
@@ -46,1319 +38,811 @@ architecture synthesised of controller is
       port( D, R, CK : in std_logic;  Q : out std_logic);
    end component;
    
-   signal lut_next_piece_port, cur_state_6_port, cur_state_5_port, 
+   signal lut_piece_type_2_port, lut_piece_type_1_port, lut_piece_type_0_port, 
+      lut_x_2_port, lut_x_1_port, lut_x_0_port, lut_y_3_port, lut_y_2_port, 
+      lut_y_1_port, lut_y_0_port, lut_rot_1_port, lut_rot_0_port, x_port, 
+      y_port, draw_erase_draw_port, cur_state_6_port, cur_state_5_port, 
       cur_state_4_port, cur_state_3_port, cur_state_2_port, cur_state_1_port, 
       cur_state_0_port, cur_future_piece_2_port, cur_future_piece_1_port, 
-      cur_future_piece_0_port, cur_piece_2_port, cur_piece_1_port, 
-      cur_piece_0_port, cur_x_2_port, cur_x_1_port, cur_x_0_port, 
-      cur_x_new_2_port, cur_x_new_1_port, cur_x_new_0_port, cur_y_3_port, 
-      cur_y_2_port, cur_y_1_port, cur_y_0_port, cur_y_new_3_port, 
-      cur_y_new_2_port, cur_y_new_1_port, cur_y_new_0_port, cur_rot_1_port, 
-      cur_rot_0_port, cur_rot_new_1_port, cur_rot_new_0_port, cur_lut_x_2_port,
-      cur_lut_x_1_port, cur_lut_x_0_port, cur_lut_y_3_port, cur_lut_y_2_port, 
-      cur_lut_y_1_port, cur_lut_y_0_port, cur_lut_rot_1_port, 
-      cur_lut_rot_0_port, cur_lut_piece_type_2_port, cur_lut_piece_type_1_port,
-      cur_lut_piece_type_0_port, cur_new_piece, cur_check_start, 
-      cur_draw_erase_draw, cur_draw_erase_start, cur_clear_shift_start, 
-      cur_draw_score_draw, cur_timer_1_time_7_port, cur_timer_1_time_6_port, 
-      cur_timer_1_time_5_port, cur_timer_1_time_4_port, cur_timer_1_time_3_port
-      , cur_timer_1_time_2_port, cur_timer_1_time_1_port, 
-      cur_timer_1_time_0_port, cur_timer_1_start, cur_timer_1_reset, 
-      inv_inputs_7_port, inv_inputs_6_port, inv_inputs_5_port, 
-      inv_inputs_4_port, inv_inputs_3_port, inv_inputs_2_port, 
-      inv_inputs_1_port, inv_inputs_0_port, n159, n166, n492, n509, n516, n527,
-      n576, n1816, n1817, n1818, n1819, n1820, n1821, n1822, n1823, n1824, 
-      n1825, n1826, n1827, n1828, n1829, n1830, n1831, n1832, n1833, n1834, 
-      n1835, n1836, n1837, n1838, n1839, n1840, n1841, n1842, n1843, n1844, 
-      n1845, n1846, n1847, n1848, n1849, n1850, n1851, n1852, n1853, n1854, 
-      n1855, n1856, n1857, n1858, n1859, n1860, n1861, n1862, n1863, n1864, 
-      n1865, n1866, n1867, n1868, n1869, n1870, n1871, n1872, n1876, n1877, 
-      n1878, n1879, n1880, n1881, n1882, n1883, n1884, n1885, n1886, n1887, 
-      n1888, n1889, n1890, n1891, n1892, n1893, n1894, n1895, n1896, n1897, 
-      n1898, n1899, n1900, n1901, n1902, n1903, n1904, n1905, n1906, n1907, 
-      n1908, n1909, n1910, n1911, n1912, n1913, n1914, n1915, n1916, n1917, 
-      n1918, n1919, n1920, n1921, n1922, n1923, n1924, n1925, n1926, n1927, 
-      n1928, n1929, n1930, n1931, n1932, n1933, n1934, n1935, n1936, n1937, 
-      n1938, n1939, n1940, n1941, n1942, n1943, n1944, n1945, n1946, n1947, 
-      n1948, n1949, n1950, n1951, n1952, n1953, n1954, n1955, n1956, n1957, 
-      n1958, n1959, n1960, n1961, n1962, n1963, n1964, n1965, n1966, n1967, 
-      n1968, n1969, n1970, n1971, n1972, n1973, n1974, n1975, n1976, n1977, 
-      n1978, n1979, n1980, n1981, n1982, n1983, n1984, n1985, n1986, n1987, 
-      n1988, n1989, n1990, n1991, n1992, n1993, n1994, n1995, n1996, n1997, 
-      n1998, n1999, n2000, n2001, n2002, n2003, n2004, n2005, n2006, n2007, 
-      n2008, n2009, n2010, n2011, n2012, n2013, n2014, n2015, n2016, n2017, 
-      n2018, n2019, n2020, n2021, n2022, n2023, n2024, n2025, n2026, n2027, 
-      n2028, n2029, n2030, n2031, n2032, n2033, n2034, n2035, n2036, n2037, 
-      n2038, n2039, n2040, n2041, n2042, n2043, n2044, n2045, n2046, n2047, 
-      n2048, n2049, n2050, n2051, n2052, n2053, n2054, n2055, n2056, n2057, 
-      n2058, n2059, n2060, n2061, n2062, n2063, n2064, n2065, n2066, n2067, 
-      n2068, n2069, n2070, n2071, n2072, n2073, n2074, n2075, n2076, n2077, 
-      n2078, n2079, n2080, n2081, n2082, n2083, n2084, n2085, n2086, n2087, 
-      n2088, n2089, n2090, n2091, n2092, n2093, n2094, n2095, n2096, n2097, 
-      n2098, n2099, n2100, n2101, n2102, n2103, n2104, n2105, n2106, n2107, 
-      n2108, n2109, n2110, n2111, n2112, n2113, n2114, n2115, n2116, n2117, 
-      n2118, n2119, n2120, n2121, n2122, n2123, n2124, n2125, n2126, n2127, 
-      n2128, n2129, n2130, n2131, n2132, n2133, n2134, n2135, n2136, n2137, 
-      n2138, n2139, n2140, n2141, n2142, n2143, n2144, n2145, n2146, n2147, 
-      n2148, n2149, n2150, n2151, n2152, n2153, n2154, n2155, n2156, n2157, 
-      n2158, n2159, n2160, n2161, n2162, n2163, n2164, n2165, n2166, n2167, 
-      n2168, n2169, n2170, n2171, n2172, n2173, n2174, n2175, n2176, n2177, 
-      n2178, n2179, n2180, n2181, n2182, n2183, n2184, n2185, n2186, n2187, 
-      n2188, n2189, n2190, n2191, n2192, n2193, n2194, n2195, n2196, n2197, 
-      n2198, n2199, n2200, n2201, n2202, n2203, n2204, n2205, n2206, n2207, 
-      n2208, n2209, n2210, n2211, n2212, n2213, n2214, n2215, n2216, n2217, 
-      n2218, n2219, n2220, n2221, n2222, n2223, n2224, n2225, n2226, n2227, 
-      n2228, n2229, n2230, n2231, n2232, n2233, n2234, n2235, n2236, n2237, 
-      n2238, n2239, n2240, n2241, n2242, n2243, n2244, n2245, n2246, n2247, 
-      n2248, n2249, n2250, n2251, n2252, n2253, n2254, n2255, n2256, n2257, 
-      n2258, n2259, n2260, n2261, n2262, n2263, n2264, n2265, n2266, n2267, 
-      n2268, n2269, n2270, n2271, n2272, n2273, n2274, n2275, n2276, n2277, 
-      n2278, n2279, n2280, n2281, n2282, n2283, n2284, n2285, n2286, n2287, 
-      n2288, n2289, n2290, n2291, n2292, n2293, n2294, n2295, n2296, n2297, 
-      n2298, n2299, n2300, n2301, n2302, n2303, n2304, n2305, n2306, n2307, 
-      n2308, n2309, n2310, n2311, n2312, n2313, n2314, n2315, n2316, n2317, 
-      n2318, n2319, n2320, n2321, n2322, n2323, n2324, n2325, n2326, n2327, 
-      n2328, n2329, n2330, n2331, n2332, n2333, n2334, n2335, n2336, n2337, 
-      n2338, n2339, n2340, n2341, n2342, n2343, n2344, n2345, n2346, n2347, 
-      n2348, n2349, n2350, n2351, n2352, n2353, n2354, n2355, n2356, n2357, 
-      n2358, n2359, n2360, n2361, n2362, n2363, n2364, n2365, n2366, n2367, 
-      n2368, n2369, n2370, n2371, n2372, n2373, n2374, n2375, n2376, n2377, 
-      n2378, n2379, n2380, n2381, n2382, n2383, n2384, n2385, n2386, n2387, 
-      n2388, n2389, n2390, n2391, n2392, n2393, n2394, n2395, n2396, n2397, 
-      n2398, n2399, n2400, n2401, n2402, n2403, n2404, n2405, n2406, n2407, 
-      n2408, n2409, n2410, n2411, n2412, n2413, n2414, n2415, n2416, n2417, 
-      n2418, n2419, n2420, n2421, n2422, n2423, n2424, n2425, n2426, n2427, 
-      n2428, n2429, n2430, n2431, n2432, n2433, n2434, n2435, n2436, n2437, 
-      n2438, n2439, n2440, n2441, n2442, n2443, n2444, n2445, n2446, n2447, 
-      n2448, n2449, n2450, n2451, n2452, n2453, n2454, n2455, n2456, n2457, 
-      n2458, n2459, n2460, n2461, n2462, n2463, n2464, n2465, n2466, n2467, 
-      n2468, n2469, n2470, n2471, n2472, n2473, n2474, n2475, n2476, n2477, 
-      n2478, n2479, n2480, n2481, n2482, n2483, n2484, n2485, n2486, n2487, 
-      n2488, n2489, n2490, n2491, n2492, n2493, n2494, n2495, n2496, n2497, 
-      n2498, n2499, n2500, n2501, n2502, n2503, n2504, n2505, n2506, n2507, 
-      n2508, n2509, n2510, n2511, n2512, n2513, n2514, n2515, n2516, n2517, 
-      n2518, n2519, n2520, n2521, n2522, n2523, n2524, n2525, n2526, n2527, 
-      n2528, n2529, n2530, n2531, n2532, n2533, n2534, n2535, n2536, n2537, 
-      n2538, n2539, n2540, n2541, n2542, n2543, n2544, n2545, n2546, n2547, 
-      n2548, n2549, n2550, n2551, n2552, n2553, n2554, n2555, n2556, n2557, 
-      n2558, n2559, n2560, n2561, n2562, n2563, n2564, n2565, n2566, n2567, 
-      n2568, n2569, n2570, n2571, n2572, n2573, n2574, n2575, n2576, n2577, 
-      n2578, n2579, n2580, n2581, n2582, n2583, n2584, n2585, n2586, n2587, 
-      n2588, n2589, n2590, n2591, n2592, n2593, n2594, n2595, n2596, n2597, 
-      n2598, n2599, n2600, n2601, n2602, n2603, n2604, n2605, n2606, n2607, 
-      n2608, n2609, n2610, n2611, n2612, n2613, n2614, n2615, n2616, n2617, 
-      n2618, n2619, n2620, n2621, n2622, n2623, n2624, n2625, n2626, n2627, 
-      n2628, n2629, n2630, n2631, n2632, n2633, n2634, n2635, n2636, n2637, 
-      n2638, n2639, n2640, n2641, n2642, n2643, n2644, n2645, n2646, n2647, 
-      n2648, n2649, n2650, n2651, n2652, n2653, n2654, n2655, n2656, n2657, 
-      n2658, n2659, n2660, n2661, n2662, n2663, n2664, n2665, n2666, n2667, 
-      n2668, n2669, n2670, n2671, n2672, n2673, n2674, n2675, n2676, n2677, 
-      n2678, n2679, n2680, n2681, n2682, n2683, n2684, n2685, n2686, n2687, 
-      n2688, n2689, n2690, n2691, n2692, n2693, n2694, n2695, n2696, n2697, 
-      n2698, n2699, n2700, n2701, n2702, n2703, n2704, n2705, n2706, n2707, 
-      n2708, n2709, n2710, n2711, n2712, n2713, n2714, n2715, n2716, n2717, 
-      n2718, n2719, n2720, n2721, n2722, n2723, n2724, n2725, n2726, n2727, 
-      n2728, n2729, n2730, n2731, n2732, n2733, n2734, n2735, n2736, n2737, 
-      n2738, n2739, n2740, n2741, n2742, n2743, n2744, n2745, n2746, n2747, 
-      n2748, n2749, n2750, n2751, n2752, n2753 : std_logic;
+      cur_future_piece_0_port, cur_timer_1_time, cur_timer_1_start, 
+      cur_timer_1_reset, inv_inputs_5_port, inv_inputs_4_port, 
+      inv_inputs_3_port, inv_inputs_2_port, inv_inputs_1_port, 
+      inv_inputs_0_port, n37, n46, n51, n59, n87, n94, n129, n954, n955, n956, 
+      n957, n958, n959, n960, n961, n962, new_piece_port, n965, n966, n967, 
+      n968, n969, n970, n971, n972, n973, n974, n975, n976, n977, n978, n979, 
+      n980, n981, n982, n983, n984, n985, n986, n987, n988, n989, n990, n991, 
+      n992, n993, n994, n995, n996, n997, n998, n999, n1000, n1001, n1002, 
+      n1003, n1004, n1005, n1006, n1007, n1008, n1009, n1010, n1011, n1012, 
+      n1013, n1014, n1015, n1016, n1017, n1018, n1019, n1020, n1021, n1022, 
+      n1023, n1024, n1025, n1026, n1027, n1028, n1029, n1030, n1031, n1032, 
+      n1033, n1034, n1035, n1036, n1037, n1038, n1039, n1040, n1041, n1042, 
+      n1043, n1044, n1045, n1046, n1047, n1048, n1049, n1050, n1051, n1052, 
+      n1053, n1054, n1055, n1056, n1057, n1058, n1059, n1060, n1061, n1062, 
+      n1063, n1064, n1065, n1066, n1067, n1068, n1069, n1070, n1071, n1072, 
+      n1073, n1074, n1075, n1076, n1077, n1078, n1079, n1080, n1081, n1082, 
+      n1083, n1084, n1085, n1086, n1087, n1088, n1089, n1090, n1091, n1092, 
+      n1093, n1094, n1095, n1096, n1097, n1098, n1099, n1100, n1101, n1102, 
+      n1103, n1104, n1105, n1106, n1107, n1108, n1109, n1110, n1111, n1112, 
+      n1113, n1114, n1115, n1116, n1117, n1118, n1119, n1120, n1121, n1122, 
+      n1123, n1124, n1125, n1126, n1127, n1128, n1129, n1130, n1131, n1132, 
+      n1133, n1134, n1135, n1136, n1137, n1138, n1139, n1140, n1141, n1142, 
+      n1143, n1144, n1145, n1146, n1147, n1148, n1149, n1150, n1151, n1152, 
+      n1153, n1154, n1155, n1156, n1157, n1158, n1159, n1160, n1161, n1162, 
+      n1163, n1164, n1165, n1166, n1167, n1168, n1169, n1170, n1171, n1172, 
+      n1173, n1174, n1175, n1176, n1177, n1178, n1179, n1180, n1181, n1182, 
+      n1183, n1184, n1185, n1186, n1187, n1188, n1189, n1190, n1191, n1192, 
+      n1193, n1194, n1195, n1196, n1197, n1198, n1199, n1200, n1201, n1202, 
+      n1203, n1204, n1205, n1206, n1207, n1208, n1209, n1210, n1211, n1212, 
+      n1213, n1214, n1215, n1216, n1217, n1218, n1219, n1220, n1221, n1222, 
+      n1223, n1224, n1225, n1226, n1227, n1228, n1229, n1230, n1231, n1232, 
+      n1233, n1234, n1235, n1236, n1237, n1238, n1239, n1240, n1241, n1242, 
+      n1243, n1244, n1245, n1246, n1247, n1248, n1249, n1250, n1251, n1252, 
+      n1253, n1254, n1255, n1256, n1257, n1258, n1259, n1260, n1261, n1262, 
+      n1263, n1264, n1265, n1266, n1267, n1268, n1269, n1270, n1271, n1272, 
+      n1273, n1274, n1275, n1276, n1277, n1278, n1279, n1280, n1281, n1282, 
+      n1283, n1284, n1285, n1286, n1287, n1288, n1289, n1290, n1291, n1292, 
+      n1293, n1294, n1295, n1296, n1297, n1298, n1299, n1300, n1301, n1302, 
+      n1303, n1304, n1305, n1306, n1307, n1308, n1309, n1310, n1311, n1312, 
+      n1313, n1314, n1315, n1316, n1317, n1318, n1319, n1320, n1321, n1322, 
+      n1323, n1324, n1325, n1326, n1327, n1328, n1329, n1330, n1331, n1332, 
+      n1333, n1334, n1335, n1336, n1337, n1338, n1339, n1340, n1341, n1342, 
+      n1343, n1344, n1345, n1346, n1347, n1348, n1349, n1350, n1351, n1352, 
+      n1353, n1354, n1355, n1356, n1357, n1358, n1359, n1360, n1361, n1362, 
+      n1363, n1364, n1365, n1366, n1367, n1368, n1369, n1370, n1371, n1372, 
+      n1373, n1374, n1375, n1376, n1377, n1378, n1379, n1380, n1381, n1382, 
+      n1383, n1384, n1385, n1386, n1387, n1388, n1389, n1390, n1391, n1392, 
+      n1393, n1394, n1395, n1396, n1397, n1398, n1399, n1400, n1401, n1402, 
+      n1403, n1404, n1405, n1406, n1407, n1408, n1409, n1410, n1411, n1412, 
+      n1413, n1414, n1415, n1416, n1417, n1418, n1419, n1420, n1421, n1422, 
+      n1423, n1424, n1425, n1426, n1427, n1428, n1429, n1430, n1431, n1432, 
+      n1433, n1434, n1435, n1436, n1437, n1438, n1439, n1440, n1441, n1442, 
+      n1443, n1444, n1445, n1446, n1447, n1448, n1449, n1450, n1451, n1452, 
+      n1453, n1454, n1455, n1456, n1457, n1458, n1459, n1460, n1461, n1462, 
+      n1463, n1464, n1465, n1466, n1467, n1468, n1469, n1470, n1471, n1472, 
+      n1473, n1474, n1475, n1476, n1477, n1478, n1479, n1480, n1481, n1482, 
+      n1483, n1484, n1485, n1486, n1487, n1488, n1489, n1490, n1491, n1492, 
+      n1493, n1494, n1495, n1496, n1497, n1498, n1499, n1500, n1501, n1502, 
+      n1503, n1504, n1505, n1506, n1507, n1508, n1509, n1510, n1511, n1512, 
+      n1513, n1514, n1515, n1516, n1517, n1518, n1519, n1520, n1521, n1522, 
+      n1523, n1524, n1525, n1526, n1527, n1528, n1529, n1530, n1531, n1532, 
+      n1533, n1534, n1535, n1536, n1537 : std_logic;
 
 begin
-   lut_next_piece <= lut_next_piece_port;
+   lut_piece_type <= ( lut_piece_type_2_port, lut_piece_type_1_port, 
+      lut_piece_type_0_port );
+   lut_x <= ( lut_x_2_port, lut_x_1_port, lut_x_0_port );
+   lut_y <= ( lut_y_3_port, lut_y_2_port, lut_y_1_port, lut_y_0_port );
+   lut_rot <= ( lut_rot_1_port, lut_rot_0_port );
+   x <= x_port;
+   y <= y_port;
+   new_piece <= new_piece_port;
+   draw_erase_draw <= draw_erase_draw_port;
    
-   inv_inputs_reg_7_inst : dfn10 port map( D => n1872, CK => clk, Q => 
-                           inv_inputs_7_port);
-   inv_inputs_reg_6_inst : dfn10 port map( D => n1871, CK => clk, Q => 
-                           inv_inputs_6_port);
-   inv_inputs_reg_5_inst : dfn10 port map( D => n1870, CK => clk, Q => 
+   inv_inputs_reg_5_inst : dfn10 port map( D => n962, CK => clk, Q => 
                            inv_inputs_5_port);
-   inv_inputs_reg_4_inst : dfn10 port map( D => n1869, CK => clk, Q => 
+   inv_inputs_reg_4_inst : dfn10 port map( D => n961, CK => clk, Q => 
                            inv_inputs_4_port);
-   inv_inputs_reg_3_inst : dfn10 port map( D => n1868, CK => clk, Q => 
+   inv_inputs_reg_3_inst : dfn10 port map( D => n960, CK => clk, Q => 
                            inv_inputs_3_port);
-   inv_inputs_reg_2_inst : dfn10 port map( D => n1867, CK => clk, Q => 
+   inv_inputs_reg_2_inst : dfn10 port map( D => n959, CK => clk, Q => 
                            inv_inputs_2_port);
-   inv_inputs_reg_1_inst : dfn10 port map( D => n1866, CK => clk, Q => 
+   inv_inputs_reg_1_inst : dfn10 port map( D => n958, CK => clk, Q => 
                            inv_inputs_1_port);
-   inv_inputs_reg_0_inst : dfn10 port map( D => n1865, CK => clk, Q => 
+   inv_inputs_reg_0_inst : dfn10 port map( D => n957, CK => clk, Q => 
                            inv_inputs_0_port);
-   cur_timer_1_time_reg_0_inst : dfn10 port map( D => n1864, CK => clk, Q => 
-                           cur_timer_1_time_0_port);
-   cur_state_reg_3_inst : dfr11 port map( D => n516, R => rst, CK => clk, Q => 
+   cur_timer_1_time_reg : dfn10 port map( D => n956, CK => clk, Q => 
+                           cur_timer_1_time);
+   cur_state_reg_3_inst : dfr11 port map( D => n46, R => rst, CK => clk, Q => 
                            cur_state_3_port);
-   cur_state_reg_2_inst : dfr11 port map( D => n576, R => rst, CK => clk, Q => 
+   cur_state_reg_2_inst : dfr11 port map( D => n94, R => rst, CK => clk, Q => 
                            cur_state_2_port);
-   cur_state_reg_5_inst : dfr11 port map( D => n527, R => rst, CK => clk, Q => 
-                           cur_state_5_port);
-   cur_state_reg_1_inst : dfr11 port map( D => n509, R => rst, CK => clk, Q => 
+   cur_state_reg_1_inst : dfr11 port map( D => n87, R => rst, CK => clk, Q => 
                            cur_state_1_port);
-   cur_state_reg_0_inst : dfr11 port map( D => n492, R => rst, CK => clk, Q => 
-                           cur_state_0_port);
-   cur_timer_1_time_reg_1_inst : dfn10 port map( D => n1863, CK => clk, Q => 
-                           cur_timer_1_time_1_port);
-   cur_state_reg_4_inst : dfr11 port map( D => n159, R => rst, CK => clk, Q => 
-                           cur_state_4_port);
-   cur_state_reg_6_inst : dfr11 port map( D => n166, R => rst, CK => clk, Q => 
+   cur_state_reg_5_inst : dfr11 port map( D => n51, R => rst, CK => clk, Q => 
+                           cur_state_5_port);
+   cur_state_reg_6_inst : dfr11 port map( D => n59, R => rst, CK => clk, Q => 
                            cur_state_6_port);
-   cur_timer_1_time_reg_7_inst : dfn10 port map( D => n1862, CK => clk, Q => 
-                           cur_timer_1_time_7_port);
-   cur_timer_1_time_reg_6_inst : dfn10 port map( D => n1861, CK => clk, Q => 
-                           cur_timer_1_time_6_port);
-   cur_timer_1_time_reg_5_inst : dfn10 port map( D => n1860, CK => clk, Q => 
-                           cur_timer_1_time_5_port);
-   cur_draw_score_draw_reg : dfn10 port map( D => n1859, CK => clk, Q => 
-                           cur_draw_score_draw);
-   cur_rot_reg_0_inst : dfn10 port map( D => n1858, CK => clk, Q => 
-                           cur_rot_0_port);
-   cur_rot_new_reg_0_inst : dfn10 port map( D => n1857, CK => clk, Q => 
-                           cur_rot_new_0_port);
-   cur_rot_reg_1_inst : dfn10 port map( D => n1856, CK => clk, Q => 
-                           cur_rot_1_port);
-   cur_rot_new_reg_1_inst : dfn10 port map( D => n1855, CK => clk, Q => 
-                           cur_rot_new_1_port);
-   cur_x_reg_0_inst : dfn10 port map( D => n1854, CK => clk, Q => cur_x_0_port)
-                           ;
-   cur_x_new_reg_1_inst : dfn10 port map( D => n1853, CK => clk, Q => 
-                           cur_x_new_1_port);
-   cur_x_reg_1_inst : dfn10 port map( D => n1852, CK => clk, Q => cur_x_1_port)
-                           ;
-   cur_x_new_reg_2_inst : dfn10 port map( D => n1851, CK => clk, Q => 
-                           cur_x_new_2_port);
-   cur_x_reg_2_inst : dfn10 port map( D => n1850, CK => clk, Q => cur_x_2_port)
-                           ;
-   cur_x_new_reg_0_inst : dfn10 port map( D => n1849, CK => clk, Q => 
-                           cur_x_new_0_port);
-   cur_new_piece_reg : dfn10 port map( D => n1848, CK => clk, Q => 
-                           cur_new_piece);
-   cur_timer_1_time_reg_4_inst : dfn10 port map( D => n1847, CK => clk, Q => 
-                           cur_timer_1_time_4_port);
-   cur_timer_1_time_reg_3_inst : dfn10 port map( D => n1846, CK => clk, Q => 
-                           cur_timer_1_time_3_port);
-   cur_timer_1_time_reg_2_inst : dfn10 port map( D => n1845, CK => clk, Q => 
-                           cur_timer_1_time_2_port);
-   cur_y_reg_0_inst : dfn10 port map( D => n1844, CK => clk, Q => cur_y_0_port)
-                           ;
-   cur_y_new_reg_0_inst : dfn10 port map( D => n1843, CK => clk, Q => 
-                           cur_y_new_0_port);
-   cur_y_new_reg_1_inst : dfn10 port map( D => n1842, CK => clk, Q => 
-                           cur_y_new_1_port);
-   cur_y_reg_1_inst : dfn10 port map( D => n1841, CK => clk, Q => cur_y_1_port)
-                           ;
-   cur_y_new_reg_2_inst : dfn10 port map( D => n1840, CK => clk, Q => 
-                           cur_y_new_2_port);
-   cur_y_reg_2_inst : dfn10 port map( D => n1839, CK => clk, Q => cur_y_2_port)
-                           ;
-   cur_y_new_reg_3_inst : dfn10 port map( D => n1838, CK => clk, Q => 
-                           cur_y_new_3_port);
-   cur_y_reg_3_inst : dfn10 port map( D => n1837, CK => clk, Q => cur_y_3_port)
-                           ;
-   cur_lut_next_piece_reg : dfn10 port map( D => n1876, CK => clk, Q => 
-                           lut_next_piece_port);
-   cur_future_piece_reg_2_inst : dfn10 port map( D => n1877, CK => clk, Q => 
+   cur_state_reg_0_inst : dfr11 port map( D => n37, R => rst, CK => clk, Q => 
+                           cur_state_0_port);
+   cur_state_reg_4_inst : dfr11 port map( D => n129, R => rst, CK => clk, Q => 
+                           cur_state_4_port);
+   cur_piece_reg_2_inst : dfn10 port map( D => n968, CK => clk, Q => 
+                           lut_piece_type_2_port);
+   cur_future_piece_reg_2_inst : dfn10 port map( D => n965, CK => clk, Q => 
                            cur_future_piece_2_port);
-   cur_piece_reg_2_inst : dfn10 port map( D => n1836, CK => clk, Q => 
-                           cur_piece_2_port);
-   cur_future_piece_reg_1_inst : dfn10 port map( D => n1878, CK => clk, Q => 
+   cur_piece_reg_1_inst : dfn10 port map( D => n969, CK => clk, Q => 
+                           lut_piece_type_1_port);
+   cur_future_piece_reg_1_inst : dfn10 port map( D => n966, CK => clk, Q => 
                            cur_future_piece_1_port);
-   cur_piece_reg_1_inst : dfn10 port map( D => n1835, CK => clk, Q => 
-                           cur_piece_1_port);
-   cur_future_piece_reg_0_inst : dfn10 port map( D => n1879, CK => clk, Q => 
+   cur_piece_reg_0_inst : dfn10 port map( D => n970, CK => clk, Q => 
+                           lut_piece_type_0_port);
+   cur_future_piece_reg_0_inst : dfn10 port map( D => n967, CK => clk, Q => 
                            cur_future_piece_0_port);
-   cur_piece_reg_0_inst : dfn10 port map( D => n1834, CK => clk, Q => 
-                           cur_piece_0_port);
-   cur_lut_piece_type_reg_2_inst : dfn10 port map( D => n1833, CK => clk, Q => 
-                           cur_lut_piece_type_2_port);
-   cur_lut_piece_type_reg_1_inst : dfn10 port map( D => n1832, CK => clk, Q => 
-                           cur_lut_piece_type_1_port);
-   cur_lut_piece_type_reg_0_inst : dfn10 port map( D => n1831, CK => clk, Q => 
-                           cur_lut_piece_type_0_port);
-   cur_check_start_reg : dfn10 port map( D => n1830, CK => clk, Q => 
-                           cur_check_start);
-   cur_lut_y_reg_3_inst : dfn10 port map( D => n1829, CK => clk, Q => 
-                           cur_lut_y_3_port);
-   cur_lut_y_reg_2_inst : dfn10 port map( D => n1828, CK => clk, Q => 
-                           cur_lut_y_2_port);
-   cur_lut_y_reg_1_inst : dfn10 port map( D => n1827, CK => clk, Q => 
-                           cur_lut_y_1_port);
-   cur_lut_y_reg_0_inst : dfn10 port map( D => n1826, CK => clk, Q => 
-                           cur_lut_y_0_port);
-   cur_lut_rot_reg_1_inst : dfn10 port map( D => n1825, CK => clk, Q => 
-                           cur_lut_rot_1_port);
-   cur_lut_x_reg_0_inst : dfn10 port map( D => n1824, CK => clk, Q => 
-                           cur_lut_x_0_port);
-   cur_lut_x_reg_1_inst : dfn10 port map( D => n1823, CK => clk, Q => 
-                           cur_lut_x_1_port);
-   cur_lut_x_reg_2_inst : dfn10 port map( D => n1822, CK => clk, Q => 
-                           cur_lut_x_2_port);
-   cur_lut_rot_reg_0_inst : dfn10 port map( D => n1821, CK => clk, Q => 
-                           cur_lut_rot_0_port);
-   cur_draw_erase_start_reg : dfn10 port map( D => n1820, CK => clk, Q => 
-                           cur_draw_erase_start);
-   cur_draw_erase_draw_reg : dfn10 port map( D => n1819, CK => clk, Q => 
-                           cur_draw_erase_draw);
-   cur_clear_shift_start_reg : dfn10 port map( D => n1818, CK => clk, Q => 
-                           cur_clear_shift_start);
-   cur_timer_1_start_reg : dfn10 port map( D => n1817, CK => clk, Q => 
+   cur_y_reg_3_inst : dfn10 port map( D => n974, CK => clk, Q => lut_y_3_port);
+   cur_y_reg_2_inst : dfn10 port map( D => n975, CK => clk, Q => lut_y_2_port);
+   cur_y_reg_1_inst : dfn10 port map( D => n976, CK => clk, Q => lut_y_1_port);
+   cur_y_reg_0_inst : dfn10 port map( D => n977, CK => clk, Q => lut_y_0_port);
+   cur_rot_reg_0_inst : dfn10 port map( D => n973, CK => clk, Q => 
+                           lut_rot_0_port);
+   cur_rot_reg_1_inst : dfn10 port map( D => n972, CK => clk, Q => 
+                           lut_rot_1_port);
+   cur_x_reg_2_inst : dfn10 port map( D => n971, CK => clk, Q => lut_x_2_port);
+   cur_x_reg_1_inst : dfn10 port map( D => n978, CK => clk, Q => lut_x_1_port);
+   cur_x_reg_0_inst : dfn10 port map( D => n979, CK => clk, Q => lut_x_0_port);
+   cur_timer_1_start_reg : dfn10 port map( D => n955, CK => clk, Q => 
                            cur_timer_1_start);
-   cur_timer_1_reset_reg : dfn10 port map( D => n1816, CK => clk, Q => 
+   cur_timer_1_reset_reg : dfn10 port map( D => n954, CK => clk, Q => 
                            cur_timer_1_reset);
-   U1036 : iv110 port map( A => n1889, Y => n1880);
-   U1037 : iv110 port map( A => rst, Y => n1881);
-   U1038 : iv110 port map( A => rst, Y => n1882);
-   U1039 : iv110 port map( A => rst, Y => n1883);
-   U1040 : iv110 port map( A => cur_state_1_port, Y => n1884);
-   U1041 : iv110 port map( A => n1884, Y => n1885);
-   U1042 : iv110 port map( A => n1949, Y => n1886);
-   U1043 : iv110 port map( A => n1886, Y => n1887);
-   U1044 : iv110 port map( A => cur_state_3_port, Y => n1888);
-   U1045 : iv110 port map( A => n1888, Y => n1889);
-   U1046 : iv110 port map( A => cur_state_5_port, Y => n1890);
-   U1047 : iv110 port map( A => n1890, Y => n1891);
-   U1048 : buf40 port map( A => cur_state_2_port, Y => n1892);
-   U1049 : iv110 port map( A => n1893, Y => timer_1_time(7));
-   U1050 : iv110 port map( A => n1894, Y => timer_1_time(6));
-   U1051 : iv110 port map( A => n1895, Y => timer_1_time(5));
-   U1052 : na210 port map( A => n1896, B => n1897, Y => timer_1_time(4));
-   U1053 : na210 port map( A => cur_timer_1_time_4_port, B => n1898, Y => n1897
+   U646 : iv110 port map( A => n1299, Y => n980);
+   U647 : iv110 port map( A => n1157, Y => n981);
+   U648 : iv110 port map( A => n1138, Y => n982);
+   U649 : iv110 port map( A => n1216, Y => n983);
+   U650 : iv110 port map( A => n1143, Y => n984);
+   U651 : iv110 port map( A => n984, Y => n985);
+   U652 : iv110 port map( A => n1171, Y => n986);
+   U653 : mu111 port map( A => n987, B => cur_timer_1_time, S => n988, Y => 
+                           timer_1_time);
+   U654 : na210 port map( A => n989, B => n990, Y => timer_1_start);
+   U655 : na210 port map( A => n991, B => cur_timer_1_start, Y => n990);
+   U656 : na210 port map( A => n992, B => n993, Y => n989);
+   U657 : na210 port map( A => n994, B => n995, Y => timer_1_reset);
+   U658 : na210 port map( A => n996, B => n997, Y => n995);
+   U659 : na210 port map( A => cur_timer_1_reset, B => n998, Y => n994);
+   U660 : na310 port map( A => n999, B => n1000, C => n1001, Y => rot);
+   U661 : na210 port map( A => n1002, B => n1003, Y => n1000);
+   U662 : iv110 port map( A => n1004, Y => n999);
+   U663 : na210 port map( A => n1005, B => n1006, Y => n979);
+   U664 : na210 port map( A => calc_x(0), B => n1007, Y => n1006);
+   U665 : iv110 port map( A => n1008, Y => n1005);
+   U666 : mu111 port map( A => lut_x_0_port, B => n1009, S => n1010, Y => n1008
                            );
-   U1054 : na210 port map( A => n1896, B => n1899, Y => timer_1_time(3));
-   U1055 : na210 port map( A => cur_timer_1_time_3_port, B => n1898, Y => n1899
+   U667 : na210 port map( A => n1011, B => n1012, Y => n978);
+   U668 : na210 port map( A => calc_x(1), B => n1007, Y => n1012);
+   U669 : iv110 port map( A => n1013, Y => n1011);
+   U670 : mu111 port map( A => lut_x_1_port, B => n1009, S => n1010, Y => n1013
                            );
-   U1056 : na210 port map( A => n1896, B => n1900, Y => timer_1_time(2));
-   U1057 : na210 port map( A => cur_timer_1_time_2_port, B => n1898, Y => n1900
-                           );
-   U1058 : na210 port map( A => n1901, B => n1902, Y => timer_1_time(1));
-   U1059 : na210 port map( A => n1903, B => cur_timer_1_time_1_port, Y => n1902
-                           );
-   U1060 : iv110 port map( A => n1904, Y => n1901);
-   U1061 : na210 port map( A => n1905, B => n1906, Y => timer_1_time(0));
-   U1062 : na310 port map( A => n1907, B => n1908, C => n1909, Y => n1906);
-   U1063 : na210 port map( A => cur_timer_1_time_0_port, B => n1910, Y => n1905
-                           );
-   U1064 : na210 port map( A => n1911, B => n1912, Y => timer_1_start);
-   U1065 : na210 port map( A => cur_timer_1_start, B => n1913, Y => n1912);
-   U1066 : na210 port map( A => n1914, B => n1915, Y => n1911);
-   U1067 : na210 port map( A => n1916, B => n1917, Y => timer_1_reset);
-   U1068 : na210 port map( A => n1918, B => n1915, Y => n1917);
-   U1069 : na210 port map( A => cur_timer_1_reset, B => n1919, Y => n1916);
-   U1070 : na210 port map( A => n1920, B => n1921, Y => new_piece);
-   U1071 : na210 port map( A => cur_new_piece, B => n1922, Y => n1921);
-   U1072 : na210 port map( A => n1923, B => n1924, Y => n576);
-   U1073 : na210 port map( A => n1907, B => n1925, Y => n1924);
-   U1074 : na310 port map( A => n1926, B => n1927, C => n1928, Y => n1925);
-   U1075 : na210 port map( A => n1929, B => n1930, Y => n1928);
-   U1076 : na210 port map( A => n1931, B => n1932, Y => n1926);
-   U1077 : mu111 port map( A => n1933, B => n1934, S => cur_state_3_port, Y => 
-                           n1923);
-   U1078 : no310 port map( A => n1935, B => n1936, C => n1937, Y => n1934);
-   U1079 : no310 port map( A => n1938, B => inv_inputs_3_port, C => n1892, Y =>
-                           n1937);
-   U1080 : no210 port map( A => n1939, B => n1890, Y => n1935);
-   U1081 : no210 port map( A => n1941, B => n1942, Y => n1939);
-   U1082 : na310 port map( A => n1943, B => n1944, C => n1945, Y => n1942);
-   U1083 : na210 port map( A => n1946, B => n1947, Y => n1945);
-   U1084 : na210 port map( A => n1948, B => n1887, Y => n1943);
-   U1085 : na310 port map( A => n1950, B => n1951, C => n1952, Y => n1941);
-   U1086 : na210 port map( A => n1953, B => n1954, Y => n1952);
-   U1087 : na210 port map( A => draw_erase_ready, B => n1955, Y => n1951);
-   U1088 : na210 port map( A => n1956, B => n1957, Y => n1955);
-   U1089 : na210 port map( A => n1931, B => n1886, Y => n1957);
-   U1090 : na210 port map( A => check_empty, B => n1958, Y => n1950);
-   U1091 : no310 port map( A => n1959, B => n1960, C => n1961, Y => n1933);
-   U1092 : no210 port map( A => check_empty, B => n1927, Y => n1961);
-   U1093 : no210 port map( A => n1892, B => n1962, Y => n1960);
-   U1094 : no310 port map( A => n1963, B => n1964, C => n1965, Y => n1962);
-   U1095 : no310 port map( A => n1966, B => cur_state_5_port, C => n1967, Y => 
-                           n1965);
-   U1096 : iv110 port map( A => n1938, Y => n1964);
-   U1097 : no210 port map( A => n1968, B => n1969, Y => n1963);
-   U1098 : na210 port map( A => n1970, B => n1971, Y => n1959);
-   U1099 : na210 port map( A => n1972, B => n1973, Y => n1971);
-   U1100 : na210 port map( A => n1974, B => n1975, Y => n1970);
-   U1101 : na310 port map( A => n1976, B => n1890, C => n1977, Y => n1975);
-   U1102 : na210 port map( A => check_empty, B => cur_state_1_port, Y => n1977)
+   U671 : na210 port map( A => n1014, B => n1015, Y => n977);
+   U672 : na210 port map( A => calc_y(0), B => n1016, Y => n1015);
+   U673 : na210 port map( A => lut_y_0_port, B => n1017, Y => n1014);
+   U674 : na210 port map( A => n1018, B => n1019, Y => n976);
+   U675 : na210 port map( A => calc_y(1), B => n1016, Y => n1019);
+   U676 : na210 port map( A => lut_y_1_port, B => n1017, Y => n1018);
+   U677 : na210 port map( A => n1020, B => n1021, Y => n975);
+   U678 : na210 port map( A => calc_y(2), B => n1016, Y => n1021);
+   U679 : na210 port map( A => lut_y_2_port, B => n1017, Y => n1020);
+   U680 : na210 port map( A => n1022, B => n1023, Y => n974);
+   U681 : na210 port map( A => calc_y(3), B => n1016, Y => n1023);
+   U682 : no210 port map( A => n1017, B => n1024, Y => n1016);
+   U683 : na210 port map( A => lut_y_3_port, B => n1017, Y => n1022);
+   U684 : na210 port map( A => n1025, B => n1026, Y => n1017);
+   U685 : na210 port map( A => n1027, B => n1028, Y => n1025);
+   U686 : na310 port map( A => n1029, B => n1030, C => check_empty, Y => n1028)
                            ;
-   U1103 : na310 port map( A => n1978, B => n1979, C => n1980, Y => n527);
-   U1104 : no310 port map( A => n1981, B => n1982, C => n1983, Y => n1980);
-   U1105 : no310 port map( A => n1984, B => n1985, C => n1890, Y => n1983);
-   U1106 : no210 port map( A => n1986, B => n1969, Y => n1985);
-   U1107 : na210 port map( A => n1987, B => n1988, Y => n1981);
-   U1108 : na310 port map( A => n1989, B => n1990, C => n1991, Y => n1988);
-   U1109 : mu111 port map( A => n1992, B => n1993, S => n1892, Y => n1991);
-   U1110 : na210 port map( A => n1994, B => n1995, Y => n1992);
-   U1111 : na210 port map( A => n1887, B => n1996, Y => n1994);
-   U1112 : na210 port map( A => cur_state_1_port, B => n1997, Y => n1996);
-   U1113 : na210 port map( A => n1998, B => n1999, Y => n1987);
-   U1114 : na210 port map( A => n1929, B => n1892, Y => n1999);
-   U1115 : iv110 port map( A => n2000, Y => n1979);
-   U1116 : mu111 port map( A => n2001, B => n2002, S => cur_state_3_port, Y => 
-                           n2000);
-   U1117 : no210 port map( A => n2003, B => n2004, Y => n2002);
-   U1118 : no210 port map( A => n2005, B => n2006, Y => n1978);
-   U1119 : no210 port map( A => n1887, B => n2007, Y => n2006);
-   U1120 : no210 port map( A => n2008, B => n1956, Y => n2005);
-   U1121 : na310 port map( A => n2009, B => n2010, C => n2011, Y => n516);
-   U1122 : no210 port map( A => n2012, B => n2013, Y => n2011);
-   U1123 : no210 port map( A => n2014, B => n2015, Y => n2013);
-   U1124 : no310 port map( A => n2016, B => n1953, C => n2017, Y => n2014);
-   U1125 : no310 port map( A => n2018, B => n1949, C => n2019, Y => n2017);
-   U1126 : no210 port map( A => n1892, B => n2020, Y => n2016);
-   U1127 : no310 port map( A => n2018, B => n1973, C => n2021, Y => n2012);
-   U1128 : na210 port map( A => n2022, B => n2023, Y => n2010);
-   U1129 : mu111 port map( A => n2024, B => n2025, S => cur_state_3_port, Y => 
-                           n2009);
-   U1130 : no310 port map( A => n2026, B => n2027, C => n2028, Y => n2025);
-   U1131 : na210 port map( A => n2029, B => n2030, Y => n2028);
-   U1132 : na310 port map( A => n2031, B => n2032, C => n1989, Y => n2030);
-   U1133 : na210 port map( A => n1993, B => n2033, Y => n2031);
-   U1134 : na310 port map( A => n2034, B => n2035, C => n1948, Y => n2029);
-   U1135 : na310 port map( A => n1927, B => n2036, C => n2037, Y => n2027);
-   U1136 : na310 port map( A => n2038, B => n2039, C => n2040, Y => n2026);
-   U1137 : no210 port map( A => n2041, B => n2042, Y => n2040);
-   U1138 : no210 port map( A => cur_state_0_port, B => n2007, Y => n2042);
-   U1139 : no210 port map( A => n2043, B => n1890, Y => n2041);
-   U1140 : no310 port map( A => n2044, B => n2045, C => n2046, Y => n2043);
-   U1141 : no310 port map( A => n2032, B => cur_state_4_port, C => 
-                           clear_shift_ready, Y => n2046);
-   U1142 : no210 port map( A => timer_1_done, B => n2047, Y => n2044);
-   U1143 : na210 port map( A => n2048, B => n2049, Y => n2039);
-   U1144 : na210 port map( A => n2032, B => n2019, Y => n2049);
-   U1145 : na210 port map( A => cur_state_4_port, B => n2050, Y => n2038);
-   U1146 : na210 port map( A => n2007, B => n2051, Y => n2050);
-   U1147 : na210 port map( A => n2052, B => n1954, Y => n2051);
-   U1148 : na210 port map( A => n1936, B => n2053, Y => n2024);
-   U1149 : na210 port map( A => n2054, B => n2055, Y => n2053);
-   U1150 : na210 port map( A => n2056, B => n2034, Y => n2055);
-   U1151 : na210 port map( A => n1993, B => n2019, Y => n2054);
-   U1152 : mu111 port map( A => n2057, B => n2058, S => cur_state_3_port, Y => 
-                           n509);
-   U1153 : na310 port map( A => n2059, B => n2060, C => n2061, Y => n2058);
-   U1154 : no310 port map( A => n2062, B => n2063, C => n2064, Y => n2061);
-   U1155 : no210 port map( A => n1892, B => n2065, Y => n2064);
-   U1156 : no210 port map( A => n2066, B => n2067, Y => n2065);
-   U1157 : no310 port map( A => n1968, B => n2068, C => n2069, Y => n2067);
-   U1158 : no210 port map( A => cur_state_4_port, B => check_empty, Y => n2069)
+   U687 : mu111 port map( A => n1031, B => lut_rot_0_port, S => n1027, Y => 
+                           n973);
+   U688 : no210 port map( A => n1026, B => n1032, Y => n1031);
+   U689 : iv110 port map( A => calc_rot(0), Y => n1032);
+   U690 : mu111 port map( A => n1033, B => lut_rot_1_port, S => n1027, Y => 
+                           n972);
+   U691 : na210 port map( A => n1029, B => n1034, Y => n1027);
+   U692 : no310 port map( A => new_piece_port, B => x_port, C => n1035, Y => 
+                           n1029);
+   U693 : na210 port map( A => n1036, B => n1037, Y => n1035);
+   U694 : no210 port map( A => n1026, B => n1038, Y => n1033);
+   U695 : iv110 port map( A => calc_rot(1), Y => n1038);
+   U696 : na210 port map( A => n1039, B => n1040, Y => n971);
+   U697 : na210 port map( A => calc_x(2), B => n1007, Y => n1040);
+   U698 : no210 port map( A => n1041, B => n1042, Y => n1007);
+   U699 : iv110 port map( A => n1043, Y => n1042);
+   U700 : na210 port map( A => n1044, B => n1045, Y => n1043);
+   U701 : na210 port map( A => lut_x_2_port, B => n1041, Y => n1039);
+   U702 : iv110 port map( A => n1010, Y => n1041);
+   U703 : no310 port map( A => n1046, B => n1047, C => n1048, Y => n1010);
+   U704 : iv110 port map( A => n1049, Y => n1048);
+   U705 : no310 port map( A => n1050, B => new_piece_port, C => n1051, Y => 
+                           n1049);
+   U706 : no210 port map( A => n1045, B => n1052, Y => n1051);
+   U707 : na210 port map( A => n1053, B => n1054, Y => new_piece_port);
+   U708 : na210 port map( A => n1055, B => n1056, Y => n1054);
+   U709 : no210 port map( A => n1057, B => n1044, Y => n1050);
+   U710 : na310 port map( A => n1058, B => n1059, C => n1060, Y => n970);
+   U711 : na210 port map( A => lut_piece_type_0_port, B => n1061, Y => n1060);
+   U712 : na210 port map( A => next_piece(0), B => n1062, Y => n1059);
+   U713 : na210 port map( A => cur_future_piece_0_port, B => n1063, Y => n1058)
                            ;
-   U1159 : no210 port map( A => n2070, B => n2034, Y => n2068);
-   U1160 : no210 port map( A => n2071, B => n1995, Y => n2066);
-   U1161 : no210 port map( A => n2072, B => n2020, Y => n2063);
-   U1162 : no210 port map( A => n2073, B => n1982, Y => n2072);
-   U1163 : no210 port map( A => clear_shift_ready, B => n2074, Y => n2073);
-   U1164 : no210 port map( A => n2075, B => n2076, Y => n2062);
-   U1165 : no310 port map( A => n2077, B => n2078, C => n2079, Y => n2075);
-   U1166 : no210 port map( A => n1969, B => n1954, Y => n2079);
-   U1167 : iv110 port map( A => n1986, Y => n1954);
-   U1168 : no210 port map( A => n2004, B => inv_inputs_4_port, Y => n1986);
-   U1169 : no210 port map( A => cur_state_1_port, B => n2004, Y => n2077);
-   U1170 : no210 port map( A => n2080, B => n2081, Y => n2060);
-   U1171 : no310 port map( A => n2071, B => n2070, C => n2082, Y => n2081);
-   U1172 : no310 port map( A => n2083, B => n2078, C => n2084, Y => n2082);
-   U1173 : no210 port map( A => n1892, B => n2085, Y => n2084);
-   U1174 : no210 port map( A => n1967, B => n2034, Y => n2085);
-   U1175 : no210 port map( A => inv_inputs_0_port, B => cur_state_1_port, Y => 
-                           n2083);
-   U1176 : no210 port map( A => n2086, B => n2087, Y => n2059);
-   U1177 : no210 port map( A => n2088, B => n2089, Y => n2087);
-   U1178 : no210 port map( A => n2090, B => n2091, Y => n2088);
-   U1179 : no210 port map( A => cur_state_5_port, B => n2078, Y => n2090);
-   U1180 : no310 port map( A => n2092, B => timer_1_done, C => n2034, Y => 
-                           n2086);
-   U1181 : na310 port map( A => n2093, B => n2094, C => n2095, Y => n2057);
-   U1182 : no310 port map( A => n2096, B => n2097, C => n2098, Y => n2095);
-   U1183 : no210 port map( A => n2099, B => n2076, Y => n2098);
-   U1184 : no210 port map( A => n2100, B => n1929, Y => n2099);
-   U1185 : no210 port map( A => cur_state_1_port, B => check_empty, Y => n2100)
+   U714 : na310 port map( A => n1064, B => n1065, C => n1066, Y => n969);
+   U715 : na210 port map( A => lut_piece_type_1_port, B => n1061, Y => n1066);
+   U716 : na210 port map( A => next_piece(1), B => n1062, Y => n1065);
+   U717 : na210 port map( A => cur_future_piece_1_port, B => n1063, Y => n1064)
                            ;
-   U1186 : no310 port map( A => n2101, B => n2071, C => n1927, Y => n2097);
-   U1187 : no210 port map( A => cur_state_6_port, B => n2036, Y => n2096);
-   U1188 : na310 port map( A => n2102, B => n1890, C => n1947, Y => n2036);
-   U1189 : na210 port map( A => n1982, B => cur_state_1_port, Y => n2094);
-   U1190 : no210 port map( A => n2103, B => n2104, Y => n2093);
-   U1191 : no210 port map( A => n1892, B => n2105, Y => n2104);
-   U1192 : no310 port map( A => n2106, B => n2107, C => n2108, Y => n2105);
-   U1193 : no310 port map( A => n1968, B => cur_state_1_port, C => n2070, Y => 
-                           n2108);
-   U1194 : no210 port map( A => n2071, B => n1976, Y => n2106);
-   U1195 : no210 port map( A => n2109, B => n2110, Y => n2103);
-   U1196 : no310 port map( A => n2111, B => n1946, C => n2056, Y => n2109);
-   U1197 : no210 port map( A => n2034, B => n2019, Y => n2111);
-   U1198 : na310 port map( A => n2112, B => n2113, C => n2114, Y => n492);
-   U1199 : na210 port map( A => cur_state_3_port, B => n2115, Y => n2114);
-   U1200 : na310 port map( A => n2116, B => n2117, C => n2118, Y => n2115);
-   U1201 : no310 port map( A => n2119, B => n2080, C => n2120, Y => n2118);
-   U1202 : no310 port map( A => n2121, B => draw_erase_ready, C => 
-                           cur_state_1_port, Y => n2120);
-   U1203 : iv110 port map( A => n2037, Y => n2080);
-   U1204 : na310 port map( A => inv_inputs_4_port, B => n1936, C => n2122, Y =>
-                           n2037);
-   U1205 : no210 port map( A => n2020, B => n2123, Y => n2122);
-   U1206 : no210 port map( A => n2032, B => n1938, Y => n2119);
-   U1207 : na210 port map( A => n1936, B => n2078, Y => n2117);
-   U1208 : mu111 port map( A => n2124, B => n2125, S => cur_state_5_port, Y => 
-                           n2116);
-   U1209 : no310 port map( A => n2126, B => n2127, C => n2128, Y => n2125);
-   U1210 : iv110 port map( A => n1944, Y => n2128);
-   U1211 : na210 port map( A => n2129, B => n1974, Y => n1944);
-   U1212 : na210 port map( A => timer_1_done, B => n1993, Y => n2129);
-   U1213 : no210 port map( A => n1969, B => n2130, Y => n2127);
-   U1214 : na310 port map( A => n2131, B => n2132, C => n2133, Y => n2126);
-   U1215 : na210 port map( A => n1929, B => n2134, Y => n2133);
-   U1216 : na310 port map( A => n2135, B => n2136, C => n2137, Y => n2134);
-   U1217 : na210 port map( A => check_ready, B => n1947, Y => n2137);
-   U1218 : na210 port map( A => n1948, B => n2004, Y => n2136);
-   U1219 : na210 port map( A => n2138, B => check_empty, Y => n2135);
-   U1220 : na210 port map( A => n1953, B => n2139, Y => n2132);
-   U1221 : iv110 port map( A => clear_shift_ready, Y => n2139);
-   U1222 : no210 port map( A => n1966, B => n2032, Y => n1953);
-   U1223 : na210 port map( A => n2070, B => n1931, Y => n2131);
-   U1224 : iv110 port map( A => n2140, Y => n2070);
-   U1225 : mu111 port map( A => n2141, B => n2142, S => n1973, Y => n2124);
-   U1226 : no210 port map( A => n2143, B => n1947, Y => n2142);
-   U1227 : no210 port map( A => draw_erase_ready, B => n1892, Y => n2143);
-   U1228 : na210 port map( A => n1931, B => n2033, Y => n2141);
-   U1229 : no210 port map( A => n1966, B => n1892, Y => n1931);
-   U1230 : na210 port map( A => n1998, B => n2144, Y => n2113);
-   U1231 : na310 port map( A => n2145, B => n2146, C => n2147, Y => n2144);
-   U1232 : na210 port map( A => n1974, B => n2148, Y => n2147);
-   U1233 : na210 port map( A => n2078, B => n2101, Y => n2148);
-   U1234 : na310 port map( A => n2149, B => n2150, C => n2151, Y => n2146);
-   U1235 : no310 port map( A => n2152, B => n1892, C => n2153, Y => n2151);
-   U1236 : na210 port map( A => n1967, B => n1995, Y => n2150);
-   U1237 : iv110 port map( A => n1932, Y => n1967);
-   U1238 : na210 port map( A => cur_state_0_port, B => n2140, Y => n2149);
-   U1239 : na310 port map( A => check_empty, B => n2078, C => n1948, Y => n2145
-                           );
-   U1240 : na210 port map( A => n2154, B => n2155, Y => n2112);
-   U1241 : na310 port map( A => n2156, B => n2157, C => n2158, Y => n2155);
-   U1242 : no310 port map( A => n2159, B => n2160, C => n2161, Y => n2158);
-   U1243 : no310 port map( A => n2162, B => n2163, C => n2034, Y => n2161);
-   U1244 : no210 port map( A => n2164, B => n1947, Y => n2163);
-   U1245 : no210 port map( A => n1892, B => n1932, Y => n2164);
-   U1246 : na210 port map( A => n2140, B => n1995, Y => n2162);
-   U1247 : no310 port map( A => n2018, B => inv_inputs_2_port, C => n2102, Y =>
-                           n2159);
-   U1248 : na210 port map( A => n1974, B => n2165, Y => n2157);
-   U1249 : na310 port map( A => n2166, B => n2167, C => n2168, Y => n2165);
-   U1250 : na210 port map( A => check_empty, B => cur_state_4_port, Y => n2168)
+   U718 : na310 port map( A => n1067, B => n1068, C => n1069, Y => n968);
+   U719 : na210 port map( A => lut_piece_type_2_port, B => n1061, Y => n1069);
+   U720 : na210 port map( A => next_piece(2), B => n1062, Y => n1068);
+   U721 : no210 port map( A => n1061, B => n1070, Y => n1062);
+   U722 : na210 port map( A => cur_future_piece_2_port, B => n1063, Y => n1067)
                            ;
-   U1251 : na210 port map( A => n1946, B => draw_erase_ready, Y => n2166);
-   U1252 : na210 port map( A => n2169, B => n2101, Y => n2156);
-   U1253 : iv110 port map( A => check_ready, Y => n2101);
-   U1254 : na210 port map( A => n2170, B => n2171, Y => n1879);
-   U1255 : na210 port map( A => next_piece(0), B => n2172, Y => n2171);
-   U1256 : na210 port map( A => cur_future_piece_0_port, B => n2173, Y => n2170
+   U723 : no210 port map( A => n1061, B => n1036, Y => n1063);
+   U724 : na210 port map( A => n1071, B => n1053, Y => n1061);
+   U725 : na310 port map( A => n1072, B => n1073, C => n1074, Y => n967);
+   U726 : na210 port map( A => cur_future_piece_0_port, B => n1075, Y => n1074)
+                           ;
+   U727 : na210 port map( A => n1076, B => next_piece(0), Y => n1073);
+   U728 : na210 port map( A => n1077, B => lut_piece_type_0_port, Y => n1072);
+   U729 : na310 port map( A => n1078, B => n1079, C => n1080, Y => n966);
+   U730 : na210 port map( A => cur_future_piece_1_port, B => n1075, Y => n1080)
+                           ;
+   U731 : na210 port map( A => n1076, B => next_piece(1), Y => n1079);
+   U732 : na210 port map( A => n1077, B => lut_piece_type_1_port, Y => n1078);
+   U733 : na310 port map( A => n1081, B => n1082, C => n1083, Y => n965);
+   U734 : na210 port map( A => cur_future_piece_2_port, B => n1075, Y => n1083)
+                           ;
+   U735 : na210 port map( A => n1076, B => next_piece(2), Y => n1082);
+   U736 : no210 port map( A => n1053, B => n1075, Y => n1076);
+   U737 : na210 port map( A => n1084, B => n1085, Y => n1053);
+   U738 : na210 port map( A => n1077, B => lut_piece_type_2_port, Y => n1081);
+   U739 : no210 port map( A => n1075, B => n1036, Y => n1077);
+   U740 : na210 port map( A => n1071, B => n1070, Y => n1075);
+   U741 : no310 port map( A => n1086, B => x_port, C => n1046, Y => n1071);
+   U742 : na310 port map( A => n1026, B => n1034, C => n1037, Y => n1046);
+   U743 : iv110 port map( A => n1087, Y => n1037);
+   U744 : na310 port map( A => n1088, B => n1089, C => n1090, Y => n1087);
+   U745 : no210 port map( A => n1091, B => n1092, Y => n1090);
+   U746 : na310 port map( A => n1093, B => n1094, C => n1095, Y => n1092);
+   U747 : na310 port map( A => n1096, B => n1097, C => n1098, Y => n1091);
+   U748 : no210 port map( A => rst, B => n1099, Y => n1098);
+   U749 : no310 port map( A => n1100, B => n1101, C => n1102, Y => n1089);
+   U750 : no210 port map( A => n1024, B => n1103, Y => n1102);
+   U751 : no210 port map( A => n1104, B => n1105, Y => n1101);
+   U752 : no310 port map( A => n1106, B => n1107, C => n1108, Y => n1105);
+   U753 : iv110 port map( A => n1044, Y => n1107);
+   U754 : no210 port map( A => n1109, B => n1110, Y => n1106);
+   U755 : no210 port map( A => n1111, B => n1112, Y => n1109);
+   U756 : no210 port map( A => n1113, B => n1114, Y => n1111);
+   U757 : na210 port map( A => n1115, B => n1116, Y => n1100);
+   U758 : na210 port map( A => n1117, B => n1118, Y => n1116);
+   U759 : na210 port map( A => n1045, B => n1119, Y => n1117);
+   U760 : na210 port map( A => n1120, B => n1121, Y => n1115);
+   U761 : na310 port map( A => n1122, B => n1123, C => n1124, Y => n1121);
+   U762 : na210 port map( A => n1036, B => n1070, Y => n1120);
+   U763 : no310 port map( A => n1125, B => n1126, C => n1127, Y => n1088);
+   U764 : no210 port map( A => n1128, B => n1129, Y => n1126);
+   U765 : iv110 port map( A => n1130, Y => x_port);
+   U766 : no310 port map( A => n1131, B => n1132, C => n1047, Y => n1130);
+   U767 : no210 port map( A => n1045, B => n1104, Y => n1131);
+   U768 : mu111 port map( A => inputs(5), B => inv_inputs_5_port, S => rst, Y 
+                           => n962);
+   U769 : mu111 port map( A => inputs(4), B => inv_inputs_4_port, S => rst, Y 
+                           => n961);
+   U770 : mu111 port map( A => inputs(3), B => inv_inputs_3_port, S => rst, Y 
+                           => n960);
+   U771 : mu111 port map( A => inputs(2), B => inv_inputs_2_port, S => rst, Y 
+                           => n959);
+   U772 : mu111 port map( A => inputs(1), B => inv_inputs_1_port, S => rst, Y 
+                           => n958);
+   U773 : mu111 port map( A => inputs(0), B => inv_inputs_0_port, S => rst, Y 
+                           => n957);
+   U774 : mu111 port map( A => cur_timer_1_time, B => n987, S => n1133, Y => 
+                           n956);
+   U775 : no210 port map( A => rst, B => n988, Y => n1133);
+   U776 : na310 port map( A => n1134, B => n1135, C => n1136, Y => n988);
+   U777 : mu111 port map( A => n1137, B => n1138, S => n1139, Y => n1136);
+   U778 : na310 port map( A => n1119, B => n1140, C => n1141, Y => n1135);
+   U779 : iv110 port map( A => n1084, Y => n1119);
+   U780 : no310 port map( A => n1142, B => cur_state_3_port, C => n1110, Y => 
+                           n1084);
+   U781 : na210 port map( A => cur_state_4_port, B => n985, Y => n1134);
+   U782 : na210 port map( A => n1139, B => n1144, Y => n987);
+   U783 : iv110 port map( A => n1145, Y => n1139);
+   U784 : na210 port map( A => n1146, B => n1147, Y => n1145);
+   U785 : na210 port map( A => n981, B => n1148, Y => n1147);
+   U786 : na210 port map( A => n1149, B => n1150, Y => n955);
+   U787 : na310 port map( A => n993, B => n1151, C => n992, Y => n1150);
+   U788 : na210 port map( A => n1057, B => n1152, Y => n993);
+   U789 : na310 port map( A => n1153, B => n1154, C => n1155, Y => n1152);
+   U790 : no210 port map( A => n1156, B => n1157, Y => n1155);
+   U791 : iv110 port map( A => cur_timer_1_start, Y => n1156);
+   U792 : na210 port map( A => cur_state_5_port, B => n1148, Y => n1153);
+   U793 : na210 port map( A => n1158, B => cur_timer_1_start, Y => n1149);
+   U794 : na210 port map( A => n1159, B => n1151, Y => n1158);
+   U795 : iv110 port map( A => n991, Y => n1159);
+   U796 : na210 port map( A => n992, B => n1144, Y => n991);
+   U797 : na210 port map( A => cur_state_0_port, B => n1157, Y => n1144);
+   U798 : iv110 port map( A => n1160, Y => n992);
+   U799 : na310 port map( A => n1161, B => n1162, C => n1163, Y => n1160);
+   U800 : no210 port map( A => n1164, B => n1165, Y => n1163);
+   U801 : no210 port map( A => n1166, B => n1157, Y => n1165);
+   U802 : no210 port map( A => n1167, B => n1140, Y => n1166);
+   U803 : no210 port map( A => cur_state_0_port, B => n1168, Y => n1167);
+   U804 : no210 port map( A => n1169, B => n1148, Y => n1168);
+   U805 : no210 port map( A => n1170, B => n1124, Y => n1164);
+   U806 : no210 port map( A => n1171, B => n1138, Y => n1170);
+   U807 : na210 port map( A => cur_state_3_port, B => n1140, Y => n1162);
+   U808 : na310 port map( A => n981, B => n1172, C => n1173, Y => n1140);
+   U809 : iv110 port map( A => n1174, Y => n1173);
+   U810 : na210 port map( A => n1056, B => n1142, Y => n1161);
+   U811 : na210 port map( A => n1175, B => n1176, Y => n954);
+   U812 : na310 port map( A => n997, B => n1151, C => n996, Y => n1176);
+   U813 : iv110 port map( A => rst, Y => n1151);
+   U814 : na210 port map( A => n1177, B => n1178, Y => n997);
+   U815 : na310 port map( A => n981, B => n1179, C => n1180, Y => n1178);
+   U816 : iv110 port map( A => n1181, Y => n1179);
+   U817 : no310 port map( A => cur_state_6_port, B => cur_timer_1_reset, C => 
+                           n1137, Y => n1181);
+   U818 : na210 port map( A => cur_state_3_port, B => cur_state_0_port, Y => 
+                           n1177);
+   U819 : na210 port map( A => cur_timer_1_reset, B => n1182, Y => n1175);
+   U820 : iv110 port map( A => n1183, Y => n1182);
+   U821 : no210 port map( A => n998, B => rst, Y => n1183);
+   U822 : na310 port map( A => n996, B => n985, C => n1184, Y => n998);
+   U823 : mu111 port map( A => n1185, B => cur_state_5_port, S => 
+                           cur_state_4_port, Y => n1184);
+   U824 : iv110 port map( A => n1186, Y => n996);
+   U825 : na310 port map( A => n1146, B => n1187, C => n1188, Y => n1186);
+   U826 : no210 port map( A => n1189, B => n1174, Y => n1188);
+   U827 : mu111 port map( A => n1190, B => n1191, S => cur_state_4_port, Y => 
+                           n94);
+   U828 : na310 port map( A => n1192, B => n1193, C => n1194, Y => n1191);
+   U829 : no310 port map( A => n1195, B => n1196, C => n1197, Y => n1194);
+   U830 : no210 port map( A => n1198, B => n1187, Y => n1197);
+   U831 : no210 port map( A => n1199, B => n1200, Y => n1198);
+   U832 : no210 port map( A => n1201, B => n1202, Y => n1199);
+   U833 : no210 port map( A => n1203, B => n1204, Y => n1196);
+   U834 : no210 port map( A => n1205, B => n1189, Y => n1204);
+   U835 : no210 port map( A => cur_state_5_port, B => cur_state_3_port, Y => 
+                           n1205);
+   U836 : no210 port map( A => n1206, B => n1207, Y => n1203);
+   U837 : no210 port map( A => n1208, B => n1148, Y => n1207);
+   U838 : iv110 port map( A => n1209, Y => n1208);
+   U839 : no210 port map( A => check_empty, B => n1210, Y => n1206);
+   U840 : no210 port map( A => n1113, B => n1211, Y => n1195);
+   U841 : na210 port map( A => cur_state_1_port, B => n1212, Y => n1193);
+   U842 : na310 port map( A => n1213, B => n1214, C => n1215, Y => n1212);
+   U843 : na210 port map( A => n1137, B => n1216, Y => n1215);
+   U844 : na210 port map( A => n1217, B => n1200, Y => n1213);
+   U845 : mu111 port map( A => n1218, B => cur_state_1_port, S => 
+                           cur_state_2_port, Y => n1192);
+   U846 : na210 port map( A => n1219, B => n1169, Y => n1218);
+   U847 : na310 port map( A => n1220, B => n1221, C => n1222, Y => n1190);
+   U848 : no310 port map( A => n1223, B => n1224, C => n1225, Y => n1222);
+   U849 : no210 port map( A => n1226, B => n1227, Y => n1225);
+   U850 : no310 port map( A => n1228, B => cur_state_1_port, C => n1229, Y => 
+                           n1224);
+   U851 : no210 port map( A => n1113, B => n1230, Y => n1223);
+   U852 : na210 port map( A => n1231, B => n1232, Y => n1221);
+   U853 : mu111 port map( A => n1233, B => n1234, S => cur_state_2_port, Y => 
+                           n1220);
+   U854 : no310 port map( A => n1235, B => n1236, C => n1237, Y => n1234);
+   U855 : mu111 port map( A => cur_state_5_port, B => n1238, S => 
+                           cur_state_1_port, Y => n1237);
+   U856 : no210 port map( A => n1128, B => n1148, Y => n1236);
+   U857 : na210 port map( A => n1239, B => n1240, Y => n1235);
+   U858 : na210 port map( A => n1241, B => n1242, Y => n1240);
+   U859 : na210 port map( A => n1169, B => n1243, Y => n1239);
+   U860 : no210 port map( A => n1244, B => n1245, Y => n1233);
+   U861 : no210 port map( A => n1246, B => n1154, Y => n1244);
+   U862 : na310 port map( A => n1247, B => n1141, C => n1248, Y => n87);
+   U863 : mu111 port map( A => n1249, B => n1250, S => cur_state_4_port, Y => 
+                           n1248);
+   U864 : no310 port map( A => n1251, B => n1252, C => n1253, Y => n1250);
+   U865 : mu111 port map( A => n1254, B => n1255, S => cur_state_1_port, Y => 
+                           n1253);
+   U866 : na210 port map( A => n1256, B => n1257, Y => n1254);
+   U867 : na210 port map( A => n1258, B => n1259, Y => n1257);
+   U868 : na210 port map( A => n1260, B => n985, Y => n1259);
+   U869 : mu111 port map( A => inv_inputs_3_port, B => n1261, S => 
+                           cur_state_5_port, Y => n1260);
+   U870 : na210 port map( A => n1217, B => n1262, Y => n1256);
+   U871 : no210 port map( A => cur_state_2_port, B => n1263, Y => n1252);
+   U872 : no210 port map( A => n1264, B => n1265, Y => n1263);
+   U873 : no210 port map( A => n1219, B => n1266, Y => n1265);
+   U874 : no210 port map( A => n1267, B => n1169, Y => n1266);
+   U875 : no310 port map( A => n1148, B => draw_erase_ready, C => 
+                           cur_state_0_port, Y => n1267);
+   U876 : no310 port map( A => n1268, B => n1187, C => n1103, Y => n1264);
+   U877 : na210 port map( A => n1269, B => n1270, Y => n1251);
+   U878 : na310 port map( A => n1137, B => n1271, C => n1241, Y => n1270);
+   U879 : na210 port map( A => check_empty, B => n1216, Y => n1271);
+   U880 : na210 port map( A => n1272, B => n1273, Y => n1269);
+   U881 : no310 port map( A => n1274, B => n1275, C => n1276, Y => n1249);
+   U882 : no210 port map( A => n1277, B => n1278, Y => n1276);
+   U883 : no310 port map( A => n1279, B => n1280, C => n1281, Y => n1277);
+   U884 : no210 port map( A => n1282, B => n1242, Y => n1281);
+   U885 : no310 port map( A => n1283, B => n1138, C => n1187, Y => n1280);
+   U886 : no210 port map( A => n1113, B => n1103, Y => n1279);
+   U887 : no310 port map( A => n1148, B => n1284, C => n1216, Y => n1275);
+   U888 : no210 port map( A => n1285, B => n1286, Y => n1284);
+   U889 : no210 port map( A => n985, B => n1243, Y => n1285);
+   U890 : no210 port map( A => n1287, B => n1171, Y => n1274);
+   U891 : no310 port map( A => n1288, B => n1289, C => n1290, Y => n1287);
+   U892 : no210 port map( A => draw_erase_ready, B => n1291, Y => n1290);
+   U893 : no210 port map( A => n1292, B => n1293, Y => n1289);
+   U894 : no210 port map( A => n1294, B => n1200, Y => n1292);
+   U895 : no210 port map( A => n1219, B => n1138, Y => n1294);
+   U896 : iv110 port map( A => n1283, Y => n1219);
+   U897 : no210 port map( A => n1295, B => n1216, Y => n1288);
+   U898 : iv110 port map( A => n1238, Y => n1295);
+   U899 : na210 port map( A => n1296, B => n1297, Y => n1238);
+   U900 : na210 port map( A => n1298, B => n1299, Y => n1297);
+   U901 : na210 port map( A => n1300, B => n1301, Y => n1298);
+   U902 : na210 port map( A => n1302, B => n1143, Y => n1300);
+   U903 : na210 port map( A => n1189, B => check_empty, Y => n1296);
+   U904 : na210 port map( A => n1241, B => n1056, Y => n1141);
+   U905 : na310 port map( A => n1185, B => n1052, C => n1056, Y => n1247);
+   U906 : no310 port map( A => n1174, B => n1303, C => n1304, Y => n59);
+   U907 : no210 port map( A => n1305, B => n1180, Y => n1304);
+   U908 : iv110 port map( A => n1113, Y => n1180);
+   U909 : no210 port map( A => n1138, B => n1148, Y => n1305);
+   U910 : no210 port map( A => n1306, B => n1307, Y => n1303);
+   U911 : mu111 port map( A => n1308, B => n1278, S => n984, Y => n1307);
+   U912 : no210 port map( A => cur_state_3_port, B => n1114, Y => n1278);
+   U913 : no210 port map( A => check_empty, B => n1146, Y => n1308);
+   U914 : na210 port map( A => cur_state_3_port, B => n1157, Y => n1146);
+   U915 : no210 port map( A => n1157, B => n1309, Y => n1306);
+   U916 : mu111 port map( A => n1057, B => n1310, S => n980, Y => n1309);
+   U917 : na210 port map( A => cur_state_0_port, B => n1311, Y => n1310);
+   U918 : na210 port map( A => n1228, B => n1312, Y => n1174);
+   U919 : na210 port map( A => cur_state_3_port, B => n1216, Y => n1312);
+   U920 : mu111 port map( A => n1313, B => n1314, S => cur_state_4_port, Y => 
+                           n51);
+   U921 : na210 port map( A => n1315, B => n1316, Y => n1314);
+   U922 : na210 port map( A => cur_state_5_port, B => n1317, Y => n1316);
+   U923 : na310 port map( A => n1318, B => n1319, C => n1320, Y => n1317);
+   U924 : no210 port map( A => n1321, B => n1241, Y => n1320);
+   U925 : iv110 port map( A => n1172, Y => n1321);
+   U926 : na210 port map( A => cur_state_3_port, B => n1322, Y => n1319);
+   U927 : na210 port map( A => n1311, B => n1323, Y => n1322);
+   U928 : iv110 port map( A => timer_1_done, Y => n1311);
+   U929 : na210 port map( A => n1258, B => n1261, Y => n1318);
+   U930 : iv110 port map( A => clear_shift_ready, Y => n1261);
+   U931 : mu111 port map( A => n1201, B => n1324, S => cur_state_3_port, Y => 
+                           n1315);
+   U932 : no210 port map( A => n1325, B => n1273, Y => n1324);
+   U933 : no210 port map( A => n1326, B => n1327, Y => n1325);
+   U934 : no210 port map( A => n1328, B => n1329, Y => n1327);
+   U935 : no210 port map( A => n1148, B => n1103, Y => n1329);
+   U936 : no310 port map( A => n1187, B => inv_inputs_0_port, C => n1143, Y => 
+                           n1328);
+   U937 : na310 port map( A => n1330, B => n1331, C => n1332, Y => n1313);
+   U938 : no310 port map( A => n1333, B => n1334, C => n1335, Y => n1332);
+   U939 : no210 port map( A => n1336, B => n1138, Y => n1335);
+   U940 : no310 port map( A => n1337, B => n1241, C => n1338, Y => n1336);
+   U941 : no210 port map( A => n1202, B => n1339, Y => n1337);
+   U942 : no310 port map( A => n1052, B => n1216, C => n1148, Y => n1334);
+   U943 : no210 port map( A => n1201, B => n1299, Y => n1333);
+   U944 : no210 port map( A => n1340, B => n1341, Y => n1331);
+   U945 : no310 port map( A => n1342, B => n1255, C => n1187, Y => n1341);
+   U946 : mu111 port map( A => n1343, B => n1246, S => cur_state_2_port, Y => 
+                           n1342);
+   U947 : iv110 port map( A => draw_erase_ready, Y => n1246);
+   U948 : na210 port map( A => draw_score_ready, B => n1143, Y => n1343);
+   U949 : iv110 port map( A => n1097, Y => n1340);
+   U950 : no210 port map( A => n1344, B => n1345, Y => n1330);
+   U951 : no310 port map( A => n1210, B => cur_state_0_port, C => n1346, Y => 
+                           n1345);
+   U952 : iv110 port map( A => n1302, Y => n1346);
+   U953 : no310 port map( A => n1347, B => cur_state_1_port, C => n1348, Y => 
+                           n1344);
+   U954 : no210 port map( A => n1349, B => n1217, Y => n1348);
+   U955 : no210 port map( A => n1057, B => n1202, Y => n1349);
+   U956 : no210 port map( A => n1350, B => n1351, Y => n1347);
+   U957 : no210 port map( A => n1352, B => n1353, Y => n1351);
+   U958 : iv110 port map( A => n1354, Y => n1352);
+   U959 : no210 port map( A => cur_state_6_port, B => n1355, Y => n1350);
+   U960 : no210 port map( A => n1356, B => n1128, Y => n1355);
+   U961 : no210 port map( A => n1138, B => n1357, Y => n1356);
+   U962 : na310 port map( A => n1358, B => n1359, C => n1360, Y => n46);
+   U963 : mu111 port map( A => n1361, B => n1362, S => cur_state_4_port, Y => 
+                           n1360);
+   U964 : no210 port map( A => n1363, B => n1364, Y => n1362);
+   U965 : no210 port map( A => n1365, B => n1366, Y => n1363);
+   U966 : no210 port map( A => n1367, B => n1338, Y => n1366);
+   U967 : no210 port map( A => n1228, B => n1052, Y => n1367);
+   U968 : no210 port map( A => n1368, B => n1262, Y => n1365);
+   U969 : na210 port map( A => n1201, B => n1369, Y => n1262);
+   U970 : na210 port map( A => check_empty, B => cur_state_0_port, Y => n1369);
+   U971 : no210 port map( A => inv_inputs_3_port, B => cur_state_1_port, Y => 
+                           n1368);
+   U972 : no310 port map( A => n1370, B => n1371, C => n1372, Y => n1361);
+   U973 : na210 port map( A => n1373, B => n1374, Y => n1372);
+   U974 : na210 port map( A => n1217, B => n1375, Y => n1374);
+   U975 : na210 port map( A => n1376, B => n1377, Y => n1375);
+   U976 : na210 port map( A => n1185, B => n1378, Y => n1377);
+   U977 : na210 port map( A => n1103, B => n1230, Y => n1378);
+   U978 : mu111 port map( A => n1353, B => n1379, S => cur_state_1_port, Y => 
+                           n1376);
+   U979 : na210 port map( A => n1286, B => n1380, Y => n1373);
+   U980 : no210 port map( A => n1128, B => n1381, Y => n1286);
+   U981 : no310 port map( A => n1382, B => n1137, C => n1383, Y => n1381);
+   U982 : no210 port map( A => n1299, B => n1323, Y => n1371);
+   U983 : na310 port map( A => n1384, B => n1385, C => n1386, Y => n1370);
+   U984 : na210 port map( A => n1231, B => n1387, Y => n1386);
+   U985 : na210 port map( A => n1200, B => n1388, Y => n1387);
+   U986 : na210 port map( A => n1338, B => n1301, Y => n1384);
+   U987 : na210 port map( A => cur_state_5_port, B => n1242, Y => n1301);
+   U988 : iv110 port map( A => n1210, Y => n1338);
+   U989 : na310 port map( A => n1003, B => n1143, C => n1380, Y => n1359);
+   U990 : na210 port map( A => n1389, B => n1390, Y => n1358);
+   U991 : na210 port map( A => n1154, B => n1391, Y => n1390);
+   U992 : na210 port map( A => n1380, B => n1392, Y => n1391);
+   U993 : na210 port map( A => n1393, B => n1394, Y => n37);
+   U994 : na210 port map( A => n1241, B => n1395, Y => n1394);
+   U995 : na210 port map( A => n1396, B => n1397, Y => n1395);
+   U996 : na310 port map( A => n1389, B => n1143, C => check_ready, Y => n1397)
+                           ;
+   U997 : na210 port map( A => n1003, B => n1398, Y => n1396);
+   U998 : mu111 port map( A => n1399, B => n1400, S => cur_state_4_port, Y => 
+                           n1393);
+   U999 : no310 port map( A => n1401, B => n1402, C => n1403, Y => n1400);
+   U1000 : no210 port map( A => n1187, B => n1052, Y => n1403);
+   U1001 : no210 port map( A => cur_state_3_port, B => n1404, Y => n1402);
+   U1002 : no210 port map( A => n1405, B => n1406, Y => n1404);
+   U1003 : mu111 port map( A => n1407, B => n1408, S => cur_state_1_port, Y => 
+                           n1406);
+   U1004 : na310 port map( A => n1409, B => n1291, C => n1410, Y => n1408);
+   U1005 : mu111 port map( A => n1411, B => n1412, S => cur_state_2_port, Y => 
+                           n1410);
+   U1006 : na210 port map( A => n1229, B => cur_state_5_port, Y => n1412);
+   U1007 : na310 port map( A => n1143, B => n1383, C => n1413, Y => n1411);
+   U1008 : na210 port map( A => check_ready, B => n1200, Y => n1409);
+   U1009 : na210 port map( A => n1414, B => n1415, Y => n1407);
+   U1010 : na210 port map( A => n1273, B => n1416, Y => n1415);
+   U1011 : iv110 port map( A => n1417, Y => n1416);
+   U1012 : mu111 port map( A => n1418, B => n1419, S => cur_state_2_port, Y => 
+                           n1414);
+   U1013 : na210 port map( A => inv_inputs_3_port, B => n1200, Y => n1419);
+   U1014 : na210 port map( A => check_ready, B => n1143, Y => n1418);
+   U1015 : no210 port map( A => n1326, B => n1211, Y => n1405);
+   U1016 : iv110 port map( A => n1323, Y => n1326);
+   U1017 : na210 port map( A => n1420, B => n1421, Y => n1401);
+   U1018 : na210 port map( A => n1422, B => n1268, Y => n1421);
+   U1019 : na210 port map( A => n1380, B => n1423, Y => n1420);
+   U1020 : na310 port map( A => n1424, B => n1425, C => n1426, Y => n1423);
+   U1021 : na210 port map( A => cur_state_5_port, B => n1209, Y => n1426);
+   U1022 : na210 port map( A => n1214, B => n1427, Y => n1209);
+   U1023 : na210 port map( A => timer_1_done, B => cur_state_2_port, Y => n1427
                            );
-   U1257 : na210 port map( A => n2174, B => n2175, Y => n1878);
-   U1258 : na210 port map( A => next_piece(1), B => n2172, Y => n2175);
-   U1259 : na210 port map( A => cur_future_piece_1_port, B => n2173, Y => n2174
+   U1024 : na310 port map( A => n1283, B => n1216, C => n1398, Y => n1425);
+   U1025 : na210 port map( A => cur_state_5_port, B => n1392, Y => n1398);
+   U1026 : na310 port map( A => inv_inputs_4_port, B => cur_timer_1_time, C => 
+                           n1255, Y => n1424);
+   U1027 : no310 port map( A => n1428, B => n1429, C => n1430, Y => n1399);
+   U1028 : mu111 port map( A => n1431, B => n1432, S => cur_state_2_port, Y => 
+                           n1430);
+   U1029 : na310 port map( A => n1433, B => n1434, C => n1435, Y => n1432);
+   U1030 : no210 port map( A => n1422, B => n1436, Y => n1435);
+   U1031 : no310 port map( A => n1243, B => cur_state_5_port, C => n1299, Y => 
+                           n1436);
+   U1032 : iv110 port map( A => inv_inputs_2_port, Y => n1243);
+   U1033 : iv110 port map( A => n1282, Y => n1422);
+   U1034 : na210 port map( A => n1241, B => n1138, Y => n1282);
+   U1035 : na210 port map( A => n1380, B => n1437, Y => n1434);
+   U1036 : na210 port map( A => n1128, B => n1438, Y => n1437);
+   U1037 : na210 port map( A => cur_state_5_port, B => n1202, Y => n1438);
+   U1038 : na210 port map( A => n1241, B => n1283, Y => n1433);
+   U1039 : na210 port map( A => n1057, B => n1439, Y => n1431);
+   U1040 : na210 port map( A => n1241, B => n1232, Y => n1439);
+   U1041 : na210 port map( A => n1138, B => n1440, Y => n1232);
+   U1042 : na210 port map( A => n1143, B => n1388, Y => n1440);
+   U1043 : iv110 port map( A => draw_score_ready, Y => n1388);
+   U1044 : iv110 port map( A => n1187, Y => n1241);
+   U1045 : no210 port map( A => n986, B => n1441, Y => n1429);
+   U1046 : no310 port map( A => n1442, B => n1443, C => n1444, Y => n1441);
+   U1047 : no210 port map( A => cur_state_2_port, B => n1230, Y => n1444);
+   U1048 : na210 port map( A => cur_state_5_port, B => n1445, Y => n1230);
+   U1049 : na210 port map( A => inv_inputs_1_port, B => cur_state_0_port, Y => 
+                           n1445);
+   U1050 : no210 port map( A => n1446, B => n1228, Y => n1443);
+   U1051 : no210 port map( A => n1229, B => cur_state_5_port, Y => n1446);
+   U1052 : no210 port map( A => n1114, B => n1293, Y => n1442);
+   U1053 : na310 port map( A => n1447, B => n1448, C => n1449, Y => n1428);
+   U1054 : na210 port map( A => n1272, B => n1226, Y => n1449);
+   U1055 : na210 port map( A => n1450, B => n1451, Y => n1226);
+   U1056 : na210 port map( A => n982, B => n1283, Y => n1451);
+   U1057 : na210 port map( A => check_ready, B => cur_state_0_port, Y => n1283)
+                           ;
+   U1058 : na210 port map( A => n1452, B => n1143, Y => n1450);
+   U1059 : iv110 port map( A => n1227, Y => n1272);
+   U1060 : na210 port map( A => n1217, B => n986, Y => n1227);
+   U1061 : iv110 port map( A => n1293, Y => n1217);
+   U1062 : na210 port map( A => n1216, B => n1299, Y => n1293);
+   U1063 : na310 port map( A => n982, B => n1242, C => n1258, Y => n1448);
+   U1064 : na210 port map( A => draw_erase_ready, B => cur_state_0_port, Y => 
+                           n1242);
+   U1065 : na310 port map( A => n1323, B => n1299, C => n1200, Y => n1447);
+   U1066 : na210 port map( A => n1339, B => n1453, Y => n1323);
+   U1067 : na210 port map( A => n1171, B => n1216, Y => n1453);
+   U1068 : na310 port map( A => n1454, B => n1455, C => n1456, Y => n129);
+   U1069 : no210 port map( A => n1457, B => n1458, Y => n1456);
+   U1070 : no210 port map( A => n1459, B => n1124, Y => n1458);
+   U1071 : no210 port map( A => n1460, B => n1245, Y => n1459);
+   U1072 : no210 port map( A => n1143, B => n1148, Y => n1245);
+   U1073 : no310 port map( A => n1154, B => n1382, C => n1383, Y => n1460);
+   U1074 : iv110 port map( A => cur_timer_1_time, Y => n1382);
+   U1075 : no310 port map( A => n1110, B => n1379, C => n1172, Y => n1457);
+   U1076 : no210 port map( A => n1137, B => n1461, Y => n1379);
+   U1077 : no210 port map( A => n1452, B => n1052, Y => n1461);
+   U1078 : na210 port map( A => n1380, B => n1389, Y => n1455);
+   U1079 : mu111 port map( A => n1462, B => n1463, S => cur_state_4_port, Y => 
+                           n1454);
+   U1080 : no310 port map( A => n1364, B => n1464, C => n1465, Y => n1463);
+   U1081 : no210 port map( A => n1128, B => n1466, Y => n1465);
+   U1082 : iv110 port map( A => n1467, Y => n1466);
+   U1083 : na210 port map( A => n1468, B => n1469, Y => n1467);
+   U1084 : na210 port map( A => n1189, B => timer_1_done, Y => n1469);
+   U1085 : no210 port map( A => n1299, B => n1138, Y => n1189);
+   U1086 : na310 port map( A => n1169, B => cur_timer_1_time, C => 
+                           inv_inputs_4_port, Y => n1468);
+   U1087 : iv110 port map( A => n1154, Y => n1169);
+   U1088 : na210 port map( A => n1380, B => n1138, Y => n1154);
+   U1089 : iv110 port map( A => n1148, Y => n1380);
+   U1090 : iv110 port map( A => n1470, Y => n1128);
+   U1091 : no310 port map( A => n1471, B => cur_state_3_port, C => n1472, Y => 
+                           n1464);
+   U1092 : no210 port map( A => n1211, B => n1339, Y => n1472);
+   U1093 : na210 port map( A => n986, B => n983, Y => n1339);
+   U1094 : na210 port map( A => n1085, B => n1202, Y => n1211);
+   U1095 : iv110 port map( A => check_empty, Y => n1202);
+   U1096 : mu111 port map( A => n1473, B => n1474, S => cur_state_1_port, Y => 
+                           n1471);
+   U1097 : iv110 port map( A => n1291, Y => n1474);
+   U1098 : na210 port map( A => n1200, B => n1216, Y => n1291);
+   U1099 : no210 port map( A => n1475, B => n1470, Y => n1473);
+   U1100 : no210 port map( A => n1476, B => n1477, Y => n1475);
+   U1101 : no210 port map( A => n983, B => check_empty, Y => n1477);
+   U1102 : no210 port map( A => cur_state_0_port, B => n1417, Y => n1476);
+   U1103 : no210 port map( A => n1216, B => clear_shift_ready, Y => n1417);
+   U1104 : no210 port map( A => n1478, B => n1187, Y => n1364);
+   U1105 : na210 port map( A => cur_state_3_port, B => n1171, Y => n1187);
+   U1106 : iv110 port map( A => n1479, Y => n1478);
+   U1107 : na310 port map( A => n1480, B => n1138, C => n1481, Y => n1479);
+   U1108 : na210 port map( A => n1255, B => check_empty, Y => n1481);
+   U1109 : iv110 port map( A => n1214, Y => n1255);
+   U1110 : na210 port map( A => n983, B => n1143, Y => n1214);
+   U1111 : na310 port map( A => cur_state_0_port, B => n1216, C => 
+                           inv_inputs_0_port, Y => n1480);
+   U1112 : no310 port map( A => n1482, B => n1483, C => n1484, Y => n1462);
+   U1113 : no310 port map( A => n1302, B => n1052, C => n1210, Y => n1484);
+   U1114 : na210 port map( A => n1258, B => n986, Y => n1210);
+   U1115 : na310 port map( A => draw_erase_ready, B => n1383, C => n1413, Y => 
+                           n1302);
+   U1116 : iv110 port map( A => inv_inputs_5_port, Y => n1383);
+   U1117 : no310 port map( A => n1353, B => n1354, C => n1113, Y => n1483);
+   U1118 : na210 port map( A => n1171, B => n1299, Y => n1113);
+   U1119 : no310 port map( A => inv_inputs_4_port, B => inv_inputs_5_port, C =>
+                           n1452, Y => n1354);
+   U1120 : iv110 port map( A => n1413, Y => n1452);
+   U1121 : no310 port map( A => inv_inputs_2_port, B => inv_inputs_3_port, C =>
+                           n1485, Y => n1413);
+   U1122 : na210 port map( A => n1357, B => n1268, Y => n1485);
+   U1123 : iv110 port map( A => inv_inputs_0_port, Y => n1268);
+   U1124 : iv110 port map( A => inv_inputs_1_port, Y => n1357);
+   U1125 : na210 port map( A => cur_state_6_port, B => n1143, Y => n1353);
+   U1126 : no210 port map( A => n986, B => n1385, Y => n1482);
+   U1127 : na310 port map( A => n1258, B => n1138, C => n1229, Y => n1385);
+   U1128 : iv110 port map( A => n1392, Y => n1229);
+   U1129 : na210 port map( A => draw_erase_ready, B => n1143, Y => n1392);
+   U1130 : iv110 port map( A => n1486, Y => lut_next_piece);
+   U1131 : no210 port map( A => n1487, B => n1488, Y => n1486);
+   U1132 : no210 port map( A => n1096, B => n1052, Y => n1488);
+   U1133 : na210 port map( A => n1489, B => n1490, Y => draw_score_draw);
+   U1134 : na210 port map( A => n1002, B => n1491, Y => n1490);
+   U1135 : na210 port map( A => n1086, B => n1200, Y => n1489);
+   U1136 : na310 port map( A => n1492, B => n1493, C => n1494, Y => 
+                           draw_erase_start);
+   U1137 : no310 port map( A => n1487, B => n1495, C => n1496, Y => n1494);
+   U1138 : no210 port map( A => n1044, B => n1052, Y => n1496);
+   U1139 : no210 port map( A => n1122, B => n1097, Y => n1495);
+   U1140 : na210 port map( A => n1497, B => n1498, Y => n1487);
+   U1141 : na310 port map( A => n1056, B => n1108, C => n1200, Y => n1498);
+   U1142 : na210 port map( A => n1086, B => n1085, Y => n1497);
+   U1143 : na210 port map( A => n1499, B => n1137, Y => n1493);
+   U1144 : no210 port map( A => draw_erase_draw_port, B => n1500, Y => n1492);
+   U1145 : no210 port map( A => n1110, B => n1093, Y => n1500);
+   U1146 : na310 port map( A => n1501, B => n1502, C => n1503, Y => 
+                           draw_erase_draw_port);
+   U1147 : no310 port map( A => n1504, B => n1505, C => n1506, Y => n1503);
+   U1148 : no210 port map( A => n1057, B => n1045, Y => n1506);
+   U1149 : na210 port map( A => n1231, B => n1003, Y => n1045);
+   U1150 : no210 port map( A => n1507, B => n1123, Y => n1505);
+   U1151 : no210 port map( A => n1055, B => n1009, Y => n1507);
+   U1152 : iv110 port map( A => n1036, Y => n1009);
+   U1153 : na210 port map( A => n1108, B => n1137, Y => n1036);
+   U1154 : iv110 port map( A => n1070, Y => n1055);
+   U1155 : na210 port map( A => n1108, B => n1273, Y => n1070);
+   U1156 : no210 port map( A => n1104, B => n1096, Y => n1504);
+   U1157 : iv110 port map( A => n1508, Y => n1104);
+   U1158 : iv110 port map( A => n1125, Y => n1502);
+   U1159 : na210 port map( A => n1509, B => n1510, Y => n1125);
+   U1160 : na310 port map( A => n1112, B => n1470, C => n1491, Y => n1510);
+   U1161 : na210 port map( A => n1201, B => n1052, Y => n1470);
+   U1162 : na210 port map( A => n1086, B => n1273, Y => n1509);
+   U1163 : iv110 port map( A => n1129, Y => n1086);
+   U1164 : na210 port map( A => n1056, B => n1231, Y => n1129);
+   U1165 : no210 port map( A => n1511, B => n1512, Y => n1501);
+   U1166 : no210 port map( A => n1044, B => n1103, Y => n1512);
+   U1167 : no210 port map( A => n1124, B => n1097, Y => n1511);
+   U1168 : na210 port map( A => n1095, B => n1513, Y => clear_shift_start);
+   U1169 : na210 port map( A => n1499, B => n1273, Y => n1513);
+   U1170 : na210 port map( A => n1389, B => n1514, Y => n1095);
+   U1171 : na310 port map( A => n1515, B => n1001, C => n1516, Y => check_start
                            );
-   U1260 : na210 port map( A => n2176, B => n2177, Y => n1877);
-   U1261 : na210 port map( A => next_piece(2), B => n2172, Y => n2177);
-   U1262 : no210 port map( A => n2173, B => n2178, Y => n2172);
-   U1263 : iv110 port map( A => n2179, Y => n2178);
-   U1264 : na210 port map( A => cur_future_piece_2_port, B => n2173, Y => n2176
-                           );
-   U1265 : na310 port map( A => n2180, B => n2181, C => n2182, Y => n2173);
-   U1266 : no210 port map( A => n2153, B => n2183, Y => n2182);
-   U1267 : no210 port map( A => n2184, B => n2015, Y => n2183);
-   U1268 : no310 port map( A => n2185, B => n2160, C => n2186, Y => n2184);
-   U1269 : no210 port map( A => cur_state_6_port, B => n2187, Y => n2186);
-   U1270 : no210 port map( A => n2078, B => n1993, Y => n2187);
-   U1271 : no210 port map( A => n2188, B => n2189, Y => n2185);
-   U1272 : na210 port map( A => n1948, B => n2190, Y => n2181);
-   U1273 : iv110 port map( A => n2191, Y => n2180);
-   U1274 : mu111 port map( A => lut_next_piece_port, B => n2192, S => n2193, Y 
-                           => n1876);
-   U1275 : no310 port map( A => n2194, B => n2191, C => n2179, Y => n2193);
-   U1276 : na210 port map( A => n2195, B => n2196, Y => n2179);
-   U1277 : na210 port map( A => n2138, B => n2190, Y => n2196);
-   U1278 : na210 port map( A => n1998, B => n1995, Y => n2195);
-   U1279 : na310 port map( A => n2197, B => n2198, C => n2199, Y => n2191);
-   U1280 : no210 port map( A => rst, B => n2200, Y => n2199);
-   U1281 : na210 port map( A => n2022, B => n2201, Y => n2198);
-   U1282 : na210 port map( A => n2167, B => n2202, Y => n2201);
-   U1283 : mu111 port map( A => n1880, B => n2203, S => cur_state_6_port, Y => 
-                           n2197);
-   U1284 : na210 port map( A => n2204, B => n1929, Y => n2203);
-   U1285 : na210 port map( A => n2205, B => n2206, Y => n2194);
-   U1286 : na210 port map( A => n2153, B => n1936, Y => n2206);
-   U1287 : na210 port map( A => n2022, B => n1948, Y => n2205);
-   U1288 : na210 port map( A => n2207, B => n2208, Y => n2192);
-   U1289 : na310 port map( A => n2107, B => n1997, C => n2022, Y => n2208);
-   U1290 : na210 port map( A => n2153, B => n2204, Y => n2207);
-   U1291 : iv110 port map( A => n2209, Y => n2204);
-   U1292 : no210 port map( A => n2210, B => n2034, Y => n2153);
-   U1293 : mu111 port map( A => n2211, B => inv_inputs_7_port, S => rst, Y => 
-                           n1872);
-   U1294 : iv110 port map( A => inputs(7), Y => n2211);
-   U1295 : mu111 port map( A => n2212, B => inv_inputs_6_port, S => rst, Y => 
-                           n1871);
-   U1296 : iv110 port map( A => inputs(6), Y => n2212);
-   U1297 : iv110 port map( A => n2213, Y => n1870);
-   U1298 : mu111 port map( A => inputs(5), B => n2214, S => rst, Y => n2213);
-   U1299 : mu111 port map( A => n2215, B => inv_inputs_4_port, S => rst, Y => 
-                           n1869);
-   U1300 : iv110 port map( A => inputs(4), Y => n2215);
-   U1301 : mu111 port map( A => n2216, B => inv_inputs_3_port, S => rst, Y => 
-                           n1868);
-   U1302 : iv110 port map( A => inputs(3), Y => n2216);
-   U1303 : mu111 port map( A => n2217, B => inv_inputs_2_port, S => rst, Y => 
-                           n1867);
-   U1304 : iv110 port map( A => inputs(2), Y => n2217);
-   U1305 : iv110 port map( A => n2218, Y => n1866);
-   U1306 : mu111 port map( A => inputs(1), B => n2033, S => rst, Y => n2218);
-   U1307 : iv110 port map( A => n2219, Y => n1865);
-   U1308 : mu111 port map( A => inputs(0), B => n2035, S => rst, Y => n2219);
-   U1309 : iv110 port map( A => inv_inputs_0_port, Y => n2035);
-   U1310 : na210 port map( A => n2220, B => n2221, Y => n1864);
-   U1311 : na310 port map( A => n1909, B => n1907, C => n2222, Y => n2221);
-   U1312 : no210 port map( A => rst, B => n2223, Y => n2222);
-   U1313 : na210 port map( A => cur_timer_1_time_0_port, B => n2224, Y => n2220
-                           );
-   U1314 : na210 port map( A => n2225, B => n1882, Y => n2224);
-   U1315 : iv110 port map( A => n1910, Y => n2225);
-   U1316 : na310 port map( A => n1909, B => n2226, C => n2227, Y => n1910);
-   U1317 : no310 port map( A => n2228, B => n2223, C => n2229, Y => n2227);
-   U1318 : no210 port map( A => cur_state_5_port, B => n2230, Y => n2229);
-   U1319 : no210 port map( A => cur_state_1_port, B => cur_state_6_port, Y => 
-                           n2230);
-   U1320 : iv110 port map( A => n1908, Y => n2223);
-   U1321 : na210 port map( A => n1907, B => n2231, Y => n1908);
-   U1322 : no210 port map( A => n2152, B => n2015, Y => n2228);
-   U1323 : na210 port map( A => cur_state_4_port, B => n1888, Y => n2226);
-   U1324 : na210 port map( A => n2232, B => n2233, Y => n1863);
-   U1325 : na210 port map( A => cur_timer_1_time_1_port, B => n2234, Y => n2233
-                           );
-   U1326 : na210 port map( A => n1881, B => n1990, Y => n2234);
-   U1327 : na210 port map( A => n1904, B => n1883, Y => n2232);
-   U1328 : na210 port map( A => n2235, B => n2236, Y => n1904);
-   U1329 : na310 port map( A => n1958, B => n2237, C => n2238, Y => n2236);
-   U1330 : iv110 port map( A => n2239, Y => n1958);
-   U1331 : na210 port map( A => n2240, B => n1990, Y => n2235);
-   U1332 : na310 port map( A => n2241, B => n2242, C => n2243, Y => n2240);
-   U1333 : na210 port map( A => n2244, B => n2245, Y => n2243);
-   U1334 : na210 port map( A => cur_timer_1_time_1_port, B => n2246, Y => n2242
-                           );
-   U1335 : na310 port map( A => n2237, B => n1880, C => n2190, Y => n2246);
-   U1336 : iv110 port map( A => n2188, Y => n2190);
-   U1337 : na210 port map( A => n2107, B => n2247, Y => n2241);
-   U1338 : na210 port map( A => n1893, B => n2248, Y => n1862);
-   U1339 : na210 port map( A => rst, B => cur_timer_1_time_7_port, Y => n2248);
-   U1340 : na210 port map( A => cur_timer_1_time_7_port, B => n2249, Y => n1893
-                           );
-   U1341 : na210 port map( A => n1894, B => n2250, Y => n1861);
-   U1342 : na210 port map( A => rst, B => cur_timer_1_time_6_port, Y => n2250);
-   U1343 : na210 port map( A => cur_timer_1_time_6_port, B => n2249, Y => n1894
-                           );
-   U1344 : na210 port map( A => n1895, B => n2251, Y => n1860);
-   U1345 : na210 port map( A => rst, B => cur_timer_1_time_5_port, Y => n2251);
-   U1346 : na210 port map( A => cur_timer_1_time_5_port, B => n2249, Y => n1895
-                           );
-   U1347 : na310 port map( A => n2252, B => n1990, C => n2253, Y => n2249);
-   U1348 : no210 port map( A => n2254, B => n2255, Y => n2253);
-   U1349 : iv110 port map( A => n2256, Y => n2255);
-   U1350 : mu111 port map( A => n2107, B => n2257, S => n2237, Y => n2256);
-   U1351 : no210 port map( A => cur_state_3_port, B => n1949, Y => n2254);
-   U1352 : na210 port map( A => n2245, B => n2258, Y => n2252);
-   U1353 : na210 port map( A => n2259, B => n2260, Y => n1859);
-   U1354 : na210 port map( A => cur_draw_score_draw, B => rst, Y => n2260);
-   U1355 : na210 port map( A => n2261, B => n2262, Y => n1858);
-   U1356 : na310 port map( A => n2263, B => n1882, C => n2264, Y => n2262);
-   U1357 : iv110 port map( A => n2265, Y => n2264);
-   U1358 : na210 port map( A => cur_rot_0_port, B => n2266, Y => n2261);
-   U1359 : na210 port map( A => n2267, B => n2268, Y => n1857);
-   U1360 : na310 port map( A => n1890, B => n1881, C => n2269, Y => n2268);
-   U1361 : mu111 port map( A => n2270, B => n2271, S => cur_rot_0_port, Y => 
-                           n2269);
-   U1362 : na210 port map( A => cur_rot_new_0_port, B => n2272, Y => n2267);
-   U1363 : na210 port map( A => n2273, B => n2274, Y => n1856);
-   U1364 : na310 port map( A => n2263, B => n1883, C => n2275, Y => n2274);
-   U1365 : iv110 port map( A => n2276, Y => n2275);
-   U1366 : na210 port map( A => cur_rot_1_port, B => n2266, Y => n2273);
-   U1367 : na310 port map( A => n2263, B => n2154, C => n2277, Y => n2266);
-   U1368 : na210 port map( A => n2278, B => n2279, Y => n1855);
-   U1369 : na210 port map( A => n2280, B => n1882, Y => n2279);
-   U1370 : na210 port map( A => n2281, B => n2282, Y => n2280);
-   U1371 : na210 port map( A => n2283, B => cur_rot_1_port, Y => n2282);
-   U1372 : na210 port map( A => n2284, B => n2270, Y => n2281);
-   U1373 : mu111 port map( A => n2285, B => n2286, S => n2287, Y => n2284);
-   U1374 : ex210 port map( A => cur_rot_1_port, B => cur_rot_0_port, Y => n2287
-                           );
-   U1375 : na210 port map( A => n2288, B => n2021, Y => n2286);
-   U1376 : na210 port map( A => cur_state_6_port, B => n1890, Y => n2288);
-   U1377 : no210 port map( A => cur_state_6_port, B => n2289, Y => n2285);
-   U1378 : na210 port map( A => cur_rot_new_1_port, B => n2272, Y => n2278);
-   U1379 : na210 port map( A => n2290, B => n1881, Y => n2272);
-   U1380 : iv110 port map( A => n2291, Y => n2290);
-   U1381 : na210 port map( A => n2292, B => n2293, Y => n1854);
-   U1382 : na310 port map( A => n2294, B => n1883, C => n2295, Y => n2293);
-   U1383 : na210 port map( A => n2296, B => n2202, Y => n2294);
-   U1384 : na210 port map( A => n2297, B => n2298, Y => n2296);
-   U1385 : na210 port map( A => cur_x_0_port, B => n2299, Y => n2292);
-   U1386 : na210 port map( A => n2300, B => n1890, Y => n2299);
-   U1387 : mu111 port map( A => n2301, B => cur_x_new_1_port, S => rst, Y => 
-                           n1853);
-   U1388 : na210 port map( A => n2302, B => n2303, Y => n1852);
-   U1389 : na310 port map( A => n2304, B => n1882, C => n2305, Y => n2303);
-   U1390 : na210 port map( A => n2306, B => n2307, Y => n2304);
-   U1391 : na210 port map( A => n2297, B => n2301, Y => n2307);
-   U1392 : iv110 port map( A => n2308, Y => n2297);
-   U1393 : na210 port map( A => n1929, B => cur_state_5_port, Y => n2306);
-   U1394 : na210 port map( A => cur_x_1_port, B => n2309, Y => n2302);
-   U1395 : mu111 port map( A => n2310, B => cur_x_new_2_port, S => rst, Y => 
-                           n1851);
-   U1396 : na210 port map( A => n2311, B => n2312, Y => n1850);
-   U1397 : na310 port map( A => n2310, B => n1881, C => n2313, Y => n2312);
-   U1398 : no210 port map( A => n2308, B => n2314, Y => n2313);
-   U1399 : na210 port map( A => cur_x_2_port, B => n2309, Y => n2311);
-   U1400 : na310 port map( A => n2277, B => n2315, C => n2305, Y => n2309);
-   U1401 : iv110 port map( A => n2314, Y => n2305);
-   U1402 : na210 port map( A => n2295, B => n2316, Y => n2314);
-   U1403 : na210 port map( A => cur_state_5_port, B => n2047, Y => n2316);
-   U1404 : na210 port map( A => cur_state_5_port, B => n2102, Y => n2315);
-   U1405 : mu111 port map( A => n2298, B => cur_x_new_0_port, S => rst, Y => 
-                           n1849);
-   U1406 : na210 port map( A => n2317, B => n2318, Y => n1848);
-   U1407 : na210 port map( A => cur_new_piece, B => n2319, Y => n2318);
-   U1408 : na210 port map( A => n2320, B => n1883, Y => n2319);
-   U1409 : iv110 port map( A => n1922, Y => n2320);
-   U1410 : na310 port map( A => n1929, B => n2321, C => n2322, Y => n1922);
-   U1411 : na210 port map( A => cur_state_6_port, B => n1930, Y => n2321);
-   U1412 : na210 port map( A => n2323, B => n1882, Y => n2317);
-   U1413 : iv110 port map( A => n1920, Y => n2323);
-   U1414 : na210 port map( A => n2322, B => n2324, Y => n1920);
-   U1415 : na210 port map( A => n2325, B => n1938, Y => n2324);
-   U1416 : no210 port map( A => n2326, B => n2327, Y => n2322);
-   U1417 : no210 port map( A => n1998, B => n2238, Y => n2327);
-   U1418 : na210 port map( A => n2328, B => n2329, Y => n1847);
-   U1419 : na210 port map( A => cur_timer_1_time_4_port, B => n2330, Y => n2329
-                           );
-   U1420 : na210 port map( A => n2328, B => n2331, Y => n1846);
-   U1421 : na210 port map( A => cur_timer_1_time_3_port, B => n2330, Y => n2331
-                           );
-   U1422 : na210 port map( A => n2328, B => n2332, Y => n1845);
-   U1423 : na210 port map( A => cur_timer_1_time_2_port, B => n2330, Y => n2332
-                           );
-   U1424 : na210 port map( A => n2333, B => n1881, Y => n2330);
-   U1425 : iv110 port map( A => n1898, Y => n2333);
-   U1426 : na310 port map( A => n2334, B => n2335, C => n2336, Y => n1898);
-   U1427 : no210 port map( A => cur_state_4_port, B => n1998, Y => n2336);
-   U1428 : na210 port map( A => n2188, B => n1888, Y => n2335);
-   U1429 : na210 port map( A => n2337, B => n1883, Y => n2328);
-   U1430 : iv110 port map( A => n1896, Y => n2337);
-   U1431 : na210 port map( A => n2334, B => n2338, Y => n1896);
-   U1432 : na210 port map( A => n1938, B => n2339, Y => n2338);
-   U1433 : na210 port map( A => cur_state_5_port, B => n2340, Y => n2339);
-   U1434 : na210 port map( A => n1880, B => n2231, Y => n2340);
-   U1435 : na210 port map( A => n1989, B => n1929, Y => n1938);
-   U1436 : iv110 port map( A => n2341, Y => n2334);
-   U1437 : na210 port map( A => n1909, B => n2342, Y => n2341);
-   U1438 : na210 port map( A => n1907, B => n1966, Y => n2342);
-   U1439 : no210 port map( A => n2343, B => n1903, Y => n1909);
-   U1440 : iv110 port map( A => n1990, Y => n1903);
-   U1441 : no310 port map( A => n1888, B => n2244, C => n1940, Y => n2343);
-   U1442 : na310 port map( A => n2344, B => n2345, C => n2346, Y => n1844);
-   U1443 : na210 port map( A => cur_y_0_port, B => n2347, Y => n2346);
-   U1444 : na210 port map( A => n2348, B => n2349, Y => n2345);
-   U1445 : na210 port map( A => n2350, B => cur_y_new_0_port, Y => n2344);
-   U1446 : mu111 port map( A => n2349, B => cur_y_new_0_port, S => rst, Y => 
-                           n1843);
-   U1447 : mu111 port map( A => n2351, B => cur_y_new_1_port, S => rst, Y => 
-                           n1842);
-   U1448 : na310 port map( A => n2352, B => n2353, C => n2354, Y => n1841);
-   U1449 : na210 port map( A => cur_y_1_port, B => n2347, Y => n2354);
-   U1450 : na210 port map( A => n2348, B => n2351, Y => n2353);
-   U1451 : na210 port map( A => cur_y_new_1_port, B => n2350, Y => n2352);
-   U1452 : mu111 port map( A => n2355, B => cur_y_new_2_port, S => rst, Y => 
-                           n1840);
-   U1453 : na310 port map( A => n2356, B => n2357, C => n2358, Y => n1839);
-   U1454 : na210 port map( A => cur_y_2_port, B => n2347, Y => n2358);
-   U1455 : na210 port map( A => n2348, B => n2355, Y => n2357);
-   U1456 : na210 port map( A => cur_y_new_2_port, B => n2350, Y => n2356);
-   U1457 : mu111 port map( A => n2359, B => cur_y_new_3_port, S => rst, Y => 
-                           n1838);
-   U1458 : na310 port map( A => n2360, B => n2361, C => n2362, Y => n1837);
-   U1459 : na210 port map( A => cur_y_3_port, B => n2347, Y => n2362);
-   U1460 : na310 port map( A => n2300, B => n2363, C => n2364, Y => n2347);
-   U1461 : no210 port map( A => n2326, B => n2365, Y => n2364);
-   U1462 : no210 port map( A => n2366, B => n1968, Y => n2365);
-   U1463 : no210 port map( A => n2167, B => n2019, Y => n2366);
-   U1464 : na210 port map( A => n1982, B => n2102, Y => n2363);
-   U1465 : iv110 port map( A => n2367, Y => n2300);
-   U1466 : na210 port map( A => n2295, B => n2277, Y => n2367);
-   U1467 : no210 port map( A => rst, B => n2368, Y => n2277);
-   U1468 : iv110 port map( A => n2369, Y => n2368);
-   U1469 : na210 port map( A => n2348, B => n2359, Y => n2361);
-   U1470 : no210 port map( A => n2370, B => n2308, Y => n2348);
-   U1471 : na210 port map( A => cur_y_new_3_port, B => n2350, Y => n2360);
-   U1472 : no310 port map( A => n2370, B => n2019, C => n2371, Y => n2350);
-   U1473 : na210 port map( A => n2372, B => n2078, Y => n2371);
-   U1474 : na310 port map( A => n2007, B => n1882, C => n2295, Y => n2370);
-   U1475 : no210 port map( A => cur_state_3_port, B => n2373, Y => n2295);
-   U1476 : no210 port map( A => n2263, B => cur_state_5_port, Y => n2373);
-   U1477 : no210 port map( A => n2130, B => n2374, Y => n2263);
-   U1478 : no210 port map( A => n2032, B => n1993, Y => n2374);
-   U1479 : na210 port map( A => n2375, B => n2376, Y => n1836);
-   U1480 : na210 port map( A => n2377, B => cur_future_piece_2_port, Y => n2376
-                           );
-   U1481 : na210 port map( A => cur_piece_2_port, B => n2378, Y => n2375);
-   U1482 : na210 port map( A => n2379, B => n2380, Y => n1835);
-   U1483 : na210 port map( A => n2377, B => cur_future_piece_1_port, Y => n2380
-                           );
-   U1484 : na210 port map( A => cur_piece_1_port, B => n2378, Y => n2379);
-   U1485 : na210 port map( A => n2381, B => n2382, Y => n1834);
-   U1486 : na210 port map( A => n2377, B => cur_future_piece_0_port, Y => n2382
-                           );
-   U1487 : no310 port map( A => n2015, B => rst, C => n2202, Y => n2377);
-   U1488 : na210 port map( A => cur_piece_0_port, B => n2378, Y => n2381);
-   U1489 : na310 port map( A => n1880, B => n1881, C => n2383, Y => n2378);
-   U1490 : mu111 port map( A => n2160, B => n2001, S => cur_state_5_port, Y => 
-                           n2383);
-   U1491 : iv110 port map( A => n2202, Y => n2001);
-   U1492 : na210 port map( A => n1974, B => n1929, Y => n2202);
-   U1493 : na210 port map( A => n2384, B => n2385, Y => n1833);
-   U1494 : iv110 port map( A => n2386, Y => n2385);
-   U1495 : no310 port map( A => n2387, B => n2388, C => n2389, Y => n2386);
-   U1496 : na210 port map( A => n1883, B => n2390, Y => n2389);
-   U1497 : na210 port map( A => cur_lut_piece_type_2_port, B => n2391, Y => 
-                           n2384);
-   U1498 : na210 port map( A => n2392, B => n1882, Y => n2391);
-   U1499 : iv110 port map( A => n2393, Y => n2392);
-   U1500 : na210 port map( A => n2394, B => n2395, Y => n1832);
-   U1501 : na310 port map( A => n2396, B => n1881, C => n2397, Y => n2395);
-   U1502 : na210 port map( A => cur_lut_piece_type_1_port, B => n2398, Y => 
-                           n2394);
-   U1503 : na210 port map( A => n2399, B => n2400, Y => n1831);
-   U1504 : na310 port map( A => n2401, B => n1883, C => n2397, Y => n2400);
-   U1505 : na210 port map( A => cur_lut_piece_type_0_port, B => n2398, Y => 
-                           n2399);
-   U1506 : na210 port map( A => n2402, B => n1882, Y => n2398);
-   U1507 : iv110 port map( A => n2403, Y => n2402);
-   U1508 : na210 port map( A => n2404, B => n2405, Y => n1830);
-   U1509 : na310 port map( A => n2092, B => n1881, C => n2406, Y => n2405);
-   U1510 : na210 port map( A => cur_check_start, B => n2407, Y => n2404);
-   U1511 : na210 port map( A => n2408, B => n1883, Y => n2407);
-   U1512 : iv110 port map( A => n2409, Y => n2408);
-   U1513 : na210 port map( A => n2410, B => n2411, Y => n1829);
-   U1514 : na210 port map( A => n2412, B => n1882, Y => n2411);
-   U1515 : na210 port map( A => cur_lut_y_3_port, B => n2413, Y => n2410);
-   U1516 : na210 port map( A => n2414, B => n2415, Y => n1828);
-   U1517 : na210 port map( A => n2416, B => n1881, Y => n2415);
-   U1518 : na210 port map( A => cur_lut_y_2_port, B => n2413, Y => n2414);
-   U1519 : na210 port map( A => n2417, B => n2418, Y => n1827);
-   U1520 : na210 port map( A => n2419, B => n1883, Y => n2418);
-   U1521 : na210 port map( A => cur_lut_y_1_port, B => n2413, Y => n2417);
-   U1522 : na210 port map( A => n2420, B => n2421, Y => n1826);
-   U1523 : na210 port map( A => n2422, B => n1882, Y => n2421);
-   U1524 : na210 port map( A => cur_lut_y_0_port, B => n2413, Y => n2420);
-   U1525 : na210 port map( A => n2423, B => n1881, Y => n2413);
-   U1526 : iv110 port map( A => n2424, Y => n2423);
-   U1527 : na210 port map( A => n2425, B => n2426, Y => n1825);
-   U1528 : na210 port map( A => n2427, B => n2428, Y => n2426);
-   U1529 : na210 port map( A => cur_lut_rot_1_port, B => n2429, Y => n2425);
-   U1530 : na210 port map( A => n2430, B => n2431, Y => n1824);
-   U1531 : na210 port map( A => n2427, B => n2432, Y => n2431);
-   U1532 : na210 port map( A => cur_lut_x_0_port, B => n2429, Y => n2430);
-   U1533 : na210 port map( A => n2433, B => n2434, Y => n1823);
-   U1534 : na210 port map( A => n2427, B => n2435, Y => n2434);
-   U1535 : na210 port map( A => cur_lut_x_1_port, B => n2429, Y => n2433);
-   U1536 : na210 port map( A => n2436, B => n2437, Y => n1822);
-   U1537 : na210 port map( A => n2427, B => n2438, Y => n2437);
-   U1538 : na210 port map( A => cur_lut_x_2_port, B => n2429, Y => n2436);
-   U1539 : na210 port map( A => n2439, B => n2440, Y => n1821);
-   U1540 : na210 port map( A => n2427, B => n2441, Y => n2440);
-   U1541 : no210 port map( A => n2442, B => rst, Y => n2427);
-   U1542 : na210 port map( A => cur_lut_rot_0_port, B => n2429, Y => n2439);
-   U1543 : na210 port map( A => n2443, B => n1883, Y => n2429);
-   U1544 : iv110 port map( A => n2444, Y => n2443);
-   U1545 : na210 port map( A => n2445, B => n2446, Y => n1820);
-   U1546 : na210 port map( A => cur_draw_erase_start, B => n2447, Y => n2446);
-   U1547 : na210 port map( A => n2448, B => n1882, Y => n2447);
-   U1548 : iv110 port map( A => n2449, Y => n2448);
-   U1549 : na210 port map( A => n2450, B => n1881, Y => n2445);
-   U1550 : na210 port map( A => n2451, B => n2452, Y => n1819);
-   U1551 : iv110 port map( A => n2453, Y => n2451);
-   U1552 : mu111 port map( A => n2454, B => cur_draw_erase_draw, S => rst, Y =>
-                           n2453);
-   U1553 : na210 port map( A => n2455, B => n2456, Y => n1818);
-   U1554 : na310 port map( A => n2457, B => n1883, C => n2245, Y => n2456);
-   U1555 : na210 port map( A => cur_clear_shift_start, B => n2458, Y => n2455);
-   U1556 : na210 port map( A => n2459, B => n1882, Y => n2458);
-   U1557 : iv110 port map( A => n2460, Y => n2459);
-   U1558 : na210 port map( A => n2461, B => n2462, Y => n1817);
-   U1559 : na310 port map( A => n1915, B => n1881, C => n1914, Y => n2462);
-   U1560 : na210 port map( A => n2463, B => n2464, Y => n1914);
-   U1561 : na210 port map( A => n2465, B => n1889, Y => n2464);
-   U1562 : mu111 port map( A => n2466, B => cur_timer_1_start, S => n2467, Y =>
-                           n2465);
-   U1563 : no210 port map( A => n2468, B => n2469, Y => n2467);
-   U1564 : mu111 port map( A => n2152, B => n2244, S => cur_state_5_port, Y => 
-                           n2469);
-   U1565 : no210 port map( A => n1968, B => n2167, Y => n2468);
-   U1566 : no210 port map( A => n1949, B => n1930, Y => n2466);
-   U1567 : na210 port map( A => n2470, B => n2078, Y => n2463);
-   U1568 : na210 port map( A => cur_timer_1_start, B => n2471, Y => n2461);
-   U1569 : na210 port map( A => n2472, B => n1883, Y => n2471);
-   U1570 : na210 port map( A => n2473, B => n2474, Y => n1816);
-   U1571 : na310 port map( A => n1915, B => n1882, C => n1918, Y => n2474);
-   U1572 : na210 port map( A => n2475, B => n2325, Y => n1918);
-   U1573 : na210 port map( A => n1982, B => n2476, Y => n2325);
-   U1574 : na210 port map( A => n2102, B => n1995, Y => n2476);
-   U1575 : iv110 port map( A => n2092, Y => n1982);
-   U1576 : na210 port map( A => n2107, B => n1907, Y => n2475);
-   U1577 : na210 port map( A => cur_timer_1_reset, B => n2477, Y => n2473);
-   U1578 : na210 port map( A => n2478, B => n1881, Y => n2477);
-   U1579 : iv110 port map( A => n1919, Y => n2478);
-   U1580 : na310 port map( A => n2479, B => n2289, C => n2472, Y => n1919);
-   U1581 : iv110 port map( A => n1913, Y => n2472);
-   U1582 : na210 port map( A => n1915, B => n2257, Y => n1913);
-   U1583 : na210 port map( A => n1888, B => n2480, Y => n2257);
-   U1584 : na210 port map( A => n2034, B => n1995, Y => n2480);
-   U1585 : na210 port map( A => n1984, B => n2209, Y => n1915);
-   U1586 : na210 port map( A => n2154, B => n1947, Y => n2209);
-   U1587 : na210 port map( A => n1889, B => n2102, Y => n2479);
-   U1588 : na210 port map( A => n2481, B => n2482, Y => n166);
-   U1589 : na310 port map( A => cur_state_6_port, B => n1947, C => n2483, Y => 
-                           n2482);
-   U1590 : no210 port map( A => n1889, B => n2247, Y => n2483);
-   U1591 : na310 port map( A => n2245, B => n2484, C => n2138, Y => n2481);
-   U1592 : na210 port map( A => n2020, B => n2485, Y => n2484);
-   U1593 : na210 port map( A => n2019, B => n1949, Y => n2485);
-   U1594 : na310 port map( A => n2486, B => n2487, C => n2488, Y => n159);
-   U1595 : no310 port map( A => n2489, B => n2200, C => n2490, Y => n2488);
-   U1596 : no310 port map( A => n2018, B => n1929, C => n2021, Y => n2490);
-   U1597 : no210 port map( A => n2491, B => n2110, Y => n2489);
-   U1598 : no210 port map( A => n2492, B => n1993, Y => n2491);
-   U1599 : no210 port map( A => cur_state_1_port, B => n2056, Y => n2492);
-   U1600 : no210 port map( A => cur_state_4_port, B => n2493, Y => n2056);
-   U1601 : no210 port map( A => n2214, B => n2123, Y => n2493);
-   U1602 : na310 port map( A => n2494, B => n2495, C => n2496, Y => n2123);
-   U1603 : no310 port map( A => n2497, B => n2498, C => n2499, Y => n2496);
-   U1604 : iv110 port map( A => cur_timer_1_time_3_port, Y => n2499);
-   U1605 : iv110 port map( A => cur_timer_1_time_4_port, Y => n2498);
-   U1606 : na210 port map( A => cur_timer_1_time_1_port, B => 
-                           cur_timer_1_time_2_port, Y => n2497);
-   U1607 : no210 port map( A => cur_timer_1_time_7_port, B => 
-                           cur_timer_1_time_6_port, Y => n2495);
-   U1608 : no210 port map( A => cur_timer_1_time_5_port, B => 
-                           cur_timer_1_time_0_port, Y => n2494);
-   U1609 : iv110 port map( A => inv_inputs_5_port, Y => n2214);
-   U1610 : na210 port map( A => cur_state_4_port, B => n2500, Y => n2487);
-   U1611 : iv110 port map( A => n2501, Y => n2500);
-   U1612 : no210 port map( A => n1998, B => n2502, Y => n2501);
-   U1613 : na210 port map( A => n1889, B => n2503, Y => n2486);
-   U1614 : na310 port map( A => n2504, B => n2505, C => n2506, Y => n2503);
-   U1615 : no310 port map( A => n2507, B => n2508, C => n2509, Y => n2506);
-   U1616 : no310 port map( A => n1968, B => n1892, C => n2510, Y => n2509);
-   U1617 : no210 port map( A => n2511, B => cur_state_4_port, Y => n2510);
-   U1618 : no210 port map( A => cur_state_1_port, B => n2019, Y => n2511);
-   U1619 : iv110 port map( A => check_empty, Y => n2019);
-   U1620 : no210 port map( A => n2512, B => n2089, Y => n2507);
-   U1621 : no210 port map( A => n2513, B => n2091, Y => n2512);
-   U1622 : no210 port map( A => n1940, B => n2140, Y => n2513);
-   U1623 : na210 port map( A => cur_state_4_port, B => n1997, Y => n2140);
-   U1624 : na210 port map( A => n1936, B => n2034, Y => n2505);
-   U1625 : no210 port map( A => n2514, B => n2515, Y => n2504);
-   U1626 : no210 port map( A => n1993, B => n2121, Y => n2515);
-   U1627 : no210 port map( A => n2516, B => n1949, Y => n2514);
-   U1628 : no210 port map( A => n2517, B => n1974, Y => n2516);
-   U1629 : no310 port map( A => n2518, B => cur_state_5_port, C => n2519, Y => 
-                           n2517);
-   U1630 : iv110 port map( A => n2004, Y => n2519);
-   U1631 : na310 port map( A => n2520, B => n2521, C => n2522, Y => n2004);
-   U1632 : no310 port map( A => inv_inputs_0_port, B => inv_inputs_2_port, C =>
-                           inv_inputs_1_port, Y => n2522);
-   U1633 : no210 port map( A => inv_inputs_7_port, B => inv_inputs_6_port, Y =>
-                           n2521);
-   U1634 : no210 port map( A => inv_inputs_5_port, B => inv_inputs_3_port, Y =>
-                           n2520);
-   U1635 : no210 port map( A => n2523, B => n1947, Y => n2518);
-   U1636 : no210 port map( A => n1892, B => n2033, Y => n2523);
-   U1637 : iv110 port map( A => inv_inputs_1_port, Y => n2033);
-   U1638 : na210 port map( A => n2524, B => n2525, Y => lut_y(3));
-   U1639 : na210 port map( A => cur_lut_y_3_port, B => n2424, Y => n2525);
-   U1640 : iv110 port map( A => n2412, Y => n2524);
-   U1641 : na210 port map( A => n2526, B => n2527, Y => n2412);
-   U1642 : na210 port map( A => n2528, B => n2359, Y => n2527);
-   U1643 : na210 port map( A => n2529, B => n2530, Y => n2359);
-   U1644 : na210 port map( A => cur_y_new_3_port, B => n2531, Y => n2530);
-   U1645 : mu111 port map( A => n2532, B => n2533, S => cur_y_3_port, Y => 
-                           n2529);
-   U1646 : no210 port map( A => n2534, B => n2535, Y => n2533);
-   U1647 : no210 port map( A => cur_y_2_port, B => n2536, Y => n2534);
-   U1648 : na210 port map( A => n2537, B => cur_y_2_port, Y => n2532);
-   U1649 : iv110 port map( A => n2538, Y => n2537);
-   U1650 : na210 port map( A => n2539, B => cur_y_3_port, Y => n2526);
-   U1651 : na210 port map( A => n2540, B => n2541, Y => lut_y(2));
-   U1652 : na210 port map( A => cur_lut_y_2_port, B => n2424, Y => n2541);
-   U1653 : iv110 port map( A => n2416, Y => n2540);
-   U1654 : na210 port map( A => n2542, B => n2543, Y => n2416);
-   U1655 : na210 port map( A => n2528, B => n2355, Y => n2543);
-   U1656 : na210 port map( A => n2544, B => n2545, Y => n2355);
-   U1657 : na210 port map( A => cur_y_new_2_port, B => n2531, Y => n2545);
-   U1658 : mu111 port map( A => n2538, B => n2546, S => cur_y_2_port, Y => 
-                           n2544);
-   U1659 : iv110 port map( A => n2535, Y => n2546);
-   U1660 : na210 port map( A => n2547, B => n2548, Y => n2535);
-   U1661 : na210 port map( A => n2549, B => n2550, Y => n2548);
-   U1662 : na310 port map( A => n2549, B => cur_y_0_port, C => cur_y_1_port, Y 
-                           => n2538);
-   U1663 : na210 port map( A => n2539, B => cur_y_2_port, Y => n2542);
-   U1664 : na210 port map( A => n2551, B => n2552, Y => lut_y(1));
-   U1665 : na210 port map( A => cur_lut_y_1_port, B => n2424, Y => n2552);
-   U1666 : iv110 port map( A => n2419, Y => n2551);
-   U1667 : na210 port map( A => n2553, B => n2554, Y => n2419);
-   U1668 : na210 port map( A => n2528, B => n2351, Y => n2554);
-   U1669 : na210 port map( A => n2555, B => n2556, Y => n2351);
-   U1670 : na210 port map( A => cur_y_new_1_port, B => n2531, Y => n2556);
-   U1671 : mu111 port map( A => n2547, B => n2557, S => n2550, Y => n2555);
-   U1672 : iv110 port map( A => cur_y_1_port, Y => n2550);
-   U1673 : na210 port map( A => n2549, B => cur_y_0_port, Y => n2557);
-   U1674 : no210 port map( A => n2558, B => n2559, Y => n2547);
-   U1675 : no210 port map( A => n2536, B => cur_y_0_port, Y => n2559);
-   U1676 : iv110 port map( A => n2549, Y => n2536);
-   U1677 : na210 port map( A => n2539, B => cur_y_1_port, Y => n2553);
-   U1678 : na210 port map( A => n2560, B => n2561, Y => lut_y(0));
-   U1679 : na210 port map( A => cur_lut_y_0_port, B => n2424, Y => n2561);
-   U1680 : na310 port map( A => n2562, B => n2563, C => n2564, Y => n2424);
-   U1681 : no210 port map( A => n2565, B => n2566, Y => n2564);
-   U1682 : no210 port map( A => cur_state_4_port, B => n2567, Y => n2566);
-   U1683 : no310 port map( A => n2021, B => n1892, C => n2568, Y => n2565);
-   U1684 : na210 port map( A => n2569, B => cur_state_1_port, Y => n2563);
-   U1685 : iv110 port map( A => n2422, Y => n2560);
-   U1686 : na210 port map( A => n2570, B => n2571, Y => n2422);
-   U1687 : na210 port map( A => n2539, B => cur_y_0_port, Y => n2571);
-   U1688 : iv110 port map( A => n2572, Y => n2539);
-   U1689 : na210 port map( A => n2562, B => n2573, Y => n2572);
-   U1690 : na210 port map( A => n2574, B => n1880, Y => n2573);
-   U1691 : no310 port map( A => n2575, B => n1989, C => n2388, Y => n2562);
-   U1692 : iv110 port map( A => n2576, Y => n2388);
-   U1693 : no210 port map( A => n1888, B => n2508, Y => n2575);
-   U1694 : no310 port map( A => n1892, B => n1891, C => n2167, Y => n2508);
-   U1695 : na210 port map( A => n2528, B => n2349, Y => n2570);
-   U1696 : na210 port map( A => n2577, B => n2578, Y => n2349);
-   U1697 : na210 port map( A => cur_y_new_0_port, B => n2531, Y => n2578);
-   U1698 : na310 port map( A => n2579, B => n2580, C => n2581, Y => n2531);
-   U1699 : na210 port map( A => n2154, B => n2582, Y => n2581);
-   U1700 : na210 port map( A => n1889, B => n2583, Y => n2580);
-   U1701 : na210 port map( A => n1936, B => n1976, Y => n2583);
-   U1702 : na210 port map( A => n1998, B => n2003, Y => n2579);
-   U1703 : iv110 port map( A => n2584, Y => n2577);
-   U1704 : mu111 port map( A => n2549, B => n2558, S => cur_y_0_port, Y => 
-                           n2584);
-   U1705 : na310 port map( A => n2585, B => n2586, C => n2587, Y => n2558);
-   U1706 : na210 port map( A => n2569, B => n2107, Y => n2587);
-   U1707 : na310 port map( A => n1889, B => n1976, C => n1936, Y => n2586);
-   U1708 : iv110 port map( A => n2110, Y => n1936);
-   U1709 : na210 port map( A => n1974, B => n1940, Y => n2110);
-   U1710 : na210 port map( A => n2502, B => n1993, Y => n2585);
-   U1711 : no210 port map( A => n2003, B => n2015, Y => n2549);
-   U1712 : na210 port map( A => n1993, B => n1947, Y => n2003);
-   U1713 : iv110 port map( A => n2588, Y => n2528);
-   U1714 : na310 port map( A => n2576, B => cur_state_4_port, C => n2589, Y => 
-                           n2588);
-   U1715 : no310 port map( A => n2567, B => n1889, C => n1989, Y => n2589);
-   U1716 : no210 port map( A => n2372, B => n2590, Y => n2567);
-   U1717 : no210 port map( A => n2308, B => cur_state_1_port, Y => n2590);
-   U1718 : na210 port map( A => n2591, B => n2592, Y => lut_x(2));
-   U1719 : na210 port map( A => n2593, B => n2438, Y => n2592);
-   U1720 : na210 port map( A => n2594, B => n2595, Y => n2438);
-   U1721 : na210 port map( A => n2569, B => n2310, Y => n2595);
-   U1722 : na310 port map( A => n2596, B => n2597, C => n2598, Y => n2310);
-   U1723 : na210 port map( A => cur_x_new_2_port, B => n2291, Y => n2598);
-   U1724 : na210 port map( A => n2599, B => n2283, Y => n2597);
-   U1725 : mu111 port map( A => n2600, B => n2601, S => cur_x_2_port, Y => 
-                           n2599);
-   U1726 : ex210 port map( A => n2602, B => n2603, Y => n2601);
-   U1727 : iv110 port map( A => n2604, Y => n2600);
-   U1728 : mu111 port map( A => n2602, B => n2200, S => n2603, Y => n2604);
-   U1729 : iv110 port map( A => n2605, Y => n2603);
-   U1730 : na210 port map( A => cur_x_2_port, B => n2606, Y => n2596);
-   U1731 : na210 port map( A => cur_x_2_port, B => n2607, Y => n2594);
-   U1732 : na210 port map( A => cur_lut_x_2_port, B => n2444, Y => n2591);
-   U1733 : na210 port map( A => n2608, B => n2609, Y => lut_x(1));
-   U1734 : na210 port map( A => n2593, B => n2435, Y => n2609);
-   U1735 : na210 port map( A => n2610, B => n2611, Y => n2435);
-   U1736 : na210 port map( A => n2569, B => n2301, Y => n2611);
-   U1737 : na310 port map( A => n2612, B => n2613, C => n2614, Y => n2301);
-   U1738 : na210 port map( A => cur_x_new_1_port, B => n2291, Y => n2614);
-   U1739 : na210 port map( A => n2283, B => n2615, Y => n2613);
-   U1740 : na210 port map( A => n2602, B => n2616, Y => n2615);
-   U1741 : na210 port map( A => n2617, B => n2618, Y => n2616);
-   U1742 : ex210 port map( A => cur_x_1_port, B => cur_x_0_port, Y => n2617);
-   U1743 : na210 port map( A => n2200, B => n2619, Y => n2602);
-   U1744 : na210 port map( A => n2605, B => n2620, Y => n2619);
-   U1745 : na210 port map( A => n2621, B => n2622, Y => n2620);
-   U1746 : iv110 port map( A => cur_x_1_port, Y => n2622);
-   U1747 : iv110 port map( A => cur_x_0_port, Y => n2621);
-   U1748 : na210 port map( A => cur_x_1_port, B => cur_x_0_port, Y => n2605);
-   U1749 : iv110 port map( A => n2618, Y => n2200);
-   U1750 : na210 port map( A => n2022, B => n1993, Y => n2618);
-   U1751 : no210 port map( A => n2021, B => cur_state_6_port, Y => n2022);
-   U1752 : iv110 port map( A => n2623, Y => n2283);
-   U1753 : na210 port map( A => cur_x_1_port, B => n2606, Y => n2612);
-   U1754 : iv110 port map( A => n2624, Y => n2606);
-   U1755 : na210 port map( A => cur_x_1_port, B => n2607, Y => n2610);
-   U1756 : na210 port map( A => cur_lut_x_1_port, B => n2444, Y => n2608);
-   U1757 : na210 port map( A => n2625, B => n2626, Y => lut_x(0));
-   U1758 : na210 port map( A => n2593, B => n2432, Y => n2626);
-   U1759 : na210 port map( A => n2627, B => n2628, Y => n2432);
-   U1760 : na210 port map( A => n2569, B => n2298, Y => n2628);
-   U1761 : na210 port map( A => n2629, B => n2630, Y => n2298);
-   U1762 : na210 port map( A => cur_x_new_0_port, B => n2291, Y => n2630);
-   U1763 : na210 port map( A => n2631, B => n1940, Y => n2291);
-   U1764 : mu111 port map( A => n2632, B => n2633, S => cur_state_3_port, Y => 
-                           n2631);
-   U1765 : no210 port map( A => n1973, B => n2047, Y => n2633);
-   U1766 : iv110 port map( A => n2582, Y => n2632);
-   U1767 : na310 port map( A => n2634, B => n2635, C => n2636, Y => n2582);
-   U1768 : na210 port map( A => n1947, B => n2188, Y => n2636);
-   U1769 : na210 port map( A => n1892, B => n2231, Y => n2635);
-   U1770 : na210 port map( A => n2138, B => n1969, Y => n2634);
-   U1771 : mu111 port map( A => n2623, B => n2624, S => cur_x_0_port, Y => 
-                           n2629);
-   U1772 : na210 port map( A => n2270, B => n1940, Y => n2624);
-   U1773 : na210 port map( A => n2637, B => n2638, Y => n2270);
-   U1774 : na310 port map( A => n1892, B => n1880, C => n2107, Y => n2638);
-   U1775 : iv110 port map( A => n2231, Y => n2107);
-   U1776 : na210 port map( A => n2152, B => n1949, Y => n2231);
-   U1777 : iv110 port map( A => n1966, Y => n2152);
-   U1778 : na210 port map( A => n2639, B => n2034, Y => n2637);
-   U1779 : na210 port map( A => n2271, B => n1940, Y => n2623);
-   U1780 : na210 port map( A => n2640, B => n2641, Y => n2271);
-   U1781 : na310 port map( A => n1993, B => n1888, C => n2138, Y => n2641);
-   U1782 : iv110 port map( A => n2189, Y => n2138);
-   U1783 : na210 port map( A => n2639, B => n1885, Y => n2640);
-   U1784 : no310 port map( A => n1880, B => n1973, C => n2047, Y => n2639);
-   U1785 : iv110 port map( A => n1976, Y => n1973);
-   U1786 : na210 port map( A => n1969, B => n2102, Y => n1976);
-   U1787 : na210 port map( A => cur_x_0_port, B => n2607, Y => n2627);
-   U1788 : na210 port map( A => cur_lut_x_0_port, B => n2444, Y => n2625);
-   U1789 : na210 port map( A => n2642, B => n2643, Y => lut_rot(1));
-   U1790 : na210 port map( A => n2593, B => n2428, Y => n2643);
-   U1791 : na210 port map( A => n2644, B => n2276, Y => n2428);
-   U1792 : na210 port map( A => cur_rot_new_1_port, B => n2569, Y => n2276);
-   U1793 : na210 port map( A => cur_rot_1_port, B => n2607, Y => n2644);
-   U1794 : na210 port map( A => cur_lut_rot_1_port, B => n2444, Y => n2642);
-   U1795 : na210 port map( A => n2645, B => n2646, Y => lut_rot(0));
-   U1796 : na210 port map( A => n2593, B => n2441, Y => n2646);
-   U1797 : na210 port map( A => n2647, B => n2265, Y => n2441);
-   U1798 : na210 port map( A => cur_rot_new_0_port, B => n2569, Y => n2265);
-   U1799 : iv110 port map( A => n2648, Y => n2569);
-   U1800 : na210 port map( A => cur_rot_0_port, B => n2607, Y => n2647);
-   U1801 : na210 port map( A => n2649, B => n2574, Y => n2607);
-   U1802 : na210 port map( A => n1998, B => n1930, Y => n2574);
-   U1803 : na210 port map( A => cur_state_4_port, B => n2021, Y => n2649);
-   U1804 : na210 port map( A => cur_lut_rot_0_port, B => n2444, Y => n2645);
-   U1805 : na210 port map( A => n2593, B => n2650, Y => n2444);
-   U1806 : na210 port map( A => n2651, B => n1949, Y => n2650);
-   U1807 : na210 port map( A => n1888, B => n1968, Y => n2651);
-   U1808 : iv110 port map( A => n2442, Y => n2593);
-   U1809 : na310 port map( A => n2652, B => n2653, C => n2576, Y => n2442);
-   U1810 : na310 port map( A => n2654, B => n2655, C => n2154, Y => n2653);
-   U1811 : na210 port map( A => n2568, B => n1947, Y => n2655);
-   U1812 : na210 port map( A => n1974, B => n2078, Y => n2654);
-   U1813 : na210 port map( A => n1889, B => n2656, Y => n2652);
-   U1814 : na210 port map( A => n1947, B => n2034, Y => n2656);
-   U1815 : na210 port map( A => n2657, B => n2658, Y => lut_piece_type(2));
-   U1816 : na310 port map( A => n2576, B => n2390, C => n2659, Y => n2658);
-   U1817 : na210 port map( A => n2660, B => n2661, Y => n2390);
-   U1818 : na210 port map( A => n2662, B => cur_future_piece_2_port, Y => n2661
-                           );
-   U1819 : na210 port map( A => cur_piece_2_port, B => n2663, Y => n2660);
-   U1820 : na210 port map( A => cur_lut_piece_type_2_port, B => n2393, Y => 
-                           n2657);
-   U1821 : na310 port map( A => n2576, B => n2664, C => n2659, Y => n2393);
-   U1822 : no210 port map( A => n2665, B => n2048, Y => n2576);
-   U1823 : no210 port map( A => n2130, B => n1940, Y => n2665);
-   U1824 : na210 port map( A => n2047, B => n2189, Y => n2130);
-   U1825 : na210 port map( A => n2666, B => n2667, Y => lut_piece_type(1));
-   U1826 : na210 port map( A => n2397, B => n2396, Y => n2667);
-   U1827 : na210 port map( A => n2668, B => n2669, Y => n2396);
-   U1828 : na210 port map( A => n2662, B => cur_future_piece_1_port, Y => n2669
-                           );
-   U1829 : na210 port map( A => cur_piece_1_port, B => n2663, Y => n2668);
-   U1830 : na210 port map( A => cur_lut_piece_type_1_port, B => n2403, Y => 
-                           n2666);
-   U1831 : na210 port map( A => n2670, B => n2671, Y => lut_piece_type(0));
-   U1832 : na210 port map( A => n2397, B => n2401, Y => n2671);
-   U1833 : na210 port map( A => n2672, B => n2673, Y => n2401);
-   U1834 : na210 port map( A => n2662, B => cur_future_piece_0_port, Y => n2673
-                           );
-   U1835 : no210 port map( A => n2663, B => n2020, Y => n2662);
-   U1836 : na210 port map( A => cur_piece_0_port, B => n2663, Y => n2672);
-   U1837 : iv110 port map( A => n2674, Y => n2663);
-   U1838 : na210 port map( A => cur_lut_piece_type_0_port, B => n2403, Y => 
-                           n2670);
-   U1839 : na210 port map( A => n2397, B => n2664, Y => n2403);
-   U1840 : na210 port map( A => n2674, B => n2210, Y => n2664);
-   U1841 : no210 port map( A => n2675, B => n1891, Y => n2674);
-   U1842 : no310 port map( A => n2052, B => n2048, C => n2676, Y => n2397);
-   U1843 : na210 port map( A => n2677, B => n2659, Y => n2676);
-   U1844 : iv110 port map( A => n2387, Y => n2659);
-   U1845 : na310 port map( A => n2678, B => n2679, C => n2680, Y => n2387);
-   U1846 : no210 port map( A => n2681, B => n2502, Y => n2680);
-   U1847 : no210 port map( A => n2189, B => n2021, Y => n2502);
-   U1848 : no210 port map( A => n2244, B => n2308, Y => n2681);
-   U1849 : na210 port map( A => n1889, B => n2682, Y => n2679);
-   U1850 : na310 port map( A => n2032, B => n1940, C => n2675, Y => n2682);
-   U1851 : na210 port map( A => n1949, B => n2675, Y => n2678);
-   U1852 : na310 port map( A => n2308, B => n2007, C => n2683, Y => n2675);
-   U1853 : na210 port map( A => n2244, B => n1889, Y => n2683);
-   U1854 : iv110 port map( A => n2258, Y => n2244);
-   U1855 : na210 port map( A => n1930, B => n2034, Y => n2258);
-   U1856 : na210 port map( A => n1892, B => n1940, Y => n2308);
-   U1857 : na210 port map( A => n1966, B => n2326, Y => n2677);
-   U1858 : na210 port map( A => n1885, B => cur_state_0_port, Y => n1966);
-   U1859 : no210 port map( A => n1940, B => n1885, Y => n2048);
-   U1860 : iv110 port map( A => n2076, Y => n2052);
-   U1861 : iv110 port map( A => n2259, Y => draw_score_draw);
-   U1862 : na210 port map( A => cur_draw_score_draw, B => n2684, Y => n2259);
-   U1863 : na210 port map( A => n2160, B => n2154, Y => n2684);
-   U1864 : na210 port map( A => n2685, B => n2686, Y => draw_erase_start);
-   U1865 : na210 port map( A => cur_draw_erase_start, B => n2449, Y => n2686);
-   U1866 : na210 port map( A => n2687, B => n2688, Y => n2449);
-   U1867 : na210 port map( A => n1892, B => n2689, Y => n2688);
-   U1868 : na210 port map( A => n2015, B => n2690, Y => n2689);
-   U1869 : na210 port map( A => n2470, B => n2020, Y => n2690);
-   U1870 : iv110 port map( A => n2008, Y => n2470);
-   U1871 : na210 port map( A => n1880, B => n1995, Y => n2008);
-   U1872 : na210 port map( A => n1974, B => n1888, Y => n2687);
-   U1873 : iv110 port map( A => n2450, Y => n2685);
-   U1874 : na310 port map( A => n2691, B => n2692, C => n2693, Y => n2450);
-   U1875 : na210 port map( A => n1889, B => n2694, Y => n2693);
-   U1876 : na210 port map( A => n2695, B => n2696, Y => n2694);
-   U1877 : na310 port map( A => n1993, B => n2697, C => n2698, Y => n2696);
-   U1878 : iv110 port map( A => n2699, Y => n2698);
-   U1879 : na210 port map( A => n2018, B => n2007, Y => n2697);
-   U1880 : mu111 port map( A => n2700, B => n2701, S => n2702, Y => n2695);
-   U1881 : no310 port map( A => n2699, B => n2326, C => n1948, Y => n2702);
-   U1882 : na210 port map( A => n2703, B => n2189, Y => n2699);
-   U1883 : na210 port map( A => cur_state_0_port, B => n2032, Y => n2189);
-   U1884 : mu111 port map( A => n2074, B => n2704, S => n2705, Y => n2703);
-   U1885 : no210 port map( A => n2706, B => n2707, Y => n2701);
-   U1886 : no210 port map( A => n1892, B => n1993, Y => n2707);
-   U1887 : no210 port map( A => n2705, B => n1949, Y => n2706);
-   U1888 : no210 port map( A => n2091, B => n2708, Y => n2705);
-   U1889 : no210 port map( A => n1885, B => n1891, Y => n2708);
-   U1890 : no210 port map( A => n2034, B => n1940, Y => n2091);
-   U1891 : na310 port map( A => n1993, B => n1998, C => n1948, Y => n2692);
-   U1892 : iv110 port map( A => n2018, Y => n1948);
-   U1893 : na210 port map( A => cur_state_0_port, B => n1892, Y => n2018);
-   U1894 : iv110 port map( A => n2015, Y => n1998);
-   U1895 : iv110 port map( A => n1969, Y => n1993);
-   U1896 : na210 port map( A => n2238, B => n2709, Y => n2691);
-   U1897 : na210 port map( A => n2710, B => n2711, Y => n2709);
-   U1898 : na310 port map( A => n2092, B => n2071, C => n2712, Y => n2711);
-   U1899 : na310 port map( A => n2713, B => n2239, C => n2714, Y => n2712);
-   U1900 : na210 port map( A => n1946, B => n1930, Y => n2714);
-   U1901 : na210 port map( A => n1929, B => cur_state_0_port, Y => n2239);
-   U1902 : na210 port map( A => cur_draw_erase_start, B => n2188, Y => n2713);
-   U1903 : na210 port map( A => n2715, B => n2716, Y => n2710);
-   U1904 : na210 port map( A => n2717, B => n2167, Y => n2716);
-   U1905 : mu111 port map( A => n2700, B => n1932, S => cur_state_1_port, Y => 
-                           n2717);
-   U1906 : na210 port map( A => n1997, B => n1949, Y => n1932);
-   U1907 : iv110 port map( A => draw_erase_ready, Y => n1997);
-   U1908 : iv110 port map( A => cur_draw_erase_start, Y => n2700);
-   U1909 : na210 port map( A => n2092, B => n2071, Y => n2715);
-   U1910 : iv110 port map( A => n2718, Y => n2238);
-   U1911 : na210 port map( A => n2719, B => n2452, Y => draw_erase_draw);
-   U1912 : na310 port map( A => n1891, B => n1956, C => cur_draw_erase_draw, Y 
-                           => n2452);
-   U1913 : iv110 port map( A => n2454, Y => n2719);
-   U1914 : na310 port map( A => n2720, B => n2721, C => n2722, Y => n2454);
-   U1915 : no210 port map( A => n2723, B => n2724, Y => n2722);
-   U1916 : no210 port map( A => n1969, B => n2725, Y => n2724);
-   U1917 : mu111 port map( A => n2076, B => n2726, S => cur_state_3_port, Y => 
-                           n2725);
-   U1918 : no210 port map( A => n1972, B => n2727, Y => n2726);
-   U1919 : no210 port map( A => n1940, B => n2089, Y => n2727);
-   U1920 : iv110 port map( A => n2121, Y => n1972);
-   U1921 : na210 port map( A => n1989, B => n1892, Y => n2121);
-   U1922 : iv110 port map( A => n2071, Y => n1989);
-   U1923 : na210 port map( A => n2372, B => n1892, Y => n2076);
-   U1924 : iv110 port map( A => n1968, Y => n2372);
-   U1925 : na210 port map( A => cur_state_0_port, B => n1891, Y => n1968);
-   U1926 : no310 port map( A => n2728, B => n2089, C => n2020, Y => n2723);
-   U1927 : na210 port map( A => cur_draw_erase_draw, B => n2729, Y => n2721);
-   U1928 : na310 port map( A => n2730, B => n2648, C => n2731, Y => n2729);
-   U1929 : no210 port map( A => n2732, B => n2733, Y => n2731);
-   U1930 : no210 port map( A => n2568, B => n2728, Y => n2733);
-   U1931 : iv110 port map( A => n2210, Y => n2568);
-   U1932 : na210 port map( A => n1995, B => n1949, Y => n2210);
-   U1933 : no210 port map( A => n2734, B => n1880, Y => n2732);
-   U1934 : no210 port map( A => n2735, B => cur_state_0_port, Y => n2734);
-   U1935 : no210 port map( A => n1892, B => n1949, Y => n2735);
-   U1936 : na210 port map( A => n2154, B => n1892, Y => n2648);
-   U1937 : iv110 port map( A => n2021, Y => n2154);
-   U1938 : na210 port map( A => n2736, B => n2167, Y => n2730);
-   U1939 : na210 port map( A => n1984, B => n1930, Y => n2736);
-   U1940 : na210 port map( A => n2023, B => n1907, Y => n2720);
-   U1941 : iv110 port map( A => n2289, Y => n1907);
-   U1942 : iv110 port map( A => n1956, Y => n2023);
-   U1943 : na210 port map( A => n2078, B => n1947, Y => n1956);
-   U1944 : iv110 port map( A => n2089, Y => n1947);
-   U1945 : na210 port map( A => n2737, B => n2738, Y => clear_shift_start);
-   U1946 : na210 port map( A => cur_clear_shift_start, B => n2460, Y => n2738);
-   U1947 : na310 port map( A => n2237, B => n2457, C => n2160, Y => n2460);
-   U1948 : no210 port map( A => n2089, B => n2188, Y => n2160);
-   U1949 : na210 port map( A => n2032, B => n1930, Y => n2089);
-   U1950 : iv110 port map( A => n2247, Y => n2237);
-   U1951 : na210 port map( A => n2245, B => n2457, Y => n2737);
-   U1952 : na210 port map( A => n1889, B => n2739, Y => n2457);
-   U1953 : na210 port map( A => n1946, B => n1974, Y => n2739);
-   U1954 : iv110 port map( A => n2020, Y => n1946);
-   U1955 : no210 port map( A => n2247, B => n1888, Y => n2245);
-   U1956 : na210 port map( A => n2015, B => n2289, Y => n2247);
-   U1957 : na210 port map( A => n2740, B => n2741, Y => check_start);
-   U1958 : na210 port map( A => cur_check_start, B => n2409, Y => n2741);
-   U1959 : na310 port map( A => n2071, B => n2289, C => n2092, Y => n2409);
-   U1960 : na210 port map( A => n1889, B => n1940, Y => n2289);
-   U1961 : na210 port map( A => cur_state_0_port, B => n1940, Y => n2071);
-   U1962 : na210 port map( A => n2406, B => n2092, Y => n2740);
-   U1963 : na210 port map( A => n1891, B => n1930, Y => n2092);
-   U1964 : na310 port map( A => n2742, B => n2743, C => n2744, Y => n2406);
-   U1965 : no210 port map( A => n2745, B => n2746, Y => n2744);
-   U1966 : no310 port map( A => n1969, B => n1940, C => n2718, Y => n2746);
-   U1967 : na210 port map( A => n1885, B => cur_state_4_port, Y => n1969);
-   U1968 : no310 port map( A => n2020, B => n2032, C => n2015, Y => n2745);
-   U1969 : na210 port map( A => n1891, B => n1880, Y => n2015);
-   U1970 : na210 port map( A => n1885, B => n1949, Y => n2020);
-   U1971 : na210 port map( A => n2747, B => n2169, Y => n2743);
-   U1972 : iv110 port map( A => n1927, Y => n2169);
-   U1973 : na210 port map( A => n2078, B => n1892, Y => n1927);
-   U1974 : na210 port map( A => cur_check_start, B => n2748, Y => n2742);
-   U1975 : na310 port map( A => n2749, B => n2750, C => n2751, Y => n2748);
-   U1976 : no310 port map( A => n2752, B => n2045, C => n2753, Y => n2751);
-   U1977 : no210 port map( A => n2078, B => n2074, Y => n2753);
-   U1978 : na210 port map( A => n1891, B => n1892, Y => n2074);
-   U1979 : iv110 port map( A => n2167, Y => n2078);
-   U1980 : na210 port map( A => cur_state_4_port, B => n2034, Y => n2167);
-   U1981 : iv110 port map( A => n2704, Y => n2045);
-   U1982 : na210 port map( A => n1974, B => n1949, Y => n2704);
-   U1983 : iv110 port map( A => n2047, Y => n1974);
-   U1984 : na210 port map( A => n1892, B => n1930, Y => n2047);
-   U1985 : iv110 port map( A => cur_state_0_port, Y => n1930);
-   U1986 : no210 port map( A => n2728, B => n2369, Y => n2752);
-   U1987 : na210 port map( A => n2032, B => n2188, Y => n2369);
-   U1988 : na210 port map( A => n1929, B => n1995, Y => n2188);
-   U1989 : iv110 port map( A => cur_state_6_port, Y => n1995);
-   U1990 : iv110 port map( A => n2102, Y => n1929);
-   U1991 : iv110 port map( A => n2747, Y => n2728);
-   U1992 : no210 port map( A => n2021, B => cur_state_0_port, Y => n2747);
-   U1993 : na210 port map( A => n1940, B => n1888, Y => n2021);
-   U1994 : iv110 port map( A => n1891, Y => n1940);
-   U1995 : na210 port map( A => n2326, B => n2102, Y => n2750);
-   U1996 : na210 port map( A => n1949, B => n2034, Y => n2102);
-   U1997 : iv110 port map( A => n1885, Y => n2034);
-   U1998 : iv110 port map( A => cur_state_4_port, Y => n1949);
-   U1999 : iv110 port map( A => n2007, Y => n2326);
-   U2000 : na210 port map( A => n1891, B => n2032, Y => n2007);
-   U2001 : na210 port map( A => n1891, B => n1990, Y => n2749);
-   U2002 : na210 port map( A => n2718, B => n1984, Y => n1990);
-   U2003 : na210 port map( A => n1889, B => n1892, Y => n1984);
-   U2004 : na210 port map( A => n2032, B => n1880, Y => n2718);
-   U2005 : iv110 port map( A => n1892, Y => n2032);
+   U1172 : no310 port map( A => n1517, B => n1518, C => n1519, Y => n1516);
+   U1173 : no210 port map( A => n1520, B => n1096, Y => n1519);
+   U1174 : na210 port map( A => n1491, B => n1231, Y => n1096);
+   U1175 : iv110 port map( A => n1124, Y => n1491);
+   U1176 : na210 port map( A => n983, B => n1157, Y => n1124);
+   U1177 : no210 port map( A => n1123, B => n1093, Y => n1518);
+   U1178 : no210 port map( A => n1052, B => n1521, Y => n1517);
+   U1179 : iv110 port map( A => n1127, Y => n1001);
+   U1180 : na210 port map( A => n1522, B => n1523, Y => n1127);
+   U1181 : na310 port map( A => n1003, B => n1112, C => n1200, Y => n1523);
+   U1182 : na210 port map( A => n1085, B => n1499, Y => n1522);
+   U1183 : iv110 port map( A => n1094, Y => n1499);
+   U1184 : na310 port map( A => n1003, B => n1299, C => n1185, Y => n1094);
+   U1185 : no210 port map( A => n1524, B => n1047, Y => n1515);
+   U1186 : na210 port map( A => n1525, B => n1526, Y => n1047);
+   U1187 : na310 port map( A => n1389, B => n1508, C => n1108, Y => n1526);
+   U1188 : no210 port map( A => n1148, B => cur_state_6_port, Y => n1108);
+   U1189 : na210 port map( A => cur_state_3_port, B => n986, Y => n1148);
+   U1190 : na310 port map( A => n1525, B => n1034, C => n1527, Y => add_sub);
+   U1191 : no210 port map( A => n1132, B => n1004, Y => n1527);
+   U1192 : na310 port map( A => n1528, B => n1026, C => n1529, Y => n1004);
+   U1193 : na210 port map( A => n1099, B => n1508, Y => n1529);
+   U1194 : na210 port map( A => n1052, B => n1103, Y => n1508);
+   U1195 : iv110 port map( A => n1521, Y => n1099);
+   U1196 : na310 port map( A => n1185, B => n1299, C => n1389, Y => n1521);
+   U1197 : na210 port map( A => n1200, B => n1530, Y => n1026);
+   U1198 : na210 port map( A => n1024, B => n1531, Y => n1530);
+   U1199 : na210 port map( A => n1389, B => n1112, Y => n1531);
+   U1200 : iv110 port map( A => n1052, Y => n1200);
+   U1201 : na210 port map( A => n1143, B => n1138, Y => n1052);
+   U1202 : na210 port map( A => n1002, B => n1389, Y => n1528);
+   U1203 : iv110 port map( A => n1093, Y => n1002);
+   U1204 : na210 port map( A => n1085, B => n1112, Y => n1093);
+   U1205 : iv110 port map( A => n1103, Y => n1085);
+   U1206 : na210 port map( A => cur_state_0_port, B => n1138, Y => n1103);
+   U1207 : iv110 port map( A => cur_state_5_port, Y => n1138);
+   U1208 : no210 port map( A => n1520, B => n1044, Y => n1132);
+   U1209 : na310 port map( A => n1185, B => n1157, C => n1258, Y => n1044);
+   U1210 : iv110 port map( A => n1228, Y => n1258);
+   U1211 : na210 port map( A => n983, B => n1299, Y => n1228);
+   U1212 : iv110 port map( A => n1142, Y => n1185);
+   U1213 : iv110 port map( A => n1118, Y => n1520);
+   U1214 : na210 port map( A => n1057, B => n1201, Y => n1118);
+   U1215 : iv110 port map( A => y_port, Y => n1034);
+   U1216 : na210 port map( A => n1030, B => n1532, Y => y_port);
+   U1217 : na210 port map( A => n1533, B => n1137, Y => n1532);
+   U1218 : iv110 port map( A => n1524, Y => n1030);
+   U1219 : na210 port map( A => n1534, B => n1535, Y => n1524);
+   U1220 : na210 port map( A => n1003, B => n1514, Y => n1535);
+   U1221 : iv110 port map( A => n1536, Y => n1514);
+   U1222 : iv110 port map( A => n1122, Y => n1003);
+   U1223 : na210 port map( A => n981, B => n983, Y => n1122);
+   U1224 : na210 port map( A => n1533, B => n1273, Y => n1534);
+   U1225 : iv110 port map( A => n1024, Y => n1533);
+   U1226 : na210 port map( A => n1389, B => n1231, Y => n1024);
+   U1227 : no210 port map( A => n1299, B => n1142, Y => n1231);
+   U1228 : na210 port map( A => n1171, B => n1114, Y => n1142);
+   U1229 : iv110 port map( A => cur_state_6_port, Y => n1114);
+   U1230 : iv110 port map( A => cur_state_1_port, Y => n1171);
+   U1231 : iv110 port map( A => n1123, Y => n1389);
+   U1232 : na210 port map( A => n981, B => n1216, Y => n1123);
+   U1233 : na210 port map( A => n1056, B => n1537, Y => n1525);
+   U1234 : na210 port map( A => n1097, B => n1536, Y => n1537);
+   U1235 : na210 port map( A => n1112, B => n1137, Y => n1536);
+   U1236 : iv110 port map( A => n1201, Y => n1137);
+   U1237 : na210 port map( A => n982, B => cur_state_0_port, Y => n1201);
+   U1238 : na210 port map( A => n1273, B => n1112, Y => n1097);
+   U1239 : no210 port map( A => n1172, B => cur_state_6_port, Y => n1112);
+   U1240 : na210 port map( A => n986, B => n1299, Y => n1172);
+   U1241 : iv110 port map( A => cur_state_3_port, Y => n1299);
+   U1242 : iv110 port map( A => n1057, Y => n1273);
+   U1243 : na210 port map( A => n982, B => n1143, Y => n1057);
+   U1244 : iv110 port map( A => cur_state_0_port, Y => n1143);
+   U1245 : iv110 port map( A => n1110, Y => n1056);
+   U1246 : na210 port map( A => n1216, B => n1157, Y => n1110);
+   U1247 : iv110 port map( A => cur_state_4_port, Y => n1157);
+   U1248 : iv110 port map( A => cur_state_2_port, Y => n1216);
 
 end synthesised;
 
