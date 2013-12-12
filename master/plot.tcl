@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/check_mask.ddc
+read_file -f ddc ./ADB/timer.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui

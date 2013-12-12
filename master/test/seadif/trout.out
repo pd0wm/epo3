@@ -1,50 +1,191 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
+------ reading placement 'Tmp_Cell_(timer(timer(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Thu Dec 12 21:59:47 2013
- 30 nets have to be routed.
-Routing net 'clk' (8/8): ....... OK!
-Routing net 'n31' (2/2): . OK!
-Routing net 'n28' (2/2): . OK!
-Routing net 'n27' (2/2): . OK!
+------ routing started Fri Dec 13 00:56:47 2013
+ 42 nets have to be routed.
+Routing net 'n39' (2/2): . OK!
+Routing net 'n41' (2/2): . OK!
+Routing net 'clk' (5/5): ....b OK!
+Routing net 'time' (2/2): .b OK!
+Routing net 'start' (2/2): .b OK!
+Routing net 'ready' (2/2): .b OK!
+Routing net 'cnt_rst' (2/2): .b OK!
+Routing net 'rst' (2/2): .b OK!
 Routing net 'n32' (2/2): . OK!
-Routing net 'n21' (2/2): . OK!
-Routing net 'n24' (3/3): .. OK!
-Routing net 'n25' (2/2): . OK!
+Routing net 'cnt_val_2_port' (2/2): . OK!
+Routing net 'n26' (2/2): . OK!
+Routing net 'n40' (2/2): . OK!
+Routing net 'n35' (2/2): . OK!
 Routing net 'n33' (2/2): . OK!
-Routing net 'n20' (2/2): . OK!
-Routing net 'n18' (2/2): . OK!
-Routing net 'value_6_0_4' (4/4): ... OK!
-Routing net 'n16' (2/2): . OK!
+Routing net 'vga_clk' (3/3): ..b OK!
+Routing net 'cnt_val_0_port' (2/2): . OK!
+Routing net 'n27' (2/2): . OK!
+Routing net 'n34' (4/4): ... OK!
+Routing net 'n37' (4/4): ... OK!
+Routing net 'n30' (4/4): ... OK!
+Routing net 'n38' (2/2): . OK!
+Routing net 'n25' (3/3): .. OK!
+Routing net 'n28' (2/2): . OK!
+Routing net 'n24' (3/3): .. OK!
+Routing net 'state_next_0_port' (2/2): . OK!
+Routing net 'n36' (2/2): x FAILED
 Routing net 'n29' (3/3): .. OK!
-Routing net 'n23' (3/3): .. OK!
-Routing net 'en' (4/4): ... OK!
-Routing net 'value_6_0_5' (3/3): .. OK!
-Routing net 'n30' (3/3): .. OK!
-Routing net 'n22' (2/2): . OK!
-Routing net 'value_6_0_0' (5/5): .... OK!
-Routing net 'n26' (4/4): ... OK!
-Routing net 'value_6_0_2' (4/4): ... OK!
-Routing net 'value_6_0_1' (4/4): ... OK!
-Routing net 'n17' (2/2): . OK!
-Routing net 'value_6_0_6' (3/3): .. OK!
-Routing net 'value_6_0_3' (5/5): .... OK!
-Routing net 'rst' (8/8): ....... OK!
-Routing net 'n19' (2/2): . OK!
+Routing net 'n31' (6/6): ..... OK!
+Routing net 'state_1_port' (3/3): .. OK!
+Routing net 'cnt_val_4_port' (2/2): . OK!
+Routing net 'state_next_2_port' (2/2): . OK!
+Routing net 'state_2_port' (6/6): ..... OK!
+Routing net 'cnt_val_3_port' (2/2): . OK!
+Routing net 'cnt_val_1_port' (2/2): . OK!
+Routing net 'state_next_1_port' (2/2): . OK!
+Routing net 'n23' (2/2): . OK!
+Routing net 'N18' (3/3): .. OK!
+Routing net 'state_0_port' (6/6): ..... OK!
+Routing net 'timer_done' (3/3): .. OK!
+Routing net 'n8' (5/5): .... OK!
+Routing net 'vss' :  (Power special)
+Routing net 'vdd' :  (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n36' (2/2): . OK!
+Routing net 'n41' (2/2): . OK!
+Routing net 'n39' (2/2): . OK!
+Routing net 'clk' (5/5): ....b OK!
+Routing net 'rst' (2/2): .b OK!
+Routing net 'cnt_rst' (2/2): .b OK!
+Routing net 'ready' (2/2): .b OK!
+Routing net 'start' (2/2): .b OK!
+Routing net 'time' (2/2): .b OK!
+Routing net 'n32' (2/2): . OK!
+Routing net 'n26' (2/2): . OK!
+Routing net 'cnt_val_2_port' (2/2): . OK!
+Routing net 'n40' (2/2): . OK!
+Routing net 'n35' (2/2): . OK!
+Routing net 'n33' (2/2): . OK!
+Routing net 'vga_clk' (3/3): ..b OK!
+Routing net 'cnt_val_0_port' (2/2): . OK!
+Routing net 'n37' (4/4): ... OK!
+Routing net 'n34' (4/4): ... OK!
+Routing net 'n27' (2/2): . OK!
+Routing net 'n38' (2/2): . OK!
+Routing net 'n30' (4/4): ... OK!
+Routing net 'n25' (3/3): .. OK!
+Routing net 'n28' (2/2): . OK!
+Routing net 'n24' (3/3): .. OK!
+Routing net 'state_next_0_port' (2/2): . OK!
+Routing net 'n29' (3/3): .. OK!
+Routing net 'n31' (6/6): ..... OK!
+Routing net 'state_1_port' (3/3): .. OK!
+Routing net 'cnt_val_4_port' (2/2): . OK!
+Routing net 'state_next_2_port' (2/2): . OK!
+Routing net 'state_2_port' (6/6): ..... OK!
+Routing net 'cnt_val_3_port' (2/2): . OK!
+Routing net 'cnt_val_1_port' (2/2): . OK!
+Routing net 'state_next_1_port' (2/2): . OK!
+Routing net 'n23' (2/2): . OK!
+Routing net 'N18' (3/3): .. OK!
+Routing net 'state_0_port' (6/6): ..... OK!
+Routing net 'timer_done' (3/3): xxR>. FAILED
+Routing net 'n8' (5/5): .x.xR>x FAILED
+Routing net 'vdd' :  (Power special)
+Routing net 'vss' :  (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n36' (2/2): . OK!
+Routing net 'n39' (2/2): . OK!
+Routing net 'n41' (2/2): . OK!
+Routing net 'clk' (5/5): ....b OK!
+Routing net 'timer_done' (3/3): .. OK!
+Routing net 'n8' (5/5): .... OK!
+Routing net 'time' (2/2): .b OK!
+Routing net 'start' (2/2): .b OK!
+Routing net 'ready' (2/2): .b OK!
+Routing net 'cnt_rst' (2/2): .b OK!
+Routing net 'rst' (2/2): .b OK!
+Routing net 'n32' (2/2): . OK!
+Routing net 'cnt_val_2_port' (2/2): . OK!
+Routing net 'n26' (2/2): . OK!
+Routing net 'n40' (2/2): . OK!
+Routing net 'n35' (2/2): . OK!
+Routing net 'n33' (2/2): . OK!
+Routing net 'vga_clk' (3/3): ..b OK!
+Routing net 'cnt_val_0_port' (2/2): . OK!
+Routing net 'n27' (2/2): . OK!
+Routing net 'n34' (4/4): ... OK!
+Routing net 'n37' (4/4): ... OK!
+Routing net 'n30' (4/4): ... OK!
+Routing net 'n38' (2/2): . OK!
+Routing net 'n25' (3/3): .. OK!
+Routing net 'n28' (2/2): . OK!
+Routing net 'n24' (3/3): .. OK!
+Routing net 'state_next_0_port' (2/2): . OK!
+Routing net 'n29' (3/3): .. OK!
+Routing net 'n31' (6/6): ..... OK!
+Routing net 'state_1_port' (3/3): .. OK!
+Routing net 'cnt_val_4_port' (2/2): . OK!
+Routing net 'state_next_2_port' (2/2): . OK!
+Routing net 'state_2_port' (6/6): ..... OK!
+Routing net 'cnt_val_3_port' (2/2): . OK!
+Routing net 'cnt_val_1_port' (2/2): . OK!
+Routing net 'state_next_1_port' (2/2): . OK!
+Routing net 'n23' (2/2): . OK!
+Routing net 'N18' (3/3): x. FAILED
+Routing net 'state_0_port' (6/6): ....x FAILED
+Routing net 'vss' :  (Power special)
+Routing net 'vdd' :  (Power special)
+----- Don't worry, I'm trying again -----
+Routing net 'n36' (2/2): . OK!
+Routing net 'n41' (2/2): . OK!
+Routing net 'n39' (2/2): . OK!
+Routing net 'clk' (5/5): ....b OK!
+Routing net 'N18' (3/3): .. OK!
+Routing net 'state_0_port' (6/6): ..... OK!
+Routing net 'timer_done' (3/3): .. OK!
+Routing net 'n8' (5/5): .... OK!
+Routing net 'rst' (2/2): .b OK!
+Routing net 'cnt_rst' (2/2): .b OK!
+Routing net 'ready' (2/2): .b OK!
+Routing net 'start' (2/2): .b OK!
+Routing net 'time' (2/2): .b OK!
+Routing net 'n32' (2/2): . OK!
+Routing net 'n26' (2/2): . OK!
+Routing net 'cnt_val_2_port' (2/2): . OK!
+Routing net 'n40' (2/2): . OK!
+Routing net 'n35' (2/2): . OK!
+Routing net 'n33' (2/2): . OK!
+Routing net 'vga_clk' (3/3): ..b OK!
+Routing net 'cnt_val_0_port' (2/2): . OK!
+Routing net 'n37' (4/4): ... OK!
+Routing net 'n34' (4/4): ... OK!
+Routing net 'n27' (2/2): . OK!
+Routing net 'n38' (2/2): . OK!
+Routing net 'n30' (4/4): ... OK!
+Routing net 'n25' (3/3): .. OK!
+Routing net 'n28' (2/2): . OK!
+Routing net 'n24' (3/3): .. OK!
+Routing net 'state_next_0_port' (2/2): . OK!
+Routing net 'n29' (3/3): .. OK!
+Routing net 'n31' (6/6): ..... OK!
+Routing net 'state_1_port' (3/3): .. OK!
+Routing net 'cnt_val_4_port' (2/2): . OK!
+Routing net 'state_next_2_port' (2/2): . OK!
+Routing net 'state_2_port' (6/6): ..... OK!
+Routing net 'cnt_val_3_port' (2/2): . OK!
+Routing net 'cnt_val_1_port' (2/2): . OK!
+Routing net 'state_next_1_port' (2/2): . OK!
+Routing net 'n23' (2/2): . OK!
 Routing net 'vdd' :  (Power special)
 Routing net 'vss' :  (Power special)
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 30 (100% completion)
-Total length of routed wires:         0 (No new wires created)
-No. of transistors (total / used):    504/454 = 90.08 %
-CPU-time consumption:                 0.00 sec.
-Elapsed time during routing:          0.00 sec. (100.00 % of cpu)
+Total number of nets:                 42 (100% completion)
+Total length of routed wires:         2995 grids = 26.356 mm
+No. of transistors (total / used):    740/674 = 91.08 %
+CPU-time consumption:                 0.04 sec.
+Elapsed time during routing:          0.05 sec. (80.00 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
------- Trout: task completed on Thu Dec 12 21:59:47 2013
+------ Writing 'Tmp_Cell_(timer(timer(test)))' ------
+------ Trout: task completed on Fri Dec 13 00:56:47 2013
  terminate
