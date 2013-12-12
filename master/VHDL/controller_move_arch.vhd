@@ -27,8 +27,8 @@ begin
 		rot              <= '0';
 		draw_erase_draw  <= '0';
 		draw_erase_start <= '0';
-		check_start      <= '1';
-		ready <= '1';
+		check_start      <= '0';
+		ready <= '0';
 
 		next_state <= cur_state;
 
@@ -72,7 +72,7 @@ begin
 				draw_erase_start <= '1'; --start
 
 				-- wait for draw ready 
-				if (draw_erase_ready = '1' and inputs = "0000") then
+				if (draw_erase_ready = '1') then
 					next_state <= done_fit;
 				end if;
 

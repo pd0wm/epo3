@@ -28,7 +28,6 @@ architecture controller_arch of controller is
 	signal move_add_sub          : std_logic;
 	signal move_draw_erase_draw  : std_logic;
 	signal move_draw_erase_start : std_logic;
-	signal move_draw_erase_ready : std_logic;
 	signal move_start            : std_logic;
 	signal move_ready            : std_logic;
 	signal move_check_ready      : std_logic;
@@ -60,11 +59,11 @@ begin
 			     add_sub          => move_add_sub,
 			     draw_erase_draw  => move_draw_erase_draw,
 			     draw_erase_start => move_draw_erase_start,
-			     draw_erase_ready => move_draw_erase_ready,
+			     draw_erase_ready => draw_erase_ready,
 			     start            => move_start,
 			     ready            => move_ready,
 			     inputs           => inputs(3 downto 0),
-			     check_ready      => move_check_ready,
+			     check_ready      => check_ready,
 			     check_start      => move_check_start,
 			     check_empty      => check_empty);
 
@@ -452,22 +451,15 @@ begin
 				check_start      <= move_check_start;
 				
 				if (move_ready = '1') then
+					new_cur_x <= calc_x;
+					new_cur_rot <= calc_rot;
 					next_state <= move_4;
 				end if;
 				
 			when move_4 =>
-				move_start       <= '1';
-				x                <= move_x;
-				rot              <= move_rot;
-				add_sub          <= move_add_sub;
-				draw_erase_draw  <= move_draw_erase_draw;
-				draw_erase_start <= move_draw_erase_start;
-				check_start      <= move_check_start;
-			
-				new_cur_x <= calc_x;
-				new_cur_rot <= calc_rot;
-			
-				next_state <= draw;
+				if (inputs(3 downto 0) = "0000") then 
+					next_state <= draw;
+				end if;
 				
 				
 			when kernel_panic =>
