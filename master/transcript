@@ -7,80 +7,473 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work vga_tb_vga_tb_arch_cfg 
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work adder_x_behaviour_cfg 
 # ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.vga_params(body)
-# Loading work.vga_tb_vga_tb_arch_cfg#1
-# Loading work.vga_tb(vga_tb_arch)#1
-# Loading work.vga_vga_arch_cfg#1
-# Loading work.vga(vga_arch)#1
-# Loading work.vga_counter_vga_counter_behav_cfg#1
-# Loading work.vga_counter(vga_counter_behav)#1
-# Loading work.vga_counter_8bit_vga_counter_8bit_behav_cfg#1
-# Loading work.vga_counter_8bit(vga_counter_8bit_behav)#1
-# Loading work.vga_counter_10bit_vga_counter_10bit_behav_cfg#1
-# Loading work.vga_counter_10bit(vga_counter_10bit_behav)#1
-# Loading work.vga_counter_resets_vga_counter_resets_behav_cfg#1
-# Loading work.vga_counter_resets(vga_counter_resets_behav)#1
-# Loading work.vga_sync_vga_sync_arch_cfg#1
-# Loading work.vga_sync(vga_sync_arch)#1
-# Loading work.vga_triggers_vga_triggers_arch_cfg#1
-# Loading work.vga_triggers(vga_triggers_arch)#1
-# Loading work.vga_read_vga_read_behav_cfg#1
-# Loading work.vga_read(vga_read_behav)#1
-# Loading work.vga_field_trans_vga_field_trans_arch_cfg#1
-# Loading work.vga_field_trans(vga_field_trans_arch)#1
-# Loading work.vga_counter_8bitset_vga_counter_8bitset_behav_cfg#1
-# Loading work.vga_counter_8bitset(vga_counter_8bitset_behav)#1
-# Loading work.vga_field_trans_reset_vga_field_trans_reset_arch_cfg#1
-# Loading work.vga_field_trans_reset(vga_field_trans_reset_arch)#1
-# Loading work.vga_counter_4bit_vga_counter_4bit_behav_cfg#1
-# Loading work.vga_counter_4bit(vga_counter_4bit_behav)#1
-# Loading work.vga_field_check_vga_field_check_arch_cfg#1
-# Loading work.vga_field_check(vga_field_check_arch)#1
-# Loading work.vga_np_trans_vga_np_trans_arch_cfg#1
-# Loading work.vga_np_trans(vga_np_trans_arch)#1
-# Loading work.vga_np_trans_reset_vga_np_trans_reset_arch_cfg#1
-# Loading work.vga_np_trans_reset(vga_np_trans_reset_arch)#1
-# Loading work.vga_counter_2bit_vga_counter_2bit_behav_cfg#1
-# Loading work.vga_counter_2bit(vga_counter_2bit_behav)#1
-# Loading work.vga_np_check_vga_np_check_arch_cfg#1
-# Loading work.vga_np_check(vga_np_check_arch)#1
-# Loading work.vga_score_trans_vga_score_trans_arch_cfg#1
-# Loading work.vga_score_trans(vga_score_trans_arch)#1
-# Loading work.vga_counter_3bit_vga_counter_3bit_behav_cfg#1
-# Loading work.vga_counter_3bit(vga_counter_3bit_behav)#1
-# Loading work.vga_score_check_vga_score_check_arch_cfg#1
-# Loading work.vga_score_check(vga_score_check_arch)#1
-# Loading work.vga_demux_vga_demux_behav_cfg#1
-# Loading work.vga_demux(vga_demux_behav)#1
+# Loading work.adder_x_behaviour_cfg#1
+# Loading work.adder_x(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 2ms
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/score_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/score_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/np_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/np_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/field_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/field_check
+quit -sim
+cd ..
+# reading /data/public/common/software/modeltech/10.1b/modeltech/linux/../modelsim.ini
+ls
+# check_mask.vhd
+# check_mask.vhd~
+# clear_shift.vhd
+# controller.vhd
+# debounce.vhd
+# de_piece.vhd
+# draw_score.vhd
+# epo3.PrjFpg
+# epo3.PrjFpgStructure
+# interface.vhd
+# master
+# npg.vhd
+# pdf_vhdl.OutJob
+# piece_lut.vhd
+# piece_lut.vhd~
+# ProjectOutputs
+# README.md
+# rom.vhd
+# score.vhd
+# timer.vhd
+# top_level.SchDoc
+# vga.vhd
+cd ..
+ls
+# epo3
+cd ..
+ls
+# cs_final_design_source
+# git
+# GoWithTheFlow.desktop
+# gwtf
+# handleiding.pdf
+# master
+# sigasi
+# timer_redesign
+# VPNLinux.pdf
+cd timer_redesign
+ls
+# timer_arch.vhd
+# timer_counter_arch.vhd
+# timer_counter.vhd
+# timer_det_arch.vhd
+# timer_det.vhd
+# timer_tb.vhd
+# timer.vhd
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; run 10us;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# ** Error: Library work not found.
+# ** Error: VHDL Compiler exiting
+# /data/public/common/software/modeltech/10.1b/modeltech/linux/vcom failed.
+vlib work
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; run 10us;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/triggers
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/triggers
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/sync
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/sync
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; run 10us;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /vga_tb/uut/counter/resets
-run 2ms
-quit
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; run 10us;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave sim:/timer/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# (vish-4014) No objects found matching '/timer/*'.
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave sim:/timer_tb/timer/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# (vish-4014) No objects found matching '/timer_tb/timer/*'.
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/timer/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# (vish-4014) No objects found matching 'timer_tb/timer/*'.
+add wave sim:/timer_tb/uut/*
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 500ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 1s;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# Invalid time value: 1s
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 1000ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 2000ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+vcom *.vhd; vsim -gui work.timer_tb; add wave *; add wave timer_tb/uut/*;run 2000ms;
+# Model Technology ModelSim SE vcom 10.1b Compiler 2012.04 Apr 26 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer
+# -- Compiling architecture timer_behav of timer
+# -- Compiling entity timer_counter
+# -- Compiling architecture timer_counter_arch of timer_counter
+# -- Compiling entity timer_det
+# -- Compiling architecture timer_det_arch of timer_det
+# -- Compiling entity timer_tb
+# -- Compiling architecture timer_tb_behav of timer_tb
+# vsim -gui work.timer_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.timer_tb(timer_tb_behav)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /timer_tb/uut/donecheck
