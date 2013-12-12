@@ -42,13 +42,13 @@ begin
 
 	ptype4north: rom_mux44 port map("0100", "0101", "0110", "0010", addr(1 downto 0), type4north);
 	ptype4east:  rom_mux44 port map("0000", "0100", "1000", "1001", addr(1 downto 0), type4east);
-	ptype4south: rom_mux44 port map("0000", "0001", "0010", "1000", addr(1 downto 0), type4south);
+	ptype4south: rom_mux44 port map("0100", "0101", "0110", "1000", addr(1 downto 0), type4south);--
 	ptype4west:  rom_mux44 port map("1001", "0101", "0001", "0000", addr(1 downto 0), type4west);
 
 	ptype5north: rom_mux44 port map("0000", "0100", "0101", "0110", addr(1 downto 0), type5north);
-	ptype5east:  rom_mux44 port map("0000", "0100", "1000", "1001", addr(1 downto 0), type5east);
+	ptype5east:  rom_mux44 port map("0000", "0001", "0100", "1000", addr(1 downto 0), type5east);--
 	ptype5south: rom_mux44 port map("0000", "0001", "0010", "0110", addr(1 downto 0), type5south);
-	ptype5west:  rom_mux44 port map("0001", "0101", "1001", "0000", addr(1 downto 0), type5west);
+	ptype5west:  rom_mux44 port map("0001", "0101", "1001", "1000", addr(1 downto 0), type5west);--
 
 	ptype6north: rom_mux44 port map("0001", "0010", "0100", "0101", addr(1 downto 0), type6north);
 	ptype6east:  rom_mux44 port map("0000", "0100", "0101", "1001", addr(1 downto 0), type6east);

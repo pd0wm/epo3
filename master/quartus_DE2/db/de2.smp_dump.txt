@@ -23,14 +23,15 @@ state.done 0 1 0 0 0 1
 state.lut_lookup 1 0 0 0 0 1 
 
 State Machine - |top_de2|piece_lut:inst7|state
-Name state.output state.cord_overflow state.cord_calc state.wait_for_rom state.calc_rom_addr_2 state.calc_rom_addr_1 state.reset 
-state.reset 0 0 0 0 0 0 0 
-state.calc_rom_addr_1 0 0 0 0 0 1 1 
-state.calc_rom_addr_2 0 0 0 0 1 0 1 
-state.wait_for_rom 0 0 0 1 0 0 1 
-state.cord_calc 0 0 1 0 0 0 1 
-state.cord_overflow 0 1 0 0 0 0 1 
-state.output 1 0 0 0 0 0 1 
+Name state.output2 state.output1 state.cord_overflow state.cord_calc state.wait_for_rom state.calc_rom_addr_2 state.calc_rom_addr_1 state.reset 
+state.reset 0 0 0 0 0 0 0 0 
+state.calc_rom_addr_1 0 0 0 0 0 0 1 1 
+state.calc_rom_addr_2 0 0 0 0 0 1 0 1 
+state.wait_for_rom 0 0 0 0 1 0 0 1 
+state.cord_calc 0 0 0 1 0 0 0 1 
+state.cord_overflow 0 0 1 0 0 0 0 1 
+state.output1 0 1 0 0 0 0 0 1 
+state.output2 1 0 0 0 0 0 0 1 
 
 State Machine - |top_de2|check_mask:inst5|state
 Name state.output state.check state.wait_for_ram state.wait_for_lut state.startup state.rust 

@@ -102,6 +102,10 @@ set_location_assignment PIN_N23 -to dbg_inputs[2]
 set_location_assignment PIN_P23 -to dbg_inputs[3]
 set_location_assignment PIN_N25 -to dbg_inputs[4]
 set_location_assignment PIN_N26 -to dbg_inputs[5]
+set_global_assignment -name VHDL_FILE ../VHDL/adder_y.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/adder_y-behaviour.vhd"
+set_global_assignment -name VHDL_FILE ../VHDL/adder_x.vhd
+set_global_assignment -name VHDL_FILE "../VHDL/adder_x-behaviour.vhd"
 set_global_assignment -name VHDL_FILE ../VHDL/cs_shift_comb_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_shift_comb.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/cs_compare_comb_arch.vhd

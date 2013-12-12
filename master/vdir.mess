@@ -246,6 +246,23 @@ ENTITY controller
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY controller_arch
+    Source modified time: Thu Dec 12 13:58:40 2013
+    Depends on: E work controller 6Z`cSf:<fOOfdEcTN>_fQ2
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/controller-controller_arch.vhd
+    Source file: VHDL/controller-controller_arch.vhd
+    Start location: VHDL/controller-controller_arch.vhd:6
+    Version string: lXdXNYaI^1MPGCZ^HO26l2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
     Depends on: E work controller 6Z`cSf:<fOOfdEcTN>_fQ2
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
@@ -258,23 +275,6 @@ ENTITY controller
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Source modified time: Thu Dec 12 10:40:59 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY controller_arch
-    Depends on: E work controller 6Z`cSf:<fOOfdEcTN>_fQ2
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/controller-controller_arch.vhd
-    Source file: VHDL/controller-controller_arch.vhd
-    Start location: VHDL/controller-controller_arch.vhd:6
-    Version string: G_cNYkDVYA0`W497GK3]o1
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Thu Dec 12 10:40:59 2013
@@ -350,19 +350,19 @@ VHDL CONFIGURATION controller_controller_arch_cfg
     Configuration for entity: controller
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work controller controller_arch G_cNYkDVYA0`W497GK3]o1
+    Depends on: A work controller controller_arch lXdXNYaI^1MPGCZ^HO26l2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work controller 6Z`cSf:<fOOfdEcTN>_fQ2
-    Source modified time: Wed Dec 11 21:28:54 2013
+    Source modified time: Wed Dec 11 21:37:07 2013
     Source directory: /master
     HDL source file: VHDL/controller_controller_arch_cfg.vhd
     Source file: VHDL/controller_controller_arch_cfg.vhd
     Start location: VHDL/controller_controller_arch_cfg.vhd:1
-    Version string: :2A_T8Ba7NgSc=N_HVH6H3
+    Version string: AK:PTiQLzHN][=WhNQhC82
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY cs_7bc
     Source modified time: Wed Dec 11 21:37:13 2013
@@ -885,7 +885,6 @@ ENTITY cs_shift_comb
     Depends on: E work cs_shift_comb kb?_4On^4McdH0:PJIHFN1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: /master
     HDL source file: VHDL/cs_shift_comb_arch.vhd
     Source file: VHDL/cs_shift_comb_arch.vhd
     Start location: VHDL/cs_shift_comb_arch.vhd:4
@@ -894,6 +893,7 @@ ENTITY cs_shift_comb
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
     Depends on: E work cs_shift_comb kb?_4On^4McdH0:PJIHFN1
