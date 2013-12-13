@@ -2,21 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'cs_7bc' ------
------- reading nelsis circuit-cell 'cs_7bc' ------
-WARNING: Zero terminal net: 'value_6_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_5_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_4_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_3_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_2_port' (cell 'cs_7bc')
-WARNING: many (7) useless nets were removed (printed only 5)
------- checking match with placement layout 'Tmpcs_7bc14851' ------
------- reading nelsis layout-cell 'Tmpcs_7bc14851' ------
------- writing nelsis 'Tmpcs_7bc14851' as sdflay 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
------- writing nelsis 'cs_7bc' as sdfcir 'cs_7bc(cs_7bc(test)) ------
+------ checking your circuit 'timer' ------
+------ circuit 'timer' is still up-to-date ------
+------ checking match with placement layout 'Tmptimer21550' ------
+------ reading nelsis layout-cell 'Tmptimer21550' ------
+------ writing nelsis 'Tmptimer21550' as sdflay 'Tmp_Cell_(timer(timer(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f cs_7bc -c cs_7bc -o Tmp_Cell_ -d Tmp_Cell_ 
+calling program: trout -l test -f timer -c timer -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpcs_7bc14851' ------
-calling program: nelsea -rLH -f cs_7bc -c cs_7bc -l Tmp_Cell_ Tmpcs_7bc14851 
+------ converting result back into nelsis as cell 'Tmptimer21550' ------
+calling program: nelsea -rLH -f timer -c timer -l Tmp_Cell_ Tmptimer21550 
 ------ sea: task completed ------
