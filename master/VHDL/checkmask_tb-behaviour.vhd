@@ -33,9 +33,9 @@ begin
 	clock : process
 	begin
 		clk <= '1';
-		wait for 82 ns;
+		wait for 10 ns;
 		clk <= '0';
-		wait for 82 ns;
+		wait for 10 ns;
 	end process;
 
 	reset_p : process
