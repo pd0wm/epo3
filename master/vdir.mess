@@ -3399,6 +3399,22 @@ ENTITY timer
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY timer_behav
+    Source modified time: Fri Dec 13 02:24:06 2013
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/timer_arch.vhd
+    Source file: VHDL/timer_arch.vhd
+    Start location: VHDL/timer_arch.vhd:5
+    Version string: [K[A=ooJF8EVD7TQMinl>2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
     Source modified time: Thu Dec 12 23:25:54 2013
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -3413,22 +3429,6 @@ ENTITY timer
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
-  ARCHITECTURE BODY timer_behav
-    Source modified time: Thu Dec 12 23:23:41 2013
-    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/timer_arch.vhd
-    Source file: VHDL/timer_arch.vhd
-    Start location: VHDL/timer_arch.vhd:5
-    Version string: SRKTlfz2]_9zDRHBdm>[62
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists

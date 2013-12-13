@@ -2,14 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'controller' ------
------- circuit 'controller' is still up-to-date ------
------- checking match with placement layout 'Tmpcontroller27306' ------
------- reading nelsis layout-cell 'Tmpcontroller27306' ------
------- writing nelsis 'Tmpcontroller27306' as sdflay 'Tmp_Cell_(controller(controller(test)))' ------
+------ checking your circuit 'timer' ------
+------ circuit 'timer' is still up-to-date ------
+------ checking match with placement layout 'Tmptimer27602' ------
+------ reading nelsis layout-cell 'Tmptimer27602' ------
+------ writing nelsis 'Tmptimer27602' as sdflay 'Tmp_Cell_(timer(timer(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f controller -c controller -o Tmp_Cell_ -d Tmp_Cell_ 
+calling program: trout -l test -f timer -c timer -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmpcontroller27306' ------
-calling program: nelsea -rLH -f controller -c controller -l Tmp_Cell_ Tmpcontroller27306 
+------ converting result back into nelsis as cell 'Tmptimer27602' ------
+calling program: nelsea -rLH -f timer -c timer -l Tmp_Cell_ Tmptimer27602 
 ------ sea: task completed ------
