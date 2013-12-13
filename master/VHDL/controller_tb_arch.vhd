@@ -3,34 +3,30 @@ use ieee.std_logic_1164.all;
 
 architecture behaviour of controller_tb is
 	component controller
-		port(clk                : in  std_logic;
-			 rst                : in  std_logic;
-			 lut_piece_type     : out std_logic_vector(2 downto 0);
-			 lut_next_piece     : out std_logic;
-			 lut_x              : out std_logic_vector(2 downto 0);
-			 lut_y              : out std_logic_vector(3 downto 0);
-			 lut_rot            : out std_logic_vector(1 downto 0);
-			 calc_x             : in  std_logic_vector(2 downto 0);
-			 calc_y             : in  std_logic_vector(3 downto 0);
-			 calc_rot           : in  std_logic_vector(1 downto 0);
-			 add_sub, x, y, rot : out std_logic;
-			 new_piece          : out std_logic;
-			 next_piece         : in  std_logic_vector(2 downto 0);
-			 check_empty        : in  std_logic;
-			 check_start        : out std_logic;
-			 check_ready        : in  std_logic;
-			 draw_erase_draw    : out std_logic;
-			 draw_erase_start   : out std_logic;
-			 draw_erase_ready   : in  std_logic;
-			 clear_shift_start  : out std_logic;
-			 clear_shift_ready  : in  std_logic;
-			 draw_score_draw    : out std_logic;
-			 draw_score_ready   : in  std_logic;
-			 timer_1_time       : out std_logic;
-			 timer_1_start      : out std_logic;
-			 timer_1_done       : in  std_logic;
-			 timer_1_reset      : out std_logic;
-			 inputs             : in  std_logic_vector(5 downto 0));
+		port(clk               : in  std_logic;
+			 rst               : in  std_logic;
+			 lut_piece_type    : out std_logic_vector(2 downto 0);
+			 lut_next_piece    : out std_logic;
+			 lut_x             : out std_logic_vector(2 downto 0);
+			 lut_y             : out std_logic_vector(3 downto 0);
+			 lut_rot           : out std_logic_vector(1 downto 0);
+			 new_piece         : out std_logic;
+			 next_piece        : in  std_logic_vector(2 downto 0);
+			 check_empty       : in  std_logic;
+			 check_start       : out std_logic;
+			 check_ready       : in  std_logic;
+			 draw_erase_draw   : out std_logic;
+			 draw_erase_start  : out std_logic;
+			 draw_erase_ready  : in  std_logic;
+			 clear_shift_start : out std_logic;
+			 clear_shift_ready : in  std_logic;
+			 draw_score_draw   : out std_logic;
+			 draw_score_ready  : in  std_logic;
+			 timer_1_time      : out std_logic;
+			 timer_1_start     : out std_logic;
+			 timer_1_done      : in  std_logic;
+			 timer_1_reset     : out std_logic;
+			 inputs            : in  std_logic_vector(5 downto 0));
 	end component controller;
 
 	signal clk                : std_logic;
@@ -40,10 +36,6 @@ architecture behaviour of controller_tb is
 	signal lut_x              : std_logic_vector(2 downto 0);
 	signal lut_y              : std_logic_vector(3 downto 0);
 	signal lut_rot            : std_logic_vector(1 downto 0);
-	signal calc_x             : std_logic_vector(2 downto 0);
-	signal calc_y             : std_logic_vector(3 downto 0);
-	signal calc_rot           : std_logic_vector(1 downto 0);
-	signal add_sub, x, y, rot : std_logic;
 	signal new_piece          : std_logic;
 	signal next_piece         : std_logic_vector(2 downto 0);
 	signal check_empty        : std_logic;
@@ -73,13 +65,6 @@ begin
 			     lut_x             => lut_x,
 			     lut_y             => lut_y,
 			     lut_rot           => lut_rot,
-			     calc_x            => calc_x,
-			     calc_y            => calc_y,
-			     calc_rot          => calc_rot,
-			     add_sub           => add_sub,
-			     x                 => x,
-			     y                 => y,
-			     rot               => rot,
 			     new_piece         => new_piece,
 			     next_piece        => next_piece,
 			     check_empty       => check_empty,
@@ -97,7 +82,6 @@ begin
 			     timer_1_done      => timer_1_done,
 			     timer_1_reset     => timer_1_reset,
 			     inputs            => inputs);
-
 	
 	lbl_new_piece : process
         begin
@@ -151,7 +135,7 @@ begin
         
         lbl_inpts : process
         begin
-                inputs <= "000001";
+                inputs <= "000000";
                 wait;
         end process;
         
