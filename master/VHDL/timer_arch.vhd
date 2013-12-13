@@ -73,7 +73,10 @@ begin
 
 			when output =>
 				ready      <= '1';
-				state_next <= lock;
+				
+				if (start = '0') then 
+					state_next <= lock;
+				end if;
 		end case;
 	end process;
 

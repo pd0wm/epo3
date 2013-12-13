@@ -6,12 +6,13 @@ state.start_count 0 1 1
 state.finish_count 1 0 1 
 
 State Machine - |top_de2|timer:inst4|state
-Name state.done state.check state.vga_high state.vga_low state.reset 
-state.reset 0 0 0 0 0 
-state.vga_low 0 0 0 1 1 
-state.vga_high 0 0 1 0 1 
-state.check 0 1 0 0 1 
-state.done 1 0 0 0 1 
+Name state.output state.high state.rising_edge state.low state.init state.lock 
+state.lock 0 0 0 0 0 0 
+state.init 0 0 0 0 1 1 
+state.low 0 0 0 1 0 1 
+state.rising_edge 0 0 1 0 0 1 
+state.high 0 1 0 0 0 1 
+state.output 1 0 0 0 0 1 
 
 State Machine - |top_de2|de_piece:inst6|state
 Name state.lut_lookup state.done state.waiting_2 state.writing state.waiting_1 state.reset 
