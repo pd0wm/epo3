@@ -50,22 +50,22 @@ architecture behaviour of controller_tb is
 	signal next_piece        : std_logic_vector(2 downto 0);
 	signal check_empty       : std_logic;
 	signal check_start       : std_logic;
-	signal check_ready       : std_logic;
+	signal check_ready       : std_logic := '0';
 	signal draw_erase_draw   : std_logic;
 	signal draw_erase_start  : std_logic;
-	signal draw_erase_ready  : std_logic;
+	signal draw_erase_ready  : std_logic := '0';
 	signal clear_shift_start : std_logic;
-	signal clear_shift_ready : std_logic;
+	signal clear_shift_ready : std_logic := '0';
 	signal draw_score_draw   : std_logic;
-	signal draw_score_ready  : std_logic;
+	signal draw_score_ready  : std_logic := '0';
 	signal timer_1_time      : std_logic;
 	signal timer_1_start     : std_logic;
-	signal timer_1_done      : std_logic;
+	signal timer_1_done      : std_logic := '0';
 	signal timer_1_reset     : std_logic;
 	signal inputs            : std_logic_vector(5 downto 0);
 	signal vga_clk           : std_logic;
 
-	constant clk_period : time := 20 ns;
+	constant clk_period : time := 160 ns;
 
 begin
 	dut : controller
@@ -93,68 +93,68 @@ begin
 			     timer_1_done      => timer_1_done,
 			     timer_1_reset     => timer_1_reset,
 			     inputs            => inputs);
-	tim : timer
-		port map(clk     => clk,
-			     vga_clk => vga_clk,
-			     rst     => rst,
-			     cnt_rst => timer_1_reset,
-			     time    => timer_1_time,
-			     start   => timer_1_start,
-			     ready   => timer_1_done);
+--	tim : timer
+--		port map(clk     => clk,
+--			     vga_clk => vga_clk,
+--			     rst     => rst,
+--			     cnt_rst => timer_1_reset,
+--			     time    => timer_1_time,
+--			     start   => timer_1_start,
+--			     ready   => timer_1_done);
 			     
-	lbl_new_piece : process
-	begin
-		next_piece <= "001";
-		wait;
-	end process;
-
-	lbl_check_mask : process
-	begin
-		check_empty <= '0';
-		check_ready <= '0';
-		wait until (check_start = '1');
-		wait for 50 ns;
-		check_ready <= '1';
-		check_empty <= '1';
-		wait until (check_start = '0');
-		wait until (clk = '1');
-	end process;
-
-	lbl_clear_shift : process
-	begin
-		clear_shift_ready <= '0';
-		wait until (clear_shift_start = '1');
-		wait for 50 ns;
-		clear_shift_ready <= '1';
-		wait until (clear_shift_start = '0');
-		wait until (clk = '1');
-	end process;
-
-	lbl_draw : process
-	begin
-		draw_erase_ready <= '0';
-		wait until (draw_erase_start = '1');
-		wait for 50 ns;
-		draw_erase_ready <= '1';
-		wait until (draw_erase_start = '0');
-		wait until (clk = '1');
-	end process;
-
-	lbl_score : process
-	begin
-		draw_score_ready <= '0';
-		wait until (draw_score_draw = '1');
-		wait for 50 ns;
-		draw_score_ready <= '1';
-		wait until (draw_erase_draw = '0');
-		wait until (clk = '1');
-	end process;
-	
-	lbl_inpts : process
-	begin
-		inputs <= "000000";
-		wait;
-	end process;
+--	lbl_new_piece : process
+--	begin
+--		next_piece <= "001";
+--		wait;
+--	end process;
+--
+--	lbl_check_mask : process
+--	begin
+--		check_empty <= '0';
+--		check_ready <= '0';
+--		wait until (check_start = '1');
+--		wait for 50 ns;
+--		check_ready <= '1';
+--		check_empty <= '1';
+--		wait until (check_start = '0');
+--		wait until (clk = '1');
+--	end process;
+--
+--	lbl_clear_shift : process
+--	begin
+--		clear_shift_ready <= '0';
+--		wait until (clear_shift_start = '1');
+--		wait for 50 ns;
+--		clear_shift_ready <= '1';
+--		wait until (clear_shift_start = '0');
+--		wait until (clk = '1');
+--	end process;
+--
+--	lbl_draw : process
+--	begin
+--		draw_erase_ready <= '0';
+--		wait until (draw_erase_start = '1');
+--		wait for 50 ns;
+--		draw_erase_ready <= '1';
+--		wait until (draw_erase_start = '0');
+--		wait until (clk = '1');
+--	end process;
+--
+--	lbl_score : process
+--	begin
+--		draw_score_ready <= '0';
+--		wait until (draw_score_draw = '1');
+--		wait for 50 ns;
+--		draw_score_ready <= '1';
+--		wait until (draw_erase_draw = '0');
+--		wait until (clk = '1');
+--	end process;
+--	
+--	lbl_inpts : process
+--	begin
+--		inputs <= "000000";
+--		wait;
+--	end process;
 
 	clk_process : process
 	begin
@@ -177,16 +177,121 @@ begin
 	stim_proc : process
 	begin
 		inputs <= "000001";
-		wait for 30 ns;
 		rst <= '1';
-		wait for 40 ns;
+		wait for 250 ns;
+		
+		
+		next_piece <= (others => '0');
+		check_empty <= '1';
+--		check_ready <= '1';
+--		draw_erase_ready <= '1';
+--		clear_shift_ready <= '1';
+--		draw_score_ready <= '1';
+--		timer_1_done <= '1';
+		
 		rst <= '0';
-		wait for 40 ns;
+		
+		wait for clk_period;
 		inputs <= "000000";
+		
+		wait for clk_period*2;
+		inputs <= "000001";
+		
+		wait for clk_period*2;
+		inputs <= "000000";
+		
 		wait;
+	end process;
+	
+	draw_erase : process(clk)
+		variable cnt : integer := 0;
+	begin
+		if (clk'event and clk='1') then
+			draw_erase_ready <= '0';
+			
+			if (draw_erase_start = '1') then
+				cnt := cnt + 1;
+				
+				if (cnt = 5) then
+					draw_erase_ready <= '1';
+					cnt := 0;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	check : process(clk)
+		variable cnt : integer := 0;
+	begin
+		if (clk'event and clk='1') then
+			check_ready <= '0';
+			
+			if (check_start = '1') then
+				cnt := cnt + 1;
+				
+				if (cnt = 5) then
+					check_ready <= '1';
+					cnt := 0;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	clear_shift : process(clk)
+		variable cnt : integer := 0;
+	begin
+		if (clk'event and clk='1') then
+			clear_shift_ready <= '0';
+			
+			if (clear_shift_start = '1') then
+				cnt := cnt + 1;
+				
+				if (cnt = 5) then
+					clear_shift_ready <= '1';
+					cnt := 0;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	draw_score : process(clk)
+		variable cnt : integer := 0;
+	begin
+		if (clk'event and clk='1') then
+			draw_score_ready <= '0';
+			
+			if (draw_score_draw = '1') then
+				cnt := cnt + 1;
+				
+				if (cnt = 5) then
+					draw_score_ready <= '1';
+					cnt := 0;
+				end if;
+			end if;
+		end if;
+	end process;
+	
+	timer_1 : process(clk)
+		variable cnt : integer := 0;
+	begin
+		if (clk'event and clk='1') then
+			timer_1_done <= '0';
+			
+			if (timer_1_start = '1') then
+				cnt := cnt + 1;
+				
+				if (cnt = 5) then
+					timer_1_done <= '1';
+					cnt := 0;
+				end if;
+			end if;
+		end if;
 	end process;
 
 end;
+
+
+
 
 
 

@@ -261,8 +261,8 @@ WORK__de_piece_testbench_behaviour_cfg = $(LIB_WORK)/de_piece_testbench_behaviou
 WORK__de_piece_testbench__behaviour = $(LIB_WORK)/de_piece_testbench/behaviour.dat
 WORK__de_piece_testbench = $(LIB_WORK)/de_piece_testbench/_primary.dat
 WORK__de_piece_behaviour_cfg = $(LIB_WORK)/de_piece_behaviour_cfg/_primary.dat
-WORK__de_piece__synthesised = $(LIB_WORK)/de_piece/synthesised.dat
 WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
+WORK__de_piece__synthesised = $(LIB_WORK)/de_piece/synthesised.dat
 WORK__de_piece = $(LIB_WORK)/de_piece/_primary.dat
 WORK__cs_tri8_cs_tri8_behav_cfg = $(LIB_WORK)/cs_tri8_cs_tri8_behav_cfg/_primary.dat
 WORK__cs_tri8__cs_tri8_behav = $(LIB_WORK)/cs_tri8/cs_tri8_behav.dat
@@ -588,8 +588,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__de_piece_testbench__behaviour) \
     $(WORK__de_piece_testbench) \
     $(WORK__de_piece_behaviour_cfg) \
-    $(WORK__de_piece__synthesised) \
     $(WORK__de_piece__behaviour) \
+    $(WORK__de_piece__synthesised) \
     $(WORK__de_piece) \
     $(WORK__cs_tri8_cs_tri8_behav_cfg) \
     $(WORK__cs_tri8__cs_tri8_behav) \
@@ -960,6 +960,8 @@ $(WORK__controller_tb__behaviour) : VHDL/controller_tb_arch.vhd \
 		 work -quiet -nologo VHDL/controller_tb_arch.vhd
 
 $(WORK__controller_tb_behaviour_cfg) : VHDL/controller_tb_behaviour_cfg.vhd \
+		$(IEEE__numeric_std) \
+		$(WORK__timer) \
 		$(WORK__controller) \
 		$(WORK__controller_controller_arch_cfg) \
 		$(WORK__controller_tb__behaviour) \
@@ -1340,14 +1342,6 @@ $(WORK__de_piece) : VHDL/de_piece.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/de_piece.vhd
 
-$(WORK__de_piece__behaviour) : VHDL/de_piece-behaviour.vhd \
-		$(WORK__de_piece) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/de_piece-behaviour.vhd
-
 $(WORK__de_piece__synthesised) : VHDL/de_piece_SYNTH.vhd \
 		$(IEEE__numeric_std) \
 		$(WORK__de_piece) \
@@ -1356,6 +1350,14 @@ $(WORK__de_piece__synthesised) : VHDL/de_piece_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/de_piece_SYNTH.vhd
+
+$(WORK__de_piece__behaviour) : VHDL/de_piece-behaviour.vhd \
+		$(WORK__de_piece) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece-behaviour.vhd
 
 $(WORK__de_piece_behaviour_cfg) : VHDL/de_piece_behaviour_cfg.vhd \
 		$(WORK__de_piece__behaviour) \
