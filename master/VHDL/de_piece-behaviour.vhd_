@@ -13,10 +13,9 @@ begin
 			if (rst = '1') then
 				state     <= reset;
 				cur_block <= "00";
-			else
-				state           <= new_state;
-				cur_block <= new_cur_block;
 			end if;
+			state           <= new_state;
+			cur_block <= new_cur_block;	
 		end if;
 	end process;
 
@@ -115,9 +114,6 @@ begin
 		end case;
 	end process;
 end behaviour;
-
-
-
 
 
 
