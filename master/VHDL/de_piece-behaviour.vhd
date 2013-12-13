@@ -24,7 +24,7 @@ begin
 	case state is
 			when reset =>
 
-				write       <= '0';
+				write       <= 'Z';
 				ready       <= '0';
 				addr        <= "ZZZZZZZZ";
 				mask_select <= "ZZ";
@@ -114,6 +114,9 @@ begin
 		end case;
 	end process;
 end behaviour;
+
+
+
 
 
 

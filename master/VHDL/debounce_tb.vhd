@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 
+entity debounce_testb is
+end entity;
 
 architecture behaviour of debounce_testb is
 component debounce is
@@ -53,6 +55,9 @@ fghjk: debounce port map(
   output => output
   );
 end behaviour;
+
+
+
 
 
 
