@@ -190,6 +190,8 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=119" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=7994" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=10908" -section_id auto_signaltap_0
+set_global_assignment -name VHDL_FILE ../VHDL/top_level2.vhd
+set_global_assignment -name VHDL_FILE ../VHDL/top_level2_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/ram_fix.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/ram_fix_arch.vhd
 set_global_assignment -name VHDL_FILE ../VHDL/timer_counter_arch.vhd

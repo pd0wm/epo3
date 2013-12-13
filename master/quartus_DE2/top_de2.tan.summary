@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.317 ns
+Actual Time    : 5.837 ns
 From           : rst
-To             : controller:inst9|cur_future_piece[1]
+To             : top_level2:inst2|timer:fall_timer|state.high
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.999 ns
-From           : vga:inst3|vga_read:read_and_output|v_sync_out
+Actual Time    : 10.069 ns
+From           : top_level2:inst2|vga:vga_controller|vga_read:read_and_output|v_sync_out
 To             : vga_vsync
 From Clock     : clock_50mhz
 To Clock       : --
@@ -35,19 +35,19 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.474 ns
-From           : dbg_inputs[4]
-To             : debounce:inst19|output[4]
+Actual Time    : 2.228 ns
+From           : altera_internal_jtag~TDIUTAP
+To             : sld_hub:auto_hub|jtag_ir_reg[9]
 From Clock     : --
-To Clock       : clock_50mhz
+To Clock       : altera_internal_jtag~TCKUTAP
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 118.68 MHz ( period = 8.426 ns )
-From           : cs_compare:inst11|state[0]
-To             : sr_if:inst2|do1
+Actual Time    : 121.34 MHz ( period = 8.241 ns )
+From           : top_level2:inst2|cs_compare:clear_shift|state[2]
+To             : top_level2:inst2|sr_if:video_ram|do1
 From Clock     : clock_50mhz
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -55,7 +55,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 137.21 MHz ( period = 7.288 ns )
+Actual Time    : 135.21 MHz ( period = 7.396 ns )
 From           : sld_hub:auto_hub|irf_reg[1][5]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
