@@ -4,12 +4,19 @@ six
 ------ opening seadif ------
 ------ checking your circuit 'top_level2' ------
 ------ circuit 'top_level2' is still up-to-date ------
------- checking match with placement layout 'Tmptop_level23509' ------
------- reading nelsis layout-cell 'Tmptop_level23509' ------
------- writing nelsis 'Tmptop_level23509' as sdflay 'Tmp_Cell_(top_level2(top_level2(test)))' ------
+------ checking match with placement layout 'Tmptop_level24418' ------
+------ reading nelsis layout-cell 'Tmptop_level24418' ------
+For your information:
+    The following 1 instance(s) in your layout placement cell could
+    not be assigned to a corresponding instance in circuit 'top_level2'.
+    This could have been your intention. Anyway, notice that these
+    instances will not be routed.
+    >inst 'osc10_1' of layout cell 'osc10'
+------ writing nelsis 'Tmptop_level24418' as sdflay 'Tmp_Cell_(top_level2(top_level2(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f top_level2 -c top_level2 -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmptop_level23509' ------
-calling program: nelsea -rLH -f top_level2 -c top_level2 -l Tmp_Cell_ Tmptop_level23509 
+calling program: trout -l test -f top_level2 -c top_level2 -o Tmp_Cell_ -v -Hclk -r -V Tmp_Cell_ 
+------ check successful ------
+------ converting result back into nelsis as cell 'Tmptop_level24418' ------
+calling program: nelsea -rLH -f top_level2 -c top_level2 -l Tmp_Cell_ Tmptop_level24418 
 ------ sea: task completed ------
+lock
