@@ -122,6 +122,16 @@ begin
                 wait for 20 ns;
         end process;
         
+        lbl_score : process
+        begin
+                draw_score_ready <= '0';
+                wait until (draw_score_draw = '1');
+                wait for 50 ns;
+                draw_score_ready <= '1';
+                wait until (draw_erase_draw = '0');
+                wait for 20 ns;
+        end process;
+        
         lbl_tmr1 : process
         begin
                 timer_1_done <= '0';
