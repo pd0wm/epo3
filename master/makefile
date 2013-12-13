@@ -231,8 +231,8 @@ WORK__draw_score_tb_behaviour_cfg = $(LIB_WORK)/draw_score_tb_behaviour_cfg/_pri
 WORK__draw_score_tb__behaviour = $(LIB_WORK)/draw_score_tb/behaviour.dat
 WORK__draw_score_tb = $(LIB_WORK)/draw_score_tb/_primary.dat
 WORK__draw_score_behaviour_cfg = $(LIB_WORK)/draw_score_behaviour_cfg/_primary.dat
-WORK__draw_score__synthesised = $(LIB_WORK)/draw_score/synthesised.dat
 WORK__draw_score__behaviour = $(LIB_WORK)/draw_score/behaviour.dat
+WORK__draw_score__synthesised = $(LIB_WORK)/draw_score/synthesised.dat
 WORK__draw_score = $(LIB_WORK)/draw_score/_primary.dat
 WORK__demux8_inv_demux8_inv_behav_cfg = $(LIB_WORK)/demux8_inv_demux8_inv_behav_cfg/_primary.dat
 WORK__demux8_inv__synthesised = $(LIB_WORK)/demux8_inv/synthesised.dat
@@ -558,8 +558,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__draw_score_tb__behaviour) \
     $(WORK__draw_score_tb) \
     $(WORK__draw_score_behaviour_cfg) \
-    $(WORK__draw_score__synthesised) \
     $(WORK__draw_score__behaviour) \
+    $(WORK__draw_score__synthesised) \
     $(WORK__draw_score) \
     $(WORK__demux8_inv_demux8_inv_behav_cfg) \
     $(WORK__demux8_inv__synthesised) \
@@ -1562,14 +1562,6 @@ $(WORK__draw_score) : VHDL/draw_score.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/draw_score.vhd
 
-$(WORK__draw_score__behaviour) : VHDL/draw_score-behaviour.vhd \
-		$(WORK__draw_score) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/draw_score-behaviour.vhd
-
 $(WORK__draw_score__synthesised) : VHDL/draw_score_SYNTH.vhd \
 		$(WORK__draw_score) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -1577,6 +1569,14 @@ $(WORK__draw_score__synthesised) : VHDL/draw_score_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/draw_score_SYNTH.vhd
+
+$(WORK__draw_score__behaviour) : VHDL/draw_score-behaviour.vhd \
+		$(WORK__draw_score) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/draw_score-behaviour.vhd
 
 $(WORK__draw_score_behaviour_cfg) : VHDL/draw_score_behaviour_cfg.vhd \
 		$(IEEE__numeric_std) \

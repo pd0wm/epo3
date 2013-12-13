@@ -7,17 +7,19 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work draw_score_tb_behaviour_cfg 
+# vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work checkmask_tb_check_mask_tb_behaviour_cfg 
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-13) Recompile work.draw_score_tb_behaviour_cfg because work.draw_score_tb(behaviour) has changed.
+# ** Warning: (vopt-13) Recompile work.checkmask_tb_check_mask_tb_behaviour_cfg because work.checkmask_tb(check_mask_tb_behaviour) has changed.
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.draw_score_tb_behaviour_cfg#1
-# Loading work.draw_score_tb(behaviour)#1
-# Loading work.draw_score_behaviour_cfg#1
-# Loading work.draw_score(behaviour)#1
+# Loading work.checkmask_tb_check_mask_tb_behaviour_cfg#1
+# Loading work.checkmask_tb(check_mask_tb_behaviour)#1
+# Loading work.check_mask_check_mask_behaviour_cfg#1
+# Loading work.check_mask(check_mask_behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
 run 10us
+restart
+run 1us
 quit
