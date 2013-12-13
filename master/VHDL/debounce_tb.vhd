@@ -1,10 +1,8 @@
 library IEEE;
 use IEEE.std_logic_1164.ALL;
 
-entity debounce_tb is
-end entity debounce_tb;
 
-architecture behaviour of debounce_tb is
+architecture behaviour of debounce_testb is
 component debounce is
 PORT
 (
@@ -19,16 +17,33 @@ END component debounce;
         signal clk,rst, random_seed: std_logic;
         signal inv_inputs, output: std_logic_vector(5 downto 0);
         begin
+
          clk <= '1' after 0 ns,
-         '0' after 20 ns when clk /= '0' else '1' after 20 ns;
-         rst <= '1' after 0 ns, '0' after 2000 ns;
-         inv_inputs <= "111111" after 0 ns, "100000" after 1000 ns, "010000" after 7000 ns, "111111" after 79000 ns, "100000" after 80000 ns, 
+         		'0' after 82 ns when clk /= '0' 
+           else '1' after 82 ns;  
 
+         rst <= '1' after 0 ns,
+	        '0' after 8000 ns;
 
-"001000" after 100000 ns, "111111" after 100050 ns,"001000" after 100200 ns,"000000" after 100300 ns,"001000" after 100350 ns,"000000" after 119000 ns,"001000" after 119050 ns,"000000" after 119200 ns,"001000" after 119300 ns,"000000" after 119450 ns,
-
-
-"110000" after 120000 ns, "000000" after 180000 ns;
+         inv_inputs <= "111111" after 0 ns,
+		 "011111" after 4000 ns, 
+		 "111111" after 27000 ns,
+		 "101111" after 28000 ns, 
+		 "111111" after 316000 ns, 
+		 "011111" after 320000 ns, 
+		 "111111" after 400000 ns,
+		 "110111" after 440000 ns, 
+                 "111111" after 440200 ns,
+	  	 "110111" after 440800 ns,
+		 "111111" after 441200 ns,
+		 "110111" after 441400 ns,
+		 "111111" after 516000 ns,
+	   	 "110111" after 516200 ns,
+		 "111111" after 516800 ns,
+		 "110111" after 517200 ns,
+		 "111111" after 517800 ns,
+		 "001111" after 560000 ns, 
+		 "111111" after 760000 ns;
         
 fghjk: debounce port map(
   clk=>clk,
@@ -38,4 +53,6 @@ fghjk: debounce port map(
   output => output
   );
 end behaviour;
+
+
 
