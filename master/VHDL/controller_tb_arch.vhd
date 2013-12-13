@@ -29,30 +29,41 @@ architecture behaviour of controller_tb is
 			 inputs            : in  std_logic_vector(5 downto 0));
 	end component controller;
 
-	signal clk                : std_logic;
-	signal rst                : std_logic;
-	signal lut_piece_type     : std_logic_vector(2 downto 0);
-	signal lut_next_piece     : std_logic;
-	signal lut_x              : std_logic_vector(2 downto 0);
-	signal lut_y              : std_logic_vector(3 downto 0);
-	signal lut_rot            : std_logic_vector(1 downto 0);
-	signal new_piece          : std_logic;
-	signal next_piece         : std_logic_vector(2 downto 0);
-	signal check_empty        : std_logic;
-	signal check_start        : std_logic;
-	signal check_ready        : std_logic;
-	signal draw_erase_draw    : std_logic;
-	signal draw_erase_start   : std_logic;
-	signal draw_erase_ready   : std_logic;
-	signal clear_shift_start  : std_logic;
-	signal clear_shift_ready  : std_logic;
-	signal draw_score_draw    : std_logic;
-	signal draw_score_ready   : std_logic;
-	signal timer_1_time       : std_logic;
-	signal timer_1_start      : std_logic;
-	signal timer_1_done       : std_logic;
-	signal timer_1_reset      : std_logic;
-	signal inputs             : std_logic_vector(5 downto 0);
+	component timer
+		port(clk     : in  std_logic;
+			 vga_clk : in  std_logic;
+			 rst     : in  std_logic;
+			 cnt_rst : in  std_logic;
+			 time    : in  std_logic;
+			 start   : in  std_logic;
+			 ready   : out std_logic);
+	end component timer;
+
+	signal clk               : std_logic;
+	signal rst               : std_logic;
+	signal lut_piece_type    : std_logic_vector(2 downto 0);
+	signal lut_next_piece    : std_logic;
+	signal lut_x             : std_logic_vector(2 downto 0);
+	signal lut_y             : std_logic_vector(3 downto 0);
+	signal lut_rot           : std_logic_vector(1 downto 0);
+	signal new_piece         : std_logic;
+	signal next_piece        : std_logic_vector(2 downto 0);
+	signal check_empty       : std_logic;
+	signal check_start       : std_logic;
+	signal check_ready       : std_logic;
+	signal draw_erase_draw   : std_logic;
+	signal draw_erase_start  : std_logic;
+	signal draw_erase_ready  : std_logic;
+	signal clear_shift_start : std_logic;
+	signal clear_shift_ready : std_logic;
+	signal draw_score_draw   : std_logic;
+	signal draw_score_ready  : std_logic;
+	signal timer_1_time      : std_logic;
+	signal timer_1_start     : std_logic;
+	signal timer_1_done      : std_logic;
+	signal timer_1_reset     : std_logic;
+	signal inputs            : std_logic_vector(5 downto 0);
+	signal vga_clk           : std_logic;
 
 	constant clk_period : time := 20 ns;
 
@@ -82,74 +93,69 @@ begin
 			     timer_1_done      => timer_1_done,
 			     timer_1_reset     => timer_1_reset,
 			     inputs            => inputs);
-	
+	tim : timer
+		port map(clk     => clk,
+			     vga_clk => vga_clk,
+			     rst     => rst,
+			     cnt_rst => timer_1_reset,
+			     time    => timer_1_time,
+			     start   => timer_1_start,
+			     ready   => timer_1_done);
+			     
 	lbl_new_piece : process
-        begin
-                next_piece <= "001";
-                wait;
-        end process;
+	begin
+		next_piece <= "001";
+		wait;
+	end process;
 
-        lbl_check_mask : process
-        begin
-                check_empty <= '0';
-                check_ready <= '0';
-                wait until (check_start = '1');
-                wait for 50 ns;
-                check_ready <= '1';
-                check_empty <= '1';
-                wait until (check_start = '0');
+	lbl_check_mask : process
+	begin
+		check_empty <= '0';
+		check_ready <= '0';
+		wait until (check_start = '1');
+		wait for 50 ns;
+		check_ready <= '1';
+		check_empty <= '1';
+		wait until (check_start = '0');
 		wait until (clk = '1');
-        end process;
-        
-        lbl_clear_shift : process
-        begin
-                clear_shift_ready <= '0';
-                wait until (clear_shift_start = '1');
-                wait for 50 ns;
-                clear_shift_ready <= '1';
-                wait until (clear_shift_start = '0');
-		wait until (clk = '1');
-        end process;
-        
-        
-        lbl_draw : process
-        begin
-                draw_erase_ready <= '0';
-                wait until (draw_erase_start = '1');
-                wait for 50 ns;
-                draw_erase_ready <= '1';
-                wait until (draw_erase_start = '0');
-		wait until (clk = '1');
-        end process;
-        
-        lbl_score : process
-        begin
-                draw_score_ready <= '0';
-                wait until (draw_score_draw = '1');
-                wait for 50 ns;
-                draw_score_ready <= '1';
-                wait until (draw_erase_draw = '0');
-		wait until (clk = '1');
-        end process;
+	end process;
 
-        lbl_tmr1 : process
-        begin
-                timer_1_done <= '0';
-                wait until (timer_1_start = '1');
-                wait for 90 ns;
-                timer_1_done <= '1';                
-                wait until (timer_1_start = '0');
-		wait until (clk = '1');       
-        end process;
-        
-        
-        lbl_inpts : process
-        begin
-                inputs <= "000000";
-                wait;
-        end process;
-        
-        
+	lbl_clear_shift : process
+	begin
+		clear_shift_ready <= '0';
+		wait until (clear_shift_start = '1');
+		wait for 50 ns;
+		clear_shift_ready <= '1';
+		wait until (clear_shift_start = '0');
+		wait until (clk = '1');
+	end process;
+
+	lbl_draw : process
+	begin
+		draw_erase_ready <= '0';
+		wait until (draw_erase_start = '1');
+		wait for 50 ns;
+		draw_erase_ready <= '1';
+		wait until (draw_erase_start = '0');
+		wait until (clk = '1');
+	end process;
+
+	lbl_score : process
+	begin
+		draw_score_ready <= '0';
+		wait until (draw_score_draw = '1');
+		wait for 50 ns;
+		draw_score_ready <= '1';
+		wait until (draw_erase_draw = '0');
+		wait until (clk = '1');
+	end process;
+	
+	lbl_inpts : process
+	begin
+		inputs <= "000000";
+		wait;
+	end process;
+
 	clk_process : process
 	begin
 		clk <= '1';
@@ -157,9 +163,17 @@ begin
 		clk <= '0';
 		wait for clk_period / 2;
 	end process;
-	
-	
 
+	vga_clk_process : process
+	begin
+		vga_clk <= '1';
+		wait for clk_period;
+		vga_clk <= '0';
+		wait for clk_period;
+	end process;
+	
+	
+	
 	stim_proc : process
 	begin
 		inputs <= "000001";
