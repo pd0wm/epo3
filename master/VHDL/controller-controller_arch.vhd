@@ -101,7 +101,7 @@ begin
 			     check_start      => move_check_start,
 			     check_empty      => check_empty);
 
-	process(clk, rst, cur_x, cur_y, cur_rot, cur_piece, new_timer_1_time, new_timer_1_start, new_timer_1_reset, new_cur_piece, new_cur_x, new_cur_y, new_cur_rot, next_state)
+	process(clk, rst, cur_x, cur_y, cur_rot, cur_piece, new_timer_1_time, new_timer_1_start, new_timer_1_reset, new_cur_piece, new_cur_x, new_cur_y, new_cur_rot, next_state, calc_x, calc_y, calc_rot)
 	begin
 		if (rising_edge(clk)) then
 			if (rst = '1') then
@@ -136,7 +136,7 @@ begin
 
 	end process;
 
-	process(cur_state, cur_piece, cur_x, cur_y, cur_rot, cur_future_piece, cur_timer_1_time, cur_timer_1_start, cur_timer_1_reset, next_piece, draw_erase_ready, check_ready, check_empty, clear_shift_ready, draw_score_ready, timer_1_done, calc_y, inputs, calc_x, calc_rot)
+	process(cur_state, cur_piece, cur_x, cur_y, cur_rot, cur_future_piece, cur_timer_1_time, cur_timer_1_start, cur_timer_1_reset, next_piece, draw_erase_ready, check_ready, check_empty, clear_shift_ready, draw_score_ready, timer_1_done, calc_y, inputs, calc_x, calc_rot, move_y, move_draw_erase_draw, move_draw_erase_start, move_check_start, move_add_sub, move_ready, move_x, move_rot)
 	begin
 		-- Keep signals
 		new_cur_x        <= cur_x;

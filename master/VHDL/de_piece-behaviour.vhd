@@ -13,9 +13,10 @@ begin
 			if (rst = '1') then
 				state     <= reset;
 				cur_block <= "00";
+			else
+				state           <= new_state;
+				cur_block <= new_cur_block;
 			end if;
-			state           <= new_state;
-			cur_block <= new_cur_block;	
 		end if;
 	end process;
 
@@ -23,10 +24,6 @@ begin
 	begin	
 	case state is
 			when reset =>
-				addr <= "ZZZZZZZZ";
-				write <= 'Z';
-				mask_select <= "ZZ";
-				data <= 'Z';
 
 				write       <= 'Z';
 				ready       <= '0';
@@ -43,7 +40,7 @@ begin
 				end if;
 
 			when lut_lookup =>
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				ready <= '0';
@@ -60,7 +57,7 @@ begin
 				end if;
 
 
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				new_cur_block       <= cur_block;
@@ -92,7 +89,7 @@ begin
 				end if;
 
 
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '0';
 				mask_select <= "ZZ";
 				new_cur_block       <= cur_block;
@@ -107,7 +104,7 @@ begin
 					new_state <= reset;
 				end if;
 
-				write       <= 'Z';
+				write       <= '0';
 				ready       <= '1';
 				lut_start   <= '0';
 				mask_select <= "ZZ";
@@ -118,6 +115,18 @@ begin
 		end case;
 	end process;
 end behaviour;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

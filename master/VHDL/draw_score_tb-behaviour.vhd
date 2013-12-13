@@ -29,9 +29,9 @@ L1: draw_score port map (ds_clk	=>	ds_clk,	ds_rst	=>	ds_rst,	ds_draw => ds_draw,
 clock:	process 
 	begin
 	ds_clk <= '0';
-	wait for 10 us;
+	wait for 82 ns;
 	ds_clk <= '1';
-	wait for 10 us;
+	wait for 82 ns;
 	end process;	
 
 lol:	process
@@ -40,12 +40,12 @@ lol:	process
 	ds_draw	<= '0';
 	ds_input 	<= "00000000";
 	
-	wait for 20 us;
+	wait for 200 ns;
 	ds_rst	<= '0';
-	wait for 20 us;
+	wait for 20 ns;
 	ds_draw	<= '1';
 	ds_input	<= "10101100";
-	wait for 20 us;
+	wait for 90 us;
 	ds_draw	<= '0';
 	wait;
 	end process;
