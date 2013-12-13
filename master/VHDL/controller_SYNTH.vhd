@@ -56,10 +56,10 @@ architecture synthesised of controller is
    
    signal lut_piece_type_2_port, lut_piece_type_1_port, lut_piece_type_0_port, 
       lut_x_2_port, lut_x_1_port, lut_x_0_port, lut_y_3_port, lut_y_2_port, 
-      lut_y_1_port, lut_y_0_port, lut_rot_1_port, lut_rot_0_port, calc_x_2_port
-      , calc_x_1_port, calc_x_0_port, calc_y_3_port, calc_y_2_port, 
-      calc_y_1_port, calc_y_0_port, calc_rot_1_port, calc_rot_0_port, add_sub, 
-      rot, x, move_x, move_y, move_rot, move_add_sub, move_draw_erase_draw, 
+      lut_y_1_port, lut_y_0_port, lut_rot_1_port, lut_rot_0_port, cur_x_2_port,
+      cur_x_1_port, cur_x_0_port, cur_y_3_port, cur_y_2_port, cur_y_1_port, 
+      cur_y_0_port, cur_rot_1_port, cur_rot_0_port, add_sub, rot, x, move_x, 
+      move_y, move_rot, move_add_sub, move_draw_erase_draw, 
       move_draw_erase_start, move_ready, move_check_start, cur_state_4_port, 
       cur_state_3_port, cur_state_2_port, cur_state_1_port, cur_state_0_port, 
       cur_future_piece_2_port, cur_future_piece_1_port, cur_future_piece_0_port
@@ -102,18 +102,17 @@ begin
    clear_shift_start <= clear_shift_start_port;
    draw_score_draw <= draw_score_draw_port;
    
-   calc_pm : controller_calc port map( old_x(2) => lut_x_2_port, old_x(1) => 
-                           lut_x_1_port, old_x(0) => lut_x_0_port, old_y(3) => 
-                           lut_y_3_port, old_y(2) => lut_y_2_port, old_y(1) => 
-                           lut_y_1_port, old_y(0) => lut_y_0_port, old_rot(1) 
-                           => lut_rot_1_port, old_rot(0) => lut_rot_0_port, 
-                           new_x(2) => calc_x_2_port, new_x(1) => calc_x_1_port
-                           , new_x(0) => calc_x_0_port, new_y(3) => 
-                           calc_y_3_port, new_y(2) => calc_y_2_port, new_y(1) 
-                           => calc_y_1_port, new_y(0) => calc_y_0_port, 
-                           new_rot(1) => calc_rot_1_port, new_rot(0) => 
-                           calc_rot_0_port, add_sub => add_sub, rot => rot, x 
-                           => x, y => n270);
+   calc_pm : controller_calc port map( old_x(2) => cur_x_2_port, old_x(1) => 
+                           cur_x_1_port, old_x(0) => cur_x_0_port, old_y(3) => 
+                           cur_y_3_port, old_y(2) => cur_y_2_port, old_y(1) => 
+                           cur_y_1_port, old_y(0) => cur_y_0_port, old_rot(1) 
+                           => cur_rot_1_port, old_rot(0) => cur_rot_0_port, 
+                           new_x(2) => lut_x_2_port, new_x(1) => lut_x_1_port, 
+                           new_x(0) => lut_x_0_port, new_y(3) => lut_y_3_port, 
+                           new_y(2) => lut_y_2_port, new_y(1) => lut_y_1_port, 
+                           new_y(0) => lut_y_0_port, new_rot(1) => 
+                           lut_rot_1_port, new_rot(0) => lut_rot_0_port, 
+                           add_sub => add_sub, rot => rot, x => x, y => n270);
    move_pm : controller_move port map( clk => clk, rst => rst, x => move_x, y 
                            => move_y, rot => move_rot, add_sub => move_add_sub,
                            draw_erase_draw => move_draw_erase_draw, 
@@ -128,7 +127,7 @@ begin
                            cur_timer_1_time);
    cur_state_reg_3_inst : dfr11 port map( D => next_state_3_port, R => rst, CK 
                            => clk, Q => cur_state_3_port);
-   cur_y_reg_3_inst : dfn10 port map( D => n291, CK => clk, Q => lut_y_3_port);
+   cur_y_reg_3_inst : dfn10 port map( D => n291, CK => clk, Q => cur_y_3_port);
    cur_state_reg_2_inst : dfr11 port map( D => next_state_2_port, R => rst, CK 
                            => clk, Q => cur_state_2_port);
    cur_state_reg_0_inst : dfr11 port map( D => next_state_0_port, R => rst, CK 
@@ -137,18 +136,18 @@ begin
                            => clk, Q => cur_state_1_port);
    cur_state_reg_4_inst : dfr11 port map( D => next_state_4_port, R => rst, CK 
                            => clk, Q => cur_state_4_port);
-   cur_y_reg_2_inst : dfn10 port map( D => n285, CK => clk, Q => lut_y_2_port);
-   cur_y_reg_1_inst : dfn10 port map( D => n286, CK => clk, Q => lut_y_1_port);
-   cur_y_reg_0_inst : dfn10 port map( D => n287, CK => clk, Q => lut_y_0_port);
+   cur_y_reg_2_inst : dfn10 port map( D => n285, CK => clk, Q => cur_y_2_port);
+   cur_y_reg_1_inst : dfn10 port map( D => n286, CK => clk, Q => cur_y_1_port);
+   cur_y_reg_0_inst : dfn10 port map( D => n287, CK => clk, Q => cur_y_0_port);
    cur_timer_1_reset_reg : dfn10 port map( D => n268, CK => clk, Q => 
                            cur_timer_1_reset);
    cur_rot_reg_0_inst : dfn10 port map( D => n284, CK => clk, Q => 
-                           lut_rot_0_port);
+                           cur_rot_0_port);
    cur_rot_reg_1_inst : dfn10 port map( D => n283, CK => clk, Q => 
-                           lut_rot_1_port);
-   cur_x_reg_2_inst : dfn10 port map( D => n288, CK => clk, Q => lut_x_2_port);
-   cur_x_reg_1_inst : dfn10 port map( D => n289, CK => clk, Q => lut_x_1_port);
-   cur_x_reg_0_inst : dfn10 port map( D => n290, CK => clk, Q => lut_x_0_port);
+                           cur_rot_1_port);
+   cur_x_reg_2_inst : dfn10 port map( D => n288, CK => clk, Q => cur_x_2_port);
+   cur_x_reg_1_inst : dfn10 port map( D => n289, CK => clk, Q => cur_x_1_port);
+   cur_x_reg_0_inst : dfn10 port map( D => n290, CK => clk, Q => cur_x_0_port);
    cur_piece_reg_2_inst : dfn10 port map( D => n280, CK => clk, Q => 
                            lut_piece_type_2_port);
    cur_future_piece_reg_2_inst : dfn10 port map( D => n277, CK => clk, Q => 
@@ -206,10 +205,10 @@ begin
    U342 : no310 port map( A => n353, B => n354, C => n355, Y => n327);
    U343 : iv110 port map( A => n356, Y => n355);
    U344 : no210 port map( A => n357, B => n358, Y => n356);
-   U345 : ex210 port map( A => lut_y_1_port, B => calc_y_1_port, Y => n358);
-   U346 : ex210 port map( A => lut_y_3_port, B => calc_y_3_port, Y => n357);
-   U347 : ex210 port map( A => calc_y_0_port, B => lut_y_0_port, Y => n354);
-   U348 : ex210 port map( A => calc_y_2_port, B => lut_y_2_port, Y => n353);
+   U345 : ex210 port map( A => lut_y_1_port, B => cur_y_1_port, Y => n358);
+   U346 : ex210 port map( A => lut_y_3_port, B => cur_y_3_port, Y => n357);
+   U347 : ex210 port map( A => cur_y_0_port, B => lut_y_0_port, Y => n354);
+   U348 : ex210 port map( A => cur_y_2_port, B => lut_y_2_port, Y => n353);
    U349 : na310 port map( A => n359, B => n325, C => new_piece_port, Y => n347)
                            ;
    U350 : na210 port map( A => draw_score_ready, B => draw_score_draw_port, Y 
@@ -282,48 +281,48 @@ begin
    U413 : no210 port map( A => n431, B => new_piece_port, Y => n427);
    U414 : no210 port map( A => n432, B => n433, Y => n431);
    U415 : na210 port map( A => n434, B => n435, Y => n291);
-   U416 : na210 port map( A => n436, B => calc_y_3_port, Y => n435);
-   U417 : na210 port map( A => lut_y_3_port, B => n437, Y => n434);
+   U416 : na210 port map( A => n436, B => lut_y_3_port, Y => n435);
+   U417 : na210 port map( A => cur_y_3_port, B => n437, Y => n434);
    U418 : na310 port map( A => n438, B => n439, C => n440, Y => n290);
-   U419 : na210 port map( A => calc_x_0_port, B => n441, Y => n439);
-   U420 : na210 port map( A => lut_x_0_port, B => n442, Y => n438);
+   U419 : na210 port map( A => lut_x_0_port, B => n441, Y => n439);
+   U420 : na210 port map( A => cur_x_0_port, B => n442, Y => n438);
    U421 : na310 port map( A => n443, B => n444, C => n440, Y => n289);
    U422 : na210 port map( A => n412, B => n445, Y => n440);
    U423 : iv110 port map( A => n394, Y => n412);
-   U424 : na210 port map( A => calc_x_1_port, B => n441, Y => n444);
-   U425 : na210 port map( A => lut_x_1_port, B => n442, Y => n443);
+   U424 : na210 port map( A => lut_x_1_port, B => n441, Y => n444);
+   U425 : na210 port map( A => cur_x_1_port, B => n442, Y => n443);
    U426 : na210 port map( A => n446, B => n447, Y => n288);
-   U427 : na210 port map( A => calc_x_2_port, B => n441, Y => n447);
+   U427 : na210 port map( A => lut_x_2_port, B => n441, Y => n447);
    U428 : no210 port map( A => n448, B => n449, Y => n441);
-   U429 : na210 port map( A => lut_x_2_port, B => n442, Y => n446);
+   U429 : na210 port map( A => cur_x_2_port, B => n442, Y => n446);
    U430 : na210 port map( A => n445, B => n450, Y => n442);
    U431 : iv110 port map( A => n449, Y => n445);
    U432 : no210 port map( A => n451, B => n452, Y => n449);
    U433 : no310 port map( A => n453, B => n372, C => n454, Y => n452);
    U434 : na210 port map( A => n328, B => n409, Y => n454);
    U435 : na210 port map( A => n455, B => n456, Y => n287);
-   U436 : na210 port map( A => n436, B => calc_y_0_port, Y => n456);
-   U437 : na210 port map( A => lut_y_0_port, B => n437, Y => n455);
+   U436 : na210 port map( A => n436, B => lut_y_0_port, Y => n456);
+   U437 : na210 port map( A => cur_y_0_port, B => n437, Y => n455);
    U438 : na210 port map( A => n457, B => n458, Y => n286);
-   U439 : na210 port map( A => n436, B => calc_y_1_port, Y => n458);
-   U440 : na210 port map( A => lut_y_1_port, B => n437, Y => n457);
+   U439 : na210 port map( A => n436, B => lut_y_1_port, Y => n458);
+   U440 : na210 port map( A => cur_y_1_port, B => n437, Y => n457);
    U441 : na210 port map( A => n459, B => n460, Y => n285);
-   U442 : na210 port map( A => n436, B => calc_y_2_port, Y => n460);
+   U442 : na210 port map( A => n436, B => lut_y_2_port, Y => n460);
    U443 : no310 port map( A => n351, B => n328, C => n453, Y => n436);
-   U444 : na210 port map( A => lut_y_2_port, B => n437, Y => n459);
+   U444 : na210 port map( A => cur_y_2_port, B => n437, Y => n459);
    U445 : na310 port map( A => n461, B => n462, C => n463, Y => n437);
    U446 : no210 port map( A => n293, B => n421, Y => n463);
    U447 : no210 port map( A => move_ready, B => n328, Y => n421);
    U448 : na210 port map( A => n464, B => n465, Y => n284);
-   U449 : na310 port map( A => n451, B => n414, C => calc_rot_0_port, Y => n465
-                           );
-   U450 : na210 port map( A => lut_rot_0_port, B => n466, Y => n464);
+   U449 : na310 port map( A => n451, B => n414, C => lut_rot_0_port, Y => n465)
+                           ;
+   U450 : na210 port map( A => cur_rot_0_port, B => n466, Y => n464);
    U451 : na210 port map( A => n467, B => n468, Y => n283);
-   U452 : na310 port map( A => n451, B => n414, C => calc_rot_1_port, Y => n468
-                           );
+   U452 : na310 port map( A => n451, B => n414, C => lut_rot_1_port, Y => n468)
+                           ;
    U453 : iv110 port map( A => n448, Y => n414);
    U454 : na210 port map( A => move_ready, B => n293, Y => n448);
-   U455 : na210 port map( A => lut_rot_1_port, B => n466, Y => n467);
+   U455 : na210 port map( A => cur_rot_1_port, B => n466, Y => n467);
    U456 : na210 port map( A => n451, B => n450, Y => n466);
    U457 : na210 port map( A => n293, B => n351, Y => n450);
    U458 : iv110 port map( A => move_ready, Y => n351);
