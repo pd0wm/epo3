@@ -129,9 +129,9 @@ begin
 		timer_1_start <= new_timer_1_start;
 		timer_1_reset <= new_timer_1_reset;
 
-		lut_x          <= cur_x;
-		lut_y          <= cur_y;
-		lut_rot        <= cur_rot;
+		lut_x          <= calc_x;
+		lut_y          <= calc_y;
+		lut_rot        <= calc_rot;
 		lut_piece_type <= cur_piece;
 
 	end process;
@@ -382,4 +382,13 @@ begin
 		end case;
 	end process;
 end;
+
+
+
+
+
+
+
+
+
 
