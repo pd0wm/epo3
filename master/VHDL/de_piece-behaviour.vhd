@@ -23,12 +23,8 @@ begin
 	begin	
 	case state is
 			when reset =>
-				addr <= "ZZZZZZZZ";
-				write <= 'Z';
-				mask_select <= "ZZ";
-				data <= 'Z';
 
-				write       <= 'Z';
+				write       <= '0';
 				ready       <= '0';
 				addr        <= "ZZZZZZZZ";
 				mask_select <= "ZZ";
@@ -43,7 +39,7 @@ begin
 				end if;
 
 			when lut_lookup =>
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				ready <= '0';
@@ -60,7 +56,7 @@ begin
 				end if;
 
 
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				new_cur_block       <= cur_block;
@@ -92,7 +88,7 @@ begin
 				end if;
 
 
-				write       <= 'Z';
+				write       <= '0';
 				lut_start   <= '0';
 				mask_select <= "ZZ";
 				new_cur_block       <= cur_block;
@@ -107,7 +103,7 @@ begin
 					new_state <= reset;
 				end if;
 
-				write       <= 'Z';
+				write       <= '0';
 				ready       <= '1';
 				lut_start   <= '0';
 				mask_select <= "ZZ";

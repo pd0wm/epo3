@@ -24,21 +24,18 @@ end component;
  L2: process 
  begin
   clk <= '1';
-  wait for 85 ns;
+  wait for 82 ns;
   clk <= '0';
-  wait for 85 ns;
+  wait for 82 ns;
 end process;
  
  L3: process 
  begin
  wait for 0 ns;
  increase <= '0';
-   wait for 90 ns;
  rst <= '1';
- wait for 90 ns;
+ wait for 250 ns;
  rst <= '0';
- wait for 90 ns;
-
  increase <= '1';
  wait for  900 ns;
  increase <= '0';
