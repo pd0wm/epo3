@@ -1,0 +1,15 @@
+six
+------ opening nelsis ------
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ opening seadif ------
+------ checking your circuit 'top_level' ------
+------ circuit 'top_level' is still up-to-date ------
+------ checking match with placement layout 'Tmptop_level15110' ------
+------ reading nelsis layout-cell 'Tmptop_level15110' ------
+------ writing nelsis 'Tmptop_level15110' as sdflay 'Tmp_Cell_(top_level(top_level(test)))' ------
+------ input seems good enough: calling router ------
+calling program: trout -l test -f top_level -c top_level -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmptop_level15110' ------
+calling program: nelsea -rLH -f top_level -c top_level -l Tmp_Cell_ Tmptop_level15110 
+------ sea: task completed ------

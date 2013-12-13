@@ -1,0 +1,33 @@
+# This is a maptable for nelsis <--> seadif conversion, generated/maintained by 'nelsea'
+# Written on: Fri Dec 13 15:07:43 2013
+# You can edit this file to control the mapping process
+# Each line contains the name of a nelsis cell and its corresponding seadif cell
+# The status field may contain the following values:
+#    'written'       the cell was successfully written into seadif resp. nelsis
+#    'primitive'     the cell is a primitive which should not be read or converted
+#    [anything else] the cell will be written if necessary
+# To check the consistency of this table: use 'nelsea -C'
+#    N E L S I S     |                   S E A D I F                     | nelsis->sdf sdf->nelsis
+# view    cellname   | library      function     circuit      layout     |   status      status
+#--------------------+---------------------------------------------------+------------------------
+ layout   sr_if        test         sr_if        sr_if        sr_if        not_written not_written
+ layout   npg          test         npg          npg          npg          not_written not_written
+ layout   debounce     test         debounce     debounce     debounce     not_written not_written
+ layout   timer        test         timer        timer        timer        not_written not_written
+ layout   vga          test         vga          vga          vga          not_written not_written
+ layout   draw_score   test         draw_score   draw_score   draw_score   not_written not_written
+ layout   rom          test         rom          rom          rom          not_written not_written
+ layout   iv110        g_digilib5_99 iv110        iv110        iv110        not_written not_written
+ layout   buf40        g_digilib5_99 buf40        buf40        buf40        not_written not_written
+ layout   log_score    test         log_score    log_score    log_score    not_written not_written
+ layout   de_piece     test         de_piece     de_piece     de_piece     not_written not_written
+ layout   check_mask   test         check_mask   check_mask   check_mask   not_written not_written
+ layout   piece_lut    test         piece_lut    piece_lut    piece_lut    not_written not_written
+ layout   cs_compare   test         cs_compare   cs_compare   cs_compare   not_written not_written
+ layout   controller   test         controller   controller   controller   not_written not_written
+ layout   Tmptop_level15110 test         top_level    top_level    Tmp_Cell_    not_written written
+ circuit  cap          primitives   cap          cap          $dummy       primitive   primitive
+ circuit  res          primitives   res          res          $dummy       primitive   primitive
+ circuit  penh         primitives   penh         penh         $dummy       primitive   primitive
+ circuit  nenh         primitives   nenh         nenh         $dummy       primitive   primitive
+ layout   Error_Marker tmplib       Error_Marker Error_Marker Error_Marker primitive   primitive

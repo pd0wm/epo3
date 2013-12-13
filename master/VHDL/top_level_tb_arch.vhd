@@ -50,14 +50,23 @@ begin
 	begin
 		dbg_inputs <= "111110";
 		rst <= '1';
-		wait for 150 ns;
+		wait for 1740 ns;
 		rst <= '0';
-		wait for 1000 ns;
+		wait for 1600 ns;
 		dbg_inputs <= "101111";
 		wait;
 	end process;
 
 end;
+
+
+
+
+
+
+
+
+
 
 
 

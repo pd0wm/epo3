@@ -93,68 +93,7 @@ begin
 			     timer_1_done      => timer_1_done,
 			     timer_1_reset     => timer_1_reset,
 			     inputs            => inputs);
---	tim : timer
---		port map(clk     => clk,
---			     vga_clk => vga_clk,
---			     rst     => rst,
---			     cnt_rst => timer_1_reset,
---			     time    => timer_1_time,
---			     start   => timer_1_start,
---			     ready   => timer_1_done);
-			     
---	lbl_new_piece : process
---	begin
---		next_piece <= "001";
---		wait;
---	end process;
---
---	lbl_check_mask : process
---	begin
---		check_empty <= '0';
---		check_ready <= '0';
---		wait until (check_start = '1');
---		wait for 50 ns;
---		check_ready <= '1';
---		check_empty <= '1';
---		wait until (check_start = '0');
---		wait until (clk = '1');
---	end process;
---
---	lbl_clear_shift : process
---	begin
---		clear_shift_ready <= '0';
---		wait until (clear_shift_start = '1');
---		wait for 50 ns;
---		clear_shift_ready <= '1';
---		wait until (clear_shift_start = '0');
---		wait until (clk = '1');
---	end process;
---
---	lbl_draw : process
---	begin
---		draw_erase_ready <= '0';
---		wait until (draw_erase_start = '1');
---		wait for 50 ns;
---		draw_erase_ready <= '1';
---		wait until (draw_erase_start = '0');
---		wait until (clk = '1');
---	end process;
---
---	lbl_score : process
---	begin
---		draw_score_ready <= '0';
---		wait until (draw_score_draw = '1');
---		wait for 50 ns;
---		draw_score_ready <= '1';
---		wait until (draw_erase_draw = '0');
---		wait until (clk = '1');
---	end process;
---	
---	lbl_inpts : process
---	begin
---		inputs <= "000000";
---		wait;
---	end process;
+
 
 	clk_process : process
 	begin
@@ -183,11 +122,6 @@ begin
 		
 		next_piece <= (others => '0');
 		check_empty <= '1';
---		check_ready <= '1';
---		draw_erase_ready <= '1';
---		clear_shift_ready <= '1';
---		draw_score_ready <= '1';
---		timer_1_done <= '1';
 		
 		rst <= '0';
 		

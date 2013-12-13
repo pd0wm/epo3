@@ -124,6 +124,9 @@ WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
 WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
 WORK__tri_buff__synthesised = $(LIB_WORK)/tri_buff/synthesised.dat
 WORK__tri_buff = $(LIB_WORK)/tri_buff/_primary.dat
+WORK__top_level_tb_behaviour_cfg = $(LIB_WORK)/top_level_tb_behaviour_cfg/_primary.dat
+WORK__top_level_tb__behaviour = $(LIB_WORK)/top_level_tb/behaviour.dat
+WORK__top_level_tb = $(LIB_WORK)/top_level_tb/_primary.dat
 WORK__top_level_structural_cfg = $(LIB_WORK)/top_level_structural_cfg/_primary.dat
 WORK__top_level__structural = $(LIB_WORK)/top_level/structural.dat
 WORK__top_level__synthesised = $(LIB_WORK)/top_level/synthesised.dat
@@ -323,8 +326,8 @@ WORK__controller_calc_controller_calc_arch_cfg = $(LIB_WORK)/controller_calc_con
 WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
 WORK__controller_calc__synthesised = $(LIB_WORK)/controller_calc/synthesised.dat
 WORK__controller_calc = $(LIB_WORK)/controller_calc/_primary.dat
-WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
 WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
+WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
 WORK__checkmask_tb_check_mask_tb_behaviour_cfg = $(LIB_WORK)/checkmask_tb_check_mask_tb_behaviour_cfg/_primary.dat
 WORK__checkmask_tb__check_mask_tb_behaviour = $(LIB_WORK)/checkmask_tb/check_mask_tb_behaviour.dat
@@ -451,6 +454,9 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__tri_buff__extracted) \
     $(WORK__tri_buff__synthesised) \
     $(WORK__tri_buff) \
+    $(WORK__top_level_tb_behaviour_cfg) \
+    $(WORK__top_level_tb__behaviour) \
+    $(WORK__top_level_tb) \
     $(WORK__top_level_structural_cfg) \
     $(WORK__top_level__structural) \
     $(WORK__top_level__synthesised) \
@@ -650,8 +656,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__controller_calc__controller_calc_arch) \
     $(WORK__controller_calc__synthesised) \
     $(WORK__controller_calc) \
-    $(WORK__controller__synthesised) \
     $(WORK__controller__controller_arch) \
+    $(WORK__controller__synthesised) \
     $(WORK__controller) \
     $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) \
     $(WORK__checkmask_tb__check_mask_tb_behaviour) \
@@ -846,17 +852,7 @@ $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) : VHDL/checkmask_tb_check_mask
 $(WORK__controller) : VHDL/controller.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller.vhd
-
-$(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
-		$(WORK__controller) \
-		$(WORK__vga_params) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller-controller_arch.vhd
+	$(VCOM) -2002  VHDL/controller.vhd
 
 $(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
 		$(WORK__controller) \
@@ -865,6 +861,14 @@ $(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_SYNTH.vhd
+
+$(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
+		$(WORK__controller) \
+		$(WORK__vga_params) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002  VHDL/controller-controller_arch.vhd
 
 $(WORK__controller_calc) : VHDL/controller_calc.vhd \
 		$(STD__textio) \
@@ -949,19 +953,15 @@ $(WORK__controller_move_controller_move_arch_cfg) : VHDL/controller_move_control
 $(WORK__controller_tb) : VHDL/controller_tb.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_tb.vhd
+	$(VCOM) -2002  VHDL/controller_tb.vhd
 
 $(WORK__controller_tb__behaviour) : VHDL/controller_tb_arch.vhd \
 		$(WORK__controller_tb) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_tb_arch.vhd
+	$(VCOM) -2002 VHDL/controller_tb_arch.vhd
 
 $(WORK__controller_tb_behaviour_cfg) : VHDL/controller_tb_behaviour_cfg.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__timer) \
 		$(WORK__controller) \
 		$(WORK__controller_controller_arch_cfg) \
 		$(WORK__controller_tb__behaviour) \
@@ -2470,6 +2470,29 @@ $(WORK__top_level_structural_cfg) : VHDL/top_level_structural_cfg.vhd \
 		$(WORK__top_level)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_level_structural_cfg.vhd
+
+$(WORK__top_level_tb) : VHDL/top_level_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level_tb.vhd
+
+$(WORK__top_level_tb__behaviour) : VHDL/top_level_tb_arch.vhd \
+		$(WORK__top_level_tb) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level_tb_arch.vhd
+
+$(WORK__top_level_tb_behaviour_cfg) : VHDL/top_level_tb_behaviour_cfg.vhd \
+		$(WORK__top_level) \
+		$(WORK__top_level_structural_cfg) \
+		$(WORK__top_level_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__top_level_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level_tb_behaviour_cfg.vhd
 
 $(WORK__tri_buff) : VHDL/tri_buff.vhd \
 		$(STD__textio) \

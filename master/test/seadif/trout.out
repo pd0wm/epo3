@@ -1,0 +1,157 @@
+>>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
+>>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
+------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
+------ reading placement 'Tmp_Cell_(top_level(top_level(test)))' ------
+------ building data structure  ------
+------ making grid  ------
+------ routing started Fri Dec 13 15:05:49 2013
+ 126 nets have to be routed.
+Routing net 'dbg_inputs_5_0_5' (2/2): .b OK!
+Routing net 'dbg_inputs_5_0_4' (2/2): .b OK!
+Routing net 'dbg_inputs_5_0_3' (2/2): .b OK!
+Routing net 'dbg_inputs_5_0_2' (2/2): .b OK!
+Routing net 'dbg_inputs_5_0_1' (2/2): .b OK!
+Routing net 'dbg_inputs_5_0_0' (2/2): .b OK!
+Routing net 'vga_r' (2/2): .b OK!
+Routing net 'vga_g' (2/2): .b OK!
+Routing net 'vga_b' (2/2): .b OK!
+Routing net 'SYNTHESIZED_WIRE_33' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_0' (2/2): . OK!
+Routing net 'n4' (2/2): . OK!
+Routing net 'n12' (2/2): . OK!
+Routing net 'n15' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_0_port' (2/2): . OK!
+Routing net 'n13' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_37_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_2' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_39_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_3_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_24' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_37_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_37_3_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_37_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_6_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_31' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_32' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_5_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_38_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_40_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_39_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_45' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_41_4_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_40_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_39_2_port' (2/2): . OK!
+--> 28.57 % elapsed:   6.1 sec. expect another  30.7 sec. <--
+Routing net 'SYNTHESIZED_WIRE_54_0_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_55_1_port' (3/3): .. OK!
+Routing net 'n20' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_43' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_40_3_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_40_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_38_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_55_0_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_4' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_53' (3/3): .. OK!
+Routing net 'n10' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_2_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_16_4_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_44' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_4_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_54_3_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_16_3_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_5' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_1_port' (3/3): .. OK!
+Routing net 'n14' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_46' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_5_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_28' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_36_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_6_port' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_41_1_port' (2/2): . OK!
+Routing net 'n19' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_54_7_port' (3/3): .. OK!
+Routing net 'vga_vsync' (3/3): ..b OK!
+--> 52.38 % elapsed:  13.8 sec. expect another  26.0 sec. <--
+Routing net 'n18' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_6_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_22' (2/2): . OK!
+Routing net 'vga_hsync' (3/3): ..b OK!
+Routing net 'SYNTHESIZED_WIRE_6_7_port' (2/2): . OK!
+Routing net 'n11' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_21' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_7_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_5_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_42' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_36_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_5_port' (2/2): . OK!
+--> 63.49 % elapsed:  20.2 sec. expect another  23.4 sec. <--
+Routing net 'SYNTHESIZED_WIRE_36_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_4_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_16_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_3_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_6_port' (2/2): . OK!
+Routing net 'n1' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_27' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_6_2_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_1' (2/2): . OK!
+Routing net 'n6' (2/2): . OK!
+Routing net 'n17' (2/2): . OK!
+--> 73.02 % elapsed:  26.8 sec. expect another  20.6 sec. <--
+Routing net 'n2' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_19' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_48_5_port' (2/2): . OK!
+Routing net 'n5' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_48_2_port' (2/2): . OK!
+Routing net 'n7' (2/2): . OK!
+--> 77.78 % elapsed:  35.9 sec. expect another  21.4 sec. <--
+Routing net 'SYNTHESIZED_WIRE_20' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_48_1_port' (2/2): . OK!
+Routing net 'n16' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_48_3_port' (2/2): . OK!
+--> 80.95 % elapsed:  45.1 sec. expect another  21.3 sec. <--
+Routing net 'SYNTHESIZED_WIRE_47' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_49_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_17' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_49_2_port' (2/2): . OK!
+Routing net 'n9' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_52_2_port' (5/5): .... OK!
+--> 85.71 % elapsed:  57.9 sec. expect another  20.2 sec. <--
+Routing net 'SYNTHESIZED_WIRE_50' (3/3): .. OK!
+Routing net 'SYNTHESIZED_WIRE_52_4_port' (5/5): .... OK!
+Routing net 'gdfx_temp0' (4/4): ... OK!
+Routing net 'SYNTHESIZED_WIRE_52_0_port' (5/5): .... OK!
+--> 88.89 % elapsed:  66.0 sec. expect another  16.5 sec. <--
+Routing net 'SYNTHESIZED_WIRE_52_1_port' (5/5): .... OK!
+Routing net 'SYNTHESIZED_WIRE_49_1_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_52_3_port' (5/5): .... OK!
+Routing net 'n8' (2/2): . OK!
+--> 92.06 % elapsed:  79.2 sec. expect another  13.9 sec. <--
+Routing net 'SYNTHESIZED_WIRE_48_0_port' (2/2): . OK!
+Routing net 'SYNTHESIZED_WIRE_48_4_port' (2/2): . OK!
+Routing net 'rst' (13/13): ............b OK!
+Routing net 'SYNTHESIZED_WIRE_52_7_port' (5/5): .... OK!
+--> 95.24 % elapsed:  90.2 sec. expect another   9.3 sec. <--
+Routing net 'SYNTHESIZED_WIRE_51' (5/5): .... OK!
+Routing net 'vga_clk' (13/13): ............b OK!
+Routing net 'SYNTHESIZED_WIRE_52_5_port' (5/5): .... OK!
+Routing net 'SYNTHESIZED_WIRE_52_6_port' (5/5): .... OK!
+--> 98.41 % elapsed: 101.7 sec. expect another   3.9 sec. <--
+Routing net 'vdd' : .. (Power special)
+Routing net 'vss' : ... (Power special)
+READY
+----- Some interesting statistics ------
+Total number of nets:                 126 (100% completion)
+Total length of routed wires:         113645 grids = 1000.076 mm
+No. of transistors (total / used):    193307/38550 = 19.94 %
+CPU-time consumption:               101.64 sec.
+Elapsed time during routing:        101.79 sec. (99.98 % of cpu)
+------ Verifying Connectivity ------
+------ No unconnect nor short-circuits ------
+------ Writing 'Tmp_Cell_(top_level(top_level(test)))' ------
+------ Trout: task completed on Fri Dec 13 15:07:42 2013
+ terminate
