@@ -1,0 +1,86 @@
+# Tabular Link File created on Fri 13 Dec 2013 01:28:07
+# By Program: design_flow
+# From Source: /home/epo3-user/Desktop/git/epo3/master/log_score.lst
+# Clock_column: 0
+INP clk;
+INP rst;
+INP increase;
+OUT output_7_0_7;
+OUT output_7_0_6;
+OUT output_7_0_5;
+OUT output_7_0_4;
+OUT output_7_0_3;
+OUT output_7_0_2;
+OUT output_7_0_1;
+OUT output_7_0_0;
+PERIOD 170ns;
+TIME_UNIT 1.0e-10s;
+TABLE_FORMAT D<11c;
+DATA_SECTION
+             00<HXLllllllll
+            850<LXLllllllll
+            900<LHLllllllll
+           1700<HHLllllllll
+           1800<HLLllllllll
+           2550<LLLllllllll
+           2700<LLHllllllll
+           3400<HLHlllllllh
+           4250<LLHlllllllh
+           5100<HLHllllllhh
+           5950<LLHllllllhh
+           6800<HLHllllllhh
+           7650<LLHllllllhh
+           8500<HLHlllllhhh
+           9350<LLHlllllhhh
+          10200<HLHlllllhhh
+          11050<LLHlllllhhh
+          11700<LLLlllllhhh
+          11900<HLLlllllhhh
+          12700<HLHlllllhhh
+          12750<LLHlllllhhh
+          13600<HLHlllllhhh
+          13700<HLLlllllhhh
+          14450<LLLlllllhhh
+          15300<HLLlllllhhh
+          16150<LLLlllllhhh
+          17000<HLLlllllhhh
+          17850<LLLlllllhhh
+          18700<HLLlllllhhh
+          19550<LLLlllllhhh
+          20400<HLLlllllhhh
+          21250<LLLlllllhhh
+          22100<HLLlllllhhh
+          22950<LLLlllllhhh
+          23800<HLLlllllhhh
+          24650<LLLlllllhhh
+          25500<HLLlllllhhh
+          26350<LLLlllllhhh
+          27200<HLLlllllhhh
+          28050<LLLlllllhhh
+          28900<HLLlllllhhh
+          29750<LLLlllllhhh
+          30600<HLLlllllhhh
+          31450<LLLlllllhhh
+          32300<HLLlllllhhh
+          33150<LLLlllllhhh
+          34000<HLLlllllhhh
+          34850<LLLlllllhhh
+          35700<HLLlllllhhh
+          36550<LLLlllllhhh
+          37400<HLLlllllhhh
+          38250<LLLlllllhhh
+          39100<HLLlllllhhh
+          39950<LLLlllllhhh
+          40800<HLLlllllhhh
+          41650<LLLlllllhhh
+          42500<HLLlllllhhh
+          43350<LLLlllllhhh
+          44200<HLLlllllhhh
+          45050<LLLlllllhhh
+          45900<HLLlllllhhh
+          46750<LLLlllllhhh
+          47600<HLLlllllhhh
+          48450<LLLlllllhhh
+          49300<HLLlllllhhh
+
+

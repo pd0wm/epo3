@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.895 ns
-From           : rst
-To             : controller:inst14|cur_piece[1]
+Actual Time    : 2.373 ns
+From           : dbg_inputs[3]
+To             : npg:inst10|npg_ff:Button|q
 From Clock     : --
 To Clock       : clock_50mhz
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.512 ns
-From           : vga:inst3|vga_read:read_and_output|v_sync_out
-To             : vga_vsync
+Actual Time    : 14.161 ns
+From           : de_piece:inst6|state.writing
+To             : pre_syn.bp.inst6_addr_5_
 From Clock     : clock_50mhz
 To Clock       : --
 Failed Paths   : 0
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.310 ns
+Actual Time    : 5.737 ns
 From           : dbg_inputs[5]
 To             : debounce:inst19|output[5]
 From Clock     : --
@@ -45,7 +45,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock_50mhz'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 117.41 MHz ( period = 8.517 ns )
+Actual Time    : 121.65 MHz ( period = 8.220 ns )
 From           : cs_compare:inst11|state[0]
 To             : sr_if:inst2|do1
 From Clock     : clock_50mhz
@@ -55,8 +55,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 140.21 MHz ( period = 7.132 ns )
-From           : sld_hub:auto_hub|irf_reg[1][5]
+Actual Time    : 133.58 MHz ( period = 7.486 ns )
+From           : sld_hub:auto_hub|irf_reg[1][1]
 To             : sld_hub:auto_hub|tdo
 From Clock     : altera_internal_jtag~TCKUTAP
 To Clock       : altera_internal_jtag~TCKUTAP

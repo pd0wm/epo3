@@ -2,21 +2,35 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'cs_7bc' ------
------- reading nelsis circuit-cell 'cs_7bc' ------
-WARNING: Zero terminal net: 'value_6_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_5_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_4_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_3_port' (cell 'cs_7bc')
-WARNING: Zero terminal net: 'value_2_port' (cell 'cs_7bc')
+------ checking your circuit 'log_score' ------
+------ reading nelsis circuit-cell 'score' ------
+WARNING: Zero terminal net: 'output_7_port' (cell 'score')
+WARNING: Zero terminal net: 'output_6_port' (cell 'score')
+WARNING: Zero terminal net: 'output_5_port' (cell 'score')
+WARNING: Zero terminal net: 'output_4_port' (cell 'score')
+WARNING: Zero terminal net: 'output_3_port' (cell 'score')
+WARNING: many (8) useless nets were removed (printed only 5)
+------ reading nelsis circuit-cell 'log' ------
+WARNING: Zero terminal net: 'log_out_6_port' (cell 'log')
+WARNING: Zero terminal net: 'log_out_5_port' (cell 'log')
+WARNING: Zero terminal net: 'log_out_4_port' (cell 'log')
+WARNING: Zero terminal net: 'log_out_3_port' (cell 'log')
+WARNING: Zero terminal net: 'log_out_2_port' (cell 'log')
 WARNING: many (7) useless nets were removed (printed only 5)
------- checking match with placement layout 'Tmpcs_7bc14851' ------
------- reading nelsis layout-cell 'Tmpcs_7bc14851' ------
------- writing nelsis 'Tmpcs_7bc14851' as sdflay 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
------- writing nelsis 'cs_7bc' as sdfcir 'cs_7bc(cs_7bc(test)) ------
+------ reading nelsis circuit-cell 'log_score' ------
+------ reading nelsis layout-cell 'score' ------
+------ reading nelsis layout-cell 'log' ------
+------ checking match with placement layout 'Tmplog_score24099' ------
+------ reading nelsis layout-cell 'Tmplog_score24099' ------
+------ writing nelsis 'Tmplog_score24099' as sdflay 'Tmp_Cell_(log_score(log_score(test)))' ------
+------ writing nelsis 'log' as sdflay 'log(log(log(test)))' ------
+------ writing nelsis 'score' as sdflay 'score(score(score(test)))' ------
+------ writing nelsis 'log' as sdfcir 'log(log(test)) ------
+------ writing nelsis 'score' as sdfcir 'score(score(test)) ------
+------ writing nelsis 'log_score' as sdfcir 'log_score(log_score(test)) ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f cs_7bc -c cs_7bc -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmpcs_7bc14851' ------
-calling program: nelsea -rLH -f cs_7bc -c cs_7bc -l Tmp_Cell_ Tmpcs_7bc14851 
+calling program: trout -l test -f log_score -c log_score -o Tmp_Cell_ -d Tmp_Cell_ 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmplog_score24099' ------
+calling program: nelsea -rLH -f log_score -c log_score -l Tmp_Cell_ Tmplog_score24099 
 ------ sea: task completed ------

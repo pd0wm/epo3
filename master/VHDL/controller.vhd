@@ -14,7 +14,6 @@ entity controller is
 		lut_y              : out std_logic_vector(3 downto 0);
 		lut_rot            : out std_logic_vector(1 downto 0);
 
-		add_sub, x, y, rot : out std_logic;
 
 		--next piece
 		new_piece          : out std_logic;
@@ -48,6 +47,9 @@ entity controller is
 		inputs             : in  std_logic_vector(5 downto 0)
 	);
 end controller;
+
+
+
 
 
 

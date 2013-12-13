@@ -1,50 +1,41 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
+------ reading placement 'Tmp_Cell_(log_score(log_score(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Thu Dec 12 21:59:47 2013
- 30 nets have to be routed.
-Routing net 'clk' (8/8): ....... OK!
-Routing net 'n31' (2/2): . OK!
-Routing net 'n28' (2/2): . OK!
-Routing net 'n27' (2/2): . OK!
-Routing net 'n32' (2/2): . OK!
-Routing net 'n21' (2/2): . OK!
-Routing net 'n24' (3/3): .. OK!
-Routing net 'n25' (2/2): . OK!
-Routing net 'n33' (2/2): . OK!
-Routing net 'n20' (2/2): . OK!
-Routing net 'n18' (2/2): . OK!
-Routing net 'value_6_0_4' (4/4): ... OK!
-Routing net 'n16' (2/2): . OK!
-Routing net 'n29' (3/3): .. OK!
-Routing net 'n23' (3/3): .. OK!
-Routing net 'en' (4/4): ... OK!
-Routing net 'value_6_0_5' (3/3): .. OK!
-Routing net 'n30' (3/3): .. OK!
-Routing net 'n22' (2/2): . OK!
-Routing net 'value_6_0_0' (5/5): .... OK!
-Routing net 'n26' (4/4): ... OK!
-Routing net 'value_6_0_2' (4/4): ... OK!
-Routing net 'value_6_0_1' (4/4): ... OK!
-Routing net 'n17' (2/2): . OK!
-Routing net 'value_6_0_6' (3/3): .. OK!
-Routing net 'value_6_0_3' (5/5): .... OK!
-Routing net 'rst' (8/8): ....... OK!
-Routing net 'n19' (2/2): . OK!
-Routing net 'vdd' :  (Power special)
+------ routing started Fri Dec 13 01:28:48 2013
+ 21 nets have to be routed.
+Routing net 'clk' (2/2): . OK!
+Routing net 'rst' (2/2): . OK!
+Routing net 'output_7_0_6' (2/2): . OK!
+Routing net 'output_7_0_4' (2/2): . OK!
+Routing net 'output_7_0_1' (2/2): . OK!
+Routing net 'score_to_log_4_port' (2/2): . OK!
+Routing net 'output_7_0_7' (2/2): . OK!
+Routing net 'output_7_0_5' (2/2): . OK!
+Routing net 'output_7_0_2' (2/2): . OK!
+Routing net 'output_7_0_0' (2/2): . OK!
 Routing net 'vss' :  (Power special)
+Routing net 'score_to_log_3_port' (2/2): . OK!
+Routing net 'output_7_0_3' (2/2): . OK!
+Routing net 'score_to_log_1_port' (2/2): . OK!
+Routing net 'vdd' :  (Power special)
+Routing net 'score_to_log_0_port' (2/2): . OK!
+Routing net 'increase' (2/2): . OK!
+Routing net 'score_to_log_6_port' (2/2): . OK!
+Routing net 'score_to_log_7_port' (2/2): . OK!
+Routing net 'score_to_log_2_port' (2/2): . OK!
+Routing net 'score_to_log_5_port' (2/2): . OK!
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 30 (100% completion)
+Total number of nets:                 21 (100% completion)
 Total length of routed wires:         0 (No new wires created)
-No. of transistors (total / used):    504/454 = 90.08 %
+No. of transistors (total / used):    750/590 = 78.67 %
 CPU-time consumption:                 0.00 sec.
 Elapsed time during routing:          0.00 sec. (100.00 % of cpu)
 ------ Verifying Connectivity ------
------- No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(cs_7bc(cs_7bc(test)))' ------
------- Trout: task completed on Thu Dec 12 21:59:47 2013
- terminate
+WARNING: 1 short-circuit(s) were detected among the 21 nets.
+------ Writing 'Tmp_Cell_(log_score(log_score(test)))' ------
+------ Trout: task completed on Fri Dec 13 01:28:48 2013
+ 

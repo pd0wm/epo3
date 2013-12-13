@@ -1,15 +1,15 @@
 Library vendor : Model Technology
 Maximum unnamed designs : 3
 OPTIMIZED DESIGN _opt
-    Version string: <baVB4H9H>KG6;I2[Y_8m2
-    Top-level model: work vga_tb_vga_tb_arch_cfg 1
+    Version string: GJ`3ElKz9nbY@R4>T<5Zl0
+    Top-level model: work log_score_tb_behaviour_cfg 1
     Compile options: -quiet -auto_acc_if_foreign -work work
     Short name: @_opt
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: master
 OPTIMIZED DESIGN _opt1
-    Version string: EjH6mLh]F=g1A;Wn0Y`@B3
-    Top-level model: work cs_shift_tb_cs_shift_tb_behav_cfg 1
+    Version string: ^5dAn?TG3>Y<D4^4JjJ:V3
+    Top-level model: work draw_score_tb_behaviour_cfg 1
     Compile options: -quiet -auto_acc_if_foreign -work work
     Short name: @_opt1
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
@@ -35,22 +35,6 @@ ENTITY adder_x
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:43:18 2013
-    Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/adder_x_SYNTH.vhd
-    Source file: VHDL/adder_x_SYNTH.vhd
-    Start location: VHDL/adder_x_SYNTH.vhd:7
-    Version string: A:P5hm0eGSNQ4KAzl4O@32
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -67,6 +51,22 @@ ENTITY adder_x
     Source directory: /master
     Source modified time: Thu Dec 12 15:20:20 2013
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 20:45:21 2013
+    Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_x_SYNTH.vhd
+    Source file: VHDL/adder_x_SYNTH.vhd
+    Start location: VHDL/adder_x_SYNTH.vhd:7
+    Version string: A:P5hm0eGSNQ4KAzl4O@32
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
 VHDL CONFIGURATION adder_x_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: adder_x
@@ -76,7 +76,7 @@ VHDL CONFIGURATION adder_x_behaviour_cfg
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work adder_x CWJAbfn=lmMQMBo;?F4O11
     Source modified time: Thu Dec 12 16:31:17 2013
-    Source directory: master
+    Source directory: /master
     HDL source file: VHDL/adder_x_behaviour_cfg.vhd
     Source file: VHDL/adder_x_behaviour_cfg.vhd
     Start location: VHDL/adder_x_behaviour_cfg.vhd:1
@@ -99,22 +99,6 @@ ENTITY adder_y
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:43:18 2013
-    Depends on: E work adder_y Y^U8J[f[m;PNMF0WF7GH?2
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/adder_y_SYNTH.vhd
-    Source file: VHDL/adder_y_SYNTH.vhd
-    Start location: VHDL/adder_y_SYNTH.vhd:7
-    Version string: YoNFn0bzJmi;V^fn4T1571
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Depends on: E work adder_y Y^U8J[f[m;PNMF0WF7GH?2
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -130,6 +114,22 @@ ENTITY adder_y
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Thu Dec 12 15:20:20 2013
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 20:44:07 2013
+    Depends on: E work adder_y Y^U8J[f[m;PNMF0WF7GH?2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/adder_y_SYNTH.vhd
+    Source file: VHDL/adder_y_SYNTH.vhd
+    Start location: VHDL/adder_y_SYNTH.vhd:7
+    Version string: YoNFn0bzJmi;V^fn4T1571
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION adder_y_behaviour_cfg
     Configuration for architecture: behaviour
@@ -150,10 +150,10 @@ VHDL CONFIGURATION adder_y_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY bit4
-    Source modified time: Wed Nov 27 19:28:43 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
+    Source directory: /master
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4.vhd
     Source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4.vhd
     Start location: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4.vhd:4
@@ -163,23 +163,7 @@ ENTITY bit4
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY bit4_behav
-    Depends on: E work bit4 _;bFiGhSQNTe?]2QabDzC0
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd
-    Source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd
-    Start location: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd:5
-    Version string: I5d`S<a^T_3B3h8i>@ZWg2
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: master
-    Source modified time: Wed Nov 27 19:28:43 2013
-    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Wed Nov 27 20:11:21 2013
     Depends on: E work bit4 _;bFiGhSQNTe?]2QabDzC0
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -193,6 +177,22 @@ ENTITY bit4
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Debug Symbol file exists
+  ARCHITECTURE BODY bit4_behav
+    Depends on: E work bit4 _;bFiGhSQNTe?]2QabDzC0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd
+    Source file: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd
+    Start location: /home/epo3-user/Desktop/git/epo3/master/./VHDL/bit4-bit4_behav.vhd:5
+    Version string: I5d`S<a^T_3B3h8i>@ZWg2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
 VHDL CONFIGURATION bit4_bit4_behav_cfg
     Configuration for architecture: bit4_behav
@@ -206,8 +206,8 @@ VHDL CONFIGURATION bit4_bit4_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work bit4 _;bFiGhSQNTe?]2QabDzC0
-    Source modified time: Wed Nov 27 19:29:52 2013
-    Source directory: master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Source directory: /master
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_bit4_behav_cfg.vhd
     Source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_bit4_behav_cfg.vhd
     Start location: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_bit4_behav_cfg.vhd:1
@@ -217,7 +217,7 @@ VHDL CONFIGURATION bit4_bit4_behav_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY bit4_tb
-    Source modified time: Wed Nov 27 21:00:12 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -242,7 +242,7 @@ ENTITY bit4_tb
     Compile defaults: Explicit=1
     Source directory: /master
     Source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb.vhd
-    Source modified time: Wed Nov 27 21:00:12 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb.vhd
     Debug Symbol file exists
 VHDL CONFIGURATION bit4_tb_bit4_tb_behav_cfg
@@ -254,8 +254,8 @@ VHDL CONFIGURATION bit4_tb_bit4_tb_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work bit4_tb 2UBfD7glhB>IYgR?abeRc1
-    Source modified time: Wed Nov 27 19:29:58 2013
-    Source directory: master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Source directory: /master
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
     Source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb_bit4_tb_behav_cfg.vhd
     Start location: /home/epo3-user/Desktop/git/epo3/master/VHDL/bit4_tb_bit4_tb_behav_cfg.vhd:1
@@ -278,6 +278,22 @@ ENTITY check_mask
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:43:25 2013
+    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/check_mask_SYNTH.vhd
+    Source file: VHDL/check_mask_SYNTH.vhd
+    Start location: VHDL/check_mask_SYNTH.vhd:7
+    Version string: 8i]NKR6bj@T76^XbeS1j40
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY check_mask_behaviour
     Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -294,32 +310,16 @@ ENTITY check_mask
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 19:07:40 2013
-    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: /master
-    HDL source file: VHDL/check_mask_SYNTH.vhd
-    Source file: VHDL/check_mask_SYNTH.vhd
-    Start location: VHDL/check_mask_SYNTH.vhd:7
-    Version string: 8i]NKR6bj@T76^XbeS1j40
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Debug Symbol file exists
 VHDL CONFIGURATION check_mask_check_mask_behaviour_cfg
     Configuration for architecture: check_mask_behaviour
     Configuration for entity: check_mask
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work check_mask check_mask_behaviour CioYcmUC6gaQS8Jl72f:Y2
+    Depends on: A work check_mask check_mask_behaviour _GXUHSUIlzb?K^RcLDkPG3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
-    Source modified time: Tue Dec  3 21:07:02 2013
-    Source directory: master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Source directory: /master
     HDL source file: VHDL/check_mask_check_mask_behaviour_cfg.vhd
     Source file: VHDL/check_mask_check_mask_behaviour_cfg.vhd
     Start location: VHDL/check_mask_check_mask_behaviour_cfg.vhd:1
@@ -329,7 +329,7 @@ VHDL CONFIGURATION check_mask_check_mask_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY checkmask_tb
-    Source modified time: Tue Nov 26 10:24:39 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -343,7 +343,6 @@ ENTITY checkmask_tb
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY check_mask_tb_behaviour
-    Source modified time: Tue Dec  3 19:58:26 2013
     Depends on: E work checkmask_tb BagIkTjH6iU5O11KENW=N1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
@@ -356,6 +355,7 @@ ENTITY checkmask_tb
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
+    Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
 VHDL CONFIGURATION checkmask_tb_check_mask_tb_behaviour_cfg
     Configuration for architecture: check_mask_tb_behaviour
@@ -366,8 +366,8 @@ VHDL CONFIGURATION checkmask_tb_check_mask_tb_behaviour_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work checkmask_tb BagIkTjH6iU5O11KENW=N1
-    Source modified time: Tue Dec  3 21:07:06 2013
-    Source directory: master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Source directory: /master
     HDL source file: VHDL/checkmask_tb_check_mask_tb_behaviour_cfg.vhd
     Source file: VHDL/checkmask_tb_check_mask_tb_behaviour_cfg.vhd
     Start location: VHDL/checkmask_tb_check_mask_tb_behaviour_cfg.vhd:1
@@ -377,21 +377,20 @@ VHDL CONFIGURATION checkmask_tb_check_mask_tb_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY controller
-    Source modified time: Thu Dec 12 14:30:50 2013
+    Source modified time: Fri Dec 13 00:59:02 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
     HDL source file: VHDL/controller.vhd
     Source file: VHDL/controller.vhd
     Start location: VHDL/controller.vhd:3
-    Version string: dG?M@hj0g=zJ;f7bK2SRV3
+    Version string: ;YA386hX17ijOcn=2<HJ41
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY controller_arch
-    Source modified time: Thu Dec 12 21:12:42 2013
     Depends on: E work controller dG?M@hj0g=zJ;f7bK2SRV3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -406,6 +405,7 @@ ENTITY controller
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
+    Source modified time: Fri Dec 13 00:59:02 2013
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
     Source modified time: Thu Dec 12 19:44:51 2013
@@ -470,46 +470,6 @@ ENTITY controller_calc
     Source modified time: Thu Dec 12 10:40:59 2013
     Source directory: /master
     Debug Symbol file exists
-VHDL CONFIGURATION controller_calc_controller_calc_arch_cfg
-    Configuration for architecture: controller_calc_arch
-    Configuration for entity: controller_calc
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work controller_calc controller_calc_arch @Qz8Dl6ZOjUOUo^lLeI`]2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work controller_calc >KTMGI4:UDRh]ceG^o[9]3
-    Source modified time: Thu Dec 12 14:02:24 2013
-    Source directory: /master
-    HDL source file: VHDL/controller_calc_controller_calc_arch_cfg.vhd
-    Source file: VHDL/controller_calc_controller_calc_arch_cfg.vhd
-    Start location: VHDL/controller_calc_controller_calc_arch_cfg.vhd:1
-    Version string: QPHeUEgaU6BRo@R4VD0O`3
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-VHDL CONFIGURATION controller_controller_arch_cfg
-    Configuration for architecture: controller_arch
-    Configuration for entity: controller
-    Depends on: E work controller_move ]cjh]Sz]D_Nd7;4@7Rz=>3
-    Depends on: C work controller_move_controller_move_arch_cfg a`3fin3=V1gM:8;U=:haj3
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work controller controller_arch FC>bZ<W99:4PjFT5X=[5a0
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work controller dG?M@hj0g=zJ;f7bK2SRV3
-    Source modified time: Thu Dec 12 19:35:02 2013
-    Source directory: master
-    HDL source file: VHDL/controller_controller_arch_cfg.vhd
-    Source file: VHDL/controller_controller_arch_cfg.vhd
-    Start location: VHDL/controller_controller_arch_cfg.vhd:1
-    Version string: XoNk0>`zYR9E:XT_NM<g]2
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
 ENTITY controller_move
     Source modified time: Thu Dec 12 20:20:06 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -525,7 +485,7 @@ ENTITY controller_move
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY controller_move_arch
-    Source modified time: Thu Dec 12 21:12:42 2013
+    Source modified time: Thu Dec 12 22:52:12 2013
     Depends on: E work controller_move ]cjh]Sz]D_Nd7;4@7Rz=>3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -557,25 +517,6 @@ ENTITY controller_move
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-VHDL CONFIGURATION controller_move_controller_move_arch_cfg
-    Configuration for architecture: controller_move_arch
-    Configuration for entity: controller_move
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work controller_move controller_move_arch n9D<Q<o`;AEmALcakLnDa2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work controller_move ]cjh]Sz]D_Nd7;4@7Rz=>3
-    Source modified time: Thu Dec 12 20:20:06 2013
-    Source directory: /master
-    HDL source file: VHDL/controller_move_controller_move_arch_cfg.vhd
-    Source file: VHDL/controller_move_controller_move_arch_cfg.vhd
-    Start location: VHDL/controller_move_controller_move_arch_cfg.vhd:1
-    Version string: a`3fin3=V1gM:8;U=:haj3
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
 ENTITY cs_7bc
     Source modified time: Wed Dec 11 21:37:13 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -892,7 +833,7 @@ VHDL CONFIGURATION cs_compare_cs_compare_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_compare J4RT]:N_8[a@dL2PBDCiN2
-    Source modified time: Thu Dec 12 14:02:24 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/cs_compare_cs_compare_behav_cfg.vhd
     Source file: VHDL/cs_compare_cs_compare_behav_cfg.vhd
@@ -943,7 +884,7 @@ VHDL CONFIGURATION cs_compare_tb_cs_compare_tb_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_compare_tb 9_[_24BBc@6f[GI1T`0G_3
-    Source modified time: Thu Dec 12 14:02:24 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd
     Source file: VHDL/cs_compare_tb_cs_compare_tb_behav_cfg.vhd
@@ -1155,7 +1096,7 @@ VHDL CONFIGURATION cs_shift_cs_shift_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_shift mT3WmUfic0PYdkoOVi4;O1
-    Source modified time: Thu Dec 12 14:02:24 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/cs_shift_cs_shift_behav_cfg.vhd
     Source file: VHDL/cs_shift_cs_shift_behav_cfg.vhd
@@ -1195,7 +1136,7 @@ VHDL CONFIGURATION cs_shift_extracted_cfg
 VHDL PACKAGE cs_shift_statetype
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source modified time: Wed Dec 11 23:23:45 2013
+    Source modified time: Fri Dec 13 01:21:06 2013
     Source directory: /master
     HDL source file: VHDL/cs_shift_statetype.vhd
     Source file: VHDL/cs_shift_statetype.vhd
@@ -1210,7 +1151,7 @@ VHDL PACKAGE cs_shift_statetype
     Depends on: P work cs_shift_statetype ^zGc[Q9]FITzb<QOD8@Ta3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Start location: VHDL/cs_shift_statetype.vhd:8
+    Start location: VHDL/cs_shift_statetype.vhd:7
     Version string: <5WHQdX4d1`]S6oK<=3_O1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
@@ -1219,7 +1160,7 @@ VHDL PACKAGE cs_shift_statetype
     Short name: body
     Source directory: /master
     Source file: VHDL/cs_shift_statetype.vhd
-    Source modified time: Wed Dec 11 23:23:45 2013
+    Source modified time: Fri Dec 13 01:21:06 2013
     HDL source file: VHDL/cs_shift_statetype.vhd
     Debug Symbol file exists
 ENTITY cs_shift_tb
@@ -1263,7 +1204,7 @@ VHDL CONFIGURATION cs_shift_tb_cs_shift_tb_behav_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work cs_shift_tb 7kXoahege:fJlI;@m=Q^^2
-    Source modified time: Thu Dec 12 14:02:24 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd
     Source file: VHDL/cs_shift_tb_cs_shift_tb_behav_cfg.vhd
@@ -1487,7 +1428,7 @@ ENTITY debounce
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:43:18 2013
+    Source modified time: Thu Dec 12 20:33:52 2013
     Depends on: E work debounce 0@_=9VD5@Mm:2F8ZTGBM13
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -1841,7 +1782,7 @@ VHDL CONFIGURATION demux8_inv_demux8_inv_behav_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY draw_score
-    Source modified time: Fri Dec  6 09:26:55 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -1854,8 +1795,24 @@ ENTITY draw_score
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/draw_score-behaviour.vhd
+    Source file: VHDL/draw_score-behaviour.vhd
+    Start location: VHDL/draw_score-behaviour.vhd:5
+    Version string: cFEo0Gg?8zj;i3iiZReH<3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Thu Dec 12 14:30:50 2013
+    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 19:07:40 2013
+    Source modified time: Thu Dec 12 16:43:11 2013
     Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -1870,42 +1827,26 @@ ENTITY draw_score
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
-  ARCHITECTURE BODY behaviour
-    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
-    HDL source file: VHDL/draw_score-behaviour.vhd
-    Source file: VHDL/draw_score-behaviour.vhd
-    Start location: VHDL/draw_score-behaviour.vhd:5
-    Version string: >nRJ1:[0X04DbkNAWDnn71
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source modified time: Fri Dec  6 09:26:55 2013
-    Debug Symbol file exists
 VHDL CONFIGURATION draw_score_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: draw_score
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work draw_score behaviour >nRJ1:[0X04DbkNAWDnn71
+    Depends on: A work draw_score behaviour cFEo0Gg?8zj;i3iiZReH<3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
-    Source modified time: Fri Dec  6 09:26:55 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/draw_score_behaviour_cfg.vhd
     Source file: VHDL/draw_score_behaviour_cfg.vhd
     Start location: VHDL/draw_score_behaviour_cfg.vhd:1
-    Version string: JA;YV0@_[YAHPo[BNZYWC0
+    Version string: 0eV9YUH<8BiHc;@D6@KLh0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY draw_score_tb
-    Source modified time: Fri Dec  6 09:26:55 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -1931,7 +1872,7 @@ ENTITY draw_score_tb
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
-    Source modified time: Fri Dec  6 09:26:55 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Debug Symbol file exists
 VHDL CONFIGURATION draw_score_tb_behaviour_cfg
     Configuration for architecture: behaviour
@@ -1942,15 +1883,15 @@ VHDL CONFIGURATION draw_score_tb_behaviour_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work draw_score_tb R3AkJk85j`cimd:nD1Cma3
-    Source modified time: Fri Dec  6 09:26:55 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Source directory: /master
     HDL source file: VHDL/draw_score_tb_behaviour_cfg.vhd
     Source file: VHDL/draw_score_tb_behaviour_cfg.vhd
     Start location: VHDL/draw_score_tb_behaviour_cfg.vhd:1
-    Version string: JnE[^BYSnOCCPM0<O^JDh0
+    Version string: 076=9HU@IV?idc_gzozUX2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 VHDL CONFIGURATION extracted
     Configuration for architecture: sr_if_tb_behav
@@ -1962,7 +1903,7 @@ VHDL CONFIGURATION extracted
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work sr_if_tb Y:5fJzOzCFf][?925Eo8G0
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/extracted.vhd
     Source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/extracted.vhd
@@ -1973,7 +1914,7 @@ VHDL CONFIGURATION extracted
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY log
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -1986,8 +1927,23 @@ ENTITY log
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/log-behaviour.vhd
+    Source file: VHDL/log-behaviour.vhd
+    Start location: VHDL/log-behaviour.vhd:4
+    Version string: eYXeAZgGdOIG>LGUf]>TD0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 19:07:40 2013
+    Source modified time: Thu Dec 12 16:33:06 2013
     Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2002,21 +1958,6 @@ ENTITY log
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
-  ARCHITECTURE BODY behaviour
-    Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
-    HDL source file: VHDL/log-behaviour.vhd
-    Source file: VHDL/log-behaviour.vhd
-    Start location: VHDL/log-behaviour.vhd:4
-    Version string: eYXeAZgGdOIG>LGUf]>TD0
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source modified time: Tue Dec  3 19:50:18 2013
-    Debug Symbol file exists
 VHDL CONFIGURATION log_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: log
@@ -2024,8 +1965,8 @@ VHDL CONFIGURATION log_behaviour_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work log Ki`KASEjB]Y`a1Hf<9UV63
-    Source modified time: Thu Dec  5 22:44:35 2013
-    Source directory: master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Source directory: /master
     HDL source file: VHDL/log_behaviour_cfg.vhd
     Source file: VHDL/log_behaviour_cfg.vhd
     Start location: VHDL/log_behaviour_cfg.vhd:1
@@ -2035,7 +1976,7 @@ VHDL CONFIGURATION log_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY log_score
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -2048,8 +1989,23 @@ ENTITY log_score
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY behaviour
+    Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/log_score-behaviour.vhd
+    Source file: VHDL/log_score-behaviour.vhd
+    Start location: VHDL/log_score-behaviour.vhd:4
+    Version string: EUc=A:a7mbRd5MU3J3_Ed0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source modified time: Wed Dec 11 21:28:54 2013
+    Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 19:07:40 2013
+    Source modified time: Thu Dec 12 16:36:01 2013
     Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2064,21 +2020,6 @@ ENTITY log_score
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
-  ARCHITECTURE BODY behaviour
-    Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
-    HDL source file: VHDL/log_score-behaviour.vhd
-    Source file: VHDL/log_score-behaviour.vhd
-    Start location: VHDL/log_score-behaviour.vhd:4
-    Version string: EUc=A:a7mbRd5MU3J3_Ed0
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source modified time: Tue Dec  3 19:50:18 2013
-    Debug Symbol file exists
 VHDL CONFIGURATION log_score_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: log_score
@@ -2090,18 +2031,18 @@ VHDL CONFIGURATION log_score_behaviour_cfg
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: VHDL/log_score_behaviour_cfg.vhd
     Source file: VHDL/log_score_behaviour_cfg.vhd
     Start location: VHDL/log_score_behaviour_cfg.vhd:1
-    Version string: B;kkEN7cePBaHedVmREfi3
+    Version string: hGSQCBzbEVdAK2MI9cV3X3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY log_score_tb
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -2127,26 +2068,26 @@ ENTITY log_score_tb
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
-    Source modified time: Tue Dec  3 19:50:18 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
 VHDL CONFIGURATION log_score_tb_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: log_score_tb
     Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
-    Depends on: C work log_score_behaviour_cfg B;kkEN7cePBaHedVmREfi3
+    Depends on: C work log_score_behaviour_cfg hGSQCBzbEVdAK2MI9cV3X3
     Depends on: A work log_score_tb behaviour YQiI`J[IJb^[mTKMF2V^G2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work log_score_tb jT=D83[bo7ZX1=UCDdajV2
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: VHDL/log_score_tb_behaviour_cfg.vhd
     Source file: VHDL/log_score_tb_behaviour_cfg.vhd
     Start location: VHDL/log_score_tb_behaviour_cfg.vhd:1
-    Version string: 7GddgW4aOLazRczQ6mnK]2
+    Version string: aRSc0hLUTR:?JS`_Q2;8J2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY mux5
     Source modified time: Wed Nov 27 19:07:42 2013
@@ -2567,7 +2508,7 @@ VHDL CONFIGURATION piece_lut_tb_piece_lut_tb_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY rom
-    Source modified time: Mon Dec  2 20:23:47 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -2581,7 +2522,7 @@ ENTITY rom
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:07:11 2013
+    Source modified time: Thu Dec 12 19:11:56 2013
     Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2589,25 +2530,25 @@ ENTITY rom
     HDL source file: VHDL/rom_SYNTH.vhd
     Source file: VHDL/rom_SYNTH.vhd
     Start location: VHDL/rom_SYNTH.vhd:7
-    Version string: a0nmLQWKLz>7@6lMc:oAC2
+    Version string: 4?j3RRYNjVFMb<:ZhnOmd1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY rom_behaviour
-    Source modified time: Tue Dec 10 10:39:40 2013
+    Source modified time: Thu Dec 12 16:21:42 2013
     Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/rom-rom_behaviour.vhd
     Source file: VHDL/rom-rom_behaviour.vhd
     Start location: VHDL/rom-rom_behaviour.vhd:4
-    Version string: eRazE59PkoBcUe7FIm0=N3
+    Version string: FzI_zRA4zf;]DQDSge@ZQ3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
@@ -2618,19 +2559,19 @@ VHDL CONFIGURATION rom_behaviour_cfg
     Depends on: E work rom_mux44 <F5n@bRRIm?F0SUZY0;iI0
     Depends on: C work rom_mux24_behaviour_cfg Fn9n0LaY?3XPhff>?HeG_1
     Depends on: C work rom_mux44_behaviour_cfg `anjh9k3UnC6<VF=MSI]J3
-    Depends on: A work rom rom_behaviour eRazE59PkoBcUe7FIm0=N3
+    Depends on: A work rom rom_behaviour FzI_zRA4zf;]DQDSge@ZQ3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: VHDL/rom_behaviour_cfg.vhd
     Source file: VHDL/rom_behaviour_cfg.vhd
     Start location: VHDL/rom_behaviour_cfg.vhd:1
-    Version string: =cQ@;c9[:z^e=Fffjf<[I3
+    Version string: D3TW4]gHD^WZBj;R_MUb13
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY rom_mux2
     Source modified time: Mon Dec  2 20:23:47 2013
@@ -2647,7 +2588,7 @@ ENTITY rom_mux2
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:07:11 2013
+    Source modified time: Thu Dec 12 19:08:02 2013
     Depends on: E work rom_mux2 `OcbH>Um;O[<i7loK?ieZ2
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2692,7 +2633,7 @@ ENTITY rom_mux24
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:07:11 2013
+    Source modified time: Thu Dec 12 19:10:23 2013
     Depends on: E work rom_mux24 3:34_^EPT4[f]g8<o>0;G3
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2773,7 +2714,7 @@ ENTITY rom_mux4
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:07:11 2013
+    Source modified time: Thu Dec 12 19:09:03 2013
     Depends on: E work rom_mux4 EgRCHJ]jk<ih`M[oQ587[0
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2818,7 +2759,7 @@ ENTITY rom_mux44
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:07:11 2013
+    Source modified time: Thu Dec 12 19:11:18 2013
     Depends on: E work rom_mux44 <F5n@bRRIm?F0SUZY0;iI0
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -2885,7 +2826,7 @@ VHDL CONFIGURATION rom_mux4_behaviour_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY rom_tb
-    Source modified time: Mon Dec  2 20:23:47 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
@@ -2899,17 +2840,17 @@ ENTITY rom_tb
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY rom_tb_behaviour
-    Source modified time: Tue Dec 10 10:39:40 2013
+    Source modified time: Thu Dec 12 14:30:50 2013
     Depends on: E work rom_tb 4];4f;c8<iCR_zK;A=;4X0
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/rom_tb-rom_tb_behaviour.vhd
     Source file: VHDL/rom_tb-rom_tb_behaviour.vhd
     Start location: VHDL/rom_tb-rom_tb_behaviour.vhd:4
-    Version string: 0IA5nBm`EJRMT41d4eeKk1
+    Version string: T[G7L18;MQ2MXS22c26i80
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
@@ -2917,12 +2858,12 @@ VHDL CONFIGURATION rom_tb_behaviour_cfg
     Configuration for architecture: rom_tb_behaviour
     Configuration for entity: rom_tb
     Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
-    Depends on: C work rom_behaviour_cfg =cQ@;c9[:z^e=Fffjf<[I3
-    Depends on: A work rom_tb rom_tb_behaviour 0IA5nBm`EJRMT41d4eeKk1
+    Depends on: C work rom_behaviour_cfg D3TW4]gHD^WZBj;R_MUb13
+    Depends on: A work rom_tb rom_tb_behaviour T[G7L18;MQ2MXS22c26i80
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work rom_tb 4];4f;c8<iCR_zK;A=;4X0
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: VHDL/rom_tb_behaviour_cfg.vhd
     Source file: VHDL/rom_tb_behaviour_cfg.vhd
@@ -3054,7 +2995,7 @@ VHDL CONFIGURATION sim
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work sr_if_tb Y:5fJzOzCFf][?925Eo8G0
-    Source modified time: Wed Dec 11 21:37:07 2013
+    Source modified time: Wed Dec 11 21:28:54 2013
     Source directory: /master
     HDL source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/sim.vhd
     Source file: /home/epo3-user/Desktop/git/epo3/master/VHDL/sim.vhd
@@ -3335,106 +3276,224 @@ VHDL CONFIGURATION sr_tower_tb_sr_tower_tb_behav_cfg
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY timer
-    Source modified time: Wed Dec 11 15:38:43 2013
-    Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
-    Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
+    Source modified time: Thu Dec 12 22:31:01 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
     HDL source file: VHDL/timer.vhd
     Source file: VHDL/timer.vhd
     Start location: VHDL/timer.vhd:5
-    Version string: OTDF^mG:IV0D7S0KQBemT2
+    Version string: UhBD:J0^LNU_=hbmEjdA@2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:30:50 2013
-    Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
-    Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
-    Depends on: E work timer OTDF^mG:IV0D7S0KQBemT2
+    Source modified time: Thu Dec 12 23:25:54 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/timer_SYNTH.vhd
     Source file: VHDL/timer_SYNTH.vhd
     Start location: VHDL/timer_SYNTH.vhd:7
-    Version string: d`c_gV?9MJ49ck?mR[nc`0
+    Version string: SMfW>E3=0bmoi>:@^V6c;1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+  ARCHITECTURE BODY timer_behav
+    Source modified time: Thu Dec 12 23:23:41 2013
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/timer_arch.vhd
+    Source file: VHDL/timer_arch.vhd
+    Start location: VHDL/timer_arch.vhd:5
+    Version string: SRKTlfz2]_9zDRHBdm>[62
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
-  ARCHITECTURE BODY behaviour
-    Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
-    Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
-    Depends on: E work timer OTDF^mG:IV0D7S0KQBemT2
+ENTITY timer_counter
+    Source modified time: Thu Dec 12 22:26:24 2013
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/timer-behaviour.vhd
-    Source file: VHDL/timer-behaviour.vhd
-    Start location: VHDL/timer-behaviour.vhd:5
-    Version string: [U^DRZ:GYACGN[iLk6ohX3
+    Source directory: /master
+    HDL source file: VHDL/timer_counter.vhd
+    Source file: VHDL/timer_counter.vhd
+    Start location: VHDL/timer_counter.vhd:5
+    Version string: ]TLQMJ]J4=:]3Y>>IEY?Y1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY timer_counter_arch
+    Source modified time: Thu Dec 12 22:26:29 2013
+    Depends on: E work timer_counter ]TLQMJ]J4=:]3Y>>IEY?Y1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/timer_counter_arch.vhd
+    Source file: VHDL/timer_counter_arch.vhd
+    Start location: VHDL/timer_counter_arch.vhd:5
+    Version string: B@[IZj[ZjPzUaG>@QZLYB3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
-    Source modified time: Wed Dec 11 15:38:43 2013
     Debug Symbol file exists
-VHDL CONFIGURATION timer_behaviour_cfg
-    Configuration for architecture: behaviour
-    Configuration for entity: timer
+VHDL CONFIGURATION timer_counter_timer_counter_arch_cfg
+    Configuration for architecture: timer_counter_arch
+    Configuration for entity: timer_counter
+    Depends on: A work timer_counter timer_counter_arch B@[IZj[ZjPzUaG>@QZLYB3
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: A work timer behaviour [U^DRZ:GYACGN[iLk6ohX3
-    Depends on: P ieee std_logic_arith 4`Y?g_lkdn;7UL9IiJck01
-    Depends on: P ieee std_logic_unsigned RYmj;=TK`k=k>D@Cz`zoB3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work timer OTDF^mG:IV0D7S0KQBemT2
-    Source modified time: Tue Dec 10 17:13:46 2013
+    Depends on: E work timer_counter ]TLQMJ]J4=:]3Y>>IEY?Y1
+    Source modified time: Thu Dec 12 22:57:02 2013
     Source directory: /master
-    HDL source file: VHDL/timer_behaviour_cfg.vhd
-    Source file: VHDL/timer_behaviour_cfg.vhd
-    Start location: VHDL/timer_behaviour_cfg.vhd:1
-    Version string: HfV8ng1TIkbmh?OL@RJaX3
+    HDL source file: VHDL/timer_counter_timer_counter_arch_cfg.vhd
+    Source file: VHDL/timer_counter_timer_counter_arch_cfg.vhd
+    Start location: VHDL/timer_counter_timer_counter_arch_cfg.vhd:1
+    Version string: QBlRfU4BUJfaenzleRZ8>1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+ENTITY timer_det
+    Source modified time: Thu Dec 12 22:14:53 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/timer_det.vhd
+    Source file: VHDL/timer_det.vhd
+    Start location: VHDL/timer_det.vhd:5
+    Version string: CY[@SQ7LQNnEP^g>eAejQ0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY timer_det_arch
+    Source modified time: Thu Dec 12 22:43:32 2013
+    Depends on: E work timer_det CY[@SQ7LQNnEP^g>eAejQ0
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/timer_det_arch.vhd
+    Source file: VHDL/timer_det_arch.vhd
+    Start location: VHDL/timer_det_arch.vhd:5
+    Version string: jgcHn2CM4[?ZIDaF@RgMJ1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+VHDL CONFIGURATION timer_det_timer_det_arch_cfg
+    Configuration for architecture: timer_det_arch
+    Configuration for entity: timer_det
+    Depends on: A work timer_det timer_det_arch jgcHn2CM4[?ZIDaF@RgMJ1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work timer_det CY[@SQ7LQNnEP^g>eAejQ0
+    Source modified time: Thu Dec 12 23:01:01 2013
+    Source directory: /master
+    HDL source file: VHDL/timer_det_timer_det_arch_cfg.vhd
+    Source file: VHDL/timer_det_timer_det_arch_cfg.vhd
+    Start location: VHDL/timer_det_timer_det_arch_cfg.vhd:1
+    Version string: _OU@BM`Hn;4]2E;<^]ma_0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY timer_tb
-    Source modified time: Thu Dec 12 21:59:27 2013
+    Source modified time: Fri Dec 13 00:28:10 2013
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
     HDL source file: VHDL/timer_tb.vhd
     Source file: VHDL/timer_tb.vhd
-    Start location: VHDL/timer_tb.vhd:4
-    Version string: OYm7PB@Z?<BDd<jl;R`KC1
+    Start location: VHDL/timer_tb.vhd:5
+    Version string: Fz^;?fQWI4JdUPM?E`bS[3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY behaviour
-    Depends on: E work timer_tb OYm7PB@Z?<BDd<jl;R`KC1
+  ARCHITECTURE BODY timer_tb_behav
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: master
-    HDL source file: VHDL/timer_tb-behaviour.vhd
-    Source file: VHDL/timer_tb-behaviour.vhd
-    Start location: VHDL/timer_tb-behaviour.vhd:4
-    Version string: Xn@`>TSMZ><Q<ITHc=22O0
+    Depends on: E work timer_tb Fz^;?fQWI4JdUPM?E`bS[3
+    Start location: VHDL/timer_tb.vhd:8
+    Version string: bDmQeZzmZ=d6H6ni`CPaJ0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
-    Source modified time: Thu Dec 12 21:59:27 2013
+    Source directory: /master
+    Source file: VHDL/timer_tb.vhd
+    Source modified time: Fri Dec 13 00:28:10 2013
+    HDL source file: VHDL/timer_tb.vhd
     Debug Symbol file exists
+VHDL CONFIGURATION timer_tb_timer_tb_behav_cfg
+    Configuration for architecture: timer_tb_behav
+    Configuration for entity: timer_tb
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
+    Depends on: C work timer_timer_behav_cfg _k91g:6[]3QX33K7HieD91
+    Depends on: A work timer_tb timer_tb_behav bDmQeZzmZ=d6H6ni`CPaJ0
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work timer_tb Fz^;?fQWI4JdUPM?E`bS[3
+    Source modified time: Thu Dec 12 23:20:15 2013
+    Source directory: /master
+    HDL source file: VHDL/timer_tb_timer_tb_behav_cfg.vhd
+    Source file: VHDL/timer_tb_timer_tb_behav_cfg.vhd
+    Start location: VHDL/timer_tb_timer_tb_behav_cfg.vhd:1
+    Version string: a<Ha5oYf?hS`]Eg09V1291
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+VHDL CONFIGURATION timer_timer_behav_cfg
+    Configuration for architecture: timer_behav
+    Configuration for entity: timer
+    Depends on: E work timer_det CY[@SQ7LQNnEP^g>eAejQ0
+    Depends on: E work timer_counter ]TLQMJ]J4=:]3Y>>IEY?Y1
+    Depends on: C work timer_det_timer_det_arch_cfg _OU@BM`Hn;4]2E;<^]ma_0
+    Depends on: C work timer_counter_timer_counter_arch_cfg QBlRfU4BUJfaenzleRZ8>1
+    Depends on: A work timer timer_behav SRKTlfz2]_9zDRHBdm>[62
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
+    Source modified time: Thu Dec 12 23:02:23 2013
+    Source directory: /master
+    HDL source file: VHDL/timer_timer_behav_cfg.vhd
+    Source file: VHDL/timer_timer_behav_cfg.vhd
+    Start location: VHDL/timer_timer_behav_cfg.vhd:1
+    Version string: _k91g:6[]3QX33K7HieD91
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 ENTITY tri_buff
     Source modified time: Fri Dec  6 09:26:55 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -3569,6 +3628,24 @@ ENTITY vga
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:13:57 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga 0n[;dZh27<D;d:Y8HPol^3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_SYNTH.vhd
+    Source file: VHDL/vga_SYNTH.vhd
+    Start location: VHDL/vga_SYNTH.vhd:7
+    Version string: Ho5;ndUUU;W2T6K18=I7J2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_arch
     Depends on: E work vga 0n[;dZh27<D;d:Y8HPol^3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -3586,24 +3663,6 @@ ENTITY vga
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:13:57 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga LK8T0U5X@UlUIeJ^XQm>L1
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_SYNTH.vhd
-    Source file: VHDL/vga_SYNTH.vhd
-    Start location: VHDL/vga_SYNTH.vhd:7
-    Version string: ho2_SGg8dSDU5b<oHg9Kk0
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
 ENTITY vga_counter
     Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -3619,6 +3678,24 @@ ENTITY vga_counter
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:13:00 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_counter nRP5LXX1?4F?jC_a[1jH>0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_counter_SYNTH.vhd
+    Source file: VHDL/vga_counter_SYNTH.vhd
+    Start location: VHDL/vga_counter_SYNTH.vhd:7
+    Version string: eK8;Oe9Vd<:`zBnTBEAo21
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY vga_counter_behav
     Depends on: E work vga_counter nRP5LXX1?4F?jC_a[1jH>0
@@ -3636,24 +3713,6 @@ ENTITY vga_counter
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:13:00 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_counter G3HgN>WznB_7eB3]Ei8Q23
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_counter_SYNTH.vhd
-    Source file: VHDL/vga_counter_SYNTH.vhd
-    Start location: VHDL/vga_counter_SYNTH.vhd:7
-    Version string: <=oSj3z6RcB=Vi?oSI`JY2
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 ENTITY vga_counter_10bit
     Source modified time: Fri Dec  6 09:30:31 2013
@@ -4067,6 +4126,24 @@ ENTITY vga_counter_resets
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:03:45 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_counter_resets 49@M=k@hOgAE6SfUj4OKe3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_counter_resets_SYNTH.vhd
+    Source file: VHDL/vga_counter_resets_SYNTH.vhd
+    Start location: VHDL/vga_counter_resets_SYNTH.vhd:7
+    Version string: YeTOgRNR@E_jjn[J`J;e11
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_counter_resets_behav
     Depends on: E work vga_counter_resets 49@M=k@hOgAE6SfUj4OKe3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -4083,24 +4160,6 @@ ENTITY vga_counter_resets
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:03:45 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_counter_resets 49@M=k@hOgAE6SfUj4OKe3
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_counter_resets_SYNTH.vhd
-    Source file: VHDL/vga_counter_resets_SYNTH.vhd
-    Start location: VHDL/vga_counter_resets_SYNTH.vhd:7
-    Version string: 0]6DE:WX_`1no>3IC=8M31
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION vga_counter_resets_vga_counter_resets_behav_cfg
     Configuration for architecture: vga_counter_resets_behav
@@ -4161,6 +4220,23 @@ ENTITY vga_demux
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:03:23 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: E work vga_demux EeDPYG0<43l6K25;LXUzf2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_demux_SYNTH.vhd
+    Source file: VHDL/vga_demux_SYNTH.vhd
+    Start location: VHDL/vga_demux_SYNTH.vhd:7
+    Version string: <VCS`Pb4DUMLNJ`V1U_HU2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_demux_behav
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
     Depends on: E work vga_demux EeDPYG0<43l6K25;LXUzf2
@@ -4176,23 +4252,6 @@ ENTITY vga_demux
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:03:23 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: E work vga_demux EeDPYG0<43l6K25;LXUzf2
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_demux_SYNTH.vhd
-    Source file: VHDL/vga_demux_SYNTH.vhd
-    Start location: VHDL/vga_demux_SYNTH.vhd:7
-    Version string: `<5FB2nQG;b1E8fHFE0fM3
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION vga_demux_vga_demux_behav_cfg
     Configuration for architecture: vga_demux_behav
@@ -4228,6 +4287,24 @@ ENTITY vga_field_check
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:12:34 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_field_check PGQCOdbnhY:BEdhO^N:cO3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_field_check_SYNTH.vhd
+    Source file: VHDL/vga_field_check_SYNTH.vhd
+    Start location: VHDL/vga_field_check_SYNTH.vhd:7
+    Version string: ej?GEB=L?F8Fz0MaTV3YU0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_field_check_arch
     Depends on: E work vga_field_check PGQCOdbnhY:BEdhO^N:cO3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -4244,24 +4321,6 @@ ENTITY vga_field_check
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:12:34 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_field_check PGQCOdbnhY:BEdhO^N:cO3
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_field_check_SYNTH.vhd
-    Source file: VHDL/vga_field_check_SYNTH.vhd
-    Start location: VHDL/vga_field_check_SYNTH.vhd:7
-    Version string: ca5e=b]^ZH:IMnE<B=J_O3
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION vga_field_check_vga_field_check_arch_cfg
     Configuration for architecture: vga_field_check_arch
@@ -4298,6 +4357,24 @@ ENTITY vga_field_trans
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:13:35 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_field_trans Ka<NzzB<`2dQ:T0G^cFU[0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_field_trans_SYNTH.vhd
+    Source file: VHDL/vga_field_trans_SYNTH.vhd
+    Start location: VHDL/vga_field_trans_SYNTH.vhd:7
+    Version string: cSU1iFC;TAlNDS^YaMSYS1
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_field_trans_arch
     Depends on: E work vga_field_trans Ka<NzzB<`2dQ:T0G^cFU[0
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -4315,24 +4392,6 @@ ENTITY vga_field_trans
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:13:35 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_field_trans >8Na@1263MK7zXz<_G7843
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_field_trans_SYNTH.vhd
-    Source file: VHDL/vga_field_trans_SYNTH.vhd
-    Start location: VHDL/vga_field_trans_SYNTH.vhd:7
-    Version string: eVmY^?gP4je?^`PM_Wo4]3
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
 ENTITY vga_field_trans_reset
     Source modified time: Wed Dec 11 21:28:54 2013
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -4348,6 +4407,24 @@ ENTITY vga_field_trans_reset
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:11:31 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_field_trans_reset ol4>=X<lUCFG0=UPZYild0
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_field_trans_reset_SYNTH.vhd
+    Source file: VHDL/vga_field_trans_reset_SYNTH.vhd
+    Start location: VHDL/vga_field_trans_reset_SYNTH.vhd:7
+    Version string: MZjMKF7SW?;[TIGgg]VRX2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY vga_field_trans_reset_arch
     Depends on: E work vga_field_trans_reset ol4>=X<lUCFG0=UPZYild0
@@ -4365,24 +4442,6 @@ ENTITY vga_field_trans_reset
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:11:31 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_field_trans_reset ol4>=X<lUCFG0=UPZYild0
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_field_trans_reset_SYNTH.vhd
-    Source file: VHDL/vga_field_trans_reset_SYNTH.vhd
-    Start location: VHDL/vga_field_trans_reset_SYNTH.vhd:7
-    Version string: fho2>z2^^mhIJYznmO>lK1
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION vga_field_trans_reset_vga_field_trans_reset_arch_cfg
     Configuration for architecture: vga_field_trans_reset_arch
@@ -4442,6 +4501,24 @@ ENTITY vga_np_check
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 14:11:06 2013
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: E work vga_np_check =zOJe`5gGoal5F;eT^c8L3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/vga_np_check_SYNTH.vhd
+    Source file: VHDL/vga_np_check_SYNTH.vhd
+    Start location: VHDL/vga_np_check_SYNTH.vhd:7
+    Version string: nQ;6[F2@G:3@AFhfUW<_e0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY vga_np_check_arch
     Depends on: E work vga_np_check =zOJe`5gGoal5F;eT^c8L3
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
@@ -4458,24 +4535,6 @@ ENTITY vga_np_check
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 14:11:06 2013
-    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
-    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: E work vga_np_check =zOJe`5gGoal5F;eT^c8L3
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/vga_np_check_SYNTH.vhd
-    Source file: VHDL/vga_np_check_SYNTH.vhd
-    Start location: VHDL/vga_np_check_SYNTH.vhd:7
-    Version string: _R;4c1Y_h0eEVciK?[X7h0
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION vga_np_check_vga_np_check_arch_cfg
     Configuration for architecture: vga_np_check_arch
@@ -4523,10 +4582,10 @@ ENTITY vga_np_trans
     HDL source file: VHDL/vga_np_trans_SYNTH.vhd
     Source file: VHDL/vga_np_trans_SYNTH.vhd
     Start location: VHDL/vga_np_trans_SYNTH.vhd:7
-    Version string: IEdke3>YhTXz[5JI::_Nj3
+    Version string: L1@U>NzQ8@LAOL`JdjN0P1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
