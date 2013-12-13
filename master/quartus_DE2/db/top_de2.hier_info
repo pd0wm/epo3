@@ -11756,35 +11756,74 @@ row_full_next <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|timer:inst4
-clk => cur_count[0].CLK
-clk => cur_count[1].CLK
-clk => cur_count[2].CLK
-clk => cur_count[3].CLK
-clk => cur_count[4].CLK
-clk => cur_count[5].CLK
-clk => cur_count[6].CLK
-clk => cur_count[7].CLK
-clk => cur_ready.CLK
+clk => timer_counter:counter.clk
 clk => state~1.DATAIN
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => new_count.OUTPUTSELECT
-vga_clk => next_state.vga_high.DATAB
-vga_clk => Selector1.IN1
-vga_clk => next_state.check.DATAB
-rst => lbl1.IN0
-ctr_rst => lbl1.IN1
-time => lbl2.IN1
-time => lbl2.IN1
-start => Selector1.IN4
-start => Selector2.IN3
-start => Selector0.IN1
-ready <= cur_ready.DB_MAX_OUTPUT_PORT_TYPE
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => Selector4.IN5
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => state_next.OUTPUTSELECT
+vga_clk => Selector2.IN3
+rst => rst_int.IN0
+cnt_rst => rst_int.IN1
+time => timer_det:donecheck.time
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+start => state_next.OUTPUTSELECT
+ready <= ready.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_de2|timer:inst4|timer_counter:counter
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+clk => state[3].CLK
+clk => state[4].CLK
+rst => process_0.IN0
+rst2 => process_0.IN1
+value[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= state[2].DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= state[3].DB_MAX_OUTPUT_PORT_TYPE
+value[4] <= state[4].DB_MAX_OUTPUT_PORT_TYPE
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+en => state.OUTPUTSELECT
+
+
+|top_de2|timer:inst4|timer_det:donecheck
+cnt_val[0] => Equal0.IN9
+cnt_val[0] => Equal1.IN9
+cnt_val[1] => Equal0.IN8
+cnt_val[1] => Equal1.IN8
+cnt_val[2] => Equal0.IN7
+cnt_val[2] => Equal1.IN7
+cnt_val[3] => Equal0.IN6
+cnt_val[3] => Equal1.IN6
+cnt_val[4] => Equal0.IN5
+cnt_val[4] => Equal1.IN5
+time => process_0.IN1
+time => process_0.IN1
+done <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|debounce:inst19

@@ -4,59 +4,12 @@
   </display_tree>
   <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
     <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
-    <position_info>
-      <single attribute="active tab" value="1"/>
-      <single attribute="data hierarchy check_mask:inst5" value="3"/>
-      <single attribute="data hierarchy controller:inst4" value="3"/>
-      <single attribute="data hierarchy piece_lut:inst7" value="3"/>
-      <single attribute="data hierarchy root" value="3"/>
-      <single attribute="data horizontal scroll position" value="7"/>
-      <single attribute="data vertical scroll position" value="0"/>
-      <single attribute="setup horizontal scroll position" value="0"/>
-      <single attribute="setup vertical scroll position" value="0"/>
-      <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="4"/>
-      <single attribute="zoom offset denominator" value="1"/>
-      <single attribute="zoom offset numerator" value="32640"/>
-      <multi attribute="timebars" size="1" value="0"/>
-    </position_info>
-    <signal_set global_temp="1" name="signal_set: 2013/12/13 01:20:28  #0">
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2013/12/13 02:13:43  #0">
       <clock name="6mhz_clk" polarity="posedge" tap_mode="classic"/>
       <config ram_type="M4K" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="no" trigger_in_node="rst" trigger_in_tap_mode="classic" trigger_out_enable="no"/>
       <top_entity/>
       <signal_vec>
         <trigger_input_vec>
-          <wire name="controller:inst9|controller_calc:calc_pm|add_sub" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|rot" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|x" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|y" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_error" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_fit" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_5" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_6" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.reset" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_3" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.collision_4" tap_mode="classic" type="state machine"/>
@@ -78,54 +31,19 @@
           <wire name="controller:inst9|cur_state.soft_drop_1" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.soft_drop_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.space_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|addr[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|draw_erase" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|state.done" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.lut_lookup" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.reset" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_1" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.writing" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.high" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.init" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.lock" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.low" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.output" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.rising_edge" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[4]" tap_mode="classic" type="combinatorial"/>
         </trigger_input_vec>
         <data_input_vec>
-          <wire name="controller:inst9|controller_calc:calc_pm|add_sub" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|rot" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|x" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|y" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_error" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_fit" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_5" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_6" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.reset" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_3" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.collision_4" tap_mode="classic" type="state machine"/>
@@ -147,54 +65,19 @@
           <wire name="controller:inst9|cur_state.soft_drop_1" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.soft_drop_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.space_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|addr[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|draw_erase" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|state.done" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.lut_lookup" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.reset" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_1" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.writing" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.high" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.init" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.lock" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.low" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.output" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.rising_edge" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[4]" tap_mode="classic" type="combinatorial"/>
         </data_input_vec>
         <storage_qualifier_input_vec>
-          <wire name="controller:inst9|controller_calc:calc_pm|add_sub" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|new_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_rot[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_x[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|old_y[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|rot" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|x" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_calc:calc_pm|y" tap_mode="classic" type="combinatorial"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.do_move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_error" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.done_fit" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_2" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_3" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_5" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.move_6" tap_mode="classic" type="state machine"/>
-          <wire name="controller:inst9|controller_move:move_pm|cur_state.reset" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.clear_shift_3" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.collision_4" tap_mode="classic" type="state machine"/>
@@ -216,26 +99,30 @@
           <wire name="controller:inst9|cur_state.soft_drop_1" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.soft_drop_2" tap_mode="classic" type="state machine"/>
           <wire name="controller:inst9|cur_state.space_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|addr[0]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[1]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[2]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[3]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[4]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[5]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[6]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|addr[7]" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|draw_erase" tap_mode="classic" type="combinatorial"/>
-          <wire name="de_piece:inst6|state.done" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.lut_lookup" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.reset" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_1" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.waiting_2" tap_mode="classic" type="state machine"/>
-          <wire name="de_piece:inst6|state.writing" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.high" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.init" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.lock" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.low" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.output" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|state.rising_edge" tap_mode="classic" type="state machine"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[0]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[1]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[2]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[3]" tap_mode="classic" type="combinatorial"/>
+          <wire name="timer:inst4|timer_det:donecheck|cnt_val[4]" tap_mode="classic" type="combinatorial"/>
         </storage_qualifier_input_vec>
       </signal_vec>
       <presentation>
         <data_view>
-          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (22)" name="controller:inst9|cur_state" order="lsb_to_msb" state="collapse" type="state machine">
+          <bus is_signal_inverted="no" link="all" mnemonics="state_table (23)" name="timer:inst4|state" order="lsb_to_msb" state="collapse" type="state machine">
+            <net is_signal_inverted="no" name="timer:inst4|state.high"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.init"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.lock"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.low"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.output"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.rising_edge"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (24)" name="controller:inst9|cur_state" order="lsb_to_msb" state="collapse" type="state machine">
             <net is_signal_inverted="no" name="controller:inst9|cur_state.clear_shift_2"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.clear_shift_3"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.collision_4"/>
@@ -258,73 +145,24 @@
             <net is_signal_inverted="no" name="controller:inst9|cur_state.soft_drop_2"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.space_2"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" mnemonics="state_table (35)" name="de_piece:inst6|state" order="lsb_to_msb" state="collapse" type="state machine">
-            <net is_signal_inverted="no" name="de_piece:inst6|state.done"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.lut_lookup"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.reset"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.waiting_1"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.waiting_2"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.writing"/>
+          <bus is_signal_inverted="no" link="all" name="timer:inst4|timer_det:donecheck|cnt_val" order="msb_to_lsb" radix="unsigned_dec" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[4]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[3]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[2]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[1]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[0]"/>
           </bus>
-          <net is_signal_inverted="no" name="de_piece:inst6|draw_erase"/>
-          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (23)" name="controller:inst9|controller_move:move_pm|cur_state" order="lsb_to_msb" state="collapse" type="state machine">
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.do_move_2"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.do_move_3"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.done_error"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.done_fit"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_2"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_3"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_5"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_6"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.reset"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="de_piece:inst6|addr" order="msb_to_lsb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[7]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[6]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[5]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[4]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[3]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[2]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[1]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_rot" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_rot[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_rot[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_x" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_y" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[3]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_rot" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_rot[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_rot[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_x" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_y" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[3]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[0]"/>
-          </bus>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|add_sub"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|rot"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|x"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|y"/>
         </data_view>
         <setup_view>
-          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (22)" name="controller:inst9|cur_state" order="lsb_to_msb" state="expand" type="state machine">
+          <bus is_signal_inverted="no" link="all" mnemonics="state_table (23)" name="timer:inst4|state" order="lsb_to_msb" state="expand" type="state machine">
+            <net is_signal_inverted="no" name="timer:inst4|state.high"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.init"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.lock"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.low"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.output"/>
+            <net is_signal_inverted="no" name="timer:inst4|state.rising_edge"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (24)" name="controller:inst9|cur_state" order="lsb_to_msb" state="collapse" type="state machine">
             <net is_signal_inverted="no" name="controller:inst9|cur_state.clear_shift_2"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.clear_shift_3"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.collision_4"/>
@@ -347,76 +185,19 @@
             <net is_signal_inverted="no" name="controller:inst9|cur_state.soft_drop_2"/>
             <net is_signal_inverted="no" name="controller:inst9|cur_state.space_2"/>
           </bus>
-          <bus is_signal_inverted="no" link="all" mnemonics="state_table (35)" name="de_piece:inst6|state" order="lsb_to_msb" state="collapse" type="state machine">
-            <net is_signal_inverted="no" name="de_piece:inst6|state.done"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.lut_lookup"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.reset"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.waiting_1"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.waiting_2"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|state.writing"/>
+          <bus is_signal_inverted="no" link="all" name="timer:inst4|timer_det:donecheck|cnt_val" order="msb_to_lsb" radix="unsigned_dec" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[4]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[3]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[2]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[1]"/>
+            <net is_signal_inverted="no" name="timer:inst4|timer_det:donecheck|cnt_val[0]"/>
           </bus>
-          <net is_signal_inverted="no" name="de_piece:inst6|draw_erase"/>
-          <bus is_signal_inverted="no" link="all" mnemonics="cur_state_table (23)" name="controller:inst9|controller_move:move_pm|cur_state" order="lsb_to_msb" state="collapse" type="state machine">
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.do_move_2"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.do_move_3"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.done_error"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.done_fit"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_2"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_3"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_5"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.move_6"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_move:move_pm|cur_state.reset"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="de_piece:inst6|addr" order="msb_to_lsb" radix="unsigned_dec" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[7]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[6]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[5]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[4]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[3]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[2]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[1]"/>
-            <net is_signal_inverted="no" name="de_piece:inst6|addr[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_rot" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_rot[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_rot[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_x" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_x[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|new_y" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[3]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|new_y[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_rot" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_rot[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_rot[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_x" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_x[0]"/>
-          </bus>
-          <bus is_signal_inverted="no" link="all" name="controller:inst9|controller_calc:calc_pm|old_y" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[3]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[2]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[1]"/>
-            <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|old_y[0]"/>
-          </bus>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|add_sub"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|rot"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|x"/>
-          <net is_signal_inverted="no" name="controller:inst9|controller_calc:calc_pm|y"/>
         </setup_view>
       </presentation>
-      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2013/12/13 01:20:28  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="512" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="falling edge" trigger_out="active high" trigger_type="circular">
+      <trigger CRC="2A9C1F3A" attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2013/12/13 02:19:26  #0" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="512" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="false" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_in="falling edge" trigger_out="active high" trigger_type="circular">
         <power_up_trigger position="pre" storage_qualifier_disabled="no" trigger_in="dont_care" trigger_out="active high"/>
         <events use_custom_flow_control="no">
-          <level enabled="yes" name="condition1" type="basic">'controller:inst9|cur_state.space_2' == high
+          <level enabled="yes" name="condition1" type="basic">'timer:inst4|state.output' == rising edge
             <power_up enabled="yes">
             </power_up>
             <op_node/>
@@ -432,8 +213,8 @@ trigger;]]>
           </custom_flow_control>
         </events>
         <storage_qualifier_events>
-          <transitional>0000000000000000000000000000000000000000000000000000000000000000000
-            <pwr_up_transitional>0000000000000000000000000000000000000000000000000000000000000000000</pwr_up_transitional>
+          <transitional>00000000000000000000000000000000
+            <pwr_up_transitional>00000000000000000000000000000000</pwr_up_transitional>
           </transitional>
           <storage_qualifier_level type="basic">
             <power_up>
@@ -452,11 +233,27 @@ trigger;]]>
           </storage_qualifier_level>
         </storage_qualifier_events>
         <log>
-          <data global_temp="1" name="log: 2013/12/13 01:20:28  #2"/>
-          <extradata/>
+          <data global_temp="1" name="log: 2013/12/13 02:19:26  #1" power_up_mode="false" sample_depth="512" trigger_position="64">0000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000100101110000000000010000000000001001011100000010000000000000000010010111000001000000000000000000001101110000000000010000000001000000111100000010000000000000000001001111000001000000000000000000010011110000000000000000000010010000111100000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000000100100000000000000000000000000001001000000000000000000000000000010010000000000000000000000000100000100000000000001000000000000000010000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000000001000000000000000100000000000000000000010000000001000000000000000010000000000000010000000000</data>
+          <extradata>1111111111111111111111111111111111111111111111111111111111111111T111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</extradata>
         </log>
       </trigger>
     </signal_set>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="data hierarchy check_mask:inst5" value="3"/>
+      <single attribute="data hierarchy controller:inst4" value="3"/>
+      <single attribute="data hierarchy piece_lut:inst7" value="3"/>
+      <single attribute="data hierarchy root" value="3"/>
+      <single attribute="data horizontal scroll position" value="45"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="16"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="8160"/>
+      <multi attribute="timebars" size="1" value="0"/>
+    </position_info>
   </instance>
   <mnemonics>
     <table name="state_table (1)" width="8">
@@ -1825,6 +1622,37 @@ trigger;]]>
       <symbol name="move_6" value="010000000"/>
       <symbol name="reset" value="100000000"/>
     </table>
+    <table name="state_table (23)" width="6">
+      <symbol name="high" value="000001"/>
+      <symbol name="init" value="000010"/>
+      <symbol name="lock" value="000100"/>
+      <symbol name="low" value="001000"/>
+      <symbol name="output" value="010000"/>
+      <symbol name="rising_edge" value="100000"/>
+    </table>
+    <table name="cur_state_table (24)" width="21">
+      <symbol name="clear_shift_2" value="000000000000000000001"/>
+      <symbol name="clear_shift_3" value="000000000000000000010"/>
+      <symbol name="collision_4" value="000000000000000000100"/>
+      <symbol name="draw_next_piece_1" value="000000000000000001000"/>
+      <symbol name="draw_next_piece_5" value="000000000000000010000"/>
+      <symbol name="drop_overflow" value="000000000000000100000"/>
+      <symbol name="drop_timer_reset" value="000000000000001000000"/>
+      <symbol name="first_draw_2" value="000000000000010000000"/>
+      <symbol name="gen_piece_1" value="000000000000100000000"/>
+      <symbol name="hard_drop_1" value="000000000001000000000"/>
+      <symbol name="init" value="000000000010000000000"/>
+      <symbol name="key" value="000000000100000000000"/>
+      <symbol name="move_3" value="000000001000000000000"/>
+      <symbol name="move_4" value="000000010000000000000"/>
+      <symbol name="reset" value="000000100000000000000"/>
+      <symbol name="reset_timers_a_1" value="000001000000000000000"/>
+      <symbol name="reset_timers_a_2" value="000010000000000000000"/>
+      <symbol name="reset_timers_b_1" value="000100000000000000000"/>
+      <symbol name="soft_drop_1" value="001000000000000000000"/>
+      <symbol name="soft_drop_2" value="010000000000000000000"/>
+      <symbol name="space_2" value="100000000000000000000"/>
+    </table>
   </mnemonics>
   <static_plugin_mnemonics/>
   <embedded_sof_files>
@@ -3095,10 +2923,12 @@ PDv1n868Uf79IcPrX56fn//1z8/P//Djn//pp3/70z//+/EN8T8f/h8a45tv
     
     
     
+    
+    
     </embedded_sof_file>
   </embedded_sof_files>
   <global_info>
     <single attribute="active instance" value="0"/>
-    <multi attribute="column width" size="23" value="34,34,419,74,113,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="column width" size="23" value="34,34,540,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,78"/>
   </global_info>
 </session>
