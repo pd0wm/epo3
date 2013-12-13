@@ -40,7 +40,7 @@ begin
 				end if;
 
 			when lut_lookup =>
-				write       <= '0';
+				write       <= 'Z';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				ready <= '0';
@@ -57,7 +57,7 @@ begin
 				end if;
 
 
-				write       <= '0';
+				write       <= 'Z';
 				lut_start   <= '1';
 				mask_select <= std_logic_vector(cur_block);
 				new_cur_block       <= cur_block;
@@ -89,7 +89,7 @@ begin
 				end if;
 
 
-				write       <= '0';
+				write       <= 'Z';
 				lut_start   <= '0';
 				mask_select <= "ZZ";
 				new_cur_block       <= cur_block;
@@ -104,7 +104,7 @@ begin
 					new_state <= reset;
 				end if;
 
-				write       <= '0';
+				write       <= 'Z';
 				ready       <= '1';
 				lut_start   <= '0';
 				mask_select <= "ZZ";
@@ -115,9 +115,6 @@ begin
 		end case;
 	end process;
 end behaviour;
-
-
-
 
 
 
