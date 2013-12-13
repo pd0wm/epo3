@@ -59606,26 +59606,6 @@ timer:inst4|timer_det:donecheck
 
 # end
 # entity
-top_de2
-# storage
-db|top_de2.(0).cnf
-db|top_de2.(0).cnf
-# case_insensitive
-# source_file
-top_de2.bdf
-5e6b69a23f1d14c9f0eee6d8a6d0e184
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 sld_signaltap
 # storage
 db|top_de2.(291).cnf
@@ -65261,6 +65241,63 @@ ON
 }
 # hierarchies {
 de_piece:inst6
+}
+# lmf
+|data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+top_de2
+# storage
+db|top_de2.(0).cnf
+db|top_de2.(0).cnf
+# case_insensitive
+# source_file
+top_de2.bdf
+e2bc65ca2c017a8edb4b5424d24cf39
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ram_fix
+# storage
+db|top_de2.(318).cnf
+db|top_de2.(318).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|home|epo3-user|Desktop|git|epo3|master|VHDL|ram_fix.vhd
+2fd444798b5714d1c0669bff5573f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|home|epo3-user|Desktop|git|epo3|master|VHDL|ram_fix_arch.vhd
+cc7a1fa29361d230201050127eac1ed4
+}
+# hierarchies {
+ram_fix:inst14
 }
 # lmf
 |data|public|common|software|altera|10.0|quartus|lmf|maxplus2.lmf

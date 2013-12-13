@@ -12046,3 +12046,11 @@ log_out[6] <= log_out.DB_MAX_OUTPUT_PORT_TYPE
 log_out[7] <= log_in[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top_de2|ram_fix:inst14
+draw_erase_start => process_0.IN0
+draw_score_draw => process_0.IN1
+clear_shift_start => process_0.IN1
+check_start => process_0.IN1
+we <= we.DB_MAX_OUTPUT_PORT_TYPE
+
+
