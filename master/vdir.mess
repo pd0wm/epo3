@@ -3706,7 +3706,6 @@ ENTITY top_level
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Source directory: /master
     HDL source file: VHDL/top_level_SYNTH.vhd
     Source file: VHDL/top_level_SYNTH.vhd
     Start location: VHDL/top_level_SYNTH.vhd:7
@@ -3715,6 +3714,7 @@ ENTITY top_level
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
   ARCHITECTURE BODY structural
     Depends on: E work top_level o`K`?Fe7<cET?ok1n63l61
@@ -3731,6 +3731,82 @@ ENTITY top_level
     Source directory: /master
     Source modified time: Fri Dec 13 03:11:24 2013
     Debug Symbol file exists
+ENTITY top_level2
+    Source modified time: Fri Dec 13 17:11:06 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/top_level2.vhd
+    Source file: VHDL/top_level2.vhd
+    Start location: VHDL/top_level2.vhd:4
+    Version string: 2`NVIUiA_FX;IBEzlPUPF2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY top_level2_struc
+    Source modified time: Fri Dec 13 17:57:38 2013
+    Depends on: E work top_level2 2`NVIUiA_FX;IBEzlPUPF2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/top_level2_arch.vhd
+    Source file: VHDL/top_level2_arch.vhd
+    Start location: VHDL/top_level2_arch.vhd:4
+    Version string: W[g_=<FjZ?i1<G4oeUejL0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
+VHDL CONFIGURATION top_level2_top_level2_struc_cfg
+    Configuration for architecture: top_level2_struc
+    Configuration for entity: top_level2
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Depends on: E work log_score ]RHTdZ0YC;z^[Sb6@;`l>0
+    Depends on: E work cs_compare J4RT]:N_8[a@dL2PBDCiN2
+    Depends on: E work rom G:P^8MkHJQb69H[7ZhcUf1
+    Depends on: E work piece_lut K0e6`R4?MCiiDhDAKhCN:0
+    Depends on: E work de_piece Tk0C<4BE0^V=e^=HEz07a1
+    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
+    Depends on: E work vga 0n[;dZh27<D;d:Y8HPol^3
+    Depends on: E work ram_fix [>>_TR^T:6NXXUJI=8I6o2
+    Depends on: E work sr_if zbBEO9B7W93z[[<nO^54S2
+    Depends on: E work controller 3g__PmW0^?7W<`Eo7E4UB2
+    Depends on: E work timer UhBD:J0^LNU_=hbmEjdA@2
+    Depends on: E work npg ;BNL?Uezzb;K54g@KIX<D3
+    Depends on: E work debounce 0@_=9VD5@Mm:2F8ZTGBM13
+    Depends on: C work draw_score_behaviour_cfg 0eV9YUH<8BiHc;@D6@KLh0
+    Depends on: C work log_score_behaviour_cfg hGSQCBzbEVdAK2MI9cV3X3
+    Depends on: C work cs_compare_cs_compare_behav_cfg nmbgTo>g3H62YW0VDKWR30
+    Depends on: C work rom_behaviour_cfg D3TW4]gHD^WZBj;R_MUb13
+    Depends on: C work piece_lut_piece_lut_behaviour_cfg jSGE[1b_OU4l^R_AeUN]70
+    Depends on: C work de_piece_behaviour_cfg :5HMMfQO[OXTPUdJKMPkF2
+    Depends on: C work check_mask_check_mask_behaviour_cfg `GP_iO5E=kUZ`8FCTR4E`3
+    Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1
+    Depends on: C work vga_vga_arch_cfg ?c:?adcH9VhHQ]^VnG`561
+    Depends on: C work ram_fix_ram_fix_behav_cfg WYXS[KR5Qa:l_APdPHg3?0
+    Depends on: C work sr_if_sr_if_behav_cfg M2D>1gm7`MbaG0gVS6I<N3
+    Depends on: C work controller_controller_arch_cfg cP9aDj[eSB7OHIERa?P`<3
+    Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
+    Depends on: C work timer_timer_behav_cfg _k91g:6[]3QX33K7HieD91
+    Depends on: C work npg_structural_cfg 5afYLMFK7FcHAO3A3FH0b0
+    Depends on: C work debounce_behaviour_cfg >@EP@fa]g2D8jQcnXgg5i1
+    Depends on: A work top_level2 top_level2_struc W[g_=<FjZ?i1<G4oeUejL0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work top_level2 2`NVIUiA_FX;IBEzlPUPF2
+    Source modified time: Fri Dec 13 17:55:45 2013
+    Source directory: /master
+    HDL source file: VHDL/top_level2_top_level2_struc_cfg.vhd
+    Source file: VHDL/top_level2_top_level2_struc_cfg.vhd
+    Start location: VHDL/top_level2_top_level2_struc_cfg.vhd:1
+    Version string: 8Uh_jKFeC<9`8PoA99;Eo2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 VHDL CONFIGURATION top_level_structural_cfg
     Configuration for architecture: structural
     Configuration for entity: top_level

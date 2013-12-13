@@ -128,8 +128,11 @@ WORK__top_level_tb_behaviour_cfg = $(LIB_WORK)/top_level_tb_behaviour_cfg/_prima
 WORK__top_level_tb__behaviour = $(LIB_WORK)/top_level_tb/behaviour.dat
 WORK__top_level_tb = $(LIB_WORK)/top_level_tb/_primary.dat
 WORK__top_level_structural_cfg = $(LIB_WORK)/top_level_structural_cfg/_primary.dat
-WORK__top_level__synthesised = $(LIB_WORK)/top_level/synthesised.dat
+WORK__top_level2_top_level2_struc_cfg = $(LIB_WORK)/top_level2_top_level2_struc_cfg/_primary.dat
+WORK__top_level2__top_level2_struc = $(LIB_WORK)/top_level2/top_level2_struc.dat
+WORK__top_level2 = $(LIB_WORK)/top_level2/_primary.dat
 WORK__top_level__structural = $(LIB_WORK)/top_level/structural.dat
+WORK__top_level__synthesised = $(LIB_WORK)/top_level/synthesised.dat
 WORK__top_level = $(LIB_WORK)/top_level/_primary.dat
 WORK__timer_timer_behav_cfg = $(LIB_WORK)/timer_timer_behav_cfg/_primary.dat
 WORK__timer_tb_timer_tb_behav_cfg = $(LIB_WORK)/timer_tb_timer_tb_behav_cfg/_primary.dat
@@ -192,6 +195,7 @@ WORK__rom_behaviour_cfg = $(LIB_WORK)/rom_behaviour_cfg/_primary.dat
 WORK__rom__rom_behaviour = $(LIB_WORK)/rom/rom_behaviour.dat
 WORK__rom__synthesised = $(LIB_WORK)/rom/synthesised.dat
 WORK__rom = $(LIB_WORK)/rom/_primary.dat
+WORK__ram_fix_ram_fix_behav_cfg = $(LIB_WORK)/ram_fix_ram_fix_behav_cfg/_primary.dat
 WORK__ram_fix__ram_fix_behav = $(LIB_WORK)/ram_fix/ram_fix_behav.dat
 WORK__ram_fix = $(LIB_WORK)/ram_fix/_primary.dat
 WORK__piece_lut_tb_piece_lut_tb_behaviour_cfg = $(LIB_WORK)/piece_lut_tb_piece_lut_tb_behaviour_cfg/_primary.dat
@@ -460,8 +464,11 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_level_tb__behaviour) \
     $(WORK__top_level_tb) \
     $(WORK__top_level_structural_cfg) \
-    $(WORK__top_level__synthesised) \
+    $(WORK__top_level2_top_level2_struc_cfg) \
+    $(WORK__top_level2__top_level2_struc) \
+    $(WORK__top_level2) \
     $(WORK__top_level__structural) \
+    $(WORK__top_level__synthesised) \
     $(WORK__top_level) \
     $(WORK__timer_timer_behav_cfg) \
     $(WORK__timer_tb_timer_tb_behav_cfg) \
@@ -524,6 +531,7 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__rom__rom_behaviour) \
     $(WORK__rom__synthesised) \
     $(WORK__rom) \
+    $(WORK__ram_fix_ram_fix_behav_cfg) \
     $(WORK__ram_fix__ram_fix_behav) \
     $(WORK__ram_fix) \
     $(WORK__piece_lut_tb_piece_lut_tb_behaviour_cfg) \
@@ -1928,6 +1936,14 @@ $(WORK__ram_fix__ram_fix_behav) : VHDL/ram_fix_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/ram_fix_arch.vhd
 
+$(WORK__ram_fix_ram_fix_behav_cfg) : VHDL/ram_fix_ram_fix_behav_cfg.vhd \
+		$(WORK__ram_fix__ram_fix_behav) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__ram_fix)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/ram_fix_ram_fix_behav_cfg.vhd
+
 $(WORK__rom) : VHDL/rom.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
@@ -2437,13 +2453,6 @@ $(WORK__top_level) : VHDL/top_level.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_level.vhd
 
-$(WORK__top_level__structural) : VHDL/top_level-structural.vhd \
-		$(WORK__top_level) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/top_level-structural.vhd
-
 $(WORK__top_level__synthesised) : VHDL/top_level_SYNTH.vhd \
 		$(WORK__top_level) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -2451,6 +2460,64 @@ $(WORK__top_level__synthesised) : VHDL/top_level_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_level_SYNTH.vhd
+
+$(WORK__top_level__structural) : VHDL/top_level-structural.vhd \
+		$(WORK__top_level) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level-structural.vhd
+
+$(WORK__top_level2) : VHDL/top_level2.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2.vhd
+
+$(WORK__top_level2__top_level2_struc) : VHDL/top_level2_arch.vhd \
+		$(WORK__top_level2) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2_arch.vhd
+
+$(WORK__top_level2_top_level2_struc_cfg) : VHDL/top_level2_top_level2_struc_cfg.vhd \
+		$(WORK__draw_score) \
+		$(WORK__log_score) \
+		$(WORK__cs_compare) \
+		$(WORK__rom) \
+		$(WORK__piece_lut) \
+		$(WORK__de_piece) \
+		$(WORK__check_mask) \
+		$(WORK__vga) \
+		$(WORK__ram_fix) \
+		$(WORK__sr_if) \
+		$(WORK__controller) \
+		$(WORK__timer) \
+		$(WORK__npg) \
+		$(WORK__debounce) \
+		$(WORK__draw_score_behaviour_cfg) \
+		$(WORK__log_score_behaviour_cfg) \
+		$(WORK__cs_compare_cs_compare_behav_cfg) \
+		$(WORK__rom_behaviour_cfg) \
+		$(WORK__piece_lut_piece_lut_behaviour_cfg) \
+		$(WORK__de_piece_behaviour_cfg) \
+		$(WORK__check_mask_check_mask_behaviour_cfg) \
+		$(WORK__vga_params) \
+		$(WORK__vga_vga_arch_cfg) \
+		$(WORK__ram_fix_ram_fix_behav_cfg) \
+		$(WORK__sr_if_sr_if_behav_cfg) \
+		$(WORK__controller_controller_arch_cfg) \
+		$(IEEE__numeric_std) \
+		$(WORK__timer_timer_behav_cfg) \
+		$(WORK__npg_structural_cfg) \
+		$(WORK__debounce_behaviour_cfg) \
+		$(WORK__top_level2__top_level2_struc) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__top_level2)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2_top_level2_struc_cfg.vhd
 
 $(WORK__top_level_structural_cfg) : VHDL/top_level_structural_cfg.vhd \
 		$(WORK__controller) \
