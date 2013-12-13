@@ -8,7 +8,7 @@ architecture controller_move_arch of controller_move is
 
 	signal next_state, cur_state : state_type;
 begin
-	process(clk, rst)
+	process(clk, rst, next_state)
 	begin
 		if (rising_edge(clk)) then
 			if (rst = '1') then
@@ -20,7 +20,7 @@ begin
 
 	end process;
 
-	process(cur_state)
+	process(cur_state, start, draw_erase_ready, inputs, drop, check_ready, check_empty)
 	begin
 		x                <= '0';
 		y <= '0';

@@ -98,7 +98,8 @@ begin
                 check_ready <= '1';
                 check_empty <= '1';
                 wait until (check_start = '0');
-                wait for 20 ns;
+                wait until (clk = '0');
+		wait until (clk = '1');
         end process;
         
         lbl_clear_shift : process
@@ -108,7 +109,8 @@ begin
                 wait for 50 ns;
                 clear_shift_ready <= '1';
                 wait until (clear_shift_start = '0');
-                wait for 20 ns;
+                wait until (clk = '0');
+		wait until (clk = '1');
         end process;
         
         
@@ -119,7 +121,8 @@ begin
                 wait for 50 ns;
                 draw_erase_ready <= '1';
                 wait until (draw_erase_start = '0');
-                wait for 20 ns;
+                wait until (clk = '0');
+		wait until (clk = '1');
         end process;
         
         lbl_score : process
@@ -129,9 +132,10 @@ begin
                 wait for 50 ns;
                 draw_score_ready <= '1';
                 wait until (draw_erase_draw = '0');
-                wait for 20 ns;
+                wait until (clk = '0');
+		wait until (clk = '1');
         end process;
-        
+
         lbl_tmr1 : process
         begin
                 timer_1_done <= '0';
@@ -139,7 +143,8 @@ begin
                 wait for 100 ns;
                 timer_1_done <= '1';                
                 wait until (timer_1_start = '0');
-                wait for 20 ns;        
+                wait until (clk = '0');
+		wait until (clk = '1');       
         end process;
         
         
@@ -152,9 +157,9 @@ begin
         
 	clk_process : process
 	begin
-		clk <= '0';
-		wait for clk_period / 2;
 		clk <= '1';
+		wait for clk_period / 2;
+		clk <= '0';
 		wait for clk_period / 2;
 	end process;
 	
@@ -163,6 +168,7 @@ begin
 	stim_proc : process
 	begin
 		inputs <= "000001";
+		wait for 30 ns;
 		rst <= '1';
 		wait for 40 ns;
 		rst <= '0';
@@ -172,6 +178,9 @@ begin
 	end process;
 
 end;
+
+
+
 
 
 
