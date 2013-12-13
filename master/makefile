@@ -129,6 +129,9 @@ WORK__top_level_tb__behaviour = $(LIB_WORK)/top_level_tb/behaviour.dat
 WORK__top_level_tb = $(LIB_WORK)/top_level_tb/_primary.dat
 WORK__top_level_structural_cfg = $(LIB_WORK)/top_level_structural_cfg/_primary.dat
 WORK__top_level2_top_level2_struc_cfg = $(LIB_WORK)/top_level2_top_level2_struc_cfg/_primary.dat
+WORK__top_level2_tb_top_level2_tb_arch_cfg = $(LIB_WORK)/top_level2_tb_top_level2_tb_arch_cfg/_primary.dat
+WORK__top_level2_tb__top_level2_tb_arch = $(LIB_WORK)/top_level2_tb/top_level2_tb_arch.dat
+WORK__top_level2_tb = $(LIB_WORK)/top_level2_tb/_primary.dat
 WORK__top_level2__top_level2_struc = $(LIB_WORK)/top_level2/top_level2_struc.dat
 WORK__top_level2 = $(LIB_WORK)/top_level2/_primary.dat
 WORK__top_level__structural = $(LIB_WORK)/top_level/structural.dat
@@ -465,6 +468,9 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_level_tb) \
     $(WORK__top_level_structural_cfg) \
     $(WORK__top_level2_top_level2_struc_cfg) \
+    $(WORK__top_level2_tb_top_level2_tb_arch_cfg) \
+    $(WORK__top_level2_tb__top_level2_tb_arch) \
+    $(WORK__top_level2_tb) \
     $(WORK__top_level2__top_level2_struc) \
     $(WORK__top_level2) \
     $(WORK__top_level__structural) \
@@ -2480,6 +2486,23 @@ $(WORK__top_level2__top_level2_struc) : VHDL/top_level2_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_level2_arch.vhd
+
+$(WORK__top_level2_tb) \
+$(WORK__top_level2_tb__top_level2_tb_arch) : VHDL/top_level2_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2_tb.vhd
+
+$(WORK__top_level2_tb_top_level2_tb_arch_cfg) : VHDL/top_level2_tb_top_level2_tb_arch_cfg.vhd \
+		$(WORK__top_level2) \
+		$(WORK__top_level2_top_level2_struc_cfg) \
+		$(WORK__top_level2_tb__top_level2_tb_arch) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__top_level2_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2_tb_top_level2_tb_arch_cfg.vhd
 
 $(WORK__top_level2_top_level2_struc_cfg) : VHDL/top_level2_top_level2_struc_cfg.vhd \
 		$(WORK__draw_score) \

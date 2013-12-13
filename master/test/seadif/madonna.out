@@ -1,142 +1,133 @@
 
 Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
 
-reading circuit "top_level(top_level(test))" ...done
+reading circuit "top_level2(top_level2(test))" ...done
 
 Kissing madonna hello...
 
 Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
 
 
------- net distribution (total #nets = 126):
+------ net distribution (total #nets = 125):
         0..1     2     3     4     5     6     7 8..10 11..20  >20
 
-           0    98    14     1     9     0     0     0     2     2
+           0    94    17     1     8     1     0     0     2     2
 
 ------ partitioning 32 cells into (hor x vert) = (3 x 3) partitions
 
 ------ requested grid points = (678, 756)
 
------- cost@start = 630, cost@end = 586, moves = 38
------- cost@start = 586, cost@end = 586, moves = 30
------- 94 nets have to be routed on a 5 x 5 global grid
-     + routing net vga_hsync (2 terminals):  weight = 202
-     + routing net vga_clk (5 terminals):  weight = 800
-     + routing net rst (5 terminals):  weight = 800
-     + routing net SYNTHESIZED_WIRE_1 (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_49_2_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_49_1_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_49_0_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_2 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_45 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_52_7_port (3 terminals):  weight = 404
-     + routing net SYNTHESIZED_WIRE_52_6_port (3 terminals):  weight = 404
-     + routing net SYNTHESIZED_WIRE_52_5_port (3 terminals):  weight = 404
-     + routing net SYNTHESIZED_WIRE_52_4_port (3 terminals):  weight = 400
-     + routing net SYNTHESIZED_WIRE_52_3_port (3 terminals):  weight = 402
-     + routing net SYNTHESIZED_WIRE_52_2_port (3 terminals):  weight = 400
-     + routing net SYNTHESIZED_WIRE_52_1_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_52_0_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_51 (3 terminals):  weight = 404
-     + routing net SYNTHESIZED_WIRE_50 (2 terminals):  weight = 204
-     + routing net gdfx_temp0 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_7_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_6_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_5_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_4_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_3_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_2_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_1_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_6_0_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_5 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_46 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_48_5_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_48_4_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_48_3_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_48_2_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_48_1_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_48_0_port (2 terminals):  weight = 204
-     + routing net n14 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_17 (2 terminals):  weight = 200
+------ cost@start = 610, cost@end = 529, moves = 27
+------ cost@start = 529, cost@end = 529, moves = 26
+------ 85 nets have to be routed on a 5 x 5 global grid
+     + routing net vga_v_sync (2 terminals):  weight = 204
+     + routing net clk (7 terminals):  weight = 1200
+     + routing net rst (7 terminals):  weight = 1200
+     + routing net inputs_debounced_5_port (2 terminals):  weight = 200
+     + routing net inputs_debounced_4_port (2 terminals):  weight = 200
+     + routing net inputs_debounced_3_port (2 terminals):  weight = 200
+     + routing net inputs_debounced_2_port (2 terminals):  weight = 200
+     + routing net inputs_debounced_1_port (2 terminals):  weight = 200
+     + routing net inputs_debounced_0_port (2 terminals):  weight = 200
+     + routing net button_seed (2 terminals):  weight = 204
+     + routing net new_piece (2 terminals):  weight = 200
+     + routing net next_piece_2_port (2 terminals):  weight = 200
+     + routing net next_piece_1_port (2 terminals):  weight = 200
+     + routing net next_piece_0_port (2 terminals):  weight = 200
+     + routing net timer_1_reset (2 terminals):  weight = 200
+     + routing net timer_1_time (2 terminals):  weight = 200
+     + routing net timer_1_start (2 terminals):  weight = 200
+     + routing net timer_1_done (2 terminals):  weight = 200
+     + routing net lut_piece_type_2_port (2 terminals):  weight = 202
+     + routing net lut_piece_type_1_port (2 terminals):  weight = 202
+     + routing net lut_piece_type_0_port (2 terminals):  weight = 202
+     + routing net lut_next_piece (2 terminals):  weight = 202
+     + routing net lut_x_2_port (2 terminals):  weight = 202
+     + routing net lut_x_1_port (2 terminals):  weight = 202
+     + routing net lut_x_0_port (2 terminals):  weight = 202
+     + routing net lut_y_3_port (2 terminals):  weight = 202
+     + routing net lut_y_2_port (2 terminals):  weight = 202
+     + routing net lut_y_1_port (2 terminals):  weight = 202
+     + routing net lut_y_0_port (2 terminals):  weight = 202
+     + routing net lut_rot_1_port (2 terminals):  weight = 202
+     + routing net lut_rot_0_port (2 terminals):  weight = 202
+     + routing net check_empty (2 terminals):  weight = 202
+     + routing net check_start (3 terminals):  weight = 400
+     + routing net check_ready (2 terminals):  weight = 202
+     + routing net draw_erase_draw (2 terminals):  weight = 202
+     + routing net draw_erase_start (3 terminals):  weight = 400
+     + routing net draw_erase_ready (2 terminals):  weight = 202
+     + routing net clear_shift_start (3 terminals):  weight = 400
+     + routing net clear_shift_ready (2 terminals):  weight = 202
+     + routing net draw_score_draw (3 terminals):  weight = 400
+     + routing net draw_score_ready (2 terminals):  weight = 200
+     + routing net n13 (2 terminals):  weight = 200
+     + routing net ram_data_out (2 terminals):  weight = 204
+     + routing net vga_data (2 terminals):  weight = 200
+     + routing net ram_we (4 terminals):  weight = 600
+     + routing net ram_addr_7_port (3 terminals):  weight = 400
+     + routing net ram_addr_6_port (3 terminals):  weight = 400
+     + routing net ram_addr_5_port (3 terminals):  weight = 400
+     + routing net n16 (2 terminals):  weight = 200
      + routing net n17 (2 terminals):  weight = 200
      + routing net n18 (2 terminals):  weight = 200
-     + routing net n19 (2 terminals):  weight = 200
-     + routing net n15 (2 terminals):  weight = 202
-     + routing net n16 (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_16_7_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_6_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_5_port (2 terminals):  weight = 200
-     + routing net n9 (2 terminals):  weight = 204
-     + routing net n8 (2 terminals):  weight = 204
-     + routing net n7 (2 terminals):  weight = 204
+     + routing net n14 (2 terminals):  weight = 200
+     + routing net n15 (2 terminals):  weight = 200
+     + routing net vga_addr_7_port (2 terminals):  weight = 200
+     + routing net vga_addr_6_port (2 terminals):  weight = 200
+     + routing net vga_addr_5_port (2 terminals):  weight = 200
+     + routing net n8 (2 terminals):  weight = 202
+     + routing net n7 (2 terminals):  weight = 202
      + routing net n10 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_4_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_3_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_2_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_16_1_port (2 terminals):  weight = 200
-     + routing net n20 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_19 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_20 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_21 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_47 (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_43 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_42 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_22 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_27 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_44 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_28 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_39_2_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_39_1_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_39_0_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_40_3_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_40_2_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_40_1_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_40_0_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_38_1_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_38_0_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_36_2_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_36_1_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_36_0_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_31 (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_41_6_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_41_5_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_41_4_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_41_1_port (2 terminals):  weight = 204
-     + routing net SYNTHESIZED_WIRE_41_0_port (2 terminals):  weight = 200
-     + routing net SYNTHESIZED_WIRE_37_3_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_37_2_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_37_1_port (2 terminals):  weight = 202
-     + routing net SYNTHESIZED_WIRE_37_0_port (2 terminals):  weight = 202
-     + routing net n4 (2 terminals):  weight = 200
+     + routing net n6 (2 terminals):  weight = 200
+     + routing net n9 (2 terminals):  weight = 200
+     + routing net vga_addr_4_port (2 terminals):  weight = 200
+     + routing net vga_addr_3_port (2 terminals):  weight = 200
+     + routing net vga_addr_2_port (2 terminals):  weight = 204
+     + routing net vga_addr_1_port (2 terminals):  weight = 204
+     + routing net vga_addr_0_port (2 terminals):  weight = 204
+     + routing net ram_addr_4_port (3 terminals):  weight = 402
+     + routing net ram_addr_3_port (2 terminals):  weight = 200
+     + routing net ram_addr_2_port (2 terminals):  weight = 200
+     + routing net ram_addr_1_port (3 terminals):  weight = 402
+     + routing net ram_addr_0_port (2 terminals):  weight = 200
+     + routing net ram_data_in (3 terminals):  weight = 402
+     + routing net rom_addr_5_port (2 terminals):  weight = 200
+     + routing net rom_addr_4_port (2 terminals):  weight = 202
+     + routing net rom_addr_3_port (2 terminals):  weight = 200
+     + routing net rom_addr_2_port (2 terminals):  weight = 200
+     + routing net rom_addr_1_port (2 terminals):  weight = 200
+     + routing net rom_addr_0_port (2 terminals):  weight = 200
+     + routing net n3 (2 terminals):  weight = 200
      + routing net n2 (2 terminals):  weight = 202
-     + routing net n6 (2 terminals):  weight = 202
-     + routing net n5 (2 terminals):  weight = 202
-     + routing net n13 (2 terminals):  weight = 200
+     + routing net n5 (2 terminals):  weight = 200
+     + routing net n4 (2 terminals):  weight = 200
      + routing net n12 (2 terminals):  weight = 200
-     + routing net n1 (2 terminals):  weight = 202
+     + routing net n11 (2 terminals):  weight = 200
+     + routing net score (2 terminals):  weight = 200
 
------- Routed 94 nets, total weight = 21538
+------ Routed 85 nets, total weight = 21474
 
 
 
------- Detailed placement of (Tmp_Cell_(top_level(top_level(test))))...
+------ Detailed placement of (Tmp_Cell_(top_level2(top_level2(test))))...
 ------ Reading input data
 ------ Creating temporary data structures
 ------ Placement plane size : [678:756]
 ------ Doing placement 
- Can't place cell :b2v_inst3  in window at (226,0)
+ Can't place cell :video_ram  in window at (452,9)
 
  Apparently the magnification coefficient is too small. 
  Let's try to run the algorithm for bigger magn. coefficient. 
 ------ Placement plane size : [881:756]
 ------ Doing placement 
- Can't place cell :b2v_inst3  in window at (293,0)
+ Can't place cell :video_ram  in window at (586,9)
 
  Apparently the magnification coefficient is too small. 
  Let's try to run the algorithm for bigger magn. coefficient. 
 ------ Placement plane size : [1145:756]
 ------ Doing placement 
- Can't place cell :b2v_inst2  in window at (0,0)
+ Can't place cell :vga_controller  in window at (762,0)
 
  Apparently the magnification coefficient is too small. 
  Let's try to run the algorithm for bigger magn. coefficient. 
@@ -144,9 +135,9 @@ Reading image description file "/data/public/common/software/nelsis/5.4.1.1/shar
 ------ Doing placement 
 ------ Compacting  
 
-         132  column[s] deleted.
+         20  column[s] deleted.
 
-         Magnification coefficient obtained :1.36516
+         Magnification coefficient obtained :1.98395
 
 ------ Writing created layout to database
 Kissing madonna good bye...

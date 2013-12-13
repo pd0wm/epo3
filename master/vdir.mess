@@ -8,8 +8,8 @@ OPTIMIZED DESIGN _opt
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: master
 OPTIMIZED DESIGN _opt1
-    Version string: =moX;NOD?DdZC^h8eKHch2
-    Top-level model: work top_level_tb_behaviour_cfg 1
+    Version string: =0<:NK^;C@Zdin3^C?8@Q0
+    Top-level model: work top_level2_tb_top_level2_tb_arch_cfg 1
     Compile options: -quiet -auto_acc_if_foreign -work work
     Short name: @_opt1
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
@@ -3760,6 +3760,54 @@ ENTITY top_level2
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
+ENTITY top_level2_tb
+    Source modified time: Fri Dec 13 18:36:45 2013
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/top_level2_tb.vhd
+    Source file: VHDL/top_level2_tb.vhd
+    Start location: VHDL/top_level2_tb.vhd:4
+    Version string: <GEo5T6T9Hf0N7=:5F5>[2
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
+  ARCHITECTURE BODY top_level2_tb_arch
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work top_level2_tb <GEo5T6T9Hf0N7=:5F5>[2
+    Start location: VHDL/top_level2_tb.vhd:7
+    Version string: Y0CXzT1O=DTBKZWU<?QGf0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Source file: VHDL/top_level2_tb.vhd
+    Source modified time: Fri Dec 13 18:36:45 2013
+    HDL source file: VHDL/top_level2_tb.vhd
+    Debug Symbol file exists
+VHDL CONFIGURATION top_level2_tb_top_level2_tb_arch_cfg
+    Configuration for architecture: top_level2_tb_arch
+    Configuration for entity: top_level2_tb
+    Depends on: E work top_level2 2`NVIUiA_FX;IBEzlPUPF2
+    Depends on: C work top_level2_top_level2_struc_cfg OGVXkDfolG1nHYk6YzV5g0
+    Depends on: A work top_level2_tb top_level2_tb_arch Y0CXzT1O=DTBKZWU<?QGf0
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Depends on: E work top_level2_tb <GEo5T6T9Hf0N7=:5F5>[2
+    Source modified time: Fri Dec 13 18:19:02 2013
+    Source directory: /master
+    HDL source file: VHDL/top_level2_tb_top_level2_tb_arch_cfg.vhd
+    Source file: VHDL/top_level2_tb_top_level2_tb_arch_cfg.vhd
+    Start location: VHDL/top_level2_tb_top_level2_tb_arch_cfg.vhd:1
+    Version string: >[PbR@O[IfeBU6hR?Ud;S3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
 VHDL CONFIGURATION top_level2_top_level2_struc_cfg
     Configuration for architecture: top_level2_struc
     Configuration for entity: top_level2
