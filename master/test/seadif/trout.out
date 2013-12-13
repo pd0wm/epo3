@@ -4,158 +4,144 @@
 ------ reading placement 'Tmp_Cell_(top_level2(top_level2(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Fri Dec 13 18:47:51 2013
+------ routing started Fri Dec 13 22:33:07 2013
  125 nets have to be routed.
+Routing net 'n1' (2/2): . OK!
+Routing net 'vga_h_sync' (2/2): .b OK!
+Routing net 'vga_green' (2/2): .b OK!
 Routing net 'inputs_5_0_5' (2/2): .b OK!
 Routing net 'inputs_5_0_4' (2/2): .b OK!
 Routing net 'inputs_5_0_3' (2/2): .b OK!
 Routing net 'inputs_5_0_2' (2/2): .b OK!
 Routing net 'inputs_5_0_1' (2/2): .b OK!
 Routing net 'inputs_5_0_0' (2/2): .b OK!
-Routing net 'vga_h_sync' (2/2): .b OK!
 Routing net 'vga_red' (2/2): .b OK!
-Routing net 'vga_green' (2/2): .b OK!
 Routing net 'vga_blue' (2/2): .b OK!
-Routing net 'n1' (2/2): . OK!
 Routing net 'clear_shift_ready' (2/2): . OK!
+Routing net 'n3' (2/2): . OK!
 Routing net 'clear_shift_start' (3/3): .. OK!
 Routing net 'clk' (13/13): ............b OK!
---> 11.20 % elapsed:  14.4 sec. expect another 229.1 sec. <--
-Routing net 'n9' (2/2): . OK!
-Routing net 'n6' (2/2): . OK!
-Routing net 'lut_piece_type_1_port' (2/2): . OK!
-Routing net 'lut_error' (2/2): . OK!
-Routing net 'lut_piece_type_2_port' (2/2): . OK!
-Routing net 'lut_start_check' (2/2): . OK!
-Routing net 'score_data_2_port' (2/2): . OK!
-Routing net 'score_data_0_port' (2/2): . OK!
-Routing net 'lut_piece_type_0_port' (2/2): . OK!
+Routing net 'n2' (2/2): . OK!
 Routing net 'score_data_6_port' (2/2): . OK!
 Routing net 'score_data_3_port' (2/2): . OK!
+Routing net 'vga_addr_5_port' (2/2): . OK!
+Routing net 'vga_addr_7_port' (2/2): . OK!
 Routing net 'score_data_4_port' (2/2): . OK!
-Routing net 'next_piece_0_port' (2/2): . OK!
-Routing net 'n14' (2/2): . OK!
-Routing net 'score_data_5_port' (2/2): . OK!
-Routing net 'score' (2/2): . OK!
-Routing net 'score_data_1_port' (2/2): . OK!
-Routing net 'next_piece_2_port' (2/2): . OK!
-Routing net 'lut_rot_0_port' (2/2): . OK!
-Routing net 'lut_y_2_port' (2/2): . OK!
-Routing net 'lut_y_3_port' (2/2): . OK!
-Routing net 'n10' (2/2): . OK!
-Routing net 'score_data_7_port' (2/2): . OK!
-Routing net 'lut_y_1_port' (2/2): . OK!
-Routing net 'lut_y_0_port' (2/2): . OK!
-Routing net 'vga_addr_4_port' (2/2): . OK!
-Routing net 'vga_addr_3_port' (2/2): . OK!
+Routing net 'score_data_0_port' (2/2): . OK!
 Routing net 'check_empty' (2/2): . OK!
-Routing net 'lut_rot_1_port' (2/2): . OK!
-Routing net 'next_piece_1_port' (2/2): . OK!
-Routing net 'vga_v_sync' (3/3): ..b OK!
-Routing net 'new_piece' (2/2): . OK!
-Routing net 'n17' (2/2): . OK!
-Routing net 'rom_addr_5_port' (2/2): . OK!
-Routing net 'vga_addr_2_port' (2/2): . OK!
-Routing net 'timer_1_reset' (2/2): . OK!
-Routing net 'lut_x_1_port' (2/2): . OK!
-Routing net 'vga_addr_1_port' (2/2): . OK!
-Routing net 'lut_x_0_port' (2/2): . OK!
-Routing net 'timer_1_start' (2/2): . OK!
-Routing net 'vga_addr_0_port' (2/2): . OK!
-Routing net 'lut_x_2_port' (2/2): . OK!
-Routing net 'n13' (2/2): . OK!
-Routing net 'n5' (2/2): . OK!
---> 46.40 % elapsed:  20.5 sec. expect another  47.9 sec. <--
-Routing net 'lut_next_piece' (2/2): . OK!
-Routing net 'n2' (2/2): . OK!
-Routing net 'rom_addr_6_port' (2/2): . OK!
-Routing net 'timer_1_time' (2/2): . OK!
-Routing net 'rom_data_1_port' (2/2): . OK!
-Routing net 'timer_1_done' (2/2): . OK!
-Routing net 'n15' (2/2): . OK!
+Routing net 'score_data_2_port' (2/2): . OK!
+Routing net 'score_data_5_port' (2/2): . OK!
 Routing net 'n4' (2/2): . OK!
-Routing net 'rom_data_0_port' (2/2): . OK!
+Routing net 'vga_addr_2_port' (2/2): . OK!
+Routing net 'timer_1_done' (2/2): . OK!
+Routing net 'vga_addr_6_port' (2/2): . OK!
+Routing net 'score_data_1_port' (2/2): . OK!
+Routing net 'next_piece_1_port' (2/2): . OK!
+Routing net 'vga_addr_4_port' (2/2): . OK!
+Routing net 'next_piece_0_port' (2/2): . OK!
+Routing net 'score_data_7_port' (2/2): . OK!
+Routing net 'mask_2_port' (3/3): .. OK!
+Routing net 'inputs_debounced_0_port' (2/2): . OK!
+Routing net 'mask_0_port' (3/3): .. OK!
+Routing net 'vga_addr_0_port' (2/2): . OK!
+Routing net 'n5' (2/2): . OK!
+Routing net 'mask_3_port' (3/3): .. OK!
+Routing net 'vga_addr_3_port' (2/2): . OK!
+Routing net 'timer_1_time' (2/2): . OK!
+Routing net 'n16' (2/2): . OK!
+Routing net 'next_piece_2_port' (2/2): . OK!
+Routing net 'draw_score_ready' (2/2): . OK!
+Routing net 'vga_addr_1_port' (2/2): . OK!
+Routing net 'button_seed' (2/2): . OK!
+Routing net 'mask_1_port' (3/3): .. OK!
+Routing net 'n17' (2/2): . OK!
+Routing net 'mask_select_0_port' (3/3): .. OK!
+Routing net 'lut_start_de' (2/2): . OK!
+Routing net 'inputs_debounced_4_port' (2/2): . OK!
+Routing net 'mask_5_port' (3/3): .. OK!
+Routing net 'timer_1_start' (2/2): . OK!
+Routing net 'lut_error' (2/2): . OK!
+Routing net 'n12' (2/2): . OK!
+Routing net 'n11' (2/2): . OK!
+Routing net 'n7' (2/2): . OK!
+Routing net 'mask_select_1_port' (3/3): .. OK!
+Routing net 'mask_4_port' (3/3): .. OK!
+Routing net 'timer_1_reset' (2/2): . OK!
+Routing net 'mask_7_port' (3/3): .. OK!
+Routing net 'lut_start_check' (2/2): . OK!
+Routing net 'lut_ready' (3/3): .. OK!
+Routing net 'n10' (2/2): . OK!
+Routing net 'rom_addr_0_port' (2/2): . OK!
+Routing net 'rom_addr_1_port' (2/2): . OK!
+Routing net 'n8' (2/2): . OK!
+Routing net 'rom_addr_4_port' (2/2): . OK!
+Routing net 'mask_6_port' (3/3): .. OK!
+Routing net 'draw_erase_start' (3/3): .. OK!
+Routing net 'check_start' (3/3): .. OK!
+Routing net 'vga_data' (2/2): . OK!
+Routing net 'n13' (2/2): . OK!
+Routing net 'lut_piece_type_0_port' (2/2): . OK!
+Routing net 'check_ready' (2/2): . OK!
+Routing net 'inputs_debounced_5_port' (2/2): . OK!
+Routing net 'new_piece' (2/2): . OK!
+Routing net 'rom_addr_5_port' (2/2): . OK!
+Routing net 'lut_piece_type_2_port' (2/2): . OK!
+Routing net 'draw_score_draw' (3/3): .. OK!
+Routing net 'n18' (2/2): . OK!
+Routing net 'lut_piece_type_1_port' (2/2): . OK!
+Routing net 'rom_addr_3_port' (2/2): . OK!
 Routing net 'rom_data_3_port' (2/2): . OK!
 Routing net 'rom_data_2_port' (2/2): . OK!
-Routing net 'n8' (2/2): . OK!
---> 56.00 % elapsed:  28.3 sec. expect another  44.7 sec. <--
-Routing net 'check_ready' (2/2): . OK!
-Routing net 'n16' (2/2): . OK!
-Routing net 'n18' (2/2): . OK!
-Routing net 'n7' (2/2): . OK!
-Routing net 'draw_score_ready' (2/2): . OK!
-Routing net 'draw_erase_draw' (2/2): . OK!
-Routing net 'n11' (2/2): . OK!
-Routing net 'vga_addr_6_port' (2/2): . OK!
---> 62.40 % elapsed:  35.7 sec. expect another  43.7 sec. <--
-Routing net 'ram_data_in' (4/4): ... OK!
-Routing net 'n12' (2/2): . OK!
-Routing net 'vga_addr_7_port' (2/2): . OK!
-Routing net 'vga_addr_5_port' (2/2): . OK!
---> 65.60 % elapsed:  42.2 sec. expect another  44.6 sec. <--
-Routing net 'mask_6_port' (3/3): .. OK!
-Routing net 'ram_data_out' (3/3): .. OK!
-Routing net 'inputs_debounced_5_port' (2/2): . OK!
-Routing net 'lut_ready' (3/3): .. OK!
-Routing net 'rom_addr_4_port' (2/2): . OK!
-Routing net 'button_seed' (2/2): . OK!
---> 70.40 % elapsed:  50.3 sec. expect another  42.6 sec. <--
 Routing net 'inputs_debounced_2_port' (2/2): . OK!
-Routing net 'lut_start_de' (2/2): . OK!
 Routing net 'inputs_debounced_1_port' (2/2): . OK!
 Routing net 'inputs_debounced_3_port' (2/2): . OK!
---> 73.60 % elapsed:  63.1 sec. expect another  45.3 sec. <--
-Routing net 'mask_7_port' (3/3): .. OK!
-Routing net 'mask_1_port' (3/3): .. OK!
-Routing net 'mask_select_1_port' (3/3): .. OK!
-Routing net 'draw_erase_ready' (2/2): . OK!
-Routing net 'ram_addr_1_port' (5/5): .... OK!
-Routing net 'rom_addr_1_port' (2/2): . OK!
---> 78.40 % elapsed:  69.8 sec. expect another  39.3 sec. <--
-Routing net 'ram_addr_2_port' (5/5): .... OK!
-Routing net 'mask_0_port' (3/3): .. OK!
-Routing net 'mask_5_port' (3/3): .. OK!
-Routing net 'mask_3_port' (3/3): .. OK!
-Routing net 'ram_addr_0_port' (5/5): .... OK!
-Routing net 'ram_addr_3_port' (5/5): .... OK!
---> 83.20 % elapsed:  77.3 sec. expect another  31.5 sec. <--
-Routing net 'ram_addr_7_port' (5/5): .... OK!
-Routing net 'ram_addr_4_port' (5/5): .... OK!
-Routing net 'rom_addr_0_port' (2/2): . OK!
-Routing net 'n3' (2/2): . OK!
---> 86.40 % elapsed:  85.0 sec. expect another  26.8 sec. <--
-Routing net 'mask_select_0_port' (3/3): .. OK!
-Routing net 'mask_4_port' (3/3): .. OK!
-Routing net 'mask_2_port' (3/3): .. OK!
-Routing net 'vga_data' (2/2): . OK!
---> 89.60 % elapsed:  92.0 sec. expect another  21.4 sec. <--
-Routing net 'draw_erase_start' (3/3): .. OK!
-Routing net 'ram_addr_5_port' (5/5): .... OK!
-Routing net 'ram_addr_6_port' (5/5): .... OK!
-Routing net 'draw_score_draw' (3/3): .. OK!
---> 92.80 % elapsed: 100.0 sec. expect another  15.6 sec. <--
-Routing net 'inputs_debounced_0_port' (2/2): . OK!
-Routing net 'check_start' (3/3): .. OK!
---> 94.40 % elapsed: 106.2 sec. expect another  12.8 sec. <--
-Routing net 'ram_we' (6/6): ..... OK!
+Routing net 'rom_data_0_port' (2/2): . OK!
+Routing net 'n9' (2/2): . OK!
+Routing net 'vga_v_sync' (3/3): ..b OK!
 Routing net 'rom_addr_2_port' (2/2): . OK!
---> 96.00 % elapsed: 113.0 sec. expect another   9.5 sec. <--
-Routing net 'inputs_debounced_4_port' (2/2): . OK!
-Routing net 'rom_addr_3_port' (2/2): . OK!
---> 97.60 % elapsed: 123.5 sec. expect another   6.6 sec. <--
+Routing net 'n6' (2/2): . OK!
+Routing net 'n14' (2/2): . OK!
+Routing net 'lut_y_2_port' (2/2): . OK!
+Routing net 'score' (2/2): . OK!
+Routing net 'rom_data_1_port' (2/2): . OK!
+Routing net 'draw_erase_draw' (2/2): . OK!
+Routing net 'rom_addr_6_port' (2/2): . OK!
+Routing net 'n15' (2/2): . OK!
+Routing net 'lut_next_piece' (2/2): . OK!
+Routing net 'lut_y_3_port' (2/2): . OK!
+Routing net 'lut_y_0_port' (2/2): . OK!
+Routing net 'lut_x_2_port' (2/2): . OK!
+Routing net 'draw_erase_ready' (2/2): . OK!
+Routing net 'lut_x_0_port' (2/2): . OK!
+Routing net 'lut_x_1_port' (2/2): . OK!
+Routing net 'lut_rot_0_port' (2/2): . OK!
+Routing net 'ram_addr_1_port' (5/5): .... OK!
+Routing net 'ram_data_in' (4/4): ... OK!
+Routing net 'lut_rot_1_port' (2/2): . OK!
+Routing net 'ram_data_out' (3/3): .. OK!
+Routing net 'ram_addr_3_port' (5/5): .... OK!
+--> 91.20 % elapsed:   6.1 sec. expect another   1.3 sec. <--
+Routing net 'ram_addr_0_port' (5/5): .... OK!
+Routing net 'ram_addr_6_port' (5/5): .... OK!
+Routing net 'ram_we' (6/6): ..... OK!
+Routing net 'lut_y_1_port' (2/2): . OK!
+Routing net 'ram_addr_4_port' (5/5): .... OK!
+Routing net 'ram_addr_2_port' (5/5): .... OK!
+Routing net 'ram_addr_5_port' (5/5): .... OK!
+Routing net 'ram_addr_7_port' (5/5): .... OK!
 Routing net 'rst' (13/13): ............b OK!
 Routing net 'vdd' : ... (Power special)
---> 99.20 % elapsed: 130.1 sec. expect another   2.2 sec. <--
 Routing net 'vss' : ... (Power special)
 READY
 ----- Some interesting statistics ------
 Total number of nets:                 125 (100% completion)
-Total length of routed wires:         114450 grids = 1007.160 mm
-No. of transistors (total / used):    248346/38566 = 15.53 %
-CPU-time consumption:               130.08 sec.
-Elapsed time during routing:        130.26 sec. (99.97 % of cpu)
+Total length of routed wires:         47579 grids = 418.695 mm
+No. of transistors (total / used):    76059/38568 = 50.71 %
+No. of poly feeds used by router:     2
+CPU-time consumption:                 8.52 sec.
+Elapsed time during routing:          8.63 sec. (100.12 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
 ------ Writing 'Tmp_Cell_(top_level2(top_level2(test)))' ------
------- Trout: task completed on Fri Dec 13 18:50:33 2013
+------ Trout: task completed on Fri Dec 13 22:33:25 2013
  terminate

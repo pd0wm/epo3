@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version G-2012.06 for linux -- May 30, 2012
-#@ # Date:   Fri Dec 13 18:46:28 2013
+#@ # Date:   Fri Dec 13 22:12:57 2013
 #@ # Run by: epo3-use@EPO-3
 #@ 
 
@@ -4769,4 +4769,8 @@ source -echo -verbose /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 #@ # or type quit in dc_shell window
 #@ # -- End source /home/epo3-user/Desktop/git/epo3/master/plot.tcl
 
+change_selection [get_s U13]
+change_selection [get_s {U13/Y n13}]
+change_selection [get_s U18]
+change_selection [get_s {{ram_addr[7:5],n16,n17,n18,n14,n15} {ram_addr[7]} {ram_addr[6]} {ram_addr[5]} n16 n17 n18 n14 n15}]
 quit
