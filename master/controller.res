@@ -1,14 +1,19 @@
 1.000000e-10  ( clk ) ( rst ) ( lut_piece_type_2_0_2 ) ( lut_piece_type_2_0_1 ) ( lut_piece_type_2_0_0 ) ( lut_next_piece ) ( lut_x_2_0_2 ) ( lut_x_2_0_1 ) ( lut_x_2_0_0 ) ( lut_y_3_0_3 ) ( lut_y_3_0_2 ) ( lut_y_3_0_1 ) ( lut_y_3_0_0 ) ( lut_rot_1_0_1 ) ( lut_rot_1_0_0 ) ( new_piece ) ( next_piece_2_0_2 ) ( next_piece_2_0_1 ) ( next_piece_2_0_0 ) ( check_empty ) ( check_start ) ( check_ready ) ( draw_erase_draw ) ( draw_erase_start ) ( draw_erase_ready ) ( clear_shift_start ) ( clear_shift_ready ) ( draw_score_draw ) ( draw_score_ready ) ( timer_1_time ) ( timer_1_start ) ( timer_1_done ) ( timer_1_reset ) ( inputs_5_0_5 ) ( inputs_5_0_4 ) ( inputs_5_0_3 ) ( inputs_5_0_2 ) ( inputs_5_0_1 ) ( inputs_5_0_0 )
               0hhxxxxxxxxxxxxxxxxxxxlxxlxlxlxxlxlllllh
-              0hhhhlllhllllllhlxxxxllllllllllllllllllh
-            800lhhhlllhllllllhlxxxxllllllllllllllllllh
-           1600hhhhlllhllllllhlxxxxllllllllllllllllllh
-           2400lhhhlllhllllllhlxxxxllllllllllllllllllh
-           2500llhhlllhllllllhllllhllllllllllllllllllh
-           3200hlhhlllhllllllhllllhllllllllllllllllllh
-           3208hllllllhllllllhllllhllllllllllllllllllh
-           3214hlllllllllllllhllllhllllllllllllllllllh
-           3215hllllllllllllllllllhllllllllllllllllllh
+              0hhlhllhlhhhlhlhlxxxxlllllllllhhlhlllllh
+            800lhlhllhlhhhlhlhlxxxxlllllllllhhlhlllllh
+           1600hhlhllhlhhhlhlhlxxxxlllllllllhhlhlllllh
+           1671hhlhllhlhhhlhlhlxxxxlllllllllhllhlllllh
+           1680hhlhllhlhhhlhlhlxxxxllllllllllllllllllh
+           2400lhlhllhlhhhlhlhlxxxxllllllllllllllllllh
+           2500lllhllhlhhhlhlhllllhllllllllllllllllllh
+           3200hllhllhlhhhlhlhllllhllllllllllllllllllh
+           3208hlllllhlhhhlhlhllllhllllllllllllllllllh
+           3215hlllllllhhhlhllllllhllllllllllllllllllh
+           3216hllllllllhhlhllllllhllllllllllllllllllh
+           3219hlllllllllhlhllllllhllllllllllllllllllh
+           3220hlllllllllllhllllllhllllllllllllllllllh
+           3223hllllllllllllllllllhllllllllllllllllllh
            3238hllllllllllllllhlllhllllllllllllllllllh
            3243hllllllllllllllhlllhlllllllllhllllllllh
            4000lllllllllllllllhlllhlllllllllhllllllllh
