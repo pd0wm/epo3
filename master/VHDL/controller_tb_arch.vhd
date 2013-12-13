@@ -98,7 +98,7 @@ begin
                 check_ready <= '1';
                 check_empty <= '1';
                 wait until (check_start = '0');
-                wait for 10 ns;
+                wait for 20 ns;
         end process;
         
         lbl_clear_shift : process
@@ -108,7 +108,7 @@ begin
                 wait for 50 ns;
                 clear_shift_ready <= '1';
                 wait until (clear_shift_start = '0');
-                wait for 10 ns;
+                wait for 20 ns;
         end process;
         
         
@@ -119,7 +119,7 @@ begin
                 wait for 50 ns;
                 draw_erase_ready <= '1';
                 wait until (draw_erase_start = '0');
-                wait for 10 ns;
+                wait for 20 ns;
         end process;
         
         lbl_score : process
@@ -129,7 +129,7 @@ begin
                 wait for 50 ns;
                 draw_score_ready <= '1';
                 wait until (draw_erase_draw = '0');
-                wait for 10 ns;
+                wait for 20 ns;
         end process;
         
         lbl_tmr1 : process
@@ -139,7 +139,7 @@ begin
                 wait for 100 ns;
                 timer_1_done <= '1';                
                 wait until (timer_1_start = '0');
-                wait for 10 ns;        
+                wait for 20 ns;        
         end process;
         
         
@@ -172,5 +172,8 @@ begin
 	end process;
 
 end;
+
+
+
 
 
