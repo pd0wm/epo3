@@ -162,6 +162,9 @@ begin
 
 	stim_proc : process
 	begin
+		rst <= '1';
+		wait for 40 ns;
+		rst <= '0';
 		wait;
 	end process;
 
