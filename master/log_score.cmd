@@ -1,10 +1,9 @@
 set vdd = h*~
 set vss = l*~
-set clk = (h*85 l*85)*29\
-          h*~
-set rst = x*90\
-          h*90 l*~
-set increase = l*270\
+set clk = (h*82 l*82)*60\
+          h*82 l*~
+set rst = h*250 l*~
+set increase = l*250\
                h*900\
                l*100\
                h*100 l*~
@@ -13,7 +12,7 @@ option sigunit   = 1n
 option outacc    = 100p
 option level     = 3
 option initialize random = on
-option simperiod = 4930
+option simperiod = 9922
 
 print \
       clk,\

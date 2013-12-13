@@ -7,6 +7,8 @@ LIB_IEEE = /data/public/common/software/modeltech/10.1b/modeltech/linux/../ieee
 LIB_WORK = work
 
 # Define path to each design unit
+IEEE__std_logic_arith = $(LIB_IEEE)/std_logic_arith/_primary.dat
+IEEE__std_logic_unsigned = $(LIB_IEEE)/std_logic_unsigned/_primary.dat
 CELLSLIB__buf40 = $(LIB_CELLSLIB)/buf40/_primary.dat
 CELLSLIB__dfa11 = $(LIB_CELLSLIB)/dfa11/_primary.dat
 CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
@@ -248,9 +250,9 @@ WORK__dec8_dec8_behav_cfg = $(LIB_WORK)/dec8_dec8_behav_cfg/_primary.dat
 WORK__dec8__synthesised = $(LIB_WORK)/dec8/synthesised.dat
 WORK__dec8__dec8_behav = $(LIB_WORK)/dec8/dec8_behav.dat
 WORK__dec8 = $(LIB_WORK)/dec8/_primary.dat
-WORK__debounce_tb_behaviour_cfg = $(LIB_WORK)/debounce_tb_behaviour_cfg/_primary.dat
-WORK__debounce_tb__behaviour = $(LIB_WORK)/debounce_tb/behaviour.dat
-WORK__debounce_tb = $(LIB_WORK)/debounce_tb/_primary.dat
+WORK__debounce_testb_behaviour_cfg = $(LIB_WORK)/debounce_testb_behaviour_cfg/_primary.dat
+WORK__debounce_testb__behaviour = $(LIB_WORK)/debounce_testb/behaviour.dat
+WORK__debounce_testb = $(LIB_WORK)/debounce_testb/_primary.dat
 WORK__debounce_behaviour_cfg = $(LIB_WORK)/debounce_behaviour_cfg/_primary.dat
 WORK__debounce__behaviour = $(LIB_WORK)/debounce/behaviour.dat
 WORK__debounce__synthesised = $(LIB_WORK)/debounce/synthesised.dat
@@ -259,8 +261,8 @@ WORK__de_piece_testbench_behaviour_cfg = $(LIB_WORK)/de_piece_testbench_behaviou
 WORK__de_piece_testbench__behaviour = $(LIB_WORK)/de_piece_testbench/behaviour.dat
 WORK__de_piece_testbench = $(LIB_WORK)/de_piece_testbench/_primary.dat
 WORK__de_piece_behaviour_cfg = $(LIB_WORK)/de_piece_behaviour_cfg/_primary.dat
-WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
 WORK__de_piece__synthesised = $(LIB_WORK)/de_piece/synthesised.dat
+WORK__de_piece__behaviour = $(LIB_WORK)/de_piece/behaviour.dat
 WORK__de_piece = $(LIB_WORK)/de_piece/_primary.dat
 WORK__cs_tri8_cs_tri8_behav_cfg = $(LIB_WORK)/cs_tri8_cs_tri8_behav_cfg/_primary.dat
 WORK__cs_tri8__cs_tri8_behav = $(LIB_WORK)/cs_tri8/cs_tri8_behav.dat
@@ -313,16 +315,16 @@ WORK__controller_tb_behaviour_cfg = $(LIB_WORK)/controller_tb_behaviour_cfg/_pri
 WORK__controller_tb__behaviour = $(LIB_WORK)/controller_tb/behaviour.dat
 WORK__controller_tb = $(LIB_WORK)/controller_tb/_primary.dat
 WORK__controller_move_controller_move_arch_cfg = $(LIB_WORK)/controller_move_controller_move_arch_cfg/_primary.dat
-WORK__controller_move__controller_move_arch = $(LIB_WORK)/controller_move/controller_move_arch.dat
 WORK__controller_move__synthesised = $(LIB_WORK)/controller_move/synthesised.dat
+WORK__controller_move__controller_move_arch = $(LIB_WORK)/controller_move/controller_move_arch.dat
 WORK__controller_move = $(LIB_WORK)/controller_move/_primary.dat
 WORK__controller_controller_arch_cfg = $(LIB_WORK)/controller_controller_arch_cfg/_primary.dat
 WORK__controller_calc_controller_calc_arch_cfg = $(LIB_WORK)/controller_calc_controller_calc_arch_cfg/_primary.dat
 WORK__controller_calc__controller_calc_arch = $(LIB_WORK)/controller_calc/controller_calc_arch.dat
 WORK__controller_calc__synthesised = $(LIB_WORK)/controller_calc/synthesised.dat
 WORK__controller_calc = $(LIB_WORK)/controller_calc/_primary.dat
-WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller__synthesised = $(LIB_WORK)/controller/synthesised.dat
+WORK__controller__controller_arch = $(LIB_WORK)/controller/controller_arch.dat
 WORK__controller = $(LIB_WORK)/controller/_primary.dat
 WORK__checkmask_tb_check_mask_tb_behaviour_cfg = $(LIB_WORK)/checkmask_tb_check_mask_tb_behaviour_cfg/_primary.dat
 WORK__checkmask_tb__check_mask_tb_behaviour = $(LIB_WORK)/checkmask_tb/check_mask_tb_behaviour.dat
@@ -575,9 +577,9 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__dec8__synthesised) \
     $(WORK__dec8__dec8_behav) \
     $(WORK__dec8) \
-    $(WORK__debounce_tb_behaviour_cfg) \
-    $(WORK__debounce_tb__behaviour) \
-    $(WORK__debounce_tb) \
+    $(WORK__debounce_testb_behaviour_cfg) \
+    $(WORK__debounce_testb__behaviour) \
+    $(WORK__debounce_testb) \
     $(WORK__debounce_behaviour_cfg) \
     $(WORK__debounce__behaviour) \
     $(WORK__debounce__synthesised) \
@@ -586,8 +588,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__de_piece_testbench__behaviour) \
     $(WORK__de_piece_testbench) \
     $(WORK__de_piece_behaviour_cfg) \
-    $(WORK__de_piece__behaviour) \
     $(WORK__de_piece__synthesised) \
+    $(WORK__de_piece__behaviour) \
     $(WORK__de_piece) \
     $(WORK__cs_tri8_cs_tri8_behav_cfg) \
     $(WORK__cs_tri8__cs_tri8_behav) \
@@ -640,16 +642,16 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__controller_tb__behaviour) \
     $(WORK__controller_tb) \
     $(WORK__controller_move_controller_move_arch_cfg) \
-    $(WORK__controller_move__controller_move_arch) \
     $(WORK__controller_move__synthesised) \
+    $(WORK__controller_move__controller_move_arch) \
     $(WORK__controller_move) \
     $(WORK__controller_controller_arch_cfg) \
     $(WORK__controller_calc_controller_calc_arch_cfg) \
     $(WORK__controller_calc__controller_calc_arch) \
     $(WORK__controller_calc__synthesised) \
     $(WORK__controller_calc) \
-    $(WORK__controller__controller_arch) \
     $(WORK__controller__synthesised) \
+    $(WORK__controller__controller_arch) \
     $(WORK__controller) \
     $(WORK__checkmask_tb_check_mask_tb_behaviour_cfg) \
     $(WORK__checkmask_tb__check_mask_tb_behaviour) \
@@ -847,14 +849,6 @@ $(WORK__controller) : VHDL/controller.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller.vhd
 
-$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
-		$(WORK__controller) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_SYNTH.vhd
-
 $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 		$(WORK__controller) \
 		$(WORK__vga_params) \
@@ -863,6 +857,14 @@ $(WORK__controller__controller_arch) : VHDL/controller-controller_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller-controller_arch.vhd
+
+$(WORK__controller__synthesised) : VHDL/controller_SYNTH.vhd \
+		$(WORK__controller) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_SYNTH.vhd
 
 $(WORK__controller_calc) : VHDL/controller_calc.vhd \
 		$(STD__textio) \
@@ -917,14 +919,6 @@ $(WORK__controller_move) : VHDL/controller_move.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_move.vhd
 
-$(WORK__controller_move__synthesised) : VHDL/controller_move_SYNTH.vhd \
-		$(WORK__controller_move) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/controller_move_SYNTH.vhd
-
 $(WORK__controller_move__controller_move_arch) : VHDL/controller_move_arch.vhd \
 		$(WORK__controller_move) \
 		$(WORK__vga_params) \
@@ -933,6 +927,14 @@ $(WORK__controller_move__controller_move_arch) : VHDL/controller_move_arch.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/controller_move_arch.vhd
+
+$(WORK__controller_move__synthesised) : VHDL/controller_move_SYNTH.vhd \
+		$(WORK__controller_move) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/controller_move_SYNTH.vhd
 
 $(WORK__controller_move_controller_move_arch_cfg) : VHDL/controller_move_controller_move_arch_cfg.vhd \
 		$(WORK__vga_params) \
@@ -1338,6 +1340,14 @@ $(WORK__de_piece) : VHDL/de_piece.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/de_piece.vhd
 
+$(WORK__de_piece__behaviour) : VHDL/de_piece-behaviour.vhd \
+		$(WORK__de_piece) \
+		$(IEEE__numeric_std) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/de_piece-behaviour.vhd
+
 $(WORK__de_piece__synthesised) : VHDL/de_piece_SYNTH.vhd \
 		$(IEEE__numeric_std) \
 		$(WORK__de_piece) \
@@ -1346,14 +1356,6 @@ $(WORK__de_piece__synthesised) : VHDL/de_piece_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/de_piece_SYNTH.vhd
-
-$(WORK__de_piece__behaviour) : VHDL/de_piece-behaviour.vhd \
-		$(WORK__de_piece) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/de_piece-behaviour.vhd
 
 $(WORK__de_piece_behaviour_cfg) : VHDL/de_piece_behaviour_cfg.vhd \
 		$(WORK__de_piece__behaviour) \
@@ -1413,22 +1415,22 @@ $(WORK__debounce_behaviour_cfg) : VHDL/debounce_behaviour_cfg.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/debounce_behaviour_cfg.vhd
 
-$(WORK__debounce_tb) \
-$(WORK__debounce_tb__behaviour) : VHDL/debounce_tb.vhd \
+$(WORK__debounce_testb) \
+$(WORK__debounce_testb__behaviour) : VHDL/debounce_tb.vhd \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/debounce_tb.vhd
 
-$(WORK__debounce_tb_behaviour_cfg) : VHDL/debounce_tb_behaviour_cfg.vhd \
+$(WORK__debounce_testb_behaviour_cfg) : VHDL/debounce_testb_behaviour_cfg.vhd \
 		$(WORK__debounce) \
 		$(WORK__debounce_behaviour_cfg) \
-		$(WORK__debounce_tb__behaviour) \
+		$(WORK__debounce_testb__behaviour) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164) \
-		$(WORK__debounce_tb)
+		$(WORK__debounce_testb)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/debounce_tb_behaviour_cfg.vhd
+		 work -quiet -nologo VHDL/debounce_testb_behaviour_cfg.vhd
 
 $(WORK__dec8) : /home/epo3-user/Desktop/git/epo3/master/VHDL/dec8.vhd \
 		$(STD__textio) \
@@ -2068,6 +2070,9 @@ $(WORK__rom_tb) : VHDL/rom_tb.vhd \
 
 $(WORK__rom_tb__rom_tb_behaviour) : VHDL/rom_tb-rom_tb_behaviour.vhd \
 		$(WORK__rom_tb) \
+		$(IEEE__std_logic_unsigned) \
+		$(IEEE__std_logic_arith) \
+		$(IEEE__numeric_std) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
@@ -2076,6 +2081,9 @@ $(WORK__rom_tb__rom_tb_behaviour) : VHDL/rom_tb-rom_tb_behaviour.vhd \
 $(WORK__rom_tb_behaviour_cfg) : VHDL/rom_tb_behaviour_cfg.vhd \
 		$(WORK__rom) \
 		$(WORK__rom_behaviour_cfg) \
+		$(IEEE__std_logic_unsigned) \
+		$(IEEE__std_logic_arith) \
+		$(IEEE__numeric_std) \
 		$(WORK__rom_tb__rom_tb_behaviour) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164) \
