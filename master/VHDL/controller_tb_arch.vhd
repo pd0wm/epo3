@@ -136,7 +136,7 @@ begin
         begin
                 timer_1_done <= '0';
                 wait until (timer_1_start = '1');
-                wait for 1000 ns;
+                wait for 100 ns;
                 timer_1_done <= '1';                
                 wait until (timer_1_start = '0');
                 wait for 20 ns;        
