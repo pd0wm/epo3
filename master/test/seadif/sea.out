@@ -3,13 +3,18 @@ six
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
 ------ checking your circuit 'top_level' ------
------- circuit 'top_level' is still up-to-date ------
------- checking match with placement layout 'Tmptop_level9637' ------
------- reading nelsis layout-cell 'Tmptop_level9637' ------
------- writing nelsis 'Tmptop_level9637' as sdflay 'Tmp_Cell_(top_level(top_level(test)))' ------
+------ reading nelsis circuit-cell 'top_level' ------
+WARNING: Zero terminal net: 'vga_hsync_port' (cell 'top_level')
+WARNING: Zero terminal net: 'vga_vsync_port' (cell 'top_level')
+------ reading nelsis layout-cell 'npg' ------
+------ checking match with placement layout 'Tmptop_level3744' ------
+------ reading nelsis layout-cell 'Tmptop_level3744' ------
+------ writing nelsis 'Tmptop_level3744' as sdflay 'Tmp_Cell_(top_level(top_level(test)))' ------
+------ writing nelsis 'npg' as sdflay 'npg(npg(npg(test)))' ------
+------ writing nelsis 'top_level' as sdfcir 'top_level(top_level(test)) ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f top_level -c top_level -o Tmp_Cell_ -d Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmptop_level9637' ------
-calling program: nelsea -rLH -f top_level -c top_level -l Tmp_Cell_ Tmptop_level9637 
+WARNING: routing is not 100% successful
+------ converting result back into nelsis as cell 'Tmptop_level3744' ------
+calling program: nelsea -rLH -f top_level -c top_level -l Tmp_Cell_ Tmptop_level3744 
 ------ sea: task completed ------
