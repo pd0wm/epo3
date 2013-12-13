@@ -162,9 +162,12 @@ begin
 
 	stim_proc : process
 	begin
+		inputs <= "000001";
 		rst <= '1';
 		wait for 40 ns;
 		rst <= '0';
+		wait for 40 ns;
+		inputs <= "000000";
 		wait;
 	end process;
 
