@@ -29,15 +29,45 @@ END component de_piece;
 	signal mask, addr: std_logic_vector(7 downto 0);
 	signal mask_select: std_logic_vector (1 downto 0);
 	begin
-	  clk <= '1' after 00 ns,
-	  '0' after 50 ns when clk /= '0' else '1' after 50 ns;
-	  rst <= '1' after 00 ns, '0' after 2000 ns;
-	  start <= '0' after 00 ns, '1' after 3000 ns, '0' after 7000 ns, '1' after 8000 ns, '0' after 12000 ns, '1' after 14000 ns, '0' after 17000 ns;
-	  draw_erase <= '0' after 00 ns, '1' after 3000 ns, '0' after 8000 ns, '1' after 14000 ns;
-	  mask <= "11101111" after 00 ns, "10110001" after 5000 ns, "11110000" after 11000 ns;
-	lut_ready <= '0' after 0 ns, '1' after 4000 ns, '0' after 4200 ns, '1' after 4600 ns, '0' after 4800 ns,  '1' after 5200 ns, '0' after 5400 ns, '1' after 5800 ns, '0' after 6000 ns,
-	'1' after 9000 ns, '0' after 9200 ns, '1' after 9600 ns, '0' after 9800 ns,  '1' after 10200 ns, '0' after 10400 ns, '1' after 10800 ns, '0' after 11000 ns,
-	'1' after 15000 ns, '0' after 15200 ns, '1' after 15600 ns, '0' after 15800 ns,  '1' after 16200 ns, '0' after 16400 ns, '1' after 16800 ns, '0' after 17000 ns;
+	clock : process
+	begin
+		clk <= '1';
+		wait for 82 ns;
+		clk <= '0';
+		wait for 82 ns;
+	end process;
+	stimulus : process
+	begin
+	  rst <= '1';
+	  mask <= "11101111";
+	  draw_erase <= '0';
+	  start <= '0';
+	  lut_ready <= '0';
+	  wait for 287 ns;
+	  rst <= '0';
+	  wait for 164 ns;
+	  start <= '1';
+	  draw_erase <= '1';
+	  wait for 492 ns;
+	  lut_ready <= '1';
+	  wait for 328 ns;
+	  lut_ready <= '0';
+	  wait for 492 ns;
+	  lut_ready <= '1';
+	  wait for 328 ns;
+	  lut_ready <= '0';
+	  wait for 492 ns;
+	  lut_ready <= '1';
+	  wait for 328 ns;
+	  lut_ready <= '0';
+	  wait for 492 ns;
+	  lut_ready <= '1';
+	  wait for 328 ns;
+	  lut_ready <= '0';
+	  wait for 492 ns;
+	  start <= '0';
+	  wait;
+	  end process;
 	  
 dut: de_piece port map(
   clk=>clk,
