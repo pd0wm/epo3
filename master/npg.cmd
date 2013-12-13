@@ -1,26 +1,18 @@
 set vdd = h*~
 set vss = l*~
-set clk = (h*1000 l*1000)*250\
+set clk = (h*82 l*82)*128\
           h*~
-set rst = h*40000 l*~
-set button_seed = l*30000\
-                  h*5000\
-                  l*55000\
-                  h*70000\
-                  l*190000\
-                  h*130000 l*~
-set new_number = l*5000\
-                 h*10000\
-                 l*15000\
-                 h*20000\
-                 l*150000\
-                 h*10000 l*~
+set rst = h*287 l*~
+set button_seed = l*1927\
+                  h*1804 l*~
+set new_number = l*5371\
+                 h*164 l*~
 
 option sigunit   = 1n
 option outacc    = 100p
 option level     = 3
 option initialize random = on
-option simperiod = 500000
+option simperiod = 20992
 
 print \
       clk,\
