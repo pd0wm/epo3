@@ -1,226 +1,113 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(draw_score(draw_score(test)))' ------
+------ reading placement 'Tmp_Cell_(check_mask(check_mask(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Fri Dec 13 11:52:56 2013
- 68 nets have to be routed.
+------ routing started Fri Dec 13 12:14:56 2013
+ 92 nets have to be routed.
 Routing net 'n53' (2/2): . OK!
-Routing net 'n71' (2/2): . OK!
 Routing net 'n79' (2/2): . OK!
-Routing net 'n48' (2/2): . OK!
+Routing net 'mask_7_0_7' (2/2): .b OK!
+Routing net 'clk' (7/7): ......b OK!
+Routing net 'addr_7_0_2' (2/2): .b OK!
+Routing net 'addr_7_0_4' (2/2): .b OK!
+Routing net 'addr_7_0_5' (2/2): .b OK!
+Routing net 'addr_7_0_7' (2/2): .b OK!
+Routing net 'addr_7_0_0' (2/2): .b OK!
+Routing net 'addr_7_0_1' (2/2): .b OK!
+Routing net 'addr_7_0_3' (2/2): .b OK!
+Routing net 'addr_7_0_6' (2/2): .b OK!
+Routing net 'mask_select_1_0_0' (2/2): .b OK!
+Routing net 'n45' (2/2): . OK!
+Routing net 'mask_select_1_0_1' (2/2): .b OK!
+Routing net 'write' (2/2): .b OK!
+Routing net 'ready' (2/2): .b OK!
+Routing net 'lut_error' (2/2): .b OK!
+Routing net 'mask_7_0_0' (2/2): .b OK!
+Routing net 'mask_7_0_1' (2/2): .b OK!
+Routing net 'mask_7_0_2' (2/2): .b OK!
+Routing net 'mask_7_0_3' (2/2): .b OK!
+Routing net 'mask_7_0_4' (2/2): .b OK!
+Routing net 'mask_7_0_5' (2/2): .b OK!
+Routing net 'mask_7_0_6' (2/2): .b OK!
+Routing net 'lut_start' (2/2): .b OK!
+Routing net 'n83' (2/2): . OK!
 Routing net 'n64' (2/2): . OK!
-Routing net 'ds_input_7_0_7' (2/2): .b OK!
-Routing net 'ds_addr_7_0_0' (2/2): .b OK!
-Routing net 'ds_addr_7_0_1' (2/2): .b OK!
-Routing net 'ds_addr_7_0_2' (2/2): .b OK!
-Routing net 'ds_addr_7_0_3' (2/2): .b OK!
-Routing net 'ds_addr_7_0_4' (2/2): .b OK!
-Routing net 'ds_addr_7_0_5' (2/2): .b OK!
-Routing net 'ds_addr_7_0_6' (2/2): .b OK!
-Routing net 'ds_addr_7_0_7' (2/2): .b OK!
-Routing net 'ds_data_out' (2/2): .b OK!
-Routing net 'ds_write' (2/2): .b OK!
-Routing net 'ds_input_7_0_1' (2/2): .b OK!
-Routing net 'ds_input_7_0_3' (2/2): .b OK!
-Routing net 'ds_input_7_0_2' (2/2): .b OK!
-Routing net 'ds_input_7_0_0' (2/2): .b OK!
-Routing net 'ds_input_7_0_5' (2/2): .b OK!
-Routing net 'ds_input_7_0_4' (2/2): .b OK!
-Routing net 'ds_input_7_0_6' (2/2): .b OK!
-Routing net 'n62' (2/2): . OK!
-Routing net 'next_i_1_port' (2/2): . OK!
-Routing net 'n69' (2/2): . OK!
-Routing net 'n61' (2/2): . OK!
-Routing net 'n66' (2/2): . OK!
-Routing net 'n73' (2/2): . OK!
-Routing net 'n70' (2/2): . OK!
-Routing net 'n77' (2/2): . OK!
-Routing net 'n68' (2/2): . OK!
-Routing net 'ds_draw' (3/3): ..b OK!
-Routing net 'n52' (3/3): .. OK!
-Routing net 'ds_ready' (3/3): ..b OK!
-Routing net 'n60' (2/2): . OK!
-Routing net 'n65' (2/2): . OK!
-Routing net 'n58' (2/2): . OK!
-Routing net 'n38' (2/2): . OK!
-Routing net 'n50' (4/4): ... OK!
-Routing net 'n59' (2/2): . OK!
-Routing net 'n56' (4/4): ... OK!
-Routing net 'n74' (2/2): . OK!
-Routing net 'n76' (2/2): . OK!
-Routing net 'n78' (3/3): .. OK!
+Routing net 'n81' (2/2): . OK!
 Routing net 'n54' (2/2): . OK!
-Routing net 'n75' (2/2): . OK!
-Routing net 'n67' (2/2): . OK!
-Routing net 'n51' (4/4): ... OK!
+Routing net 'n88' (2/2): . OK!
+Routing net 'n55' (2/2): . OK!
+Routing net 'n52' (2/2): . OK!
 Routing net 'n49' (2/2): . OK!
-Routing net 'new_state_0_port' (2/2): . OK!
-Routing net 'ds_rst' (6/6): .....b OK!
-Routing net 'ds_clk' (6/6): .....b OK!
-Routing net 'state_1_port' (3/3): .. OK!
-Routing net 'n55' (4/4): ... OK!
-Routing net 'new_state_1_port' (2/2): . OK!
-Routing net 'n63' (3/3): .. OK!
-Routing net 'n57' (2/2): . OK!
-Routing net 'next_i_2_port' (2/2): x FAILED
-Routing net 'i_2_port' (4/4): ... OK!
-Routing net 'next_i_0_port' (4/4): ... OK!
-Routing net 'n72' (4/4): ... OK!
-Routing net 'state_0_port' (13/13): ............ OK!
-Routing net 'n36' (6/6): ..... OK!
-Routing net 'i_0_port' (6/6): ..... OK!
-Routing net 'i_1_port' (8/8): ....... OK!
-Routing net 'n80' (59/59): ..........................................................b OK!
-Routing net 'n81' (58/58): .........................................................b OK!
------ Don't worry, I'm trying again -----
-Routing net 'n53' (2/2): . OK!
-Routing net 'next_i_2_port' (2/2): . OK!
-Routing net 'n71' (2/2): . OK!
-Routing net 'n64' (2/2): . OK!
-Routing net 'n48' (2/2): . OK!
-Routing net 'n79' (2/2): . OK!
-Routing net 'ds_input_7_0_7' (2/2): .b OK!
-Routing net 'ds_input_7_0_6' (2/2): .b OK!
-Routing net 'ds_input_7_0_4' (2/2): .b OK!
-Routing net 'ds_input_7_0_5' (2/2): .b OK!
-Routing net 'ds_input_7_0_0' (2/2): .b OK!
-Routing net 'ds_input_7_0_2' (2/2): .b OK!
-Routing net 'ds_input_7_0_3' (2/2): .b OK!
-Routing net 'ds_input_7_0_1' (2/2): .b OK!
-Routing net 'ds_write' (2/2): .b OK!
-Routing net 'ds_data_out' (2/2): .b OK!
-Routing net 'ds_addr_7_0_7' (2/2): .b OK!
-Routing net 'ds_addr_7_0_6' (2/2): .b OK!
-Routing net 'ds_addr_7_0_5' (2/2): .b OK!
-Routing net 'ds_addr_7_0_4' (2/2): .b OK!
-Routing net 'ds_addr_7_0_3' (2/2): .b OK!
-Routing net 'ds_addr_7_0_2' (2/2): .b OK!
-Routing net 'ds_addr_7_0_1' (2/2): .b OK!
-Routing net 'ds_addr_7_0_0' (2/2): .b OK!
+Routing net 'n47' (2/2): . OK!
+Routing net 'n90' (2/2): . OK!
+Routing net 'n51' (2/2): . OK!
+Routing net 'n50' (2/2): . OK!
+Routing net 'n92' (2/2): . OK!
+Routing net 'n95' (2/2): . OK!
+Routing net 'start' (3/3): ..b OK!
 Routing net 'n62' (2/2): . OK!
-Routing net 'next_i_1_port' (2/2): . OK!
-Routing net 'n69' (2/2): . OK!
-Routing net 'n61' (2/2): . OK!
-Routing net 'n73' (2/2): . OK!
-Routing net 'n66' (2/2): . OK!
-Routing net 'n70' (2/2): . OK!
-Routing net 'n77' (2/2): . OK!
-Routing net 'n68' (2/2): . OK!
-Routing net 'ds_draw' (3/3): ..b OK!
-Routing net 'n52' (3/3): .. OK!
-Routing net 'ds_ready' (3/3): ..b OK!
-Routing net 'n60' (2/2): . OK!
-Routing net 'n65' (2/2): . OK!
-Routing net 'n58' (2/2): . OK!
-Routing net 'n38' (2/2): . OK!
-Routing net 'n59' (2/2): . OK!
-Routing net 'n50' (4/4): ... OK!
-Routing net 'n56' (4/4): ... OK!
-Routing net 'n74' (2/2): . OK!
 Routing net 'n76' (2/2): . OK!
-Routing net 'n78' (3/3): .. OK!
-Routing net 'n75' (2/2): . OK!
-Routing net 'n54' (2/2): . OK!
-Routing net 'n67' (2/2): . OK!
-Routing net 'n51' (4/4): ... OK!
-Routing net 'n49' (2/2): . OK!
-Routing net 'new_state_0_port' (2/2): . OK!
-Routing net 'ds_rst' (6/6): .....b OK!
-Routing net 'ds_clk' (6/6): .....b OK!
-Routing net 'n55' (4/4): ... OK!
-Routing net 'state_1_port' (3/3): .. OK!
-Routing net 'new_state_1_port' (2/2): . OK!
-Routing net 'n63' (3/3): .. OK!
-Routing net 'n57' (2/2): . OK!
-Routing net 'i_2_port' (4/4): ... OK!
-Routing net 'next_i_0_port' (4/4): x.. FAILED
-Routing net 'n72' (4/4): ... OK!
-Routing net 'state_0_port' (13/13): ............ OK!
-Routing net 'n36' (6/6): ..... OK!
-Routing net 'i_0_port' (6/6): ..... OK!
-Routing net 'i_1_port' (8/8): ....... OK!
-Routing net 'n80' (59/59): ..........................................................b OK!
-Routing net 'n81' (58/58): .........................................................b OK!
------ Don't worry, I'm trying again -----
-Routing net 'n53' (2/2): . OK!
-Routing net 'next_i_2_port' (2/2): . OK!
-Routing net 'next_i_0_port' (4/4): ... OK!
-Routing net 'n71' (2/2): . OK!
-Routing net 'n79' (2/2): . OK!
-Routing net 'n48' (2/2): . OK!
-Routing net 'n64' (2/2): . OK!
-Routing net 'ds_input_7_0_7' (2/2): .b OK!
-Routing net 'ds_addr_7_0_0' (2/2): .b OK!
-Routing net 'ds_addr_7_0_1' (2/2): .b OK!
-Routing net 'ds_addr_7_0_2' (2/2): .b OK!
-Routing net 'ds_addr_7_0_3' (2/2): .b OK!
-Routing net 'ds_addr_7_0_4' (2/2): .b OK!
-Routing net 'ds_addr_7_0_5' (2/2): .b OK!
-Routing net 'ds_addr_7_0_6' (2/2): .b OK!
-Routing net 'ds_addr_7_0_7' (2/2): .b OK!
-Routing net 'ds_data_out' (2/2): .b OK!
-Routing net 'ds_write' (2/2): .b OK!
-Routing net 'ds_input_7_0_1' (2/2): .b OK!
-Routing net 'ds_input_7_0_3' (2/2): .b OK!
-Routing net 'ds_input_7_0_2' (2/2): .b OK!
-Routing net 'ds_input_7_0_0' (2/2): .b OK!
-Routing net 'ds_input_7_0_5' (2/2): .b OK!
-Routing net 'ds_input_7_0_4' (2/2): .b OK!
-Routing net 'ds_input_7_0_6' (2/2): .b OK!
-Routing net 'n62' (2/2): . OK!
-Routing net 'next_i_1_port' (2/2): . OK!
-Routing net 'n69' (2/2): . OK!
-Routing net 'n61' (2/2): . OK!
-Routing net 'n66' (2/2): . OK!
-Routing net 'n73' (2/2): . OK!
-Routing net 'n70' (2/2): . OK!
-Routing net 'n77' (2/2): . OK!
-Routing net 'n68' (2/2): . OK!
-Routing net 'ds_draw' (3/3): ..b OK!
-Routing net 'n52' (3/3): .. OK!
-Routing net 'ds_ready' (3/3): ..b OK!
-Routing net 'n60' (2/2): . OK!
+Routing net 'n86' (2/2): . OK!
+Routing net 'n94' (2/2): . OK!
+Routing net 'n69' (3/3): .. OK!
+Routing net 'lut_ready' (3/3): ..b OK!
 Routing net 'n65' (2/2): . OK!
-Routing net 'n58' (2/2): . OK!
-Routing net 'n38' (2/2): . OK!
-Routing net 'n50' (4/4): ... OK!
-Routing net 'n59' (2/2): . OK!
-Routing net 'n56' (4/4): ... OK!
+Routing net 'n93' (4/4): ... OK!
+Routing net 'n87' (2/2): . OK!
+Routing net 'next_state_1_port' (2/2): . OK!
+Routing net 'n59' (4/4): ... OK!
 Routing net 'n74' (2/2): . OK!
-Routing net 'n76' (2/2): . OK!
-Routing net 'n78' (3/3): .. OK!
-Routing net 'n54' (2/2): . OK!
-Routing net 'n75' (2/2): . OK!
-Routing net 'n67' (2/2): . OK!
-Routing net 'n51' (4/4): ... OK!
-Routing net 'n49' (2/2): . OK!
-Routing net 'new_state_0_port' (2/2): . OK!
-Routing net 'ds_rst' (6/6): .....b OK!
-Routing net 'ds_clk' (6/6): .....b OK!
-Routing net 'state_1_port' (3/3): .. OK!
-Routing net 'n55' (4/4): ... OK!
-Routing net 'new_state_1_port' (2/2): . OK!
-Routing net 'n63' (3/3): .. OK!
+Routing net 'next_state_0_port' (2/2): . OK!
+Routing net 'n75' (3/3): .. OK!
+Routing net 'n63' (2/2): . OK!
+Routing net 'n72' (3/3): .. OK!
+Routing net 'n82' (2/2): . OK!
+Routing net 'n96' (3/3): .. OK!
+Routing net 'n46' (4/4): ... OK!
+Routing net 'n60' (2/2): . OK!
 Routing net 'n57' (2/2): . OK!
-Routing net 'i_2_port' (4/4): ... OK!
-Routing net 'n72' (4/4): ... OK!
-Routing net 'state_0_port' (13/13): ............ OK!
-Routing net 'n36' (6/6): ..... OK!
-Routing net 'i_0_port' (6/6): ..... OK!
-Routing net 'i_1_port' (8/8): ....... OK!
-Routing net 'n80' (59/59): ..........................................................b OK!
-Routing net 'n81' (58/58): .........................................................b OK!
+Routing net 'pixel_1_port' (6/6): ..... OK!
+Routing net 'n67' (2/2): . OK!
+Routing net 'n97' (4/4): ... OK!
+Routing net 'n77' (2/2): . OK!
+Routing net 'empty' (3/3): ..b OK!
+Routing net 'n70' (3/3): .. OK!
+Routing net 'n91' (3/3): .. OK!
+Routing net 'n58' (2/2): . OK!
+Routing net 'n56' (2/2): . OK!
+Routing net 'n68' (3/3): .. OK!
+Routing net 'n89' (2/2): . OK!
+Routing net 'n85' (5/5): .... OK!
+Routing net 'n66' (2/2): . OK!
+Routing net 'n73' (4/4): ... OK!
+Routing net 'n80' (3/3): .. OK!
+Routing net 'n44' (5/5): .... OK!
+Routing net 'state_1_port' (6/6): ..... OK!
+Routing net 'n78' (4/4): ... OK!
+Routing net 'state_2_port' (4/4): ... OK!
+Routing net 'rst' (5/5): ....b OK!
+Routing net 'pixel_0_port' (3/3): .. OK!
+Routing net 'state_0_port' (4/4): ... OK!
+Routing net 'n84' (7/7): ...... OK!
+Routing net 'n71' (4/4): ... OK!
+Routing net 'data_in' (5/5): ....b OK!
+Routing net 'next_state_2_port' (2/2): . OK!
+Routing net 'n61' (5/5): .... OK!
+Routing net 'n48' (9/9): ........ OK!
+Routing net 'n1' (78/78): .............................................................................b OK!
+Routing net 'vss' :  (Power special)
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 68 (100% completion)
-Total length of routed wires:         4919 grids = 43.287 mm
-No. of transistors (total / used):    900/576 = 64.00 %
-CPU-time consumption:                 0.09 sec.
-Elapsed time during routing:          0.10 sec. (100.00 % of cpu)
+Total number of nets:                 92 (100% completion)
+Total length of routed wires:         5578 grids = 49.086 mm
+No. of transistors (total / used):    1044/702 = 67.24 %
+No. of poly feeds used by router:     2
+CPU-time consumption:                 0.04 sec.
+Elapsed time during routing:          0.03 sec. (133.33 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(draw_score(draw_score(test)))' ------
------- Trout: task completed on Fri Dec 13 11:52:56 2013
+------ Writing 'Tmp_Cell_(check_mask(check_mask(test)))' ------
+------ Trout: task completed on Fri Dec 13 12:14:56 2013
  terminate

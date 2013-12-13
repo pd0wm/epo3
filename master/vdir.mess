@@ -1,15 +1,15 @@
 Library vendor : Model Technology
 Maximum unnamed designs : 3
 OPTIMIZED DESIGN _opt
-    Version string: fUeFOH9o]fV_4bk4^i9j61
-    Top-level model: work log_score_tb_behaviour_cfg 1
+    Version string: JQe1L<fOlbzQ_aZ=?JaZ^3
+    Top-level model: work controller_tb_behaviour_cfg 1
     Compile options: -quiet -auto_acc_if_foreign -work work
     Short name: @_opt
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: master
 OPTIMIZED DESIGN _opt1
-    Version string: ES]3=b=C:JaW8YT_KfJ]h2
-    Top-level model: work draw_score_tb_behaviour_cfg 1
+    Version string: YJ^5Y6Ql=P4;Na1HH6mKL3
+    Top-level model: work de_piece_testbench_behaviour_cfg 1
     Compile options: -quiet -auto_acc_if_foreign -work work
     Short name: @_opt1
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
@@ -278,22 +278,6 @@ ENTITY check_mask
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 21:43:25 2013
-    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/check_mask_SYNTH.vhd
-    Source file: VHDL/check_mask_SYNTH.vhd
-    Start location: VHDL/check_mask_SYNTH.vhd:7
-    Version string: 8i]NKR6bj@T76^XbeS1j40
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
   ARCHITECTURE BODY check_mask_behaviour
     Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
@@ -309,6 +293,22 @@ ENTITY check_mask
     Compile defaults: Explicit=1
     Source directory: /master
     Source modified time: Wed Dec 11 21:28:54 2013
+    Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 12 21:43:25 2013
+    Depends on: E work check_mask :3GJa9`ziGn`3kZT:^ZFA3
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/check_mask_SYNTH.vhd
+    Source file: VHDL/check_mask_SYNTH.vhd
+    Start location: VHDL/check_mask_SYNTH.vhd:7
+    Version string: 8i]NKR6bj@T76^XbeS1j40
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
     Debug Symbol file exists
 VHDL CONFIGURATION check_mask_check_mask_behaviour_cfg
     Configuration for architecture: check_mask_behaviour
@@ -593,14 +593,14 @@ ENTITY controller_tb
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY behaviour
-    Source modified time: Fri Dec 13 11:08:58 2013
+    Source modified time: Fri Dec 13 11:48:34 2013
     Depends on: E work controller_tb ab591K;5n32gi;zbb@6d<2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     HDL source file: VHDL/controller_tb_arch.vhd
     Source file: VHDL/controller_tb_arch.vhd
     Start location: VHDL/controller_tb_arch.vhd:4
-    Version string: HQ[91QAIA=6iLJCaYdIWF2
+    Version string: MnzVQAB`;ne<VjY4j@F?N0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
@@ -612,7 +612,7 @@ VHDL CONFIGURATION controller_tb_behaviour_cfg
     Configuration for entity: controller_tb
     Depends on: E work controller a;:U?N6Jl9P;nLcLe3DZP3
     Depends on: C work controller_controller_arch_cfg cP9aDj[eSB7OHIERa?P`<3
-    Depends on: A work controller_tb behaviour HQ[91QAIA=6iLJCaYdIWF2
+    Depends on: A work controller_tb behaviour MnzVQAB`;ne<VjY4j@F?N0
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work controller_tb ab591K;5n32gi;zbb@6d<2
@@ -1423,7 +1423,7 @@ ENTITY de_piece
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY synthesised
-    Source modified time: Fri Dec 13 11:18:16 2013
+    Source modified time: Fri Dec 13 12:06:39 2013
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
     Depends on: E work de_piece Tk0C<4BE0^V=e^=HEz07a1
     Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
@@ -1432,7 +1432,7 @@ ENTITY de_piece
     HDL source file: VHDL/de_piece_SYNTH.vhd
     Source file: VHDL/de_piece_SYNTH.vhd
     Start location: VHDL/de_piece_SYNTH.vhd:7
-    Version string: RPZ0oJbP6^LWPa7DJcI6Z0
+    Version string: h4HSK1ln^?ClY6SON0Obz3
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -2002 -lower -explicit -work work -quiet -nologo
@@ -1468,10 +1468,10 @@ VHDL CONFIGURATION de_piece_behaviour_cfg
     HDL source file: VHDL/de_piece_behaviour_cfg.vhd
     Source file: VHDL/de_piece_behaviour_cfg.vhd
     Start location: VHDL/de_piece_behaviour_cfg.vhd:1
-    Version string: kCRQdnJfQ[z6=241b5A8O1
+    Version string: :5HMMfQO[OXTPUdJKMPkF2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY de_piece_testbench
     Source modified time: Fri Dec 13 10:24:23 2013
@@ -1507,7 +1507,7 @@ VHDL CONFIGURATION de_piece_testbench_behaviour_cfg
     Configuration for entity: de_piece_testbench
     Depends on: E work de_piece Tk0C<4BE0^V=e^=HEz07a1
     Depends on: P ieee numeric_std O3PF8EB`?j9=z7KT`fn941
-    Depends on: C work de_piece_behaviour_cfg kCRQdnJfQ[z6=241b5A8O1
+    Depends on: C work de_piece_behaviour_cfg :5HMMfQO[OXTPUdJKMPkF2
     Depends on: A work de_piece_testbench behaviour MV6j<S]7R@_:UDH2LWFGn3
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
@@ -1517,10 +1517,10 @@ VHDL CONFIGURATION de_piece_testbench_behaviour_cfg
     HDL source file: VHDL/de_piece_testbench_behaviour_cfg.vhd
     Source file: VHDL/de_piece_testbench_behaviour_cfg.vhd
     Start location: VHDL/de_piece_testbench_behaviour_cfg.vhd:1
-    Version string: FL@OY]za?`zb1M>Kc3nU12
+    Version string: ?UYRRkhe^nWk@_N:H8IYP0
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
 ENTITY debounce
     Source modified time: Thu Dec 12 14:30:50 2013
@@ -1904,6 +1904,22 @@ ENTITY draw_score
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Fri Dec 13 11:49:14 2013
+    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    HDL source file: VHDL/draw_score_SYNTH.vhd
+    Source file: VHDL/draw_score_SYNTH.vhd
+    Start location: VHDL/draw_score_SYNTH.vhd:7
+    Version string: Dc0cLA>PNdmOHUzCN:g9d3
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Source directory: /master
+    Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Source modified time: Fri Dec 13 11:48:34 2013
     Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
@@ -1914,22 +1930,6 @@ ENTITY draw_score
     Source file: VHDL/draw_score-behaviour.vhd
     Start location: VHDL/draw_score-behaviour.vhd:5
     Version string: 4PGdk6_DN^aK^_9gih36=2
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Source modified time: Thu Dec 12 16:43:11 2013
-    Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/draw_score_SYNTH.vhd
-    Source file: VHDL/draw_score_SYNTH.vhd
-    Start location: VHDL/draw_score_SYNTH.vhd:7
-    Version string: @F08K8oVz4?Gkcz]cKz5<1
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
     Compile options: -lower -explicit -work work -quiet -nologo
@@ -1988,7 +1988,7 @@ VHDL CONFIGURATION draw_score_tb_behaviour_cfg
     Configuration for entity: draw_score_tb
     Depends on: E work draw_score GmESYGPn6_B2d7k^HmE`e1
     Depends on: C work draw_score_behaviour_cfg 0eV9YUH<8BiHc;@D6@KLh0
-    Depends on: A work draw_score_tb behaviour oEZ;^3oB9:mY;2VIX<QL=3
+    Depends on: A work draw_score_tb behaviour 3UR3>>_@n@E`]0M:bghzO0
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Depends on: E work draw_score_tb R3AkJk85j`cimd:nD1Cma3
@@ -3707,7 +3707,7 @@ VHDL CONFIGURATION top_level_structural_cfg
     Depends on: C work controller_controller_arch_cfg cP9aDj[eSB7OHIERa?P`<3
     Depends on: C work rom_behaviour_cfg D3TW4]gHD^WZBj;R_MUb13
     Depends on: C work piece_lut_piece_lut_behaviour_cfg jSGE[1b_OU4l^R_AeUN]70
-    Depends on: C work de_piece_behaviour_cfg kCRQdnJfQ[z6=241b5A8O1
+    Depends on: C work de_piece_behaviour_cfg :5HMMfQO[OXTPUdJKMPkF2
     Depends on: C work check_mask_check_mask_behaviour_cfg ]0A?l:Wm:T0X^V3mK@d8[1
     Depends on: C work timer_timer_behav_cfg _k91g:6[]3QX33K7HieD91
     Depends on: P work vga_params LheEVmk[SYoXKMYC2a5SM1

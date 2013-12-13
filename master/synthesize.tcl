@@ -1,5 +1,5 @@
 #*********************************************************
-#  synthesize script for cell: draw_score                 *
+#  synthesize script for cell: check_mask                 *
 #*********************************************************
 set hdlin_vhdl_93 false
 set hdlin_ff_always_async_set_reset true
@@ -15,7 +15,7 @@ define_design_lib CELLSLIB -path /data/public/common/software/opprog/synth_libs/
 read_file -format vhdl -work MY_LIB VHDL/params.vhd
 read_file -format vhdl -work MY_LIB VHDL/cs_shift_statetype.vhd
 read_file -format vhdl -work MY_LIB VHDL/cs_shift_statetype.vhd
-read_file -format vhdl -work MY_LIB {VHDL/draw_score.vhd VHDL/draw_score-behaviour.vhd}
+read_file -format vhdl -work MY_LIB {VHDL/CheckMask.vhd VHDL/check_mask-behaviour.vhd}
 set_dont_touch {g_analib8_00/*}
 # set_max_fanout 1.8 all_inputs() 
 # set_max_area 1000 
@@ -24,8 +24,8 @@ compile
 ungroup -all -flat
 report_area
 report_fsm
-write_file -f ddc draw_score -output ./ADB/draw_score.ddc
-write_file -f vhdl draw_score -output ./VHDL/draw_score_SYNTH.vhd
+write_file -f ddc check_mask -output ./ADB/check_mask.ddc
+write_file -f vhdl check_mask -output ./VHDL/check_mask_SYNTH.vhd
 quit
 
 
