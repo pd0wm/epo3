@@ -1,0 +1,27 @@
+           0 
+clk
+mask_7_0_7
+mask_7_0_6
+mask_7_0_5
+mask_7_0_4
+mask_7_0_3
+mask_7_0_2
+mask_7_0_1
+mask_7_0_0
+draw_erase
+ready
+start
+mask_select_1_0_1
+mask_select_1_0_0
+lut_start
+lut_ready
+write
+addr_7_0_7
+addr_7_0_6
+addr_7_0_5
+addr_7_0_4
+addr_7_0_3
+addr_7_0_2
+addr_7_0_1
+addr_7_0_0
+data
