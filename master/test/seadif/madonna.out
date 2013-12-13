@@ -1,0 +1,78 @@
+
+Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
+
+reading circuit "timer(timer(test))" ...done
+
+Kissing madonna hello...
+
+Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
+
+
+------ net distribution (total #nets = 48):
+        0..1     2     3     4     5     6     7 8..10 11..20  >20
+
+           0    27    10     3     4     2     0     0     0     2
+
+------ partitioning 36 cells into (hor x vert) = (5 x 2) partitions
+
+------ requested grid points = (75, 112)
+
+------ cost@start = 318, cost@end = 204, moves = 47
+------ cost@start = 204, cost@end = 200, moves = 26
+------ cost@start = 200, cost@end = 187, moves = 24
+------ cost@start = 187, cost@end = 173, moves = 21
+------ cost@start = 173, cost@end = 173, moves = 18
+------ 26 nets have to be routed on a 9 x 3 global grid
+     + routing net clk (2 terminals):  weight = 202
+     + routing net n8 (3 terminals):  weight = 404
+     + routing net N17 (2 terminals):  weight = 200
+     + routing net cnt_val_4_port (2 terminals):  weight = 204
+     + routing net cnt_val_3_port (2 terminals):  weight = 204
+     + routing net cnt_val_2_port (2 terminals):  weight = 204
+     + routing net cnt_val_1_port (2 terminals):  weight = 204
+     + routing net cnt_val_0_port (2 terminals):  weight = 204
+     + routing net n29 (2 terminals):  weight = 200
+     + routing net state_next_0_port (2 terminals):  weight = 206
+     + routing net state_0_port (2 terminals):  weight = 200
+     + routing net n1 (2 terminals):  weight = 200
+     + routing net state_2_port (2 terminals):  weight = 200
+     + routing net state_next_1_port (2 terminals):  weight = 200
+     + routing net state_1_port (2 terminals):  weight = 200
+     + routing net n33 (2 terminals):  weight = 204
+     + routing net n34 (2 terminals):  weight = 200
+     + routing net n35 (2 terminals):  weight = 204
+     + routing net n38 (3 terminals):  weight = 404
+     + routing net n41 (2 terminals):  weight = 204
+     + routing net n42 (2 terminals):  weight = 206
+     + routing net n43 (2 terminals):  weight = 200
+     + routing net n44 (2 terminals):  weight = 200
+     + routing net n47 (2 terminals):  weight = 204
+     + routing net n49 (2 terminals):  weight = 204
+     + routing net n52 (2 terminals):  weight = 204
+
+------ Routed 26 nets, total weight = 5666
+
+
+
+------ Detailed placement of (Tmp_Cell_(timer(timer(test))))...
+------ Reading input data
+------ Creating temporary data structures
+------ Placement plane size : [75:112]
+------ Doing placement 
+ Can't place cell :counter  in window at (30,2)
+
+ Apparently the magnification coefficient is too small. 
+ Let's try to run the algorithm for bigger magn. coefficient. 
+------ Placement plane size : [97:112]
+------ Doing placement 
+------ Compacting  
+
+         19  column[s] deleted.
+
+         Magnification coefficient obtained :0.869649
+
+------ Writing created layout to database
+Kissing madonna good bye...
+
+Madonna took 0.0 seconds of your cpu
+terminate

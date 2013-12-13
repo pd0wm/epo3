@@ -2,35 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'log_score' ------
------- reading nelsis circuit-cell 'score' ------
-WARNING: Zero terminal net: 'output_7_port' (cell 'score')
-WARNING: Zero terminal net: 'output_6_port' (cell 'score')
-WARNING: Zero terminal net: 'output_5_port' (cell 'score')
-WARNING: Zero terminal net: 'output_4_port' (cell 'score')
-WARNING: Zero terminal net: 'output_3_port' (cell 'score')
-WARNING: many (8) useless nets were removed (printed only 5)
------- reading nelsis circuit-cell 'log' ------
-WARNING: Zero terminal net: 'log_out_6_port' (cell 'log')
-WARNING: Zero terminal net: 'log_out_5_port' (cell 'log')
-WARNING: Zero terminal net: 'log_out_4_port' (cell 'log')
-WARNING: Zero terminal net: 'log_out_3_port' (cell 'log')
-WARNING: Zero terminal net: 'log_out_2_port' (cell 'log')
-WARNING: many (7) useless nets were removed (printed only 5)
------- reading nelsis circuit-cell 'log_score' ------
------- reading nelsis layout-cell 'score' ------
------- reading nelsis layout-cell 'log' ------
------- checking match with placement layout 'Tmplog_score24099' ------
------- reading nelsis layout-cell 'Tmplog_score24099' ------
------- writing nelsis 'Tmplog_score24099' as sdflay 'Tmp_Cell_(log_score(log_score(test)))' ------
------- writing nelsis 'log' as sdflay 'log(log(log(test)))' ------
------- writing nelsis 'score' as sdflay 'score(score(score(test)))' ------
------- writing nelsis 'log' as sdfcir 'log(log(test)) ------
------- writing nelsis 'score' as sdfcir 'score(score(test)) ------
------- writing nelsis 'log_score' as sdfcir 'log_score(log_score(test)) ------
+------ checking your circuit 'timer' ------
+------ circuit 'timer' is still up-to-date ------
+------ checking match with placement layout 'Tmptimer27602' ------
+------ reading nelsis layout-cell 'Tmptimer27602' ------
+------ writing nelsis 'Tmptimer27602' as sdflay 'Tmp_Cell_(timer(timer(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f log_score -c log_score -o Tmp_Cell_ -d Tmp_Cell_ 
-WARNING: routing is not 100% successful
------- converting result back into nelsis as cell 'Tmplog_score24099' ------
-calling program: nelsea -rLH -f log_score -c log_score -l Tmp_Cell_ Tmplog_score24099 
+calling program: trout -l test -f timer -c timer -o Tmp_Cell_ -d Tmp_Cell_ 
+------ routing successful ------
+------ converting result back into nelsis as cell 'Tmptimer27602' ------
+calling program: nelsea -rLH -f timer -c timer -l Tmp_Cell_ Tmptimer27602 
 ------ sea: task completed ------
