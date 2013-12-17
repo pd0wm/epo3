@@ -1,148 +1,30 @@
 
 Madonna version 3.3 (compiled Tue, 08 Jul 2008 15:50:37 for "linux-2.6-i686")
 
-reading circuit "top_level2(top_level2(test))" ...done
+reading circuit "top_top_level(top_top_level(test))" ...done
 
 Kissing madonna hello...
 
 Reading image description file "/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif"...
 
 
------- net distribution (total #nets = 125):
+------ net distribution (total #nets = 36):
         0..1     2     3     4     5     6     7 8..10 11..20  >20
 
-           0    94    17     1     8     1     0     0     2     2
-
------- partitioning 32 cells into (hor x vert) = (3 x 3) partitions
-
------- requested grid points = (678, 756)
-
------- cost@start = 640, cost@end = 608, moves = 28
------- cost@start = 608, cost@end = 579, moves = 31
------- cost@start = 579, cost@end = 561, moves = 29
------- cost@start = 561, cost@end = 496, moves = 27
------- cost@start = 496, cost@end = 496, moves = 28
------- 84 nets have to be routed on a 5 x 5 global grid
-     + routing net vga_v_sync (2 terminals):  weight = 204
-     + routing net clk (7 terminals):  weight = 1200
-     + routing net rst (7 terminals):  weight = 1200
-     + routing net button_seed (2 terminals):  weight = 200
-     + routing net new_piece (2 terminals):  weight = 200
-     + routing net next_piece_2_port (2 terminals):  weight = 200
-     + routing net next_piece_1_port (2 terminals):  weight = 200
-     + routing net next_piece_0_port (2 terminals):  weight = 200
-     + routing net timer_1_reset (2 terminals):  weight = 200
-     + routing net timer_1_time (2 terminals):  weight = 200
-     + routing net timer_1_start (2 terminals):  weight = 200
-     + routing net timer_1_done (2 terminals):  weight = 200
-     + routing net lut_piece_type_2_port (2 terminals):  weight = 200
-     + routing net lut_piece_type_1_port (2 terminals):  weight = 200
-     + routing net lut_piece_type_0_port (2 terminals):  weight = 200
-     + routing net lut_next_piece (2 terminals):  weight = 200
-     + routing net lut_x_2_port (2 terminals):  weight = 200
-     + routing net lut_x_1_port (2 terminals):  weight = 200
-     + routing net lut_x_0_port (2 terminals):  weight = 200
-     + routing net lut_y_3_port (2 terminals):  weight = 200
-     + routing net lut_y_2_port (2 terminals):  weight = 200
-     + routing net lut_y_1_port (2 terminals):  weight = 200
-     + routing net lut_y_0_port (2 terminals):  weight = 200
-     + routing net lut_rot_1_port (2 terminals):  weight = 200
-     + routing net lut_rot_0_port (2 terminals):  weight = 200
-     + routing net check_empty (2 terminals):  weight = 202
-     + routing net check_start (2 terminals):  weight = 202
-     + routing net check_ready (2 terminals):  weight = 202
-     + routing net draw_erase_draw (2 terminals):  weight = 202
-     + routing net draw_erase_start (2 terminals):  weight = 202
-     + routing net draw_erase_ready (2 terminals):  weight = 202
-     + routing net clear_shift_start (2 terminals):  weight = 202
-     + routing net clear_shift_ready (2 terminals):  weight = 202
-     + routing net draw_score_draw (3 terminals):  weight = 404
-     + routing net draw_score_ready (2 terminals):  weight = 204
-     + routing net n13 (2 terminals):  weight = 200
-     + routing net ram_data_out (2 terminals):  weight = 200
-     + routing net vga_data (2 terminals):  weight = 202
-     + routing net ram_we (3 terminals):  weight = 400
-     + routing net ram_addr_7_port (3 terminals):  weight = 400
-     + routing net ram_addr_6_port (3 terminals):  weight = 400
-     + routing net ram_addr_5_port (3 terminals):  weight = 400
-     + routing net n16 (2 terminals):  weight = 200
-     + routing net n17 (2 terminals):  weight = 200
-     + routing net n18 (2 terminals):  weight = 200
-     + routing net n14 (2 terminals):  weight = 200
-     + routing net n15 (2 terminals):  weight = 200
-     + routing net vga_addr_7_port (2 terminals):  weight = 202
-     + routing net vga_addr_6_port (2 terminals):  weight = 202
-     + routing net vga_addr_5_port (2 terminals):  weight = 202
-     + routing net n8 (2 terminals):  weight = 200
-     + routing net n7 (2 terminals):  weight = 200
-     + routing net n10 (2 terminals):  weight = 200
-     + routing net n6 (2 terminals):  weight = 200
-     + routing net n9 (2 terminals):  weight = 200
-     + routing net vga_addr_4_port (2 terminals):  weight = 200
-     + routing net vga_addr_3_port (2 terminals):  weight = 200
-     + routing net vga_addr_2_port (2 terminals):  weight = 200
-     + routing net vga_addr_1_port (2 terminals):  weight = 200
-     + routing net vga_addr_0_port (2 terminals):  weight = 200
-     + routing net mask_7_port (2 terminals):  weight = 200
-     + routing net mask_6_port (2 terminals):  weight = 200
-     + routing net mask_5_port (2 terminals):  weight = 200
-     + routing net mask_4_port (2 terminals):  weight = 200
-     + routing net mask_3_port (2 terminals):  weight = 200
-     + routing net mask_2_port (2 terminals):  weight = 200
-     + routing net mask_1_port (2 terminals):  weight = 200
-     + routing net mask_0_port (2 terminals):  weight = 200
-     + routing net mask_select_1_port (2 terminals):  weight = 200
-     + routing net mask_select_0_port (2 terminals):  weight = 200
-     + routing net lut_start_check (2 terminals):  weight = 200
-     + routing net lut_ready (2 terminals):  weight = 200
-     + routing net lut_error (2 terminals):  weight = 200
-     + routing net ram_addr_4_port (2 terminals):  weight = 202
-     + routing net ram_addr_3_port (2 terminals):  weight = 202
-     + routing net ram_addr_2_port (2 terminals):  weight = 202
-     + routing net ram_addr_1_port (2 terminals):  weight = 202
-     + routing net ram_addr_0_port (2 terminals):  weight = 202
-     + routing net lut_start_de (2 terminals):  weight = 200
-     + routing net ram_data_in (2 terminals):  weight = 202
-     + routing net rom_addr_4_port (2 terminals):  weight = 200
-     + routing net n2 (2 terminals):  weight = 204
-     + routing net score (2 terminals):  weight = 202
-     + routing net n1 (2 terminals):  weight = 200
-
------- Routed 84 nets, total weight = 19854
+           0    34     0     1     1     0     0     0     0     0
 
 
-
------- Detailed placement of (Tmp_Cell_(top_level2(top_level2(test))))...
+------ Detailed placement of (Tmp_Cell_(top_top_level(top_top_level(test))))...
 ------ Reading input data
 ------ Creating temporary data structures
------- Placement plane size : [678:756]
------- Doing placement 
- Can't place cell :game_controller  in window at (226,18)
-
- Apparently the magnification coefficient is too small. 
- Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [881:756]
------- Doing placement 
- Can't place cell :game_controller  in window at (293,18)
-
- Apparently the magnification coefficient is too small. 
- Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [1145:756]
------- Doing placement 
- Can't place cell :video_ram  in window at (381,9)
-
- Apparently the magnification coefficient is too small. 
- Let's try to run the algorithm for bigger magn. coefficient. 
------- Placement plane size : [1488:756]
+------ Placement plane size : [964:756]
 ------ Doing placement 
 ------ Compacting  
 
-         188  column[s] deleted.
-
-         Magnification coefficient obtained :1.70328
+         Magnification coefficient obtained :1.04818
 
 ------ Writing created layout to database
 Kissing madonna good bye...
 
-Madonna took 1.0 seconds of your cpu
+Madonna took 0.0 seconds of your cpu
 terminate

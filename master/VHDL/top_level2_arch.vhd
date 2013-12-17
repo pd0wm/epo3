@@ -183,6 +183,25 @@ architecture top_level2_struc of top_level2 is
 	signal rom_addr                                                                                                       : std_logic_vector(6 downto 0);
 	signal rom_data                                                                                                       : std_logic_vector(3 downto 0);
 begin
+	-- Debug signals
+	dbg_check_start       <= check_start;
+	dbg_check_ready       <= check_ready;
+	dbg_draw_erase_start  <= draw_erase_start;
+	dbg_draw_erase_ready  <= draw_erase_ready;
+	dbg_clear_shift_start <= clear_shift_start;
+	dbg_clear_shift_ready <= clear_shift_ready;
+	dbg_draw_score_start  <= draw_score_draw;
+	dbg_draw_score_ready  <= draw_score_ready;
+	dbg_lut_start         <= lut_start_de or lut_start_check;
+	dbg_lut_ready         <= lut_ready;
+	dbg_timer_start       <= timer_1_start;
+	dbg_timer_ready       <= timer_1_done;
+	dbg_ram_we            <= ram_we;
+	dbg_ram_data_in       <= ram_data_in;
+	dbg_ram_data_out      <= ram_data_out;
+	dbg_ram_data_vga      <= vga_data;
+	dbg_ram_addr_part     <= ram_addr(1 downto 0);
+
 	switch_debounce : debounce port map(
 			clk         => clk,
 			rst         => rst,

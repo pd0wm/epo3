@@ -56,7 +56,7 @@ begin
 			data <= '0';
 
 			if (
-				addr = 5 or addr = 6 or addr = 9 or addr = 10 or addr = 128
+				addr > 8 and addr < 15
 			) then
 				data <= '1';
 			end if;
@@ -65,6 +65,9 @@ begin
 
 	rst <= '1', '0' after clk_period*4 - initial_offset;
 end;
+
+
+
 
 
 

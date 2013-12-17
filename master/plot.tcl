@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/top_level2.ddc
+read_file -f ddc ./ADB/top_top_level.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui
