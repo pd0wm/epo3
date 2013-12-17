@@ -4,12 +4,12 @@ six
 ------ opening seadif ------
 ------ checking your circuit 'top_top_level_bb' ------
 ------ circuit 'top_top_level_bb' is still up-to-date ------
------- checking match with placement layout 'Tmptop_top_level_bb12345' ------
------- reading nelsis layout-cell 'Tmptop_top_level_bb12345' ------
------- writing nelsis 'Tmptop_top_level_bb12345' as sdflay 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
+------ checking match with placement layout 'Tmptop_top_level_bb13175' ------
+------ reading nelsis layout-cell 'Tmptop_top_level_bb13175' ------
+------ writing nelsis 'Tmptop_top_level_bb13175' as sdflay 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
 ------ input seems good enough: calling router ------
 calling program: trout -l test -f top_top_level_bb -c top_top_level_bb -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmptop_top_level_bb12345' ------
-calling program: nelsea -rLH -f top_top_level_bb -c top_top_level_bb -l Tmp_Cell_ Tmptop_top_level_bb12345 
+------ converting result back into nelsis as cell 'Tmptop_top_level_bb13175' ------
+calling program: nelsea -rLH -f top_top_level_bb -c top_top_level_bb -l Tmp_Cell_ Tmptop_top_level_bb13175 
 ------ sea: task completed ------

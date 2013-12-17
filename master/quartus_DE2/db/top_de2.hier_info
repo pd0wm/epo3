@@ -155,6 +155,24 @@ vga_v_sync <= vga:vga_controller.v_sync
 vga_red <= vga:vga_controller.red
 vga_green <= vga:vga_controller.green
 vga_blue <= vga:vga_controller.blue
+dbg_check_start <= controller:game_controller.check_start
+dbg_check_ready <= check_mask:check_piece_mask.ready
+dbg_draw_erase_start <= controller:game_controller.draw_erase_start
+dbg_draw_erase_ready <= de_piece:draw_erase_piece.ready
+dbg_clear_shift_start <= controller:game_controller.clear_shift_start
+dbg_clear_shift_ready <= cs_compare:clear_shift.ready_out
+dbg_draw_score_start <= controller:game_controller.draw_score_draw
+dbg_draw_score_ready <= draw_score:output_score.ds_ready
+dbg_lut_start <= dbg_lut_start.DB_MAX_OUTPUT_PORT_TYPE
+dbg_lut_ready <= piece_lut:lookup_table.ready
+dbg_timer_start <= controller:game_controller.timer_1_start
+dbg_timer_ready <= timer:fall_timer.ready
+dbg_ram_we <= ram_we.DB_MAX_OUTPUT_PORT_TYPE
+dbg_ram_data_in <= ram_data_in.DB_MAX_OUTPUT_PORT_TYPE
+dbg_ram_data_out <= sr_if:video_ram.do1
+dbg_ram_data_vga <= sr_if:video_ram.do2
+dbg_ram_addr_part[0] <= ram_addr[0].DB_MAX_OUTPUT_PORT_TYPE
+dbg_ram_addr_part[1] <= ram_addr[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|top_level2:inst2|debounce:switch_debounce
