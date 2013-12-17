@@ -2,29 +2,14 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'top_level2' ------
-WARNING: Imported nelsis cell 'iv110' is younger than its corresponding
-         seadif cell $dummy(iv110(iv110(g_digilib5_99))) (circuit-view). The seadif
-         library 'g_digilib5_99' doesn't seem to be up to date.
-WARNING: Imported nelsis cell 'buf40' is younger than its corresponding
-         seadif cell $dummy(buf40(buf40(g_digilib5_99))) (circuit-view). The seadif
-         library 'g_digilib5_99' doesn't seem to be up to date.
-WARNING: Imported nelsis cell 'no210' is younger than its corresponding
-         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
-         library 'g_digilib5_99' doesn't seem to be up to date.
------- reading nelsis circuit-cell 'top_level2' ------
-WARNING: Zero terminal net: 'vga_v_sync_port' (cell 'top_level2')
-WARNING: Zero terminal net: 'dbg_check_start_port' (cell 'top_level2')
-WARNING: Zero terminal net: 'dbg_check_ready_port' (cell 'top_level2')
-WARNING: Zero terminal net: 'dbg_draw_erase_start_port' (cell 'top_level2')
-WARNING: Zero terminal net: 'dbg_draw_erase_ready_port' (cell 'top_level2')
-WARNING: many (18) useless nets were removed (printed only 5)
------- checking match with placement layout 'Tmptop_level211712' ------
------- reading nelsis layout-cell 'Tmptop_level211712' ------
------- writing nelsis 'Tmptop_level211712' as sdflay 'Tmp_Cell_(top_level2(top_level2(test)))' ------
+------ checking your circuit 'top_top_level_bb' ------
+------ circuit 'top_top_level_bb' is still up-to-date ------
+------ checking match with placement layout 'Tmptop_top_level_bb12345' ------
+------ reading nelsis layout-cell 'Tmptop_top_level_bb12345' ------
+------ writing nelsis 'Tmptop_top_level_bb12345' as sdflay 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f top_level2 -c top_level2 -o Tmp_Cell_ -d Tmp_Cell_ 
+calling program: trout -l test -f top_top_level_bb -c top_top_level_bb -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmptop_level211712' ------
-calling program: nelsea -rLH -f top_level2 -c top_level2 -l Tmp_Cell_ Tmptop_level211712 
+------ converting result back into nelsis as cell 'Tmptop_top_level_bb12345' ------
+calling program: nelsea -rLH -f top_top_level_bb -c top_top_level_bb -l Tmp_Cell_ Tmptop_top_level_bb12345 
 ------ sea: task completed ------

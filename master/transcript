@@ -8,6 +8,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work top_level2_tb_top_level2_tb_arch_cfg 
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -140,7 +141,7 @@
 # Loading work.draw_score_behaviour_cfg#1
 # Loading work.draw_score(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 20ms
+run 10ms
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /top_level2_tb/uut/lookup_table/lbl_adder_y
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -521,6 +522,4 @@ run 20ms
 #    Time: 0 ns  Iteration: 6  Instance: /top_level2_tb/uut/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 6  Instance: /top_level2_tb/uut/lookup_table/lbl_adder_y
-add wave  \
-sim:/top_level2_tb/dbg_ram_data_vga
 quit

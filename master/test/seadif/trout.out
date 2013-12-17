@@ -1,147 +1,52 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(top_level2(top_level2(test)))' ------
+------ reading placement 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Tue Dec 17 18:29:51 2013
- 127 nets have to be routed.
-Routing net 'inputs_5_0_5' (2/2): . OK!
-Routing net 'inputs_5_0_4' (2/2): . OK!
-Routing net 'inputs_5_0_3' (2/2): . OK!
-Routing net 'inputs_5_0_2' (2/2): . OK!
-Routing net 'inputs_5_0_1' (2/2): . OK!
-Routing net 'inputs_5_0_0' (2/2): . OK!
-Routing net 'vga_h_sync' (2/2): . OK!
-Routing net 'vga_red' (2/2): . OK!
-Routing net 'vga_green' (2/2): . OK!
-Routing net 'vga_blue' (2/2): . OK!
-Routing net 'dbg_lut_start' (2/2): . OK!
-Routing net 'n3' (2/2): . OK!
-Routing net 'n21' (2/2): . OK!
-Routing net 'clk' (13/13): ............ OK!
-Routing net 'vga_addr_5_port' (2/2): . OK!
-Routing net 'vga_addr_7_port' (2/2): . OK!
-Routing net 'score_data_7_port' (2/2): . OK!
-Routing net 'score_data_6_port' (2/2): . OK!
-Routing net 'score_data_3_port' (2/2): . OK!
-Routing net 'dbg_timer_start' (3/3): .. OK!
-Routing net 'score_data_1_port' (2/2): . OK!
-Routing net 'score_data_4_port' (2/2): . OK!
-Routing net 'score_data_0_port' (2/2): . OK!
-Routing net 'mask_2_port' (3/3): .. OK!
-Routing net 'next_piece_1_port' (2/2): . OK!
-Routing net 'vga_addr_6_port' (2/2): . OK!
-Routing net 'score_data_2_port' (2/2): . OK!
-Routing net 'score_data_5_port' (2/2): . OK!
-Routing net 'mask_5_port' (3/3): .. OK!
-Routing net 'n18' (2/2): . OK!
-Routing net 'mask_1_port' (3/3): .. OK!
-Routing net 'next_piece_0_port' (2/2): . OK!
-Routing net 'inputs_debounced_0_port' (2/2): . OK!
-Routing net 'mask_0_port' (3/3): .. OK!
-Routing net 'mask_7_port' (3/3): .. OK!
-Routing net 'n14' (2/2): . OK!
-Routing net 'mask_select_0_port' (3/3): .. OK!
-Routing net 'mask_3_port' (3/3): .. OK!
-Routing net 'next_piece_2_port' (2/2): . OK!
-Routing net 'mask_6_port' (3/3): .. OK!
-Routing net 'button_seed' (2/2): . OK!
-Routing net 'n7' (2/2): . OK!
-Routing net 'dbg_clear_shift_ready' (3/3): .. OK!
-Routing net 'vga_addr_1_port' (2/2): . OK!
-Routing net 'lut_error' (2/2): . OK!
-Routing net 'dbg_draw_score_ready' (3/3): .. OK!
-Routing net 'inputs_debounced_4_port' (2/2): . OK!
-Routing net 'check_empty' (2/2): . OK!
-Routing net 'mask_4_port' (3/3): .. OK!
-Routing net 'n13' (2/2): . OK!
-Routing net 'mask_select_1_port' (3/3): .. OK!
-Routing net 'dbg_timer_ready' (3/3): .. OK!
-Routing net 'n19' (2/2): . OK!
-Routing net 'dbg_lut_ready' (4/4): ... OK!
-Routing net 'n5' (2/2): . OK!
-Routing net 'vga_addr_0_port' (2/2): . OK!
-Routing net 'vga_addr_4_port' (2/2): . OK!
-Routing net 'vga_addr_2_port' (2/2): . OK!
-Routing net 'n4' (2/2): . OK!
-Routing net 'n15' (2/2): . OK!
-Routing net 'vga_addr_3_port' (2/2): . OK!
-Routing net 'n6' (2/2): . OK!
-Routing net 'dbg_ram_data_vga' (3/3): .. OK!
-Routing net 'timer_1_time' (2/2): . OK!
-Routing net 'n20' (2/2): . OK!
-Routing net 'new_piece' (2/2): . OK!
-Routing net 'inputs_debounced_5_port' (2/2): . OK!
-Routing net 'score' (2/2): . OK!
-Routing net 'dbg_draw_erase_start' (4/4): ... OK!
-Routing net 'lut_piece_type_0_port' (2/2): . OK!
-Routing net 'rom_addr_4_port' (2/2): . OK!
-Routing net 'dbg_check_start' (4/4): ... OK!
-Routing net 'lut_piece_type_2_port' (2/2): . OK!
-Routing net 'rom_addr_1_port' (2/2): . OK!
-Routing net 'dbg_clear_shift_start' (4/4): ... OK!
-Routing net 'n16' (2/2): . OK!
-Routing net 'n9' (2/2): . OK!
-Routing net 'rom_addr_5_port' (2/2): . OK!
-Routing net 'lut_piece_type_1_port' (2/2): . OK!
-Routing net 'dbg_draw_score_start' (4/4): ... OK!
-Routing net 'inputs_debounced_2_port' (2/2): . OK!
-Routing net 'timer_1_reset' (2/2): . OK!
-Routing net 'rom_addr_3_port' (2/2): . OK!
-Routing net 'rom_addr_0_port' (2/2): . OK!
-Routing net 'n10' (2/2): . OK!
-Routing net 'inputs_debounced_1_port' (2/2): . OK!
-Routing net 'inputs_debounced_3_port' (2/2): . OK!
-Routing net 'n12' (2/2): . OK!
-Routing net 'dbg_check_ready' (3/3): .. OK!
-Routing net 'n8' (2/2): . OK!
-Routing net 'lut_start_check' (3/3): .. OK!
-Routing net 'draw_erase_draw' (2/2): . OK!
-Routing net 'rom_addr_2_port' (2/2): . OK!
-Routing net 'lut_y_2_port' (2/2): . OK!
-Routing net 'dbg_draw_erase_ready' (3/3): .. OK!
-Routing net 'n11' (2/2): . OK!
-Routing net 'lut_start_de' (3/3): .. OK!
-Routing net 'lut_next_piece' (2/2): . OK!
-Routing net 'lut_y_3_port' (2/2): . OK!
-Routing net 'lut_y_0_port' (2/2): . OK!
-Routing net 'rom_data_2_port' (2/2): . OK!
-Routing net 'n17' (2/2): . OK!
-Routing net 'lut_x_2_port' (2/2): . OK!
-Routing net 'rom_data_3_port' (2/2): . OK!
-Routing net 'vga_v_sync' (3/3): .. OK!
-Routing net 'rom_data_0_port' (2/2): . OK!
-Routing net 'lut_x_0_port' (2/2): . OK!
-Routing net 'lut_x_1_port' (2/2): . OK!
-Routing net 'lut_rot_0_port' (2/2): . OK!
-Routing net 'dbg_ram_addr_part_1_0_0' (6/6): ..... OK!
-Routing net 'dbg_ram_data_in' (5/5): .... OK!
-Routing net 'rom_data_1_port' (2/2): . OK!
-Routing net 'ram_addr_4_port' (5/5): .... OK!
-Routing net 'rom_addr_6_port' (2/2): . OK!
-Routing net 'ram_addr_6_port' (5/5): .... OK!
-Routing net 'lut_rot_1_port' (2/2): . OK!
-Routing net 'dbg_ram_data_out' (4/4): ... OK!
-Routing net 'dbg_ram_addr_part_1_0_1' (6/6): ..... OK!
-Routing net 'dbg_ram_we' (7/7): ...... OK!
-Routing net 'lut_y_1_port' (2/2): . OK!
-Routing net 'ram_addr_3_port' (5/5): .... OK!
-Routing net 'ram_addr_5_port' (5/5): .... OK!
-Routing net 'ram_addr_2_port' (5/5): .... OK!
-Routing net 'ram_addr_7_port' (5/5): .... OK!
-Routing net 'rst' (13/13): ............ OK!
-Routing net 'vdd' : ... (Power special)
-Routing net 'vss' : ... (Power special)
+------ routing started Tue Dec 17 18:56:25 2013
+ 32 nets have to be routed.
+Routing net 't7' (3/3): .. OK!
+Routing net 't6' (3/3): .. OK!
+Routing net 't5' (3/3): .. OK!
+Routing net 't4' (3/3): .. OK!
+Routing net 't3' (3/3): .. OK!
+Routing net 't2' (3/3): .. OK!
+Routing net 't13' (3/3): .. OK!
+Routing net 't28' (3/3): .. OK!
+Routing net 't16' (3/3): .. OK!
+Routing net 't15' (3/3): .. OK!
+Routing net 't14' (3/3): .. OK!
+Routing net 't27' (3/3): .. OK!
+Routing net 't21' (3/3): .. OK!
+Routing net 't26' (3/3): .. OK!
+Routing net 't25' (3/3): .. OK!
+Routing net 't9' (3/3): .. OK!
+Routing net 't1' (3/3): .. OK!
+Routing net 't22' (3/3): .. OK!
+Routing net 't18' (3/3): .. OK!
+Routing net 't17' (3/3): .. OK!
+Routing net 't30' (3/3): .. OK!
+Routing net 't29' (3/3): .. OK!
+Routing net 't24' (3/3): .. OK!
+Routing net 't12' (3/3): .. OK!
+Routing net 't10' (3/3): .. OK!
+Routing net 't32' (3/3): .. OK!
+Routing net 't31' (3/3): .. OK!
+Routing net 't23' (3/3): .. OK!
+Routing net 't11' (3/3): .. OK!
+Routing net 't8' (3/3): .. OK!
+Routing net 't20' (3/3): .. OK!
+Routing net 't19' (3/3): .. OK!
 READY
 ----- Some interesting statistics ------
-Total number of nets:                 127 (100% completion)
+Total number of nets:                 32 (100% completion)
 Total length of routed wires:         0 (No new wires created)
-No. of transistors (total / used):    78084/38580 = 49.41 %
-CPU-time consumption:                 0.78 sec.
-Elapsed time during routing:          0.83 sec. (100.00 % of cpu)
+No. of transistors (total / used):    80271/38624 = 48.12 %
+CPU-time consumption:                 0.11 sec.
+Elapsed time during routing:          0.12 sec. (100.00 % of cpu)
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(top_level2(top_level2(test)))' ------
------- Trout: task completed on Tue Dec 17 18:29:53 2013
+------ Writing 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
+------ Trout: task completed on Tue Dec 17 18:56:26 2013
  terminate
