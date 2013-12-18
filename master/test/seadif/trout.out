@@ -4,7 +4,7 @@
 ------ reading placement 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Wed Dec 18 16:01:16 2013
+------ routing started Wed Dec 18 16:26:25 2013
  32 nets have to be routed.
 Routing net 't7' (3/3): .. OK!
 Routing net 't6' (3/3): .. OK!
@@ -41,12 +41,23 @@ Routing net 't20' (3/3): .. OK!
 READY
 ----- Some interesting statistics ------
 Total number of nets:                 32 (100% completion)
-Total length of routed wires:         22927 grids = 201.758 mm
+Total length of routed wires:         0 (No new wires created)
 No. of transistors (total / used):    80190/38624 = 48.17 %
-CPU-time consumption:                 3.73 sec.
-Elapsed time during routing:          3.76 sec. (100.00 % of cpu)
+CPU-time consumption:                 0.09 sec.
+Elapsed time during routing:          0.10 sec. (110.00 % of cpu)
+------ Making fat power wires ------
+------ Making capacitors ------
+167,549,
+796,1149,1375,1591,1884,2155,2542,2717,3134,3624,4045,4246,
+4444,4764,5064,5565,6160,6551,7243,7784,8415,9035,9405,9691,
+10112,10542,11051,11368,11672,12047,12434,12884,13563,14105,14545,14923,
+15573,15927,15927,15927,
+------ Converted 15927 unused transistors into capacitors ------
+------ connecting unused transistors to power ------
+------ Making lotsa vias ------
+------ making substrate contacts ------
 ------ Verifying Connectivity ------
 ------ No unconnect nor short-circuits ------
 ------ Writing 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
------- Trout: task completed on Wed Dec 18 16:01:20 2013
+------ Trout: task completed on Wed Dec 18 16:26:26 2013
  terminate
