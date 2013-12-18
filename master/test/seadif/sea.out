@@ -2,14 +2,44 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'top_top_level_bb' ------
------- circuit 'top_top_level_bb' is still up-to-date ------
------- checking match with placement layout 'Tmptop_top_level_bb4322' ------
------- reading nelsis layout-cell 'Tmptop_top_level_bb4322' ------
------- writing nelsis 'Tmptop_top_level_bb4322' as sdflay 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
+------ checking your circuit 'controller' ------
+WARNING: Imported nelsis cell 'dfn10' is younger than its corresponding
+         seadif cell $dummy(dfn10(dfn10(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'dfr11' is younger than its corresponding
+         seadif cell $dummy(dfr11(dfr11(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'iv110' is younger than its corresponding
+         seadif cell $dummy(iv110(iv110(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na210' is younger than its corresponding
+         seadif cell $dummy(na210(na210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'na310' is younger than its corresponding
+         seadif cell $dummy(na310(na310(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no310' is younger than its corresponding
+         seadif cell $dummy(no310(no310(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'no210' is younger than its corresponding
+         seadif cell $dummy(no210(no210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+WARNING: Imported nelsis cell 'ex210' is younger than its corresponding
+         seadif cell $dummy(ex210(ex210(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+------ reading nelsis circuit-cell 'controller' ------
+WARNING: Zero terminal net: 'lut_piece_type_2_port' (cell 'controller')
+WARNING: Zero terminal net: 'lut_piece_type_1_port' (cell 'controller')
+WARNING: Zero terminal net: 'lut_piece_type_0_port' (cell 'controller')
+WARNING: Zero terminal net: 'lut_next_piece_port' (cell 'controller')
+WARNING: Zero terminal net: 'lut_x_2_port' (cell 'controller')
+WARNING: many (16) useless nets were removed (printed only 5)
+------ checking match with placement layout 'Tmpcontroller6179' ------
+------ reading nelsis layout-cell 'Tmpcontroller6179' ------
+------ writing nelsis 'Tmpcontroller6179' as sdflay 'Tmp_Cell_(controller(controller(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f top_top_level_bb -c top_top_level_bb -o Tmp_Cell_ -b -t -S -P -C -F Tmp_Cell_ 
+calling program: trout -l test -f controller -c controller -o Tmp_Cell_ -d Tmp_Cell_ 
 ------ routing successful ------
------- converting result back into nelsis as cell 'Tmptop_top_level_bb4322' ------
-calling program: nelsea -rLH -f top_top_level_bb -c top_top_level_bb -l Tmp_Cell_ Tmptop_top_level_bb4322 
+------ converting result back into nelsis as cell 'Tmpcontroller6179' ------
+calling program: nelsea -rLH -f controller -c controller -l Tmp_Cell_ Tmpcontroller6179 
 ------ sea: task completed ------
