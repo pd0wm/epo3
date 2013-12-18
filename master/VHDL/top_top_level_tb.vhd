@@ -121,6 +121,18 @@ begin
 		inputs <= "011111";
 		wait for 500 us;
 		inputs <= "111111";
+		wait for 500 us;
+		inputs <= "011111";
+		wait for 500 us;
+		inputs <= "111111";
+		wait for 500 us;
+		inputs <= "011111";
+		wait for 500 us;
+		inputs <= "111111";
+		wait for 500 us;
+		inputs <= "011111";
+		wait for 500 us;
+		inputs <= "111111";
 		wait;
 	end process;
 

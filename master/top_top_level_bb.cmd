@@ -2,6 +2,7 @@ set vdd = h*~
 set vss = l*~
 set t1 = h*1740 l*~
 set t2 = h*3501740\
+                   (l*500000 h*500000)*3\
                    l*500000 h*~
 set t3 = h*501740\
                    (l*500000 h*500000)*2\
@@ -10,14 +11,14 @@ set t4 = h*~
 set t5 = h*~
 set t6 = h*~
 set t7 = l*501740 h*~
-set t31 = (h*80 l*80)*62500\
+set t31 = (h*80 l*80)*93750\
          h*~
 
 option sigunit   = 1n
 option outacc    = 100p
 option level     = 3
 option initialize random = on
-option simperiod = 10000000
+option simperiod = 15000000
 
 print \
       t1,\
