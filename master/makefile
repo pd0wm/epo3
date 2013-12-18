@@ -129,8 +129,8 @@ WORK__top_top_level_top_top_level_struc_cfg = $(LIB_WORK)/top_top_level_top_top_
 WORK__top_top_level_tb_behaviour_cfg = $(LIB_WORK)/top_top_level_tb_behaviour_cfg/_primary.dat
 WORK__top_top_level_tb__behaviour = $(LIB_WORK)/top_top_level_tb/behaviour.dat
 WORK__top_top_level_tb = $(LIB_WORK)/top_top_level_tb/_primary.dat
-WORK__top_top_level__synthesised = $(LIB_WORK)/top_top_level/synthesised.dat
 WORK__top_top_level__top_top_level_struc = $(LIB_WORK)/top_top_level/top_top_level_struc.dat
+WORK__top_top_level__synthesised = $(LIB_WORK)/top_top_level/synthesised.dat
 WORK__top_top_level = $(LIB_WORK)/top_top_level/_primary.dat
 WORK__top_level_tb_behaviour_cfg = $(LIB_WORK)/top_level_tb_behaviour_cfg/_primary.dat
 WORK__top_level_tb__behaviour = $(LIB_WORK)/top_level_tb/behaviour.dat
@@ -480,8 +480,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_top_level_tb_behaviour_cfg) \
     $(WORK__top_top_level_tb__behaviour) \
     $(WORK__top_top_level_tb) \
-    $(WORK__top_top_level__synthesised) \
     $(WORK__top_top_level__top_top_level_struc) \
+    $(WORK__top_top_level__synthesised) \
     $(WORK__top_top_level) \
     $(WORK__top_level_tb_behaviour_cfg) \
     $(WORK__top_level_tb__behaviour) \
@@ -2686,14 +2686,6 @@ $(WORK__top_top_level) : VHDL/top_top_level.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_top_level.vhd
 
-$(WORK__top_top_level__top_top_level_struc) : VHDL/top_top_level_arch.vhd \
-		$(WORK__top_top_level) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/top_top_level_arch.vhd
-
 $(WORK__top_top_level__synthesised) : VHDL/top_top_level_SYNTH.vhd \
 		$(WORK__top_top_level) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -2701,6 +2693,14 @@ $(WORK__top_top_level__synthesised) : VHDL/top_top_level_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_top_level_SYNTH.vhd
+
+$(WORK__top_top_level__top_top_level_struc) : VHDL/top_top_level_arch.vhd \
+		$(WORK__top_top_level) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_top_level_arch.vhd
 
 $(WORK__top_top_level_tb) \
 $(WORK__top_top_level_tb__behaviour) : VHDL/top_top_level_tb.vhd \
