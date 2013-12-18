@@ -26,9 +26,9 @@ network top_top_level (terminal rst, inputs_5_0_5, inputs_5_0_4, inputs_5_0_3,
                                 dbg_timer_ready, dbg_ram_we, dbg_ram_data_in, 
                                 dbg_ram_data_out, dbg_ram_data_vga, 
                                 dbg_ram_addr_part_1_0_1, 
-                                dbg_ram_addr_part_1_0_0, XI, XO, vss, vdd)
+                                dbg_ram_addr_part_1_0_0, xi, xo, vss, vdd)
 {
-   {clock} osc10 (X_Logic1_port, XI, XO, clk, vss, vdd);
+   {clock} osc10 (X_Logic1_port, xi, xo, clk, vss, vdd);
    {chip} top_level2 (rst, n1, inputs_5_0_5, inputs_5_0_4, inputs_5_0_3, 
                       inputs_5_0_2, inputs_5_0_1, inputs_5_0_0, vga_h_sync, 
                       vga_v_sync, vga_red, vga_green, vga_blue, 

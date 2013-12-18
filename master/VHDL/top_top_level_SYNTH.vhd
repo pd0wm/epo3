@@ -29,7 +29,7 @@ architecture synthesised of top_top_level is
 
 begin
    
-   clock : osc10 port map( E => X_Logic1_port, XI => XI, XO => XO, F => clk);
+   clock : osc10 port map( E => X_Logic1_port, XI => xi, XO => xo, F => clk);
    chip : top_level2 port map( rst => rst, clk => n1, inputs(5) => inputs(5), 
                            inputs(4) => inputs(4), inputs(3) => inputs(3), 
                            inputs(2) => inputs(2), inputs(1) => inputs(1), 

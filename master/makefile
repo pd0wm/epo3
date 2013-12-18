@@ -121,11 +121,15 @@ WORK__vga = $(LIB_WORK)/vga/_primary.dat
 WORK__tri_buff_synthesised_cfg = $(LIB_WORK)/tri_buff_synthesised_cfg/_primary.dat
 WORK__tri_buff_extracted_cfg = $(LIB_WORK)/tri_buff_extracted_cfg/_primary.dat
 WORK__tri_buff_behaviour_cfg = $(LIB_WORK)/tri_buff_behaviour_cfg/_primary.dat
-WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
-WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
 WORK__tri_buff__synthesised = $(LIB_WORK)/tri_buff/synthesised.dat
+WORK__tri_buff__extracted = $(LIB_WORK)/tri_buff/extracted.dat
+WORK__tri_buff__behaviour = $(LIB_WORK)/tri_buff/behaviour.dat
 WORK__tri_buff = $(LIB_WORK)/tri_buff/_primary.dat
 WORK__top_top_level_top_top_level_struc_cfg = $(LIB_WORK)/top_top_level_top_top_level_struc_cfg/_primary.dat
+WORK__top_top_level_tb_behaviour_cfg = $(LIB_WORK)/top_top_level_tb_behaviour_cfg/_primary.dat
+WORK__top_top_level_tb__behaviour = $(LIB_WORK)/top_top_level_tb/behaviour.dat
+WORK__top_top_level_tb = $(LIB_WORK)/top_top_level_tb/_primary.dat
+WORK__top_top_level__synthesised = $(LIB_WORK)/top_top_level/synthesised.dat
 WORK__top_top_level__top_top_level_struc = $(LIB_WORK)/top_top_level/top_top_level_struc.dat
 WORK__top_top_level = $(LIB_WORK)/top_top_level/_primary.dat
 WORK__top_level_tb_behaviour_cfg = $(LIB_WORK)/top_level_tb_behaviour_cfg/_primary.dat
@@ -137,6 +141,7 @@ WORK__top_level2_tb_top_level2_tb_arch_cfg = $(LIB_WORK)/top_level2_tb_top_level
 WORK__top_level2_tb__top_level2_tb_arch = $(LIB_WORK)/top_level2_tb/top_level2_tb_arch.dat
 WORK__top_level2_tb = $(LIB_WORK)/top_level2_tb/_primary.dat
 WORK__top_level2__top_level2_struc = $(LIB_WORK)/top_level2/top_level2_struc.dat
+WORK__top_level2__synthesised = $(LIB_WORK)/top_level2/synthesised.dat
 WORK__top_level2 = $(LIB_WORK)/top_level2/_primary.dat
 WORK__top_level__structural = $(LIB_WORK)/top_level/structural.dat
 WORK__top_level__synthesised = $(LIB_WORK)/top_level/synthesised.dat
@@ -467,11 +472,15 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__tri_buff_synthesised_cfg) \
     $(WORK__tri_buff_extracted_cfg) \
     $(WORK__tri_buff_behaviour_cfg) \
-    $(WORK__tri_buff__behaviour) \
-    $(WORK__tri_buff__extracted) \
     $(WORK__tri_buff__synthesised) \
+    $(WORK__tri_buff__extracted) \
+    $(WORK__tri_buff__behaviour) \
     $(WORK__tri_buff) \
     $(WORK__top_top_level_top_top_level_struc_cfg) \
+    $(WORK__top_top_level_tb_behaviour_cfg) \
+    $(WORK__top_top_level_tb__behaviour) \
+    $(WORK__top_top_level_tb) \
+    $(WORK__top_top_level__synthesised) \
     $(WORK__top_top_level__top_top_level_struc) \
     $(WORK__top_top_level) \
     $(WORK__top_level_tb_behaviour_cfg) \
@@ -483,6 +492,7 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_level2_tb__top_level2_tb_arch) \
     $(WORK__top_level2_tb) \
     $(WORK__top_level2__top_level2_struc) \
+    $(WORK__top_level2__synthesised) \
     $(WORK__top_level2) \
     $(WORK__top_level__structural) \
     $(WORK__top_level__synthesised) \
@@ -2541,6 +2551,14 @@ $(WORK__top_level2) : VHDL/top_level2.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_level2.vhd
 
+$(WORK__top_level2__synthesised) : VHDL/top_level2_SYNTH.vhd \
+		$(WORK__top_level2) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_level2_SYNTH.vhd
+
 $(WORK__top_level2__top_level2_struc) : VHDL/top_level2_arch.vhd \
 		$(WORK__top_level2) \
 		$(STD__textio) \
@@ -2676,6 +2694,31 @@ $(WORK__top_top_level__top_top_level_struc) : VHDL/top_top_level_arch.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_top_level_arch.vhd
 
+$(WORK__top_top_level__synthesised) : VHDL/top_top_level_SYNTH.vhd \
+		$(WORK__top_top_level) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_top_level_SYNTH.vhd
+
+$(WORK__top_top_level_tb) \
+$(WORK__top_top_level_tb__behaviour) : VHDL/top_top_level_tb.vhd \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_top_level_tb.vhd
+
+$(WORK__top_top_level_tb_behaviour_cfg) : VHDL/top_top_level_tb_behaviour_cfg.vhd \
+		$(WORK__top_top_level) \
+		$(WORK__top_top_level_top_top_level_struc_cfg) \
+		$(WORK__top_top_level_tb__behaviour) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164) \
+		$(WORK__top_top_level_tb)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_top_level_tb_behaviour_cfg.vhd
+
 $(WORK__top_top_level_top_top_level_struc_cfg) : VHDL/top_top_level_top_top_level_struc_cfg.vhd \
 		$(WORK__top_level2) \
 		$(CELLSLIB__osc10) \
@@ -2694,13 +2737,12 @@ $(WORK__tri_buff) : VHDL/tri_buff.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/tri_buff.vhd
 
-$(WORK__tri_buff__synthesised) : VHDL/tri_buff_SYNTH.vhd \
+$(WORK__tri_buff__behaviour) : VHDL/tri_buff-behaviour.vhd \
 		$(WORK__tri_buff) \
-		$(CELLSLIB__cellslib_decl_pack) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/tri_buff_SYNTH.vhd
+		 work -quiet -nologo VHDL/tri_buff-behaviour.vhd
 
 $(WORK__tri_buff__extracted) : VHDL/tri_buff_EXTR.vhd \
 		$(WORK__tri_buff) \
@@ -2710,12 +2752,13 @@ $(WORK__tri_buff__extracted) : VHDL/tri_buff_EXTR.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/tri_buff_EXTR.vhd
 
-$(WORK__tri_buff__behaviour) : VHDL/tri_buff-behaviour.vhd \
+$(WORK__tri_buff__synthesised) : VHDL/tri_buff_SYNTH.vhd \
 		$(WORK__tri_buff) \
+		$(CELLSLIB__cellslib_decl_pack) \
 		$(STD__textio) \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/tri_buff-behaviour.vhd
+		 work -quiet -nologo VHDL/tri_buff_SYNTH.vhd
 
 $(WORK__tri_buff_behaviour_cfg) : VHDL/tri_buff_behaviour_cfg.vhd \
 		$(WORK__tri_buff__behaviour) \

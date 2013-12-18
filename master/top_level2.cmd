@@ -14,7 +14,7 @@ set inputs_5_0_0 = l*501740 h*~
 
 option sigunit   = 1n
 option outacc    = 100p
-option level     = 3
+option level     = 2
 option initialize random = on
 option simperiod = 10000000
 
