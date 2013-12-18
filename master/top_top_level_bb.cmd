@@ -1,10 +1,11 @@
 set vdd = h*~
 set vss = l*~
 set t1 = h*1740 l*~
-set t2 = h*~
+set t2 = h*3501740\
+                   l*500000 h*~
 set t3 = h*501740\
                    (l*500000 h*500000)*2\
-                   l*~
+                   l*500000 h*~
 set t4 = h*~
 set t5 = h*~
 set t6 = h*~

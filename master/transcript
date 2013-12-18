@@ -8,7 +8,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work top_top_level_tb_behaviour_cfg 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -144,134 +144,6 @@
 # Loading work.draw_score_behaviour_cfg#1
 # Loading work.draw_score(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-ls
-# ADB
-# check_mask.cmd
-# check_mask.def
-# check_mask.lst
-# check_mask.out
-# check_mask.ref
-# check_mask.res
-# circuits
-# command.log
-# components
-# controller.cmd
-# controller.def
-# controller.lst
-# controller.out
-# controller.ref
-# controller.res
-# cs_compare.cmd
-# cs_compare.def
-# cs_compare.lst
-# cs_compare.out
-# cs_compare.ref
-# cs_compare.res
-# cs_shift.cmd
-# cs_shift.def
-# cs_shift.lst
-# cs_shift.out
-# cs_shift.ref
-# cs_shift.res
-# debounce.cmd
-# debounce.def
-# debounce.lst
-# debounce.out
-# debounce.ref
-# debounce.res
-# default.svf
-# de_piece.cmd
-# de_piece.def
-# de_piece.lst
-# de_piece.out
-# de_piece.ref
-# de_piece.res
-# draw_score.cmd
-# draw_score.def
-# draw_score.lst
-# draw_score.out
-# draw_score.ref
-# draw_score.res
-# importSynth
-# layout.ldm
-# log_score.cmd
-# log_score.def
-# log_score.lst
-# log_score.out
-# log_score.ref
-# log_score.res
-# makefile
-# makefile~
-# modelsim.ini
-# npg.cmd
-# npg.def
-# npg.lst
-# npg.out
-# npg.ref
-# npg.res
-# piece_lut.cmd
-# piece_lut.def
-# piece_lut.lst
-# piece_lut.out
-# piece_lut.ref
-# piece_lut.res
-# plot.tcl
-# quartus_DE2
-# rom.cmd
-# rom.def
-# rom.lst
-# rom.out
-# rom.ref
-# rom.res
-# SLS
-# sr_if.cmd
-# sr_if.def
-# sr_if.lst
-# sr_if.out
-# sr_if.ref
-# sr_if.res
-# synthesize.tcl
-# syn_work
-# syn_work_bak
-# tcl_stacktrace.txt
-# test
-# timer.cmd
-# timer.def
-# timer.lst
-# timer.out
-# timer.ref
-# timer.res
-# top_level2.cmd
-# top_level2.cmd~
-# top_level2.def
-# top_level2.lst
-# top_level2.out
-# top_level2.ref
-# top_level2.res
-# top_top_level_bb.buf
-# top_top_level_bb.cmd
-# top_top_level_bb.out
-# top_top_level_bb.ref
-# top_top_level_bb.res
-# top_top_level.cmd
-# top_top_level.def
-# top_top_level.lst
-# top_top_level.out
-# top_top_level.ref
-# top_top_level.res
-# transcript
-# vdir.mess
-# vdirRem.mess
-# vga.cmd
-# vga.def
-# vga.lst
-# vga.out
-# vga.ref
-# vga.res
-# VHDL
-# vsim_id
-# vsim.wlf
-# work
 run 10ms
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
@@ -333,4 +205,68 @@ run 10ms
 #    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-quit
+add wave sim:/top_top_level_tb/dut/*
+add wave sim:/top_top_level_tb/dut/chip/*
+add wave sim:/top_top_level_tb/dut/chip/game_controller/*
+restart; run 10ms
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/score_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/score_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/np_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/np_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/field_check
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/field_check
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/triggers
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/triggers
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/sync
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/sync
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/counter/resets
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/switch_debounce
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# Causality operation skipped due to absense of debug database file
