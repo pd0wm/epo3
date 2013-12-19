@@ -10,23 +10,23 @@
 /top_top_level_tb/dut/vga_red	 10	O
 /top_top_level_tb/dut/vga_green	 11	O
 /top_top_level_tb/dut/vga_blue	 12	O
-/top_top_level_tb/dut/dbg_check_start	 13	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_check_ready	 14	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_draw_erase_start	 15	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_draw_erase_ready	 16	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_clear_shift_start	 17	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_clear_shift_ready	 18	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_draw_score_start	 19	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_draw_score_ready	 20	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_lut_start	 21	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_lut_ready	 22	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_timer_start	 23	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_timer_ready	 24	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_we	 25	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_data_in	 26	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_data_out	 27	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_data_vga	 28	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_addr_part(1)	 29	I O   # Pin direction unknown - use I/O clause
-/top_top_level_tb/dut/dbg_ram_addr_part(0)	 30	I O   # Pin direction unknown - use I/O clause
+/top_top_level_tb/dut/dbg_check_start	 13	O
+/top_top_level_tb/dut/dbg_check_ready	 14	O
+/top_top_level_tb/dut/dbg_draw_erase_start	 15	O
+/top_top_level_tb/dut/dbg_draw_erase_ready	 16	O
+/top_top_level_tb/dut/dbg_clear_shift_start	 17	O
+/top_top_level_tb/dut/dbg_clear_shift_ready	 18	O
+/top_top_level_tb/dut/dbg_draw_score_start	 19	O
+/top_top_level_tb/dut/dbg_draw_score_ready	 20	O
+/top_top_level_tb/dut/dbg_lut_start	 21	O
+/top_top_level_tb/dut/dbg_lut_ready	 22	O
+/top_top_level_tb/dut/dbg_timer_start	 23	O
+/top_top_level_tb/dut/dbg_timer_ready	 24	O
+/top_top_level_tb/dut/dbg_ram_we	 25	O
+/top_top_level_tb/dut/dbg_ram_data_in	 26	O
+/top_top_level_tb/dut/dbg_ram_data_out	 27	O
+/top_top_level_tb/dut/dbg_ram_data_vga	 28	O
+/top_top_level_tb/dut/dbg_ram_addr_part(1)	 29	O
+/top_top_level_tb/dut/dbg_ram_addr_part(0)	 30	O
 /top_top_level_tb/dut/xi	 31	I
 /top_top_level_tb/dut/xo	 32	I O   # Pin direction unknown - use I/O clause

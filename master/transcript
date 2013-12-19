@@ -8,7 +8,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work top_top_level_tb_behaviour_cfg 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -144,7 +144,7 @@
 # Loading work.draw_score_behaviour_cfg#1
 # Loading work.draw_score(behaviour)#1
 # do /data/public/common/software/opprog/do_files/init_simulator.do 
-run 10ms
+run 15ms
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -198,74 +198,10 @@ run 10ms
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+#    Time: 80 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+#    Time: 80 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+#    Time: 80 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-add wave  \
-sim:/top_top_level_tb/dut/chip/game_controller/cur_state
-restart; run 10ms
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/score_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/score_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/np_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/np_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/field_check
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/field_check
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/triggers
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/triggers
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/sync
-# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/sync
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/vga_controller/counter/resets
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
-# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 0  Instance: /top_top_level_tb/dut/chip/switch_debounce
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
-# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
-#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 8  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 9  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
-quit
+#    Time: 80 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y

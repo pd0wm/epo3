@@ -41,13 +41,11 @@ architecture top_top_level_struc of top_top_level is
 	
 	signal clk, XI_buf, XI_inv : std_logic;
 begin
-	XI_inv <= not xi;
-	XI_buf <= not XI_inv;
 
 	clock : osc10
 		port map(E  => '1',
 			     F  => clk,
-			     XI => XI_buf,
+			     XI => xi,
 			     XO => xo);
 
 	chip : top_level2
