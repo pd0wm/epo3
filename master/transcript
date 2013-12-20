@@ -8,7 +8,7 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # vsim -do /data/public/common/software/opprog/do_files/init_simulator.do -lib work top_top_level_tb_behaviour_cfg 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3812) Design is being optimized...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -189,6 +189,326 @@ run 15ms
 #    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 1  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_0/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_1/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_2/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_3/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_4/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_5/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_6/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(0)/tower_mod/bit4_mod_7/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_0/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_1/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_2/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_3/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_4/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_5/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_6/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(1)/tower_mod/bit4_mod_7/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_0/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_1/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_2/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_3/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_4/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_5/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_6/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(2)/tower_mod/bit4_mod_7/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_0/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_1/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_2/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_3/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_4/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_5/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_6/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(3)/tower_mod/bit4_mod_7/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_0/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_1/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_2/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_3/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_4/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_5/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_6/dfr11_8
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_0
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_6
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_7
+# ** Warning: setup_violation of R
+#    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/video_ram/generate_tower(4)/tower_mod/bit4_mod_7/dfr11_8
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
@@ -198,10 +518,11 @@ run 15ms
 # ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
 #    Time: 0 ns  Iteration: 2  Instance: /top_top_level_tb/dut/chip/fall_timer/donecheck
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+#    Time: 0 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+#    Time: 0 ns  Iteration: 6  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
+#    Time: 0 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_x
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 80 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+#    Time: 0 ns  Iteration: 7  Instance: /top_top_level_tb/dut/chip/lookup_table/lbl_adder_y
+quit

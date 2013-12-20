@@ -2,14 +2,17 @@ six
 ------ opening nelsis ------
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
 ------ opening seadif ------
------- checking your circuit 'top_top_level_bb' ------
------- circuit 'top_top_level_bb' is still up-to-date ------
------- checking match with placement layout 'Tmptop_top_level_bb3142' ------
------- reading nelsis layout-cell 'Tmptop_top_level_bb3142' ------
------- writing nelsis 'Tmptop_top_level_bb3142' as sdflay 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
+------ checking your circuit 'top_top_level' ------
+WARNING: Imported nelsis cell 'buf40' is younger than its corresponding
+         seadif cell $dummy(buf40(buf40(g_digilib5_99))) (circuit-view). The seadif
+         library 'g_digilib5_99' doesn't seem to be up to date.
+------ reading nelsis circuit-cell 'top_top_level' ------
+------ checking match with placement layout 'Tmptop_top_level2562' ------
+------ reading nelsis layout-cell 'Tmptop_top_level2562' ------
+------ writing nelsis 'Tmptop_top_level2562' as sdflay 'Tmp_Cell_(top_top_level(top_top_level(test)))' ------
 ------ input seems good enough: calling router ------
-calling program: trout -l test -f top_top_level_bb -c top_top_level_bb -o Tmp_Cell_ -t -S -P -C -F Tmp_Cell_ 
------- routing successful ------
------- converting result back into nelsis as cell 'Tmptop_top_level_bb3142' ------
-calling program: nelsea -rLH -f top_top_level_bb -c top_top_level_bb -l Tmp_Cell_ Tmptop_top_level_bb3142 
+calling program: trout -l test -f top_top_level -c top_top_level -o Tmp_Cell_ -v -Hclk -r -V Tmp_Cell_ 
+------ check successful ------
+------ converting result back into nelsis as cell 'Tmptop_top_level2562' ------
+calling program: nelsea -rLH -f top_top_level -c top_top_level -l Tmp_Cell_ Tmptop_top_level2562 
 ------ sea: task completed ------

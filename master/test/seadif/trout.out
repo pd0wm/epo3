@@ -1,63 +1,10 @@
 >>>>>> trout: automatic router for Sea-of-Gates           <<<<<<
 >>>>>> (c) 1995 Patrick Groeneveld, Delft Univ. of Techn. <<<<<<
 ------ reading image description file '/data/public/common/software/nelsis/5.4.1.1/share/lib/celllibs/fishbone/image.seadif' ------
------- reading placement 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
+------ reading placement 'Tmp_Cell_(top_top_level(top_top_level(test)))' ------
 ------ building data structure  ------
 ------ making grid  ------
------- routing started Thu Dec 19 23:13:10 2013
- 32 nets have to be routed.
-Routing net 't7' (3/3): .. OK!
-Routing net 't6' (3/3): .. OK!
-Routing net 't5' (3/3): .. OK!
-Routing net 't4' (3/3): .. OK!
-Routing net 't3' (3/3): .. OK!
-Routing net 't2' (3/3): .. OK!
-Routing net 't13' (3/3): .. OK!
-Routing net 't28' (3/3): .. OK!
-Routing net 't16' (3/3): .. OK!
-Routing net 't1' (3/3): .. OK!
-Routing net 't15' (3/3): .. OK!
-Routing net 't14' (3/3): .. OK!
-Routing net 't27' (3/3): .. OK!
-Routing net 't21' (3/3): .. OK!
-Routing net 't26' (3/3): .. OK!
-Routing net 't22' (3/3): .. OK!
-Routing net 't25' (3/3): .. OK!
-Routing net 't29' (3/3): .. OK!
-Routing net 't30' (3/3): .. OK!
-Routing net 't9' (3/3): .. OK!
-Routing net 't18' (3/3): .. OK!
-Routing net 't17' (3/3): .. OK!
-Routing net 't19' (3/3): .. OK!
-Routing net 't24' (3/3): .. OK!
-Routing net 't23' (3/3): .. OK!
-Routing net 't12' (3/3): .. OK!
-Routing net 't10' (3/3): .. OK!
-Routing net 't32' (3/3): .. OK!
-Routing net 't31' (3/3): .. OK!
-Routing net 't11' (3/3): .. OK!
-Routing net 't8' (3/3): .. OK!
-Routing net 't20' (3/3): .. OK!
-READY
------ Some interesting statistics ------
-Total number of nets:                 32 (100% completion)
-Total length of routed wires:         0 (No new wires created)
-No. of transistors (total / used):    80190/38624 = 48.17 %
-CPU-time consumption:                 0.10 sec.
-Elapsed time during routing:          0.10 sec. (110.00 % of cpu)
------- Making fat power wires ------
------- Making capacitors ------
-164,559,
-792,1122,1345,1573,1862,2134,2549,2738,3155,3639,4060,4400,
-4607,4934,5460,5921,6533,6870,7566,8144,8757,9356,9724,10008,
-10394,10830,11315,11652,11986,12362,12743,13182,13854,14388,14844,15230,
-15885,16233,16233,16233,
------- Converted 16233 unused transistors into capacitors ------
------- connecting unused transistors to power ------
------- Making lotsa vias ------
------- making substrate contacts ------
------- Verifying Connectivity ------
------- No unconnect nor short-circuits ------
------- Writing 'Tmp_Cell_(top_top_level_bb(top_top_level_bb(test)))' ------
------- Trout: task completed on Thu Dec 19 23:13:11 2013
+------ Busy highlighting net ------
+------ Writing 'Tmp_Cell_(top_top_level(top_top_level(test)))' ------
+------ Trout: task completed on Fri Dec 20 09:02:53 2013
  terminate

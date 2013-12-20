@@ -21,6 +21,13 @@ OPTIMIZED DESIGN _opt2
     Short name: @_opt2
     Opcode format: 10.1b; VCOM/VLOG SE Object version 51
     Source directory: master
+OPTIMIZED DESIGN _opt3
+    Version string: fcj>A9nb;4=j=YokmZ]T=3
+    Top-level model: work top_top_level_tb_behaviour_cfg 1
+    Compile options: -quiet -auto_acc_if_foreign -work work
+    Short name: @_opt3
+    Opcode format: 10.1b; VCOM/VLOG SE Object version 51
+    Source directory: master
 ENTITY adder_x
     Source modified time: Thu Dec 12 15:20:20 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
@@ -4058,6 +4065,22 @@ ENTITY top_top_level
     Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
+  ARCHITECTURE BODY synthesised
+    Source modified time: Thu Dec 19 23:10:51 2013
+    Depends on: E work top_top_level CEDzh]2YRIWH`dKUZ3O7D2
+    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
+    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
+    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
+    Source directory: /master
+    HDL source file: VHDL/top_top_level_SYNTH.vhd
+    Source file: VHDL/top_top_level_SYNTH.vhd
+    Start location: VHDL/top_top_level_SYNTH.vhd:7
+    Version string: T?L:c8SoDI7VE9Kd3Bam?0
+    Opcode format: 10.1b; VCOM SE Object version 51
+    VHDL language standard: 2 (VHDL-2002)
+    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile defaults: Explicit=1
+    Debug Symbol file exists
   ARCHITECTURE BODY top_top_level_struc
     Source modified time: Thu Dec 19 23:04:58 2013
     Depends on: E work top_top_level CEDzh]2YRIWH`dKUZ3O7D2
@@ -4074,60 +4097,44 @@ ENTITY top_top_level
     Compile defaults: Explicit=1
     Source directory: /master
     Debug Symbol file exists
-  ARCHITECTURE BODY synthesised
-    Depends on: E work top_top_level P3Zh_nJm4T4]_^AdmBJTP0
-    Depends on: P cellslib cellslib_decl_pack QXc5jY9ngocCTOzQ`UlIE2
-    Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
-    Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    HDL source file: VHDL/top_top_level_SYNTH.vhd
-    Source file: VHDL/top_top_level_SYNTH.vhd
-    Start location: VHDL/top_top_level_SYNTH.vhd:7
-    Version string: T?L:c8SoDI7VE9Kd3Bam?0
-    Opcode format: 10.1b; VCOM SE Object version 51
-    VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
-    Compile defaults: Explicit=1
-    Source directory: /master
-    Source modified time: Thu Dec 19 22:56:43 2013
-    Debug Symbol file exists
 ENTITY top_top_level_tb
-    Source modified time: Thu Dec 19 23:02:49 2013
+    Source modified time: Fri Dec 20 09:16:53 2013
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
     Source directory: /master
     HDL source file: VHDL/top_top_level_tb.vhd
     Source file: VHDL/top_top_level_tb.vhd
     Start location: VHDL/top_top_level_tb.vhd:4
-    Version string: hN2JXG15TRFD=M<<EP3>Y0
+    Version string: aAn3>hbWD_G6VKU><`=>Z2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Debug Symbol file exists
   ARCHITECTURE BODY behaviour
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work top_top_level_tb hN2JXG15TRFD=M<<EP3>Y0
+    Depends on: E work top_top_level_tb aAn3>hbWD_G6VKU><`=>Z2
     Start location: VHDL/top_top_level_tb.vhd:7
-    Version string: 0l4GkZ4ZizN[hXl1VQF8H2
+    Version string: 6_=5ZhRgP?@XUWjgi;7>Z2
     Opcode format: 10.1b; VCOM SE Object version 51
     VHDL language standard: 2 (VHDL-2002)
-    Compile options: -2002 -lower -explicit -work work -quiet -nologo
+    Compile options: -lower -explicit -work work -quiet -nologo
     Compile defaults: Explicit=1
     Source directory: /master
     Source file: VHDL/top_top_level_tb.vhd
-    Source modified time: Thu Dec 19 23:02:49 2013
+    Source modified time: Fri Dec 20 09:16:53 2013
     HDL source file: VHDL/top_top_level_tb.vhd
     Debug Symbol file exists
 VHDL CONFIGURATION top_top_level_tb_behaviour_cfg
     Configuration for architecture: behaviour
     Configuration for entity: top_top_level_tb
-    Depends on: E work top_top_level P3Zh_nJm4T4]_^AdmBJTP0
-    Depends on: C work top_top_level_top_top_level_struc_cfg aAB<9W60:eSnUknFUIE6Y3
-    Depends on: A work top_top_level_tb behaviour 0l4GkZ4ZizN[hXl1VQF8H2
+    Depends on: E work top_top_level CEDzh]2YRIWH`dKUZ3O7D2
+    Depends on: C work top_top_level_top_top_level_struc_cfg R57An==7c01E00Il=;3`>0
+    Depends on: A work top_top_level_tb behaviour 6_=5ZhRgP?@XUWjgi;7>Z2
     Depends on: P std textio 5>J:;AW>W0[[dW0I6EN1Q0
     Depends on: P ieee std_logic_1164 5=aWaoGZSMWIcH0i^f`XF1
-    Depends on: E work top_top_level_tb hN2JXG15TRFD=M<<EP3>Y0
+    Depends on: E work top_top_level_tb aAn3>hbWD_G6VKU><`=>Z2
     Source modified time: Wed Dec 18 13:00:33 2013
     Source directory: /master
     HDL source file: VHDL/top_top_level_tb_behaviour_cfg.vhd

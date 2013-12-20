@@ -89,7 +89,7 @@ begin
 			     dbg_ram_data_vga      => dbg_ram_data_vga,
 			     dbg_ram_addr_part     => dbg_ram_addr_part,
 			     xi                    => clk,
-			     xo                    => clk);
+			     xo                    => open);
 
 	clk_process : process
 	begin
@@ -137,6 +137,9 @@ begin
 	end process;
 
 end;
+
+
+
 
 
 

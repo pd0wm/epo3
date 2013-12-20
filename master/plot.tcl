@@ -1,4 +1,4 @@
-read_file -f ddc ./ADB/cs_compare.ddc
+read_file -f ddc ./ADB/sr_if.ddc
 set designer epo3-user
 set company TU-Delft
 start_gui
