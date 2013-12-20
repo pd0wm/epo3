@@ -60,7 +60,7 @@ architecture behaviour of top_top_level_tb is
 	signal dbg_ram_data_vga      : std_logic;
 	signal dbg_ram_addr_part     : std_logic_vector(1 downto 0);
 
-	constant clk_period : time := 160 ns;
+	constant clk_period : time := 16 ns;
 
 begin
 	dut : top_top_level
@@ -89,7 +89,7 @@ begin
 			     dbg_ram_data_vga      => dbg_ram_data_vga,
 			     dbg_ram_addr_part     => dbg_ram_addr_part,
 			     xi                    => clk,
-			     xo                    => 'Z');
+			     xo                    => open);
 
 	clk_process : process
 	begin
@@ -137,6 +137,9 @@ begin
 	end process;
 
 end;
+
+
+
 
 
 

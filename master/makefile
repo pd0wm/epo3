@@ -11,15 +11,15 @@ IEEE__std_logic_arith = $(LIB_IEEE)/std_logic_arith/_primary.dat
 IEEE__std_logic_unsigned = $(LIB_IEEE)/std_logic_unsigned/_primary.dat
 CELLSLIB__buf40 = $(LIB_CELLSLIB)/buf40/_primary.dat
 CELLSLIB__dfa11 = $(LIB_CELLSLIB)/dfa11/_primary.dat
+CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
 CELLSLIB__tbuf10 = $(LIB_CELLSLIB)/tbuf10/_primary.dat
 CELLSLIB__mu210 = $(LIB_CELLSLIB)/mu210/_primary.dat
 CELLSLIB__dfr11 = $(LIB_CELLSLIB)/dfr11/_primary.dat
-CELLSLIB__ex210 = $(LIB_CELLSLIB)/ex210/_primary.dat
-CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
-CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
-CELLSLIB__no310 = $(LIB_CELLSLIB)/no310/_primary.dat
-CELLSLIB__na310 = $(LIB_CELLSLIB)/na310/_primary.dat
 CELLSLIB__mu111 = $(LIB_CELLSLIB)/mu111/_primary.dat
+CELLSLIB__no310 = $(LIB_CELLSLIB)/no310/_primary.dat
+CELLSLIB__no210 = $(LIB_CELLSLIB)/no210/_primary.dat
+CELLSLIB__na210 = $(LIB_CELLSLIB)/na210/_primary.dat
+CELLSLIB__na310 = $(LIB_CELLSLIB)/na310/_primary.dat
 CELLSLIB__osc10 = $(LIB_CELLSLIB)/osc10/_primary.dat
 CELLSLIB__tinv10 = $(LIB_CELLSLIB)/tinv10/_primary.dat
 CELLSLIB__iv110 = $(LIB_CELLSLIB)/iv110/_primary.dat
@@ -129,8 +129,8 @@ WORK__top_top_level_top_top_level_struc_cfg = $(LIB_WORK)/top_top_level_top_top_
 WORK__top_top_level_tb_behaviour_cfg = $(LIB_WORK)/top_top_level_tb_behaviour_cfg/_primary.dat
 WORK__top_top_level_tb__behaviour = $(LIB_WORK)/top_top_level_tb/behaviour.dat
 WORK__top_top_level_tb = $(LIB_WORK)/top_top_level_tb/_primary.dat
-WORK__top_top_level__synthesised = $(LIB_WORK)/top_top_level/synthesised.dat
 WORK__top_top_level__top_top_level_struc = $(LIB_WORK)/top_top_level/top_top_level_struc.dat
+WORK__top_top_level__synthesised = $(LIB_WORK)/top_top_level/synthesised.dat
 WORK__top_top_level = $(LIB_WORK)/top_top_level/_primary.dat
 WORK__top_level_tb_behaviour_cfg = $(LIB_WORK)/top_level_tb_behaviour_cfg/_primary.dat
 WORK__top_level_tb__behaviour = $(LIB_WORK)/top_level_tb/behaviour.dat
@@ -147,11 +147,9 @@ WORK__top_level__structural = $(LIB_WORK)/top_level/structural.dat
 WORK__top_level__synthesised = $(LIB_WORK)/top_level/synthesised.dat
 WORK__top_level = $(LIB_WORK)/top_level/_primary.dat
 WORK__timer_timer_behav_cfg = $(LIB_WORK)/timer_timer_behav_cfg/_primary.dat
-WORK__timer_tb_timer_tb_behav_cfg_extr = $(LIB_WORK)/timer_tb_timer_tb_behav_cfg_extr/_primary.dat
 WORK__timer_tb_timer_tb_behav_cfg = $(LIB_WORK)/timer_tb_timer_tb_behav_cfg/_primary.dat
 WORK__timer_tb__timer_tb_behav = $(LIB_WORK)/timer_tb/timer_tb_behav.dat
 WORK__timer_tb = $(LIB_WORK)/timer_tb/_primary.dat
-WORK__timer_extracted_cfg = $(LIB_WORK)/timer_extracted_cfg/_primary.dat
 WORK__timer_det_timer_det_arch_cfg = $(LIB_WORK)/timer_det_timer_det_arch_cfg/_primary.dat
 WORK__timer_det__timer_det_arch = $(LIB_WORK)/timer_det/timer_det_arch.dat
 WORK__timer_det__synthesised = $(LIB_WORK)/timer_det/synthesised.dat
@@ -162,7 +160,6 @@ WORK__timer_counter__synthesised = $(LIB_WORK)/timer_counter/synthesised.dat
 WORK__timer_counter = $(LIB_WORK)/timer_counter/_primary.dat
 WORK__timer__timer_behav = $(LIB_WORK)/timer/timer_behav.dat
 WORK__timer__synthesised = $(LIB_WORK)/timer/synthesised.dat
-WORK__timer__extracted = $(LIB_WORK)/timer/extracted.dat
 WORK__timer = $(LIB_WORK)/timer/_primary.dat
 WORK__sr_tower_tb_sr_tower_tb_behav_cfg = $(LIB_WORK)/sr_tower_tb_sr_tower_tb_behav_cfg/_primary.dat
 WORK__sr_tower_tb__sr_tower_tb_behav = $(LIB_WORK)/sr_tower_tb/sr_tower_tb_behav.dat
@@ -480,8 +477,8 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_top_level_tb_behaviour_cfg) \
     $(WORK__top_top_level_tb__behaviour) \
     $(WORK__top_top_level_tb) \
-    $(WORK__top_top_level__synthesised) \
     $(WORK__top_top_level__top_top_level_struc) \
+    $(WORK__top_top_level__synthesised) \
     $(WORK__top_top_level) \
     $(WORK__top_level_tb_behaviour_cfg) \
     $(WORK__top_level_tb__behaviour) \
@@ -498,11 +495,9 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__top_level__synthesised) \
     $(WORK__top_level) \
     $(WORK__timer_timer_behav_cfg) \
-    $(WORK__timer_tb_timer_tb_behav_cfg_extr) \
     $(WORK__timer_tb_timer_tb_behav_cfg) \
     $(WORK__timer_tb__timer_tb_behav) \
     $(WORK__timer_tb) \
-    $(WORK__timer_extracted_cfg) \
     $(WORK__timer_det_timer_det_arch_cfg) \
     $(WORK__timer_det__timer_det_arch) \
     $(WORK__timer_det__synthesised) \
@@ -513,7 +508,6 @@ whole_library :     $(WORK__vga_vga_arch_cfg) \
     $(WORK__timer_counter) \
     $(WORK__timer__timer_behav) \
     $(WORK__timer__synthesised) \
-    $(WORK__timer__extracted) \
     $(WORK__timer) \
     $(WORK__sr_tower_tb_sr_tower_tb_behav_cfg) \
     $(WORK__sr_tower_tb__sr_tower_tb_behav) \
@@ -2371,15 +2365,6 @@ $(WORK__timer) : VHDL/timer.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer.vhd
 
-$(WORK__timer__extracted) : VHDL/timer_EXTR.vhd \
-		$(IEEE__numeric_std) \
-		$(WORK__timer) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_EXTR.vhd
-
 $(WORK__timer__synthesised) : VHDL/timer_SYNTH.vhd \
 		$(IEEE__numeric_std) \
 		$(WORK__timer) \
@@ -2463,24 +2448,6 @@ $(WORK__timer_det_timer_det_arch_cfg) : VHDL/timer_det_timer_det_arch_cfg.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer_det_timer_det_arch_cfg.vhd
 
-$(WORK__timer_extracted_cfg) : VHDL/timer_extracted_cfg.vhd \
-		$(CELLSLIB__mu111) \
-		$(CELLSLIB__na310) \
-		$(CELLSLIB__no310) \
-		$(CELLSLIB__no210) \
-		$(CELLSLIB__na210) \
-		$(CELLSLIB__iv110) \
-		$(CELLSLIB__ex210) \
-		$(CELLSLIB__dfr11) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(WORK__timer__extracted) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__timer)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_extracted_cfg.vhd
-
 $(WORK__timer_tb) \
 $(WORK__timer_tb__timer_tb_behav) : VHDL/timer_tb.vhd \
 		$(IEEE__numeric_std) \
@@ -2499,17 +2466,6 @@ $(WORK__timer_tb_timer_tb_behav_cfg) : VHDL/timer_tb_timer_tb_behav_cfg.vhd \
 		$(WORK__timer_tb)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/timer_tb_timer_tb_behav_cfg.vhd
-
-$(WORK__timer_tb_timer_tb_behav_cfg_extr) : VHDL/timer_tb_timer_tb_behav_cfg_extr.vhd \
-		$(WORK__timer) \
-		$(WORK__timer_extracted_cfg) \
-		$(WORK__timer_tb__timer_tb_behav) \
-		$(IEEE__numeric_std) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164) \
-		$(WORK__timer_tb)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/timer_tb_timer_tb_behav_cfg_extr.vhd
 
 $(WORK__timer_timer_behav_cfg) : VHDL/timer_timer_behav_cfg.vhd \
 		$(WORK__timer_det) \
@@ -2686,14 +2642,6 @@ $(WORK__top_top_level) : VHDL/top_top_level.vhd \
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_top_level.vhd
 
-$(WORK__top_top_level__top_top_level_struc) : VHDL/top_top_level_arch.vhd \
-		$(WORK__top_top_level) \
-		$(CELLSLIB__cellslib_decl_pack) \
-		$(STD__textio) \
-		$(IEEE__std_logic_1164)
-	$(VCOM) -2002 -lower -explicit -work \
-		 work -quiet -nologo VHDL/top_top_level_arch.vhd
-
 $(WORK__top_top_level__synthesised) : VHDL/top_top_level_SYNTH.vhd \
 		$(WORK__top_top_level) \
 		$(CELLSLIB__cellslib_decl_pack) \
@@ -2701,6 +2649,14 @@ $(WORK__top_top_level__synthesised) : VHDL/top_top_level_SYNTH.vhd \
 		$(IEEE__std_logic_1164)
 	$(VCOM) -2002 -lower -explicit -work \
 		 work -quiet -nologo VHDL/top_top_level_SYNTH.vhd
+
+$(WORK__top_top_level__top_top_level_struc) : VHDL/top_top_level_arch.vhd \
+		$(WORK__top_top_level) \
+		$(CELLSLIB__cellslib_decl_pack) \
+		$(STD__textio) \
+		$(IEEE__std_logic_1164)
+	$(VCOM) -2002 -lower -explicit -work \
+		 work -quiet -nologo VHDL/top_top_level_arch.vhd
 
 $(WORK__top_top_level_tb) \
 $(WORK__top_top_level_tb__behaviour) : VHDL/top_top_level_tb.vhd \
